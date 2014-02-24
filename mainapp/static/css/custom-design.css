@@ -1,0 +1,122 @@
+#map-canvas {
+      height: 100%;
+      margin: 0px;
+      padding: 0px
+    }
+    #target {
+        width: 345px;
+      }
+    .controls {
+      margin-top: 16px;
+      border: 1px solid transparent;
+      border-radius: 2px 0 0 2px;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      height: 32px;
+      outline: none;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .pac-input {
+      /*background-color: #fff;*/
+      padding: 0 11px 0 13px;
+      width: 100px; 
+      font-weight: 300;
+      text-overflow: ellipsis;
+    }
+
+    .pac-input:focus {
+      border-color: #4d90fe;
+      margin-left: -1px;
+      padding-left: 14px;  /* Regular padding-left + 1. */
+      width: 200px;
+    }
+    #keyword:focus {
+      border-color: #4d90fe;
+      margin-left: -1px;
+      padding-left: 14px;  /* Regular padding-left + 1. */
+      
+    }
+    .pac-container { 
+    }
+
+    #type-selector {
+      color: #fff;
+      background-color: #4d90fe;
+      padding: 5px 11px 0px 11px;
+    }
+
+    #type-selector label { 
+      font-weight: 300;
+    }
+
+
+
+body.dragging, body.dragging * {
+  cursor: move !important;
+}
+
+.dragged {
+  position: absolute;
+  opacity: 0.5;
+  z-index: 2000;
+}
+
+ol.example li.placeholder {
+  position: relative;
+  /** More li styles **/
+}
+ol.example li.placeholder:before {
+  position: absolute;
+  /** Define arrowhead **/
+}
+
+
+
+
+
+.card-box .content {
+  padding: 5px;
+}
+
+.card-box h5 {
+  margin: 0 0 2px 0;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.card-box h5 a {
+  color: #444;
+}
+ 
+.card-box .text {
+  margin-left: 55px;
+  
+}
+
+.card-box p {
+  margin: 0;
+  
+}
+
+.card-box p.small {
+  font-size: 12px;
+  color: rgb(153,153,153);
+  line-height: 15px;
+  
+}
+
+.card-box .numbers {
+  background: #eee;
+  padding: 2px 5px;
+}
+
+.card-box .numbers a {
+  margin-left: 8px;
+  color: #999;
+}
+
+.card-box hr {
+  margin: 5px 0;
+}
+
