@@ -19,7 +19,4 @@ class Questions():
         self.db_object.create_table(self.table_name,'_id')
 
     def save_question(self, doc):
-        self.db_object.insert_one(self.table_name, doc)
-
-q = Questions()
-q.save_question({})
+        return self.db_object.update_upsert(self.table_name,doc,doc)

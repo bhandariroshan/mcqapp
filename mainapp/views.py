@@ -5,7 +5,7 @@ from django.core.context_processors import csrf
 from django.template import RequestContext
 from django.contrib.auth.decorators import user_passes_test
 import pprint
-from Questions import Questions
+from mainapp.classes.Questions import Questions
 
 
 @user_passes_test(lambda u: u.is_superuser)
