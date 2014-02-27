@@ -1,4 +1,4 @@
 mcqapp
 ======
 
-Phonegap application for MCQ.
+Django application for MCQ.
