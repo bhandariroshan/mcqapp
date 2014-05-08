@@ -6,7 +6,16 @@ from django.template import RequestContext
 from django.contrib.auth.decorators import user_passes_test
 import pprint
 from mainapp.classes.Questions import Questions
+from django.conf import settings
 
+def dashboard(request):
+    return render_to_response('dashboard.html', context_instance=RequestContext(request))
+
+def attempt_question(request):
+    return render_to_response('qone-one.html')
+
+def landing(request):
+    return render_to_response('landing.html', context_instance=RequestContext(request))
 
 @user_passes_test(lambda u: u.is_superuser)
 def add_question(request):

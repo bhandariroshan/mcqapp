@@ -1,0 +1,273 @@
+{% load staticfiles %}  
+{% load socialaccount %}
+{% load url from future %}
+{% load i18n %}
+{% load account %}
+
+<!DOCTYPE html>
+<html lang="en" class="sidebar sidebar-social footer-sticky js flexbox flexboxlegacy no-touch rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="FoodTrade">
+    <meta name="title" content="{% block metatitle %}Home{% endblock %} - FoodTrade" />
+    <meta name="description" content="{% block metadescription %} FoodTrade is the tool foodies, artisans, and real food businesses have been waiting for. It helps you find your nearest producers and stockists, connect with collaborators, map your local food web, share knowledge about provenance, and trade in real-time. {% endblock %}" />
+
+    <meta property="og:site_name" content="FoodTrade" />
+    <meta property="og:description" content="{% block description %} FoodTrade is the tool foodies, artisans, and real food businesses have been waiting for. It helps you find your nearest producers and stockists, connect with collaborators, map your local food web, share knowledge about provenance, and trade in real-time. {% endblock %}" />
+    <meta property="og:type" content="{% block ogtype %}website{% endblock %}" />
+    <meta property="fb:admins" content="732525050" />
+    <meta property="fb:app_id" content="1400801613504478" /> 
+    <meta property="og:url" content="http://{{request.META.HTTP_HOST}}{{request.path}}" />
+    <meta property="og:image" content="{% block ogimg %}http://{{request.META.HTTP_HOST}}/static/images/foodtrade_og_default.gif{% endblock %}" />
+    
+
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
+    <title></title>
+    <!-- CSS -->
+    <link href="{% static "css/bootstrap.css" %}" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="{% static "css/docsupport/prism.css" %}">
+    <link rel="stylesheet" href="{% static "css/chosen.min.css" %}"> 
+
+    <link href="{% static "css/dynamic.css" %}" rel="stylesheet"> 
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+    <!-- <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"> -->
+    
+
+{% block head %}
+{% endblock %}
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+<link rel="stylesheet/less" href="{% static "assets/less/admin/module.admin.stylesheet-complete.less" %}" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>    
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="{% static "assets/components/library/jquery/jquery-migrate.min.js" %}"></script>
+<script src="{% static "assets/components/library/modernizr/modernizr.js" %}"></script>
+<script src="{% static "assets/components/plugins/less-js/less.min.js" %}"></script> 
+<script src="{% static "assets/components/plugins/browser/ie/ie.prototype.polyfill.js" %}"></script>
+<style type="text/css">  
+
+
+.menu-right-visible #content, 
+.menu-right-visible .menu-hidden #content, 
+.menu-right-visible .menu-right-hidden #content{
+  margin-right: 0px !important;
+}
+
+html .layout-app .col-separator, html.app .layout-app .col-separator {
+position: relative;
+margin-right: 12px;
+overflow: hidden;
+}
+
+#menu {
+width: 260px;
+background: #203030;
+color: #fff;
+}
+.navbar.main {
+min-height: 0;
+height: 83px;
+}
+.sidebar.sidebar-social #content {
+  {%if request.user.is_authenticated %}
+    margin-left: 260px;
+  {% else %}
+      margin-left: 0px;
+  {% endif %}
+}
+.menu-right-visible #footer, .menu-right-visible .menu-hidden #footer, .menu-right-visible .menu-right-hidden #footer {
+right: 0px !important;
+}
+
+.navbar.main.navbar-primary {
+  background: #F1F0F3;
+  border-color: #98777b;
+}
+.sidebar.sidebar-social #footer {
+  left: 0px;
+}
+
+</style>
+<script>
+  if ( /*@cc_on!@*/ false && document.documentMode === 10)
+  {
+      document.documentElement.className += ' ie ie10';
+  }
+</script>
+</head>
+
+<body class="scripts-async menu-right-hidden  breakpoint-992 breakpoint-768  menu-right-visible pace-done">
+  <div class="pace  pace-inactive">
+    <div class="pace-progress" data-progress-text="100%" data-progress="99" style="width: 100%;">
+        <div class="pace-progress-inner"></div>
+    </div>
+    <div class="pace-activity"></div>
+  </div> 
+
+  <!-- Main Container Fluid -->
+  <div class="container-fluid" style="visibility: visible;">
+    <!-- Main Sidebar Menu -->
+    {% if request.user.is_authenticated %} 
+    <div id="menu" class="hidden-print hidden-xs sidebar-blue sidebar-brand-primary animated fadeInLeft" style="visibility: visible;">
+      <div id="sidebar-fusion-wrapper" class="hasNiceScroll" tabindex="5034" style="overflow-y: hidden; outline: none;">         
+        <ul class="menu list-unstyled" id="navigation_current_page" style="margin-top:100px;">
+          <li class=" active"><a href="#"><i class="fa fa-book"></i><span>Course Syllabus</span></a></li>
+          <li class=""><a href="#"><i class="fa fa-book"></i><span>Subscription Models</span></a></li>
+          <li class=""><a href="#"><i class="fa fa-book"></i><span>Upcoming Exams</span></a></li>
+          <li class=""><a href="#"><i class="fa fa-book"></i><span>Progress and Results</span></a></li>
+          <li class="reset">
+            <div class="media innerAll margin-none bg-inverse">
+              <div class="pull-left">
+                Subscription
+                <div class="strong">25 days left</div>
+              </div>
+              <div class="media-body innerAll">
+                <div class="progress progress-mini margin-none">
+                  <div class="progress-bar progress-bar-primary" style="width: 80%"></div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>        
+      </div>    
+    </div>
+    {% endif %}    
+    <!-- // Main Sidebar Menu END -->
+            
+    
+      <!-- Content -->
+      <div id="content">
+        <div class="navbar hidden-print navbar-primary main animated fadeInUp" role="navigation" style="visibility: visible;margin-right:0px;">
+          <div id="brandWrapper">
+            <a href="/test" class="display-block-inline pull-left logo">
+            <img src="{% static 'images/logos/financialtimes.png' %}" alt="Sichhya logo" width=""></a>
+          </div>
+        {% if request.user.is_authenticated %}
+          <div class="user-action user-action-btn-navbar pull-left">
+              <a href="#menu" class="btn btn-sm btn-navbar btn-open-left">
+              <i class="fa fa-bars fa-2x"></i>           
+              </a>
+          </div>
+        {% endif %}
+
+        {% if request.user.is_authenticated %}
+          <div class="user-action pull-right menu-right-hidden-xs menu-left-hidden-xs border-left">
+              <div class="dropdown username pull-left">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                      <span class="media margin-none">
+                          <span class="pull-left">
+                              <img src="{{userinfo.profileimg}}" alt="{{userinfo.full_name}}"
+                              class="img-circle">Roshan Bhandari
+                          </span>
+                          <span class="media-body"> 
+                              <span class="caret"></span>
+                          </span>
+                      </span>
+                  </a>
+                  <ul class="dropdown-menu pull-right">
+                    <!-- <li><a href="/editprofile/{{userinfo.username}}">Edit profile</a></li>
+                      <li><a href="/payments">Account/billing</a></li>  --> 
+                      <li><a href="/accounts/logout">Logout</a></li> 
+                  </ul>
+              </div>
+          </div>
+          {% else %}
+              <div class="user-action pull-right  border-left">
+              <div class="dropdown username pull-left">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                      <span class="media margin-none">
+                          <span class="pull-left">
+                              <img src="{{userinfo.facebook}}" alt="{{userinfo.full_name}}"
+                              class="img-circle">Login/Sign up
+                          </span>
+                          <span class="media-body"> 
+                              <span class="caret"></span>
+                          </span>
+                      </span>
+                  </a>
+                  <ul class="dropdown-menu pull-right">
+                  <li><a href="{% provider_login_url "facebook" method="oauth2" %}">Facebook OAuth2</a></li> 
+                  <li><a href="{% provider_login_url "twitter" process="login" %}">Sign In with Twitter</a></li> 
+                  </ul>
+              </div>
+              </div>
+          {% endif %}
+
+          <div class="clearfix"></div>
+        </div>
+        <!-- // END navbar -->
+
+        
+        {% block content %}        
+        {% endblock %}        
+      </div>    
+    
+  </div>
+  <!-- // Content END --> 
+
+  <div class="clearfix"></div>
+  <!-- // Sidebar menu & content wrapper END -->
+
+  <!-- Footer -->
+  <div id="footer" class="hidden-print animated fadeInUp" style="visibility: visible;margin-right:0px;">
+      
+      <!--  Copyright Line -->
+      <div class="copy">
+          © Phunka Technologies, Developed By- <a href="#">Phunka Technologies</a> - All Rights Reserved. <a href="#" target="_blank">Purchase CORAL on ThemeForest</a> - Current version: v1.9.7-rc1 / <a target="_blank" href="#">changelog</a></div>
+      <!--  End Copyright Line -->  
+  </div>
+  
+<!-- // Main Container Fluid END -->
+
+<!-- Global Javascript -->
+<!-- Bootstrap core JavaScript ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="{% static "js/bootstrap.min.js" %}"></script>
+<script src="{% static "js/intro.min.js" %}"></script>
+<script src="{% static "js/jquery.geocomplete.js" %}"></script>
+<script src="http://twitter.github.io/typeahead.js/js/handlebars.js"></script>
+<script src="{% static "js/tag-it.js" %}"></script>
+<script src="{% static "js/twitter-typeahead.js" %}"></script>    
+<script src="{% static "css/docsupport/prism.js" %}" charset="utf-8"></script>
+<script src="{% static "js/isotope.pkgd.min.js" %}"></script>
+<script data-id="App.Config">
+var App = {};
+var basePath = '',
+    commonPath = '../assets/',
+    rootPath = '../',
+    DEV = false,
+    componentsPath = '../assets/components/';
+var primaryColor = '#25ad9f',
+    dangerColor = '#b55151',
+    successColor = '#609450',
+    infoColor = '#4a8bc2',
+    warningColor = '#ab7a4b',
+    inverseColor = '#45484d'; 
+var themerPrimaryColor = primaryColor;
+</script>
+<script src="{% static "assets/components/plugins/nicescroll/jquery.nicescroll.min.js" %}"></script>
+<script src="{% static "assets/components/plugins/breakpoints/breakpoints.js" %}"></script>
+<!-- <script src="{% static "assets/components/plugins/preload/pace/pace.min.js" %}"></script> -->
+<script src="{% static "assets/components/plugins/menus/sidr/jquery.sidr.js" %}"></script>
+<script src="{% static "assets/components/plugins/holder/holder.js" %}"></script>
+<script src="{% static "assets/components/core/js/sidebar.main.init.js" %}"></script>
+<script src="{% static "assets/components/core/js/sidebar.collapse.init.js" %}"></script>
+<script src="{% static "assets/components/common/forms/elements/bootstrap-select/assets/lib/js/bootstrap-select.js" %}"></script>
+<script src="{% static "assets/components/common/forms/elements/bootstrap-select/assets/custom/js/bootstrap-select.init.js" %}"></script>
+<script src="{% static "assets/components/core/js/core.init.js" %}"></script>
+
+
+{% block footer %}
+{% endblock %}
+
+{% block javascript %}
+{% endblock %}
+</body>
+</html>

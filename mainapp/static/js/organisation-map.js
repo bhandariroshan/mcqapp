@@ -1,12 +1,11 @@
-
-var map = L.map('map').setView([map_lat,map_lon], 7);
-
- 
-		L.tileLayer('http://{s}.tile.cloudmade.com/0c670d97b5984ce79b34deb902915b3e/110167/256/{z}/{x}/{y}.png', {
-			maxZoom: 18,
-			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>'
-		}).addTo(map);
-
+var map = new L.map('map', {
+    center: new L.LatLng(map_lat,map_lon),
+    crs: default_csr,
+    zoom: default_zoom,
+      continuousWorld: false,
+        worldCopyJump: false,
+    layers: [current_base_layer]
+});
 
 L.circle([map_lat,map_lon], 24140.2, {
 			stroke: 1,
@@ -76,14 +75,20 @@ function reload_connections()
 			var description = con.description;
 			var photo =  con.photo;
 			var username = con.username;
+			var profile_img = con.photo;
 			var type = con.type;
 			var relation = con.relation;
 			var latitude =  con.latitude;
          	var longitude =  con.longitude;
+         	var type_user = con.type;
 
 
 			var current_lat = parseFloat(latitude);
 			var current_lon = parseFloat(longitude);
+			if(current_lon == def_lon && current_lat == def_lat)
+         	{
+         		continue;
+         	}
 			if(current_lat>max_lat)
 			{
 				max_lat = current_lat;
@@ -121,19 +126,40 @@ function reload_connections()
 			// }).addTo(map);
 			// map_controls.push(polyline);
 
+var card_str = '<div class="card-box"><div class="content"><div class="pull-left"><a href="/profile/'+username+'"><img src="'+profile_img+'" alt="'+name+'" class="img-rounded img-responsive" style="width:40px;" /></a>';
+
+                
+                      card_str += '</div><div class="text"><h5><a href="/profile/'+username+'">'+name+'</a></h5>';
+
+                      card_str += '<p class="small">'+description+'</p></div></div>';
+                      if(type_user.length>0)
+                      {
+                    card_str += '<div class="numbers clearfix"><div class="tags tags-biztype pull-left">';
+                    for(var j=0;j<type_user.length;j++)
+                    {  
+                      card_str +=  '<a href="/activity/?b='+type_user[j]+'">'+type_user[j]+'</a>';
+                     }
+                      card_str += '</div></div>';
+                }
+                  card_str += '</div> ';
+              
+
+
+
+
 
 
 			var dot = L.circleMarker([parseFloat(latitude), parseFloat(longitude)],  {
 			
-			color: '#100',
-			opacity:1,
-			weight:1,
+			color: '#FF4700',
+			opacity:0,
+			weight:0,
 			fill:1,
-			radius: 3,
-			fillColor: "#600",
+			radius: 6,
+			fillColor: "#FF4700",
 			fillOpacity: 0.8,
 
-		}).addTo(map);
+		}).addTo(map).bindPopup(card_str);
 			map_controls.push(dot);
 
 }

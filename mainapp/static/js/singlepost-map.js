@@ -1,11 +1,12 @@
+var map = new L.map('map', {
+    center: new L.LatLng(map_lat,map_lon),
+    crs: default_csr,
+    zoom: default_zoom,
+	continuousWorld: false,
+    worldCopyJump: false,
+    layers: [current_base_layer]
+});
 
-var map = L.map('map').setView([map_lat,map_lon], 7);
-
- 
-		L.tileLayer('http://{s}.tile.cloudmade.com/0c670d97b5984ce79b34deb902915b3e/110167/256/{z}/{x}/{y}.png', {
-			maxZoom: 18,
-			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>'
-		}).addTo(map);
 
 
 L.circle([map_lat,map_lon], 24140.2, {
@@ -66,11 +67,6 @@ var card_str = '<div class="card-box"><div class="content"><div class="pull-left
                   card_str += '</div> ';
 
 			var ctrl = L.marker([map_lat,map_lon], {icon: redIcon}).addTo(map).bindPopup(card_str);
-			
-
-
-
-			
 var map_controls = [];
 
 
@@ -108,6 +104,11 @@ function reload_controls()
 
 			var current_lat = parseFloat(con.location.coordinates[1]);
 			var current_lon = parseFloat(con.location.coordinates[0]);
+
+			if(current_lon == def_lon && current_lat == def_lat)
+         	{
+         		continue;
+         	}
 			if(current_lat>max_lat)
 			{
 				max_lat = current_lat;

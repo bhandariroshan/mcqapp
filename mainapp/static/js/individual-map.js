@@ -1,11 +1,11 @@
-
-var map = L.map('map').setView([map_lat,map_lon], 7);
-
- 
-		L.tileLayer('http://{s}.tile.cloudmade.com/0c670d97b5984ce79b34deb902915b3e/110167/256/{z}/{x}/{y}.png', {
-			maxZoom: 18,
-			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>'
-		}).addTo(map);
+var map = new L.map('map', {
+    center: new L.LatLng(map_lat,map_lon),
+    crs: default_csr,
+    zoom: default_zoom,
+      continuousWorld: false,
+        worldCopyJump: false,
+    layers: [current_base_layer]
+});
 
 
 L.circle([map_lat,map_lon], 24140.2, {

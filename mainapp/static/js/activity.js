@@ -47,6 +47,22 @@ $(".reply_text").on("click",".deletetweet",function(e){
 });
 
 var result_mouseout = true;
+
+function set_center(lon,lat,zoom)
+{
+  var def = $.Deferred();
+    map.setView([lat, lon], zoom);
+    return def.promise();
+    
+}
+
+
+function open_popup(map_ctrl)
+{
+   var def = $.Deferred();
+   map_ctrl.openPopup({keepInView:true});
+    return def.promise();
+}
 $(".reply_text").on("mouseover",".singleresult",function(e){
  var result_id = $(this).attr("data-id");
    // console.log(result_id);
@@ -56,8 +72,19 @@ $(".reply_text").on("mouseover",".singleresult",function(e){
   if(String(map_controls[i].options.tweet_id).trim() == String(result_id).trim())
   {
     result_mouseout = false;
+    var temp_lat = map_controls[i]._latlng.lat;
+    var temp_lon = map_controls[i]._latlng.lng;
+    var zoom_level = map.getZoom();
 
-    map_controls[i].openPopup();
+// set_center(temp_lon,temp_lat,zoom_level);
+// map_controls[i].openPopup({keepInView:true});
+// ;
+
+$.when(set_center(temp_lon,temp_lat,zoom_level), open_popup(map_controls[i]));
+  setTimeout(function() {   
+      
+    }, 8000);  // 8 seconds
+    
   }
  }
   
@@ -179,54 +206,6 @@ function ajax_update_single_post(data)
       reload_controls();
 
   }
-}
-
-
-function post_new_status()
-{
-       message = $('#newstatus').val();
-  if(message=="")
-  {
-    alert("You can't post empty status.");
-    return;
-  }
-
-  if($('#post_to_twitter').prop('checked'))
-  {
-    var foodtrade_only = "false";
-
-  }
-  else
-  {
-    var foodtrade_only = "true";
-  }
-  if(validate_login()['status'] == '1'){
-    ajax_request("post_tweet", 'clear_input', {message: message,foodtrade_only:foodtrade_only});
-  }
-  else{
-    /*$('#btn_must_be_logged').click();*/
-    /*$('#btn_update_activity').tooltip('show');*/
-    window.location('/accounts/twitter/login/?process=?login');
-  }
-}
-
-$('#newstatus').bind('keypress', function(e) {
-  
-    var code = e.keyCode || e.which;
-     if(code == 13) { //Enter keycode
-       //Do something
-   
-      post_new_status();
-     }
-  
-  
-});
-
-function clear_input()
-{
-  $('#newstatus').val('');
-  make_search();
-
 }
 
  function login_redirect(){
@@ -528,13 +507,16 @@ for(var i = 0; i < business_filters.length;i++){
        {
         var data_json = jQuery.parseJSON(data);
          $('#activity_updates').html(data_json.updates);
+         $('#activity_indiv').html(data_json.indiv);
          $('#activity_biz').html(data_json.biz);
          $('#activity_org').html(data_json.org);
          $('#update_count').html(data_json.results_updates_count);
+         $('#individual_count').html(data_json.results_individual_count);
          $('#business_count').html(data_json.results_business_count);
          $('#organisation_count').html(data_json.results_organisation_count);
-         connections = ajax_connections;
+         // connections = ajax_connections;
          reload_controls();
+         //$('.reply').hide();
 
        }
 $('#food_filter').keyup( function() {

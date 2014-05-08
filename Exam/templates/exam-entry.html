@@ -1,0 +1,159 @@
+{% extends 'tbase.html' %}
+{% load staticfiles %}
+{% block head %}
+
+<link rel="stylesheet" href="/static/css/docsupport/prism.css">
+<link rel="stylesheet" href="/static/css/chosen.min.css">
+
+<style type="text/css" media="all">
+    /* fix rtl for demo */
+  .chosen-rtl .chosen-drop { left: -9000px; }
+  .typeempty{
+  display:none;
+  }
+  .form-margin{
+    margin-left: 2%;
+  }
+  .my-margin{
+    margin-left: 17%;
+  }
+  .new-margin{
+    margin-left: 40%;
+  }
+  .textarea-margin{
+    margin-left: 13%;
+  }
+
+</style>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="col-xs-10"> 
+  <form class="form-horizontal form-margin" name="myform" role="form" onsubmit="return validate_business_type()" method="POST" action=".">
+  {% csrf_token %}
+    <h1 style="text-align:center">Subject</h1>
+    <div class="form-group">
+        {{form.sign_up_as.as_hidden}}
+      <div class="col-sm-10 my-margin">
+        <div class="btn-group" data-toggle="buttons">
+          <label class="btn btn-default active" id="lbl1"> 
+              <input type="radio"  checked="checked" name="subject" id="option1" value="Physics" onchange="dataradio('Physics',1)"> Physics 
+          </label> 
+          <label class="btn btn-default " id="lbl2">  
+              <input type="radio" name="subject"  id="option2" value="Chemistry" onchange="dataradio('Chemistry',2)"> Chemistry
+          </label>
+          <label class="btn btn-default " id="lbl3">  
+              <input type="radio" name="subject"  id="option3" value="Biology" onchange="dataradio('Biology',3)"> Biology
+          </label>          
+
+          <label class="btn btn-default " id="lbl4">  
+              <input type="radio" name="subject"  id="option4" value="Maths" onchange="dataradio('Maths',4)"> Maths
+          </label>
+
+          <label class="btn btn-default " id="lbl5">  
+              <input type="radio" name="subject"  id="option5" value="Maths" onchange="dataradio('English',5)"> English
+          </label>
+
+          <label class="btn btn-default " id="lbl6">  
+              <input type="radio" name="subject"  id="option6" value="Health" onchange="dataradio('Health',6)"> Health
+          </label>
+
+          <label class="btn btn-default " id="lbl7">  
+              <input type="radio" name="subject"  id="option7" value="Drawing" onchange="dataradio('Drawing',7)"> Drawing
+          </label>
+          <label class="btn btn-default " id="lbl8">  
+              <input type="radio" name="subject"  id="option8" value="GK" onchange="dataradio('GK',8)"> General Knowledge
+          </label>
+          <label class="btn btn-default " id="lbl9">  
+              <input type="radio" name="subject"  id="option9" value="Aptitude" onchange="dataradio('Aptitude',9)"> Aptitude
+          </label>
+        </div>
+      </div>
+      </div>
+
+    <div class="form-group">
+      <div class="col-sm-10">
+        <h1 class="my-margin">Study Level:
+        <div class="btn-group form-margin" data-toggle="buttons">
+          <label class="btn btn-default active" id="lbLevel1"> 
+              <input type="radio"  checked="checked" name="level" id="option_level1" value="Intermediate" onchange="dataradio_level('Intermediate',1)"> Intermediate
+          </label> 
+          <label class="btn btn-default " id="lbLevel2">  
+              <input type="radio" name="level"  id="option_level2" value="Bachelors" onchange="dataradio_level('Bachleors',2)"> Bachelors
+          </label>
+          <label class="btn btn-default " id="lbLevel3">  
+              <input type="radio" name="level"  id="option_level3" value="Masters" onchange="dataradio_level('Masters',3)"> Masters
+          </label>
+        </div>
+        </h1>
+      </div>
+    </div>
+    
+    <h1 style="text-align:center">Chapter</h1>
+    <div class="form-group" id="buss_chapter_group">
+      <div class="col-sm-8 my-margin">
+        <input type="text" id="chapter" class="form-control" placeholder="Chapter Name" value="" name="chapter" required>
+      </div>
+    </div>
+    
+    <h1 style="text-align:center">Question</h1>
+    <div class="form-group" id="buss_question_group">
+      <div class="col-sm-8 my-margin">
+        <input type="text" id="question" class="form-control" placeholder="Question" value="" name="question" required>
+      </div>
+    </div>
+
+    <h1 style="margin-left:14%;">Description of Answer</h1>
+    <div class="form-group" id="description_group">
+      <div class="col-sm-9 textarea-margin">
+        <textarea class="form-control" id="description" name="description" placeholder="Desccription of the Answer" rows="5"></textarea>
+      </div>
+    </div>
+
+    <div class="form-group my-margin">
+        <div class="col-sm-offset-2 col-sm-5">
+          <button type="submit" class="btn btn-primary">Add to set</button>
+        </div>
+    </div> 
+
+  </form>
+</div> 
+<script src="{% static "js/jquery-1.11.0.js" %}" type="text/javascript"></script> 
+<script src="/static/js/chosen.jquery.min.js" type="text/javascript"></script>
+<script src="/static/css/docsupport/prism.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+var checked = 1;
+  function dataradio(type, option){
+    $('#lbl' + String(checked)).removeClass('active');
+    $('#lbl' + String(option)).addClass('active');
+    $('#option' + String(option)).attr('checked', 'checked');
+    checked = option;
+  }
+var checked_ans = 1;
+  function dataradio_ans(type, option){
+    $('#lbAns' + String(checked_ans)).removeClass('active');
+    $('#lbAns' + String(option)).addClass('active');
+    $('#option_ans' + String(option)).attr('checked', 'checked');
+    checked_ans = option;
+
+  } 
+var checked_diff = 1;
+  function dataradio_diff(type, option){
+    $('#lbDiff' + String(checked_diff)).removeClass('active');
+    $('#lbDiff' + String(option)).addClass('active');
+    $('#option_diff' + String(option)).attr('checked', 'checked');
+    checked_diff = option;
+
+  }  
+var checked_level = 1;
+  function dataradio_level(type, option){
+    $('#lbLevel' + String(checked_level)).removeClass('active');
+    $('#lbLevel' + String(option)).addClass('active');
+    $('#option_level' + String(option)).attr('checked', 'checked');
+    checked_level = option;
+
+  }  
+</script>
+{% endblock %}

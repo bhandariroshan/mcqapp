@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+							<div class="col-app survey-wrapper survey-bg-1 tab-pane active animated fadeIn hasNiceScroll" id="survey-1-1" tabindex="5000" style="overflow-y: hidden; outline: none;">
+								
+							<div class="survey-container">
+								<div class="survey-heading bg-gray border-bottom">
+									<a href="http://cdn.mosaicpro.biz/coral/php/admin/index.html?lang=en&skin=bud-green&v=v1.9.7-rc1" class="btn btn-default btn-lg pull-right no-ajaxify"><i class="fa fa-times"></i></a>
+									<h4 class="margin-none">Question 1 of 5</h4>
+								</div>
+								<div class="survey-body">
+									<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, laudantium, fuga, repudiandae sunt aliquam nisi quidem asperiores autem tempora cupiditate?</p>
+
+									
+									<div class="survey-answer text-center">
+										<div class="btn-group-vertical btn-group-lg" data-toggle="buttons">
+											<label class="btn btn-primary">
+												<input type="radio" name="opt" id="survey-opt-1-1"> Excellent
+											</label>
+											<label class="btn btn-primary active">
+												<input type="radio" name="opt" id="survey-opt-1-2" checked="checked"> Good
+											</label>
+											<label class="btn btn-primary">
+												<input type="radio" name="opt" id="survey-opt-1-3"> Okay
+											</label>
+											<label class="btn btn-primary">
+												<input type="radio" name="opt" id="survey-opt-1-4"> Bad
+											</label>
+											<label class="btn btn-primary">
+												<input type="radio" name="opt" id="survey-opt-1-5"> Terrible
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="survey-heading survey-footer bg-gray border-bottom">
+									<a href="http://cdn.mosaicpro.biz/coral/php/admin/survey.html?lang=en&skin=bud-green&v=v1.9.7-rc1#survey-1-2" data-toggle="tab" class="btn btn-primary btn-lg pull-right">next</a>
+								</div>
+							</div>
+						</div>							
+{% endblock %}
+{% block javascript %}
+{% endblock %}
