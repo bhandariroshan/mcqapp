@@ -44,6 +44,12 @@
     .mystyle-large-btn-side {
       width: 60%; 
     }
+    .my-margin-top{
+      margin-top: 7%;
+    }
+    .my-width{
+      width: 100%;
+    }
   </style>
   <!-- <link rel="stylesheet" href="css/style.css"> -->
 
@@ -64,19 +70,33 @@
       </h2>
       {% if not request.user.is_authenticated %}
       <ul class="eight columns" style="float:right;clear:none;">
-        <li><a href="#whatisit">What is it</a></li>
+        <li><a href="#whatisit">What is it?</a></li>
         <li><a href="#details">How it helps</a></li>
         <li><a href="#signup">Join</a></li>
         <li>
           <div class="medium primary btn">
-            <!-- <a href="{% provider_login_url "facebook" method="oauth2" %}"> -->
-            <a href="{% provider_login_url "twitter" process="login" %}">
+            <a href="{% provider_login_url "facebook" method="oauth2" %}">
+            <!-- <a href="{% provider_login_url "twitter" process="login" %}"> -->
               <span style="font-size:14px;">Signup/Login with your facebook account</span>
             </a>
           </div>
         </li>
       </ul>
+      {% else %}
+      <ul class="eight columns" style="float:right;clear:none;">
+          <li><a href="/partners/">Partners</a></li>
+          <li><a href="/partners/">Coupon Distributors</a></li>
+        <li><a href="/subscription-models/">Subscription Models</a></li>
+        <li>
+          <div class="medium primary btn">
+            <a href="/accounts/logout">
+              <span style="font-size:14px;">Log out</span>
+            </a>
+          </div>
+        </li>
+      </ul>
       {% endif %}
+
     </div>
   </div>
 

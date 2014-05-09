@@ -15,6 +15,8 @@ def attempt_question(request):
     return render_to_response('qone-one.html')
 
 def landing(request):
+    if request.user.is_authenticated():
+        return HttpResponseRedirect('/test/')
     return render_to_response('landing.html', context_instance=RequestContext(request))
 
 @user_passes_test(lambda u: u.is_superuser)

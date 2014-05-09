@@ -1,162 +1,68 @@
 {% extends 'base.html' %}
-{% block content %}
-    <div class="layout-app" style="visibility: visible;margin-top:2.5%;">
-          <div class="row row-app">
-            <div class="col-md-12 animated fadeInDown">
-              <div class="col-separator col-separator-first col-unscrollable">      
-                <div class="col-table">
-                  <div class="col-separator-h"></div>
-                  <div class="col-table-row">
-                    <div class="col-app col-unscrollable">
-                      <div class="col-app hasNiceScroll animated fadeInDown" tabindex="5031" style="overflow-y: hidden; outline: none;">
-                        <div class="row row-app">
-                          <div class="col-md-9 animated fadeInDown">
-                            <div class="col-separator hasNiceScroll" tabindex="5032" style="overflow-y: hidden; outline: none;">
-                                  <div class="innerAll">
-                                    <div class="innerTB bg-container">
-                                      <h3 class="pull-left margin-none innerR">Start Learning &nbsp;<i class="fa fa-fw text-primary icon-top-hat"></i></h3>
-                                      <a href="" class="btn btn-sm btn-primary pull-left">Join Today</a>
-                                      <a href="" class="btn btn-sm btn-info pull-right">Ask a question</a>
-                                      <div class="clearfix"></div>
-                                    </div>
-                                  </div>  
-                                  <div class="innerAll">
-                    
-                                      <!-- 2 Column / Half -->
-                                      <div class="widget widget-body-white">
-                                        
-                                        <!-- Widget heading -->
-                                        <div class="widget-head">
-                                          <h4 class="heading">Upcoming Exams</h4>
-                                        </div>
-                                        <!-- // Widget heading END -->
-                                        
-                                        <div class="widget-body innerAll inner-2x">
-                                        
-                                          <!-- 2 Column Grid / Half -->
-                                          <div class="row">
+{% block content %}  
 
-                                            <!-- Half Column -->
-                                            <div class="col-md-12">
-                                              <!-- <h4>Up Coming Exams</h4> -->
-                                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting
-                                              industry. Lorem Ipsum has been the industry's standard dummy text
-                                              ever since the 1500s, when an unknown printer took a galley of type
-                                              and scrambled it to make a type specimen book.</p>
-                                            </div>
-                                            <!-- // Half Column END -->
-                                          </div>
-                                          <!-- // 2 Column Grid / Half END -->                              
-                                        </div>
-                                      </div>
-                                      <!-- // 2 Column / Half END -->
+<div class="row my-margin-top">    
 
-                                      <!-- 2 Column / Half -->
-                                      <div class="widget widget-body-white">
-                                        
-                                        <!-- Widget heading -->
-                                        <div class="widget-head">
-                                          <h4 class="heading">Results</h4>
-                                        </div>
-                                        <!-- // Widget heading END -->                                  
-                                        <div class="widget-body innerAll inner-2x">                                  
-                                          <!-- 2 Column Grid / Half -->
-                                          <div class="row">
-                                            <!-- Half Column -->
-                                            <div class="col-md-12">
-                                              <!-- <h4>Up Coming Exams</h4> -->
-                                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting
-                                              industry. Lorem Ipsum has been the industry's standard dummy text
-                                              ever since the 1500s, when an unknown printer took a galley of type
-                                              and scrambled it to make a type specimen book.</p>
-                                            </div>
-                                            <!-- // Half Column END -->
-                                          </div>
-                                          <!-- // 2 Column Grid / Half END -->                              
-                                        </div>
-                                      </div>                                
-                                  </div>
-
-                                  <div class="col-separator-h"></div>
-                                  <!--<div class="text-center innerAll inner-2x">
-                                    <h2 class="innerT">Over 3,210 Courses </h2>
-                                    <p class="lead">Join the best E-learning platform.</p>
-                                    <p class="lead"><a href="" class="btn btn-primary">Membership plans</a></p>
-                                  </div> -->
-                                  <div class="col-separator-h"></div>                              
-                                  <div class="col-separator-h"></div>
-                                  <div class="col-separator-h"></div>
-                            </div>
-                          </div>
-                          <div class="col-md-3 animated fadeInDown">      
-                            <div class="col-separator col-separator-last hasNiceScroll" tabindex="5033" style="overflow-y: hidden; outline: none;">
-                              <a href="" class="display-block innerAll inner-2x bg-primary">
-                                <span class="display-block text-center">
-                                  <i class="fa fa-fw fa-4x icon-top-hat text-white"></i>
-                                  <p class="strong text-condensed text-medium text-white margin-none">Become a PRO</p>
-                                  <p class="lead margin-none strong text-white">Save Rs. 250 &nbsp; <span class="btn btn-default btn-xs">Details <i class="fa fa-fw fa-caret-right"></i></span></p>
-                                </span>
-                              </a>
-                              <div class="col-separator-h"></div>
-
-                              <h5 class="innerAll bg-primary margin-bottom-none">Score Card</h5>
-                              <ul class="list-group list-group-1 margin-none borders-none">
-                                <li class="list-group-item animated fadeInUp" style="visibility: visible;"><a href="#"><span class="badge pull-right badge-primary hidden-md">30</span><i class="fa fa-exclamation-circle"></i> Physics </a></li>
-                                <li class="list-group-item animated fadeInUp" style="visibility: visible;"><a href="#"><span class="badge pull-right badge-primary hidden-md">2</span><i class="fa fa-ticket"></i> Chemistry </a></li>
-                                <li class="list-group-item animated fadeInUp" style="visibility: visible;"><a href="#"><span class="badge pull-right badge-primary hidden-md">2</span><i class="fa fa-ticket"></i> Biology </a></li>
-                                
-                                <li class="list-group-item border-bottom-none animated fadeInUp" style="visibility: visible;"><a href="#"><span class="badge pull-right badge-primary hidden-md">2</span><i class="fa fa-ticket"></i> Maths </a></li>
-                              </ul>
-                                
-                              <div class="col-separator-h"></div>
-                              
-<!--                                 <div class="innerTB bg-container border-bottom">
-                                <a href="" class="btn btn-primary btn-xs pull-right"><i class="fa fa-plus-circle"></i></a>
-                                <h4 class="margin-none padding-none">Discussions</h4>
-                                </div>
-
-                                 <div class="media bg-white innerAll border-bottom margin-none">
-                                <a href="" class="pull-left"><img src="./learning_files/16.jpg" alt="people" class="img-responsive img-circle"></a>
-                                <div class="media-body">
-                                  <small class="strong pull-right">3 hours ago</small>
-                                  <h5>Reinald Lothair</h5>
-                                  <p class="innerB border-bottom">Tutor</p>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, dolorem, ad, aut amet quis sapiente architecto ut corrupti molestiae.</p>
-                                </div>
-                                </div> -->
-                                
-                                <!--  <div class="media innerAll bg-gray border-bottom margin-none">
-                                <a href="" class="pull-left"><img src="./learning_files/15(1).jpg" alt="people" class="img-responsive img-circle"></a>
-                                <div class="media-body">
-                                  <small class="strong pull-right">5 hours ago</small>
-                                  <h5>Janele Sara</h5>
-                                  <p class="innerB border-bottom">Pro Member</p>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, dolorem, ad, aut amet quis sapiente architecto ut corrupti molestiae.</p>
-                                </div>
-                                </div> -->
-                            </div>
-                          </div>
-                          <div id="ascrail2032" class="nicescroll-rails" style="width: 5px; z-index: 2; cursor: default; position: absolute; top: 0px; left: 748px; height: 373px; display: block; opacity: 0;">
-                              <div style="position: relative; top: 0px; float: right; width: 5px; height: 126px; background-color: rgb(111, 163, 98); border: none; background-clip: padding-box; border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px;">                            
-                              </div>
-                          </div>
-                          <div id="ascrail2033" class="nicescroll-rails" style="width: 5px; z-index: 2; cursor: default; position: absolute; top: 0px; left: 1015px; height: 373px; display: block; opacity: 0;">
-                              <div style="position: relative; top: 0px; float: right; width: 5px; height: 160px; background-color: rgb(111, 163, 98); border: none; background-clip: padding-box; border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px;">                            
-                              </div>
-                          </div>
-                      </div>             
-                      </div>    
-                    </div>
-                  </div>
-                  <div id="ascrail2031" class="nicescroll-rails" style="width: 5px; z-index: 2; cursor: default; position: absolute; top: 66px; left: 1015px; height: 373px; display: none; opacity: 0;">
-                    <div style="position: relative; top: 0px; float: right; width: 5px; height: 0px; background-color: rgb(111, 163, 98); border: none; background-clip: padding-box; border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px;">       
-                    </div>
-                  </div>
-                </div>
-              </div>
+    <div class="eight columns">
+        <section class="twelve columns">
+            <div class="twelve columns">
+              <li class="primary alert">Please choose your default exam type.        
+              <li>
+                  <a href="/docs/">
+                      <span>Documentation </span><i class="icon-doc-text" title="Documentation"></i>
+                  </a>
+                      <div class="dropdown">
+                        <ul>
+                          <li><a href="/docs/">Getting Started</a></li>
+                          <li><a href="/docs/claymate/">Claymate</a></li>
+                        </ul>
+                      </div>
+                </li>
+              </li>
             </div>
-          </div>
+        </section>
+        <section class="twelve columns">
+          <article class="valign row">
+            <div>
+              <img src="/static/images/img_silence_demo.jpg" width="145" />
+            </div>
+            <div>
+              <h4>Gumby Framework is cool.</h4>
+              <p>Face tattoos are not.</p>
+            </div>
+          </article>
+          <article class="valign row">
+            <div>
+              <img src="/static/images/img_silence_demo.jpg" width="145" />
+            </div>
+            <div>
+              <h4>Gumby Framework is cool.</h4>
+              <p>and not too mainstream.</p>
+            </div>
+          </article>
+        </section>
     </div>
+    <div class="four columns">
+      <section class="twelve columns">
+          <table class="rounded">
+            <thead>
+              <tr>Score card for recent exam</tr>
+              <tr>
+                <th>Subject</th>
+                <th>Marks</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Physics</td><td><li class="primary badge">23</li></td></tr>
+              <tr><td>Chemistry</td><td><li class="primary badge">23</li></td></tr>
+              <tr><td>Biology</td><td><li class="primary badge">23</li></td></tr>
+            </tbody>
+          </table>
+      </section>
+    </div>
+</div> 
+
+
 {% endblock %}
 {% block javascript %}
 {% endblock %}
