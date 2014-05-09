@@ -1,17 +1,3 @@
-
-
-#..................Server Settings............................
-REMOTE_SERVER_LITE = 'foodtradelite.cloudapp.net' 
-LOCAL_SERVER = 'localhost' 
-REMOTE_SERVER_STAGING = 'ftstaging.cloudapp.net' 
-REMOTE_MONGO_DBNAME = 'foodtrade'
-REMOTE_MONGO_USERNAME = 'ftroot'
-REMOTE_MONGO_PASSWORD = 'ftroot'
-#..................Server Settings............................
-
-
-
-
 import os
 
 
