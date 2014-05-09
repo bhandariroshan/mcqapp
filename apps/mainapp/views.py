@@ -5,7 +5,7 @@ from django.core.context_processors import csrf
 from django.template import RequestContext
 from django.contrib.auth.decorators import user_passes_test
 import pprint
-from mainapp.classes.Questions import Questions
+from apps.mainapp.classes.Questions import Questions
 from django.conf import settings
 
 def dashboard(request):

@@ -20,6 +20,3 @@ class Questions():
 
     def save_question(self, doc):
         return self.db_object.update_upsert(self.table_name,doc,doc)
-
-q = Questions()
-q.save_question({})
