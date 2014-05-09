@@ -75,8 +75,15 @@
         <li><a href="#signup">Join</a></li>
         <li>
           <div class="medium primary btn">
+<<<<<<< HEAD
+            <a href="{% provider_login_url "facebook" method="oauth2" %}">
+            <!-- <a href="{% provider_login_url "twitter" process="login" %}"> -->
+=======
+
           <a href="{% provider_login_url "facebook" method="oauth2" %}">
-            {% comment %}<a href="{% provider_login_url "twitter" process="login" %}">{% endcomment %}
+            {% comment %}
+            <a href="{% provider_login_url "twitter" process="login" %}">{% endcomment %}
+>>>>>>> b02fd368a6af87d1203cff38fdb2cac216142eb9
               <span style="font-size:14px;">Signup/Login with your facebook account</span>
             </a>
           </div>
