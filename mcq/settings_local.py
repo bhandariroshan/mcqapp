@@ -1,5 +1,6 @@
 import os
-
+APP_ID = '238848396304709'
+APP_SECRET='29f48b3a2d802cd26f4d1e487d1b6a71'
 
 # For Django All Auth
 SITE_ID = 1
