@@ -1,0 +1,202 @@
+[
+    {
+        "question": {
+            "text": "What is the value of g?"
+        },
+        "answer": {
+            "a": {
+                "text": "9.8 m/s2",
+                "correct": 1
+            },
+            "b": {
+                "text": "9 m/s2",
+                "correct": 0
+            },
+            "c": {
+                "text": "10 m/s2",
+                "correct": 0
+            },
+            "d": {
+                "text": "None",
+                "correct": 0
+            }
+        },
+        "subject": "Physics",
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "What is the symbol of Nitrogen ?"
+        },
+        "answer": {
+            "a": {
+                "text": "Ni",
+                "correct": 0
+            },
+            "b": {
+                "text": "Na",
+                "correct": 0
+            },
+            "c": {
+                "text": "N",
+                "correct": 1
+            },
+            "d": {
+                "text": "N2",
+                "correct": 0
+            }
+        },
+        "subject": "Chemistry",
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "Derivative of 2x2 is "
+        },
+        "answer": {
+            "a": {
+                "text": "2x",
+                "correct": 0
+            },
+            "b": {
+                "text": "4x",
+                "correct": 1
+            },
+            "c": {
+                "text": "1",
+                "correct": 0
+            },
+            "d": {
+                "text": "4x3",
+                "correct": 0
+            }
+        },
+        "subject": "Math",
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "..... unicorn lives here"
+        },
+        "answer": {
+            "a": {
+                "text": "An",
+                "correct": 0
+            },
+            "b": {
+                "text": "The",
+                "correct": 0
+            },
+            "c": {
+                "text": "....",
+                "correct": 0
+            },
+            "d": {
+                "text": "A",
+                "correct": 1
+            }
+        },
+        "subject": "English",
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "Force on body with mass 20 kg and acceleration 4 is "
+        },
+        "answer": {
+            "a": {
+                "text": "80 Pound",
+                "correct": 0
+            },
+            "b": {
+                "text": "100 N",
+                "correct": 0
+            },
+            "c": {
+                "text": "100 Pound",
+                "correct": 0
+            },
+            "d": {
+                "text": "80 N",
+                "correct": 1
+            }
+        },
+        "subject": "Physics",
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "What is the symbol of Gold ?"
+        },
+        "answer": {
+            "a": {
+                "text": "G",
+                "correct": 0
+            },
+            "b": {
+                "text": "Go",
+                "correct": 0
+            },
+            "c": {
+                "text": "Au",
+                "correct": 1
+            },
+            "d": {
+                "text": "A",
+                "correct": 0
+            }
+        },
+        "subject": "Chemistry",
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "Co-ordinate of origin is "
+        },
+        "answer": {
+            "a": {
+                "text": "(0, 0)",
+                "correct": 0
+            },
+            "b": {
+                "text": "(0, 0, 0)",
+                "correct": 0
+            },
+            "c": {
+                "text": "Both a and b",
+                "correct": 1
+            },
+            "d": {
+                "text": "None",
+                "correct": 0
+            }
+        },
+        "subject": "Math",
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "Nepal is a .... noun"
+        },
+        "answer": {
+            "a": {
+                "text": "Common",
+                "correct": 0
+            },
+            "b": {
+                "text": "Proper",
+                "correct": 1
+            },
+            "c": {
+                "text": "Collective",
+                "correct": 0
+            },
+            "d": {
+                "text": "Abstract",
+                "correct": 1
+            }
+        },
+        "subject": "English",
+        "exam_code": 100
+    }
+]
