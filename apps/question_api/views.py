@@ -17,6 +17,18 @@ def load_questionset_in_database(request):
     return HttpResponse("Question saved in the database")
 
 
+def load_examinfo_in_database(request):
+
+
+def get_upcoming_exams(request):
+    '''
+    the function returns the list of exam sets
+    that can be attended
+    '''
+    question_api = QuestionApi()
+    upcoming_exams = question_api.find_all
+
+
 def get_questionset_from_database(request, exam_code):
     '''
     This function returns the questions with same examcode
@@ -26,5 +38,4 @@ def get_questionset_from_database(request, exam_code):
     return HttpResponse(json.dumps(questions))
 
 
-def check_answers(request, answer_list):
-    
+# def check_answers(request, answer_list):
