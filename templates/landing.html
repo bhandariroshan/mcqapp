@@ -8,36 +8,52 @@
 	<a href="{% provider_login_url "twitter" process="login" %}">Sign In with Twitter</a> -->
 
       <main role="main" class="site-main-content">
-    <section class="site-section section-testimonials" data-target="whatisit" id="whatisit">
-      <div class="row detail-list-item animate-on-scroll scroll-animation-init fadeUpIn" data-scrollanimation="fadeUpIn">
-        <!-- <h2 style="text-align: center; margin-top: 25px">What is MCQAPP?</h2> -->
-            <div class="row" style="margin-top:30px;">
-              <div class="four columns" style="height:250px;">
-                <img src="/static/images/car.jpg"  alt="" width="200" height="200">
-              </div>
-              <div>
-                <p style="text-align:justify; font-size:17px;">MCQ APP is web and android based solution to preparing yourself for competitive exams. It is currently launched for <a href="/exams/iom/" style="color:red" alt="IOM Exam">IOM</a> and <a href="/exams/ioe/" style="color:red" alt="IOE exam"> IOE </a>entrance exam. Completely based on syllabus of entrance exam, we aid students prepare entrance exam by conducting mock up exams every week. Each exam is prepared by the domain experts, allow you to keep track of your study progress, let you know your week sides.<br> You can attend sample exam but for appearing mass online examination, you need to get a <a href="/coupon/" alt="coupon" style="color:red">coupon code</a> from <a href="/distributors/" alt="coupon code distributors" style="color:red">distributors nearby you.</a> Coupon codes are available at minimal rate. Cheaper rates for coupon codes are available for different <a href="/subscription-models/" style="color:red" alt="subscription models">subscription models.</a></p>
-              </div>
-            </div>
-      </div>
+    <!-- START: Sign Up Section -->
+    <section class="site-section section-signup" data-target="signup" id="signup">
+      <!-- START: Animation Wrapper -->
+      <div class="animate-on-scroll scroll-animation-init fadeDownIn" data-scrollanimation="fadeDownIn" style="margin-top:5%;">
+        <!-- START: Section Header -->
+        <div class="row section-header">
+          <div class="twelve columns">
+            <h2> DO YOU WANT TO SCORE HIGH ON ENTRANCE EXAM? </h2>
+            <h4 style="line-height:140%">Give online exam and prepare yourself </h4>
+          </div>
+        </div>
+        <!-- /END: Section Header -->
+        <div class="row">
+          <div class="seven columns centered">
+                <div class="large primary btn pretty" style="background: #3b5998;margin-left: 26%; margin-top: 3%; margin-bottom:4%;">
+                  <a href="{% provider_login_url "facebook" method="oauth2" %}">
+                    {% comment %}<a href="{% provider_login_url "twitter" process="login" %}">{% endcomment %}
+                      <span class="adjoined"><i class="icon-facebook"></i></span>
+                      <span style="font-size:14px;">Signup/Login with facebook </span>
+                  </a>
+                </div>
+              <p class="twelve columns centered text-center">EXAM <strong> ANYWHERE ANYTIME </strong> <br><strong> Exactly based on the syllabus of <strong>IOM</strong> and <strong>IOE</strong></strong> entrance exam</p>
+          </div>
+        </div>
+      <!-- /END: Animation Wrapper  -->
     </section>
+    <!-- /END: Sign Up Section  -->
     <div class="section section-mainfeature">
       <img src="" class="ten columns centered">
     </div>
     <!-- START: Details Section -->
     <section class="site-section section-details" data-target="details" id="details">
       <!-- START: Detail Item -->
-      <div class="row detail-list-item" style="padding-bottom:0">
+      <h2 class="row detail-list-item" style=" margin-left:45%">How it works</h2>
+      <div class="row detail-list-item" style="padding-bottom:0;margin-top: -3%;">
         <div class="four columns detail-list-graphic">
           <div class="circ-img circled-image-1">
             <div class="fi-label">
-              <span>Smart ;)</span>
+              <span>Get coupon ;)</span>
             </div>
           </div>
         </div>
         <div class="eight columns details">
-          <h2>Study smart</h2>
-          <p><strong>You have to study smart, know tricks and learn mnemonics. Studying hard only won't get you there. We will tell you the secrets behind smart studying. </strong></p>
+          <!-- <h2>get a coupon</h2> -->
+          <br><br><br>
+          <p><strong> To appear mass online exam, you need to get a <strong><a href="/coupon/" alt="coupon" style="color:red">coupon </a></strong> from <strong><a href="/distributors/" alt="coupon code distributors" style="color:red">distributors nearby you.</a></strong> Cheaper rates for coupon codes are available for different <strong> <a href="/subscription-models/" style="color:red" alt="subscription models">subscription models.</a></strong></strong></p>
         </div>
       </div>
       <!-- /END: Detail Item -->
@@ -46,12 +62,13 @@
         
         
       <div class="eight columns details on-left">
-          <h2>Practice</h2>
-          <p><strong>Attend as much variety of questions as you could. Practice makes a man perfect. ..... is an excellent platform to practice and get ready for competitive exams.</strong></p>
+          <!-- <h2>give exam</h2> -->
+          <br><br><br>
+          <p> <strong>Giving online exam is super easy with us. We conduct mass online exams every week. Before you feel convenient feel free to give sample exam after signing in. </strong></p>
         </div><div class="four columns detail-list-graphic on-right">
           <div class="circ-img circled-image-2">
             <div class="fi-label">
-              <span>Practice </span>
+              <span>give exam :-)</span>
             </div>
           </div>
         </div></div>
@@ -61,13 +78,14 @@
         <div class="four columns detail-list-graphic">
           <div class="circ-img circled-image-3">
             <div class="fi-label">
-              <span>Excel \m/ </span>
+              <span>succeed \m/ </span>
             </div>
           </div>
         </div>
         <div class="eight columns details">
-          <h2>Excel</h2>
-          <p><strong>Appear exams based on competitive exams that are prepared by domain experts, increase your knowledge,track progress, improve week areas and finally succeed.</strong> </p>
+          <!-- <h2>succeed</h2> -->
+          <br><br><br>
+          <p><strong>You have to study smart, know tricks and learn mnemonics. Studying hard only won't get you there.  Appear online exam that are prepared by domain experts, increase your knowledge, track progress, improve week areas and finally succeed. </strong></p>
         </div>
       </div>
       <!-- /END: Detail Item -->
@@ -76,27 +94,6 @@
 
 
     
-    <!-- START: Sign Up Section -->
-    <section class="site-section section-signup" data-target="signup" id="signup">
-      <!-- START: Animation Wrapper -->
-      <div class="animate-on-scroll scroll-animation-init fadeDownIn" data-scrollanimation="fadeDownIn">
-        <!-- START: Section Header -->
-        <div class="row section-header">
-          <div class="twelve columns">
-            <h2>give online exams for success </h2>
-            <h4 style="line-height:140%">Give us a try. Give sample exam, and then decide. </h4>
-          </div>
-        </div>
-        <!-- /END: Section Header -->
-        <div class="row">
-          <div class="seven columns centered">
-              <input type="submit" class="large-btn-side mystyle-large-btn-side" value="Sign Up/Login using Facebook" id="signup-btn" style="margin-left:23%">
-              <div class="catch-errors"></div>
-              <p class="twelve columns centered text-center">We are trying our best to bring best exam practice models and techniques. <br><strong> We promise your login won't go in waste.</strong></p>
-          </div>
-        </div>
-      <!-- /END: Animation Wrapper  -->
-    </section>
-    <!-- /END: Sign Up Section  -->
+
   </main>
 {% endblock %}
