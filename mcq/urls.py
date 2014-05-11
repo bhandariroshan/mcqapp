@@ -15,6 +15,6 @@ urlpatterns = patterns('',
     url(r'^admin/$', include(admin.site.urls)),
     url(r'^accounts/', include('allauth.urls')),
     url(r'^$', 'apps.mainapp.views.landing'),
-    url(r'^question/add-fake', 'apps.question_api.views.load_data_in_question'),
-    url(r'^question/', 'apps.question_api.views.get_question_from_database'),
+    url(r'^exam/add-fake-model', 'apps.question_api.views.load_questionset_in_database'),
+    url(r'^exam/(?P<exam_code>\d+)/$', 'apps.question_api.views.get_questionset_from_database'),
 )

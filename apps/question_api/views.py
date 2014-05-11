@@ -5,7 +5,7 @@ from django.http import HttpResponse
 from .query_question_database import QuestionApi
 
 
-def load_data_in_question(request):
+def load_questionset_in_database(request):
     '''
     the function is used to load fake data in question collection
     of mcq database in mongodb
@@ -17,11 +17,14 @@ def load_data_in_question(request):
     return HttpResponse("Question saved in the database")
 
 
-def get_question_from_database(request):
+def get_questionset_from_database(request, exam_code):
     '''
     This function returns the questions with same examcode
     '''
-    exam_code = request.GET.get('examcode')
     question_api = QuestionApi()
-    questions = question_api.find_all({"exam_code": int(exam_code)})
-    return HttpResponse(questions)
+    questions = question_api.find_all({"exam_code": exam_code})
+    return HttpResponse(json.dumps(questions))
+
+
+def check_answers(request, answer_list):
+    
