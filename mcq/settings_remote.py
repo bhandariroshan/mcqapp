@@ -131,6 +131,7 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
+
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -138,7 +139,15 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
-    'mainapp',
+    'django.contrib.admindocs',
+
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.twitter',
+    
+    'apps.mainapp',
 )
 
 # A sample logging configuration. The only tangible logging
