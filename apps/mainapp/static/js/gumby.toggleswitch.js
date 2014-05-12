@@ -10,6 +10,8 @@
 		this.$el = $($el);
 		this.targets = [];
 		this.on = '';
+		this.className = '';
+		this.self = false;
 
 		if(this.$el.length) {
 			Gumby.debug('Initializing Toggle', $el);
@@ -22,6 +24,8 @@
 		this.$el = $($el);
 		this.targets = [];
 		this.on = '';
+		this.className = '';
+		this.self = false;
 
 		if(this.$el.length) {
 			Gumby.debug('Initializing Switch', $el);
@@ -38,14 +42,7 @@
 
 		// bind to specified event and trigger
 		this.$el.on(this.on, function(e) {
-			// stop propagation
-			e.stopImmediatePropagation();
-
-			// only disable default if <a>
-			if($(this).prop('tagName') === 'A') {
-				e.preventDefault();
-			}
-
+			e.preventDefault();
 			scope.trigger(scope.triggered);
 
 		// listen for gumby.trigger to dynamically trigger toggle/switch
@@ -64,6 +61,7 @@
 		this.targets = this.parseTargets();
 		this.on = Gumby.selectAttr.apply(this.$el, ['on']) || Gumby.click;
 		this.className = Gumby.selectAttr.apply(this.$el, ['classname']) || 'active';
+		this.self = Gumby.selectAttr.apply(this.$el, ['self']) === 'false';
 	};
 
 	// parse data-for attribute, switches will inherit method
@@ -124,6 +122,8 @@
 
 		Gumby.debug('Triggering Toggle', this.$el);
 
+		var $target;
+
 		// no targets just toggle active class on toggle
 		if(!this.targets) {
 			this.$el.toggleClass(this.className);
@@ -136,11 +136,25 @@
 		// always combine toggle and first target
 		} else if(this.targets.length > 1) {
 			if(this.targets[0].hasClass(this.className)) {
-				this.$el.add(this.targets[0]).removeClass(this.className);
+				$target = this.targets[0];
+				
+				// add this element to it unless gumby-self set
+				if(!this.self) {
+					$target = $target.add(this.$el);
+				}
+
+				$target.removeClass(this.className);
 				this.targets[1].addClass(this.className);
 			} else {
+				$target = this.targets[0];
+				
+				// add this element to it unless gumby-self set
+				if(!this.self) {
+					$target = $target.add(this.$el);
+				}
+
+				$target.addClass(this.className);
 				this.targets[1].removeClass(this.className);
-				this.$el.add(this.targets[0]).addClass(this.className);
 			}
 		}
 
@@ -155,18 +169,34 @@
 
 		Gumby.debug('Triggering Switch', this.$el);
 
+		var $target;
+
 		// no targets just add active class to switch
 		if(!this.targets) {
 			this.$el.addClass(this.className);
 
 		// combine single target with switch and add active class
 		} else if(this.targets.length == 1) {
-			this.$el.add(this.targets[0]).addClass(this.className);
+			$target = this.targets[0];
+				
+			// add this element to it unless gumby-self set
+			if(!this.self) {
+				$target = $target.add(this.$el);
+			}
+
+			$target.addClass(this.className);
 
 		// if two targets check active state of first
 		// always combine switch and first target
 		} else if(this.targets.length > 1) {
-			this.$el.add(this.targets[0]).addClass(this.className);
+			$target = this.targets[0];
+				
+			// add this element to it unless gumby-self set
+			if(!this.self) {
+				$target = $target.add(this.$el);
+			}
+
+			$target.addClass(this.className);
 			this.targets[1].removeClass(this.className);
 		}
 

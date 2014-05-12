@@ -1,52 +1,115 @@
 {% extends 'base.html' %}
+{% block head %}
+  <style type="text/css">
+    .picker select {
+      width: 0%;
+    }
+  </style>
+{% endblock %}
+
 {% block content %}  
 
-<div class="row my-margin-top">    
 
-    <div class="eight columns">
-        <section class="twelve columns">
-            <div class="twelve columns">
-              <li class="primary alert">Please choose your default exam type.        
-              <li>
-                  <a href="/docs/">
-                      <span>Documentation </span><i class="icon-doc-text" title="Documentation"></i>
-                  </a>
-                      <div class="dropdown">
-                        <ul>
-                          <li><a href="/docs/">Getting Started</a></li>
-                          <li><a href="/docs/claymate/">Claymate</a></li>
-                        </ul>
-                      </div>
-                </li>
-              </li>
+<div class="row my-margin-top row-bg-color">    
+    <div class="eight columns">      
+        <section class="twelve columns tabs" style="margin-top: 5%;">
+            <ul class="tab-nav">
+                <li class="active"><a href="#">Upcoming Exams</a></li>
+                <li><a href="#">Schedules/Notices</a></li>
+                <li class="ttip" data-tooltip="Subscription required."><a href="#">Progress Card</a></li>
+            </ul>
+            <div id="upcomingExams" class="tab-content active">
+               <article class="valign row text-color-white">
+                  <div>
+                    <img src="/static/images/img_silence_demo.jpg" width="145" />
+                  </div>
+                  <div>
+                    <h4><a href="#" id="examIOMMBBS001">IOM MBBS Model Exam 001</a></h4>
+                    <p>Date:2071-2-10</p>
+                    <p>Time:7.00PM</p>
+                    <p>Cost:Rs. 15</p>
+                     <div class="medium primary btn pretty" ><a href="/distributors/">Find Coupons</a></div>
+
+                  </div>
+                </article>
+
+                <article class="valign row text-color-white">
+                  <div>
+                    <img src="/static/images/img_silence_demo.jpg" width="145" />
+                  </div>
+                  <div>
+                    <h4><a href="#" id="examSTXAVIERS+2001">+2 St. Xaviers Model exam 001</a></h4>
+                    <p>Date:2071-2-12</p>
+                    <p>Time:7.00PM</p>
+                    <p>Cost:Rs. 15</p>
+                    <div class="medium primary btn pretty" ><a href="/distributors/">Find Coupons</a></div>
+                  </div>
+                </article>
+            </div> 
+
+            <div class="tab-content" id="notices">
+               <article class="valign row text-color-white">
+                  <div>
+                    <img src="/static/images/img_silence_demo.jpg" width="145" />
+                  </div>
+                  <div>
+                    <h4>Gumby Framework is cool.</h4>
+                    <p>Face tattoos are not.</p>
+                  </div>
+                </article>
+                <article class="valign row text-color-white">
+                  <div>
+                    <img src="/static/images/img_silence_demo.jpg" width="145" />
+                  </div>
+                  <div>
+                    <h4>Gumby Framework is cool.</h4>
+                    <p>and not too mainstream.</p>
+                  </div>
+                </article>
             </div>
-        </section>
-        <section class="twelve columns">
-          <article class="valign row">
-            <div>
-              <img src="/static/images/img_silence_demo.jpg" width="145" />
-            </div>
-            <div>
-              <h4>Gumby Framework is cool.</h4>
-              <p>Face tattoos are not.</p>
-            </div>
-          </article>
-          <article class="valign row">
-            <div>
-              <img src="/static/images/img_silence_demo.jpg" width="145" />
-            </div>
-            <div>
-              <h4>Gumby Framework is cool.</h4>
-              <p>and not too mainstream.</p>
-            </div>
-          </article>
-        </section>
+            <div class="tab-content" id="notices">
+               <article class="valign row text-color-white">
+                  <div>
+                    <img src="/static/images/img_silence_demo.jpg" width="145" />
+                  </div>
+                  <div>
+                    <h4>Gumby Framework is cool.</h4>
+                    <p>Face tattoos are not.</p>
+                  </div>
+                </article>
+                <article class="valign row text-color-white">
+                  <div>
+                    <img src="/static/images/img_silence_demo.jpg" width="145" />
+                  </div>
+                  <div>
+                    <h4>Gumby Framework is cool.</h4>
+                    <p>and not too mainstream.</p>
+                  </div>
+                </article>
+            </div>           
+        </section>        
     </div>
     <div class="four columns">
       <section class="twelve columns">
+          <div class="twelve columns">
+            <li class="success alert">
+              <p>Want to take a free trial? Take a test for free. </p> 
+              <div class="pretty medium tertiary btn switch" style="width: 150px;" gumby-trigger="#modalentercouponcode">Start Now</a></div>
+            </li>
+          </div>
           <table class="rounded">
             <thead>
-              <tr>Score card for recent exam</tr>
+              <tr><th><p class="text-color-white">Rank card for recent exam</p></th><th></th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Total Score</td><td><li class="primary badge">23</li></td></tr>
+              <tr><td>Percentage</td><td><li class="primary badge">23%</li></td></tr>
+              <tr><td>Rank</td><td><li class="primary badge">23/1200</li></td></tr>
+            </tbody>
+          </table>
+          <table class="rounded">
+            <thead>
+              <tr><p class="text-color-white">Score card for recent exam</p></tr>
               <tr>
                 <th>Subject</th>
                 <th>Marks</th>
@@ -61,6 +124,25 @@
       </section>
     </div>
 </div> 
+<div class="modal" id="modalentercouponcode">
+  <div class="content">
+    <a class="close switch" gumby-trigger="|#modalentercouponcode"><i class="icon-cancel" /></i></a>
+    <div class="row">
+      <div class="ten columns centered text-center" style="margin-top:6%;">
+        <p>Every time you give exam, you need to enter <a href="/coupon-codes/" style="color:red;"><strong>coupon code</strong></a> available at various <a href="/distributors/" style="color:red;"><strong>distributors</strong></a>. Please enter <strong>SAMPLE-1234</strong> as coupon code for now.</p>
+          <li class="prepend field">
+            <span class="adjoined">Coupon: </span>
+            <input class="xwide text input" type="text" placeholder="Please enter the coupon code" />
+          </li>
+          <li class="prepend field">
+            <div class="medium primary btn" >
+              <a href="/exam/sample/">Start Exam</a>
+            </div>
+          </li>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
 {% block javascript %}
 {% endblock %}

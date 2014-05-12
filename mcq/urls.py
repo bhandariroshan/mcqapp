@@ -8,8 +8,8 @@ urlpatterns = patterns('',
     # url(r'^$', 'mcq.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
+    url(r'^$', 'apps.mainapp.views.landing'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^accounts/', include('allauth.urls')),
-
     url(r'^', include('apps.mainapp.urls', app_name='mainapp')),
 )
