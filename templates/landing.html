@@ -1,60 +1,99 @@
 {% extends 'base.html' %}
 {% load socialaccount %}
 {% block head %}
-	<style type="text/css">
-	.my-margin{
-		margin-top: 15px;
-	}
 	</style>
 {% endblock %}
 {% block content %}
 	<!-- <a href="{% provider_login_url "facebook" method="oauth2" %}">Facebook OAuth2</a>
 	<a href="{% provider_login_url "twitter" process="login" %}">Sign In with Twitter</a> -->
 
-		<!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-
-    <div class="container marketing my-margin" >
-      <!-- START THE FEATURETTES -->
-
-      <hr class="featurette-divider my-margin">
-
-      <div class="row featurette my-margin">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      <main role="main" class="site-main-content">
+    <!-- START: Sign Up Section -->
+    <section class="site-section section-signup" data-target="signup" id="signup">
+      <!-- START: Animation Wrapper -->
+      <div class="animate-on-scroll scroll-animation-init fadeDownIn" data-scrollanimation="fadeDownIn" style="margin-top:5%;">
+        <!-- START: Section Header -->
+        <div class="row section-header">
+          <div class="twelve columns">
+            <h2> DO YOU WANT TO EXCEL ENTRANCE EXAM? </h2>
+            <h4 style="line-height:140%">Give online exam and prepare yourself </h4>
+          </div>
         </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive" src="data:image/png;base64," data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        <!-- /END: Section Header -->
+        <div class="row">
+          <div class="seven columns centered">
+                <div class="large primary btn pretty" style="background: #3b5998;margin-left: 26%; margin-top: 3%; margin-bottom:4%;">
+                  <a href="{% provider_login_url "facebook" method="oauth2" %}">
+                    {% comment %}<a href="{% provider_login_url "twitter" process="login" %}">{% endcomment %}
+                      <span class="adjoined"><i class="icon-facebook"></i></span>
+                      <span style="font-size:14px;">Signup/Login with facebook </span>
+                  </a>
+                </div>
+              <p class="twelve columns centered text-center">EXAM <strong> ANYWHERE ANYTIME </strong> <br><strong> Exactly based on the syllabus of <strong>IOM</strong> and <strong>IOE</strong></strong> entrance exam</p>
+          </div>
+        </div>
+      <!-- /END: Animation Wrapper  -->
+    </section>
+    <!-- /END: Sign Up Section  -->
+    <div class="section section-mainfeature">
+      <img src="" class="ten columns centered">
+    </div>
+    <!-- START: Details Section -->
+    <section class="site-section section-details" data-target="details" id="details">
+      <!-- START: Detail Item -->
+      <h2 class="row detail-list-item" style=" margin-left:40%">How it works</h2>
+      <div class="row detail-list-item" style="padding-bottom:0;margin-top: -3%;">
+        <div class="four columns detail-list-graphic">
+          <div class="circ-img circled-image-1">
+            <div class="fi-label">
+              <span>Get coupon ;)</span>
+            </div>
+          </div>
+        </div>
+        <div class="eight columns details">
+          <!-- <h2>get a coupon</h2> -->
+          <br><br><br>
+          <p><strong> To appear mass online exam, you need to get a <strong><a href="/coupon/" alt="coupon" style="color:red">coupon </a></strong> from <strong><a href="/distributors/" alt="coupon code distributors" style="color:red">distributors nearby you.</a></strong> Cheaper rates for coupon codes are available for different <strong> <a href="/subscription-models/" style="color:red" alt="subscription models">subscription models.</a></strong></strong></p>
         </div>
       </div>
-
-      <hr class="featurette-divider my-margin">
-
-      <div class="row featurette my-margin">
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive" src="data:image/png;base64," data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+      <!-- /END: Detail Item -->
+      <!-- START: Detail Item -->
+      <div class="row detail-list-item animate-on-scroll scroll-animation-init fadeInRight" data-scrollanimation="fadeInRight" gumby-shuffle="only screen and (max-width: 767px)|1-0">
+        
+        
+      <div class="eight columns details on-left">
+          <!-- <h2>give exam</h2> -->
+          <br><br><br>
+          <p> <strong>Giving online exam is super easy with us. We conduct mass online exams every week. Before you feel convenient feel free to give sample exam after signing in. </strong></p>
+        </div><div class="four columns detail-list-graphic on-right">
+          <div class="circ-img circled-image-2">
+            <div class="fi-label">
+              <span>give exam :-)</span>
+            </div>
+          </div>
+        </div></div>
+      <!-- /END: Detail Item -->
+      <!-- START: Detail Item -->
+      <div class="row detail-list-item animate-on-scroll scroll-animation-init fadeInLeft" data-scrollanimation="fadeInLeft">
+        <div class="four columns detail-list-graphic">
+          <div class="circ-img circled-image-3">
+            <div class="fi-label">
+              <span>succeed \m/ </span>
+            </div>
+          </div>
         </div>
-        <div class="col-md-7">
-          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <div class="eight columns details">
+          <!-- <h2>succeed</h2> -->
+          <br><br><br>
+          <p><strong>You have to study smart, know tricks and learn mnemonics. Studying hard only won't get you there.  Appear online exam that are prepared by domain experts, increase your knowledge, track progress, improve week areas and finally succeed. </strong></p>
         </div>
       </div>
+      <!-- /END: Detail Item -->
+    </section>
+    <!-- /END: Details Section  -->
 
-      <hr class="featurette-divider my-margin">
 
-      <div class="row featurette my-margin">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive" src="data:image/png;base64," data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-        </div>
-      </div>
+    
 
-      <hr class="featurette-divider">
-
-      <!-- /END THE FEATURETTES -->
+  </main>
 {% endblock %}

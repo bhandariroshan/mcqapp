@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% block head %}
+{% endblock %}
+
+{% block content %}  
+<div class="row my-margin-top row-bg-color">
+    <div class="twelve columns" style="text-align: center;">
+		<h3><strong>IOM MBBS Model Exam 001</strong></h3>
+		<h4><strong>Exam Date: 2070-2-10</strong></h4>
+    </div>
+    <div class="twelve columns">
+    <div class="example-grid">
+    </div>
+    </div>
+    <div class="twelve columns" style="margin-top:2%; margin-bottom:2%;">
+          <div class="six columns" id="startTimer">
+                <h5 style="color:red;"><strong>Start Time: 7.00 PM</strong></h5>
+          </div>
+          <div class="six columns" id="timeRemained">
+                <h5 style="float:right; color:red;"><strong>Time Remained: 60 min</strong></h5>
+          </div>
+    </div>
+    <div class="twelve columns">
+      <div class="seven columns">      	
+      	<div style=" height: 40px; "><span><p style="text-align:center; color:blue;"><strong>Q. No. 5</strong></p> </span></div>
+      	<div style=" height: 40px; ">
+      		<span>
+      			<div class="medium primary btn pretty">
+      			  <a href="#"><i class="icon-arrow-left"></i>Previous</a>
+      			</div>
+      		</span>
+      		<span style="float:right">
+      			<div class="medium primary btn pretty">
+      			  <a href="#"><i class="icon-arrow-right"></i>Skip to Next</a>
+      			</div>
+      		</span>
+      	</div>
+      	<div id="questionText" class="twelve columns">
+      		<p><strong>Who is the president of united states?</strong></p>
+      		<!-- <img src="/static/images/study.png" style="margin-left:15%; height:140px" /> -->
+      	</div>
+      	<div>	     			
+      		<ul class="two_up tiles">
+      		  <li class="field">
+      			  <label class="radio" for="optionA">
+      			    <input name="answer" id="optionA" value="A" type="radio">a
+      			    <span></span>Barac Obama <br>
+      			    <!-- <img src="/static/images/study.png" style="margin-left:15%; height:140px;" /> -->
+      			  </label>
+      		  </li>
+      		  <li class="field">
+      			  <label class="radio" for="optionB">
+      			    <input name="answer" id="optionB" value="B" type="radio">b
+      			    <span></span>Roshan Bhandari <br>
+      			    <!-- <img src="/static/images/study.png" style="margin-left:15%; height:140px;" /> -->
+      			  </label>
+      		  </li>
+      		  <li class="field">
+      			  <label class="radio" for="optionC">
+      			    <input name="answer" id="optionC" value="C" type="radio">c
+      			    <span></span>Fidel Castro <br>
+      			    <!-- <img src="/static/images/study.png" style="margin-left:15%; height:140px;" /> -->
+      			  </label>
+      		  </li>
+      		  <li class="field">
+      			  <label class="radio" for="optionD">
+      			    <input name="answer" id="optionD" value="D" type="radio">d
+      			    <span></span>Che Guevara<br>
+      			    <!-- <img src="/static/images/study.png" style="margin-left:15%; height:140px;" /> -->
+      			  </label>
+      		  </li>					  
+      		</ul>
+      	</div>      	
+      </div>
+      <div class="five columns" style="height:300px; overflow-y:scroll; overflow-x:hidden">
+      	<h5 style="text-align:center;color:red;"><strong>My Answer Sheet</strong></h5>
+      	<div class="twelve columns" style="margin-left:20%;margin-bottom:3%;">
+      		<a href="#">1. <li class="danger badge">NA</li></a>&nbsp;&nbsp;&nbsp;
+      		<a href="#">2. <li class="success badge">a</li></a>&nbsp;&nbsp;&nbsp;
+                  <a href="#">3. <li class="success badge">c</li></a>&nbsp;&nbsp;&nbsp;
+                  <a href="#">4. <li class="success badge">d</li></a>
+      	</div>
+      	<div class="twelve columns" style="margin-left:20%;margin-bottom:3%;">
+      		<a href="#">5. <li class="success badge">b</li></a>&nbsp;&nbsp;&nbsp;
+      		<a href="#">6. <li class="danger badge">NA</li></a>&nbsp;&nbsp;&nbsp;
+      		<a href="#">7. <li class="success badge">a</li></a>&nbsp;&nbsp;&nbsp;
+                  <a href="#">8. <li class="danger badge">NA</li></a>
+      	</div>
+      </div>
+    </div>
+</div>
+{% endblock %}
+{% block javascript %}
+{% endblock %}

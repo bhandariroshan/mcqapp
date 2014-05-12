@@ -10,9 +10,9 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>MCQ ZONE - Sign up and become a part of smart studying for success. </title>
-  <meta name="description" content="MCQ ZONE - web and android solution to give online exams.">
-  <meta name="keywords" content="MCQ ZONE - Sign up and become a part of smart studying for success.">
+  <title>MCQAPP - Sign up and become a part of smart studying for success. </title>
+  <meta name="description" content="MCQAPP - For smart studies.">
+  <meta name="keywords" content="MCQAPP - Sign up and become a part of smart studying for success.">
   <link rel="shortcut icon" href="{% static "images/favicon.png" %}" type="image/x-icon">
 
   <!-- Facebook Metadata /-->
@@ -31,8 +31,6 @@
   <!-- We highly recommend you use SASS and write your custom styles in sass/_theme.scss.
   However, there is a blank style.css in the css directory should you prefer -->
   <link rel="stylesheet" href="{% static "css/gumby.css" %}">
-  <link rel="stylesheet" href="http://gumbyframework.com/css/prism.css?v=091613">    
-  
 
   <style type="text/css">
     .detail-list-item{
@@ -48,66 +46,59 @@
     }
     .my-margin-top{
       margin-top: 7%;
-      margin-bottom: 7%;
     }
     .my-width{
       width: 100%;
     }
-    .bgimage{      
-    /*background-image: url('/static/images/bgimg.jpg')*/
-    }
-    .text-color-white{
-      /*color:white;*/
-    }
-    {% if request.user.is_authenticated %}
-    .row{
-      /*max-width: 1111px;*/
-    }
-    .row-bg-color{      
-    /*background-color: floralwhite;*/
-    }
-    {% endif %}
   </style>
   <!-- <link rel="stylesheet" href="css/style.css"> -->
+
+
   <script src="{% static "js/modernizr-min.js" %}"></script>
+</head>
 
 {% block head %}
 {% endblock %}
 </head>
-<body {% if request.user.is_authenticated %} class="bgimage" {% endif %}>
+<body>
   <div class="navbar fixed" id="nav1" gumby-fixed="top" data-target="top" style="top: 0px;">
     <div class="row">
-      <h2 class="columns logo">
+      <h2 class="four columns logo">
         <a href="/#" gumby-goto="[data-target=&#39;top&#39;]">
           <img src="{% static 'images/logo.png' %}" width="100" height="60" alt="Strados">
         </a>
       </h2>
       {% if not request.user.is_authenticated %}
       <ul class="eight columns" style="float:right;clear:none;">
-        <!-- <li><a href="#whatisit">What is it?</a></li> -->
-        <li><a href="#details">How it works</a></li>
-        <!-- <li><a href="#main-signup">Join</a></li> -->
+        <li><a href="#whatisit">What is it?</a></li>
+        <li><a href="#details">How it helps</a></li>
+        <li><a href="#signup">Join</a></li>
         <li>
-          <!-- <div class="medium primary btn pretty" style="background: #3b5998;"> -->
+          <div class="medium primary btn">
+<<<<<<< HEAD
+            <a href="{% provider_login_url "facebook" method="oauth2" %}">
+            <!-- <a href="{% provider_login_url "twitter" process="login" %}"> -->
+=======
+
           <a href="{% provider_login_url "facebook" method="oauth2" %}">
-            {% comment %}<a href="{% provider_login_url "twitter" process="login" %}">{% endcomment %}
-              <span class="adjoined"><!-- <i class="icon-facebook"></i> --></span>
-              <span style="font-size:14px;">Join using facebook </span>
+            {% comment %}
+            <a href="{% provider_login_url "twitter" process="login" %}">{% endcomment %}
+>>>>>>> b02fd368a6af87d1203cff38fdb2cac216142eb9
+              <span style="font-size:14px;">Signup/Login with your facebook account</span>
             </a>
-          <!-- </div> -->
+          </div>
         </li>
       </ul>
       {% else %}
       <ul class="eight columns" style="float:right;clear:none;">
-        <li><a href="/partners/">Partners</a></li>
-        <li><a href="/partners/">Coupon Distributors</a></li>
+          <li><a href="/partners/">Partners</a></li>
+          <li><a href="/partners/">Coupon Distributors</a></li>
         <li><a href="/subscription-models/">Subscription Models</a></li>
         <li>
-          <a href="/docs/"><span>Roshan Bhandari </span><i class="icon-down-open"></i></a>
-          <div class="dropdown" style="width:180px;">
-            <ul>
-              <li><a href="/accounts/logout">logout</a></li>
-            </ul>
+          <div class="medium primary btn">
+            <a href="/accounts/logout">
+              <span style="font-size:14px;">Log out</span>
+            </a>
           </div>
         </li>
       </ul>
@@ -166,17 +157,11 @@
   <script src="{% static "js/gumby.fixed.js" %}"></script>
   <script src="{% static "js/gumby.skiplink.js" %}"></script>
   <script src="{% static "js/gumby.toggleswitch.js" %}"></script>
-  <script src="{% static "js/gumby.checkbox.js" %}"></script>
-  <script src="{% static "js/gumby.radiobtn.js" %}"></script>
-  <script src="{% static "js/gumby.tabs.js" %}"></script>
-  <!--<script src="{% static "js/gumby.fittext.js" %}"></script>-->
-  <script src="{% static "js/jquery.validation.js" %}"></script>
   <script src="{% static "js/gumby.navbar.js" %}"></script>
   <script src="{% static "js/gumby.shuffle.js" %}"></script> 
   <script src="{% static "js/gumby.init.js" %}"></script>
   <script src="{% static "js/jquery.bxslider.min.js" %}"></script>
   <script src="{% static "js/placeholders.js" %}"></script>
-
   
 
 {% block footer %}

@@ -1,19 +1,6 @@
-
-
-#..................Server Settings............................
-REMOTE_SERVER_LITE = 'foodtradelite.cloudapp.net' 
-LOCAL_SERVER = 'localhost' 
-REMOTE_SERVER_STAGING = 'ftstaging.cloudapp.net' 
-REMOTE_MONGO_DBNAME = 'foodtrade'
-REMOTE_MONGO_USERNAME = 'ftroot'
-REMOTE_MONGO_PASSWORD = 'ftroot'
-#..................Server Settings............................
-
-
-
-
 import os
-
+APP_ID = '238848396304709'
+APP_SECRET='29f48b3a2d802cd26f4d1e487d1b6a71'
 
 # For Django All Auth
 SITE_ID = 1
