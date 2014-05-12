@@ -9,12 +9,7 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^add-question/$', 'apps.mainapp.views.add_question'),
-    url(r'^add-exam-set/$', 'apps.Exam.views.add_exam_set'),
-    url(r'^test/$', 'apps.mainapp.views.dashboard'),
-    url(r'^attempt/$', 'apps.mainapp.views.attempt_question'),
-    url(r'^admin/$', include(admin.site.urls)),
     url(r'^accounts/', include('allauth.urls')),
-    url(r'^$', 'apps.mainapp.views.landing'),
-    
+
+    url(r'^', include('apps.mainapp.urls', app_name='mainapp')),
 )
