@@ -8876,7 +8876,7 @@ table.rounded > tbody:first-child tr:first-child td {
 *****************************************************/
 .site-header {
   background-color: #134450;
-  background-image: url("static/imgages/lander-bg.png");
+  background-image: url("../img/lander-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-background-size: cover;
