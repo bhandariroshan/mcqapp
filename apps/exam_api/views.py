@@ -67,8 +67,9 @@ def list_exam_set(request):
 
 def check_answers(request, answer_list, exam_code):
     '''
-    This function receives list of answers and exam_code
-    and return the sum of correct answers
+    This function receives dictionary of answers and exam_code
+    and return the dictionary with correct answers of each subject
+    and sum of correct answers
     '''
     question_api = QuestionApi()
     questions = question_api.find_all({"exam_code": int(exam_code)})
