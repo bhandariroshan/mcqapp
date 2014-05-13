@@ -52,7 +52,8 @@ def get_questionset_from_database(request, exam_code):
     '''
     question_api = QuestionApi()
     questions = question_api.find_all({"exam_code": int(exam_code)})
-    return HttpResponse(json.dumps(questions))
+    sorted_questions = sorted(questions, key=lambda k: k['question_number'])
+    return HttpResponse(json.dumps(sorted_questions))
 
 
 def list_exam_set(request):
@@ -62,3 +63,28 @@ def list_exam_set(request):
     exam_set = ExammodelApi()
     exam_list = exam_set.find_all({})
     return HttpResponse(json.dumps(exam_list))
+
+
+def check_answers(request, answer_list, exam_code):
+    '''
+    This function receives list of answers and exam_code
+    and return the sum of correct answers
+    '''
+    question_api = QuestionApi()
+    questions = question_api.find_all({"exam_code": int(exam_code)})
+    sorted_questions = sorted(questions, key=lambda k: k['question_number'])
+    subjects = set([i['subject'] for i in sorted_questions])
+    answer_dict = {}
+    for items in subjects:
+        answer_dict[items] = 0
+    for key, value in answer_list.iteritems():
+        for item in sorted_questions:
+            if item['question_number'] == int(key):
+                if item['answer'][value]['correct'] == 1:
+                    answer_dict[item['subject']] += 1
+                    break
+    total = 0
+    for key, value in answer_dict.iteritems():
+        total += value
+    answer_dict['total'] = total
+    return HttpResponse(json.dumps(answer_dict))
