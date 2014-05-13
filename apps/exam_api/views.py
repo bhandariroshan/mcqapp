@@ -35,8 +35,12 @@ def load_modelquestion_in_database(request):
     the function is used to load fake data in question collection
     of mcq database in mongodb
     '''
-    f = open('apps/question_api/question_testdata.json', 'rb')
+    f = open('apps/exam_api/question_testdata.json', 'rb')
+
     json_obj = json.loads(f.read())
+    for i, x in enumerate(json_obj):
+        x['question_number'] = i + 1
+
     question_api = QuestionApi()
     question_api.insert_new_question(json_obj)
     return HttpResponse("Question saved in the database")

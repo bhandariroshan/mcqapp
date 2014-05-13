@@ -5,19 +5,19 @@
         },
         "answer": {
             "a": {
-                "text": " $ n\pi + (-1)^{n}\frac{\pi}{3} $ ",
-                "correct": 1
+                "text": " $ n\\pi + (-1)^{n}\\frac{\\pi}{3} $ ",
+                "correct": 0
             },
             "b": {
-                "text": " $ n\pi + \frac{\pi}{3} $ ",
+                "text": " $ n\\pi + \\frac{\\pi}{3} $ ",
                 "correct": 0
             },
             "c": {
-                "text": " $ n\pi \pm \frac{\pi}{3} $ ",
-                "correct": 0
+                "text": " $ n\\pi \\pm \\frac{\\pi}{3} $ ",
+                "correct": 1
             },
             "d": {
-                "text": " $ 2n\pi \pm \frac{\pi}{3} $ ",
+                "text": " $ 2n\\pi \\pm \\frac{\\pi}{3} $ ",
                 "correct": 0
             }
         },
@@ -26,23 +26,23 @@
     },
     {
         "question": {
-            "text": " $ [3, \infty) U (-\infty, -3] $ is the solution set for the inequality:"
+            "text": " $ [3, \\infty) U (-\\infty, -3] $ is the solution set for the inequality:"
         },
         "answer": {
             "a": {
-                "text": " $ |x| \le 3 $ ",
+                "text": " $ |x| \\le 3 $ ",
                 "correct": 0
             },
             "b": {
-                "text": "$ |x| \lt 3 $",
+                "text": "$ |x| \\lt 3 $",
                 "correct": 0
             },
             "c": {
-                "text": "$ |x| \ge 3 $",
+                "text": "$ |x| \\ge 3 $",
                 "correct": 1
             },
             "d": {
-                "text": "$ |x| \gt 3 $",
+                "text": "$ |x| \\gt 3 $",
                 "correct": 0
             }
         },
@@ -51,23 +51,23 @@
     },
     {
         "question": {
-            "text": " $ \frac{1}{3 + \sqrt{5}} $ "
+            "text": " $ \\frac{1}{3 + \\sqrt{5}} $ "
         },
         "answer": {
             "a": {
-                "text": " $ \frac{3 + \sqrt{5}}{4} $ ",
-                "correct": 0
-            },
-            "b": {
-                "text": " $ \frac{3 - \sqrt{5}}{4} $ ",
+                "text": " $ \\frac{3 + \\sqrt{5}}{4} $ ",
                 "correct": 1
             },
+            "b": {
+                "text": " $ \\frac{3 - \\sqrt{5}}{4} $ ",
+                "correct": 0
+            },
             "c": {
-                "text": " $ \frac{3}{14} + \frac{\sqrt{5}}{14} $ ",
+                "text": " $ \\frac{3}{14} + \\frac{\\sqrt{5}}{14} $ ",
                 "correct": 0
             },
             "d": {
-                "text": " $ \frac{3}{14} - \frac{\sqrt{5}}{14} $ ",
+                "text": " $ \\frac{3}{14} - \\frac{\\sqrt{5}}{14} $ ",
                 "correct": 0
             }
         },
@@ -101,24 +101,24 @@
     },
     {
         "question": {
-            "text": "$ \int Sin^{-1}(Cosx)dx $ equals to"
+            "text": "$ \\int Sin^{-1}(Cosx)dx $ equals to"
         },
         "answer": {
             "a": {
-                "text": " $ \frac{\pi x^{2}}{2} - x + C $ ",
+                "text": " $ \\frac{\\pi x^{2}}{2} - x + C $ ",
                 "correct": 0
             },
             "b": {
-                "text": " $ \frac{\pi}{2}x - \frac{x^{2}}{2} + C $ ",
-                "correct": 0
+                "text": " $ \\frac{\\pi}{2}x - \\frac{x^{2}}{2} + C $ ",
+                "correct": 1
             },
             "c": {
                 "text": "cosecx + C",
                 "correct": 0
             },
             "d": {
-                "text": " $ \frac{1}{\sqrt{1-x^{2}}} + C $ ",
-                "correct": 1
+                "text": " $ \\frac{1}{\\sqrt{1-x^{2}}} + C $ ",
+                "correct": 0
             }
         },
         "subject": "Mathematics",
@@ -151,7 +151,7 @@
     },
     {
         "question": {
-            "text": " $ \lim_{x \rightarrow 0}-\frac{sin|x|}{x}= $ "
+            "text": " $ \\lim_{x \\rightarrow 0}-\\frac{sin|x|}{x}= $ "
         },
         "answer": {
             "a": {
@@ -160,11 +160,11 @@
             },
             "b": {
                 "text": "equals to -1",
-                "correct": 0
+                "correct": 1
             },
             "c": {
                 "text": "equals to 1",
-                "correct": 1
+                "correct": 0
             },
             "d": {
                 "text": "equals to 0",
@@ -189,11 +189,11 @@
             },
             "c": {
                 "text": "2",
-                "correct": 0
+                "correct": 1
             },
             "d": {
                 "text": "3",
-                "correct": 1
+                "correct": 0
             }
         },
         "subject": "Mathematics",
@@ -201,24 +201,24 @@
     },
     {
         "question": {
-            "text": "If $ \vec{a} $ and $ \vec{b} $ are unit vectors, then which one of the following is true?"
+            "text": "If $ \\vec{a} $ and $ \\vec{b} $ are unit vectors, then which one of the following is true?"
         },
         "answer": {
             "a": {
-                "text": " $ \vec{a}.\vec{b} $ = 0 ",
-                "correct": 1
+                "text": " $ \\vec{a}.\\vec{b} $ = 0 ",
+                "correct": 0
             },
             "b": {
-                "text": " $ \vec{a} \times\vec{b} $ = 0 ",
+                "text": " $ \\vec{a} \\times\\vec{b} $ = 0 ",
                 "correct": 0
             },
             "c": {
-                "text": " $ \vec{a} $ and $ \vec{b} $ are collinear",
+                "text": " $ \\vec{a} $ and $ \\vec{b} $ are collinear",
                 "correct": 0
             },
             "d": {
-                "text": " $ |\vec{a}| = |\vec{b}| $ ",
-                "correct": 0
+                "text": " $ |\\vec{a}| = |\\vec{b}| $ ",
+                "correct": 1
             }
         },
         "subject": "Mathematics",
@@ -235,11 +235,11 @@
             },
             "b": {
                 "text": "a pair of parallel lines",
-                "correct": 0
+                "correct": 1
             },
             "c": {
                 "text": "a pair of coincident lines",
-                "correct": 1
+                "correct": 0
             },
             "d": {
                 "text": "a parabola",
@@ -256,11 +256,11 @@
         "answer": {
             "a": {
                 "text": "comb",
-                "correct": 0
+                "correct": 1
             },
             "b": {
                 "text": "thumb",
-                "correct": 1
+                "correct": 0
             },
             "c": {
                 "text": "some",
@@ -285,7 +285,7 @@
             },
             "b": {
                 "text": "mine",
-                "correct": 0
+                "correct": 1
             },
             "c": {
                 "text": "king",
@@ -293,7 +293,7 @@
             },
             "d": {
                 "text": "nanny",
-                "correct": 1
+                "correct": 0
             }
         },
         "subject": "English",
@@ -314,11 +314,11 @@
             },
             "c": {
                 "text": "He told Ram to bring his book",
-                "correct": 0
+                "correct": 1
             },
             "d": {
                 "text": "He told Ram not to bring his book",
-                "correct": 1
+                "correct": 0
             }
         },
         "subject": "English",
@@ -335,7 +335,7 @@
             },
             "b": {
                 "text": "The students requested him to let them play",
-                "correct": 0
+                "correct": 1
             },
             "c": {
                 "text": "The students requested him to let us play",
@@ -343,7 +343,7 @@
             },
             "d": {
                 "text": "The students requested him to play",
-                "correct": 1
+                "correct": 0
             }
         },
         "subject": "English",
@@ -385,11 +385,11 @@
             },
             "b": {
                 "text": "was doing",
-                "correct": 0
+                "correct": 1
             },
             "c": {
                 "text": "will do",
-                "correct": 1
+                "correct": 0
             },
             "d": {
                 "text": "am doing",
@@ -414,11 +414,11 @@
             },
             "c": {
                 "text": "effective, dedicated and honest",
-                "correct": 0
+                "correct": 1
             },
             "d": {
                 "text": "effective, dedicated, and honest",
-                "correct": 1
+                "correct": 0
             }
         },
         "subject": "English",
@@ -431,7 +431,7 @@
         "answer": {
             "a": {
                 "text": "thicken",
-                "correct": 1
+                "correct": 0
             },
             "b": {
                 "text": "impoverish",
@@ -443,7 +443,7 @@
             },
             "d": {
                 "text": "mercy",
-                "correct": 0
+                "correct": 1
             }
         },
         "subject": "English",
@@ -464,11 +464,11 @@
             },
             "c": {
                 "text": "He likes <u>smoking</u>",
-                "correct": 1
+                "correct": 0
             },
             "d": {
                 "text": "She is taking <u>knitting</u> classes",
-                "correct": 0
+                "correct": 1
             }
         },
         "subject": "English",
@@ -481,11 +481,11 @@
         "answer": {
             "a": {
                 "text": "to arrest",
-                "correct": 0
+                "correct": 1
             },
             "b": {
                 "text": "arrest",
-                "correct": 1
+                "correct": 0
             },
             "c": {
                 "text": "arresting",
@@ -514,11 +514,11 @@
             },
             "c": {
                 "text": "in",
-                "correct": 0
+                "correct": 1
             },
             "d": {
                 "text": "on",
-                "correct": 1
+                "correct": 0
             }
         },
         "subject": "English",
@@ -606,11 +606,11 @@
         "answer": {
             "a": {
                 "text": "humble",
-                "correct": 0
+                "correct": 1
             },
             "b": {
                 "text": "proud",
-                "correct": 1
+                "correct": 0
             },
             "c": {
                 "text": "self esteem",
@@ -631,11 +631,11 @@
         "answer": {
             "a": {
                 "text": "force and vertical velocity",
-                "correct": 1
+                "correct": 0
             },
             "b": {
                 "text": "acceleration and horizontal velocity",
-                "correct": 0
+                "correct": 1
             },
             "c": {
                 "text": "kinetic energy and acceleration",
@@ -664,11 +664,11 @@
             },
             "c": {
                 "text": "air current",
-                "correct": 1
+                "correct": 0
             },
             "d": {
                 "text": "viscous force exerted by air",
-                "correct": 0
+                "correct": 1
             }
         },
         "subject": "Physics",
@@ -685,11 +685,11 @@
             },
             "b": {
                 "text": "liquid thermometer",
-                "correct": 1
+                "correct": 0
             },
             "c": {
                 "text": "pyrometer",
-                "correct": 0
+                "correct": 1
             },
             "d": {
                 "text": "resistance thermometer",
@@ -735,7 +735,7 @@
             },
             "b": {
                 "text": "decreases",
-                "correct": 0
+                "correct": 1
             },
             "c": {
                 "text": "does not change",
@@ -743,7 +743,7 @@
             },
             "d": {
                 "text": "may increase or decrease depending on rate of heating",
-                "correct": 1
+                "correct": 0
             }
         },
         "subject": "Physics",
@@ -756,7 +756,7 @@
         "answer": {
             "a": {
                 "text": "nodes",
-                "correct": 0
+                "correct": 1
             },
             "b": {
                 "text": "antinodes",
@@ -768,7 +768,7 @@
             },
             "d": {
                 "text": "neither nodes nor antinodes",
-                "correct": 1
+                "correct": 0
             }
         },
         "subject": "Physics",
@@ -785,11 +785,11 @@
             },
             "b": {
                 "text": "less than 1",
-                "correct": 0
+                "correct": 1
             },
             "c": {
                 "text": "greater than 1",
-                "correct": 1
+                "correct": 0
             },
             "d": {
                 "text": "very very large",
@@ -814,11 +814,11 @@
             },
             "c": {
                 "text": "C/2",
-                "correct": 1
+                "correct": 0
             },
             "d": {
                 "text": "infinite",
-                "correct": 0
+                "correct": 1
             }
         },
         "subject": "Physics",
@@ -856,7 +856,7 @@
         "answer": {
             "a": {
                 "text": "Interference",
-                "correct": 1
+                "correct": 0
             },
             "b": {
                 "text": "Diffraction",
@@ -868,7 +868,7 @@
             },
             "d": {
                 "text": "Photoelectric effect",
-                "correct": 0
+                "correct": 1
             }
         },
         "subject": "Physics",
@@ -885,11 +885,11 @@
             },
             "b": {
                 "text": "azimuthal",
-                "correct": 0
+                "correct": 1
             },
             "c": {
                 "text": "magnetic",
-                "correct": 1
+                "correct": 0
             },
             "d": {
                 "text": "spin",
@@ -910,11 +910,11 @@
             },
             "b": {
                 "text": "temperature is increased",
-                "correct": 1
+                "correct": 0
             },
             "c": {
                 "text": " $ H^{+} $ are added",
-                "correct": 0
+                "correct": 1
             },
             "d": {
                 "text": " $ OH^{-1} $ ions are added",
@@ -931,7 +931,7 @@
         "answer": {
             "a": {
                 "text": "F",
-                "correct": 0
+                "correct": 1
             },
             "b": {
                 "text": "Cl",
@@ -943,7 +943,7 @@
             },
             "d": {
                 "text": "I",
-                "correct": 1
+                "correct": 0
             }
         },
         "subject": "Chemistry",
@@ -964,11 +964,11 @@
             },
             "c": {
                 "text": " $ CO_{2} $ ",
-                "correct": 0
+                "correct": 1
             },
             "d": {
                 "text": "ZnO",
-                "correct": 1
+                "correct": 0
             }
         },
         "subject": "Chemistry",
@@ -985,11 +985,11 @@
             },
             "b": {
                 "text": " N_{2}O $ ",
-                "correct": 0
+                "correct": 1
             },
             "c": {
                 "text": "ZnO",
-                "correct": 1
+                "correct": 0
             },
             "d": {
                 "text": " $ SO_{2} $ ",
@@ -1014,11 +1014,11 @@
             },
             "c": {
                 "text": "no of electrons",
-                "correct": 1
+                "correct": 0
             },
             "d": {
                 "text": "Valence electrons",
-                "correct": 0
+                "correct": 1
             }
         },
         "subject": "Chemistry",
@@ -1035,15 +1035,15 @@
             },
             "b": {
                 "text": "6",
-                "correct": 1
+                "correct": 0
             },
             "c": {
                 "text": "5",
-                "correct": 0
+                "correct": 1
             },
             "d": {
                 "text": "9",
-                "correct": 1
+                "correct": 0
             }
         },
         "subject": "Chemistry",
@@ -1056,7 +1056,7 @@
         "answer": {
             "a": {
                 "text": " $ CaCl_{2} $ ",
-                "correct": 1
+                "correct": 0
             },
             "b": {
                 "text": " $ Na_{2}SO_{4} $ ",
@@ -1064,7 +1064,7 @@
             },
             "c": {
                 "text": " $ MgCO_{3} $ ",
-                "correct": 0
+                "correct": 1
             },
             "d": {
                 "text": "KCl",
@@ -1089,11 +1089,11 @@
             },
             "c": {
                 "text": "Nascent H",
-                "correct": 1
+                "correct": 0
             },
             "d": {
                 "text": "Nascent Cl",
-                "correct": 0
+                "correct": 1
             }
         },
         "subject": "Chemistry",
@@ -1110,7 +1110,7 @@
             },
             "b": {
                 "text": "Ezde Process",
-                "correct": 1
+                "correct": 0
             },
             "c": {
                 "text": "Haber's Process",
@@ -1118,7 +1118,7 @@
             },
             "d": {
                 "text": "Ostwald's Process",
-                "correct": 0
+                "correct": 1
             }
         },
         "subject": "Chemistry",
@@ -1131,7 +1131,7 @@
         "answer": {
             "a": {
                 "text": "ZnO",
-                "correct": 0
+                "correct": 1
             },
             "b": {
                 "text": " $ ZnCO_{3} $ ",
@@ -1143,7 +1143,7 @@
             },
             "d": {
                 "text": " $ CoZnO_{2} $ ",
-                "correct": 1
+                "correct": 0
             }
         },
         "subject": "Chemistry",
@@ -1185,7 +1185,7 @@
             },
             "b": {
                 "text": "Fractional",
-                "correct": 0
+                "correct": 1
             },
             "c": {
                 "text": "steam",
@@ -1193,7 +1193,7 @@
             },
             "d": {
                 "text": "vaccum",
-                "correct": 1
+                "correct": 0
             }
         },
         "subject": "Chemistry",
@@ -1214,11 +1214,11 @@
             },
             "c": {
                 "text": "Phenol",
-                "correct": 1
+                "correct": 0
             },
             "d": {
                 "text": "chlorobenzene",
-                "correct": 0
+                "correct": 1
             }
         },
         "subject": "Chemistry",
@@ -1235,11 +1235,11 @@
             },
             "b": {
                 "text": "4-methypent-1-yne",
-                "correct": 0
+                "correct": 1
             },
             "c": {
                 "text": "3-methylpent-2-yne",
-                "correct": 1
+                "correct": 0
             },
             "d": {
                 "text": "2-methypent-4-yne",
@@ -1256,11 +1256,11 @@
         "answer": {
             "a": {
                 "text": "at infinity",
-                "correct": 0
+                "correct": 1
             },
             "b": {
                 "text": "in plane plane of projection and object",
-                "correct": 1
+                "correct": 0
             },
             "c": {
                 "text": "at finite distance",
@@ -1268,7 +1268,7 @@
             },
             "d": {
                 "text": "any of three",
-                "correct": 1
+                "correct": 0
             }
         },
         "subject": "Drawing",
@@ -1281,7 +1281,7 @@
         "answer": {
             "a": {
                 "text": "Incenter",
-                "correct": 1
+                "correct": 0
             },
             "b": {
                 "text": "Orthocenter",
@@ -1293,7 +1293,7 @@
             },
             "d": {
                 "text": "Excenter",
-                "correct": 0
+                "correct": 1
             }
         },
         "subject": "Drawing",
@@ -1356,7 +1356,7 @@
         "answer": {
             "a": {
                 "text": "4",
-                "correct": 0
+                "correct": 1
             },
             "b": {
                 "text": "6",
@@ -1368,7 +1368,7 @@
             },
             "d": {
                 "text": "12",
-                "correct": 1
+                "correct": 0
             }
         },
         "subject": "Drawing",
@@ -1389,11 +1389,11 @@
             },
             "c": {
                 "text": "Drafting tape",
-                "correct": 0
+                "correct": 1
             },
             "d": {
                 "text": "French Curve",
-                "correct": 1
+                "correct": 0
             }
         },
         "subject": "Drawing",
@@ -1406,7 +1406,7 @@
         "answer": {
             "a": {
                 "text": "Solid line",
-                "correct": 0
+                "correct": 1
             },
             "b": {
                 "text": "Hidden line",
@@ -1414,7 +1414,7 @@
             },
             "c": {
                 "text": "Center line",
-                "correct": 1
+                "correct": 0
             },
             "d": {
                 "text": "Projection line",
@@ -1439,11 +1439,11 @@
             },
             "c": {
                 "text": "O",
-                "correct": 1
+                "correct": 0
             },
             "d": {
                 "text": "H",
-                "correct": 0
+                "correct": 1
             }
         },
         "subject": "Drawing",
@@ -1460,7 +1460,7 @@
             },
             "b": {
                 "text": "800",
-                "correct": 1
+                "correct": 0
             },
             "c": {
                 "text": "540",
@@ -1481,7 +1481,7 @@
         "answer": {
             "a": {
                 "text": "Obtuse",
-                "correct": 1
+                "correct": 0
             },
             "b": {
                 "text": "Acute",
@@ -1493,7 +1493,7 @@
             },
             "d": {
                 "text": "Oblique",
-                "correct": 0
+                "correct": 1
             }
         },
         "subject": "Drawing",
@@ -1560,11 +1560,11 @@
             },
             "b": {
                 "text": "Cross Belt",
-                "correct": 0
+                "correct": 1
             },
             "c": {
                 "text": "Any of a and b",
-                "correct": 1
+                "correct": 0
             },
             "d": {
                 "text": "none of the all",
@@ -1652,7 +1652,7 @@
     },
     {
         "question": {
-            "text": "The angle of $ \triangle $ ABC are in A.P. such that b:c = $ \sqrt{3} : \sqrt{2} $, then $ \triangle $ ABC is"
+            "text": "The angle of $ \\triangle $ ABC are in A.P. such that b:c = $ \\sqrt{3} : \\sqrt{2} $, then $ \\triangle $ ABC is"
         },
         "answer": {
             "a": {
@@ -1704,7 +1704,7 @@
     },
     {
         "question": {
-            "text": "The product of all real roots of an equation $ x^{2} $ - |x| -6 $ \ge $ 0 is"
+            "text": "The product of all real roots of an equation $ x^{2} $ - |x| -6 $ \\ge $ 0 is"
         },
         "answer": {
             "a": {
@@ -1730,7 +1730,7 @@
     },
     {
         "question": {
-            "text": "For x $ \gt $ 0, if $ \log_{2}\sqrt[4]{x} $ +  $ \log_{2}\sqrt[8]{x} $ + $ \log_{2}\sqrt[16]{x} $ + ..... x = 2, then x is equal to  "
+            "text": "For x $ \\gt $ 0, if $ \\log_{2}\\sqrt[4]{x} $ +  $ \\log_{2}\\sqrt[8]{x} $ + $ \\log_{2}\\sqrt[16]{x} $ + ..... x = 2, then x is equal to  "
         },
         "answer": {
             "a": {
@@ -1746,7 +1746,7 @@
                 "correct": 1
             },
             "d": {
-                "text": "$ \log_{2}\sqrt{2} $",
+                "text": "$ \\log_{2}\\sqrt{2} $",
                 "correct": 0
             }
         },
@@ -1756,7 +1756,7 @@
     },    
     {
         "question": {
-            "text": "if $ \begin{bmatrix}a & b & 0 \\0 & a & b \\b & 0 & a \end{bmatrix} $ = 0 then"
+            "text": "if $ \\begin{bmatrix}a & b & 0 \\\\0 & a & b \\\b & 0 & a \\end{bmatrix} $ = 0 then"
         },
         "answer": {
             "a": {
@@ -1808,7 +1808,7 @@
     },    
     {
         "question": {
-            "text": "if z = x + iy = (k + 3) + i $ \sqrt{5-k^{2}} $, then locus of z is"
+            "text": "if z = x + iy = (k + 3) + i $ \\sqrt{5-k^{2}} $, then locus of z is"
         },
         "answer": {
             "a": {
@@ -1834,7 +1834,7 @@
     },
     {
         "question": {
-            "text": "if f(x) = $ \begin{cases} \frac {(x-|x|)}{2} & when \space  x \neq 0\\0 & x = 0\end{cases} $"
+            "text": "if f(x) = $ \\begin{cases} \\frac {(x-|x|)}{2} & when \\space  x \\neq 0\\\\0 & x = 0\\end{cases} $"
         },
         "answer": {
             "a": {
@@ -1846,11 +1846,11 @@
                 "correct": 0
             },
             "c": {
-                "text": "$ \lim_{x \rightarrow 0^{+}} f(x) =\lim_{x \rightarrow 0^{-}} f(x) $",
+                "text": "$ \\lim_{x \\rightarrow 0^{+}} f(x) =\\lim_{x \\rightarrow 0^{-}} f(x) $",
                 "correct": 0
             },
             "d": {
-                "text": "$ \lim_{x \rightarrow 0^{+}} $ f(x)=f(0)",
+                "text": "$ \\lim_{x \\rightarrow 0^{+}} $ f(x)=f(0)",
                 "correct": 1
             }
         },
@@ -1860,7 +1860,7 @@
     },    
     {
         "question": {
-            "text": "$ sin^{-1}\frac{2x}{1+x^{2}} $ is equal to"
+            "text": "$ sin^{-1}\\frac{2x}{1+x^{2}} $ is equal to"
         },
         "answer": {
             "a": {
@@ -1886,7 +1886,7 @@
     },        
     {
         "question": {
-            "text": "let a, b, c be three distinct non negative numbers. If the vectors a$ \overrightarrow{i} $ + a $ \overrightarrow{j} $ + c $ \overrightarrow{k} $, $ \overrightarrow{i} $ + $ \overrightarrow{k} $ and c $ \overrightarrow{i} $+ c$ \overrightarrow{j} $ + b $ \overrightarrow{k} $ lie on a plane, then"
+            "text": "let a, b, c be three distinct non negative numbers. If the vectors a$ \\overrightarrow{i} $ + a $ \\overrightarrow{j} $ + c $ \\overrightarrow{k} $, $ \\overrightarrow{i} $ + $ \\overrightarrow{k} $ and c $ \\overrightarrow{i} $+ c$ \\overrightarrow{j} $ + b $ \\overrightarrow{k} $ lie on a plane, then"
         },
         "answer": {
             "a": {
@@ -1912,7 +1912,7 @@
     },
     {
         "question": {
-            "text": "if y = $ tan^{-1}\sqrt\frac{1-cosx}{1+cosx} $, then dy/dx "
+            "text": "if y = $ tan^{-1}\\sqrt\\frac{1-cosx}{1+cosx} $, then dy/dx "
         },
         "answer": {
             "a": {
@@ -1938,7 +1938,7 @@
     },     
     {
         "question": {
-            "text": "\int\frac{(x+1)(x+logx)^{3}}{x} dx = "
+            "text": "\\int\\frac{(x+1)(x+logx)^{3}}{x} dx = "
         },
         "answer": {
             "a": {
@@ -1946,15 +1946,15 @@
                 "correct": 0
             },
             "b": {
-                "text": "$ \frac{(x+logx)^{4}}{4x} $ + c",
+                "text": "$ \\frac{(x+logx)^{4}}{4x} $ + c",
                 "correct": 0
             },
             "c": {
-                "text": "$ \frac{(x+logx)^{4}}{4} $ + c",
+                "text": "$ \\frac{(x+logx)^{4}}{4} $ + c",
                 "correct": 1
             },
             "d": {
-                "text": "$ \frac{(x+logx)^{4}}{x} $ + c",
+                "text": "$ \\frac{(x+logx)^{4}}{x} $ + c",
                 "correct": 0
             }
         },
@@ -1994,19 +1994,19 @@
         },
         "answer": {
             "a": {
-                "text": "$ \frac{1}{2} \sqrt{c(g^{2} + f^{2} -c)} $",
+                "text": "$ \\frac{1}{2} \\sqrt{c(g^{2} + f^{2} -c)} $",
                 "correct": 1
             },
             "b": {
-                "text": "$ \frac{1}{2} c\sqrt{(g^{2} + f^{2} -c)} $",
+                "text": "$ \\frac{1}{2} c\\sqrt{(g^{2} + f^{2} -c)} $",
                 "correct": 0
             },
             "c": {
-                "text": "$ \sqrt{c(g^{2} + f^{2} -c)} $",
+                "text": "$ \\sqrt{c(g^{2} + f^{2} -c)} $",
                 "correct": 0
             },
             "d": {
-                "text": "c$ \frac{1}{2} \sqrt{c(g^{2} + f^{2} -c)} $",
+                "text": "c$ \\frac{1}{2} \\sqrt{c(g^{2} + f^{2} -c)} $",
                 "correct": 0
             }
         },
@@ -2016,7 +2016,7 @@
     }, 
     {
         "question": {
-            "text": "The eccentricity of conic in polarform $ r^{2} = 32coses2\theta $ is"
+            "text": "The eccentricity of conic in polarform $ r^{2} = 32coses2\\theta $ is"
         },
         "answer": {
             "a": {
@@ -2028,12 +2028,12 @@
                 "correct": 0
             },
             "c": {
-                "text": "$ \sqrt{2} $",
-                "correct": 0
+                "text": "$ \\sqrt{2} $",
+                "correct": 1
             },
             "d": {
                 "text": "undefined",
-                "correct": 1
+                "correct": 0
             }
         },
         "subject": "Mathematics",
@@ -2042,12 +2042,12 @@
     },
     {
         "question": {
-            "text": "The locus of a point which divides the line segment joining (1,0) and ($ 2cos\theta, 2sin\theta) $ internally in the ratio 2:3, for all $ \theta $, is"
+            "text": "The locus of a point which divides the line segment joining (1,0) and ($ 2cos\\theta, 2sin\\theta) $ internally in the ratio 2:3, for all $ \\theta $, is"
         },
         "answer": {
             "a": {
                 "text": "a straight line",
-                "correct": 1
+                "correct": 0
             },
             "b": {
                 "text": "a pair of line",
@@ -2055,7 +2055,7 @@
             },
             "c": {
                 "text": "a circle ",
-                "correct": 0
+                "correct": 1
             },
             "d": {
                 "text": "an ellipse",
@@ -2081,11 +2081,11 @@
             },
             "c": {
                 "text": "0",
-                "correct": 1
+                "correct": 0
             },
             "d": {
                 "text": "1",
-                "correct": 0
+                "correct": 1
             }
         },
         "subject": "Mathematics",
@@ -2103,11 +2103,11 @@
             },
             "b": {
                 "text": "6",
-                "correct": 1
+                "correct": 0
             },
             "c": {
                 "text": "7",
-                "correct": 0
+                "correct": 1
             },
             "d": {
                 "text": "11",
@@ -2126,11 +2126,11 @@
         "answer": {
             "a": {
                 "text": "lasting and irreparable",
-                "correct": 0
+                "correct": 1
             },
             "b": {
                 "text": "like the friendship in modern societies",
-                "correct": 1
+                "correct": 0
             },
             "c": {
                 "text": "born out of solitude",
@@ -2180,7 +2180,7 @@
         "answer": {
             "a": {
                 "text": "You will meet him at the party afterwards",
-                "correct": 0
+                "correct": 1
             },
             "b": {
                 "text": "You will have really appreciated the beauty later",
@@ -2207,7 +2207,7 @@
         "answer": {
             "a": {
                 "text": "that which cannot be overcome or taken by force",
-                "correct": 1
+                "correct": 0
             },
             "b": {
                 "text": "that which exhibits a lot of strength",
@@ -2215,7 +2215,7 @@
             },
             "c": {
                 "text": "that which lasts forever",
-                "correct": 0
+                "correct": 1
             },
             "d": {
                 "text": "that which is very impressive",
@@ -2234,7 +2234,7 @@
         "answer": {
             "a": {
                 "text": "walked on feather with someone",
-                "correct": 1
+                "correct": 0
             },
             "b": {
                 "text": "walked with someone on the edge of mountain",
@@ -2246,7 +2246,7 @@
             },
             "d": {
                 "text": "walked where the dividing line between danger and safety is very thin. ",
-                "correct": 0
+                "correct": 1
             }
         },
         "subject": "English",
@@ -2260,7 +2260,7 @@
         "answer": {
             "a": {
                 "text": "2.77 m/$s^{2}$",
-                "correct": 1
+                "correct": 0
             },
             "b": {
                 "text": "5/30 $ m/s^{2} $",
@@ -2272,7 +2272,7 @@
             },
             "d": {
                 "text": "5/108 $ m/s^{2} $ ",
-                "correct": 0
+                "correct": 1
             }
         },
         "subject": "Physics",
@@ -2285,19 +2285,19 @@
         },
         "answer": {
             "a": {
-                "text": "$ \sqrt\frac{10gh}{7} $",
+                "text": "$ \\sqrt\\frac{10gh}{7} $",
                 "correct": 1
             },
             "b": {
-                "text": "$ \sqrt{gh} $",
+                "text": "$ \\sqrt{gh} $",
                 "correct": 0
             },
             "c": {
-                "text": "$ \sqt{2gh} $",
+                "text": "$ \\sqt{2gh} $",
                 "correct": 0
             },
             "d": {
-                "text": "$ \sqrt\frac{4gh}{3} $ ",
+                "text": "$ \\sqrt\\frac{4gh}{3} $ ",
                 "correct": 0
             }
         },
@@ -2312,7 +2312,7 @@
         "answer": {
             "a": {
                 "text": "2TL",
-                "correct": 1
+                "correct": 0
             },
             "b": {
                 "text": "4TL",
@@ -2320,7 +2320,7 @@
             },
             "c": {
                 "text": "8TL",
-                "correct": 0
+                "correct": 1
             },
             "d": {
                 "text": "10TL",
@@ -2338,11 +2338,11 @@
         "answer": {
             "a": {
                 "text": "5s",
-                "correct": 1
+                "correct": 0
             },
             "b": {
                 "text": "10s",
-                "correct": 0
+                "correct": 1
             },
             "c": {
                 "text": "15s",
@@ -2364,11 +2364,11 @@
         "answer": {
             "a": {
                 "text": "6.4",
-                "correct": 1
+                "correct": 0
             },
             "b": {
                 "text": "64",
-                "correct": 0
+                "correct": 1
             },
             "c": {
                 "text": "640",
@@ -2390,7 +2390,7 @@
         "answer": {
             "a": {
                 "text": "0.5%",
-                "correct": 1
+                "correct": 0
             },
             "b": {
                 "text": "1%",
@@ -2402,7 +2402,7 @@
             },
             "d": {
                 "text": "4%",
-                "correct": 0
+                "correct": 1
             }
         },
         "subject": "Physics",
@@ -2415,20 +2415,20 @@
         },
         "answer": {
             "a": {
-                "text": "6.4",
-                "correct": 1
+                "text": "1689.2 J",
+                "correct": 0
             },
             "b": {
-                "text": "64",
+                "text": "-1933.5 J",
                 "correct": 0
             },
             "c": {
-                "text": "640",
+                "text": "-2763.9 J",
                 "correct": 0
             },
             "d": {
-                "text": "4800",
-                "correct": 0
+                "text": "2763.9 J",
+                "correct": 1
             }
         },
         "subject": "Mathematics",
@@ -2442,7 +2442,7 @@
         "answer": {
             "a": {
                 "text": "$ 0^{o} $",
-                "correct": 1
+                "correct": 0
             },
             "b": {
                 "text": "$ 15^{o} ",
@@ -2450,7 +2450,7 @@
             },
             "c": {
                 "text": "$ 30^{o} ",
-                "correct": 0
+                "correct": 1
             },
             "d": {
                 "text": "$ 60^{o} ",
@@ -2468,7 +2468,7 @@
         "answer": {
             "a": {
                 "text": "1.5",
-                "correct": 1
+                "correct": 0
             },
             "b": {
                 "text": "1.66",
@@ -2476,7 +2476,7 @@
             },
             "c": {
                 "text": "1.33",
-                "correct": 0
+                "correct": 1
             },
             "d": {
                 "text": "3",
@@ -2515,12 +2515,12 @@
     },
     {
         "question": {
-            "text": "The equation of stationary wave is y = 4sin$ \pi $x/15 * cos40$ \pi $t, the distance between node-antinode is if x is in cm"
+            "text": "The equation of stationary wave is y = 4sin$ \\pi $x/15 * cos40$ \\pi $t, the distance between node-antinode is if x is in cm"
         },
         "answer": {
             "a": {
                 "text": "15cm",
-                "correct": 1
+                "correct": 0
             },
             "b": {
                 "text": "30cm",
@@ -2532,7 +2532,7 @@
             },
             "d": {
                 "text": "7.5cm",
-                "correct": 0
+                "correct": 1
             }
         },
         "subject": "Physics",
@@ -2546,7 +2546,7 @@
         "answer": {
             "a": {
                 "text": "4:1",
-                "correct": 1
+                "correct": 0
             },
             "b": {
                 "text": "1:4",
@@ -2554,7 +2554,7 @@
             },
             "c": {
                 "text": "2:1",
-                "correct": 0
+                "correct": 1
             },
             "d": {
                 "text": "1:2",
@@ -2572,7 +2572,7 @@
         "answer": {
             "a": {
                 "text": "1:5",
-                "correct": 1
+                "correct": 0
             },
             "b": {
                 "text": "1:4",
@@ -2580,7 +2580,7 @@
             },
             "c": {
                 "text": "1:2",
-                "correct": 0
+                "correct": 1
             },
             "d": {
                 "text": "1:1",
@@ -2598,7 +2598,7 @@
         "answer": {
             "a": {
                 "text": "$ 9x10^{9} years $",
-                "correct": 1
+                "correct": 0
             },
             "b": {
                 "text": "$ 6.3x10^{9} $",
@@ -2610,7 +2610,7 @@
             },
             "d": {
                 "text": "$ 3.63 x 10^{9} $ years",
-                "correct": 0
+                "correct": 1
             }
         },
         "subject": "Physics",
@@ -2624,11 +2624,11 @@
         "answer": {
             "a": {
                 "text": "1ohm",
-                "correct": 1
+                "correct": 0
             },
             "b": {
                 "text": "3ohm",
-                "correct": 0
+                "correct": 1
             },
             "c": {
                 "text": "0.5ohm",
@@ -2650,7 +2650,7 @@
         "answer": {
             "a": {
                 "text": "$ 3x10^{-2}c $",
-                "correct": 1
+                "correct": 0
             },
             "b": {
                 "text": "$ 1x10^{-2}c $",
@@ -2662,7 +2662,7 @@
             },
             "d": {
                 "text": "$ 2 x 10^{-2}c $ ",
-                "correct": 0
+                "correct": 1
             }
         },
         "subject": "Physics",
@@ -2675,19 +2675,19 @@
         },
         "answer": {
             "a": {
-                "text": "$ \frac{(I_1 +I_2)}{2} $",
-                "correct": 1
+                "text": "$ \\frac{(I_1 +I_2)}{2} $",
+                "correct": 0
             },
             "b": {
-                "text": "$ \frac{(I_1 - I_2)}{2} $",
+                "text": "$ \\frac{(I_1 - I_2)}{2} $",
                 "correct": 0
             },
             "c": {
-                "text": "$ \sqrt\frac{(I_1^{2} +I_2^{2})}{2} $",
-                "correct": 0
+                "text": "$ \\sqrt\\frac{(I_1^{2} +I_2^{2})}{2} $",
+                "correct": 1
             },
             "d": {
-                "text": "\frac{(I_1 + I_2)}{\sqrt{2}}",
+                "text": "\\frac{(I_1 + I_2)}{\\sqrt{2}}",
                 "correct": 0
             }
         },
@@ -2702,11 +2702,11 @@
         "answer": {
             "a": {
                 "text": "$ 6x 10^{16} $",
-                "correct": 1
+                "correct": 0
             },
             "b": {
                 "text": "$ 3x10^{16} $",
-                "correct": 0
+                "correct": 1
             },
             "c": {
                 "text": "$ 3x10^{18} $",
@@ -2728,11 +2728,11 @@
         "answer": {
             "a": {
                 "text": "3R/12",
-                "correct": 1
+                "correct": 0
             },
             "b": {
                 "text": "2.25R",
-                "correct": 0
+                "correct": 1
             },
             "c": {
                 "text": "$ 9R $",
@@ -2754,7 +2754,7 @@
         "answer": {
             "a": {
                 "text": "1m/s",
-                "correct": 1
+                "correct": 0
             },
             "b": {
                 "text": "2m/s",
@@ -2766,7 +2766,7 @@
             },
             "d": {
                 "text": "1.4m/s",
-                "correct": 0
+                "correct": 1
             }
         },
         "subject": "Physics",
@@ -2780,7 +2780,7 @@
         "answer": {
             "a": {
                 "text": "$ 10^{-13} $",
-                "correct": 1
+                "correct": 0
             },
             "b": {
                 "text": "$ 6.023x10^{10} $",
@@ -2788,7 +2788,7 @@
             },
             "c": {
                 "text": "$ 6.023x10^{7} $",
-                "correct": 0
+                "correct": 1
             },
             "d": {
                 "text": "$ 10^{13} $",
@@ -2832,7 +2832,7 @@
         "answer": {
             "a": {
                 "text": "300ml",
-                "correct": 1
+                "correct": 0
             },
             "b": {
                 "text": "$ 150ml $",
@@ -2840,7 +2840,7 @@
             },
             "c": {
                 "text": "$ 75ml $",
-                "correct": 0
+                "correct": 1
             },
             "d": {
                 "text": "38ml",
@@ -2884,7 +2884,7 @@
         "answer": {
             "a": {
                 "text": "ethane, propane and butane",
-                "correct": 1
+                "correct": 0
             },
             "b": {
                 "text": "ethane, propane and ethyne",
@@ -2892,7 +2892,7 @@
             },
             "c": {
                 "text": "ethane, propane and ethyne",
-                "correct": 0
+                "correct": 1
             },
             "d": {
                 "text": "ethane, ethyne and ethanol",
@@ -2939,12 +2939,12 @@
             "a": {
                 "text": "",
                 "image":"117_a.jpg",
-                "correct": 1
+                "correct": 0
             },
             "b": {
                 "text": "",
                 "image":"117_b.jpg",
-                "correct": 0
+                "correct": 1
             },
             "c": {
                 "text": "",
@@ -2969,7 +2969,7 @@
         "answer": {
             "a": {
                 "text": "A solid horizontal line",
-                "correct": 1
+                "correct": 0
             },
             "b": {
                 "text": "A solid vertical line",
@@ -2981,7 +2981,7 @@
             },
             "d": {
                 "text": "A dash(hidden) vertical line",
-                "correct": 0
+                "correct": 1
             }
         },
         "subject": "Drawing",
@@ -3023,7 +3023,7 @@
         "answer": {
             "a": {
                 "text": "A solid horizontal line",
-                "correct": 1
+                "correct": 0
             },
             "b": {
                 "text": "A solid vertical line",
@@ -3031,7 +3031,7 @@
             },
             "c": {
                 "text": "A dash(hidden) horizontal line",
-                "correct": 0
+                "correct": 1
             },
             "d": {
                 "text": "A dash(hidden) vertical line",
