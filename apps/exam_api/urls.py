@@ -5,7 +5,7 @@ urlpatterns = patterns(
 
     '',
 
-    url(r'^',
+    url(r'^$',
         'apps.exam_api.views.list_exam_set',
         name='list_exams'),
     url(r'^(?P<exam_code>\d+)',

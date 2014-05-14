@@ -67,7 +67,7 @@ def list_exam_set(request):
 
 def check_answers(request, answer_list, exam_code):
     '''
-    This function receives dictionary of answers and exam_code
+    This function receives list of answers and exam_code
     and return the dictionary with correct answers of each subject
     and sum of correct answers
     '''
@@ -78,12 +78,10 @@ def check_answers(request, answer_list, exam_code):
     answer_dict = {}
     for items in subjects:
         answer_dict[items] = 0
-    for key, value in answer_list.iteritems():
-        for item in sorted_questions:
-            if item['question_number'] == int(key):
-                if item['answer'][value]['correct'] == 1:
-                    answer_dict[item['subject']] += 1
-                    break
+    for index, choice in enumerate(answer_list):
+        if sorted_questions[index]['answer'][choice]['correct'] == 1:
+            answer_dict[sorted_questions[index]['subject']] += 1
+
     total = 0
     for key, value in answer_dict.iteritems():
         total += value
