@@ -5,6 +5,9 @@ from apps.mainapp.classes.Exams import Exam, RankCard, ScoreCard
 from apps.mainapp.classes.Schedules  import Schedules
 import time, datetime
 from django.http import HttpResponse
+from apps.mainapp.classes.query_database import QuestionApi
+
+import json
 
 def dashboard(request):
     if request.user.is_authenticated():
@@ -12,10 +15,11 @@ def dashboard(request):
         upcoming_exams = exam_obj.get_upcoming_exams()
         parameters = {}        
         up_exams = []
+        print upcoming_exams
         for eachExam in upcoming_exams:
             up_exm = {}
-            up_exm['name'] = eachExam['name']
-            up_exm['code'] = eachExam['code']
+            up_exm['name'] = eachExam['exam_name']
+            up_exm['code'] = eachExam['exam_code']
             up_exm['exam_time'] = eachExam['exam_time']
             up_exm['exam_category'] = eachExam['exam_category']
             up_exm['image'] = eachExam['image']
@@ -59,5 +63,20 @@ def landing(request):
         return HttpResponseRedirect('/test/')
     return render_to_response('landing.html', context_instance=RequestContext(request))
 
-def exam_sample(request):
-    return render_to_response('exam.html', context_instance=RequestContext(request))
+def attend_exam(request,exam_code):
+    question_obj = QuestionApi()    
+    questions = question_obj.find_all({"exam_code": int(exam_code)})
+    sorted_questions = sorted(questions, key=lambda k: k['question_number'])
+
+    exam_obj = Exam()
+    exam_details = exam_obj.get_exam_detail(exam_code)
+
+    parameters = {}
+    parameters['questions'] = json.dumps(sorted_questions)
+    parameters['exam_details'] = exam_details
+    print sorted_questions
+    question_start = 0
+    parameters['start_question'] = sorted_questions[0]
+    print parameters['start_question']
+    parameters['exam_code'] = exam_code
+    return render_to_response('exam.html', parameters, context_instance=RequestContext(request))

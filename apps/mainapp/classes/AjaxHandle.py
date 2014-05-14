@@ -21,14 +21,14 @@ class AjaxHandle():
     		exam_code = request.POST.get('exam_code','')
     		coupon_code = request.POST.get('coupon_code','')
     		if exam_code.strip() == 'sample' and coupon_code.lower()=='sample-1234':
-				return HttpResponse(json.dumps({'status':'ok','url':'/exam/'+exam_code}))    			
+				return HttpResponse(json.dumps({'status':'ok','url':'/attend-exam/'+exam_code}))    			
 
     		if exam_code.strip() != 'sample' and coupon_code.lower()=='sample-1234':
     			return HttpResponse(json.dumps({'status':'error','message':'Invalid Coupon code.'}))
 
     		if coupon_obj.validate_coupon(request.POST.get('coupon_code',"false")) != None:
     			coupon_obj.change_used_status_of_coupon(coupon_code, request.user.id, exam_code)
-    			return HttpResponseRedirect('/exam/'+ exam_code + '/')
+    			return HttpResponseRedirect('/attend-exam/'+ exam_code + '/')
     		else:
     			return HttpResponse(json.dumps({'status':'error','message':'Invalid Coupon code.'}))
     	else:
