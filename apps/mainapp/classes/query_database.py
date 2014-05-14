@@ -19,8 +19,9 @@ class QuestionApi():
     def find_one(self, condition):
         return self.db_object.get_one(self.table_name, condition)
 
-    def find_all(self, condition1):
-        return self.db_object.get_all(self.table_name, condition1)
+    def find_all(self, condition1, fields=None):
+        return self.db_object.get_all(self.table_name, condition1, fields,
+                                      sort_index='question_number', limit=200)
 
     def update_question(self, where, what):
         return self.db_object.update(self.table_name, where, what)
