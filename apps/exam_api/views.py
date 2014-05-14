@@ -75,6 +75,8 @@ def check_answers(request):
 
     print request.GET.get('answers')
     print request.GET.get('exam')
+    return HttpResponse("hello")
+
     question_api = QuestionApi()
     questions = question_api.find_all({"exam_code": int(exam_code)})
     sorted_questions = sorted(questions, key=lambda k: k['question_number'])
