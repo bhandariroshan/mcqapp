@@ -3,7 +3,7 @@ import time, datetime
 
 class Coupon():
     def __init__ (self):        
-        self.db_object = MongoConnection("localhost",27017,'mcqapp')
+        self.db_object = MongoConnection("localhost",27017,'mcq')
         self.table_name = 'coupons'
         self.db_object.create_table(self.table_name,'_id')
 

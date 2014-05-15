@@ -43,11 +43,18 @@ def dashboard(request):
 
         rank_card_obj = RankCard()
         rank_card = rank_card_obj.get_rank_card(request.user.id, 'IOMMBBSMODEL000')
-        parameters['rank_card'] = rank_card[0]
+        try:
+            parameters['rank_card'] = rank_card[0]
+        except:
+            pass
 
-        score_card_obj = ScoreCard()
+        score_card_obj = ScoreCard()        
         socre_card = score_card_obj.get_score_card(request.user.id, 'IOMMBBSMODEL000')
-        parameters['socre_card'] = socre_card[0]        
+        try:
+            parameters['socre_card'] = socre_card[0]        
+        except:
+            pass
+
         return render_to_response('dashboard.html',parameters,
                               context_instance=RequestContext(request))
     else:
@@ -74,9 +81,9 @@ def attend_exam(request,exam_code):
     parameters = {}
     parameters['questions'] = json.dumps(sorted_questions)
     parameters['exam_details'] = exam_details
-    print sorted_questions
+    
     question_start = 0
     parameters['start_question'] = sorted_questions[0]
-    print parameters['start_question']
+
     parameters['exam_code'] = exam_code
     return render_to_response('exam.html', parameters, context_instance=RequestContext(request))

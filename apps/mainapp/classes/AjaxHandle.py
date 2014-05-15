@@ -20,10 +20,10 @@ class AjaxHandle():
     		coupon_obj = Coupon()
     		exam_code = request.POST.get('exam_code','')
     		coupon_code = request.POST.get('coupon_code','')
-    		if exam_code.strip() == 'sample' and coupon_code.lower()=='sample-1234':
+    		if exam_code.strip() == '100' and coupon_code.lower()=='sample-1234':
 				return HttpResponse(json.dumps({'status':'ok','url':'/attend-exam/'+exam_code}))    			
 
-    		if exam_code.strip() != 'sample' and coupon_code.lower()=='sample-1234':
+    		if exam_code.strip() != '100' and coupon_code.lower()=='sample-1234':
     			return HttpResponse(json.dumps({'status':'error','message':'Invalid Coupon code.'}))
 
     		if coupon_obj.validate_coupon(request.POST.get('coupon_code',"false")) != None:

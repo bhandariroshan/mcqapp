@@ -18,7 +18,7 @@ class Exam():
 
 class RankCard():
     def __init__ (self):        
-        self.db_object = MongoConnection("localhost",27017,'mcqapp')
+        self.db_object = MongoConnection("localhost",27017,'mcq')
         self.table_name = 'rankcard'
         self.db_object.create_table(self.table_name,'_id')
 
@@ -29,7 +29,7 @@ class RankCard():
 
 class ScoreCard():
     def __init__ (self):        
-        self.db_object = MongoConnection("localhost",27017,'mcqapp')
+        self.db_object = MongoConnection("localhost",27017,'mcq')
         self.table_name = 'scorecard'
         self.db_object.create_table(self.table_name,'_id')
 
