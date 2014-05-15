@@ -61,44 +61,61 @@ def load_modelquestion_in_database(request):
     return HttpResponse("Question saved in the database")
 
 
-def get_questionset_from_database(request, exam_code):
+def get_questionset_from_database(request, exam_code, web_reponse=0):
     '''
     This function returns the questions with same examcode
     '''
     question_api = QuestionApi()
     questions = question_api.find_all({"exam_code": int(exam_code)})
     sorted_questions = sorted(questions, key=lambda k: k['question_number'])
-    return HttpResponse(json.dumps(sorted_questions))
+    if web_reponse == 0:
+        return HttpResponse(json.dumps(sorted_questions))
+    else:
+        return sorted_questions
 
 
-def list_exam_set(request):
+def list_exam_set(request, web_reponse=0):
     '''
     this function lists the available exam models
     '''
     exam_set = ExammodelApi()
     exam_list = exam_set.find_all({})
-    return HttpResponse(json.dumps(exam_list))
+    if web_reponse == 0:
+        return HttpResponse(json.dumps(exam_list))
+    else:
+        return exam_list
 
 
-def check_answers(request, answer_list, exam_code):
+def check_answers(request, web_reponse=0):
     '''
     This function receives list of answers and exam_code
     and return the dictionary with correct answers of each subject
     and sum of correct answers
     '''
+    exam_code = request.GET.get('exam')
+    answer_list = list(request.GET.get('answers'))
+    print 'answer_list', len(answer_list)
     question_api = QuestionApi()
     questions = question_api.find_all({"exam_code": int(exam_code)})
     sorted_questions = sorted(questions, key=lambda k: k['question_number'])
-    subjects = set([i['subject'] for i in sorted_questions])
-    answer_dict = {}
-    for items in subjects:
-        answer_dict[items] = 0
+    correct_answers = {}
     for index, choice in enumerate(answer_list):
-        if sorted_questions[index]['answer'][choice]['correct'] == 1:
-            answer_dict[sorted_questions[index]['subject']] += 1
-
+        if sorted_questions[index]['answer']['correct'] == choice:
+            try:
+                correct_answers[sorted_questions[index]['subject']] += 1
+            except:
+                correct_answers[sorted_questions[index]['subject']] = 1
     total = 0
-    for key, value in answer_dict.iteritems():
+    score_list = []
+    for key, value in correct_answers.iteritems():
+        temp = {}
+        temp['subject'] = key
+        temp['score'] = value
         total += value
-    answer_dict['total'] = total
-    return HttpResponse(json.dumps(answer_dict))
+        score_list.append(temp)
+    score_list.append({'subject': 'total', 'score': total})
+
+    if web_reponse == 0:
+        return HttpResponse(json.dumps(score_list))
+    else:
+        return score_list
