@@ -14,17 +14,32 @@ def load_examset_in_database(request):
     exam_model = ExammodelApi()
     exam_dict = [
         {"exam_name": "IOE model exam 1",
-         "exam_date": datetime.datetime(2014, 5, 20),
-         "exam_code": 100},
+         "exam_date": 1399998500,
+         "image":"exam.jpg", 
+         "exam_code" : 100,
+         "exam_time" : "7.00pm",
+         "exam_category" : "",
+         },
         {"exam_name": "IOE model exam 2",
-         "exam_date": datetime.datetime(2014, 5, 27),
-         "exam_code": 200},
+         "exam_date": 1399978500,
+         "image":"exam.jpg",         
+         "exam_code" : 101,
+         "exam_time" : "7.00pm",
+         "exam_category" : "",
+         },
         {"exam_name": "IOE model exam 3",
-         "exam_date": datetime.datetime(2014, 6, 3),
-         "exam_code": 300},
+         "exam_date": 1399968500,
+         "image":"exam.jpg",         
+         "exam_code" : 102,
+         "exam_time" : "7.00pm",
+         "exam_category" : "",
+         },
         {"exam_name": "IOE model exam 4",
-         "exam_date": datetime.datetime(2014, 6, 10),
-         "exam_code": 400}
+         "exam_date": 1399968500,
+         "image":"exam.jpg",         
+         "exam_code" : 103,
+         "exam_time" : "7.00pm",
+         "exam_category" : ""}
     ]
     exam_model.insert_new_model(exam_dict)
     return HttpResponse("Exam model saved in the database")

@@ -18,6 +18,13 @@
 		this.$dropDowns = this.$el.find('li:has(.dropdown)');
 		var scope = this;
 
+		var persist = this.$el.attr('gumby-persist');
+		if(typeof persist === 'undefined' && persist !== 'false') {
+			this.$el.find('li:not(:has(.dropdown)) a').on(Gumby.click, function() {
+				scope.$el.find('ul').removeClass('active');
+			});
+		}
+
 		// when navbar items
 		this.$dropDowns
 		// are tapped hide/show dropdowns
@@ -34,22 +41,19 @@
 		}
 
 		// override with childlinks
-		this.$dropDowns.find('.dropdown li:not(:has(.dropdown)) a[href]').on(Gumby.click, this.openLink);
-
-		// on mousemove and touchstart toggle modernizr classes and disable/enable this module
-		// workaround for Pixel and other multi input devices
-		$(window).on('mousemove touchstart', function(e) {
-			e.stopImmediatePropagation();
-			if(e.type === 'mousemove') {
-				scope.$dropDowns.on('mouseover mouseout', scope.toggleDropdown);
-			}
-		});
+		this.$el.find('li:not(:has(.dropdown)) a[href]').on(Gumby.click, this.openLink);
 	}
 
 	Navbar.prototype.toggleDropdown = function(e) {
-		// prevent click from triggering here too
-		e.stopImmediatePropagation();
 		e.preventDefault();
+
+		if($(this).parents('.dropdown')) {
+			e.stopImmediatePropagation();
+		}
+
+		if($(e.target).is('i')) {
+			return;
+		}
 
 		var $this = $(this);
 
@@ -60,9 +64,8 @@
 		}
 	};
 
-	// handle opening list item link 
+	// handle opening list item link
 	Navbar.prototype.openLink = function(e) {
-		e.stopImmediatePropagation();
 		e.preventDefault();
 
 		var $this = $(this),

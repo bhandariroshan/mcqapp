@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{% block head %}
+<style type="text/css">
+  .btn-width{
+    width:50px;
+    height: 35px;
+  }
+  .flotatright{
+    float: right;
+  }
+   .tiles {
+    display: block;
+    overflow: visible;
+}
+</style>
+{% endblock %}
+
+{% block content %}  
+<div class="row my-margin-top row-bg-color">
+    <div class="twelve columns" style="text-align: center;">
+		<h3><strong>{{exam_details.exam_name}}</strong></h3>
+		<h4><strong>Exam Date: {{exam_details.exam_date}}</strong></h4>
+    </div>
+    <div class="twelve columns">
+    <div class="example-grid">
+    </div>
+    </div>
+    <div class="twelve columns" style="margin-top:2%; margin-bottom:2%;">
+          <div class="six columns" id="startTimer">
+                <h5 style="color:red;"><strong>Start Time: {{exam_details.exam_time}}</strong></h5>
+          </div>
+          <div class="six columns" id="timeRemained">
+                <h5 style="float:right; color:red;"><strong>Time Remained: 60 min</strong></h5>
+          </div>
+    </div>
+    <div class="twelve columns">
+      <div class="seven columns">      
+
+      <div style=" height: 40px; "><span><p style="text-align:center; color:blue;"><strong>Q. No. {{start_question.question_number}}</strong></p> </span></div>        
+      	<div id="questionText" class="twelve columns">
+          <p><strong> {{start_question.question.text}} </strong></p> 
+          {% if start_question.question.image %}
+          <img src="/static/images/{{exam_code}}/{{start_question.question.image}}" style="margin-left:15%; height:140px" />
+          {% endif %}
+      	</div>
+      	<div>	     			
+      		<ul class="two_up tiles">
+      		  <li class="field">
+      			  <div class="btn medium secondary pretty clickDiv " id="divOptionA" ><label class="radio " id="optionA" for="inputoptionA"><input name="answer" id="inputoptionA" value="A" type="radio">a<span></span></label>
+                {{start_question.answer.a.text}}<br></div>
+               {% if start_question.answer.a.image %}
+                <img src="/static/images/{{exam_code}}/{{start_question.answer.a.image}}" style="margin-left:15%; height:140px;" />
+               {% endif %}
+      		  </li>
+      		              
+            <li class="field">
+              <div class="btn medium secondary pretty clickDiv" id="divOptionB" style="float:right;"><label class="radio " id="optionB" for="inputoptionB"><input name="answer" id="inputoptionB" value="B" type="radio">b<span></span></label>
+                {{start_question.answer.b.text}}<br></div>
+               {% if start_question.answer.b.image %}
+                <img src="/static/images/{{exam_code}}/{{start_question.answer.b.image}}" style="margin-left:15%; height:140px;" />
+               {% endif %}
+            </li>
+
+            <li class="field">
+              <div class="btn medium secondary pretty clickDiv " id="divOptionC"><label class="radio " id="optionC" for="inputoptionC"><input name="answer" id="inputoptionC" value="A" type="radio">c<span></span></label>
+                {{start_question.answer.a.text}}<br></div>
+               {% if start_question.answer.a.image %}
+                <img src="/static/images/{{exam_code}}/{{start_question.answer.c.image}}" style="margin-left:15%; height:140px;" />
+               {% endif %}
+            </li>
+
+            <li class="field">
+              <div class="btn medium secondary pretty clickDiv " style="float:right;" id="divOptionD"><label class="radio " id="optionD" for="inputoptionD"><input name="answer" id="inputoptionD" value="D" type="radio">d<span></span></label>
+                {{start_question.answer.d.text}}<br></div>
+               {% if start_question.answer.d.image %}
+                <img src="/static/images/{{exam_code}}/{{start_question.answer.d.image}}" style="margin-left:15%; height:140px;" />
+               {% endif %}
+            </li>
+      		</ul>
+      	</div>
+        <div style=" height: 40px; ">
+          <span>
+            <div class="small primary btn pretty">
+              <a href="#"><i class="icon-arrow-left"></i>Previous</a>
+            </div>
+          </span>
+          <span style="float:right">
+            <div class="small primary btn pretty">
+              <a href="#"><i class="icon-arrow-right"></i>Skip to Next</a>
+            </div>
+          </span>
+        </div>      	
+      </div>
+      <div class="five columns" id="myAnswerSheet" style="height:300px; overflow-y:scroll; overflow-x:hidden">
+      	<h5 style="text-align:center;color:red;"><strong>My Answer Sheet</strong></h5>
+      </div>
+    </div>
+</div>
+{% endblock %}
+{% block javascript %}
+<script type="text/x-mathjax-config">
+  //MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+
+ <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript">
+var click_count = 0;
+var div_count = 0;
+var ans_list=[];
+
+$('.clickDiv').click(function(){
+  var clicked = this.id.substr(9,this.id.length);
+  var check_id = "#inputoption"+clicked;
+  $(check_id).trigger('gumby.check');
+  ans_html = $('#myAnswerSheet').html();
+  ans_list.push({{question_number}});
+  if (click_count%5 ==0){
+           ans_html = ans_html + '<div class="twelve columns" id="andDiv' + String(div_count) +  '" style="margin-left:10%;margin-bottom:3%;">';
+           ans_html = ans_html + '<a href="#">' + String(1) + '. <li class="success badge">' + clicked + '</li></a>&nbsp;&nbsp;&nbsp;</div>';
+           $('#myAnswerSheet').html(ans_html);
+           click_count = click_count + 1;
+  }
+  else{
+    click_count = click_count + 1;
+  }
+});
+</script>
+{% endblock %}

@@ -50,7 +50,7 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
-MEDIA_ROOT = APP_ROOT+'/../media/'
+MEDIA_ROOT = APP_ROOT+'/../../media/'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -61,7 +61,7 @@ MEDIA_URL = '/media/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = APP_ROOT+'/../static/'
+STATIC_ROOT = APP_ROOT+'/../../static/'
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
@@ -98,6 +98,9 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.contrib.auth.context_processors.auth",
     "django.core.context_processors.request",
     "allauth.account.context_processors.account",
+    "allauth.socialaccount.context_processors.socialaccount",
+    # 'djstripe.context_processors.djstripe_settings',
+    # 'mainapp.classes.context_processors.user_info',
 )
 
 # List of callables that know how to import templates from various sources.
@@ -124,30 +127,29 @@ ROOT_URLCONF = 'mcq.urls'
 WSGI_APPLICATION = 'mcq.wsgi.application'
 
 TEMPLATE_DIRS = (
-    'templates',
+    '/srv/www/mcq.phunka.com/application/mcqapp/templates',
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 )
 
 INSTALLED_APPS = (
-
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.admin',
-    'django.contrib.admindocs',
-
+    'apps.mainapp',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.twitter',
-    
-    'apps.mainapp',
+    # Uncomment the next line to enable the admin:
+    'django.contrib.admin',
+    # Uncomment the next line to enable admin documentation:
+    'django.contrib.admindocs',
 )
 
 # A sample logging configuration. The only tangible logging

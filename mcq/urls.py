@@ -7,9 +7,9 @@ urlpatterns = patterns(
 
     '',
 
+    url(r'^$', 'apps.mainapp.views.landing'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^accounts/', include('allauth.urls')),
-
     url(r'^', include('apps.mainapp.urls', app_name='mainapp')),
     url(r'^exam/', include('apps.exam_api.urls', app_name='exam_api')),
 )
