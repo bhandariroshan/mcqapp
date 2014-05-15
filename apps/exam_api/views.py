@@ -1,5 +1,5 @@
 from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi,\
-    AnswerDatabase
+    AttemptedAnswerDatabase
 
 
 class ExamHandler():
@@ -70,8 +70,8 @@ def save_user_answers(request):
             "question_number": request.GET.get('question_number'),
             "answer_choice": request.GET.get('choice')
         }
-        answer_database = AnswerDatabase()
-        answer_database.insert_new_answer_model(answer_dict)
+        attempted_answer = AttemptedAnswerDatabase()
+        attempted_answer.insert_new_answer_model(answer_dict)
         print 'Answer Saved in Database'
 
     else:

@@ -1,8 +1,10 @@
 import json
+from bson.objectid import ObjectId
 
 from django.http import HttpResponse
 
-from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi
+from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi,\
+    CorrectAnswerDatabase
 
 
 def load_examset_in_database(request):
@@ -58,3 +60,22 @@ def load_modelquestion_in_database(request):
     question_api = QuestionApi()
     question_api.insert_new_question(json_obj)
     return HttpResponse("Question saved in the database")
+
+
+def load_correctanswer_in_database(request):
+    '''
+    This function loads the correct answers of each question in the database
+    Each document consists of question_id and correct answer choice
+    '''
+    question_api = QuestionApi()
+    questions = question_api.find_all_questions(
+        {"exam_code": 100})
+    correct_answer_list = []
+    for each_question in questions:
+        temp = {}
+        temp['question_id'] = ObjectId(each_question['uid']['id'])
+        temp['correct_answer'] = each_question['answer']['correct']
+        correct_answer_list.append(temp)
+    correct_answer_database = CorrectAnswerDatabase()
+    correct_answer_database.insert_new_correct_answer(correct_answer_list)
+    return HttpResponse("Correct Answer saved in the database")
