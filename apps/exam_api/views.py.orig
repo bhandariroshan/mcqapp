@@ -71,15 +71,28 @@ def list_exam_set(request, web_reponse=0):
         return exam_list
 
 
+<<<<<<< HEAD
+def check_answers(request):
+=======
 def check_answers(request, web_reponse=0):
+>>>>>>> 0bdf868f7089626a3640f1cf27d60ecfb12f8e88
     '''
     This function receives list of answers and exam_code
     and return the dictionary with correct answers of each subject
     and sum of correct answers
+
     '''
+<<<<<<< HEAD
+
+    print request.GET.get('answers')
+    print request.GET.get('exam')
+    return HttpResponse("hello")
+
+=======
     exam_code = request.GET.get('exam')
     answer_list = list(request.GET.get('answers'))
     print 'answer_list', len(answer_list)
+>>>>>>> 0bdf868f7089626a3640f1cf27d60ecfb12f8e88
     question_api = QuestionApi()
     questions = question_api.find_all({"exam_code": int(exam_code)})
     sorted_questions = sorted(questions, key=lambda k: k['question_number'])
