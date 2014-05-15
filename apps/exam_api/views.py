@@ -1,8 +1,5 @@
-import json
-
-from django.http import HttpResponse
-
-from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi
+from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi,\
+    AnswerDatabase
 
 
 class ExamHandler():
@@ -11,7 +8,8 @@ class ExamHandler():
     '''
     def get_questionset_from_database(self, exam_code):
         '''
-        This function returns the questions with same examcode
+        This function returns the questions of a model
+        by checking the exam_code
         '''
         question_api = QuestionApi()
         questions = question_api.find_all_questions(
@@ -59,22 +57,22 @@ class ExamHandler():
         return score_list
 
 
-def get_question_set(self, request, exam_code):
-    exam_handler = ExamHandler()
-    model_question_set = exam_handler.get_questionset_from_database(
-        exam_code)
-    return HttpResponse(json.dumps(model_question_set))
+def save_user_answers(request):
+    '''
+    the function receives the information of answer checked by
+    user and saved in the answer database
+    '''
 
+    if request.GET.get('exam_code') is not None:
+        answer_dict = {
+            "exam_code": request.GET.get('exam_code'),
+            "user_id": request.GET.get('user_id'),
+            "question_number": request.GET.get('question_number'),
+            "answer_choice": request.GET.get('choice')
+        }
+        answer_database = AnswerDatabase()
+        answer_database.insert_new_answer_model(answer_dict)
+        print 'Answer Saved in Database'
 
-def get_upcoming_exams(self, request):
-    exam_handler = ExamHandler()
-    upcoming_exams = exam_handler.list_upcoming_exams()
-    return HttpResponse(json.dumps(upcoming_exams))
-
-
-def get_scores(self, request):
-    exam_code = request.GET.get('exam')
-    answer_list = list(request.GET.get('answers'))
-    exam_handler = ExamHandler()
-    score_dict = exam_handler.check_answers(exam_code, answer_list)
-    return HttpResponse(json.dumps(score_dict))
+    else:
+        print 'Not a valid method'
