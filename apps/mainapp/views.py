@@ -82,7 +82,6 @@ def attend_exam(request,exam_code):
     parameters['questions'] = json.dumps(sorted_questions)
     parameters['exam_details'] = exam_details
     
-    question_start = 0
     parameters['start_question'] = sorted_questions[0]
 
     parameters['exam_code'] = exam_code
