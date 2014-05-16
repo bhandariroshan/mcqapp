@@ -5,7 +5,7 @@ from apps.mainapp.classes.Exams import Exam, RankCard, ScoreCard
 from apps.mainapp.classes.Schedules  import Schedules
 import time, datetime
 from django.http import HttpResponse
-from apps.mainapp.classes.query_database import QuestionApi
+from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi
 
 import json
 
@@ -72,17 +72,22 @@ def landing(request):
 
 def attend_exam(request,exam_code):
     question_obj = QuestionApi()    
-    questions = question_obj.find_all({"exam_code": int(exam_code)})
+    questions = question_obj.find_all_questions({"exam_code": int(exam_code)})
     sorted_questions = sorted(questions, key=lambda k: k['question_number'])
 
-    exam_obj = Exam()
-    exam_details = exam_obj.get_exam_detail(exam_code)
+    exam_obj = ExammodelApi()
+    exam_details = exam_obj.find_one_exammodel({'exam_code':int(exam_code)})
+    exam_details['exam_date'] = datetime.datetime.fromtimestamp(int(exam_details['exam_date'])).strftime('%Y-%m-%d')
+
 
     parameters = {}
     parameters['questions'] = json.dumps(sorted_questions)
     parameters['exam_details'] = exam_details
     
-    parameters['start_question'] = sorted_questions[0]
+    start_question_number = 0 
+    parameters['start_question'] = sorted_questions[start_question_number]
+    parameters['start_question_number'] = start_question_number
+    parameters['max_questions_number'] =  len(sorted_questions)
 
     parameters['exam_code'] = exam_code
     return render_to_response('exam.html', parameters, context_instance=RequestContext(request))
