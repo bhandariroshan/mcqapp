@@ -90,4 +90,4 @@ def attend_exam(request,exam_code):
     parameters['max_questions_number'] =  len(sorted_questions)
 
     parameters['exam_code'] = exam_code
-    return render_to_response('exam.html', parameters, context_instance=RequestContext(request))
+    return render_to_response('exam_main.html', parameters, context_instance=RequestContext(request))

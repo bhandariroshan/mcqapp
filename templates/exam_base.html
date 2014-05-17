@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block head %}
+<style type="text/css">
+  .li-height{
+    min-height: 60px;
+  }
+  .btn-width{
+    width:50px;
+    height: 35px;
+  }
+  .flotatright{
+    /*float: right;*/
+  }
+   .tiles {
+    display: block;
+    overflow: visible;
+}
+.h-text-align{
+  text-align: center;
+}
+.div-margin{
+  margin-left: 0%;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.forum_hover { background-color: aliceblue }
+</style>
+{% endblock %}
+
+{% block content %}  
+<div class="row my-margin-top row-bg-color">
+    <div class="twelve columns" style="text-align: center;">
+		<h3><strong>{{exam_details.exam_name}}</strong></h3>
+		<h4><strong>Date: {{exam_details.exam_date}}</strong></h4>
+    </div>
+    <div class="twelve columns">
+    <div class="example-grid">
+    </div>
+    </div>
+    <div class="twelve columns" style="margin-top:2%; margin-bottom:2%;">
+          <div class="six columns" id="startTimer">
+                <h5 style="color:red;"><strong>Start Time: {{exam_details.exam_time}}</strong></h5>
+          </div>
+          {% block timer %}
+          {% endblock %}
+    </div>
+      {% block exam_content %}
+      {% endblock %}
+</div>
+{% endblock %}
+{% block javascript %}
+{% endblock %}
