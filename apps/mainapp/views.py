@@ -68,7 +68,7 @@ def attempt_question(request):
 
 def landing(request):
     if request.user.is_authenticated():
-        return HttpResponseRedirect('/test/')
+        return HttpResponseRedirect('/home/')
     return render_to_response('landing.html', context_instance=RequestContext(request))
 
 def attend_exam(request,exam_code):
