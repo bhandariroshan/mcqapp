@@ -9,6 +9,29 @@ from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi
 from apps.mainapp.classes.Coupon import Coupon
 
 import json
+from django.views.decorators.csrf import csrf_exempt
+
+
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate # Does not give me access
+# For POSTing the facebook token
+from django.views.decorators.csrf import csrf_exempt
+from allauth.socialaccount import providers
+from allauth.socialaccount.models import SocialLogin, SocialToken, SocialApp
+from allauth.socialaccount.providers.facebook.views import fb_complete_login
+from allauth.socialaccount.helpers import complete_social_login
+
+
+
+from allauth.socialaccount.providers.facebook.views import login_by_token
+
+
+
+@csrf_exempt
+def android(request): 
+    login_by_token(request)
+    return HttpResponse("{'status':'success'}")
+
 
 def dashboard(request):
     if request.user.is_authenticated():

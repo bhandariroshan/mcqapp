@@ -14,5 +14,17 @@ SOCIALACCOUNT_AUTO_SIGNUP = True
 LOGIN_REDIRECT_URL = "/home/"
 # ACCOUNT_SIGNUP_FORM_CLASS = 'mainapp.forms.SignupForm'
 ACCOUNT_LOGOUT_ON_GET = True
+SOCIALACCOUNT_PROVIDERS = {
+    'facebook': {
+        'SCOPE': [
+        	"email",
+            "public_profile", 
+            "user_friends"
+            ],
+        #'AUTH_PARAMS': { 'auth_type': 'reauthenticate' },
+        'AUTH_PARAMS': { },
+        'METHOD': 'oauth2'
+        },
+    }
 
 

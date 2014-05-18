@@ -1,0 +1,1545 @@
+[
+    {
+        "question": {
+            "text": "How many maximum number of A4 papers could be made from a A0 paper?"
+        },
+        "answer": {
+            "a": {
+                "text": "2",
+                "correct": 0
+            },
+            "b": {
+                "text": "4",
+                "correct": 0
+            },
+            "c": {
+                "text": "8",
+                "correct": 0
+            },
+            "d": {
+                "text": "16",
+                "correct": 1
+            }
+        },
+        "subject": "Drawing",
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "What is formed when a point moves in space in such a way that its distance from a point is always constant?"
+        },
+        "answer": {
+            "a": {
+                "text": "A circle",
+                "correct": 0
+            },
+            "b": {
+                "text": "4",
+                "correct": 0
+            },
+            "c": {
+                "text": "8",
+                "correct": 0
+            },
+            "d": {
+                "text": "16",
+                "correct": 1
+            }
+        },
+        "subject": "Mathematics",
+        "exam_code": 100
+    },    
+    {
+        "question": {
+            "text": "To rotate two two circle in opposite direction, which of the following belt must be used?"
+        },
+        "answer": {
+            "a": {
+                "text": "Open Belt",
+                "correct": 0
+            },
+            "b": {
+                "text": "Cross Belt",
+                "correct": 0
+            },
+            "c": {
+                "text": "Any of a and b",
+                "correct": 1
+            },
+            "d": {
+                "text": "none of the all",
+                "correct": 0
+            }
+        },
+        "subject": "Mathematics",
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "An enlarging circle has drawing size ........... than/to the real object"
+        },
+        "answer": {
+            "a": {
+                "text": "smaller",
+                "correct": 0
+            },
+            "b": {
+                "text": "greater",
+                "correct": 1
+            },
+            "c": {
+                "text": "exactly equal",
+                "correct": 0
+            },
+            "d": {
+                "text": "any of the above",
+                "correct": 0
+            }
+        },
+        "subject": "Mathematics",
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": ".............. indicates size of the object."
+        },
+        "answer": {
+            "a": {
+                "text": "scale",
+                "correct": 0
+            },
+            "b": {
+                "text": "dimension",
+                "correct": 1
+            },
+            "c": {
+                "text": "lettering",
+                "correct": 0
+            },
+            "d": {
+                "text": "geometry",
+                "correct": 0
+            }
+        },
+        "subject": "Mathematics",
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "For f(x) = $ x^{2} $ and g(x) = $ 2^{x} $, the solution set of fog(x) = gof(x) is"
+        },
+        "answer": {
+            "a": {
+                "text": "R",
+                "correct": 0
+            },
+            "b": {
+                "text": "$ z^{+} $",
+                "correct": 0
+            },
+            "c": {
+                "text": "{0}",
+                "correct": 0
+            },
+            "d": {
+                "text": "{0,2}",
+                "correct": 1
+            }
+        },
+        "subject": "Mathematics",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "The angle of $ \triangle $ ABC are in A.P. such that b:c = $ \sqrt{3} : \sqrt{2} $, then $ \triangle $ ABC is"
+        },
+        "answer": {
+            "a": {
+                "text": "acute angled triangle",
+                "correct": 1
+            },
+            "b": {
+                "text": "right angled triangle",
+                "correct": 0
+            },
+            "c": {
+                "text": "obtuse angled triangle",
+                "correct": 0
+            },
+            "d": {
+                "text": "right angled isosceles triangle",
+                "correct": 0
+            }
+        },
+        "subject": "Mathematics",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "The coefficient of $ x^{30} $ in the expansion of $(1 + x)^{56} (1-x+x^{2})^{56} $ is "
+        },
+        "answer": {
+            "a": {
+                "text": "^{50}C_9",
+                "correct": 0
+            },
+            "b": {
+                "text": "^{50}C_10",
+                "correct": 0
+            },
+            "c": {
+                "text": "^{50}C_29",
+                "correct": 0
+            },
+            "d": {
+                "text": "^{50}C_30",
+                "correct": 1
+            }
+        },
+        "subject": "Mathematics",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "The product of all real roots of an equation $ x^{2} $ - |x| -6 $ \ge $ 0 is"
+        },
+        "answer": {
+            "a": {
+                "text": "-4",
+                "correct": 0
+            },
+            "b": {
+                "text": "-9",
+                "correct": 1
+            },
+            "c": {
+                "text": "-6",
+                "correct": 0
+            },
+            "d": {
+                "text": "36",
+                "correct": 0
+            }
+        },
+        "subject": "Mathematics",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "For x $ \gt $ 0, if $ \log_{2}\sqrt[4]{x} $ +  $ \log_{2}\sqrt[8]{x} $ + $ \log_{2}\sqrt[16]{x} $ + ..... x = 2, then x is equal to  "
+        },
+        "answer": {
+            "a": {
+                "text": "1",
+                "correct": 0
+            },
+            "b": {
+                "text": "2",
+                "correct": 0
+            },
+            "c": {
+                "text": "4",
+                "correct": 1
+            },
+            "d": {
+                "text": "$ \log_{2}\sqrt{2} $",
+                "correct": 0
+            }
+        },
+        "subject": "Mathematics",
+        "marks":2,
+        "exam_code": 100
+    },    
+    {
+        "question": {
+            "text": "if $ \begin{bmatrix}a & b & 0 \\0 & a & b \\b & 0 & a \end{bmatrix} $ = 0 then"
+        },
+        "answer": {
+            "a": {
+                "text": "a is one of the cube roots of unity",
+                "correct": 0
+            },
+            "b": {
+                "text": "b is one of the cube roots of unity",
+                "correct": 0
+            },
+            "c": {
+                "text": "a/b is one of the cube roots of unity",
+                "correct": 0
+            },
+            "d": {
+                "text": "a/b is one of the cube roots of -1",
+                "correct": 1
+            }
+        },
+        "subject": "Mathematics",
+        "marks":2,
+        "exam_code": 100
+    },    
+    {
+        "question": {
+            "text": "The number of ways in which letters of word \"ACCountant\" can be arranged so that vowels come together is"
+        },
+        "answer": {
+            "a": {
+                "text": "7560",
+                "correct": 1
+            },
+            "b": {
+                "text": "4845",
+                "correct": 0
+            },
+            "c": {
+                "text": "240",
+                "correct": 0
+            },
+            "d": {
+                "text": "60",
+                "correct": 0
+            }
+        },
+        "subject": "Mathematics",
+        "marks":2,
+        "exam_code": 100
+    },    
+    {
+        "question": {
+            "text": "if z = x + iy = (k + 3) + i $ \sqrt{5-k^{2}} $, then locus of z is"
+        },
+        "answer": {
+            "a": {
+                "text": "a straight line",
+                "correct": 0
+            },
+            "b": {
+                "text": "a parabola",
+                "correct": 0
+            },
+            "c": {
+                "text": "a circle",
+                "correct": 1
+            },
+            "d": {
+                "text": "an ellipse",
+                "correct": 0
+            }
+        },
+        "subject": "Mathematics",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "if f(x) = $ \begin{cases} \frac {(x-|x|)}{2} & when \space  x \neq 0\\0 & x = 0\end{cases} $"
+        },
+        "answer": {
+            "a": {
+                "text": "f(x) is continuous at x = 0",
+                "correct": 0
+            },
+            "b": {
+                "text": "f(x) is discontinuous at x = 0",
+                "correct": 0
+            },
+            "c": {
+                "text": "$ \lim_{x \rightarrow 0^{+}} f(x) =\lim_{x \rightarrow 0^{-}} f(x) $",
+                "correct": 0
+            },
+            "d": {
+                "text": "$ \lim_{x \rightarrow 0^{+}} $ f(x)=f(0)",
+                "correct": 1
+            }
+        },
+        "subject": "Mathematics",
+        "marks":2,
+        "exam_code": 100
+    },    
+    {
+        "question": {
+            "text": "$ sin^{-1}\frac{2x}{1+x^{2}} $ is equal to"
+        },
+        "answer": {
+            "a": {
+                "text": "2$ sin^{-1}x $",
+                "correct": 0
+            },
+            "b": {
+                "text": "$ cos^{-1}x $",
+                "correct": 0
+            },
+            "c": {
+                "text": "$ tan^{-1}x $",
+                "correct": 0
+            },
+            "d": {
+                "text": "undefined",
+                "correct": 1
+            }
+        },
+        "subject": "Mathematics",
+        "marks":2,
+        "exam_code": 100
+    },        
+    {
+        "question": {
+            "text": "let a, b, c be three distinct non negative numbers. If the vectors a$ \overrightarrow{i} $ + a $ \overrightarrow{j} $ + c $ \overrightarrow{k} $, $ \overrightarrow{i} $ + $ \overrightarrow{k} $ and c $ \overrightarrow{i} $+ c$ \overrightarrow{j} $ + b $ \overrightarrow{k} $ lie on a plane, then"
+        },
+        "answer": {
+            "a": {
+                "text": "c is arithmatic mean of a and b",
+                "correct": 0
+            },
+            "b": {
+                "text": "c is geometric mean of a and b",
+                "correct": 1
+            },
+            "c": {
+                "text": "c is harmonic mean of a and b",
+                "correct": 0
+            },
+            "d": {
+                "text": "b is geometric mean of a and b",
+                "correct": 0
+            }
+        },
+        "subject": "Mathematics",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "if y = $ tan^{-1}\sqrt\frac{1-cosx}{1+cosx} $, then dy/dx "
+        },
+        "answer": {
+            "a": {
+                "text": "1/2",
+                "correct": 1
+            },
+            "b": {
+                "text": "1/x",
+                "correct": 0
+            },
+            "c": {
+                "text": "x/2",
+                "correct": 0
+            },
+            "d": {
+                "text": "$ x^{2} $",
+                "correct": 0
+            }
+        },
+        "subject": "Mathematics",
+        "marks":2,
+        "exam_code": 100
+    },     
+    {
+        "question": {
+            "text": "\int\frac{(x+1)(x+logx)^{3}}{x} dx = "
+        },
+        "answer": {
+            "a": {
+                "text": "$ (x + logx)^{4} $ + c ",
+                "correct": 0
+            },
+            "b": {
+                "text": "$ \frac{(x+logx)^{4}}{4x} $ + c",
+                "correct": 0
+            },
+            "c": {
+                "text": "$ \frac{(x+logx)^{4}}{4} $ + c",
+                "correct": 1
+            },
+            "d": {
+                "text": "$ \frac{(x+logx)^{4}}{x} $ + c",
+                "correct": 0
+            }
+        },
+        "subject": "Mathematics",
+        "marks":2,
+        "exam_code": 100
+    },    
+    {
+        "question": {
+            "text": "Area bounded by $y^2 = x$ and $ x=2y $ is"
+        },
+        "answer": {
+            "a": {
+                "text": "1/3",
+                "correct": 0
+            },
+            "b": {
+                "text": "2/3",
+                "correct": 0
+            },
+            "c": {
+                "text": "4/3",
+                "correct": 0
+            },
+            "d": {
+                "text": "8/3",
+                "correct": 1
+            }
+        },
+        "subject": "Mathematics",
+        "marks":2,
+        "exam_code": 100
+    },     
+    {
+        "question": {
+            "text": "OA and OB are two tangents drawn from origin to $ x^{2} + y^{2} + 2fy +c =0 $ with center at s, then quadrilateral CASB is"
+        },
+        "answer": {
+            "a": {
+                "text": "$ \frac{1}{2} \sqrt{c(g^{2} + f^{2} -c)} $",
+                "correct": 1
+            },
+            "b": {
+                "text": "$ \frac{1}{2} c\sqrt{(g^{2} + f^{2} -c)} $",
+                "correct": 0
+            },
+            "c": {
+                "text": "$ \sqrt{c(g^{2} + f^{2} -c)} $",
+                "correct": 0
+            },
+            "d": {
+                "text": "c$ \frac{1}{2} \sqrt{c(g^{2} + f^{2} -c)} $",
+                "correct": 0
+            }
+        },
+        "subject": "Mathematics",
+        "marks":2,
+        "exam_code": 100
+    }, 
+    {
+        "question": {
+            "text": "The eccentricity of conic in polarform $ r^{2} = 32coses2\theta $ is"
+        },
+        "answer": {
+            "a": {
+                "text": "0",
+                "correct": 0
+            },
+            "b": {
+                "text": "1",
+                "correct": 0
+            },
+            "c": {
+                "text": "$ \sqrt{2} $",
+                "correct": 0
+            },
+            "d": {
+                "text": "undefined",
+                "correct": 1
+            }
+        },
+        "subject": "Mathematics",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "The locus of a point which divides the line segment joining (1,0) and ($ 2cos\theta, 2sin\theta) $ internally in the ratio 2:3, for all $ \theta $, is"
+        },
+        "answer": {
+            "a": {
+                "text": "a straight line",
+                "correct": 1
+            },
+            "b": {
+                "text": "a pair of line",
+                "correct": 0
+            },
+            "c": {
+                "text": "a circle ",
+                "correct": 0
+            },
+            "d": {
+                "text": "an ellipse",
+                "correct": 0
+            }
+        },
+        "subject": "Mathematics",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "If one of the lines $ my^{2} + (1-m^{2})xy - mx^{2} = 0$ is bisector of the angle between the lines xy = 0 then m = "
+        },
+        "answer": {
+            "a": {
+                "text": "-2",
+                "correct": 0
+            },
+            "b": {
+                "text": "-1/2",
+                "correct": 0
+            },
+            "c": {
+                "text": "0",
+                "correct": 1
+            },
+            "d": {
+                "text": "1",
+                "correct": 0
+            }
+        },
+        "subject": "Mathematics",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "The projection of a line on a coordinate axes are 2, 3, 6 then length of the line is"
+        },
+        "answer": {
+            "a": {
+                "text": "1",
+                "correct": 0
+            },
+            "b": {
+                "text": "6",
+                "correct": 1
+            },
+            "c": {
+                "text": "7",
+                "correct": 0
+            },
+            "d": {
+                "text": "11",
+                "correct": 0
+            }
+        },
+        "subject": "Mathematics",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "The friendship established during mountain climbing  are",
+            "image":"passage.jpg",
+        },
+        "answer": {
+            "a": {
+                "text": "lasting and irreparable",
+                "correct": 0
+            },
+            "b": {
+                "text": "like the friendship in modern societies",
+                "correct": 1
+            },
+            "c": {
+                "text": "born out of solitude",
+                "correct": 0
+            },
+            "d": {
+                "text": "inspired by the beauties of nature",
+                "correct": 0
+            }
+        },
+        "subject": "English",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "Real friendship is born when people share their ",
+            "image":"passage.jpg",
+        },
+        "answer": {
+            "a": {
+                "text": "failures",
+                "correct": 0
+            },
+            "b": {
+                "text": "success",
+                "correct": 0
+            },
+            "c": {
+                "text": "danger",
+                "correct": 0
+            },
+            "d": {
+                "text": "1, 2 and 3 together",
+                "correct": 1
+            }
+        },
+        "subject": "English",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "When you have walked the feather edge of danger with someone",
+            "image":"passage.jpg",
+        },
+        "answer": {
+            "a": {
+                "text": "You will meet him at the party afterwards",
+                "correct": 0
+            },
+            "b": {
+                "text": "You will have really appreciated the beauty later",
+                "correct": 0
+            },
+            "c": {
+                "text": "You will get tired easily",
+                "correct": 0
+            },
+            "d": {
+                "text": "You will have an irreplaceable foundation for a friendship",
+                "correct": 0
+            }
+        },
+        "subject": "English",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "The word 'impregnable' implies",
+            "image":"passage.jpg",
+        },
+        "answer": {
+            "a": {
+                "text": "that which cannot be overcome or taken by force",
+                "correct": 1
+            },
+            "b": {
+                "text": "that which exhibits a lot of strength",
+                "correct": 0
+            },
+            "c": {
+                "text": "that which lasts forever",
+                "correct": 0
+            },
+            "d": {
+                "text": "that which is very impressive",
+                "correct": 0
+            }
+        },
+        "subject": "English",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "'Walked the feather edge of danger with someone' means",
+            "image":"passage.jpg",
+        },
+        "answer": {
+            "a": {
+                "text": "walked on feather with someone",
+                "correct": 1
+            },
+            "b": {
+                "text": "walked with someone on the edge of mountain",
+                "correct": 0
+            },
+            "c": {
+                "text": "walked together with feather like steps",
+                "correct": 0
+            },
+            "d": {
+                "text": "walked where the dividing line between danger and safety is very thin. ",
+                "correct": 0
+            }
+        },
+        "subject": "English",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "A ship is moving in a straight line due north at a velocity of 6km/hr. After one minute its velocity changes to 8km/hr eastwards. Average acceleration is,"
+        },
+        "answer": {
+            "a": {
+                "text": "2.77 m/$s^{2}$",
+                "correct": 1
+            },
+            "b": {
+                "text": "5/30 $ m/s^{2} $",
+                "correct": 0
+            },
+            "c": {
+                "text": "1/6 $ m/s^{2}  $",
+                "correct": 0
+            },
+            "d": {
+                "text": "5/108 $ m/s^{2} $ ",
+                "correct": 0
+            }
+        },
+        "subject": "Physics",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "A homogeneous sphere is rolling down an inclined plane of height 'h' then velocity of sphere while reaching the bottom of the plane is,"
+        },
+        "answer": {
+            "a": {
+                "text": "$ \sqrt\frac{10gh}{7} $",
+                "correct": 1
+            },
+            "b": {
+                "text": "$ \sqrt{gh} $",
+                "correct": 0
+            },
+            "c": {
+                "text": "$ \sqt{2gh} $",
+                "correct": 0
+            },
+            "d": {
+                "text": "$ \sqrt\frac{4gh}{3} $ ",
+                "correct": 0
+            }
+        },
+        "subject": "Physics",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "A square frame of side L is dipped in a liquid soap. When it is taken out of the liquid a soap film is formed on it. If the surface tension of soap is T, then the force acting on frame is,"
+        },
+        "answer": {
+            "a": {
+                "text": "2TL",
+                "correct": 1
+            },
+            "b": {
+                "text": "4TL",
+                "correct": 0
+            },
+            "c": {
+                "text": "8TL",
+                "correct": 0
+            },
+            "d": {
+                "text": "10TL",
+                "correct": 0
+            }
+        },
+        "subject": "Physics",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "Two springs of spring constants 2 and 4 are connected in series. A mass of 2 kg is attached to this combination then period of oscillation be"
+        },
+        "answer": {
+            "a": {
+                "text": "5s",
+                "correct": 1
+            },
+            "b": {
+                "text": "10s",
+                "correct": 0
+            },
+            "c": {
+                "text": "15s",
+                "correct": 0
+            },
+            "d": {
+                "text": "20s",
+                "correct": 0
+            }
+        },
+        "subject": "Physics",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "The radius in kilometer to which the present radius of earh [R=6400km] is to be compressed so that escape velocity is decreased to 10 times is"
+        },
+        "answer": {
+            "a": {
+                "text": "6.4",
+                "correct": 1
+            },
+            "b": {
+                "text": "64",
+                "correct": 0
+            },
+            "c": {
+                "text": "640",
+                "correct": 0
+            },
+            "d": {
+                "text": "4800",
+                "correct": 0
+            }
+        },
+        "subject": "Physics",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "When cylinder is heated, its length increases by 2% the area of base increases by"
+        },
+        "answer": {
+            "a": {
+                "text": "0.5%",
+                "correct": 1
+            },
+            "b": {
+                "text": "1%",
+                "correct": 0
+            },
+            "c": {
+                "text": "2%",
+                "correct": 0
+            },
+            "d": {
+                "text": "4%",
+                "correct": 0
+            }
+        },
+        "subject": "Physics",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "At $ 27^{0}c $ two moles of ideal mono-atomic gas occupy volume V is expanded adiabatically to volume 2V. The work done by gas during the process is "
+        },
+        "answer": {
+            "a": {
+                "text": "6.4",
+                "correct": 1
+            },
+            "b": {
+                "text": "64",
+                "correct": 0
+            },
+            "c": {
+                "text": "640",
+                "correct": 0
+            },
+            "d": {
+                "text": "4800",
+                "correct": 0
+            }
+        },
+        "subject": "Mathematics",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "A parallel beam of light of wave length $ 5000 A^{0} $ is incident normally on a single slit of width 0.0001mm. The light is focused by a convex lens on a screen placed in  focal plane. The first minima is formed for the angle of diffraction equal to"
+        },
+        "answer": {
+            "a": {
+                "text": "$ 0^{o} $",
+                "correct": 1
+            },
+            "b": {
+                "text": "$ 15^{o} ",
+                "correct": 0
+            },
+            "c": {
+                "text": "$ 30^{o} ",
+                "correct": 0
+            },
+            "d": {
+                "text": "$ 60^{o} ",
+                "correct": 0
+            }
+        },
+        "subject": "Physics",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "In plano convex lens, the radius of curvature of the convex surface is 10cm and the focal length 30. The R.I of material of the lens will be"
+        },
+        "answer": {
+            "a": {
+                "text": "1.5",
+                "correct": 1
+            },
+            "b": {
+                "text": "1.66",
+                "correct": 0
+            },
+            "c": {
+                "text": "1.33",
+                "correct": 0
+            },
+            "d": {
+                "text": "3",
+                "correct": 0
+            }
+        },
+        "subject": "Physics",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "Velocity of sound is measured in hydrogen and oxygen at a given temperature. The ratio of two velocities $ V_H$ and $ V_o $ will be"
+        },
+        "answer": {
+            "a": {
+                "text": "1:4",
+                "correct": 1
+            },
+            "b": {
+                "text": "4:1",
+                "correct": 0
+            },
+            "c": {
+                "text": "1:1",
+                "correct": 0
+            },
+            "d": {
+                "text": "3:1",
+                "correct": 0
+            }
+        },
+        "subject": "Physics",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "The equation of stationary wave is y = 4sin$ \pi $x/15 * cos40$ \pi $t, the distance between node-antinode is if x is in cm"
+        },
+        "answer": {
+            "a": {
+                "text": "15cm",
+                "correct": 1
+            },
+            "b": {
+                "text": "30cm",
+                "correct": 0
+            },
+            "c": {
+                "text": "5.5cm",
+                "correct": 0
+            },
+            "d": {
+                "text": "7.5cm",
+                "correct": 0
+            }
+        },
+        "subject": "Physics",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "Two circular coils of radius 20cm and 40cm are made of similar wires are connected in parallel. The ratio of the magnetic field at their centres"
+        },
+        "answer": {
+            "a": {
+                "text": "4:1",
+                "correct": 1
+            },
+            "b": {
+                "text": "1:4",
+                "correct": 0
+            },
+            "c": {
+                "text": "2:1",
+                "correct": 0
+            },
+            "d": {
+                "text": "1:2",
+                "correct": 0
+            }
+        },
+        "subject": "Physics",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "Light of two different frequencies whose photons have energies 1eV and 2.5eV respectively successively illuminate a metal work function 0.5eV. The ratio of maximum speeds of emitted electron is"
+        },
+        "answer": {
+            "a": {
+                "text": "1:5",
+                "correct": 1
+            },
+            "b": {
+                "text": "1:4",
+                "correct": 0
+            },
+            "c": {
+                "text": "1:2",
+                "correct": 0
+            },
+            "d": {
+                "text": "1:1",
+                "correct": 0
+            }
+        },
+        "subject": "Physics",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "The weight based ratio $ U^{238} $ and $ Pb^{126} $ in a sample rock is 4:3. If half life of $ U^{238} $ is $ 4.5 x 10^{9}$, then age of rock is (all the lead present in the rock is final stable product of $ U^{238}.$)"
+        },
+        "answer": {
+            "a": {
+                "text": "$ 9x10^{9} years $",
+                "correct": 1
+            },
+            "b": {
+                "text": "$ 6.3x10^{9} $",
+                "correct": 0
+            },
+            "c": {
+                "text": "$ 4.5x10^{9} $years",
+                "correct": 0
+            },
+            "d": {
+                "text": "$ 3.63 x 10^{9} $ years",
+                "correct": 0
+            }
+        },
+        "subject": "Physics",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "Two identical cells send the same current in 3ohm resistor whether connected in series or in parallel. The internal resistance of cell should be"
+        },
+        "answer": {
+            "a": {
+                "text": "1ohm",
+                "correct": 1
+            },
+            "b": {
+                "text": "3ohm",
+                "correct": 0
+            },
+            "c": {
+                "text": "0.5ohm",
+                "correct": 0
+            },
+            "d": {
+                "text": "3.5ohm",
+                "correct": 0
+            }
+        },
+        "subject": "Physics",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "Two metallic spheres of radii 1cm and 2cm are given changes $ 10^{-2} $ and 5x$ 10^{-2} respectively. $ If they are connected by a conducting wire then final charge on smaller sphere is"
+        },
+        "answer": {
+            "a": {
+                "text": "$ 3x10^{-2}c $",
+                "correct": 1
+            },
+            "b": {
+                "text": "$ 1x10^{-2}c $",
+                "correct": 0
+            },
+            "c": {
+                "text": "$ 4x10^{-2}c $",
+                "correct": 0
+            },
+            "d": {
+                "text": "$ 2 x 10^{-2}c $ ",
+                "correct": 0
+            }
+        },
+        "subject": "Physics",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "An alternating current is given as $  i=i_1coswt +i_2sinwt the rms current is given by $"
+        },
+        "answer": {
+            "a": {
+                "text": "$ \frac{(I_1 +I_2)}{2} $",
+                "correct": 1
+            },
+            "b": {
+                "text": "$ \frac{(I_1 - I_2)}{2} $",
+                "correct": 0
+            },
+            "c": {
+                "text": "$ \sqrt\frac{(I_1^{2} +I_2^{2})}{2} $",
+                "correct": 0
+            },
+            "d": {
+                "text": "\frac{(I_1 + I_2)}{\sqrt{2}}",
+                "correct": 0
+            }
+        },
+        "subject": "Physics",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "An current in an electron beam of a cathode ray tube is 4.8mA. If an electrons striking the screen each seconds is"
+        },
+        "answer": {
+            "a": {
+                "text": "$ 6x 10^{16} $",
+                "correct": 1
+            },
+            "b": {
+                "text": "$ 3x10^{16} $",
+                "correct": 0
+            },
+            "c": {
+                "text": "$ 3x10^{18} $",
+                "correct": 0
+            },
+            "d": {
+                "text": "$ 7.68x10^{22} $",
+                "correct": 0
+            }
+        },
+        "subject": "Physics",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "The radius of electron in second stationary orbit in Bohr's atom is R. The radius of third orbit will be"
+        },
+        "answer": {
+            "a": {
+                "text": "3R/12",
+                "correct": 1
+            },
+            "b": {
+                "text": "2.25R",
+                "correct": 0
+            },
+            "c": {
+                "text": "$ 9R $",
+                "correct": 0
+            },
+            "d": {
+                "text": "$ R/3 $",
+                "correct": 0
+            }
+        },
+        "subject": "Physics",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "A body of mass 1kg carrying a charge of 1coulumb falls in an electric field through a potential difference of 1volt. It's velocity is,"
+        },
+        "answer": {
+            "a": {
+                "text": "1m/s",
+                "correct": 1
+            },
+            "b": {
+                "text": "2m/s",
+                "correct": 0
+            },
+            "c": {
+                "text": "0.5m/s",
+                "correct": 0
+            },
+            "d": {
+                "text": "1.4m/s",
+                "correct": 0
+            }
+        },
+        "subject": "Physics",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "The number of hydrogen ions in 1ml. of solution whose pH is 13 is"
+        },
+        "answer": {
+            "a": {
+                "text": "$ 10^{-13} $",
+                "correct": 1
+            },
+            "b": {
+                "text": "$ 6.023x10^{10} $",
+                "correct": 0
+            },
+            "c": {
+                "text": "$ 6.023x10^{7} $",
+                "correct": 0
+            },
+            "d": {
+                "text": "$ 10^{13} $",
+                "correct": 0
+            }
+        },
+        "subject": "Chemistry",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "6 moles of Al reacts with HCL to give how many grams of $ H_2 $?"
+        },
+        "answer": {
+            "a": {
+                "text": "18gm",
+                "correct": 1
+            },
+            "b": {
+                "text": "9gm",
+                "correct": 0
+            },
+            "c": {
+                "text": "12gm",
+                "correct": 0
+            },
+            "d": {
+                "text": "6gm",
+                "correct": 0
+            }
+        },
+        "subject": "Chemistry",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "75ml of 0.2 M HCL will neutralize how many millilitres of 0.1M $ Ba(OH)_2$"
+        },
+        "answer": {
+            "a": {
+                "text": "300ml",
+                "correct": 1
+            },
+            "b": {
+                "text": "$ 150ml $",
+                "correct": 0
+            },
+            "c": {
+                "text": "$ 75ml $",
+                "correct": 0
+            },
+            "d": {
+                "text": "38ml",
+                "correct": 0
+            }
+        },
+        "subject": "Chemistry",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "Iron sulphide in air is heated to form A, an oxide of sulphur. A is dissolved in water to give an acid. The basicity of that acid is"
+        },
+        "answer": {
+            "a": {
+                "text": "2",
+                "correct": 1
+            },
+            "b": {
+                "text": "1",
+                "correct": 0
+            },
+            "c": {
+                "text": "3",
+                "correct": 0
+            },
+            "d": {
+                "text": "0",
+                "correct": 0
+            }
+        },
+        "subject": "Chemistry",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "Electrolysis of sodium salt of ethanoic acid, succinic acid, maelic and produces ------- respectively."
+        },
+        "answer": {
+            "a": {
+                "text": "ethane, propane and butane",
+                "correct": 1
+            },
+            "b": {
+                "text": "ethane, propane and ethyne",
+                "correct": 0
+            },
+            "c": {
+                "text": "ethane, propane and ethyne",
+                "correct": 0
+            },
+            "d": {
+                "text": "ethane, ethyne and ethanol",
+                "correct": 0
+            }
+        },
+        "subject": "Chemistry",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "Given orthographic projection is in .......... angle projection. ",
+            "image":"116.jpg",
+        },
+        "answer": {
+            "a": {
+                "text": "First",
+                "correct": 1
+            },
+            "b": {
+                "text": "Second",
+                "correct": 0
+            },
+            "c": {
+                "text": "Third",
+                "correct": 0
+            },
+            "d": {
+                "text": "Fourth",
+                "correct": 0
+            }
+        },
+        "subject": "Drawing",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "Select the correct left side view for the object.",
+            "image":"117.jpg",
+        },
+        "answer": {
+            "a": {
+                "text": "",
+                "image":"117_a.jpg",
+                "correct": 1
+            },
+            "b": {
+                "text": "",
+                "image":"117_b.jpg",
+                "correct": 0
+            },
+            "c": {
+                "text": "",
+                "image":"117_c.jpg",
+                "correct": 0
+            },
+            "d": {
+                "text": "",
+                "image":"117_d.jpg",
+                "correct": 0
+            }
+        },
+        "subject": "Drawing",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "What is wrong in the front view of the given object",
+            "image":"118.jpg",
+        },
+        "answer": {
+            "a": {
+                "text": "A solid horizontal line",
+                "correct": 1
+            },
+            "b": {
+                "text": "A solid vertical line",
+                "correct": 0
+            },
+            "c": {
+                "text": "A dash(hidden) horizontal line",
+                "correct": 0
+            },
+            "d": {
+                "text": "A dash(hidden) vertical line",
+                "correct": 0
+            }
+        },
+        "subject": "Drawing",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "What is wrong in the top view of the given object",
+            "image":"118.jpg",
+        },
+        "answer": {
+            "a": {
+                "text": "A solid horizontal line",
+                "correct": 1
+            },
+            "b": {
+                "text": "A solid vertical line",
+                "correct": 0
+            },
+            "c": {
+                "text": "A dash(hidden) horizontal line",
+                "correct": 0
+            },
+            "d": {
+                "text": "A dash(hidden) vertical line",
+                "correct": 0
+            }
+        },
+        "subject": "Drawing",
+        "marks":2,
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "Select the correct object for the given orthrographic projection",
+            "image":"120.jpg",
+        },
+        "answer": {
+            "a": {
+                "text": "A solid horizontal line",
+                "correct": 1
+            },
+            "b": {
+                "text": "A solid vertical line",
+                "correct": 0
+            },
+            "c": {
+                "text": "A dash(hidden) horizontal line",
+                "correct": 0
+            },
+            "d": {
+                "text": "A dash(hidden) vertical line",
+                "correct": 0
+            }
+        },
+        "subject": "Drawing",
+        "marks":2,
+        "exam_code": 100
+    }
+]
