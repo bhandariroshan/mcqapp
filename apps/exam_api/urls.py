@@ -17,7 +17,7 @@ urlpatterns = patterns(
     url(r'^load-exam-data',
         'apps.exam_api.load_database.load_examset_in_database',
         name='load_exam_data'),
-    url(r'^answers',
-        'apps.exam_api.views.check_answers',
-        name='check_answers'),
+    # url(r'^answers',
+    #     'apps.exam_api.views.check_answers',
+    #     name='check_answers'),
 )

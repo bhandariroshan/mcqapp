@@ -1,0 +1,21 @@
+{% extends 'exam_base.html' %}
+{% load staticfiles %} 
+{% block exam_content %}
+<!-- {% if is_subscribed %} -->
+<div class="twelve columns">
+	<h5 class="h-text-align ui-widget-header ui-corner-all"><strong>Honor Code</strong></h5>
+	<p style="margin-left:3%; margin-top:2%;">You must agree to the following honor code for attending exam.</p>
+	<p style="margin-left:4%;margin-top:2%;">
+		1. All the answers you submit will be done by you.<br>
+		2. You will not take any help to answer in competitive exam offered by us.<br>
+		3. You will not involve/share questions/answers to others unless it is publicly available for discussion.
+	</p>
+	<div class="medium primary btn pretty button-margin" style="margin-left:3%;">
+		<a href="/attend-exam/{{exam_code}}/">Accept and attend exam</a>
+	</div>
+</div>
+<!-- {% else %}
+{% endif %} -->
+{% endblock %}
+{% block javascript %}
+{% endblock %}

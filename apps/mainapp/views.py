@@ -6,6 +6,7 @@ from apps.mainapp.classes.Schedules  import Schedules
 import time, datetime
 from django.http import HttpResponse
 from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi
+from apps.mainapp.classes.Coupon import Coupon
 
 import json
 
@@ -71,23 +72,51 @@ def landing(request):
     return render_to_response('landing.html', context_instance=RequestContext(request))
 
 def attend_exam(request,exam_code):
-    question_obj = QuestionApi()    
-    questions = question_obj.find_all_questions({"exam_code": int(exam_code)})
-    sorted_questions = sorted(questions, key=lambda k: k['question_number'])
+    if exam_code == '100':
+        subscribed = True
+    else:
+        coupon_obj = Coupon()    
+        subscribed = coupon_obj.check_subscried(exam_code, request.user.id)
+    if request.user.is_authenticated() and subscribed:
+        question_obj = QuestionApi()    
+        questions = question_obj.find_all_questions({"exam_code": int(exam_code)})
+        sorted_questions = sorted(questions, key=lambda k: k['question_number'])
 
-    exam_obj = ExammodelApi()
-    exam_details = exam_obj.find_one_exammodel({'exam_code':int(exam_code)})
-    exam_details['exam_date'] = datetime.datetime.fromtimestamp(int(exam_details['exam_date'])).strftime('%Y-%m-%d')
+        exam_obj = ExammodelApi()
+        exam_details = exam_obj.find_one_exammodel({'exam_code':int(exam_code)})
+        exam_details['exam_date'] = datetime.datetime.fromtimestamp(int(exam_details['exam_date'])).strftime('%Y-%m-%d')
 
 
-    parameters = {}
-    parameters['questions'] = json.dumps(sorted_questions)
-    parameters['exam_details'] = exam_details
+        parameters = {}
+        parameters['questions'] = json.dumps(sorted_questions)
+        parameters['exam_details'] = exam_details
     
-    start_question_number = 0 
-    parameters['start_question'] = sorted_questions[start_question_number]
-    parameters['start_question_number'] = start_question_number
-    parameters['max_questions_number'] =  len(sorted_questions)
+        start_question_number = 0 
+        parameters['start_question'] = sorted_questions[start_question_number]
+        parameters['start_question_number'] = start_question_number
+        parameters['max_questions_number'] =  len(sorted_questions)
 
-    parameters['exam_code'] = exam_code
-    return render_to_response('exam_main.html', parameters, context_instance=RequestContext(request))
+        parameters['exam_code'] = exam_code
+        return render_to_response('exam_main.html', parameters, context_instance=RequestContext(request))
+    else:
+        return HttpResponseRedirect('/')
+
+def honorcode(request, exam_code):
+    if exam_code == '100':
+        subscribed = True
+    else:
+        coupon_obj = Coupon()
+        subscribed = coupon_obj.check_subscried(exam_code, request.user.id)
+    if request.user.is_authenticated() and subscribed:
+        exam_obj = ExammodelApi()
+        exam_details = exam_obj.find_one_exammodel({'exam_code':int(exam_code)})
+        exam_details['exam_date'] = datetime.datetime.fromtimestamp(int(exam_details['exam_date'])).strftime('%Y-%m-%d')
+
+        parameters = {}
+        parameters['exam_details'] = exam_details
+        parameters['exam_code'] = exam_code
+    
+        return render_to_response('exam_tips_and_honor_code.html', parameters, context_instance=RequestContext(request))
+    else:
+        return HttpResponseRedirect('/')
+
