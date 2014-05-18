@@ -15,13 +15,21 @@ class AjaxHandle():
     def __init__(self):
         pass
 
-    def validate_coupon(request):    	
+    def validate_coupon(self,request):    	
     	if request.user.is_authenticated():
-    		print request.POST
     		coupon_obj = Coupon()
-    		if len(coupon_obj.validate_coupon(request.POST.get('coupon_code',"false"))):
-    			exam_code = request.POST.get('exam_code','')
+    		exam_code = request.POST.get('exam_code','')
+    		coupon_code = request.POST.get('coupon_code','')
+    		if exam_code.strip() == '100' and coupon_code.lower()=='sample-1234':
+				return HttpResponse(json.dumps({'status':'ok','url':'/attend-exam/'+exam_code}))    			
+
+    		if exam_code.strip() != '100' and coupon_code.lower()=='sample-1234':
+    			return HttpResponse(json.dumps({'status':'error','message':'Invalid Coupon code.'}))
+
+    		if coupon_obj.validate_coupon(request.POST.get('coupon_code',"false")) != None:
     			coupon_obj.change_used_status_of_coupon(coupon_code, request.user.id, exam_code)
-    			return HttpResponse(json.dumps({'status':'ok'}))
+    			return HttpResponseRedirect('/attend-exam/'+ exam_code + '/')
+    		else:
+    			return HttpResponse(json.dumps({'status':'error','message':'Invalid Coupon code.'}))
     	else:
     		return HttpResponse(json.dumps({'status':'error','message':'You are not authorized to perform this action.'}))

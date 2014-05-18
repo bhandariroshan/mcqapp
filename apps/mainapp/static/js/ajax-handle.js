@@ -14,5 +14,14 @@ function validate_coupon(exam_code, coupon_id){
 }
 
 function validate_coupon_success(data){
-	alert(data);
+	data=jQuery.parseJSON(data);
+	if (data['status']=='ok'){
+		$('#dangerMessage').html('');
+		$('#trigger_gumby_div').click();
+		window.location = data['url'];
+	}
+	else{	
+		$('#dangerMessage').html('<li class="danger alert">Invalid Coupon code, you can try for 2 more times before your account gets locked.</li>');
+		$('#dangerMessage').show(5000);
+	}
 }

@@ -8,7 +8,6 @@ from .MongoConnection import MongoConnection
 
 
 class QuestionApi():
-
     def __init__(self):
         self.db_object = MongoConnection("localhost", 27017, 'mcq')
         self.table_name = 'question'
@@ -26,6 +25,7 @@ class QuestionApi():
 
     def update_question(self, where, what):
         return self.db_object.update(self.table_name, where, what)
+
 
 
 class ExammodelApi():
