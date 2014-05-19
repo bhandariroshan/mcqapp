@@ -13,7 +13,7 @@ def get_question_set(request, exam_code):
         exam_handler = ExamHandler()
         model_question_set = exam_handler.get_questionset_from_database(
             exam_code)
-        return HttpResponse(json.dumps({'status':'ok', 'result':model_question_set}))
+        return HttpResponse(json.dumps(model_question_set))
     else:
         return HttpResponse(json.dumps({'status':'error', 'message':'Not a valid request'}))
 
@@ -25,7 +25,7 @@ def get_upcoming_exams(request):
     if request.user.is_authenticated():
         exam_handler = ExamHandler()
         upcoming_exams = exam_handler.list_upcoming_exams()
-        return HttpResponse(json.dumps({'status':'ok','result':upcoming_exams}))
+        return HttpResponse(json.dumps(upcoming_exams))
     else:
         return HttpResponse(json.dumps({'status':'error', 'message':'Not a valid request'}))
 
@@ -41,7 +41,7 @@ def get_scores(request):
             answer_list = list(request.GET.get('answers'))
             exam_handler = ExamHandler()
             score_dict = exam_handler.check_answers(exam_code, answer_list)
-            return HttpResponse(json.dumps({'status':'ok','result':score_dict}))
+            return HttpResponse(json.dumps(score_dict))
     else:
         return HttpResponse(json.dumps({'status':'error', 'message':'Not a valid request'}))
 
@@ -54,7 +54,7 @@ def validate_coupon(request):
             coupon = coupon_obj.validate_coupon(coupon_code)
             if coupon != None:
                 coupon_obj.change_used_status_of_coupon(coupon_code, request.user.id, exam_code)
-                return HttpResponse(json,dumps({'status':'ok', 'result':{'coupon_code':coupon_code, 'subscription_type':coupon['subscription_type']}}))
+                return HttpResponse(json,dumps({'status':'ok', 'coupon_code':coupon_code, 'subscription_type':coupon['subscription_type']}))
             else:
                 return HttpResponse(json.dumps({'status':'error', 'message':'Invalid Coupon'}))
             
