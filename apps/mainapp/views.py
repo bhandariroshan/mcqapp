@@ -26,7 +26,6 @@ from allauth.socialaccount.helpers import complete_social_login
 from allauth.socialaccount.providers.facebook.views import login_by_token
 
 
-
 @csrf_exempt
 def android(request): 
     login_by_token(request)

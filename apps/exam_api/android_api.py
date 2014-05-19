@@ -2,7 +2,7 @@ import json
 
 from django.http import HttpResponse
 
-# from .views import ExamHandler
+from .views import ExamHandler
 from apps.mainapp.classes.Coupon import Coupon
 
 def get_question_set(request, exam_code):
