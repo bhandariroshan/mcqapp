@@ -18,7 +18,6 @@ SOCIALACCOUNT_PROVIDERS = {
     'facebook': {
         'SCOPE': [
         	"email",
-            "public_profile", 
             "user_friends"
             ],
         #'AUTH_PARAMS': { 'auth_type': 'reauthenticate' },

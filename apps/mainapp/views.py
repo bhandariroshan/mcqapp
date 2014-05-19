@@ -143,3 +143,6 @@ def honorcode(request, exam_code):
     else:
         return HttpResponseRedirect('/')
 
+def subscription(request):
+    parameters = {}
+    return render_to_response('subscription.html', parameters, context_instance=RequestContext(request))
