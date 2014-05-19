@@ -28,14 +28,18 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
   <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
-  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <script src="{% static "js/jquery-1.10.2.js" %}"></script>
+  <script src="{% static "js/jquery-ui.js" %}"></script>
+  <!--<script src="//code.jquery.com/jquery-1.10.2.js"></script>-->
+  <!--<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>-->
   <!-- We highly recommend you use SASS and write your custom styles in sass/_theme.scss.
   However, there is a blank style.css in the css directory should you prefer -->
   <link rel="stylesheet" href="{% static "css/gumby.css" %}">
   <link href="{% static "css/chardinjs.css" %}" rel="stylesheet">
   <link rel="stylesheet" href="http://gumbyframework.com/css/prism.css?v=091613">    
-  
+  {% if 'subscription' in request.path %}
+      <link rel="stylesheet" href="{% static "css/subscriptionplans.css" %}">
+  {% endif %}
 
   <style type="text/css">
     .detail-list-item{
@@ -58,6 +62,7 @@
     }
     .bgimage{      
     /*background-image: url('/static/images/bgimg.jpg')*/
+    background-color: #e0e2e3;
     }
     .text-color-white{
       /*color:white;*/
@@ -105,7 +110,7 @@
       <ul class="eight columns" style="float:right;clear:none;">
         <li><a href="/partners/">Partners</a></li>
         <li><a href="/partners/">Coupon Distributors</a></li>
-        <li><a href="/subscription-models/">Subscription Models</a></li>
+        <li><a href="/subscription/">Subscription Models</a></li>
         {% if 'attend-exam' in request.path %}
           <li>
               <a href="#" data-toggle="chardinjs">Instructions</a>
