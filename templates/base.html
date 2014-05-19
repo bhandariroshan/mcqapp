@@ -62,7 +62,7 @@
     }
     .bgimage{      
     /*background-image: url('/static/images/bgimg.jpg')*/
-    background-color: #e0e2e3;
+    /*background-color: #e0e2e3;*/
     }
     .text-color-white{
       /*color:white;*/
@@ -74,7 +74,38 @@
     .row-bg-color{      
     /*background-color: floralwhite;*/
     }
-
+    .tab-nav > li > a {
+      display: block;
+      width: auto;
+      padding: 0 8px;
+      margin: 0;
+      color: #555555;
+      font-family: "Open Sans";
+      font-weight: 400;
+      border: 1px solid #e5e5e5;
+      border-width: 1px 1px 0 1px;
+      text-shadow: 0 1px 1px white;
+      background: #f2f2f2;
+      cursor: pointer;
+      -webkit-border-radius: 4px 4px 0 0;
+      -moz-border-radius: 4px 4px 0 0;
+      -ms-border-radius: 4px 4px 0 0;
+      -o-border-radius: 4px 4px 0 0;
+      border-radius: 4px 4px 0 0;
+      height: 42px;
+      line-height: 40px;
+    }
+    .tab-nav > li {
+      display: inline-block;
+      width: auto;
+      padding: 0;
+       margin: 0 0 0 0; 
+      cursor: default;
+      top: 1px;
+      -webkit-box-shadow: 0 1px 0 white;
+      -moz-box-shadow: 0 1px 0 white;
+      box-shadow: 0 1px 0 white;
+    }
     {% endif %}
   </style>
   <!-- <link rel="stylesheet" href="css/style.css"> -->
@@ -204,7 +235,7 @@ UserVoice.push(['set', {
   accent_color: '#448dd6',
   trigger_color: 'white',
   trigger_style : 'tab',
-  trigger_background_color: '#448dd6'
+  /*trigger_background_color: '#448dd6'*/
 }]);
 
 // Identify the user and pass traits
