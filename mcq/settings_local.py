@@ -11,14 +11,14 @@ ACCOUNT_EMAIL_VERIFICATION = "none"
 ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_SIGNUP_PASSWORD_VERIFICATION = True
 SOCIALACCOUNT_AUTO_SIGNUP = True
-LOGIN_REDIRECT_URL = "/home/"
+LOGIN_REDIRECT_URL = "/"
 # ACCOUNT_SIGNUP_FORM_CLASS = 'mainapp.forms.SignupForm'
 ACCOUNT_LOGOUT_ON_GET = True
 SOCIALACCOUNT_PROVIDERS = {
     'facebook': {
         'SCOPE': [
         	"email",
-            "public_profile", 
+            # "public_profile", 
             "user_friends"
             ],
         #'AUTH_PARAMS': { 'auth_type': 'reauthenticate' },
