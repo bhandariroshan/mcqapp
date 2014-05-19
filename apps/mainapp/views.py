@@ -7,7 +7,7 @@ import time, datetime
 from django.http import HttpResponse
 from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi
 from apps.mainapp.classes.Coupon import Coupon
-
+from apps.mainapp.classes.Userprofile import UserProfile
 import json
 from django.views.decorators.csrf import csrf_exempt
 
@@ -21,10 +21,11 @@ from allauth.socialaccount.models import SocialLogin, SocialToken, SocialApp
 from allauth.socialaccount.providers.facebook.views import fb_complete_login
 from allauth.socialaccount.helpers import complete_social_login
 
-
-
+from django import forms
+from django.contrib.auth.models import User
+from allauth.socialaccount.models import SocialToken, SocialAccount
 from allauth.socialaccount.providers.facebook.views import login_by_token
-
+from allauth.socialaccount.models import SocialToken, SocialAccount
 
 
 @csrf_exempt
@@ -33,16 +34,78 @@ def android(request):
     return HttpResponse("{'status':'success'}")
 
 
+
+def attempt_question(request):
+    return render_to_response('qone-one.html',context_instance=RequestContext(request))
+
 def dashboard(request):
+    if request.user.is_authenticated():
+        social_account = SocialAccount.objects.get(user__id=request.user.id)
+        from apps.mainapp.classes.Userprofile import UserProfile        
+        user_profile_object = UserProfile()
+        user = user_profile_object.get_user_by_username(request.user.username)
+        valid_exams = user['valid_exam']
+        if 'IOM-SAMPLE-1' not in valid_exams:
+            valid_exams.append('IOM-SAMPLE-1')
+        if 'IOE-SAMPLE-1' not in valid_exams:
+            valid_exams.append('IOE-SAMPLE-1')
+        if 'IOE-SAMPLE-2' not in valid_exams:
+            valid_exams.append('IOE-SAMPLE-2')
+        if 'IOM-SAMPLE-2' not in valid_exams:
+            valid_exams.append('IOM-SAMPLE-2')
+
+        data = {
+                'useruid': int(request.user.id), 
+                'first_name': social_account.extra_data['first_name'],
+                'last_name': social_account.extra_data['last_name'],
+                'name':social_account.extra_data['name'],
+                'username' : request.user.username,
+                 "link": social_account.extra_data['link'],
+                 "id": social_account.extra_data['id'],
+                 "timezone": social_account.extra_data['timezone'],
+                 "email": social_account.extra_data['email'],
+                "locale": social_account.extra_data['locale'],
+                'coupons':[],
+                'valid_exam':valid_exams,
+                'subscription_type':'',
+                'subscribed':0,
+                'newsletter_freq':'Weekly'
+        }
+        join_time = datetime.datetime.now()
+        join_time = time.mktime(join_time.timetuple())
+        data['join_time'] = int(join_time)
+        user_profile_object.update_upsert({'username':request.user.username}, data)
+        return HttpResponseRedirect('/')
+
+    else:
+        return HttpResponseRedirect('/')
+
+def landing(request):
     if request.user.is_authenticated():
         exam_obj = Exam()
         upcoming_exams = exam_obj.get_upcoming_exams()
         parameters = {}        
         up_exams = []
-        print upcoming_exams
-        for eachExam in upcoming_exams:
+
+        user_profile_obj = UserProfile()
+        subscribed_exams = user_profile_obj.get_subscribed_exams(request.user.username)
+        user = user_profile_obj.get_user_by_username(request.user.username)
+        subscription_type = user['subscription_type']
+
+        for eachExam in upcoming_exams:            
             up_exm = {}
+            
             up_exm['name'] = eachExam['exam_name']
+            
+            if eachExam['exam_category'] == 'Inter-071':
+                up_exm['subscribed'] = True
+
+            if eachExam['exam_category'] == subscription_type:
+                up_exm['subscribed_exams'] = True
+            else:
+                up_exm['subscribed'] = eachExam['exam_code'] in subscribed_exams
+
+
             up_exm['code'] = eachExam['exam_code']
             up_exm['exam_time'] = eachExam['exam_time']
             up_exm['exam_category'] = eachExam['exam_category']
@@ -82,17 +145,7 @@ def dashboard(request):
         return render_to_response('dashboard.html',parameters,
                               context_instance=RequestContext(request))
     else:
-        return HttpResponseRedirect('/')
-
-
-def attempt_question(request):
-    return render_to_response('qone-one.html',context_instance=RequestContext(request))
-
-
-def landing(request):
-    if request.user.is_authenticated():
-        return HttpResponseRedirect('/home/')
-    return render_to_response('landing.html', context_instance=RequestContext(request))
+        return render_to_response('landing.html', context_instance=RequestContext(request))
 
 def attend_exam(request,exam_code):
     if exam_code == '100':

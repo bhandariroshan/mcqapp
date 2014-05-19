@@ -19,28 +19,29 @@ def load_examset_in_database(request):
          "image": "exam.jpg",
          "exam_code": 100,
          "exam_time": "7.00pm",
-         "exam_category": "",
+         "exam_category": "BE-IOE-071",
          },
         {"exam_name": "IOE model exam 2",
          "exam_date": 1399978500,
          "image": "exam.jpg",
          "exam_code": 101,
          "exam_time": "7.00pm",
-         "exam_category": "",
+         "exam_category": "BE-IOE-071",
          },
         {"exam_name": "IOE model exam 3",
          "exam_date": 1399968500,
          "image": "exam.jpg",
          "exam_code": 102,
          "exam_time": "7.00pm",
-         "exam_category": "",
+         "exam_category": "BE-IOE-071",
          },
         {"exam_name": "IOE model exam 4",
          "exam_date": 1399968500,
          "image": "exam.jpg",
          "exam_code": 103,
          "exam_time": "7.00pm",
-         "exam_category": ""}
+         "exam_category": "BE-IOE-071"
+        }
     ]
     exam_model.insert_new_model(exam_dict)
     return HttpResponse("Exam model saved in the database")

@@ -50,29 +50,17 @@ class Coupon():
     	'''Checks the validity of coupon'''
     	return self.db_object.get_one(self.table_name, {'code':coupon_code, 'used.status':0})
 
-    def change_used_status_of_coupon(self, coupon_code, userid, examcode):
+    def get_coupon_by_coupon_code(self, coupon_code):
+        return self.db_object.get_one(self.table_name, {'code':coupon_code})
+
+    def change_used_status_of_coupon(self, coupon_codes):
     	'''
-    		For sample code for which one to many relationship exists. For rest
-    		the one to one mapping exists.
+    		For sample code for which one to many relationship exists. 
     	'''
         request_time  = datetime.datetime.now()
         request_time  = time.mktime(request_time.timetuple())
-        return self.db_object.update_upsert(self.table_name, {'code':coupon_code},{
-                'used':{
-                'status':1,
-                'usedetails':{
-                    'userid':int(userid), 
-                    'examcode':str(examcode), 
-                    'entrytime':request_time
-                    }}})
+        return self.db_object.update_upsert(self.table_name, {'code':coupon_code},{'used':{'status':1}})
 
-    def check_subscried(self, exam_code,user_id):
-        result = self.db_object.get_one(self.table_name, {'used.usedetails.examcode':str(exam_code), 'used.usedetails.userid':int(user_id)})
-        print result
-        if result == None:
-            return False
-        else:
-            return True
 
 # coupon = Coupon()        
 # coupon.generate_coupons('Single Exam')
