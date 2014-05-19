@@ -15,21 +15,37 @@ class AjaxHandle():
     def __init__(self):
         pass
 
-    def validate_coupon(self,request):    	
-    	if request.user.is_authenticated():
-    		coupon_obj = Coupon()
-    		exam_code = request.POST.get('exam_code','')
-    		coupon_code = request.POST.get('coupon_code','')
-    		if exam_code.strip() == '100' and coupon_code.lower()=='sample-1234':
-				return HttpResponse(json.dumps({'status':'ok','url':'/attend-exam/'+exam_code}))    			
+    def validate_coupon(self,request):      
+        if request.user.is_authenticated():
+            coupon_obj = Coupon()
+            exam_code = request.POST.get('exam_code','')
+            coupon_code = request.POST.get('coupon_code','')
+            if exam_code.strip() == 'sample' and coupon_code.lower()=='sample-1234':
+                return HttpResponse(json.dumps({'status':'ok','url':'/honorcode/100/'}))
 
-    		if exam_code.strip() != '100' and coupon_code.lower()=='sample-1234':
-    			return HttpResponse(json.dumps({'status':'error','message':'Invalid Coupon code.'}))
+            if exam_code.strip() != 'sample' and coupon_code.lower()=='sample-1234':
+                return HttpResponse(json.dumps({'status':'error','message':'Invalid Coupon code.'}))
 
-    		if coupon_obj.validate_coupon(request.POST.get('coupon_code',"false")) != None:
-    			coupon_obj.change_used_status_of_coupon(coupon_code, request.user.id, exam_code)
-    			return HttpResponseRedirect('/attend-exam/'+ exam_code + '/')
-    		else:
-    			return HttpResponse(json.dumps({'status':'error','message':'Invalid Coupon code.'}))
-    	else:
-    		return HttpResponse(json.dumps({'status':'error','message':'You are not authorized to perform this action.'}))
+            if coupon_obj.validate_coupon(request.POST.get('coupon_code',"false")) != None:
+                coupon_obj.change_used_status_of_coupon(coupon_code, request.user.id, exam_code)
+                return HttpResponse(json.dumps({'status':'ok', 'url':'/honorcode/'+ exam_code + '/'}))
+            else:
+                return HttpResponse(json.dumps({'status':'error','message':'Invalid Coupon code.'}))
+        else:
+            return HttpResponse(json.dumps({'status':'error','message':'You are not authorized to perform this action.'}))
+
+    def is_subscribed(self, request):      
+        if request.user.is_authenticated():
+            coupon_obj = Coupon()
+            exam_code = request.POST.get('exam_code','')
+            user_id = request.user.id
+
+            if exam_code.strip() == 'sample':
+                return HttpResponse(json.dumps({'status':'error','message':'not subscribed'}))
+            else:
+                if coupon_obj.check_subscried(exam_code,user_id):                
+                    return HttpResponse(json.dumps({'status':'ok', 'url':'/honorcode/'+ exam_code + '/'}))
+                else:
+                    return HttpResponse(json.dumps({'status':'error','message':'not subscribed'}))
+        else:
+            return HttpResponse(json.dumps({'status':'error','message':'You are not authorized to perform this action.'}))

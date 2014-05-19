@@ -21,7 +21,21 @@ function validate_coupon_success(data){
 		window.location = data['url'];
 	}
 	else{	
-		$('#dangerMessage').html('<li class="danger alert">Invalid Coupon code, you can try for 2 more times before your account gets locked.</li>');
+		$('#dangerMessage').html('<li class="danger alert">Invalid Coupon code, Please enter a valid coupon code.</li>');
 		$('#dangerMessage').show(5000);
+	}
+}
+
+function is_subscribed(exam_code){
+	ajax_request('is_subscribed', 'is_subscribed_success', {'exam_code':exam_code});
+}
+
+function is_subscribed_success(data){
+	data = jQuery.parseJSON(data);
+	if(data['status']!='ok'){		
+		$('#trigger_gumby_div').click();
+	}
+	else{
+		window.location = data['url'];
 	}
 }

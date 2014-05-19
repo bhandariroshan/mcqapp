@@ -1,5 +1,6 @@
 # Python bytecode:
 *.py[co]
+*.pyc
 
 # Python compiled file:
 *.pyc

@@ -9,3 +9,5 @@ def ajax_request(request, func_name):
     ajax_handle = AjaxHandle()
     return_msg = getattr(ajax_handle,func_name)(request)
     return return_msg
+
+    
