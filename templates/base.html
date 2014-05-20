@@ -148,7 +148,7 @@
           </li>
         {% endif %}
         <li>
-          <a href="/docs/"><span>{{request.user.username}} </span><i class="icon-down-open"></i></a>
+          <a href="/docs/"><span>{{user.name}} </span><i class="icon-down-open"></i></a>
           <div class="dropdown" style="width:180px;">
             <ul>
               <li><a href="/accounts/logout">logout</a></li>
@@ -266,7 +266,7 @@ UserVoice.push(['addTrigger', { mode: 'contact', trigger_position: 'right' }]);
 UserVoice.push(['autoprompt', {}]);
 </script>
   
-<script type='text/javascript'>(function () { var done = false; var script = document.createElement('script'); script.async = true; script.type = 'text/javascript'; script.src = 'https://widget.purechat.com/VisitorWidget/WidgetScript'; document.getElementsByTagName('HEAD').item(0).appendChild(script); script.onreadystatechange = script.onload = function (e) { if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { var w = new PCWidget({ c: 'b27f9e79-a1b4-47a2-a08f-acde2448f2c7', f: true }); done = true; } }; })();</script>
+
 
 {% block footer %}
 {% endblock %}

@@ -44,16 +44,32 @@ def dashboard(request):
         from apps.mainapp.classes.Userprofile import UserProfile        
         user_profile_object = UserProfile()
         user = user_profile_object.get_user_by_username(request.user.username)
-        valid_exams = user['valid_exam']
-        if 'IOM-SAMPLE-1' not in valid_exams:
-            valid_exams.append('IOM-SAMPLE-1')
-        if 'IOE-SAMPLE-1' not in valid_exams:
-            valid_exams.append('IOE-SAMPLE-1')
-        if 'IOE-SAMPLE-2' not in valid_exams:
-            valid_exams.append('IOE-SAMPLE-2')
-        if 'IOM-SAMPLE-2' not in valid_exams:
-            valid_exams.append('IOM-SAMPLE-2')
+        try:
+            valid_exams = user['valid_exam']
+            if 'IOM-SAMPLE-1' not in valid_exams:
+                valid_exams.append('IOM-SAMPLE-1')
+            if 'IOE-SAMPLE-1' not in valid_exams:
+                valid_exams.append('IOE-SAMPLE-1')
+            if 'IOE-SAMPLE-2' not in valid_exams:
+                valid_exams.append('IOE-SAMPLE-2')
+            if 'IOM-SAMPLE-2' not in valid_exams:
+                valid_exams.append('IOM-SAMPLE-2')
+        except:
+            valid_exams=['IOM-SAMPLE-1', 'IOE-SAMPLE-1','IOM-SAMPLE-2','IOE-SAMPLE-2']
 
+        try:
+            coupons = user['coupons']
+        except:
+            coupons = []
+        try:
+            subscription_type = user['subscription_type']
+        except:
+            subscription_type = 'SP1'
+        try:
+            join_time = user['join_time']
+        except:
+            join_time = datetime.datetime.now()
+            join_time = time.mktime(join_time.timetuple())
         data = {
                 'useruid': int(request.user.id), 
                 'first_name': social_account.extra_data['first_name'],
@@ -65,15 +81,12 @@ def dashboard(request):
                  "timezone": social_account.extra_data['timezone'],
                  "email": social_account.extra_data['email'],
                 "locale": social_account.extra_data['locale'],
-                'coupons':[],
+                'coupons':coupons,
                 'valid_exam':valid_exams,
-                'subscription_type':'',
-                'subscribed':0,
-                'newsletter_freq':'Weekly'
+                'subscription_type':subscription_type,
+                'newsletter_freq':'Weekly',
+                'join_time':int(join_time)
         }
-        join_time = datetime.datetime.now()
-        join_time = time.mktime(join_time.timetuple())
-        data['join_time'] = int(join_time)
         user_profile_object.update_upsert({'username':request.user.username}, data)
         return HttpResponseRedirect('/')
 
@@ -90,6 +103,8 @@ def landing(request):
         user_profile_obj = UserProfile()
         subscribed_exams = user_profile_obj.get_subscribed_exams(request.user.username)
         user = user_profile_obj.get_user_by_username(request.user.username)
+        parameters['user'] = user
+
         subscription_type = user['subscription_type']
 
         for eachExam in upcoming_exams:            
@@ -104,7 +119,6 @@ def landing(request):
                 up_exm['subscribed_exams'] = True
             else:
                 up_exm['subscribed'] = eachExam['exam_code'] in subscribed_exams
-
 
             up_exm['code'] = eachExam['exam_code']
             up_exm['exam_time'] = eachExam['exam_time']
@@ -171,8 +185,11 @@ def attend_exam(request,exam_code):
         parameters['start_question'] = sorted_questions[start_question_number]
         parameters['start_question_number'] = start_question_number
         parameters['max_questions_number'] =  len(sorted_questions)
-
+        
         parameters['exam_code'] = exam_code
+        user_profile_obj = UserProfile()
+        user = user_profile_obj.get_user_by_username(request.user.username)
+        parameters['user'] = user
         return render_to_response('exam_main.html', parameters, context_instance=RequestContext(request))
     else:
         return HttpResponseRedirect('/')
@@ -191,11 +208,18 @@ def honorcode(request, exam_code):
         parameters = {}
         parameters['exam_details'] = exam_details
         parameters['exam_code'] = exam_code
-    
+        
+        user_profile_obj = UserProfile()
+        user = user_profile_obj.get_user_by_username(request.user.username)
+        parameters['user'] = user
+
         return render_to_response('exam_tips_and_honor_code.html', parameters, context_instance=RequestContext(request))
     else:
         return HttpResponseRedirect('/')
 
 def subscription(request):
-    parameters = {}
+    parameters = {}    
+    user_profile_obj = UserProfile()
+    user = user_profile_obj.get_user_by_username(request.user.username)
+    parameters['user'] = user
     return render_to_response('subscription.html', parameters, context_instance=RequestContext(request))

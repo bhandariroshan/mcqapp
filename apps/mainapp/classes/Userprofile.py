@@ -40,6 +40,28 @@ class UserProfile():
 
     def get_subscribed_exams(self, user_name=''):
         user = self.db_object.get_one(self.table_name, {'username':user_name})
-        print user
         valid_exams = user['valid_exam']
         return valid_exams
+
+    def get_subscription_plan(self, user_name=''):
+        user = self.db_object.get_one(self.table_name, {'username':user_name})
+        subscription_type = user['subscription_type']
+        return subscription_type
+
+    def check_subscribed(self, user_name, exam_code):
+        user = self.db_object.get_one(self.table_name, {'username':user_name})
+        exam_obj = ExammodelApi()
+        exam_details = exam_obj.find_one_exammodel({'exam_code':int(exam_code)})            
+        if user != None:
+            if user['subscription_type'] == 'IDP':
+                return True                    
+            elif exam_details['exam_category'] == user['subscription_type']:
+                return True
+            else:
+                subscribed_exams = self.get_subscribed_exams(user_name)
+                if exam_code in subscribed_exams:
+                    return True
+                else:
+                    return False
+        else:
+            return False
