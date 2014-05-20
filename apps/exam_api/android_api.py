@@ -1,15 +1,16 @@
 import json
 
 from django.http import HttpResponse
-
+from django.views.decorators.csrf import csrf_exempt
 from .views import ExamHandler
 from apps.mainapp.classes.Coupon import Coupon
-
+@csrf_exempt
 def get_question_set(request, exam_code):
     '''
     the function returns the api of a model question
     '''
     if request.user.is_authenticated():
+        print request.POST.get('coupon')
         exam_handler = ExamHandler()
         model_question_set = exam_handler.get_questionset_from_database(
             exam_code)
@@ -23,6 +24,7 @@ def get_upcoming_exams(request):
     the function returns api of upcoming exams
     '''
     if request.user.is_authenticated():
+
         exam_handler = ExamHandler()
         upcoming_exams = exam_handler.list_upcoming_exams()
         return HttpResponse(json.dumps({'status':'ok', 'result':upcoming_exams}))

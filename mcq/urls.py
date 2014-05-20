@@ -8,6 +8,7 @@ urlpatterns = patterns(
     '',
 
     url(r'^$', 'apps.mainapp.views.landing'),
+    url(r'^latex$', 'apps.mainapp.views.latex_html'),
     url(r'^home/$', 'apps.mainapp.views.dashboard'),
     url(r'^android/$', 'apps.mainapp.views.android'),
     url(r'^admin/', include(admin.site.urls)),
