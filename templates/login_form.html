@@ -1,12 +1,81 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset='UTF-8'>
 	<title>form</title>
+	<style type='text/css'>
+	body
+	{
+		margin:auto;
+	}
+.android-btn
+{
+	margin: auto;
+background-color: blanchedalmond;
+border-radius: 0px;
+padding: 15px;
+width: 80%;
+margin-top: 15px;
+border: none;
+}
+.android-question
+{
+	margin: auto;
+background-color: rgb(179, 255, 206);
+padding: 25px;
+border: none;
+}
+
+ .android-btn:hover
+{
+	background-color: #00dd00;
+}
+.pic-margin
+{
+	margin-top:5px;
+
+}	</style>
+
+
 </head>
 <body>
-<form method="post" action="./" name="login">
-<input type="text" name="access_token" />
-<input type="submit" value="Login">
-</form>
+<div style='width:100%; text-align:center;'>
+<div class='android-question'> <span class='MathJax' id='MathJax-Element-1-Frame' role='textbox' aria-readonly='true'><nobr><span class='math' id='MathJax-Span-1' style='width: 9.328em; display: inline-block;'><span style='display: inline-block; position: relative; width: 7.393em; height: 0px; font-size: 126%;'><span style='position: absolute; clip: rect(1.689em 1000.002em 2.83em -0.394em); top: -2.676em; left: 0.002em;'><span class='mrow' id='MathJax-Span-2'><span class='mn' id='MathJax-Span-3' style='font-family: MathJax_Main;'>3</span><span class='mi' id='MathJax-Span-4' style='font-family: MathJax_Math; font-style: italic;'>c</span><span class='mi' id='MathJax-Span-5' style='font-family: MathJax_Math; font-style: italic;'>o</span><span class='mi' id='MathJax-Span-6' style='font-family: MathJax_Math; font-style: italic;'>s</span><span class='mi' id='MathJax-Span-7' style='font-family: MathJax_Math; font-style: italic;'>e</span><span class='msubsup' id='MathJax-Span-8'><span style='display: inline-block; position: relative; width: 0.895em; height: 0px;'><span style='position: absolute; clip: rect(1.887em 1000.002em 2.631em -0.394em); top: -2.478em; left: 0.002em;'><span class='mi' id='MathJax-Span-9' style='font-family: MathJax_Math; font-style: italic;'>c</span><span style='display: inline-block; width: 0px; height: 2.483em;'></span></span><span style='position: absolute; top: -2.775em; left: 0.449em;'><span class='texatom' id='MathJax-Span-10'><span class='mrow' id='MathJax-Span-11'><span class='mn' id='MathJax-Span-12' style='font-size: 70.7%; font-family: MathJax_Main;'>2</span></span></span><span style='display: inline-block; width: 0px; height: 2.433em;'></span></span></span></span><span class='mi' id='MathJax-Span-13' style='font-family: MathJax_Math; font-style: italic;'>x</span><span class='mo' id='MathJax-Span-14' style='font-family: MathJax_Main; padding-left: 0.201em;'>−</span><span class='mn' id='MathJax-Span-15' style='font-family: MathJax_Main; padding-left: 0.201em;'>4</span><span class='mo' id='MathJax-Span-16' style='font-family: MathJax_Main; padding-left: 0.3em;'>=</span><span class='mn' id='MathJax-Span-17' style='font-family: MathJax_Main; padding-left: 0.3em;'>0</span></span><span style='display: inline-block; width: 0px; height: 2.681em;'></span></span></span><span style='border-left-width: 0.003em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 1.191em; vertical-align: -0.059em;'></span></span></nobr></span></div>
+	<div class='pic-margin'><img src='../apps/mainapp/static/images/100/116.jpg' width= '100%' /><div>
+<script type="text/javascript">
+
+for(var i = 0;i<4;i++)
+{
+var doc = "<button class='android-btn'  onClick = 'answer_selected("+i+")'  id='ans_"+i+"'> <span class='MathJax' role='textbox' aria-readonly='true'><nobr><span class='math' id='MathJax-Span-1' style='width: 9.328em; display: inline-block;'><span style='display: inline-block; position: relative; width: 7.393em; height: 0px; font-size: 126%;'><span style='position: absolute; clip: rect(1.689em 1000.002em 2.83em -0.394em); top: -2.676em; left: 0.002em;'><span class='mrow' id='MathJax-Span-2'><span class='mn' id='MathJax-Span-3' style='font-family: MathJax_Main;'>3</span><span class='mi' id='MathJax-Span-4' style='font-family: MathJax_Math; font-style: italic;'>c</span><span class='mi' id='MathJax-Span-5' style='font-family: MathJax_Math; font-style: italic;'>o</span><span class='mi' id='MathJax-Span-6' style='font-family: MathJax_Math; font-style: italic;'>s</span><span class='mi' id='MathJax-Span-7' style='font-family: MathJax_Math; font-style: italic;'>e</span><span class='msubsup' id='MathJax-Span-8'><span style='display: inline-block; position: relative; width: 0.895em; height: 0px;'><span style='position: absolute; clip: rect(1.887em 1000.002em 2.631em -0.394em); top: -2.478em; left: 0.002em;'><span class='mi' id='MathJax-Span-9' style='font-family: MathJax_Math; font-style: italic;'>c</span><span style='display: inline-block; width: 0px; height: 2.483em;'></span></span><span style='position: absolute; top: -2.775em; left: 0.449em;'><span class='texatom' id='MathJax-Span-10'><span class='mrow' id='MathJax-Span-11'><span class='mn' id='MathJax-Span-12' style='font-size: 70.7%; font-family: MathJax_Main;'>2</span></span></span><span style='display: inline-block; width: 0px; height: 2.433em;'></span></span></span></span><span class='mi' id='MathJax-Span-13' style='font-family: MathJax_Math; font-style: italic;'>x</span><span class='mo' id='MathJax-Span-14' style='font-family: MathJax_Main; padding-left: 0.201em;'>−</span><span class='mn' id='MathJax-Span-15' style='font-family: MathJax_Main; padding-left: 0.201em;'>4</span><span class='mo' id='MathJax-Span-16' style='font-family: MathJax_Main; padding-left: 0.3em;'>=</span><span class='mn' id='MathJax-Span-17' style='font-family: MathJax_Main; padding-left: 0.3em;'>0</span></span><span style='display: inline-block; width: 0px; height: 2.681em;'></span></span></span><span style='border-left-width: 0.003em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 1.191em; vertical-align: -0.059em;'></span></span></nobr></span></button>";
+
+	doc += "<div class='pic-margin'><img src='../apps/mainapp/static/images/100/116.jpg' width= '80%' /><div>";
+
+document.write(doc);
+}
+
+
+
+function answer_selected(ans)
+{
+	for(var i = 0;i<4;i++)
+	{
+		Android.answerSelected(ans, 4);
+		if(i==ans)
+		{
+			document.getElementById('ans_'+ans).style.backgroundColor = "#00ff00";
+		}
+		else
+		{
+			document.getElementById('ans_'+i).style.backgroundColor = "#ffebcd";
+		}
+	}
+	
+}
+
+
+	
+</script>
+
+</div>
 </body>
 </html>
