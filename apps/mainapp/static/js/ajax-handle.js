@@ -39,3 +39,10 @@ function is_subscribed_success(data){
 		window.location = data['url'];
 	}
 }
+
+function save_answer(exam_code, question_id, selected_ans){
+	ajax_request('save_answer', 'save_answer_success', {'qid':question_id, 'sans':selected_ans, 'exam_code':exam_code});
+}
+function save_answer_success(data){
+	data = jQuery.parseJSON(data);
+}

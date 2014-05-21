@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from .views import ExamHandler
 from apps.mainapp.classes.Coupon import Coupon
+from apps.mainapp.classes.Userprofile import UserProfile
 @csrf_exempt
 def get_question_set(request, exam_code):
     '''
@@ -11,6 +12,7 @@ def get_question_set(request, exam_code):
     '''
     if request.user.is_authenticated():
         print request.POST.get('coupon')
+        '''Add Validation for subscription here'''
         exam_handler = ExamHandler()
         model_question_set = exam_handler.get_questionset_from_database(
             exam_code)
@@ -24,9 +26,13 @@ def get_upcoming_exams(request):
     the function returns api of upcoming exams
     '''
     if request.user.is_authenticated():
-
         exam_handler = ExamHandler()
         upcoming_exams = exam_handler.list_upcoming_exams()
+        for eachExam in upcoming_exams:
+            user_obj = UserProfile()            
+            subscription_status = user_obj.check_subscribed(request.user.username, eachExam['exam_code'])            
+            eachExam['subscribed'] =  1 if subscription_status else 0
+
         return HttpResponse(json.dumps({'status':'ok', 'result':upcoming_exams}))
     else:
         return HttpResponse(json.dumps({'status':'error', 'message':'Not a valid request'}))
