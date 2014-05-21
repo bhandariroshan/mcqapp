@@ -30,6 +30,7 @@ from allauth.socialaccount.models import SocialToken, SocialAccount
 
 def latex_html(request): 
     return render_to_response("sample-tex.html")
+
 @csrf_exempt
 def add_html(request): 
     print request.POST.get('q')
@@ -218,8 +219,73 @@ def attempt_question(request):
 
 def landing(request):
     if request.user.is_authenticated():
-        return HttpResponseRedirect('/home/')
-    return render_to_response('landing.html', context_instance=RequestContext(request))
+        exam_obj = Exam()
+        upcoming_exams = exam_obj.get_upcoming_exams()
+        parameters = {}        
+        up_exams = []
+
+        user_profile_obj = UserProfile()
+        subscribed_exams = user_profile_obj.get_subscribed_exams(request.user.username)
+        user = user_profile_obj.get_user_by_username(request.user.username)
+        parameters['user'] = user
+
+        subscription_type = user['subscription_type']
+        for eachExam in upcoming_exams:            
+            up_exm = {}
+            
+            up_exm['name'] = eachExam['exam_name']
+            
+            if 'IDP' in subscription_type:
+                up_exm['subscribed'] = True
+
+            elif eachExam['exam_category'] in subscription_type:
+                up_exm['subscribed'] = True
+
+            else:
+                up_exm['subscribed'] = eachExam['exam_code'] in subscribed_exams
+
+            up_exm['code'] = eachExam['exam_code']
+            up_exm['exam_time'] = eachExam['exam_time']
+            up_exm['exam_category'] = eachExam['exam_category']
+            up_exm['image'] = eachExam['image']
+            up_exm['exam_date'] = datetime.datetime.fromtimestamp(int(eachExam['exam_date'])).strftime("%A, %d. %B %Y")
+            up_exams.append(up_exm)
+
+        parameters['upcoming_exams'] = up_exams
+        # print up_exams
+
+        schedule_obj = Schedules()
+        schedules = schedule_obj.get_upcoming_schedules()
+        up_schedules = []
+        for eachSchedule in schedules:
+            up_sch = {}
+            up_sch['name'] = eachSchedule['name']
+            up_sch['code'] = eachSchedule['code']
+            up_sch['schedule_time'] = eachSchedule['schedule_time']
+            up_sch['schedule_category'] = eachSchedule['schedule_category']
+            up_sch['image'] = eachSchedule['image']
+            up_sch['schedule_date'] = datetime.datetime.fromtimestamp(int(eachSchedule['schedule_date'])).strftime("%A, %d. %B %Y")
+            up_schedules.append(up_sch)
+        parameters['upcoming_schedules'] = up_schedules
+
+        rank_card_obj = RankCard()
+        rank_card = rank_card_obj.get_rank_card(request.user.id, 'IOMMBBSMODEL000')
+        try:
+            parameters['rank_card'] = rank_card[0]
+        except:
+            pass
+
+        score_card_obj = ScoreCard()        
+        socre_card = score_card_obj.get_score_card(request.user.id, 'IOMMBBSMODEL000')
+        try:
+            parameters['socre_card'] = socre_card[0]        
+        except:
+            pass
+
+        return render_to_response('dashboard.html',parameters,
+                              context_instance=RequestContext(request))
+    else:
+        return render_to_response('landing.html', context_instance=RequestContext(request))
 
 def attend_exam(request,exam_code):
     if exam_code == '100':
