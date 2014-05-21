@@ -25,7 +25,7 @@
   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 <script type="text/javascript">
-$.post( "http://localhost:8000/exam/100", function( data ) {
+$.post( "/exam/100", function( data ) {
 
 questions = JSON.parse(data).result;
 content = "";
