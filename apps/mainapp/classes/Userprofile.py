@@ -1,5 +1,6 @@
 from MongoConnection import MongoConnection
 import time, datetime
+from apps.mainapp.classes.query_database import ExammodelApi
 
 class UserProfile():
     def __init__ (self):        
@@ -48,20 +49,44 @@ class UserProfile():
         subscription_type = user['subscription_type']
         return subscription_type
 
+    def change_subscription_plan(self, user_name, coupon_code):
+        from apps.mainapp.classes.Coupon import Coupon
+        coupon_obj = Coupon()
+        coupon = coupon_obj.get_coupon_by_coupon_code(coupon_code)
+        user = self.db_object.get_one(self.table_name, {'username':user_name})
+        subscription_type = list(user['subscription_type'])
+        if coupon['subscription_type'] not in subscription_type and coupon['subscription_type'] not in ['DPS', 'CPS']:
+            subscription_type.append(coupon['subscription_type'])
+        return self.db_object.update_upsert(self.table_name, {'username':user_name}, {'subscription_type':subscription_type})
+
     def check_subscribed(self, user_name, exam_code):
         user = self.db_object.get_one(self.table_name, {'username':user_name})
         exam_obj = ExammodelApi()
         exam_details = exam_obj.find_one_exammodel({'exam_code':int(exam_code)})            
         if user != None:
-            if user['subscription_type'] == 'IDP':
+            if 'IDP' in user['subscription_type'] :
                 return True                    
-            elif exam_details['exam_category'] == user['subscription_type']:
+            elif exam_details['exam_category'] in user['subscription_type']:
                 return True
             else:
                 subscribed_exams = self.get_subscribed_exams(user_name)
-                if exam_code in subscribed_exams:
+                if int(exam_code) in subscribed_exams:
                     return True
                 else:
                     return False
         else:
             return False
+
+    def save_coupon(self, username, coupon_code):
+        user = self.db_object.get_one(self.table_name,{'username':username})        
+        coupons = list(user['coupons'])
+        if coupon_code not in coupons:
+            coupons.append(coupon_code)
+        return self.db_object.update_upsert(self.table_name,{'username':username},{'coupons':coupons})
+
+    def save_valid_exam(self, username, exam_code):
+        user = self.db_object.get_one(self.table_name,{'username':username})
+        valid_exam = list(user['valid_exam'])
+        if exam_code not in valid_exam:
+            valid_exam.append(int(exam_code))
+        return self.db_object.update_upsert(self.table_name,{'username':username},{'valid_exam':valid_exam})

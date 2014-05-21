@@ -26,7 +26,7 @@ class Coupon():
     			d. status (used/free)    			
     	'''
         import random
-        for i in range(0,90):
+        for i in range(0,10):
             number_system = 'zAyBxCwDvEuFt9GsH8rI7qJp6KoLnM5mNlOk4PjQih3RgSfTeU2dVcWbXa1YZz0'
             num  = random.randint(999999999, pow(62,6))
             coupon = ''
@@ -46,9 +46,18 @@ class Coupon():
         return 'generated'            
 
   
-    def validate_coupon(self, coupon_code):
+    def validate_coupon(self, coupon_code, exam_category):
     	'''Checks the validity of coupon'''
-    	return self.db_object.get_one(self.table_name, {'code':coupon_code, 'used.status':0})
+        coupon = self.db_object.get_one(self.table_name, {'code':coupon_code, 'used.status':0})
+        if coupon != None and coupon['subscription_type']=='IDP':
+            return True
+        elif coupon != None and coupon['subscription_type'] == exam_category:
+            return True
+    	elif coupon!=None and (coupon['subscription_type'] == 'DPS' or coupon['subscription_type']=='CPS'):
+            return True
+        else:
+            return False
+
 
     def get_coupon_by_coupon_code(self, coupon_code):
         return self.db_object.get_one(self.table_name, {'code':coupon_code})
@@ -62,5 +71,15 @@ class Coupon():
         return self.db_object.update_upsert(self.table_name, {'code':coupon_code},{'used':{'status':1}})
 
 
+# 1. DPS (Daily Practice Set)
+# 2. CPS (Competitive Pracice Set)
+# 3. MBBS-IOM-071
+# 4. BE-IOE-071
+# 5. IDP (Inter Disciplinary Plan)
+
 # coupon = Coupon()        
-# coupon.generate_coupons('Single Exam')
+# coupon.generate_coupons('IDP')
+# coupon.generate_coupons('DPS')
+# coupon.generate_coupons('CPS')
+# coupon.generate_coupons('BE-IOE-071')
+# coupon.generate_coupons('MBBS-IOM-071')

@@ -28,15 +28,17 @@ from allauth.socialaccount.providers.facebook.views import login_by_token
 from allauth.socialaccount.models import SocialToken, SocialAccount
 
 
+def latex_html(request): 
+    return render_to_response("sample-tex.html")
+
 @csrf_exempt
 def android(request): 
     login_by_token(request)
-    return HttpResponse("{'status':'success'}")
+    if request.user.is_authenticated():
+        return HttpResponse(json.dumps({'status':'ok'}))
+    else:
+        return HttpResponse(json.dumps({'status':'error', 'message':'User not authenticated'}))
 
-
-
-def attempt_question(request):
-    return render_to_response('qone-one.html',context_instance=RequestContext(request))
 
 def dashboard(request):
     if request.user.is_authenticated():
@@ -64,7 +66,7 @@ def dashboard(request):
         try:
             subscription_type = user['subscription_type']
         except:
-            subscription_type = 'SP1'
+            subscription_type = []
         try:
             join_time = user['join_time']
         except:
@@ -106,17 +108,17 @@ def landing(request):
         parameters['user'] = user
 
         subscription_type = user['subscription_type']
-
         for eachExam in upcoming_exams:            
             up_exm = {}
             
             up_exm['name'] = eachExam['exam_name']
             
-            if eachExam['exam_category'] == 'Inter-071':
+            if 'IDP' in subscription_type:
                 up_exm['subscribed'] = True
 
-            if eachExam['exam_category'] == subscription_type:
-                up_exm['subscribed_exams'] = True
+            elif eachExam['exam_category'] in subscription_type:
+                up_exm['subscribed'] = True
+
             else:
                 up_exm['subscribed'] = eachExam['exam_code'] in subscribed_exams
 
@@ -126,7 +128,9 @@ def landing(request):
             up_exm['image'] = eachExam['image']
             up_exm['exam_date'] = datetime.datetime.fromtimestamp(int(eachExam['exam_date'])).strftime("%A, %d. %B %Y")
             up_exams.append(up_exm)
+
         parameters['upcoming_exams'] = up_exams
+        # print up_exams
 
         schedule_obj = Schedules()
         schedules = schedule_obj.get_upcoming_schedules()
@@ -162,11 +166,8 @@ def landing(request):
         return render_to_response('landing.html', context_instance=RequestContext(request))
 
 def attend_exam(request,exam_code):
-    if exam_code == '100':
-        subscribed = True
-    else:
-        coupon_obj = Coupon()    
-        subscribed = coupon_obj.check_subscried(exam_code, request.user.id)
+    user_profile_obj = UserProfile()
+    subscribed = user_profile_obj.check_subscribed(request.user.username, exam_code)
     if request.user.is_authenticated() and subscribed:
         question_obj = QuestionApi()    
         questions = question_obj.find_all_questions({"exam_code": int(exam_code)})
@@ -185,7 +186,7 @@ def attend_exam(request,exam_code):
         parameters['start_question'] = sorted_questions[start_question_number]
         parameters['start_question_number'] = start_question_number
         parameters['max_questions_number'] =  len(sorted_questions)
-        
+
         parameters['exam_code'] = exam_code
         user_profile_obj = UserProfile()
         user = user_profile_obj.get_user_by_username(request.user.username)
@@ -195,11 +196,8 @@ def attend_exam(request,exam_code):
         return HttpResponseRedirect('/')
 
 def honorcode(request, exam_code):
-    if exam_code == '100':
-        subscribed = True
-    else:
-        coupon_obj = Coupon()
-        subscribed = coupon_obj.check_subscried(exam_code, request.user.id)
+    user_profile_obj = UserProfile()
+    subscribed = user_profile_obj.check_subscribed(request.user.username, exam_code)
     if request.user.is_authenticated() and subscribed:
         exam_obj = ExammodelApi()
         exam_details = exam_obj.find_one_exammodel({'exam_code':int(exam_code)})

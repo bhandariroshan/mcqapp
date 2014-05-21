@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MathJax TeX Test Page</title>
+<!-- Copyright (c) 2010-2013 The MathJax Consortium -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+<p>nepal</p>
+<div id="cont">
+
+
+</div>
+
+</body>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+  });
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+$.post( "http://localhost:8000/exam/100", function( data ) {
+
+var questions = JSON.parse(data).result;
+console.log(questions);
+content = "";
+for(var i = 0;i<questions.length;i++)
+{
+	content += '<div id="q_'+i+'">'+questions[i].question.text+'</div></br>';
+
+	if(i==questions.length-1)
+	{
+			$("#cont").html(content);
+		MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+	}
+}
+
+
+
+$(".MathJax_Preview").remove();
+$("script[type='math/tex']").remove();
+  
+});
+
+	
+</script>
+</html>

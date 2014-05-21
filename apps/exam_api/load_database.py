@@ -20,7 +20,9 @@ def load_examset_in_database(request):
          "exam_code": 100,
          "exam_time": "7.00pm",
          "exam_category": "BE-IOE-071",
-         "exam_duration":180
+         "exam_duration":180,
+         "competition":True,
+         "practice":False
          },
         {"exam_name": "IOM model exam 1",
          "exam_date": 1399978500,
@@ -28,7 +30,9 @@ def load_examset_in_database(request):
          "exam_code": 101,
          "exam_time": "7.00pm",
          "exam_category": "MBBS-IOM-071",
-         "exam_duration":180
+         "exam_duration":180,
+         "competition":True,
+         "practice":False
          },
         {"exam_name": "IOE model exam 2",
          "exam_date": 1399968500,
@@ -36,7 +40,9 @@ def load_examset_in_database(request):
          "exam_code": 102,
          "exam_time": "7.00pm",
          "exam_duration":180,
-         "exam_category": "BE-IOE-071"
+         "exam_category": "BE-IOE-071",
+         "competition":False,
+         "practice":True
          },
         {"exam_name": "IOM model exam 2",
          "exam_date": 1399968500,
@@ -44,7 +50,9 @@ def load_examset_in_database(request):
          "exam_code": 103,
          "exam_duration":180,
          "exam_time": "7.00pm",
-         "exam_category": "MBBS-IOM-071"
+         "exam_category": "MBBS-IOM-071",
+         "competition":False,
+         "practice":True
         }
     ]
     exam_model.insert_new_model(exam_dict)
@@ -74,7 +82,7 @@ def load_correctanswer_in_database(request):
     '''
     question_api = QuestionApi()
     questions = question_api.find_all_questions(
-        {"exam_code": 100})
+        {"exam_code": 103})
     correct_answer_list = []
     for each_question in questions:
         temp = {}

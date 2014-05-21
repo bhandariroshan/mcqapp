@@ -1,15 +1,13 @@
 var question_id = '';
 $('.li-height').click(function(){
   question_id = this.parentNode.id;
-  $(this).effect("highlight", {}, 3000);
+  $(this).effect("highlight", {}, 2000);
   save_answer(exam_code, question_id, this.id);
-   /*$(this).effect( selectedEffect, options, 500, setTimeout(function() {}, 2000 ) );*/
   var clicked = this.children[1].id.substr(9,this.children[1].id.length);
   var check_id = "#inputoption"+clicked;
   $(check_id).trigger('gumby.check');
 
   ans_html = $('#myAnswers').html();  
-      /*if (click_count%4 ==0){   */       
            ans_html = ans_html  + '<button  style="border: 0px;background: #fff; display:inline;" href="#"onclick="load_another_question('+ current_question_number +')">' + String(current_question_number+1) +
            '. <li id="liAns' + String(current_question_number) +'" class="success badge">' + clicked + '</li>&nbsp;&nbsp;&nbsp;</button>';
 
@@ -33,33 +31,7 @@ $('.li-height').click(function(){
             }
           if(current_question_number+1 < max_questions_number){            
            load_another_question(parseInt(current_question_number)+1);
-          }
-      /*}*/
-      /*else{            
-            if ((ans_list.indexOf(current_question_number) > -1)==false)  {
-              ans_html = ans_html  + '<a href="#" onclick="load_another_question('+ current_question_number +')">' + String(current_question_number+1) + '. <li id="liAns' + + String(current_question_number) +'" class="success badge">' + clicked + '</li></a>&nbsp;&nbsp;&nbsp;';
-                $('#myAnswers').html(ans_html);
-                click_count = click_count + 1;
-                ans_list.push(current_question_number);
-                saved_answers[current_question_number] = clicked;
-                attempted.push(current_question_number);
-            }
-            else{
-                  //if((ans_na.indexOf(current_question_number) > -1)==false){
-                          var clicked = this.children[1].id.substr(9,this.children[1].id.length);
-                          $('#liAns'+String(current_question_number)).html(clicked);
-                          saved_answers[current_question_number] = clicked;                          
-                          $('#liAns'+String(current_question_number)).removeClass('danger');
-                          $('#liAns'+String(current_question_number)).addClass('success');
-                          $('#aHref'+String(current_question_number)).removeAttr('onclick');
-                  //}              
-
-            }
-            
-          if(current_question_number+1 < max_questions_number){            
-           load_another_question(parseInt(current_question_number)+1);
-          }
-      }*/
+          }      
 });
  
 function load_another_question(q_no){
@@ -106,8 +78,6 @@ function load_another_question(q_no){
 
 $('#loadNext').click(function(){
   ans_html = $('#myAnswers').html();
-  
-/*      if (click_count%4 == 0){          */
            ans_html = ans_html + '<button style="border: 0px; background: #fff;display:inline;"" href="#" id="aHref"' + String(current_question_number)+ ' onclick="load_another_question('+ current_question_number +')">' + String(current_question_number+1) + '. <li class="danger badge" id="liAns'+ String(current_question_number) +'">' + 'NA' + '</li></button>';
            if ((ans_list.indexOf(current_question_number) > -1)==false)  {
                $('#myAnswers').html(ans_html);
@@ -129,25 +99,6 @@ $('#loadNext').click(function(){
           if(current_question_number+1 < max_questions_number){            
            load_another_question(parseInt(current_question_number)+1);
           }
-  /*}*/
-  /*else{
-        ans_html = ans_html + '<a href="#" id="aHref' + String(current_question_number) +'" onclick="load_another_question('+ current_question_number +')">' + String(current_question_number+1) + '. <li class="danger badge" id="liAns' + String(current_question_number) +'">' + 'NA' + '</li></a>&nbsp;&nbsp;&nbsp;';
-        if ((ans_list.indexOf(current_question_number) > -1)==false)  {
-            $('#myAnswers').html(ans_html);
-            click_count = click_count + 1;
-            ans_list.push(current_question_number);
-            ans_na.push(String(current_question_number));
-            saved_answers[current_question_number] = 'NA';
-          }
-          else{
-            }
-        
-        if(current_question_number+1 < max_questions_number){            
-           load_another_question(parseInt(current_question_number)+1);
-          }
-  }*/
-  
-  
 });
 
 

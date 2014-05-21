@@ -24,7 +24,7 @@ class AjaxHandle():
             coupon_code = request.POST.get('coupon_code','')
             from apps.mainapp.classes.Exams import Exam            
             exam_obj = Exam()
-            up_exm = exam_obj.get_exam_detail(exam_code)
+            up_exm = exam_obj.get_exam_detail(int(exam_code))
 
             if exam_code.strip() == 'sample' and coupon_code.lower()=='sample-1234':
                 return HttpResponse(json.dumps({'status':'ok','url':'/honorcode/100/'}))
@@ -32,36 +32,31 @@ class AjaxHandle():
             if exam_code.strip() != 'sample' and coupon_code.lower()=='sample-1234':
                 return HttpResponse(json.dumps({'status':'error','message':'Invalid Coupon code.'}))
 
-            if coupon_obj.validate_coupon(request.POST.get('coupon_code',"false")) != None:
-                coupon_obj.change_used_status_of_coupon(coupon_code, request.user.username)
-                
+            if coupon_obj.validate_coupon(coupon_code, up_exm['exam_category']) == True:
                 user_profile_obj = UserProfile()
-                subscribed_exams = user_profile_obj.get_subscribed_exams(request.user.username)
+                #save the coupon code in user's couponcode array 
+                coupon_obj.change_used_status_of_coupon(coupon_code, request.user.username) 
+                user_profile_obj.change_subscription_plan(request.user.username, coupon_code)                
+                user_profile_obj.save_coupon(request.user.username, coupon_code)
 
-                #save the coupon code in user's couponcode array and the exam code in user's valid exam list
-                #
                 user = user_profile_obj.get_user_by_username(request.user.username)
                 subscription_type = user['subscription_type']
-
+                print subscription_type, up_exm['exam_category']
+                #if coupon_code != 'IDP' or 'BE-IOE-071' or 'MBBS-IOM-071' then save the exam code in the valid exams
+                if   'IDP' not in subscription_type and 'BE-IOE-071' not in subscription_type and 'MBBS-IOM-071' not in subscription_type:
+                    user_profile_obj.save_valid_exam(request.user.username, exam_code)                    
                 
-                if subscription_type=='IDP':
-                    return {'status':'ok','url':'/honorcode/' + exam_code}
-                elif (up_exm['exam_category'] == 'BE-IOE-071' and subscription_type =='BE-IOE-071'):
-                    return {'status':'ok','url':'/honorcode/' + exam_code}
-                elif (up_exm['exam_category'] == 'MBBS-IOM-071' and subscription_type=='MBBS-IOM-071'):
-                    return {'status':'ok','url':'/honorcode/' + exam_code}
+                if 'IDP' in subscription_type:
+                    return HttpResponse(json.dumps({'status':'ok','url':'/honorcode/' + exam_code}))
+
+                elif up_exm['exam_category']  in subscription_type:
+                    return HttpResponse(json.dumps({'status':'ok','url':'/honorcode/' + exam_code}))
                 else:
-                    if exam_code in subscrbed_exams:
-                        return {'status':'ok','url':'/honorcode/' + exam_code}
+                    subscribed_exams = user_profile_obj.get_subscribed_exams(request.user.username)
+                    if exam_code in subscribed_exams:
+                        return HttpResponse(json.dumps({'status':'ok','url':'/honorcode/' + exam_code}))
                     else:
-                        return {'status':'error','message':'Invalid Coupon code.'}
-
-
-
-                user_profile_obj = UserProfile()
-                user_profile_obj.save_subscribed_exam(exam_code, request.user.id)
-
-                return HttpResponse(json.dumps({'status':'ok', 'url':'/honorcode/'+ exam_code + '/'}))
+                        return HttpResponse(json.dumps({'status':'error','message':'Invalid Coupon code.'}))
             else:
                 return HttpResponse(json.dumps({'status':'error','message':'Invalid Coupon code.'}))
         else:
@@ -85,22 +80,8 @@ class AjaxHandle():
 
     def save_answer(self, request):
         if request.user.is_authenticated():
-            from apps.mainapp.classes.query_database import AttemptedAnswerDatabase
-            ans = AttemptedAnswerDatabase()
-            question_number = request.POST.get('qid','')
-            selected_ans = request.POST.get('sans','')
-            exam_code = request.POST.get('exam_code','')
-            #Check if the user is subscribed for that exam or not
-            attempt_time = datetime.datetime.now()
-            attempt_time = time.mktime(attempt_time.timetuple())
-            ans.update_upsert_attempted_answer(
-                {'q_id':question_number, 'exam_code':exam_code, 'user_id':request.user.id},{
-                'user_id':request.user.id,
-                'q_id':question_number,
-                'exam_code':exam_code,
-                'selected_ans':selected_ans,
-                'attempt_time':int(attempt_time)
-                 })
+            from apps.exam_api.views import save_user_answers
+            save_user_answers(request)
             return HttpResponse(json.dumps({'status':'ok', 'message':'Answer successfully saved'}))
         else:
             return HttpResponse(json.dumps({'status':'error', 'message':'Not Authorized for this action'}))
