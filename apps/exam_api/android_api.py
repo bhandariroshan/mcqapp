@@ -5,6 +5,7 @@ from django.views.decorators.csrf import csrf_exempt
 from .views import ExamHandler
 from apps.mainapp.classes.Coupon import Coupon
 from apps.mainapp.classes.Userprofile import UserProfile
+from apps.mainapp.classes.Coupon import Coupon
 @csrf_exempt
 def get_question_set(request, exam_code):
     '''
@@ -16,6 +17,7 @@ def get_question_set(request, exam_code):
         from apps.mainapp.classes.Exams import Exam            
         exam_obj = Exam()
         up_exm = exam_obj.get_exam_detail(int(exam_code))
+        coupon_obj = Coupon()
         if coupon_obj.validate_coupon(coupon_code, up_exm['exam_category']) == True:
 
             user_profile_obj = UserProfile()
@@ -29,14 +31,16 @@ def get_question_set(request, exam_code):
                 '''Add Validation for subscription here'''
                 exam_handler = ExamHandler()
                 model_question_set = exam_handler.get_questionset_from_database(exam_code)
-                return HttpResponse(json.dumps({'status':'ok', 'result':model_question_set}))
-            else:
-                return HttpResponse(json.dumps({'status':'error', 'message':'You are not subscribed for this exam'}))
-        else:
-            return HttpResponse(json.dumps({'status':'error', 'message':'Invalid Coupon Code.'}))        
-    else:
-        return HttpResponse(json.dumps({'status':'error', 'message':'Not a valid request'}))
 
+                response =  HttpResponse(json.dumps({'status':'ok', 'result':model_question_set}))
+            else:
+                response =  HttpResponse(json.dumps({'status':'error', 'message':'You are not subscribed for this exam'}))
+        else:
+            response =   HttpResponse(json.dumps({'status':'error', 'message':'Invalid Coupon Code.'}))        
+    else:
+        response =  HttpResponse(json.dumps({'status':'error', 'message':'Not a valid request'}))
+    print response
+    return response
 
 def get_upcoming_exams(request):
     '''
