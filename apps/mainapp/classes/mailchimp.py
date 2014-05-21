@@ -18,20 +18,20 @@ class MailChimp():
         self.db_object.update_upsert(self.table_name, doc['data_sent'], doc)
 
     def subscribe(self, doc):
-        try:
-            first, last = doc['first_name'], doc['last_name']
-            m = self.get_mailchimp_api()
-            response = m.lists.subscribe(self.list_id, email = {'email':str(doc['email'])},
-                double_optin = False,
-                merge_vars = {"FNAME":str(first),"LNAME":str(last),
-                'Name':str(doc['name'])},
-                update_existing=True, send_welcome=True, replace_interests=True)
-            self.save_mailchimp_response({'data_sent':doc, 'response':response})
-            return {'status':1}
+        # try:
+        first, last = doc['first_name'], doc['last_name']
+        m = self.get_mailchimp_api()
+        response = m.lists.subscribe(self.list_id, email = {'email':str(doc['email'])},
+            double_optin = False,
+            merge_vars = {"FNAME":str(first),"LNAME":str(last),
+            'Name':str(doc['name'])},
+            update_existing=True, send_welcome=True, replace_interests=True)
+        self.save_mailchimp_response({'data_sent':doc, 'response':response})
+        return {'status':1}
 
-        except mailchimp.ListAlreadySubscribedError:
-            return {'status':0,'message':'Already subscribed'}
+        # except mailchimp.ListAlreadySubscribedError:
+        #      return {'status':0,'message':'Already subscribed'}
 
 
-mc = Mailchimp()
-mc.subscribe({''})
+mc = MailChimp()
+mc.subscribe({'first_name':'Roshan', 'last_name':'Bhandari', 'email':'bloggerbhandari@gmail.com'})
