@@ -35,6 +35,55 @@ def latex_html(request):
 def android(request): 
     login_by_token(request)
     if request.user.is_authenticated():
+        social_account = SocialAccount.objects.get(user__id=request.user.id)
+        from apps.mainapp.classes.Userprofile import UserProfile
+        user_profile_object = UserProfile()
+        user = user_profile_object.get_user_by_username(request.user.username)
+        try:
+            valid_exams = user['valid_exam']
+            if 'IOM-SAMPLE-1' not in valid_exams:
+                valid_exams.append('IOM-SAMPLE-1')
+            if 'IOE-SAMPLE-1' not in valid_exams:
+                valid_exams.append('IOE-SAMPLE-1')
+            if 'IOE-SAMPLE-2' not in valid_exams:
+                valid_exams.append('IOE-SAMPLE-2')
+            if 'IOM-SAMPLE-2' not in valid_exams:
+                valid_exams.append('IOM-SAMPLE-2')
+        except:
+            valid_exams=['IOM-SAMPLE-1', 'IOE-SAMPLE-1','IOM-SAMPLE-2','IOE-SAMPLE-2']
+
+        try:
+            coupons = user['coupons']
+        except:
+            coupons = []
+        try:
+            subscription_type = user['subscription_type']
+        except:
+            subscription_type = []
+        try:
+            join_time = user['join_time']
+        except:
+            join_time = datetime.datetime.now()
+            join_time = time.mktime(join_time.timetuple())
+        data = {
+                'useruid': int(request.user.id), 
+                'first_name': social_account.extra_data['first_name'],
+                'last_name': social_account.extra_data['last_name'],
+                'name':social_account.extra_data['name'],
+                'username' : request.user.username,
+                "link": social_account.extra_data['link'],
+                "id": social_account.extra_data['id'],
+                "timezone": social_account.extra_data['timezone'],
+                "email": social_account.extra_data['email'],
+                "locale": social_account.extra_data['locale'],
+                'coupons':coupons,
+                'valid_exam':valid_exams,
+                'subscription_type':subscription_type,
+                'newsletter_freq':'Weekly',
+                'android_user':True,
+                'join_time':int(join_time)
+        }
+        user_profile_object.update_upsert({'username':request.user.username}, data)
         return HttpResponse(json.dumps({'status':'ok'}))
     else:
         return HttpResponse(json.dumps({'status':'error', 'message':'User not authenticated'}))

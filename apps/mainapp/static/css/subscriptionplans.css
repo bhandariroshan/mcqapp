@@ -19,13 +19,13 @@ display: block;
 }
 .page-homepage .feature.premium .premium-container {
 position: relative;
-padding-bottom: 30px;
+padding-bottom: 70px;
 /*background-color: #e0e2e3;*/
 background-position: center bottom;
 background-repeat: no-repeat;
 }
 .page-homepage .premium-options-holder {
-padding: 20px 0;
+padding: 70px 0;
 text-align: center;
 vertical-align: top;
 width: 100%;

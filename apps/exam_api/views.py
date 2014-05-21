@@ -24,7 +24,7 @@ class ExamHandler():
         this function lists the available exam models
         '''
         exam_set = ExammodelApi()
-        exam_list = exam_set.find_all_exammodel({})
+        exam_list = exam_set.find_all_exammodel({})        
         return exam_list
 
     def check_answers(self, exam_code, answer_list):
