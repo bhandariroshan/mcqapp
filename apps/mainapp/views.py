@@ -82,6 +82,7 @@ def android(request):
         except:
             join_time = datetime.datetime.now()
             join_time = time.mktime(join_time.timetuple())
+
         data = {
                 'useruid': int(request.user.id), 
                 'first_name': social_account.extra_data['first_name'],
@@ -100,6 +101,15 @@ def android(request):
                 'android_user':True,
                 'join_time':int(join_time)
         }
+        try:
+            mc_subscribed = user['subscribed_to_mailchimp']            
+        except:
+            from apps.mainapp.classes.MailChimp import MailChimp
+            mc = MailChimp()
+            mc.subscribe(data)
+            mc_subscribed = True
+        data['mc_subscribed'] = mc_subscribed        
+
         user_profile_object.update_upsert({'username':request.user.username}, data)
         return HttpResponse(json.dumps({'status':'ok'}))
     else:
@@ -155,6 +165,16 @@ def dashboard(request):
                 'newsletter_freq':'Weekly',
                 'join_time':int(join_time)
         }
+        
+        try:
+            mc_subscribed = user['subscribed_to_mailchimp']            
+        except:
+            from apps.mainapp.classes.MailChimp import MailChimp
+            mc = MailChimp()
+            mc.subscribe(data)
+            mc_subscribed = True
+        data['mc_subscribed'] = mc_subscribed 
+
         user_profile_object.update_upsert({'username':request.user.username}, data)
         return HttpResponseRedirect('/')
 
