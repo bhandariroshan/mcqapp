@@ -11,7 +11,7 @@ from apps.mainapp.classes.Coupon import Coupon
 import json
 from django.views.decorators.csrf import csrf_exempt
 
-
+from apps.mainapp.classes.query_database import QuestionApi
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate # Does not give me access
 # For POSTing the facebook token
@@ -27,6 +27,22 @@ from allauth.socialaccount.providers.facebook.views import login_by_token
 
 
 def latex_html(request): 
+    return render_to_response("sample-tex.html")
+@csrf_exempt
+def add_html(request): 
+    print request.POST.get('q')
+    questions = json.loads(request.POST.get('q'))
+
+    for question in questions:
+        question_api = QuestionApi()
+        question_api.latex_html({"exam_code":int(question['exam_code']), \
+            "question_number":question['question_number']}, \
+             {"question.html":question['question']['text'], \
+             "answer.a.html":question['answer']['a']['text'],
+             "answer.b.html":question['answer']['b']['text'],
+             "answer.c.html":question['answer']['c']['text'],
+             "answer.d.html":question['answer']['d']['text']\
+             })
     return render_to_response("sample-tex.html")
 
 @csrf_exempt

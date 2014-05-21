@@ -27,27 +27,57 @@
 <script type="text/javascript">
 $.post( "http://localhost:8000/exam/100", function( data ) {
 
-var questions = JSON.parse(data).result;
-console.log(questions);
+questions = JSON.parse(data).result;
 content = "";
 for(var i = 0;i<questions.length;i++)
 {
-	content += '<div id="q_'+i+'">'+questions[i].question.text+'</div></br>';
-
-	if(i==questions.length-1)
+	var q_id = "q"+questions[i].exam_code+"_"+questions[i].question_number+"_";
+	content += '<div id="'+q_id+'">'+questions[i].question.text+'</div></br>';
+	for(var j = 0;j<4;j++)
 	{
-			$("#cont").html(content);
+		content += '<div id="'+q_id+j+'">'+questions[i].answer[String.fromCharCode(97+j)].text+'</div><br/>';
+		if(i==questions.length-1&&j==3)
+	{
+		$("#cont").html(content);
 		MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+		
 	}
+	}
+	
+	
 }
 
 
-
-$(".MathJax_Preview").remove();
-$("script[type='math/tex']").remove();
-  
 });
 
+
+function get_html()
+{
+
+
+	$(".MathJax_Preview").remove();
+	$("script[type='math/tex']").remove();
+
+	for(var i=0;i<questions.length;i++)
+	{
+
+		var q_id = "q"+questions[i].exam_code+"_"+questions[i].question_number+"_";
+		questions[i].question.text = $('#'+q_id).html();
+	for(var j = 0;j<4;j++)
+	{
+		content += '<div id="'+q_id+j+'">'+questions[i].answer[String.fromCharCode(97+j)].text+'</div><br/>';
+		questions[i].answer[String.fromCharCode(97+j)].text = $('#'+q_id+j).html();
+		if(i==questions.length-1&&j==3)
+	{
+		// console.log(questions);
+		$.post( "http://localhost:8000/latex-store",{q:JSON.stringify(questions)} ,function( data ) {
+	});
+	}
+	}
+
+	}
+	  
+}
 	
 </script>
 </html>
