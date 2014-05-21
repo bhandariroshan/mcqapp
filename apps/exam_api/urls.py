@@ -17,6 +17,7 @@ urlpatterns = patterns(
     url(r'^load-exam-data',
         'apps.exam_api.load_database.load_examset_in_database',
         name='load_exam_data'),
+    url(r'^validate-coupon/(?P<exam_code>\w{6})$', 'apps.exam_api.android_api.validate_coupon'),           
     # url(r'^answers',
     #     'apps.exam_api.views.check_answers',
     #     name='check_answers'),

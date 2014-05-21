@@ -1,8 +1,11 @@
 from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi,\
     AttemptedAnswerDatabase
 
+from django.http import HttpResponse
 
 <<<<<<< HEAD
+class ExamHandler():
+=======
 from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi
 
 
@@ -46,9 +49,7 @@ def load_examset_in_database(request):
 
 
 def load_modelquestion_in_database(request):
-=======
-class ExamHandler():
->>>>>>> 9e31b6af670373fd86d017d98cde9e404a142189
+>>>>>>> 9a060bebfcce15d697165821a58054b3168016bd
     '''
     The class performs activities related to a exam
     '''
@@ -108,6 +109,18 @@ def save_user_answers(request):
     the function receives the information of answer checked by
     user and saved in the answer database
     '''
+<<<<<<< HEAD
+   
+=======
+
+    print request.user.username
+    exam_set = ExammodelApi()
+    exam_list = exam_set.find_all({})
+    if web_reponse == 0:
+        return HttpResponse(json.dumps(exam_list))
+    else:
+        return exam_list
+>>>>>>> 9a060bebfcce15d697165821a58054b3168016bd
 
     if request.GET.get('exam_code') is not None:
         answer_dict = {

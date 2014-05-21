@@ -28,14 +28,18 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
   <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
-  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <script src="{% static "js/jquery-1.10.2.js" %}"></script>
+  <script src="{% static "js/jquery-ui.js" %}"></script>
+  <!--<script src="//code.jquery.com/jquery-1.10.2.js"></script>-->
+  <!--<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>-->
   <!-- We highly recommend you use SASS and write your custom styles in sass/_theme.scss.
   However, there is a blank style.css in the css directory should you prefer -->
   <link rel="stylesheet" href="{% static "css/gumby.css" %}">
   <link href="{% static "css/chardinjs.css" %}" rel="stylesheet">
   <link rel="stylesheet" href="http://gumbyframework.com/css/prism.css?v=091613">    
-  
+  {% if 'subscription' in request.path %}
+      <link rel="stylesheet" href="{% static "css/subscriptionplans.css" %}">
+  {% endif %}
 
   <style type="text/css">
     .detail-list-item{
@@ -58,6 +62,7 @@
     }
     .bgimage{      
     /*background-image: url('/static/images/bgimg.jpg')*/
+    /*background-color: #e0e2e3;*/
     }
     .text-color-white{
       /*color:white;*/
@@ -69,7 +74,38 @@
     .row-bg-color{      
     /*background-color: floralwhite;*/
     }
-
+    .tab-nav > li > a {
+      display: block;
+      width: auto;
+      padding: 0 8px;
+      margin: 0;
+      color: #555555;
+      font-family: "Open Sans";
+      font-weight: 400;
+      border: 1px solid #e5e5e5;
+      border-width: 1px 1px 0 1px;
+      text-shadow: 0 1px 1px white;
+      background: #f2f2f2;
+      cursor: pointer;
+      -webkit-border-radius: 4px 4px 0 0;
+      -moz-border-radius: 4px 4px 0 0;
+      -ms-border-radius: 4px 4px 0 0;
+      -o-border-radius: 4px 4px 0 0;
+      border-radius: 4px 4px 0 0;
+      height: 42px;
+      line-height: 40px;
+    }
+    .tab-nav > li {
+      display: inline-block;
+      width: auto;
+      padding: 0;
+       margin: 0 0 0 0; 
+      cursor: default;
+      top: 1px;
+      -webkit-box-shadow: 0 1px 0 white;
+      -moz-box-shadow: 0 1px 0 white;
+      box-shadow: 0 1px 0 white;
+    }
     {% endif %}
   </style>
   <!-- <link rel="stylesheet" href="css/style.css"> -->
@@ -105,14 +141,14 @@
       <ul class="eight columns" style="float:right;clear:none;">
         <li><a href="/partners/">Partners</a></li>
         <li><a href="/partners/">Coupon Distributors</a></li>
-        <li><a href="/subscription-models/">Subscription Models</a></li>
+        <li><a href="/subscription/">Subscription Models</a></li>
         {% if 'attend-exam' in request.path %}
           <li>
               <a href="#" data-toggle="chardinjs">Instructions</a>
           </li>
         {% endif %}
         <li>
-          <a href="/docs/"><span>{{request.user.username}} </span><i class="icon-down-open"></i></a>
+          <a href="/docs/"><span>{{user.name}} </span><i class="icon-down-open"></i></a>
           <div class="dropdown" style="width:180px;">
             <ul>
               <li><a href="/accounts/logout">logout</a></li>
@@ -137,7 +173,7 @@
           <a href="/privacy/">Privacy policy</a>&nbsp;&nbsp;
           <a href="/partners/">Partners</a>&nbsp;&nbsp;
           <a href="/partners/">Coupon Distributors</a>&nbsp;&nbsp;
-          <a href="/subscription-models/">Subscription Models</a>&nbsp;&nbsp;
+          <a href="/subscription/">Subscription Models</a>&nbsp;&nbsp;
         </p>
     </div>
     <div class="row">
@@ -198,7 +234,8 @@ UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script
 UserVoice.push(['set', {
   accent_color: '#448dd6',
   trigger_color: 'white',
-  trigger_background_color: '#448dd6'
+  trigger_style : 'tab',
+  /*trigger_background_color: '#448dd6'*/
 }]);
 
 // Identify the user and pass traits
@@ -220,7 +257,7 @@ UserVoice.push(['identify', {
 }]);
 
 // Add default trigger to the bottom-right corner of the window:
-UserVoice.push(['addTrigger', { mode: 'contact', trigger_position: 'bottom-right' }]);
+UserVoice.push(['addTrigger', { mode: 'contact', trigger_position: 'right' }]);
 
 // Or, use your own custom trigger:
 //UserVoice.push(['addTrigger', '#id', { mode: 'contact' }]);
@@ -229,6 +266,7 @@ UserVoice.push(['addTrigger', { mode: 'contact', trigger_position: 'bottom-right
 UserVoice.push(['autoprompt', {}]);
 </script>
   
+
 
 {% block footer %}
 {% endblock %}

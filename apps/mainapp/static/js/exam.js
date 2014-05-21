@@ -1,14 +1,15 @@
+var question_id = '';
 $('.li-height').click(function(){
-  $(this).effect("highlight", {}, 3000);
-   /*$(this).effect( selectedEffect, options, 500, setTimeout(function() {}, 2000 ) );*/
+  question_id = this.parentNode.id;
+  $(this).effect("highlight", {}, 2000);
+  save_answer(exam_code, question_id, this.id);
   var clicked = this.children[1].id.substr(9,this.children[1].id.length);
   var check_id = "#inputoption"+clicked;
   $(check_id).trigger('gumby.check');
 
   ans_html = $('#myAnswers').html();  
-      if (click_count%4 ==0){          
-           ans_html = ans_html  + '<a href="#"onclick="load_another_question('+ current_question_number +')">' + String(current_question_number+1) +
-           '. <li id="liAns"' + String(current_question_number) +'" class="success badge">' + clicked + '</li>&nbsp;&nbsp;&nbsp;</a><br/>';
+           ans_html = ans_html  + '<button  style="border: 0px;background: #fff; display:inline;" href="#"onclick="load_another_question('+ current_question_number +')">' + String(current_question_number+1) +
+           '. <li id="liAns' + String(current_question_number) +'" class="success badge">' + clicked + '</li>&nbsp;&nbsp;&nbsp;</button>';
 
            if ((ans_list.indexOf(current_question_number) > -1)==false)  {
               $('#myAnswers').html(ans_html);
@@ -30,38 +31,13 @@ $('.li-height').click(function(){
             }
           if(current_question_number+1 < max_questions_number){            
            load_another_question(parseInt(current_question_number)+1);
-          }
-      }
-      else{            
-            if ((ans_list.indexOf(current_question_number) > -1)==false)  {
-              ans_html = ans_html  + '<a href="#" onclick="load_another_question('+ current_question_number +')">' + String(current_question_number+1) + '. <li id="liAns' + + String(current_question_number) +'" class="success badge">' + clicked + '</li></a>&nbsp;&nbsp;&nbsp;';
-                $('#myAnswers').html(ans_html);
-                click_count = click_count + 1;
-                ans_list.push(current_question_number);
-                saved_answers[current_question_number] = clicked;
-                attempted.push(current_question_number);
-            }
-            else{
-                  //if((ans_na.indexOf(current_question_number) > -1)==false){
-                          var clicked = this.children[1].id.substr(9,this.children[1].id.length);
-                          $('#liAns'+String(current_question_number)).html(clicked);
-                          saved_answers[current_question_number] = clicked;                          
-                          $('#liAns'+String(current_question_number)).removeClass('danger');
-                          $('#liAns'+String(current_question_number)).addClass('success');
-                          $('#aHref'+String(current_question_number)).removeAttr('onclick');
-                  //}              
-
-            }
-            
-          if(current_question_number+1 < max_questions_number){            
-           load_another_question(parseInt(current_question_number)+1);
-          }
-      }
+          }      
 });
  
 function load_another_question(q_no){
   var next_question = parseInt(q_no);
   current_question_number = next_question;
+  $('#'+question_id).attr('id',questions[current_question_number]['uid']['id']);
     var question_text = '<span><p><strong style="color:blue;">' + String(String(current_question_number+1)) + '. </strong><strong>' +  questions[next_question]['question']['text'] + '</strong></p> </span>';
 
       if (questions[next_question]['question']['image'] != undefined){
@@ -102,9 +78,7 @@ function load_another_question(q_no){
 
 $('#loadNext').click(function(){
   ans_html = $('#myAnswers').html();
-  
-      if (click_count%4 == 0){          
-           ans_html = ans_html + '<a href="#" id="aHref"' + String(current_question_number)+ ' onclick="load_another_question('+ current_question_number +')">' + String(current_question_number+1) + '. <li class="danger badge" id="liAns'+ String(current_question_number) +'">' + 'NA' + '</li></a>&nbsp;&nbsp;&nbsp;<br/>';
+           ans_html = ans_html + '<button style="border: 0px; background: #fff;display:inline;"" href="#" id="aHref"' + String(current_question_number)+ ' onclick="load_another_question('+ current_question_number +')">' + String(current_question_number+1) + '. <li class="danger badge" id="liAns'+ String(current_question_number) +'">' + 'NA' + '</li></button>';
            if ((ans_list.indexOf(current_question_number) > -1)==false)  {
                $('#myAnswers').html(ans_html);
               click_count = click_count + 1;
@@ -112,33 +86,19 @@ $('#loadNext').click(function(){
               saved_answers[current_question_number] = 'NA';
             }
             else{
-              var clicked = this.children[1].id.substr(9,this.children[1].id.length);
-              $('#liAns'+String(current_question_number)).html(clicked);
-              saved_answers[current_question_number] = clicked;
+              try{
+                var clicked = this.children[1].id.substr(9,this.children[1].id.length);
+                $('#liAns'+String(current_question_number)).html(clicked);
+                 saved_answers[current_question_number] = clicked;
+              }
+              catch(err){
+
+              }
             }
            
           if(current_question_number+1 < max_questions_number){            
            load_another_question(parseInt(current_question_number)+1);
           }
-  }
-  else{
-        ans_html = ans_html + '<a href="#" id="aHref' + String(current_question_number) +'" onclick="load_another_question('+ current_question_number +')">' + String(current_question_number+1) + '. <li class="danger badge" id="liAns' + String(current_question_number) +'">' + 'NA' + '</li></a>&nbsp;&nbsp;&nbsp;';
-        if ((ans_list.indexOf(current_question_number) > -1)==false)  {
-            $('#myAnswers').html(ans_html);
-            click_count = click_count + 1;
-            ans_list.push(current_question_number);
-            ans_na.push(String(current_question_number));
-            saved_answers[current_question_number] = 'NA';
-          }
-          else{
-            }
-        
-        if(current_question_number+1 < max_questions_number){            
-           load_another_question(parseInt(current_question_number)+1);
-          }
-  }
-  
-  
 });
 
 
