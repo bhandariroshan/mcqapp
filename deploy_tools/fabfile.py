@@ -19,6 +19,10 @@ code_only_folder = '%s/%s/source/%s' % (SITES_FOLDER, HOST_FOLDER, 'twitter_audi
 def deploy():
     # _create_directory_structure_if_necessary(HOST_FOLDER)
     _get_latest_source(source_folder)
+    _update_settings(source_folder)
+    run('cd /srv/www/meroanswer/source/ && ../virtualenv/bin/activate && python manage.py collectstatic')
+
+
   
 
 def update_latest_code():
@@ -50,7 +54,7 @@ def _create_directory_structure_if_necessary(site_name):
         run('mkdir -p %s/%s/%s' % (SITES_FOLDER, site_name, subfolder)) 
 
 def _get_latest_source(source_folder):
-    run('cd %s && git reset --hard && git clean -f -d && git checkout master && git pull -f' % (source_folder))
+    # run('cd %s && git reset --hard && git clean -f -d && git checkout master && git pull -f' % (source_folder))
     
 
     if exists(source_folder + '/.git'): #1
@@ -61,7 +65,7 @@ def _get_latest_source(source_folder):
     run('cd %s && git reset --hard %s' % (source_folder, current_commit))
 
 
-def _update_settings(code_only_folder, site_name):
+def _update_settings(source_folder):
     settings_path = source_folder + '/' + PROJECT_NAME + '/settings.py'
     settings_server_path = source_folder + '/' + PROJECT_NAME + '/' + 'settings_remote.py'
     run("touch %s" % (settings_path))
@@ -73,7 +77,7 @@ def _update_virtualenv(source_folder):
     virtualenv_folder = source_folder + '/../virtualenv'
     if not exists(virtualenv_folder + '/bin/pip'): #1
         run('virtualenv --python=python2.7 %s' % (virtualenv_folder,))
-    run('%s/bin/pip install -r %s/requirements.txt' % ( #2
+    run('%s/bin/pip install -r %s/requirement.txt' % ( #2
             virtualenv_folder, source_folder
     ))
 
@@ -85,7 +89,7 @@ def _update_static_files(code_only_folder):
     virtualenv_folder = source_folder + '/../virtualenv'
     run('source %s/bin/activate' % (virtualenv_folder))
 
-    run('cd %s && python manage.py --settings=twitter_audit.settings.production collectstatic --noinput' % ( # 1
+    run('cd %s && python manage.py  collectstatic --noinput' % ( # 1
         '%s/%s/source/' % (SITES_FOLDER, HOST_FOLDER)
     ))
 
@@ -113,14 +117,14 @@ def _update_database(source_folder):
 
 ### automating all other processes like nginx
 def initial_server_deployment():
-    _install_package_from_apt()
-    _create_directory_structure_if_necessary(HOST_FOLDER)
-    _get_latest_source(source_folder)
+    # _install_package_from_apt()
+    # _create_directory_structure_if_necessary(HOST_FOLDER)
+    # _get_latest_source(source_folder)
     # _update_settings(source_folder, HOST_FOLDER)
-    _update_virtualenv(source_folder)
-    _update_static_files(source_folder)
-    _update_database(source_folder)
-    _run_nginx()
+    # _update_virtualenv(source_folder)
+    # _update_static_files(source_folder)
+    # _update_database(source_folder)
+    # _run_nginx()
     _run_upstart()
 
 
@@ -154,7 +158,7 @@ def _run_nginx():
 
 def _run_upstart():
     upstart_file = "/etc/init/%s.conf" %(HOST_FOLDER)
-    sudo('cp %s/deploy_tools/gunicorn-upstart.template.conf %s'%(source_folder, upstart_file))
+    sudo('cp %s/deploy_tools/gunicon-upstart.template.conf %s'%(source_folder, upstart_file))
     
     sed(upstart_file, "SITENAME", HOST_FOLDER, use_sudo=True) #1
     sed(upstart_file, "SITES_FOLDER", SITES_FOLDER, use_sudo=True) #1
