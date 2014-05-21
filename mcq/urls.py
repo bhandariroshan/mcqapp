@@ -3,13 +3,18 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 admin.autodiscover()
 
-urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'mcq.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
+urlpatterns = patterns(
+
+    '',
 
     url(r'^$', 'apps.mainapp.views.landing'),
+    url(r'^latex-store$', 'apps.mainapp.views.add_html'),
+    url(r'^latex$', 'apps.mainapp.views.latex_html'),
+    url(r'^home/$', 'apps.mainapp.views.dashboard'),
+    url(r'^android/$', 'apps.mainapp.views.android'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^accounts/', include('allauth.urls')),
     url(r'^', include('apps.mainapp.urls', app_name='mainapp')),
+    url(r'^exam/', include('apps.exam_api.urls', app_name='exam_api')),
+    url(r'^subscription/', 'apps.mainapp.views.subscription'),
 )

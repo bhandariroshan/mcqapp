@@ -1,0 +1,12 @@
+Subsciption_Type values:-
+	1. DP1 (Daily Practice Set 1)
+	2. CP1 (Competitive Pracice Set 1)
+	3. MBBS-IOM-071
+	4. BE-IOE-071
+	5. IDP (Inter Disciplinary Plan)
+
+Exam category:-
+	1. MBBS-IOM-071
+	2. BE-IOE-071
+
+		

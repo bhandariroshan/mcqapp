@@ -25,9 +25,10 @@ class MongoConnection():
         json_doc = json_doc.replace("_id", "uid")
         return json.loads(json_doc)
 
-    def get_all(self, table_name, conditions={}, sort_index='_id', limit=100):
-        all_doc = self.db[table_name].find(conditions).sort(
-            sort_index, pymongo.DESCENDING).limit(limit)
+    def get_all(self, table_name, conditions={}, fields=None, sort_index='_id',
+                limit=200):
+        all_doc = self.db[table_name].find(conditions, fields).sort(
+            sort_index, pymongo.ASCENDING).limit(limit)
         json_doc = json.dumps(list(all_doc), default=json_util.default)
         json_doc = json_doc.replace("$oid", "id")
         json_doc = json_doc.replace("_id", "uid")
