@@ -120,7 +120,7 @@ def initial_server_deployment():
     # _update_virtualenv(source_folder)
     # _update_static_files(source_folder)
     # _update_database(source_folder)
-    _run_nginx()
+    # _run_nginx()
     _run_upstart()
 
 
@@ -154,7 +154,7 @@ def _run_nginx():
 
 def _run_upstart():
     upstart_file = "/etc/init/%s.conf" %(HOST_FOLDER)
-    sudo('cp %s/deploy_tools/gunicorn-upstart.template.conf %s'%(source_folder, upstart_file))
+    sudo('cp %s/deploy_tools/gunicon-upstart.template.conf %s'%(source_folder, upstart_file))
     
     sed(upstart_file, "SITENAME", HOST_FOLDER, use_sudo=True) #1
     sed(upstart_file, "SITES_FOLDER", SITES_FOLDER, use_sudo=True) #1

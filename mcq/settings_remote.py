@@ -12,10 +12,10 @@ APP_ROOT = os.path.realpath('.')
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'mcqapp',                      # Or path to database file if using sqlite3.
+        'NAME': 'mcqs',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': 'root',
-        'PASSWORD': 'root1',
+        'PASSWORD': 'root',
         'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '',                      # Set to empty string for default.
     }
@@ -127,7 +127,7 @@ ROOT_URLCONF = 'mcq.urls'
 WSGI_APPLICATION = 'mcq.wsgi.application'
 
 TEMPLATE_DIRS = (
-    '/srv/www/mcq.phunka.com/application/mcqapp/templates',
+    '/srv/www/meroanswer/source/mcqapp/templates',
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
