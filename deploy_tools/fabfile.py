@@ -20,7 +20,7 @@ def deploy():
     # _create_directory_structure_if_necessary(HOST_FOLDER)
     _get_latest_source(source_folder)
     _update_settings(source_folder)
-    run('cd /srv/www/meroanswer/source/ && ../virtualenv/bin/activate && python manage.py collectstatic')
+    run('cd /srv/www/meroanswer/source/ && source ../virtualenv/bin/activate && python manage.py collectstatic')
 
 
   
