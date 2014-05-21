@@ -25,7 +25,11 @@ def get_question_set(request, exam_code):
             exam_handler = ExamHandler()
             model_question_set = exam_handler.get_questionset_from_database(exam_code)
 
-            return  HttpResponse(json.dumps({'status':'ok', 'result':model_question_set}))
+            if len(model_question_set)>0:
+                return  HttpResponse(json.dumps({'status':'ok', 'result':model_question_set}))
+            else:
+                return  HttpResponse(json.dumps({'status':'error', 'message':'No question in this exam right now.'}))
+
         
         if coupon_obj.validate_coupon(coupon_code, up_exm['exam_category']) == True:
 

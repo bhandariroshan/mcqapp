@@ -29,11 +29,12 @@ from allauth.socialaccount.models import SocialToken, SocialAccount
 
 
 def latex_html(request): 
+    print request
     return render_to_response("sample-tex.html")
 
 @csrf_exempt
 def add_html(request): 
-    print request.POST.get('q')
+    
     questions = json.loads(request.POST.get('q'))
 
     for question in questions:
