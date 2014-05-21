@@ -19,6 +19,10 @@ code_only_folder = '%s/%s/source/%s' % (SITES_FOLDER, HOST_FOLDER, 'twitter_audi
 def deploy():
     # _create_directory_structure_if_necessary(HOST_FOLDER)
     _get_latest_source(source_folder)
+    _update_settings(source_folder)
+    run('cd /srv/www/meroanswer/source/ && ../virtualenv/bin/activate && python manage.py collectstatic')
+
+
   
 
 def update_latest_code():
@@ -61,7 +65,7 @@ def _get_latest_source(source_folder):
     run('cd %s && git reset --hard %s' % (source_folder, current_commit))
 
 
-def _update_settings(code_only_folder, site_name):
+def _update_settings(source_folder):
     settings_path = source_folder + '/' + PROJECT_NAME + '/settings.py'
     settings_server_path = source_folder + '/' + PROJECT_NAME + '/' + 'settings_remote.py'
     run("touch %s" % (settings_path))
