@@ -66,7 +66,7 @@ def get_upcoming_exams(request):
             user_obj = UserProfile()            
             subscription_status = user_obj.check_subscribed(request.user.username, eachExam['exam_code'])            
             eachExam['subscribed'] =  1 if subscription_status else 0
-
+        print "ok"
         return HttpResponse(json.dumps({'status':'ok', 'result':upcoming_exams}))
     else:
         return HttpResponse(json.dumps({'status':'error', 'message':'Not a valid request'}))
