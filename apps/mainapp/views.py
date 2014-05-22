@@ -309,7 +309,8 @@ def landing(request):
         return render_to_response('landing.html', context_instance=RequestContext(request))
 
 def attend_exam(request,exam_code):
-
+    user_profile_obj = UserProfile()
+    subscribed = user_profile_obj.check_subscribed(request.user.username, exam_code)
     if request.user.is_authenticated() and subscribed:
         question_obj = QuestionApi()    
         questions = question_obj.find_all_questions({"exam_code": int(exam_code)})
