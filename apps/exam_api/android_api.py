@@ -31,7 +31,7 @@ def get_question_set(request, exam_code):
                 return  HttpResponse(json.dumps({'status':'error', 'message':'No question in this exam right now.'}))
 
         
-        if coupon_obj.validate_coupon(coupon_code, up_exm['exam_category']) == True:
+        if coupon_obj.validate_coupon(coupon_code, up_exm['exam_category'], up_exm['exam_family']) == True:
 
             user_profile_obj = UserProfile()
             user_profile_obj.change_subscription_plan(request.user.username, coupon_code)                
