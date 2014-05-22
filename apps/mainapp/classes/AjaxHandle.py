@@ -32,7 +32,7 @@ class AjaxHandle():
             if exam_code.strip() != 'sample' and coupon_code.lower()=='sample-1234':
                 return HttpResponse(json.dumps({'status':'error','message':'Invalid Coupon code.'}))
 
-            if coupon_obj.validate_coupon(coupon_code, up_exm['exam_category']) == True:
+            if coupon_obj.validate_coupon(coupon_code, up_exm['exam_category'], up_exm['exam_family']) == True:
                 user_profile_obj = UserProfile()
                 #save the coupon code in user's couponcode array 
                 coupon_obj.change_used_status_of_coupon(coupon_code, request.user.username) 
@@ -41,7 +41,6 @@ class AjaxHandle():
 
                 user = user_profile_obj.get_user_by_username(request.user.username)
                 subscription_type = user['subscription_type']
-                print subscription_type, up_exm['exam_category']
                 #if coupon_code != 'IDP' or 'BE-IOE-071' or 'MBBS-IOM-071' then save the exam code in the valid exams
                 if   'IDP' not in subscription_type and 'BE-IOE-071' not in subscription_type and 'MBBS-IOM-071' not in subscription_type:
                     user_profile_obj.save_valid_exam(request.user.username, exam_code)                    

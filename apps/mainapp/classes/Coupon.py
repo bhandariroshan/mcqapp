@@ -46,14 +46,14 @@ class Coupon():
         return 'generated'            
 
   
-    def validate_coupon(self, coupon_code, exam_category):
+    def validate_coupon(self, coupon_code, exam_category, exam_family):
     	'''Checks the validity of coupon'''
         coupon = self.db_object.get_one(self.table_name, {'code':coupon_code, 'used.status':0})
         if coupon != None and coupon['subscription_type']=='IDP':
             return True
         elif coupon != None and coupon['subscription_type'] == exam_category:
             return True
-    	elif coupon!=None and (coupon['subscription_type'] == 'DPS' or coupon['subscription_type']=='CPS'):
+    	elif coupon!=None and (coupon['subscription_type'] == exam_family):
             return True
         else:
             return False

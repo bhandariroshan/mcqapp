@@ -3,7 +3,7 @@ from fabric.api import local, run
 import random
 
 # for real
-REPO_URL = 'https://github.com/bhandariroshan/mcqapp.git'
+REPO_URL = 'git@github.com:bhandariroshan/mcqapp.git'
 SITES_FOLDER = '/srv/www'
 PROJECT_NAME = 'mcq'
 
@@ -21,6 +21,7 @@ def deploy():
     _get_latest_source(source_folder)
     _update_settings(source_folder)
     run('cd /srv/www/meroanswer/source/ && source ../virtualenv/bin/activate && python manage.py collectstatic')
+    sudo ('reload %s'%(HOST_FOLDER))
 
 
   
