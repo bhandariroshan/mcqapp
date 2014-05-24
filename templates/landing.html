@@ -11,6 +11,11 @@
   .gallery-slider-wrapper {
 margin-top: -62px;
 }
+.playstore{
+  width: 200px;
+margin-left: 30%;
+margin-top: 10%;
+}
 
 </style>
 {% endblock %}
@@ -50,7 +55,7 @@ margin-top: -62px;
       <img src="" class="ten columns centered">
     </div>
     <!-- START: Details Section -->
-    <section class="site-section section-details" data-target="details" data-scroll-index="1">
+    <section class="site-section section-details" data-target="details" data-scroll-index="1" style="overflow-x:hidden;">
       <!-- START: Detail Item -->
       <h1 class="row detail-list-item" style=" margin-left:40%">How it works</h1>
       <div class="row detail-list-item">
@@ -110,15 +115,13 @@ margin-top: -62px;
           <div class="bx-wrapper" style="max-width: 100%; margin: 0px auto;">
             <div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative;">
               <ul class="gallery-slider twelve columns" style="width: 715%; position: relative; -webkit-transition: 0s; transition: 0s; -webkit-transform: translate3d(-900px, 0px, 0px);">
-                  <li class="bx-clone li-android">
-                    <img src="/static/images/strados-bad.png" alt="Strados isn&#39;t feeling good at all">
-                  </li>
-                  <li class="li-android"><img src="/static/images/strados-happy.png" alt="Strados is happy"></li>
-                  <li class="li-android"><img src="/static/images/strados-excited.png" alt="Strados is excited"></li>
-                  <li class="li-android"><img src="/static/images/strados-notgood.png" alt="Strados is feeling well"></li>
-                  <li class="li-android"><img src="/static/images/strados-notgood-description.png" alt="Reasons why Strados isn&#39;t feeling well"></li>
-                  <li class="li-android"><img src="/static/images/strados-bad.png" alt="Strados isn&#39;t feeling good at all"></li>
-                  <li class="bx- clone li-android"><img src="/static/images/strados-happy.png" alt="Strados is happy"></li>
+
+                  <li class="li-android"><img src="/static/images/happy.png" alt=""></li>
+                  <li class="li-android"><img src="/static/images/excited.png" alt=""></li>
+                  <li class="li-android"><img src="/static/images/notgood.png" alt=""></li>
+                  <li class="li-android"><img src="/static/images/notgood-description.png" alt=""></li>
+                  <li class="li-android"><img src="/static/images/bad.png" alt=""></li>
+                  <li class="bx- clone li-android"><img src="/static/images/happy.png" alt=""></li>
               </ul>
              </div>
              <div class="bx-controls bx-has-controls-direction">
@@ -131,9 +134,14 @@ margin-top: -62px;
         </div>
       </div>
       <div class="push_one seven columns">
+      <div class="centered twelve columns">
         <h1 style="font-size: 45px;">MeroAnswer Android App</h1>
-        <h6 style="line-height: 150%">MeroAnswer android app is a powerful tool for giving competitive exam. We are</h6>
-        <a href="http://strados.co/#" class="skip bordered-button" gumby-goto="[data-target=&#39;signup&#39;]" gumby-duration="1000">Notify Me</a>
+        <h6 style="line-height: 150%">You can download our android app and give exam from anywhere.</h6>
+        
+        <a href="#" class="" gumby-duration="1000">
+          <img class="playstore" src="/static/images/playstore.png"/>
+        </a>
+        </div>
       </div>
     </div>
   </section>

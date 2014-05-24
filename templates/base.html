@@ -174,7 +174,7 @@
           </li>
         {% endif %}
         <li>
-          <a href="/docs/"><span>{{user.name}} </span><i class="icon-down-open"></i></a>
+          <a href="#"><span>{{user.name}} </span><i class="icon-down-open"></i></a>
           <div class="dropdown" style="width:180px;">
             <ul>
               <li><a href="/accounts/logout">logout</a></li>
@@ -202,8 +202,7 @@
         </p>
     </div>
     <div class="row">
-      <div class="four columns">
-        <p>Copyright © 2014 MCQAPP</p>
+      <div class="four columns">      
       </div>
       <div class="push_one six columns social-wrapper">
         <ul class="social-list">
@@ -296,7 +295,15 @@ UserVoice.push(['autoprompt', {}]);
   
 <script type="text/javascript">
 $(function(){
-  $.scrollIt();
+  $.scrollIt({
+  upKey: 38,             // key code to navigate to the next section
+  downKey: 40,           // key code to navigate to the previous section
+  easing: 'linear',      // the easing function for animation
+  scrollTime: 600,       // how long (in ms) the animation takes
+  activeClass: 'active', // class given to the active nav element
+  onPageChange: null,    // function(pageIndex) that is called when page is changed
+  topOffset: 0           // offste (in px) for fixed top navigation
+  });
 });
 </script>
 

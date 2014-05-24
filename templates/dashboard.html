@@ -23,6 +23,9 @@
    .icon-color-notsubscribed{
       color: #134450;
     }
+    .myicon{
+      font-size: 20px;
+    }
   </style>
 {% endblock %}
 
@@ -41,9 +44,9 @@
               {% for eachExam in upcoming_exams %}
                <article class="valign row text-color-white ui-widget-content ui-corner-all my-margin {% if eachExam.subscribed %} subscribed {% else %} notsubscribed {% endif %}">
                   {% if eachExam.subscribed %}
-                      <i class="icon-lock-open icon-color-subscribed"></i>
+                      <i class="icon-check icon-color-subscribed myicon" style="margin-top: 12px;margin-left: 10px;"></i>
                   {% else %}
-                      <ei class="icon-lock icon-color-notsubscribed"></i>
+                      <i class="icon-cancel icon-color-notsubscribed myicon" style="margin-top: 12px;margin-left: 10px;"></i>
                   {% endif %}
                   <div>
                     <img src="/static/images/{{eachExam.image}}" width="145" />
