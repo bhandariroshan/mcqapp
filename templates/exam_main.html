@@ -3,10 +3,10 @@
 {% block timer %}
     <div class="twelve columns" style="margin-top:2%; margin-bottom:2%;">
           <div class="six columns" id="startTimer">
-                <h5 style="color:rgb(104, 16, 16);"><strong>Start Time: {{exam_details.exam_time}}</strong></h5>
+                <h5 style="color:rgb(104, 16, 16);"><strong><i class="icon-clock"></i>Started {{exam_details.exam_time}}</strong></h5>
           </div>
           <div class="six columns">
-                <h5 id="timeRemained" data-intro="determine the time left" data-position="bottom" style="float:right; color:rgb(104, 16, 16);"><strong>Time Remained: 60 min</strong></h5>
+                <h5 id="timeRemained" data-intro="determine the time left" data-position="bottom" style="float:right; color:rgb(104, 16, 16);"><strong></strong></h5>
           </div>
     </div>
 {% endblock %}
@@ -16,11 +16,11 @@
         <div style=" height: 40px; ">
           <span>
             <div class="small primary btn pretty" id="loadPrev">
-              <a href="#" data-intro="Attempt previous question" data-position="top"><i class="icon-arrow-left"></i>Previous</a>
+              <a href="#"  data-intro="Attempt previous question" data-position="top"><i class="icon-arrow-left"></i>Previous</a>
             </div>
           </span>
           <span style="float:right">
-            <div class="small primary btn pretty" id="loadNext">
+            <div class="small primary btn pretty loadNext" id="loadNext{{next_to_start.uid.id}}">
               <a href="#" data-intro="Attempt this question later" data-position="top"><i class="icon-arrow-right" ></i>Skip to Next</a>
             </div>
           </span>
@@ -100,13 +100,17 @@
 var click_count = 1;
 var div_count = 0;
 var ans_list=[];
-var saved_answers = {};
-var ans_na = [];
-var questions = {{questions|safe}};
+/*var ans_na = [];*/
+
+var question_id = '{{start_question.uid.id|safe}}';
+
 var current_question_number = {{start_question_number}};
+var all_answers = {{all_answers|safe}};
 var max_questions_number = {{max_questions_number}};
 var attempted = [];
 var exam_code = {{exam_code|safe}};
+var questions = {{questions|safe}};
+var exam_duration = {{exam_details.exam_duration}};
 
 (function() {
   $(function() {

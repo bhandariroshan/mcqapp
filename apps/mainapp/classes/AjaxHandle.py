@@ -81,6 +81,17 @@ class AjaxHandle():
         if request.user.is_authenticated():
             from apps.exam_api.views import save_user_answers
             save_user_answers(request)
+            # if request.session.get('has_commented', False):
+            request.session['current_question_number'] = request.POST.get('current_question_number','')
+            request.session['exam_code'] = request.POST.get('exam_code','')
             return HttpResponse(json.dumps({'status':'ok', 'message':'Answer successfully saved'}))
+        else:
+            return HttpResponse(json.dumps({'status':'error', 'message':'Not Authorized for this action'}))
+    
+    def honor_code_accept(self, request):
+        if request.user.is_authenticated():
+            exam_code = request.POST.get('exam_code','')
+            request.session[exam_code] = True
+            return HttpResponse(json.dumps({'status':'ok', 'url':'/attend-exam/'+exam_code+'/'}))
         else:
             return HttpResponse(json.dumps({'status':'error', 'message':'Not Authorized for this action'}))

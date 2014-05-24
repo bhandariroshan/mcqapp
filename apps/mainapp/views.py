@@ -28,6 +28,68 @@ from allauth.socialaccount.providers.facebook.views import login_by_token
 from allauth.socialaccount.models import SocialToken, SocialAccount
 
 
+def sign_up_sign_in(request, android_user=False):
+    social_account = SocialAccount.objects.get(user__id=request.user.id)
+    from apps.mainapp.classes.Userprofile import UserProfile        
+    user_profile_object = UserProfile()
+    user = user_profile_object.get_user_by_username(request.user.username)
+    try:
+        valid_exams = user['valid_exam']
+        if 'IOM-SAMPLE-1' not in valid_exams:
+            valid_exams.append('IOM-SAMPLE-1')
+        if 'IOE-SAMPLE-1' not in valid_exams:
+            valid_exams.append('IOE-SAMPLE-1')
+        if 'IOE-SAMPLE-2' not in valid_exams:
+            valid_exams.append('IOE-SAMPLE-2')
+        if 'IOM-SAMPLE-2' not in valid_exams:
+            valid_exams.append('IOM-SAMPLE-2')
+    except:
+        valid_exams=['IOM-SAMPLE-1', 'IOE-SAMPLE-1','IOM-SAMPLE-2','IOE-SAMPLE-2']
+
+    try:
+        coupons = user['coupons']
+    except:
+        coupons = []
+    try:
+        subscription_type = user['subscription_type']
+    except:
+        subscription_type = []
+    try:
+        join_time = user['join_time']
+    except:
+        join_time = datetime.datetime.now()
+        join_time = time.mktime(join_time.timetuple())
+    data = {
+            'useruid': int(request.user.id), 
+            'first_name': social_account.extra_data['first_name'],
+            'last_name': social_account.extra_data['last_name'],
+            'name':social_account.extra_data['name'],
+            'username' : request.user.username,
+             "link": social_account.extra_data['link'],
+             "id": social_account.extra_data['id'],
+             "timezone": social_account.extra_data['timezone'],
+             "email": social_account.extra_data['email'],
+            "locale": social_account.extra_data['locale'],
+            'coupons':coupons,
+            'valid_exam':valid_exams,
+            'subscription_type':subscription_type,
+            'newsletter_freq':'Weekly',
+            'join_time':int(join_time)
+    }
+    if android_user == True:
+        data['android_user'] = True
+    else:
+        data['android_user'] = False
+    try:
+        mc_subscribed = user['subscribed_to_mailchimp']            
+    except:
+        from apps.mainapp.classes.MailChimp import MailChimp
+        mc = MailChimp()
+        mc.subscribe(data)
+        mc_subscribed = True
+    data['mc_subscribed'] = mc_subscribed 
+    return user_profile_object.update_upsert({'username':request.user.username}, data)
+
 def latex_html(request): 
     print request
     return render_to_response("sample-tex.html")
@@ -53,65 +115,7 @@ def add_html(request):
 def android(request): 
     login_by_token(request)
     if request.user.is_authenticated():
-        social_account = SocialAccount.objects.get(user__id=request.user.id)
-        from apps.mainapp.classes.Userprofile import UserProfile
-        user_profile_object = UserProfile()
-        user = user_profile_object.get_user_by_username(request.user.username)
-        try:
-            valid_exams = user['valid_exam']
-            if 'IOM-SAMPLE-1' not in valid_exams:
-                valid_exams.append('IOM-SAMPLE-1')
-            if 'IOE-SAMPLE-1' not in valid_exams:
-                valid_exams.append('IOE-SAMPLE-1')
-            if 'IOE-SAMPLE-2' not in valid_exams:
-                valid_exams.append('IOE-SAMPLE-2')
-            if 'IOM-SAMPLE-2' not in valid_exams:
-                valid_exams.append('IOM-SAMPLE-2')
-        except:
-            valid_exams=['IOM-SAMPLE-1', 'IOE-SAMPLE-1','IOM-SAMPLE-2','IOE-SAMPLE-2']
-
-        try:
-            coupons = user['coupons']
-        except:
-            coupons = []
-        try:
-            subscription_type = user['subscription_type']
-        except:
-            subscription_type = []
-        try:
-            join_time = user['join_time']
-        except:
-            join_time = datetime.datetime.now()
-            join_time = time.mktime(join_time.timetuple())
-
-        data = {
-                'useruid': int(request.user.id), 
-                'first_name': social_account.extra_data['first_name'],
-                'last_name': social_account.extra_data['last_name'],
-                'name':social_account.extra_data['name'],
-                'username' : request.user.username,
-                "link": social_account.extra_data['link'],
-                "id": social_account.extra_data['id'],
-                "timezone": social_account.extra_data['timezone'],
-                "email": social_account.extra_data['email'],
-                "locale": social_account.extra_data['locale'],
-                'coupons':coupons,
-                'valid_exam':valid_exams,
-                'subscription_type':subscription_type,
-                'newsletter_freq':'Weekly',
-                'android_user':True,
-                'join_time':int(join_time)
-        }
-        try:
-            mc_subscribed = user['subscribed_to_mailchimp']            
-        except:
-            from apps.mainapp.classes.MailChimp import MailChimp
-            mc = MailChimp()
-            mc.subscribe(data)
-            mc_subscribed = True
-        data['mc_subscribed'] = mc_subscribed        
-
-        user_profile_object.update_upsert({'username':request.user.username}, data)
+        sign_up_sign_in(request, android_user=True)
         return HttpResponse(json.dumps({'status':'ok'}))
     else:
         return HttpResponse(json.dumps({'status':'error', 'message':'User not authenticated'}))
@@ -119,124 +123,10 @@ def android(request):
 
 def dashboard(request):
     if request.user.is_authenticated():
-        social_account = SocialAccount.objects.get(user__id=request.user.id)
-        from apps.mainapp.classes.Userprofile import UserProfile        
-        user_profile_object = UserProfile()
-        user = user_profile_object.get_user_by_username(request.user.username)
-        try:
-            valid_exams = user['valid_exam']
-            if 'IOM-SAMPLE-1' not in valid_exams:
-                valid_exams.append('IOM-SAMPLE-1')
-            if 'IOE-SAMPLE-1' not in valid_exams:
-                valid_exams.append('IOE-SAMPLE-1')
-            if 'IOE-SAMPLE-2' not in valid_exams:
-                valid_exams.append('IOE-SAMPLE-2')
-            if 'IOM-SAMPLE-2' not in valid_exams:
-                valid_exams.append('IOM-SAMPLE-2')
-        except:
-            valid_exams=['IOM-SAMPLE-1', 'IOE-SAMPLE-1','IOM-SAMPLE-2','IOE-SAMPLE-2']
-
-        try:
-            coupons = user['coupons']
-        except:
-            coupons = []
-        try:
-            subscription_type = user['subscription_type']
-        except:
-            subscription_type = []
-        try:
-            join_time = user['join_time']
-        except:
-            join_time = datetime.datetime.now()
-            join_time = time.mktime(join_time.timetuple())
-        data = {
-                'useruid': int(request.user.id), 
-                'first_name': social_account.extra_data['first_name'],
-                'last_name': social_account.extra_data['last_name'],
-                'name':social_account.extra_data['name'],
-                'username' : request.user.username,
-                 "link": social_account.extra_data['link'],
-                 "id": social_account.extra_data['id'],
-                 "timezone": social_account.extra_data['timezone'],
-                 "email": social_account.extra_data['email'],
-                "locale": social_account.extra_data['locale'],
-                'coupons':coupons,
-                'valid_exam':valid_exams,
-                'subscription_type':subscription_type,
-                'newsletter_freq':'Weekly',
-                'join_time':int(join_time)
-        }
-        
-        try:
-            mc_subscribed = user['subscribed_to_mailchimp']            
-        except:
-            from apps.mainapp.classes.MailChimp import MailChimp
-            mc = MailChimp()
-            mc.subscribe(data)
-            mc_subscribed = True
-        data['mc_subscribed'] = mc_subscribed 
-
-        user_profile_object.update_upsert({'username':request.user.username}, data)
+        sign_up_sign_in(request, android_user=False)
         return HttpResponseRedirect('/')
-
     else:
         return HttpResponseRedirect('/')
-
-def landing(request):
-    if request.user.is_authenticated():
-        exam_obj = Exam()
-        upcoming_exams = exam_obj.get_upcoming_exams()
-        parameters = {}        
-        up_exams = []
-        print upcoming_exams
-        for eachExam in upcoming_exams:
-            up_exm = {}
-            up_exm['name'] = eachExam['exam_name']
-            up_exm['code'] = eachExam['exam_code']
-            up_exm['exam_time'] = eachExam['exam_time']
-            up_exm['exam_category'] = eachExam['exam_category']
-            up_exm['image'] = eachExam['image']
-            up_exm['exam_date'] = datetime.datetime.fromtimestamp(int(eachExam['exam_date'])).strftime("%A, %d. %B %Y")
-            up_exams.append(up_exm)
-        parameters['upcoming_exams'] = up_exams
-
-        schedule_obj = Schedules()
-        schedules = schedule_obj.get_upcoming_schedules()
-        up_schedules = []
-        for eachSchedule in schedules:
-            up_sch = {}
-            up_sch['name'] = eachSchedule['name']
-            up_sch['code'] = eachSchedule['code']
-            up_sch['schedule_time'] = eachSchedule['schedule_time']
-            up_sch['schedule_category'] = eachSchedule['schedule_category']
-            up_sch['image'] = eachSchedule['image']
-            up_sch['schedule_date'] = datetime.datetime.fromtimestamp(int(eachSchedule['schedule_date'])).strftime("%A, %d. %B %Y")
-            up_schedules.append(up_sch)
-        parameters['upcoming_schedules'] = up_schedules
-
-        rank_card_obj = RankCard()
-        rank_card = rank_card_obj.get_rank_card(request.user.id, 'IOMMBBSMODEL000')
-        try:
-            parameters['rank_card'] = rank_card[0]
-        except:
-            pass
-
-        score_card_obj = ScoreCard()        
-        socre_card = score_card_obj.get_score_card(request.user.id, 'IOMMBBSMODEL000')
-        try:
-            parameters['socre_card'] = socre_card[0]        
-        except:
-            pass
-
-        return render_to_response('dashboard.html',parameters,
-                              context_instance=RequestContext(request))
-    else:
-        return HttpResponseRedirect('/')
-
-
-def attempt_question(request):
-    return render_to_response('qone-one.html',context_instance=RequestContext(request))
-
 
 def landing(request):
     if request.user.is_authenticated():
@@ -324,10 +214,21 @@ def attend_exam(request,exam_code):
         parameters = {}
         parameters['questions'] = json.dumps(sorted_questions)
         parameters['exam_details'] = exam_details
-    
+        
         start_question_number = 0 
+        try:
+            start_question_number = int(request.session['current_question_number'])
+        except:
+            start_question_number = 0 
+        
+        from apps.mainapp.classes.query_database import AttemptedAnswerDatabase
+        atte_ans = AttemptedAnswerDatabase()
+        all_answers = atte_ans.find_all_atttempted_answer({'exam_code':exam_code, 'user_id':int(request.user.id)})
+        parameters['all_answers'] = json.dumps(all_answers)
+
         parameters['start_question'] = sorted_questions[start_question_number]
         parameters['start_question_number'] = start_question_number
+        parameters['next_to_start'] = sorted_questions[start_question_number + 1]
         parameters['max_questions_number'] =  len(sorted_questions)
 
         parameters['exam_code'] = exam_code
@@ -342,6 +243,12 @@ def honorcode(request, exam_code):
     user_profile_obj = UserProfile()
     subscribed = user_profile_obj.check_subscribed(request.user.username, exam_code)
     if request.user.is_authenticated() and subscribed:
+        try:
+            honor_code_accept = request.session[str(exam_code)]
+            if honor_code_accept == True:
+                return HttpResponseRedirect('/attend-exam/'+ exam_code +'/')
+        except:
+            pass
         exam_obj = ExammodelApi()
         exam_details = exam_obj.find_one_exammodel({'exam_code':int(exam_code)})
         exam_details['exam_date'] = datetime.datetime.fromtimestamp(int(exam_details['exam_date'])).strftime('%Y-%m-%d')

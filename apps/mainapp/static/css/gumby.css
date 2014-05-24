@@ -9215,7 +9215,7 @@ table.rounded > tbody:first-child tr:first-child td {
 *****/
 .bx-wrapper .bx-loading {
   min-height: 50px;
-  background: url(../img/slider/bx_loader.gif) center center no-repeat white;
+  /*background: url(../img/slider/bx_loader.gif) center center no-repeat white;*/
   height: 100%;
   width: 100%;
   position: absolute;

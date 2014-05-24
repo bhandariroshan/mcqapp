@@ -67,7 +67,7 @@ def save_user_answers(request):
     question_number = request.POST.get('qid','')
     selected_ans = request.POST.get('sans','')
     exam_code = request.POST.get('exam_code','')
-    #Check if the user is subscribed for that exam or not
+    current_question_number = int(request.POST.get('current_question_number',''))
     attempt_time = datetime.datetime.now()
     attempt_time = time.mktime(attempt_time.timetuple())
     ans.update_upsert_attempted_answer(
@@ -76,5 +76,6 @@ def save_user_answers(request):
         'q_id':question_number,
         'exam_code':exam_code,
         'selected_ans':selected_ans,
-        'attempt_time':int(attempt_time)
+        'attempt_time':int(attempt_time),
+        'q_no':current_question_number
          })
