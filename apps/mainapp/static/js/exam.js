@@ -1,5 +1,5 @@
 $('.li-height').click(function(){
-  $(this).effect("highlight", {}, 2000);
+  /*$(this).effect("highlight", {}, 2000);*/
   save_answer(exam_code, question_id, this.id, current_question_number);
 
   var clicked = this.children[1].id.substr(9,this.children[1].id.length);
@@ -95,9 +95,9 @@ $('#loadPrev').click(function(){
       load_question(current_question_number-1);
     }
 });
-$('.li-height').hover(function(){
+/*$('.li-height').hover(function(){
   $(this).toggleClass('forum_hover');
-});
+});*/
 
 var hour_rem = exam_duration/60;
 var min_rem = parseInt(exam_duration)%60;

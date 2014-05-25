@@ -246,8 +246,13 @@
   <script src="{% static "js/jquery.bxslider.min.js" %}"></script>
   <script src="{% static "js/waypoints.min.js" %}"></script>
   <script src="{% static "js/placeholders.js" %}"></script>
-  <script src="{% static "js/theme.js" %}"></script>
   <script src="{% static "js/scrollIt.min.js" %}"></script>
+  {% if not request.user.is_authenticated %}  
+    <script type="text/javascript" src="{% static "js/meroans.js" %}"></script>
+    <!-- <script type="text/javascript" src="{% static "js/jssor.core.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/jssor.utils.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/jssor.slider.min.js" %}"></script> -->
+  {% endif %}
 <script>
 // Include the UserVoice JavaScript SDK (only needed once on a page)
 UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/qGal4F1eRyADF9d3SFEQ.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
