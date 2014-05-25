@@ -1,26 +1,3 @@
-/**
-* Gumby Framework
-*************************************************************/
-Gumby.ready(function() {
-	Gumby.log('Gumby is ready to go...', Gumby.dump());
-
-	// placeholder polyfil
-	if(Gumby.isOldie || Gumby.$dom.find('html').hasClass('ie9')) {
-		$('input, textarea').placeholder();
-	}
-
-// Oldie document loaded
-}).oldie(function() {
-	Gumby.warn("This is an oldie browser...");
-
-// Touch devices loaded
-}).touch(function() {
-	Gumby.log("This is a touch enabled device...");
-});
-/**
-* / END Gumby Framework / *
-*************************************************************/
-
 
 
 
@@ -70,10 +47,6 @@ var ScrollAnimations = (function () {
 /**
 * / END Scroll Animation Module / *
 *************************************************************/
-
-
-
-
 /**
 * Initialise plugins and scroll animations on document ready
 *************************************************************/
@@ -85,36 +58,6 @@ $(function() {
 		$(this).trigger('gumby.trigger');
 	});
 
-
-	// initialise validation plugin
-	$('.signup-form').validation({
-	  // pass an array of required field objects
-	  required: [
-	    {
-	      name: 'email',
-	      // pass a function to the validate property for complex custom validations
-	      // the function will receive the jQuery element itself, return true or false depending on validation
-	      validate: function($el) {
-	        return $el.val().match('@') !== null;
-	      }
-	    }
-	  ],
-	  // callback for failed validaiton on form submit
-	  fail: function() {
-	    Gumby.error('Form validation failed');
-	    $(".catch-errors").addClass("danger alert").html("Please enter a valid email address!");
-	  },
-	  // callback for successful validation on form submit
-	  // if omited, form will submit normally
-	  submit: function(data) {
-	  	//PUT YOUR SUCCESS CODE HERE, OR REMOVE SUBMIT FUNCTION FOR DEFAULT VALUE.
-	    // $.ajax({
-	    //   url: 'do/something/with/data',
-	    //   data: data,
-	    //   success: function() {alert("Submitted");}
-	    // });
-	  } 
-	});
 
 	//initialise gallery slider
 	$('.gallery-slider').bxSlider({

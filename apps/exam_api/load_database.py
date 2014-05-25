@@ -21,8 +21,7 @@ def load_examset_in_database(request):
          "exam_time": "7.00pm",
          "exam_category": "BE-IOE-071",
          "exam_duration":180,
-         "competition":True,
-         "practice":False
+         "exam_family":'CPS'
          },
         {"exam_name": "IOM model exam 1",
          "exam_date": 1399978500,
@@ -31,8 +30,7 @@ def load_examset_in_database(request):
          "exam_time": "7.00pm",
          "exam_category": "MBBS-IOM-071",
          "exam_duration":180,
-         "competition":True,
-         "practice":False
+         "exam_family":'DPS'
          },
         {"exam_name": "IOE model exam 2",
          "exam_date": 1399968500,
@@ -41,8 +39,7 @@ def load_examset_in_database(request):
          "exam_time": "7.00pm",
          "exam_duration":180,
          "exam_category": "BE-IOE-071",
-         "competition":False,
-         "practice":True
+         "exam_family":'CPS'
          },
         {"exam_name": "IOM model exam 2",
          "exam_date": 1399968500,
@@ -51,8 +48,7 @@ def load_examset_in_database(request):
          "exam_duration":180,
          "exam_time": "7.00pm",
          "exam_category": "MBBS-IOM-071",
-         "competition":False,
-         "practice":True
+         "exam_family":'DPS'
         }
     ]
     exam_model.insert_new_model(exam_dict)

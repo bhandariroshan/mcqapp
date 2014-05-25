@@ -11,6 +11,21 @@
     .button-margin{
       margin-bottom: 10px;
     }
+    .subscribed{
+      border: 2px solid #63C22D;
+    }
+    .notsubscribed{
+     border: 1px solid #134450; 
+    }
+    .icon-color-subscribed{
+      color: green;
+    }
+   .icon-color-notsubscribed{
+      color: #134450;
+    }
+    .myicon{
+      font-size: 20px;
+    }
   </style>
 {% endblock %}
 
@@ -27,15 +42,24 @@
             </ul>
             <div id="upcomingExams" class="tab-content active">
               {% for eachExam in upcoming_exams %}
-               <article class="valign row text-color-white ui-widget-content ui-corner-all my-margin">
-                  <div>
-                    <img src="/static/images/{{eachExam.image}}" width="145" />
-                  </div>
-                  <div>
+               <article class="valign row text-color-white ui-widget-content ui-corner-all my-margin {% if eachExam.subscribed %} subscribed {% else %} notsubscribed {% endif %}">
+                <!-- <div style="width:10%"> -->
+                  {% if eachExam.subscribed %}
+                      <i class="icon-check icon-color-subscribed myicon" style="margin-top: 12px;margin-left: 10px;"></i>
+                  {% else %}
+                      <i class="icon-lock icon-color-notsubscribed myicon" style="margin-top:12px;margin-left: 10px;"></i>
+                  {% endif %}
+                <!-- </div> -->
+                <div style="width:25%">
+                    <img src="/static/images/{{eachExam.image}}" width="145px" />
+                </div>
+                <div style="width:65%">
                     <h4><a onclick="attend_exam('{{eachExam.code}}')" href="#" id="{{eachExam.code}}/"><strong>{{eachExam.name}}</strong></a></h4>
                     <p><strong>Date:</strong>{{eachExam.exam_date}}</p>
                     <p><strong>Time:</strong>{{eachExam.exam_time}}</p>
+                    {% if not eachExam.subscribed %}
                     <p><strong>Cost:</strong>Rs. 15 (<a href="/coupon/">coupon code</a> entry required)</p>
+                    {% endif %}
                      <div class="medium primary btn pretty button-margin" >
                           <a href="{% if eachExam.subscribed %}/honorcode/{{eachExam.code}}/{% else %}#{% endif %}" {% if not eachExam.subscribed %} onclick="attempt_exam('{{eachExam.code}}')" {% endif %}>Give Exam</a>
                       </div>
@@ -78,8 +102,8 @@
       <section class="twelve columns">
           <div class="twelve columns">
             <li class="success alert">
-              <p>Want to take a free trial? Take a test for free. </p> 
-              <div class="pretty medium primary btn switch" style="width: 150px;" onclick="attempt_exam('sample')">Start Now</a></div>
+              <p>Do you have a coupon code for subscription plan?  </p> 
+              <div class="pretty medium primary btn switch" style="width: 150px;" onclick="attempt_exam('sample')">Enter here</a></div>
             </li>
           </div>
           <table class="rounded">
@@ -116,7 +140,7 @@
     <div class="row">
       <div id="dangerMessage"></div>
       <div class="ten columns centered text-center" style="margin-top:6%;">
-        <p id="infoText">Every time you give exam, you need to enter <a href="/coupon-codes/" style="color:red;"><strong>coupon code</strong></a> available at various <a href="/distributors/" style="color:red;"><strong>distributors</strong></a>. Please enter <strong>SAMPLE-1234</strong> as coupon code for now.</p>
+        <p id="infoText">Every time you give exam, you need to enter <a href="/coupon-codes/" style="color:red;"><strong>coupon code</strong></a> available at various <a href="/distributors/" style="color:red;"><strong>distributors</strong></a>. Please enter <strong>your</strong> as coupon code for now.</p>
           <li class="prepend field">
             <span class="adjoined">Coupon: </span>
             <input id="couponID" class="xwide text input" type="text" placeholder="Please enter the coupon code" />
@@ -139,11 +163,11 @@ var ex_code;
     ex_code=exam_code;
     $('#infoText').html('');
     if (exam_code.toLowerCase() == 'sample'){
-      var html_str = 'Every time you give exam, you need to enter <a href="/coupon-codes/" style="color:red;"><strong>coupon codes</strong></a> are available at various <a href="/distributors/" style="color:red;"><strong>distributors</strong></a>. Please enter <strong>SAMPLE-1234</strong> as coupon code for now.'
+      var html_str = 'Every time you give exam, you need to enter <a href="/coupon-codes/" style="color:red;"><strong>coupon codes</strong></a> are available at various <a href="/#/" style="color:red;"><strong>distributors</strong></a>. Please enter your coupon code'
       $('#infoText').html(html_str);
     }
     else{      
-      var html_str = 'Coupon code are necessary to ensure the regular operation of exam. <a href="/coupon-codes/" style="color:red;"><strong>coupon codes</strong></a> available at various <a href="/distributors/" style="color:red;"><strong>distributors</strong></a>. Please enter code your below'
+      var html_str = 'Coupon code are necessary to ensure the regular operation of exam. <a href="/coupon-codes/" style="color:red;"><strong>coupon codes</strong></a> available at various <a href="/#/" style="color:red;"><strong>distributors</strong></a>. Please enter code your below'
       $('#infoText').html(html_str);
     }
     /*is_subscribed(exam_code);    */

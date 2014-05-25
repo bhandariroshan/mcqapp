@@ -40,9 +40,19 @@ function is_subscribed_success(data){
 	}
 }
 
-function save_answer(exam_code, question_id, selected_ans){
-	ajax_request('save_answer', 'save_answer_success', {'qid':question_id, 'sans':selected_ans, 'exam_code':exam_code});
+function save_answer(exam_code, question_id, selected_ans,current_question_number){
+	ajax_request('save_answer', 'save_answer_success', 
+	{'qid':question_id, 'sans':selected_ans, 'exam_code':exam_code, 'current_question_number':current_question_number});
 }
 function save_answer_success(data){
 	data = jQuery.parseJSON(data);
+}
+function ajax_honor_code_accept(exam_code){
+	ajax_request('honor_code_accept', 'honor_code_accept_success', {'exam_code':exam_code});
+}
+function honor_code_accept_success(data){
+	data = jQuery.parseJSON(data);
+	if (data['status']=='ok'){
+		window.location = data['url'];
+	}
 }

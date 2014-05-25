@@ -10,12 +10,15 @@
 		3. You will not involve/share questions/answers to others unless it is publicly available for discussion.
 	</p>
 	<div class="medium primary btn pretty button-margin" style="margin-left:3%;">
-		<a href="/attend-exam/{{exam_code}}/">Accept and attend exam</a>
+		<a href="#" onclick="honor_code_accept({{exam_code}})">Accept and attend exam</a>
 	</div>
 </div>
 {% endblock %}
 {% block javascript %}
+<script src="/static/js/ajax-handle.js"></script>
 <script type="text/javascript">
-	
+function honor_code_accept(exam_code){
+	ajax_honor_code_accept(exam_code);
+}
 </script>
 {% endblock %}

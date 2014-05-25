@@ -64,8 +64,8 @@ class AttemptedAnswerDatabase():
     def find_one_atttempted_answer(self, condition):
         return self.db_object.get_one(self.table_name, condition)
 
-    def find_all_atttempted_answer(self, condition1):
-        return self.db_object.get_all(self.table_name, condition1)
+    def find_all_atttempted_answer(self, condition, sort_index="q_no"):
+        return self.db_object.get_all(self.table_name, condition)
 
     def update_atttempted_answer(self, where, what):
         return self.db_object.update(self.table_name, where, what)

@@ -1,7 +1,23 @@
 {% extends 'base.html' %}
 {% load socialaccount %}
 {% block head %}
-	</style>
+<style type="text/css">
+  .li-android{
+    float: left; 
+    list-style: none; 
+    position: relative; 
+    width: 300px;
+  }
+  .gallery-slider-wrapper {
+margin-top: -62px;
+}
+.playstore{
+  width: 200px;
+margin-left: 30%;
+margin-top: 10%;
+}
+
+</style>
 {% endblock %}
 {% block content %}
 	<!-- <a href="{% provider_login_url "facebook" method="oauth2" %}">Facebook OAuth2</a>
@@ -9,14 +25,14 @@
 
       <main role="main" class="site-main-content">
     <!-- START: Sign Up Section -->
-    <section class="site-section section-signup" data-target="signup" id="signup">
+    <section class="site-section section-signup noise" data-target="signup" data-scroll-index="0">
       <!-- START: Animation Wrapper -->
-      <div class="animate-on-scroll scroll-animation-init fadeDownIn" data-scrollanimation="fadeDownIn" style="margin-top:5%;">
+      <div class="animate-on-scroll scroll-animation-init fadeDownIn" data-scrollanimation="fadeDownIn" style="margin-top:10%;">
         <!-- START: Section Header -->
         <div class="row section-header">
           <div class="twelve columns">
             <h2> WANT TO EXCEL ENTRANCE EXAM? </h2>
-            <h4 style="line-height:140%">Give online exam and prepare yourself </h4>
+            <h4 style="line-height:140%">Prepare yourself with MeroAnswer</h4>
           </div>
         </div>
         <!-- /END: Section Header -->
@@ -39,10 +55,10 @@
       <img src="" class="ten columns centered">
     </div>
     <!-- START: Details Section -->
-    <section class="site-section section-details" data-target="details" id="details">
+    <section class="site-section section-details" data-target="details" data-scroll-index="1" style="overflow-x:hidden;">
       <!-- START: Detail Item -->
-      <h2 class="row detail-list-item" style=" margin-left:40%">How it works</h2>
-      <div class="row detail-list-item" style="padding-bottom:0;margin-top: -3%;">
+      <h1 class="row detail-list-item" style=" margin-left:40%">How it works</h1>
+      <div class="row detail-list-item">
         <div class="four columns detail-list-graphic">
           <div class="circ-img circled-image-1">
             <div class="fi-label">
@@ -51,9 +67,9 @@
           </div>
         </div>
         <div class="eight columns details">
-          <!-- <h2>get a coupon</h2> -->
-          <br><br><br>
-          <p><strong> To appear mass online exam, you need to get a <strong><a href="/coupon/" alt="coupon" style="color:red">coupon </a></strong> from <strong><a href="/distributors/" alt="coupon code distributors" style="color:red">distributors nearby you.</a></strong> Cheaper rates for coupon codes are available for different <strong> <a href="/subscription-models/" style="color:red" alt="subscription models">subscription models.</a></strong></strong></p>
+          <h2>get a coupon</h2>
+          <!-- <br><br><br> -->
+          <p>To appear online exam, you need to get a <a href="/coupon/" alt="coupon" style="color:red">coupon </a>from <a href="#" alt="coupon code distributors" style="color:red">distributors nearby you.</a> Cheaper rates for coupon codes are available for different <a href="/subscription/" style="color:red" alt="subscription models">subscription models.</a></p>
         </div>
       </div>
       <!-- /END: Detail Item -->
@@ -62,9 +78,9 @@
         
         
       <div class="eight columns details on-left">
-          <!-- <h2>give exam</h2> -->
-          <br><br><br>
-          <p> <strong>Giving online exam is super easy with us. We conduct mass online exams every week. Before you feel convenient feel free to give sample exam after signing in. </strong></p>
+          <h2>give exam</h2>
+          <!-- <br><br><br> -->
+          <p> Giving online exam is super easy with us. We conduct online exams every week. Before you feel convenient feel free to give sample exam after signing in. </p>
         </div><div class="four columns detail-list-graphic on-right">
           <div class="circ-img circled-image-2">
             <div class="fi-label">
@@ -83,16 +99,39 @@
           </div>
         </div>
         <div class="eight columns details">
-          <!-- <h2>succeed</h2> -->
-          <br><br><br>
-          <p><strong>You have to study smart, know tricks and learn mnemonics. Studying hard only won't get you there.  Appear online exam that are prepared by domain experts, increase your knowledge, track progress, improve week areas and finally succeed. </strong></p>
+          <h2>practice more</h2>
+          <!-- <br><br><br> -->
+          <p>You have to study smart, know tricks and learn mnemonics. Studying hard only won't get you.  Appear exams prepared by experts, increase your knowledge, track progress, improve weak areas and finally succeed. </p>
         </div>
       </div>
       <!-- /END: Detail Item -->
     </section>
-    <!-- /END: Details Section  -->
 
-
+  <!-- START: Site Header -->
+  <section class="site-header noise" data-scroll-index="2">
+    <div class="row">
+      <div class="four columns">
+        <div class="gallery-slider-wrapper row animate-on-scroll" data-scrollanimation="fadeUpIn">
+          <ul class="gallery-slider twelve columns">
+            <li><img src="/static/images/happy.png" alt="Strados is happy"></li>
+            <li><img src="/static/images/excited.png" alt="Strados is excited"></li>
+            <li><img src="/static/images/notgood.png" alt="Strados is feeling well"></li>
+          </ul>
+        </div>
+      </div>
+      <div class="push_one seven columns">
+      <div class="centered twelve columns">
+        <h1 style="font-size: 45px;">MeroAnswer Android App</h1>
+        <h6 style="line-height: 150%">You can download our android app and give exam from anywhere.</h6>
+        
+        <a href="#" class="" gumby-duration="1000">
+          <img class="playstore" src="/static/images/playstore.png"/>
+        </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /END: Site Header -->
     
 
   </main>

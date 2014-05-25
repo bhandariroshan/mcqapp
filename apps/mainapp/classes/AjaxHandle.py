@@ -27,12 +27,17 @@ class AjaxHandle():
             up_exm = exam_obj.get_exam_detail(int(exam_code))
 
             if exam_code.strip() == 'sample' and coupon_code.lower()=='sample-1234':
-                return HttpResponse(json.dumps({'status':'ok','url':'/honorcode/100/'}))
+                if coupon_obj.validate_coupon(coupon_code) == True:
+                    coupon_obj.change_used_status_of_coupon(coupon_code, request.user.username) 
+                    user_profile_obj.change_subscription_plan(request.user.username, coupon_code)                
+                    user_profile_obj.save_coupon(request.user.username, coupon_code)
 
-            if exam_code.strip() != 'sample' and coupon_code.lower()=='sample-1234':
-                return HttpResponse(json.dumps({'status':'error','message':'Invalid Coupon code.'}))
+                return HttpResponse(json.dumps({'status':'ok','url':'/'}))
 
-            if coupon_obj.validate_coupon(coupon_code, up_exm['exam_category']) == True:
+            # if exam_code.strip() != 'sample' and coupon_code.lower()=='sample-1234':
+            #     return HttpResponse(json.dumps({'status':'error','message':'Invalid Coupon code.'}))
+
+            if coupon_obj.validate_coupon(coupon_code, up_exm['exam_category'], up_exm['exam_family']) == True:
                 user_profile_obj = UserProfile()
                 #save the coupon code in user's couponcode array 
                 coupon_obj.change_used_status_of_coupon(coupon_code, request.user.username) 
@@ -41,7 +46,6 @@ class AjaxHandle():
 
                 user = user_profile_obj.get_user_by_username(request.user.username)
                 subscription_type = user['subscription_type']
-                print subscription_type, up_exm['exam_category']
                 #if coupon_code != 'IDP' or 'BE-IOE-071' or 'MBBS-IOM-071' then save the exam code in the valid exams
                 if   'IDP' not in subscription_type and 'BE-IOE-071' not in subscription_type and 'MBBS-IOM-071' not in subscription_type:
                     user_profile_obj.save_valid_exam(request.user.username, exam_code)                    
@@ -82,6 +86,17 @@ class AjaxHandle():
         if request.user.is_authenticated():
             from apps.exam_api.views import save_user_answers
             save_user_answers(request)
+            # if request.session.get('has_commented', False):
+            request.session['current_question_number'] = request.POST.get('current_question_number','')
+            request.session['exam_code'] = request.POST.get('exam_code','')
             return HttpResponse(json.dumps({'status':'ok', 'message':'Answer successfully saved'}))
+        else:
+            return HttpResponse(json.dumps({'status':'error', 'message':'Not Authorized for this action'}))
+    
+    def honor_code_accept(self, request):
+        if request.user.is_authenticated():
+            exam_code = request.POST.get('exam_code','')
+            request.session[exam_code] = True
+            return HttpResponse(json.dumps({'status':'ok', 'url':'/attend-exam/'+exam_code+'/'}))
         else:
             return HttpResponse(json.dumps({'status':'error', 'message':'Not Authorized for this action'}))

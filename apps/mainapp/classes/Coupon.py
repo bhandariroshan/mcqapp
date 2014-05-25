@@ -26,7 +26,7 @@ class Coupon():
     			d. status (used/free)    			
     	'''
         import random
-        for i in range(0,10):
+        for i in range(0,40):
             number_system = 'zAyBxCwDvEuFt9GsH8rI7qJp6KoLnM5mNlOk4PjQih3RgSfTeU2dVcWbXa1YZz0'
             num  = random.randint(999999999, pow(62,6))
             coupon = ''
@@ -46,14 +46,15 @@ class Coupon():
         return 'generated'            
 
   
-    def validate_coupon(self, coupon_code, exam_category):
+    def validate_coupon(self, coupon_code, exam_category=None, exam_family=None):
     	'''Checks the validity of coupon'''
         coupon = self.db_object.get_one(self.table_name, {'code':coupon_code, 'used.status':0})
+        # print exam_family, coupon, coupon_code, exam_category
         if coupon != None and coupon['subscription_type']=='IDP':
             return True
         elif coupon != None and coupon['subscription_type'] == exam_category:
             return True
-    	elif coupon!=None and (coupon['subscription_type'] == 'DPS' or coupon['subscription_type']=='CPS'):
+    	elif coupon!=None and (coupon['subscription_type'] == exam_family):
             return True
         else:
             return False

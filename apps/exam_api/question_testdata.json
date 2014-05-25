@@ -15,11 +15,10 @@
             },
             "d": {
                 "text": " $ 2n\\pi \\pm \\frac{\\pi}{3} $ "
-            },
-            "correct": "c"
+            }
         },
         "subject": "Mathematics",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -37,11 +36,10 @@
             },
             "d": {
                 "text": "$ |x| \\gt 3 $"
-            },
-            "correct": "c"
+            }
         },
         "subject": "Mathematics",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -63,11 +61,10 @@
             "d": {
                 "text": " $ \\frac{3}{14} - \\frac{\\sqrt{5}}{14} $ "
                 
-            },
-            "correct": "a"
+            }
         },
         "subject": "Mathematics",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -89,11 +86,10 @@
             "d": {
                 "text": "A adj(A) = |A|"
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "Mathematics",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -115,11 +111,10 @@
             "d": {
                 "text": " $ \\frac{1}{\\sqrt{1-x^{2}}} + C $ "
                 
-            },
-            "correct": "b"
+            }
         },
         "subject": "Mathematics",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -141,11 +136,10 @@
             "d": {
                 "text": "an empty locus"
                 
-            },
-            "correct": "c"
+            }
         },
         "subject": "Mathematics",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -167,11 +161,10 @@
             "d": {
                 "text": "equals to 0"
                 
-            },
-            "correct": "b"
+            }
         },
         "subject": "Mathematics",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -193,11 +186,10 @@
             "d": {
                 "text": "3"
                 
-            },
-            "correct": "c"
+            }
         },
         "subject": "Mathematics",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -219,11 +211,10 @@
             "d": {
                 "text": " $ |\\vec{a}| = |\\vec{b}| $ "
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "Mathematics",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -245,11 +236,10 @@
             "d": {
                 "text": "a parabola"
                 
-            },
-            "correct": "b"
+            }
         },
         "subject": "Mathematics",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -271,11 +261,10 @@
             "d": {
                 "text": " all of the above"
                 
-            },
-            "correct": "a"
+            }
         },
         "subject": "English",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -297,11 +286,10 @@
             "d": {
                 "text": "nanny"
                 
-            },
-            "correct": "b"
+            }
         },
         "subject": "English",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -323,11 +311,10 @@
             "d": {
                 "text": "He told Ram not to bring his book"
                 
-            },
-            "correct": "c"
+            }
         },
         "subject": "English",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -349,11 +336,10 @@
             "d": {
                 "text": "The students requested him to play"
                 
-            },
-            "correct": "b"
+            }
         },
         "subject": "English",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -375,11 +361,10 @@
             "d": {
                 "text": "an watching"
                 
-            },
-            "correct": "c"
+            }
         },
         "subject": "English",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -401,11 +386,10 @@
             "d": {
                 "text": "am doing"
                 
-            },
-            "correct": "b"
+            }
         },
         "subject": "English",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -427,11 +411,10 @@
             "d": {
                 "text": "effective, dedicated, and honest"
                 
-            },
-            "correct": "c"
+            }
         },
         "subject": "English",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -453,11 +436,10 @@
             "d": {
                 "text": "mercy"
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "English",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -479,11 +461,10 @@
             "d": {
                 "text": "She is taking <u>knitting</u> classes"
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "English",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -505,11 +486,10 @@
             "d": {
                 "text": "all of these"
                 
-            },
-            "correct": "a"
+            }
         },
         "subject": "English",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -531,11 +511,10 @@
             "d": {
                 "text": "on"
                 
-            },
-            "correct": "c"
+            }
         },
         "subject": "English",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -557,11 +536,10 @@
             "d": {
                 "text": "on"
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "English",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -583,11 +561,10 @@
             "d": {
                 "text": "In spite of the weather, she went out"
                 
-            },
-            "correct": "c"
+            }
         },
         "subject": "English",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -609,11 +586,10 @@
             "d": {
                 "text": "prolonged"
                 
-            },
-            "correct": "c"
+            }
         },
         "subject": "English",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -635,11 +611,10 @@
             "d": {
                 "text": "spiteful"
                 
-            },
-            "correct": "a"
+            }
         },
         "subject": "English",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -661,11 +636,10 @@
             "d": {
                 "text": "acceleration and momentum"
                 
-            },
-            "correct": "b"
+            }
         },
         "subject": "Physics",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -687,11 +661,10 @@
             "d": {
                 "text": "viscous force exerted by air"
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "Physics",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -713,11 +686,10 @@
             "d": {
                 "text": "resistance thermometer"
                 
-            },
-            "correct": "c"
+            }
         },
         "subject": "Physics",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -739,11 +711,10 @@
             "d": {
                 "text": "5/7"
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "Physics",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -765,11 +736,10 @@
             "d": {
                 "text": "may increase or decrease depending on rate of heating"
                 
-            },
-            "correct": "b"
+            }
         },
         "subject": "Physics",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -791,11 +761,10 @@
             "d": {
                 "text": "neither nodes nor antinodes"
                 
-            },
-            "correct": "a"
+            }
         },
         "subject": "Physics",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -817,11 +786,10 @@
             "d": {
                 "text": "very very large"
                 
-            },
-            "correct": "b"
+            }
         },
         "subject": "Physics",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -843,11 +811,10 @@
             "d": {
                 "text": "infinite"
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "Physics",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -869,11 +836,10 @@
             "d": {
                 "text": "32"
                 
-            },
-            "correct": "b"
+            }
         },
         "subject": "Physics",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -895,11 +861,10 @@
             "d": {
                 "text": "Photoelectric effect"
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "Physics",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -921,11 +886,10 @@
             "d": {
                 "text": "spin"
                 
-            },
-            "correct": "b"
+            }
         },
         "subject": "Physics",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -947,11 +911,10 @@
             "d": {
                 "text": " $ OH^{-1} $ ions are added"
                 
-            },
-            "correct": "c"
+            }
         },
         "subject": "Chemistry",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -973,11 +936,10 @@
             "d": {
                 "text": "I"
                 
-            },
-            "correct": "a"
+            }
         },
         "subject": "Chemistry",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -999,11 +961,10 @@
             "d": {
                 "text": "ZnO"
                 
-            },
-            "correct": "c"
+            }
         },
         "subject": "Chemistry",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -1025,11 +986,10 @@
             "d": {
                 "text": " $ SO_{2} $ "
                 
-            },
-            "correct": "b"
+            }
         },
         "subject": "Chemistry",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -1051,11 +1011,10 @@
             "d": {
                 "text": "Valence electrons"
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "Chemistry",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -1077,11 +1036,10 @@
             "d": {
                 "text": "9"
                 
-            },
-            "correct": "c"
+            }
         },
         "subject": "Chemistry",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -1103,11 +1061,10 @@
             "d": {
                 "text": "KCl"
                 
-            },
-            "correct": "c"
+            }
         },
         "subject": "Chemistry",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -1129,11 +1086,10 @@
             "d": {
                 "text": "Nascent Cl"
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "Chemistry",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -1155,11 +1111,10 @@
             "d": {
                 "text": "Ostwald's Process"
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "Chemistry",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -1181,11 +1136,10 @@
             "d": {
                 "text": " $ CoZnO_{2} $ "
                 
-            },
-            "correct": "a"
+            }
         },
         "subject": "Chemistry",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -1207,11 +1161,10 @@
             "d": {
                 "text": "calcinations"
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "Chemistry",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -1233,11 +1186,10 @@
             "d": {
                 "text": "vaccum"
                 
-            },
-            "correct": "b"
+            }
         },
         "subject": "Chemistry",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -1259,11 +1211,10 @@
             "d": {
                 "text": "chlorobenzene"
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "Chemistry",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -1285,11 +1236,10 @@
             "d": {
                 "text": "2-methypent-4-yne"
                 
-            },
-            "correct": "b"
+            }
         },
         "subject": "Chemistry",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -1311,11 +1261,10 @@
             "d": {
                 "text": "any of three"
                 
-            },
-            "correct": "a"
+            }
         },
         "subject": "Drawing",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -1337,11 +1286,10 @@
             "d": {
                 "text": "Excenter"
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "Drawing",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -1363,11 +1311,10 @@
             "d": {
                 "text": "cycloid"
                 
-            },
-            "correct": "c"
+            }
         },
         "subject": "Drawing",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -1389,11 +1336,10 @@
             "d": {
                 "text": "hyperbola"
                 
-            },
-            "correct": "b"
+            }
         },
         "subject": "Drawing",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -1415,11 +1361,10 @@
             "d": {
                 "text": "12"
                 
-            },
-            "correct": "a"
+            }
         },
         "subject": "Drawing",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -1441,11 +1386,10 @@
             "d": {
                 "text": "French Curve"
                 
-            },
-            "correct": "c"
+            }
         },
         "subject": "Drawing",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -1467,11 +1411,10 @@
             "d": {
                 "text": "Projection line"
                 
-            },
-            "correct": "a"
+            }
         },
         "subject": "Drawing",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -1493,11 +1436,10 @@
             "d": {
                 "text": "H"
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "Drawing",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -1519,11 +1461,10 @@
             "d": {
                 "text": "720"
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "Drawing",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -1545,11 +1486,10 @@
             "d": {
                 "text": "Oblique"
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "Drawing",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -1571,11 +1511,10 @@
             "d": {
                 "text": "16"
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "Drawing",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -1597,11 +1536,10 @@
             "d": {
                 "text": "16"
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "Mathematics",
-        "exam_code":101
+        "exam_code":103
     },    
     {
         "question": {
@@ -1623,11 +1561,10 @@
             "d": {
                 "text": "none of the all"
                 
-            },
-            "correct": "b"
+            }
         },
         "subject": "Mathematics",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -1649,11 +1586,10 @@
             "d": {
                 "text": "any of the above"
                 
-            },
-            "correct": "b"
+            }
         },
         "subject": "Mathematics",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -1675,11 +1611,10 @@
             "d": {
                 "text": "geometry"
                 
-            },
-            "correct": "b"
+            }
         },
         "subject": "Mathematics",
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -1701,12 +1636,11 @@
             "d": {
                 "text": "{0,2}"
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -1728,12 +1662,11 @@
             "d": {
                 "text": "right angled isosceles triangle"
                 
-            },
-            "correct": "a"
+            }
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -1755,12 +1688,11 @@
             "d": {
                 "text": "^{50}C_30"
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -1782,12 +1714,11 @@
             "d": {
                 "text": "36"
                 
-            },
-            "correct": "b"
+            }
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -1809,12 +1740,11 @@
             "d": {
                 "text": "$ \\log_{2}\\sqrt{2} $"
                 
-            },
-            "correct": "c"
+            }
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },    
     {
         "question": {
@@ -1836,12 +1766,11 @@
             "d": {
                 "text": "a/b is one of the cube roots of -1"
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },    
     {
         "question": {
@@ -1863,12 +1792,11 @@
             "d": {
                 "text": "60"
                 
-            },
-            "correct": "a"
+            }
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },    
     {
         "question": {
@@ -1890,12 +1818,11 @@
             "d": {
                 "text": "an ellipse"
                 
-            },
-            "correct": "c"
+            }
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -1917,12 +1844,11 @@
             "d": {
                 "text": "$ \\lim_{x \\rightarrow 0^{+}} $ f(x)=f(0)"
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },    
     {
         "question": {
@@ -1944,12 +1870,11 @@
             "d": {
                 "text": "undefined"
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },        
     {
         "question": {
@@ -1971,12 +1896,11 @@
             "d": {
                 "text": "b is geometric mean of a and b"
                 
-            },
-            "correct": "b"
+            }
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -1998,12 +1922,11 @@
             "d": {
                 "text": "$ x^{2} $"
                 
-            },
-            "correct": "a"
+            }
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },     
     {
         "question": {
@@ -2025,12 +1948,11 @@
             "d": {
                 "text": "$ \\frac{(x+logx)^{4}}{x} $ + c"
                 
-            },
-            "correct": "c"
+            }
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },    
     {
         "question": {
@@ -2052,12 +1974,11 @@
             "d": {
                 "text": "8/3"
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },     
     {
         "question": {
@@ -2079,12 +2000,11 @@
             "d": {
                 "text": "c$ \\frac{1}{2} \\sqrt{c(g^{2} + f^{2} -c)} $"
                 
-            },
-            "correct": "a"
+            }
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     }, 
     {
         "question": {
@@ -2106,12 +2026,11 @@
             "d": {
                 "text": "undefined"
                 
-            },
-            "correct": "c"
+            }
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -2133,12 +2052,11 @@
             "d": {
                 "text": "an ellipse"
                 
-            },
-            "correct": "c"
+            }
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -2160,12 +2078,11 @@
             "d": {
                 "text": "1"
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -2187,12 +2104,11 @@
             "d": {
                 "text": "11"
                 
-            },
-            "correct": "c"
+            }
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -2215,12 +2131,11 @@
             "d": {
                 "text": "inspired by the beauties of nature"
                 
-            },
-            "correct": "a"
+            }
         },
         "subject": "English",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -2243,12 +2158,11 @@
             "d": {
                 "text": "1, 2 and 3 together"
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "English",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -2271,12 +2185,11 @@
             "d": {
                 "text": "You will have an irreplaceable foundation for a friendship"
                 
-            },
-            "correct": "a"
+            }
         },
         "subject": "English",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -2299,12 +2212,11 @@
             "d": {
                 "text": "that which is very impressive"
                 
-            },
-            "correct": "c"
+            }
         },
         "subject": "English",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -2327,12 +2239,11 @@
             "d": {
                 "text": "walked where the dividing line between danger and safety is very thin. "
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "English",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -2354,12 +2265,11 @@
             "d": {
                 "text": "5/108 $ m/s^{2} $ "
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -2381,12 +2291,11 @@
             "d": {
                 "text": "$ \\sqrt\\frac{4gh}{3} $ "
                 
-            },
-            "correct": "a"
+            }
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -2408,12 +2317,11 @@
             "d": {
                 "text": "10TL"
                 
-            },
-            "correct": "c"
+            }
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -2435,12 +2343,11 @@
             "d": {
                 "text": "20s"
                 
-            },
-            "correct": "b"
+            }
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -2462,12 +2369,11 @@
             "d": {
                 "text": "4800"
                 
-            },
-            "correct": "b"
+            }
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -2489,12 +2395,11 @@
             "d": {
                 "text": "4%"
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -2516,12 +2421,11 @@
             "d": {
                 "text": "2763.9 J"
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -2543,12 +2447,11 @@
             "d": {
                 "text": "$ 60^{o} "
                 
-            },
-            "correct": "c"
+            }
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -2570,12 +2473,11 @@
             "d": {
                 "text": "3"
                 
-            },
-            "correct": "c"
+            }
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -2597,12 +2499,11 @@
             "d": {
                 "text": "3:1"
                 
-            },
-            "correct": "a"
+            }
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -2624,12 +2525,11 @@
             "d": {
                 "text": "7.5cm"
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -2651,12 +2551,11 @@
             "d": {
                 "text": "1:2"
                 
-            },
-            "correct": "c"
+            }
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -2678,12 +2577,11 @@
             "d": {
                 "text": "1:1"
                 
-            },
-            "correct": "c"
+            }
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -2705,12 +2603,11 @@
             "d": {
                 "text": "$ 3.63 x 10^{9} $ years"
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -2732,12 +2629,11 @@
             "d": {
                 "text": "3.5ohm"
                 
-            },
-            "correct": "b"
+            }
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -2759,12 +2655,11 @@
             "d": {
                 "text": "$ 2 x 10^{-2}c $ "
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -2786,12 +2681,11 @@
             "d": {
                 "text": "\\frac{(I_1 + I_2)}{\\sqrt{2}}"
                 
-            },
-            "correct": "c"
+            }
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -2813,12 +2707,11 @@
             "d": {
                 "text": "$ 7.68x10^{22} $"
                 
-            },
-            "correct": "b"
+            }
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -2840,12 +2733,11 @@
             "d": {
                 "text": "$ R/3 $"
                 
-            },
-            "correct": "b"
+            }
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -2867,12 +2759,11 @@
             "d": {
                 "text": "1.4m/s"
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -2894,12 +2785,11 @@
             "d": {
                 "text": "$ 10^{13} $"
                 
-            },
-            "correct": "c"
+            }
         },
         "subject": "Chemistry",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -2921,12 +2811,11 @@
             "d": {
                 "text": "6gm"
                 
-            },
-            "correct": "a"
+            }
         },
         "subject": "Chemistry",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -2948,12 +2837,11 @@
             "d": {
                 "text": "38ml"
                 
-            },
-            "correct": "c"
+            }
         },
         "subject": "Chemistry",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -2975,12 +2863,11 @@
             "d": {
                 "text": "0"
                 
-            },
-            "correct": "a"
+            }
         },
         "subject": "Chemistry",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -3002,12 +2889,11 @@
             "d": {
                 "text": "ethane, ethyne and ethanol"
                 
-            },
-            "correct": "c"
+            }
         },
         "subject": "Chemistry",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -3030,12 +2916,11 @@
             "d": {
                 "text": "Fourth"
                 
-            },
-            "correct": "a"
+            }
         },
         "subject": "Drawing",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -3062,12 +2947,11 @@
                 "text": "",
                 "image":"117_d.jpg"
                 
-            },
-            "correct": "b"
+            }
         },
         "subject": "Drawing",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -3090,12 +2974,11 @@
             "d": {
                 "text": "A dash(hidden) vertical line"
                 
-            },
-            "correct": "d"
+            }
         },
         "subject": "Drawing",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -3118,12 +3001,11 @@
             "d": {
                 "text": "A dash(hidden) vertical line"
                 
-            },
-            "correct": "a"
+            }
         },
         "subject": "Drawing",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     },
     {
         "question": {
@@ -3146,11 +3028,10 @@
             "d": {
                 "text": "A dash(hidden) vertical line"
                 
-            },
-            "correct": "c"
+            }
         },
         "subject": "Drawing",
         "marks":2,
-        "exam_code":101
+        "exam_code":103
     }
 ]

@@ -6,7 +6,7 @@ from MongoConnection import MongoConnection
 class MailChimp():
     """This class is used to make api calls to the MailChimp"""
     def __init__(self, list_id = 'f0b6e041eb'):
-        self.db_object = MongoConnection("localhost",27017,'foodtrade')
+        self.db_object = MongoConnection("localhost",27017,'mcq')
         self.table_name = 'mailchimp'
         self.list_id =  list_id
         self.db_object.create_table(self.table_name,'_id')
@@ -30,5 +30,3 @@ class MailChimp():
             return {'status':1}
         except mailchimp.ListAlreadySubscribedError:
              return {'status':0,'message':'Already subscribed'}
-
-
