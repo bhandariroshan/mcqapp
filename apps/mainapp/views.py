@@ -133,6 +133,12 @@ def landing(request):
         parameters['user'] = user
 
         subscription_type = user['subscription_type']
+
+        if len(subscription_type) !=0:
+            parameters['subscribed'] = True
+        else:
+            parameters['subscribed'] = False
+
         for eachExam in upcoming_exams:            
             up_exm = {}
             
@@ -150,6 +156,7 @@ def landing(request):
             up_exm['code'] = eachExam['exam_code']
             up_exm['exam_time'] = eachExam['exam_time']
             up_exm['exam_category'] = eachExam['exam_category']
+            up_exm['exam_family'] = eachExam['exam_family']
             up_exm['image'] = eachExam['image']
             up_exm['exam_date'] = datetime.datetime.fromtimestamp(int(eachExam['exam_date'])).strftime("%A, %d. %B %Y")
             up_exams.append(up_exm)
@@ -184,7 +191,7 @@ def landing(request):
             parameters['socre_card'] = socre_card[0]        
         except:
             pass
-
+        parameters['has_result'] = False
         return render_to_response('dashboard.html',parameters,
                               context_instance=RequestContext(request))
     else:
