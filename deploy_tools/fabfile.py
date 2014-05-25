@@ -1,5 +1,5 @@
 from fabric.contrib.files import append, exists, sed, sudo
-from fabric.api import local, run
+from fabric.api import local, run, env
 import random
 
 # for real
@@ -14,6 +14,10 @@ STATIC_URL = '/static/'
 push_type = "real"
 
 code_only_folder = '%s/%s/source/%s' % (SITES_FOLDER, HOST_FOLDER, 'twitter_audit')
+
+def prod():
+    env.user = 'root'
+    env.hosts = ['audeet.com']
 
 
 def deploy():
@@ -30,7 +34,7 @@ def update_latest_code():
     settings_server_file = 'settings_server.py'
     if push_type == 'staging':
         settings_server_file = 'settings_staging_server.py'
-    run('cd %s && git reset --hard && git clean -f -d && git checkout master && git pull -f' % (source_folder))
+    run('cd %s && git reset --hard && git clean -f -d && git checkout master && git pull && git pull origin master' % (source_folder))
     _update_virtualenv(source_folder)
     settings_path = source_folder + '/' + PROJECT_NAME + '/settings.py'
     settings_server_path = source_folder + '/' + PROJECT_NAME + '/' + settings_server_file
@@ -59,7 +63,7 @@ def _get_latest_source(source_folder):
     
 
     if exists(source_folder + '/.git'): #1
-        run('cd %s && git fetch' % (source_folder,)) #23
+        run('cd %s && git fetch && git pull && git checkout master' % (source_folder,)) #23
     else:
         run('git clone %s %s' % (REPO_URL, source_folder)) #4
     current_commit = local("git log -n 1 --format=%H", capture=True) #5
