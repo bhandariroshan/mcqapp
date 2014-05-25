@@ -52,8 +52,8 @@ def add_html(request):
 @csrf_exempt
 def android(request): 
     login_by_token(request)
-    print request
     if request.user.is_authenticated():
+        print "logged in"
         social_account = SocialAccount.objects.get(user__id=request.user.id)
         from apps.mainapp.classes.Userprofile import UserProfile
         user_profile_object = UserProfile()
