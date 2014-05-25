@@ -26,7 +26,7 @@ class Coupon():
     			d. status (used/free)    			
     	'''
         import random
-        for i in range(0,10):
+        for i in range(0,40):
             number_system = 'zAyBxCwDvEuFt9GsH8rI7qJp6KoLnM5mNlOk4PjQih3RgSfTeU2dVcWbXa1YZz0'
             num  = random.randint(999999999, pow(62,6))
             coupon = ''
