@@ -83,8 +83,8 @@ def sign_up_sign_in(request, android_user=False):
     return user_profile_object.update_upsert({'username':request.user.username}, data)
 
 def latex_html(request): 
-    print request
-    return render_to_response("sample-tex.html")
+
+    return render_to_response("sample-tex.html",{'exam':request.GET.get('exam')})
 
 @csrf_exempt
 def add_html(request): 
