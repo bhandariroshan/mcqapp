@@ -35,16 +35,8 @@ def sign_up_sign_in(request, android_user=False):
     user = user_profile_object.get_user_by_username(request.user.username)
     try:
         valid_exams = user['valid_exam']
-        if 'IOM-SAMPLE-1' not in valid_exams:
-            valid_exams.append('IOM-SAMPLE-1')
-        if 'IOE-SAMPLE-1' not in valid_exams:
-            valid_exams.append('IOE-SAMPLE-1')
-        if 'IOE-SAMPLE-2' not in valid_exams:
-            valid_exams.append('IOE-SAMPLE-2')
-        if 'IOM-SAMPLE-2' not in valid_exams:
-            valid_exams.append('IOM-SAMPLE-2')
     except:
-        valid_exams=['IOM-SAMPLE-1', 'IOE-SAMPLE-1','IOM-SAMPLE-2','IOE-SAMPLE-2']
+        valid_exams=[100, 101]
 
     try:
         coupons = user['coupons']
