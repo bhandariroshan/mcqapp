@@ -8,11 +8,14 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 <body>
-<p>nepal</p>
+
 <div id="cont">
 
 
 </div>
+
+
+<input type ="button" value="save" onclick="get_html()">
 
 </body>
 
@@ -25,7 +28,7 @@
   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 <script type="text/javascript">
-$.post( "/exam/100", function( data ) {
+$.post( "/exam/{{exam}}", function( data ) {
 
 questions = JSON.parse(data).result;
 content = "";
@@ -70,7 +73,7 @@ function get_html()
 		if(i==questions.length-1&&j==3)
 	{
 		// console.log(questions);
-		$.post( "http://localhost:8000/latex-store",{q:JSON.stringify(questions)} ,function( data ) {
+		$.post( "/latex-store",{q:JSON.stringify(questions)} ,function( data ) {
 	});
 	}
 	}
