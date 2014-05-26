@@ -67,7 +67,7 @@ class ExamHandler():
             temp['score'] = value
             total += value
             score_list.append(temp)
-        score_list.append({'subject': 'total', 'score': total})
+        score_list.append({'subject': 'Total', 'score': total})
         return score_list
 
 
