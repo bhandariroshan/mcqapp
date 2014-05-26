@@ -72,6 +72,7 @@ class AttemptedAnswerDatabase():
 
     def update_upsert_attempted_answer(self, where, what):
         return self.db_object.update_upsert(self.table_name, where, what)
+        
 
 class CorrectAnswerDatabase():
 
