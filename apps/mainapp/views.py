@@ -51,6 +51,16 @@ def sign_up_sign_in(request, android_user=False):
     except:
         join_time = datetime.datetime.now()
         join_time = time.mktime(join_time.timetuple())
+
+    try:
+        student_category = user['student_category']
+    except:
+        student_category = 'both'
+    try:
+        student_category_set = user['student_category_set']
+    except:
+        student_category_set = 0
+
     data = {
             'useruid': int(request.user.id), 
             'first_name': social_account.extra_data['first_name'],
@@ -66,8 +76,11 @@ def sign_up_sign_in(request, android_user=False):
             'valid_exam':valid_exams,
             'subscription_type':subscription_type,
             'newsletter_freq':'Weekly',
-            'join_time':int(join_time)
+            'join_time':int(join_time),
+            'student_category':student_category,
+            'student_category_set':student_category_set
     }
+
     if android_user == True:
         data['android_user'] = True
     else:
@@ -138,6 +151,11 @@ def landing(request):
             parameters['subscribed'] = True
         else:
             parameters['subscribed'] = False
+
+        if user['student_category_set'] == 1:
+            parameters['student_category_set'] = True
+        else:
+            parameters['student_category_set'] = False
 
         for eachExam in upcoming_exams:            
             up_exm = {}

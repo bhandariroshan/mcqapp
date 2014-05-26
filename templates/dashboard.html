@@ -140,6 +140,16 @@
           </div>
         {% endif %}
 
+        {% if not student_category %}
+          <div class="twelve columns">
+            <li class="secondary alert">
+              <p>Do you have a coupon code for subscription plan?  </p> 
+              <div class="pretty medium primary btn switch" style="width: 150px;" onclick="attempt_exam('sample')">Enter here</a></div>
+            </li>
+          </div>
+        {% endif %}
+        
+
         {% if has_result %}
           <table class="rounded">
             <thead>
