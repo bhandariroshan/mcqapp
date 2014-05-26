@@ -18,9 +18,9 @@
             }
         },
         "subject": "Mathematics",
-        "exam_code":102
+        "exam_code":103 
     },
-    {
+    {   
         "question": {
             "text": " $ [3, \\infty) U (-\\infty, -3] $ is the solution set for the inequality:"
         },
@@ -39,7 +39,7 @@
             }
         },
         "subject": "Mathematics",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -64,7 +64,7 @@
             }
         },
         "subject": "Mathematics",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -89,7 +89,7 @@
             }
         },
         "subject": "Mathematics",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -114,7 +114,7 @@
             }
         },
         "subject": "Mathematics",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -139,7 +139,7 @@
             }
         },
         "subject": "Mathematics",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -164,7 +164,7 @@
             }
         },
         "subject": "Mathematics",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -189,7 +189,7 @@
             }
         },
         "subject": "Mathematics",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -214,7 +214,7 @@
             }
         },
         "subject": "Mathematics",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -239,7 +239,7 @@
             }
         },
         "subject": "Mathematics",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -264,7 +264,7 @@
             }
         },
         "subject": "English",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -289,7 +289,7 @@
             }
         },
         "subject": "English",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -314,7 +314,7 @@
             }
         },
         "subject": "English",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -339,7 +339,7 @@
             }
         },
         "subject": "English",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -364,7 +364,7 @@
             }
         },
         "subject": "English",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -389,7 +389,7 @@
             }
         },
         "subject": "English",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -414,7 +414,7 @@
             }
         },
         "subject": "English",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -439,7 +439,7 @@
             }
         },
         "subject": "English",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -464,7 +464,7 @@
             }
         },
         "subject": "English",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -489,7 +489,7 @@
             }
         },
         "subject": "English",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -514,7 +514,7 @@
             }
         },
         "subject": "English",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -539,7 +539,7 @@
             }
         },
         "subject": "English",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -564,7 +564,7 @@
             }
         },
         "subject": "English",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -589,7 +589,7 @@
             }
         },
         "subject": "English",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -614,7 +614,7 @@
             }
         },
         "subject": "English",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -639,7 +639,7 @@
             }
         },
         "subject": "Physics",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -664,7 +664,7 @@
             }
         },
         "subject": "Physics",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -689,7 +689,7 @@
             }
         },
         "subject": "Physics",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -714,7 +714,7 @@
             }
         },
         "subject": "Physics",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -739,7 +739,7 @@
             }
         },
         "subject": "Physics",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -764,7 +764,7 @@
             }
         },
         "subject": "Physics",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -789,7 +789,7 @@
             }
         },
         "subject": "Physics",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -814,7 +814,7 @@
             }
         },
         "subject": "Physics",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -839,7 +839,7 @@
             }
         },
         "subject": "Physics",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -864,7 +864,7 @@
             }
         },
         "subject": "Physics",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -889,7 +889,7 @@
             }
         },
         "subject": "Physics",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -914,7 +914,7 @@
             }
         },
         "subject": "Chemistry",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -939,7 +939,7 @@
             }
         },
         "subject": "Chemistry",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -964,7 +964,7 @@
             }
         },
         "subject": "Chemistry",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -989,7 +989,7 @@
             }
         },
         "subject": "Chemistry",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -1014,7 +1014,7 @@
             }
         },
         "subject": "Chemistry",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -1039,7 +1039,7 @@
             }
         },
         "subject": "Chemistry",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -1064,7 +1064,7 @@
             }
         },
         "subject": "Chemistry",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -1089,7 +1089,7 @@
             }
         },
         "subject": "Chemistry",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -1114,7 +1114,7 @@
             }
         },
         "subject": "Chemistry",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -1139,7 +1139,7 @@
             }
         },
         "subject": "Chemistry",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -1164,7 +1164,7 @@
             }
         },
         "subject": "Chemistry",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -1189,7 +1189,7 @@
             }
         },
         "subject": "Chemistry",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -1214,7 +1214,7 @@
             }
         },
         "subject": "Chemistry",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -1239,7 +1239,7 @@
             }
         },
         "subject": "Chemistry",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -1264,7 +1264,7 @@
             }
         },
         "subject": "Drawing",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -1289,7 +1289,7 @@
             }
         },
         "subject": "Drawing",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -1314,7 +1314,7 @@
             }
         },
         "subject": "Drawing",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -1339,7 +1339,7 @@
             }
         },
         "subject": "Drawing",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -1364,7 +1364,7 @@
             }
         },
         "subject": "Drawing",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -1389,7 +1389,7 @@
             }
         },
         "subject": "Drawing",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -1414,7 +1414,7 @@
             }
         },
         "subject": "Drawing",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -1439,7 +1439,7 @@
             }
         },
         "subject": "Drawing",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -1464,7 +1464,7 @@
             }
         },
         "subject": "Drawing",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -1489,7 +1489,7 @@
             }
         },
         "subject": "Drawing",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -1514,7 +1514,7 @@
             }
         },
         "subject": "Drawing",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -1539,7 +1539,7 @@
             }
         },
         "subject": "Mathematics",
-        "exam_code":102
+        "exam_code":103
     },    
     {
         "question": {
@@ -1564,7 +1564,7 @@
             }
         },
         "subject": "Mathematics",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -1589,7 +1589,7 @@
             }
         },
         "subject": "Mathematics",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -1614,7 +1614,7 @@
             }
         },
         "subject": "Mathematics",
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -1640,7 +1640,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -1666,7 +1666,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -1692,7 +1692,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -1718,7 +1718,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -1744,7 +1744,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },    
     {
         "question": {
@@ -1770,7 +1770,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },    
     {
         "question": {
@@ -1796,7 +1796,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },    
     {
         "question": {
@@ -1822,7 +1822,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -1848,7 +1848,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },    
     {
         "question": {
@@ -1874,7 +1874,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },        
     {
         "question": {
@@ -1900,7 +1900,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -1926,7 +1926,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },     
     {
         "question": {
@@ -1952,7 +1952,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },    
     {
         "question": {
@@ -1978,7 +1978,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },     
     {
         "question": {
@@ -2004,7 +2004,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     }, 
     {
         "question": {
@@ -2030,7 +2030,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -2056,7 +2056,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -2082,7 +2082,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -2108,7 +2108,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -2135,7 +2135,7 @@
         },
         "subject": "English",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -2162,7 +2162,7 @@
         },
         "subject": "English",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -2189,7 +2189,7 @@
         },
         "subject": "English",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -2216,7 +2216,7 @@
         },
         "subject": "English",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -2243,7 +2243,7 @@
         },
         "subject": "English",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -2269,7 +2269,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -2295,7 +2295,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -2321,7 +2321,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -2347,7 +2347,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -2373,7 +2373,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -2399,7 +2399,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -2425,7 +2425,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -2451,7 +2451,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -2477,7 +2477,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -2503,7 +2503,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -2529,7 +2529,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -2555,7 +2555,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -2581,7 +2581,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -2607,7 +2607,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -2633,7 +2633,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -2659,7 +2659,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -2685,7 +2685,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -2711,7 +2711,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -2737,7 +2737,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -2763,7 +2763,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -2789,7 +2789,7 @@
         },
         "subject": "Chemistry",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -2815,7 +2815,7 @@
         },
         "subject": "Chemistry",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -2841,7 +2841,7 @@
         },
         "subject": "Chemistry",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -2867,7 +2867,7 @@
         },
         "subject": "Chemistry",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -2893,7 +2893,7 @@
         },
         "subject": "Chemistry",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -2920,7 +2920,7 @@
         },
         "subject": "Drawing",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -2951,7 +2951,7 @@
         },
         "subject": "Drawing",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -2978,7 +2978,7 @@
         },
         "subject": "Drawing",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -3005,7 +3005,7 @@
         },
         "subject": "Drawing",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     },
     {
         "question": {
@@ -3032,6 +3032,6 @@
         },
         "subject": "Drawing",
         "marks":2,
-        "exam_code":102
+        "exam_code":103
     }
 ]
