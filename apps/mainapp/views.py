@@ -151,12 +151,14 @@ def landing(request):
             parameters['subscribed'] = True
         else:
             parameters['subscribed'] = False
-
-        if user['student_category_set'] == 1:
-            parameters['student_category_set'] = True
-        else:
+        try:
+            if user['student_category_set'] == 1:
+                parameters['student_category_set'] = True
+            else:
+                parameters['student_category_set'] = False
+        except:
             parameters['student_category_set'] = False
-
+            
         for eachExam in upcoming_exams:            
             up_exm = {}
             

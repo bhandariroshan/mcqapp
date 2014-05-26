@@ -26,13 +26,14 @@ class AjaxHandle():
             exam_obj = Exam()
             up_exm = exam_obj.get_exam_detail(int(exam_code))
 
-            if exam_code.strip() == 'sample' and coupon_code.lower()=='sample-1234':
-                if coupon_obj.validate_coupon(coupon_code) == True:
+            if exam_code.strip() == 'subs':
+                if coupon_obj.has_susbcription_plan_in_coupon(coupon_code):
                     coupon_obj.change_used_status_of_coupon(coupon_code, request.user.username) 
                     user_profile_obj.change_subscription_plan(request.user.username, coupon_code)                
                     user_profile_obj.save_coupon(request.user.username, coupon_code)
-
-                return HttpResponse(json.dumps({'status':'ok','url':'/'}))
+                    return HttpResponse(json.dumps({'status':'ok','url':'/'}))
+                else:
+                    return HttpResponse(json.dumps({'status':'error','message':'Invalid Coupon code.'}))
 
             # if exam_code.strip() != 'sample' and coupon_code.lower()=='sample-1234':
             #     return HttpResponse(json.dumps({'status':'error','message':'Invalid Coupon code.'}))
