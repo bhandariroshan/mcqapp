@@ -16,14 +16,15 @@ def get_question_set(request, exam_code):
         user_obj = UserProfile()
         from apps.mainapp.classes.Exams import Exam            
         exam_obj = Exam()
+
         up_exm = exam_obj.get_exam_detail(int(exam_code))
-        coupon_obj = Coupon()
+        coupon_obj = Coupon()        
         user_profile_obj = UserProfile()
         subscription_status = user_obj.check_subscribed(request.user.username, exam_code)
         user = user_profile_obj.get_user_by_username(request.user.username)
 
+        '''Validation for subscription here'''
         if subscription_status or int(exam_code) in user['valid_exam']:
-            '''Add Validation for subscription here'''
             exam_handler = ExamHandler()
             model_question_set = exam_handler.get_questionset_from_database(exam_code)
 
@@ -54,7 +55,6 @@ def get_question_set(request, exam_code):
             response =   HttpResponse(json.dumps({'status':'error', 'message':'Invalid Coupon Code.'}))        
     else:
         response =  HttpResponse(json.dumps({'status':'error', 'message':'Not a valid request'}))
-    print response
     return response
 
 def get_upcoming_exams(request):
