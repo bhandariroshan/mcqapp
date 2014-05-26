@@ -48,6 +48,19 @@ class ExamHandler():
                     correct_answers[sorted_questions[index]['subject']] = 1
         total = 0
         score_list = []
+        for index, choice in enumerate(answer_list):
+            if sorted_questions[index]['answer']['correct'] == choice:
+                try:
+                    correct_answers[sorted_questions[index]['subject']] += 1
+                except:
+                    correct_answers[sorted_questions[index]['subject']] = 1
+            else:
+                try:
+                    correct_answers[sorted_questions[index]['subject']] += 0
+                except:
+                    correct_answers[sorted_questions[index]['subject']] = 0
+        total = 0
+        score_list = []
         for key, value in correct_answers.iteritems():
             temp = {}
             temp['subject'] = key

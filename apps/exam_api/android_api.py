@@ -74,18 +74,22 @@ def get_upcoming_exams(request):
         return HttpResponse(json.dumps({'status':'error', 'message':'Not a valid request'}))
 
 
-
+@csrf_exempt
 def get_scores(request):
     '''
     the function returns api of scores obtained in each subject
     '''
     if request.user.is_authenticated():
-        if request.method == 'GET':
-            exam_code = request.GET.get('exam')
-            answer_list = list(request.GET.get('answers'))
-            exam_handler = ExamHandler()
-            score_dict = exam_handler.check_answers(exam_code, answer_list)
-            return HttpResponse(json.dumps({'status':'ok', 'result':score_dict}))
+        IMPROPER_REQUEST = 'Couldn\'t process improper request'
+        try:
+            exam_code = int(request.POST['exam_code'])
+            answer_list = list(request.POST['answers'])
+        except Exception, e:
+            return HttpResponse(json.dumps({'status':'error','message':IMPROPER_REQUEST}))
+
+        exam_handler = ExamHandler()
+        score_dict = exam_handler.check_answers(exam_code, answer_list)
+        return HttpResponse(json.dumps({'status':'ok', 'result':score_dict}))
     else:
         return HttpResponse(json.dumps({'status':'error', 'message':'Not a valid request'}))
 
