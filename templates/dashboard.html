@@ -135,10 +135,27 @@
           <div class="twelve columns">
             <li class="success alert">
               <p>Do you have a coupon code for subscription plan?  </p> 
-              <div class="pretty medium primary btn switch" style="width: 150px;" onclick="attempt_exam('sample')">Enter here</a></div>
+              <div class="pretty medium primary btn switch" style="width: 150px;" onclick="attempt_exam('subs')">Enter here</a></div>
             </li>
           </div>
         {% endif %}
+
+        <!--         {% if not student_category %}
+          <div class="twelve columns">
+            <li class="warning alert">
+              <p>Select one option to see filtered exams on your dashboard. </p> 
+                <li class="field">
+                  <label class="checkbox checked" for="check1">
+                    <input name="checkbox[]" id="check1" value="1" type="checkbox" checked="checked">IOE
+                  </label>
+                  <label class="checkbox" for="check2">
+                    <input name="checkbox[]" id="check2" value="2" type="checkbox">IOM
+                  </label>
+                </li>
+            </li>
+          </div>
+        {% endif %} -->
+        
 
         {% if has_result %}
           <table class="rounded">

@@ -22,29 +22,33 @@ class AjaxHandle():
             coupon_obj = Coupon()
             exam_code = request.POST.get('exam_code','')
             coupon_code = request.POST.get('coupon_code','')
+            user_profile_obj = UserProfile()
+            user = user_profile_obj.get_user_by_username(request.user.username)
             from apps.mainapp.classes.Exams import Exam            
             exam_obj = Exam()
-            up_exm = exam_obj.get_exam_detail(int(exam_code))
-
-            if exam_code.strip() == 'sample' and coupon_code.lower()=='sample-1234':
-                if coupon_obj.validate_coupon(coupon_code) == True:
+            if exam_code !='subs':
+                up_exm = exam_obj.get_exam_detail(int(exam_code))
+            else:                
+                print "Roshan"
+                if coupon_obj.has_susbcription_plan_in_coupon(coupon_code):
+                    print "Username"
                     coupon_obj.change_used_status_of_coupon(coupon_code, request.user.username) 
                     user_profile_obj.change_subscription_plan(request.user.username, coupon_code)                
                     user_profile_obj.save_coupon(request.user.username, coupon_code)
-
-                return HttpResponse(json.dumps({'status':'ok','url':'/'}))
+                    return HttpResponse(json.dumps({'status':'ok','url':'/'}))
+                else:
+                    print "Bhandari"
+                    return HttpResponse(json.dumps({'status':'error','message':'Invalid Coupon code.'}))
 
             # if exam_code.strip() != 'sample' and coupon_code.lower()=='sample-1234':
             #     return HttpResponse(json.dumps({'status':'error','message':'Invalid Coupon code.'}))
 
             if coupon_obj.validate_coupon(coupon_code, up_exm['exam_category'], up_exm['exam_family']) == True:
-                user_profile_obj = UserProfile()
                 #save the coupon code in user's couponcode array 
                 coupon_obj.change_used_status_of_coupon(coupon_code, request.user.username) 
                 user_profile_obj.change_subscription_plan(request.user.username, coupon_code)                
                 user_profile_obj.save_coupon(request.user.username, coupon_code)
 
-                user = user_profile_obj.get_user_by_username(request.user.username)
                 subscription_type = user['subscription_type']
                 #if coupon_code != 'IDP' or 'BE-IOE-071' or 'MBBS-IOM-071' then save the exam code in the valid exams
                 if   'IDP' not in subscription_type and 'BE-IOE-071' not in subscription_type and 'MBBS-IOM-071' not in subscription_type:
