@@ -83,12 +83,6 @@ def save_user_answers(request):
     current_question_number = int(request.POST.get('current_question_number',''))
     attempt_time = datetime.datetime.now()
     attempt_time = time.mktime(attempt_time.timetuple())
-    ans.update_upsert_attempted_answer(
-        {'q_id':question_number, 'exam_code':exam_code, 'user_id':request.user.id},{
-        'user_id':request.user.id,
-        'q_id':question_number,
-        'exam_code':exam_code,
-        'selected_ans':selected_ans,
-        'attempt_time':int(attempt_time),
-        'q_no':current_question_number
-         })
+    ans.update_upsert_push(
+        {'user_id':request.user.id,'q_id':question_number,'exam_code':exam_code,'q_no':current_question_number},
+        {'attempt_details':{'selected_ans':selected_ans,'attempt_time':int(attempt_time)}})

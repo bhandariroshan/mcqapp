@@ -70,8 +70,8 @@ class AttemptedAnswerDatabase():
     def update_atttempted_answer(self, where, what):
         return self.db_object.update(self.table_name, where, what)
 
-    def update_upsert_attempted_answer(self, where, what):
-        return self.db_object.update_upsert(self.table_name, where, what)
+    def update_upsert_push(self, where, what):
+        return self.db_object.update_upsert_push(self.table_name, where, what)
         
 
 class CorrectAnswerDatabase():
@@ -92,3 +92,15 @@ class CorrectAnswerDatabase():
 
     def update_correct_answer(self, where, what):
         return self.db_object.update(self.table_name, where, what)
+
+class ExamStartSignal():
+    def __init__(self):
+        self.db_object = MongoConnection("localhost", 27017, 'mcq')
+        self.table_name = 'examstartsignal'
+        self.db_object.create_table(self.table_name, 'useruid')
+
+    def insert_exam_start_signal(self, value):
+        self.db_object.update_upsert(self.table_name, value, value)
+
+    def check_exam_started(self, condition):
+        return self.db_object.get_one(self.table_name, condition)        

@@ -89,11 +89,26 @@ class AjaxHandle():
     def save_answer(self, request):
         if request.user.is_authenticated():
             from apps.exam_api.views import save_user_answers
-            save_user_answers(request)
-            # if request.session.get('has_commented', False):
-            request.session['current_question_number'] = request.POST.get('current_question_number','')
-            request.session['exam_code'] = request.POST.get('exam_code','')
-            return HttpResponse(json.dumps({'status':'ok', 'message':'Answer successfully saved'}))
+            from apps.mainapp.classes.query_database import ExamStartSignal
+            ess = ExamStartSignal()
+            exam_code =request.POST.get('exam_code','')
+            validate = ess.check_exam_started({'exam_code':int(exam_code), 'useruid':request.user.id, 'start':1})
+            if validate != None:
+                from apps.mainapp.classes.query_database import ExammodelApi
+                ema = ExammodelApi()
+                exam_details = ema.find_one_exammodel({'exam_code':int(exam_code)})
+                time_elapsed = time.mktime(datetime.datetime.now().timetuple()) - validate['start_time']
+                '''check if user time has expired or not '''
+                if time_elapsed > exam_details['exam_duration']*60:
+                    return HttpResponse(json.dumps({'status':'TimeElapsedError', 'message':'Time has elapsed'}))
+                else:
+                    save_user_answers(request)
+                    # if request.session.get('has_commented', False):
+                    request.session['current_question_number'] = int(request.POST.get('current_question_number',''))+1
+                    request.session['exam_code'] = request.POST.get('exam_code','')
+                    return HttpResponse(json.dumps({'status':'ok', 'message':'Answer successfully saved'}))
+            else:
+                return HttpResponse(json.dumps({'status':'error', 'message':'Exam not Validated'}))
         else:
             return HttpResponse(json.dumps({'status':'error', 'message':'Not Authorized for this action'}))
     
@@ -101,6 +116,13 @@ class AjaxHandle():
         if request.user.is_authenticated():
             exam_code = request.POST.get('exam_code','')
             request.session[exam_code] = True
+            from apps.mainapp.classes.query_database import ExamStartSignal
+            ess = ExamStartSignal()
+            validate = ess.check_exam_started({'exam_code':int(exam_code), 'useruid':request.user.id, 'start':1})
+            if validate == None:
+                start_time = datetime.datetime.now().timetuple()                        
+                start_time = time.mktime(start_time)
+                ess.insert_exam_start_signal({'exam_code':int(exam_code), 'useruid':request.user.id, 'start':1, 'start_time':start_time})
             return HttpResponse(json.dumps({'status':'ok', 'url':'/attend-exam/'+exam_code+'/'}))
         else:
             return HttpResponse(json.dumps({'status':'error', 'message':'Not Authorized for this action'}))

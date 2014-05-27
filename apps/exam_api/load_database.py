@@ -15,7 +15,7 @@ def load_examset_in_database(request):
     exam_model = ExammodelApi()
     exam_dict = [
         {"exam_name": "IOE model exam 1",
-         "exam_date": 1399998500,
+         "exam_date": 1401178977,
          "image": "exam.jpg",
          "exam_code": 100,
          "exam_time": "7.00pm",
@@ -23,15 +23,15 @@ def load_examset_in_database(request):
          "exam_duration":180,
          "exam_family":'CPS'
          },
-        {"exam_name": "IOM model exam 1",
-         "exam_date": 1399978500,
-         "image": "exam.jpg",
-         "exam_code": 101,
-         "exam_time": "7.00pm",
-         "exam_category": "MBBS-IOM-071",
-         "exam_duration":180,
-         "exam_family":'DPS'
-         },
+        # {"exam_name": "IOM model exam 1",
+        #  "exam_date": 1399978500,
+        #  "image": "exam.jpg",
+        #  "exam_code": 101,
+        #  "exam_time": "7.00pm",
+        #  "exam_category": "MBBS-IOM-071",
+        #  "exam_duration":180,
+        #  "exam_family":'DPS'
+        #  },
         {"exam_name": "IOE model exam 2",
          "exam_date": 1399968500,
          "image": "exam.jpg",
@@ -40,16 +40,16 @@ def load_examset_in_database(request):
          "exam_duration":180,
          "exam_category": "BE-IOE-071",
          "exam_family":'CPS'
-         },
-        {"exam_name": "IOM model exam 2",
-         "exam_date": 1399968500,
-         "image": "exam.jpg",
-         "exam_code": 103,
-         "exam_duration":180,
-         "exam_time": "7.00pm",
-         "exam_category": "MBBS-IOM-071",
-         "exam_family":'DPS'
-        }
+         }
+        # {"exam_name": "IOM model exam 2",
+        #  "exam_date": 1399968500,
+        #  "image": "exam.jpg",
+        #  "exam_code": 103,
+        #  "exam_duration":180,
+        #  "exam_time": "7.00pm",
+        #  "exam_category": "MBBS-IOM-071",
+        #  "exam_family":'DPS'
+        # }
     ]
     exam_model.insert_new_model(exam_dict)
     return HttpResponse("Exam model saved in the database")

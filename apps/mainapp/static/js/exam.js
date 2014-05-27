@@ -21,12 +21,12 @@ $('.li-height').click(function(){
               attempted.push(current_question_number);
               $('#liAns'+String(current_question_number)).removeClass('danger');
               $('#liAns'+String(current_question_number)).addClass('success');
-              $('#aHref'+String(current_question_number)).removeAttr('onclick');
+              /*$('#aHref'+String(current_question_number)).removeAttr('onclick');*/
       //}
     }
   if(current_question_number+1 < max_questions_number){
-    $('#aHref'+ String(current_question_number+1)).click();
-   /*load_question(parseInt(current_question_number)+1);*/
+    /*$('#aHref'+ String(current_question_number+1)).click();*/
+   load_question(parseInt(current_question_number)+1);
   }
 
 });
@@ -86,16 +86,16 @@ $('.loadNext').click(function(){
         }
        
       if(current_question_number+1 < max_questions_number){            
-       /*load_question(parseInt(current_question_number)+1);*/
-       $('#aHref'+ String(current_question_number+1)).click();
+       load_question(parseInt(current_question_number)+1);
+       /*$('#aHref'+ String(current_question_number+1)).click();*/
       }
 });
 
 
 $('#loadPrev').click(function(){
     if(current_question_number != 0){      
-      /*load_question(current_question_number-1);*/
-      $('#aHref'+ String(current_question_number-1)).click();
+      load_question(current_question_number-1);
+      /*$('#aHref'+ String(current_question_number-1)).click();*/
     }
 });
 /*$('.li-height').hover(function(){
@@ -103,7 +103,7 @@ $('#loadPrev').click(function(){
 });*/
 
 var hour_rem = exam_duration/60;
-var min_rem = parseInt(exam_duration)%60;
+var min_rem = parseInt(exam_duration%60);
 var sec_rem = min_rem * 60;
 var toal_time = parseInt(exam_duration) * 60;
 
@@ -135,7 +135,8 @@ $(document).ready(function(){
           ans_html = ans_html + '<button style="border: 0px; background: #fff;display:inline;"" href="#" id="aHref' + String(all_answers[q_no.indexOf(i)]['q_no']) + '" onclick="load_question('+ String(all_answers[q_no.indexOf(i)]['q_no']) +')">' + String(all_answers[q_no.indexOf(i)]['q_no']+1) + '. <li class="danger badge" id="liAns'+ String(all_answers[q_no.indexOf(i)]['q_no']) +'">' + 'NA' + '</li></button>';      
         }
         else{
-          ans_html = ans_html + '<button style="border: 0px; background: #fff;display:inline;"" href="#" id="aHref' + String(all_answers[q_no.indexOf(i)]['q_no']) + '"onclick="load_question('+ String(all_answers[q_no.indexOf(i)]['q_no']) +')">' + String(all_answers[q_no.indexOf(i)]['q_no']+1) + '. <li class="success badge" id="liAns'+ String(all_answers[q_no.indexOf(i)]['q_no']) +'">' + all_answers[q_no.indexOf(i)]['selected_ans'].toUpperCase() + '</li></button>';      
+          var last_selected_answer  = all_answers[q_no.indexOf(i)]['attempt_details'][all_answers[q_no.indexOf(i)]['attempt_details'].length-1]['selected_ans'];
+          ans_html = ans_html + '<button style="border: 0px; background: #fff;display:inline;"" href="#" id="aHref' + String(all_answers[q_no.indexOf(i)]['q_no']) + '"onclick="load_question('+ String(all_answers[q_no.indexOf(i)]['q_no']) +')">' + String(all_answers[q_no.indexOf(i)]['q_no']+1) + '. <li class="success badge" id="liAns'+ String(all_answers[q_no.indexOf(i)]['q_no']) +'">' + last_selected_answer.toUpperCase() + '</li></button>';      
         }                             
       }    
     else{    
