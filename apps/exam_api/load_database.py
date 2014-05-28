@@ -15,14 +15,14 @@ def load_examset_in_database(request):
     exam_model = ExammodelApi()
     exam_dict = [
         {"exam_name": "IOE model exam 1",
-         "exam_date": 1401178977,
+         # "exam_date": 1401244202,
          "image": "exam.jpg",
          "exam_code": 100,
-         "exam_time": "7.00pm",
+         # "exam_time": "7.00pm",
          "exam_category": "BE-IOE-071",
-         "exam_duration":180,
-         "exam_family":'CPS'
-         },
+         "exam_duration":10,
+         "exam_family":'DPS'
+         }
         # {"exam_name": "IOM model exam 1",
         #  "exam_date": 1399978500,
         #  "image": "exam.jpg",
@@ -32,15 +32,15 @@ def load_examset_in_database(request):
         #  "exam_duration":180,
         #  "exam_family":'DPS'
         #  },
-        {"exam_name": "IOE model exam 2",
-         "exam_date": 1399968500,
-         "image": "exam.jpg",
-         "exam_code": 102,
-         "exam_time": "7.00pm",
-         "exam_duration":180,
-         "exam_category": "BE-IOE-071",
-         "exam_family":'CPS'
-         }
+        # {"exam_name": "IOE model exam 2",
+        #  "exam_date": 1399968500,
+        #  "image": "exam.jpg",
+        #  "exam_code": 102,
+        #  "exam_time": "7.00pm",
+        #  "exam_duration":180,
+        #  "exam_category": "BE-IOE-071",
+        #  "exam_family":'CPS'
+        #  }
         # {"exam_name": "IOM model exam 2",
         #  "exam_date": 1399968500,
         #  "image": "exam.jpg",

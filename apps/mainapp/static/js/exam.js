@@ -28,6 +28,9 @@ $('.li-height').click(function(){
     /*$('#aHref'+ String(current_question_number+1)).click();*/
    load_question(parseInt(current_question_number)+1);
   }
+  else{
+    $('#trigger_gumby_div').click();
+  }
 
 });
  
@@ -113,7 +116,13 @@ var myVar=setInterval(function(){
         hour_rem  = parseInt(toal_time/3600);
         min_rem   = parseInt(toal_time/60) - hour_rem *60;
         sec_rem   = toal_time - hour_rem*3600 - min_rem*60;
-        myTimer();
+        myTimer();        
+    }
+    else
+    {
+      $('#reviewAns').hide();
+      $('#infoText').html('Your time is up. Please submit answers to view result.');
+      $('#trigger_gumby_div').click();
     }
 },1000);
 

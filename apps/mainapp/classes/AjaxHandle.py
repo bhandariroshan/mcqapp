@@ -118,11 +118,28 @@ class AjaxHandle():
             request.session[exam_code] = True
             from apps.mainapp.classes.query_database import ExamStartSignal
             ess = ExamStartSignal()
+            print exam_code 
+            print request.POST
+            print int(exam_code)
             validate = ess.check_exam_started({'exam_code':int(exam_code), 'useruid':request.user.id, 'start':1})
             if validate == None:
                 start_time = datetime.datetime.now().timetuple()                        
                 start_time = time.mktime(start_time)
                 ess.insert_exam_start_signal({'exam_code':int(exam_code), 'useruid':request.user.id, 'start':1, 'start_time':start_time})
             return HttpResponse(json.dumps({'status':'ok', 'url':'/attend-exam/'+exam_code+'/'}))
+        else:
+            return HttpResponse(json.dumps({'status':'error', 'message':'Not Authorized for this action'}))
+
+    
+    def set_exam_finished(self, request):
+        if request.user.is_authenticated():
+            exam_code = request.POST.get('exam_code','')
+            from apps.mainapp.classes.query_database import ExamStartSignal
+            ess = ExamStartSignal()
+            end_time = datetime.datetime.now().timetuple()                        
+            end_time = time.mktime(end_time)            
+            ess.insert_exam_start_signal({'exam_code':int(exam_code), 'useruid':request.user.id, 'end':1, 'end_time':end_time})
+            request.session['current_question_number'] = ''
+            return HttpResponse(json.dumps({'status':'ok', 'url':'/result/'+exam_code+'/'}))
         else:
             return HttpResponse(json.dumps({'status':'error', 'message':'Not Authorized for this action'}))
