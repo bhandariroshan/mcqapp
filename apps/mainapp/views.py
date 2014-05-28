@@ -36,7 +36,8 @@ def sign_up_sign_in(request, android_user=False):
     try:
         valid_exams = user['valid_exam']
     except:
-        valid_exams=[100, 101]
+        # valid_exams=[100, 101]
+        valid_exams=[]
 
     try:
         coupons = user['coupons']
