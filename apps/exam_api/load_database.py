@@ -59,7 +59,7 @@ def load_modelquestion_in_database(request):
             x['question_number'] = i + 1
         question_api = QuestionApi()
         question_api.insert_new_question(json_obj)
-        return HttpResponse("Question saved in the database")
+    return HttpResponse("Question saved in the database")
 
 
 def load_correctanswer_in_database(request):

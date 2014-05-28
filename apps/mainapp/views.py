@@ -269,7 +269,8 @@ def attend_exam(request,exam_code):
                 start_question_number = 0
         except:
             start_question_number = 0 
-
+        print sorted_questions
+        print start_question_number
         from apps.mainapp.classes.query_database import AttemptedAnswerDatabase
         atte_ans = AttemptedAnswerDatabase()
         all_answers = atte_ans.find_all_atttempted_answer({'exam_code':exam_code, 'user_id':int(request.user.id)})
