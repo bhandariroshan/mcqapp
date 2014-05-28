@@ -349,8 +349,8 @@ def honorcode(request, exam_code):
             parameters['render_before_exam'] = True
             exam_details['exam_date'] = datetime.datetime.fromtimestamp(int(exam_details['exam_date'])).strftime('%Y-%m-%d')
             parameters['exam_details'] = exam_details
-            return HttpResponse(json.dumps({'msg':'exam not started'}))
-            # return render_to_response('exam_tips_and_honor_code.html', parameters, context_instance=RequestContext(request))        
+            # return HttpResponse(json.dumps({'msg':'exam not started'}))
+            return render_to_response('exam_tips_and_honor_code.html', parameters, context_instance=RequestContext(request))        
     else:
         return HttpResponseRedirect('/')
 
