@@ -50,8 +50,8 @@ class AjaxHandle():
                 user_profile_obj.save_coupon(request.user.username, coupon_code)
 
                 subscription_type = user['subscription_type']
-                #if coupon_code != 'IDP' or 'BE-IOE-071' or 'MBBS-IOM-071' then save the exam code in the valid exams
-                if   'IDP' not in subscription_type and 'BE-IOE-071' not in subscription_type and 'MBBS-IOM-071' not in subscription_type:
+                #if coupon_code != 'IDP' or 'BE-IOE' or 'MBBS-IOM' then save the exam code in the valid exams
+                if   'IDP' not in subscription_type and 'BE-IOE' not in subscription_type and 'MBBS-IOM' not in subscription_type:
                     user_profile_obj.save_valid_exam(request.user.username, exam_code)                    
                 
                 if 'IDP' in subscription_type:

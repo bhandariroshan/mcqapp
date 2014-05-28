@@ -65,7 +65,7 @@ class Coupon():
         # print exam_family, coupon, coupon_code, exam_category
         if coupon != None and coupon['subscription_type']=='IDP':
             return True
-        elif coupon != None and (coupon['subscription_type'] == 'BE-IOE-071' or coupon['subscription_type']=='MBBS-IOM-071'):
+        elif coupon != None and (coupon['subscription_type'] == 'BE-IOE' or coupon['subscription_type']=='MBBS-IOM'):
             return True
         else:
             return False

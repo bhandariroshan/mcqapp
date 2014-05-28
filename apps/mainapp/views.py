@@ -372,15 +372,15 @@ def privacy(request):
 def generate_coupon(request):
     # 1. DPS (Daily Practice Set)
     # 2. CPS (Competitive Pracice Set)
-    # 3. MBBS-IOM-071
-    # 4. BE-IOE-071
+    # 3. MBBS-IOM
+    # 4. BE-IOE
     # 5. IDP (Inter Disciplinary Plan)
     coupon = Coupon()        
     coupon.generate_coupons('IDP')
     coupon.generate_coupons('DPS')
     coupon.generate_coupons('CPS')
-    coupon.generate_coupons('BE-IOE-071')
-    coupon.generate_coupons('MBBS-IOM-071')
+    coupon.generate_coupons('BE-IOE')
+    coupon.generate_coupons('MBBS-IOM')
     return HttpResponse(json.dumps({'status':'success'}))
 
 def get_coupons(request, subscription_type):

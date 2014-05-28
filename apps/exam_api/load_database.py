@@ -19,7 +19,7 @@ def load_examset_in_database(request):
          "image": "exam.jpg",
          "exam_code": 100,
          # "exam_time": "7.00pm",
-         "exam_category": "BE-IOE-071",
+         "exam_category": "BE-IOE",
          "exam_duration": 180,
          "exam_family": 'DPS'
          },
@@ -28,7 +28,7 @@ def load_examset_in_database(request):
          "image": "exam.jpg",
          "exam_code": 101,
          # "exam_time": "7.00pm",
-         "exam_category": "MBBS-IOM-071",
+         "exam_category": "MBBS-IOM",
          "exam_duration": 15,
          "exam_family": 'DPS'
          },
@@ -39,7 +39,7 @@ def load_examset_in_database(request):
          "exam_code": 102,
          "exam_time": "12.00pm",
          "exam_duration": 15,
-         "exam_category": "BE-IOE-071",
+         "exam_category": "BE-IOE",
          "exam_family": 'CPS'
          }
     ]
