@@ -46,6 +46,9 @@ function save_answer(exam_code, question_id, selected_ans,current_question_numbe
 }
 function save_answer_success(data){
 	data = jQuery.parseJSON(data);
+	if (data['status'] == 'TimeElapsedError'){
+		
+	}
 }
 function ajax_honor_code_accept(exam_code){
 	ajax_request('honor_code_accept', 'honor_code_accept_success', {'exam_code':exam_code});
@@ -53,6 +56,16 @@ function ajax_honor_code_accept(exam_code){
 function honor_code_accept_success(data){
 	data = jQuery.parseJSON(data);
 	if (data['status']=='ok'){
+		window.location = data['url'];
+	}
+}
+function ajax_set_exam_finished(exam_code){
+	ajax_request('set_exam_finished', 'set_exam_finished_success', {'exam_code':exam_code})
+}
+function set_exam_finished_success(data){
+	data= jQuery.parseJSON(data);
+	if(data['status'] =='ok'){
+		$('#closegumby').click();
 		window.location = data['url'];
 	}
 }

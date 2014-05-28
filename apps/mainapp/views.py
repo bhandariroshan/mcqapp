@@ -135,8 +135,9 @@ def dashboard(request):
 
 def landing(request):
     if request.user.is_authenticated():
-        exam_obj = Exam()
-        upcoming_exams = exam_obj.get_upcoming_exams()
+        from apps.exam_api.views import ExamHandler
+        exam_handler = ExamHandler()
+        upcoming_exams = exam_handler.list_upcoming_exams()
         parameters = {}        
         up_exams = []
 
@@ -174,29 +175,30 @@ def landing(request):
                 up_exm['subscribed'] = eachExam['exam_code'] in subscribed_exams
 
             up_exm['code'] = eachExam['exam_code']
-            up_exm['exam_time'] = eachExam['exam_time']
+            if eachExam['exam_family'] != 'DPS':
+                up_exm['exam_time'] = eachExam['exam_time']
+                up_exm['exam_date'] = datetime.datetime.fromtimestamp(int(eachExam['exam_date'])).strftime("%A, %d. %B %Y")
             up_exm['exam_category'] = eachExam['exam_category']
             up_exm['exam_family'] = eachExam['exam_family']
             up_exm['image'] = eachExam['image']
-            up_exm['exam_date'] = datetime.datetime.fromtimestamp(int(eachExam['exam_date'])).strftime("%A, %d. %B %Y")
             up_exams.append(up_exm)
 
         parameters['upcoming_exams'] = up_exams
         # print up_exams
 
-        schedule_obj = Schedules()
-        schedules = schedule_obj.get_upcoming_schedules()
-        up_schedules = []
-        for eachSchedule in schedules:
-            up_sch = {}
-            up_sch['name'] = eachSchedule['name']
-            up_sch['code'] = eachSchedule['code']
-            up_sch['schedule_time'] = eachSchedule['schedule_time']
-            up_sch['schedule_category'] = eachSchedule['schedule_category']
-            up_sch['image'] = eachSchedule['image']
-            up_sch['schedule_date'] = datetime.datetime.fromtimestamp(int(eachSchedule['schedule_date'])).strftime("%A, %d. %B %Y")
-            up_schedules.append(up_sch)
-        parameters['upcoming_schedules'] = up_schedules
+        # schedule_obj = Schedules()
+        # schedules = schedule_obj.get_upcoming_schedules()
+        # up_schedules = []
+        # for eachSchedule in schedules:
+        #     up_sch = {}
+        #     up_sch['name'] = eachSchedule['name']
+        #     up_sch['code'] = eachSchedule['code']
+        #     up_sch['schedule_time'] = eachSchedule['schedule_time']
+        #     up_sch['schedule_category'] = eachSchedule['schedule_category']
+        #     up_sch['image'] = eachSchedule['image']
+        #     up_sch['schedule_date'] = datetime.datetime.fromtimestamp(int(eachSchedule['schedule_date'])).strftime("%A, %d. %B %Y")
+        #     up_schedules.append(up_sch)
+        # parameters['upcoming_schedules'] = up_schedules
 
         rank_card_obj = RankCard()
         rank_card = rank_card_obj.get_rank_card(request.user.id, 'IOMMBBSMODEL000')
@@ -220,15 +222,40 @@ def landing(request):
 def attend_exam(request,exam_code):
     user_profile_obj = UserProfile()
     subscribed = user_profile_obj.check_subscribed(request.user.username, exam_code)
+    
     if request.user.is_authenticated() and subscribed:
+        try:
+            honor_code_accept = request.session[str(exam_code)]
+        except:
+            honor_code_accept = False
+
+        if not honor_code_accept:
+            return HttpResponseRedirect('/honorcode/'+str(exam_code) +'/')
+        
         question_obj = QuestionApi()    
         questions = question_obj.find_all_questions({"exam_code": int(exam_code)})
         sorted_questions = sorted(questions, key=lambda k: k['question_number'])
 
         exam_obj = ExammodelApi()
         exam_details = exam_obj.find_one_exammodel({'exam_code':int(exam_code)})
-        exam_details['exam_date'] = datetime.datetime.fromtimestamp(int(exam_details['exam_date'])).strftime('%Y-%m-%d')
+        if exam_details['exam_family'] != 'DPS':
+            exam_details['exam_date'] = datetime.datetime.fromtimestamp(int(exam_details['exam_date'])).strftime('%Y-%m-%d')
 
+        from apps.mainapp.classes.query_database import ExamStartSignal
+        ess = ExamStartSignal()
+
+        validate = ess.check_exam_started({'exam_code':int(exam_code), 'useruid':request.user.id, 'end':1})
+        if validate != None:
+            return HttpResponseRedirect('/results' + str(exam_code) + '/')
+
+        validate = ess.check_exam_started({'exam_code':int(exam_code), 'useruid':request.user.id, 'start':1})
+        if validate != None:
+            time_elapsed = time.mktime(datetime.datetime.now().timetuple()) - validate['start_time']
+            #if time expired give error and redirect to results page
+            #else save answer and update the time
+            if time_elapsed > exam_details['exam_duration']*60:
+                return HttpResponseRedirect('/results/' + str(exam_code) +'/')
+            exam_details['exam_duration'] = exam_details['exam_duration'] - time_elapsed/60
 
         parameters = {}
         parameters['questions'] = json.dumps(sorted_questions)
@@ -237,9 +264,11 @@ def attend_exam(request,exam_code):
         start_question_number = 0 
         try:
             start_question_number = int(request.session['current_question_number'])
+            if start_question_number == '':
+                start_question_number = 0
         except:
             start_question_number = 0 
-        
+
         from apps.mainapp.classes.query_database import AttemptedAnswerDatabase
         atte_ans = AttemptedAnswerDatabase()
         all_answers = atte_ans.find_all_atttempted_answer({'exam_code':exam_code, 'user_id':int(request.user.id)})
@@ -258,29 +287,68 @@ def attend_exam(request,exam_code):
     else:
         return HttpResponseRedirect('/')
 
-def honorcode(request, exam_code):
+def honorcode(request, exam_code):    
+    exam_obj = ExammodelApi()
+    exam_details = exam_obj.find_one_exammodel({'exam_code':int(exam_code)})
     user_profile_obj = UserProfile()
     subscribed = user_profile_obj.check_subscribed(request.user.username, exam_code)
+    parameters = {}
+    parameters['render_before_exam'] = False
     if request.user.is_authenticated() and subscribed:
-        try:
-            honor_code_accept = request.session[str(exam_code)]
-            if honor_code_accept == True:
-                return HttpResponseRedirect('/attend-exam/'+ exam_code +'/')
-        except:
-            pass
-        exam_obj = ExammodelApi()
-        exam_details = exam_obj.find_one_exammodel({'exam_code':int(exam_code)})
-        exam_details['exam_date'] = datetime.datetime.fromtimestamp(int(exam_details['exam_date'])).strftime('%Y-%m-%d')
+        from apps.mainapp.classes.query_database import ExamStartSignal
+        ess = ExamStartSignal()            
+        validate_end = ess.check_exam_started({'exam_code':int(exam_code), 'useruid':request.user.id, 'end':1})
+        if validate_end != None:
+            return HttpResponseRedirect('/results' + str(exam_code) + '/')
 
-        parameters = {}
-        parameters['exam_details'] = exam_details
-        parameters['exam_code'] = exam_code
+        validate_start = ess.check_exam_started({'exam_code':int(exam_code), 'useruid':request.user.id, 'start':1})
         
-        user_profile_obj = UserProfile()
-        user = user_profile_obj.get_user_by_username(request.user.username)
-        parameters['user'] = user
+        current_time = time.mktime(datetime.datetime.now().timetuple())
+        if exam_details['exam_family'] == 'CPS':
+            check_time = exam_details['exam_date']
+        else:
+            if validate_start !=None:
+                check_time = validate_start['start_time']
+            else:                
+                parameters['exam_details'] = exam_details
+                parameters['exam_code'] = exam_code                
 
-        return render_to_response('exam_tips_and_honor_code.html', parameters, context_instance=RequestContext(request))
+                user_profile_obj = UserProfile()
+                user = user_profile_obj.get_user_by_username(request.user.username)
+                parameters['user'] = user                
+                return render_to_response('exam_tips_and_honor_code.html', parameters, context_instance=RequestContext(request))
+
+        if (current_time - check_time)>exam_details['exam_duration']*60:
+            ''' Not available as competitive exam, instead it is a practice exam '''
+            ''' For now redirect to results page '''
+            # parameters['render_after_exam'] = True
+            return HttpResponseRedirect('/results/' + str(exam_code))
+
+        elif ((current_time - check_time) < exam_details['exam_duration']*60) and (current_time > check_time):
+            '''render honor code'''
+            try:
+                if validate_start != None:
+                    honor_code_accept = request.session[str(exam_code)]
+                    if honor_code_accept == True:
+                        return HttpResponseRedirect('/attend-exam/'+ exam_code +'/')
+            except:
+                pass
+            if exam_details['exam_family'] !='DPS':
+                exam_details['exam_date'] = datetime.datetime.fromtimestamp(int(exam_details['exam_date'])).strftime('%Y-%m-%d')
+            parameters['exam_details'] = exam_details
+            parameters['exam_code'] = exam_code                
+
+            user_profile_obj = UserProfile()
+            user = user_profile_obj.get_user_by_username(request.user.username)
+            parameters['user'] = user
+            return render_to_response('exam_tips_and_honor_code.html', parameters, context_instance=RequestContext(request))
+
+        else:
+            parameters['render_before_exam'] = True
+            exam_details['exam_date'] = datetime.datetime.fromtimestamp(int(exam_details['exam_date'])).strftime('%Y-%m-%d')
+            parameters['exam_details'] = exam_details
+            return HttpResponse(json.dumps({'msg':'exam not started'}))
+            # return render_to_response('exam_tips_and_honor_code.html', parameters, context_instance=RequestContext(request))        
     else:
         return HttpResponseRedirect('/')
 
@@ -290,3 +358,31 @@ def subscription(request):
     user = user_profile_obj.get_user_by_username(request.user.username)
     parameters['user'] = user
     return render_to_response('subscription.html', parameters, context_instance=RequestContext(request))
+
+def tos(request):
+    parameters = {}
+    return render_to_response('tos.html', parameters, context_instance=RequestContext(request))
+
+def privacy(request):
+    parameters = {}
+    return render_to_response('privacy.html', parameters, context_instance=RequestContext(request))    
+
+def generate_coupon(request):
+    # 1. DPS (Daily Practice Set)
+    # 2. CPS (Competitive Pracice Set)
+    # 3. MBBS-IOM-071
+    # 4. BE-IOE-071
+    # 5. IDP (Inter Disciplinary Plan)
+    coupon = Coupon()        
+    coupon.generate_coupons('IDP')
+    coupon.generate_coupons('DPS')
+    coupon.generate_coupons('CPS')
+    coupon.generate_coupons('BE-IOE-071')
+    coupon.generate_coupons('MBBS-IOM-071')
+    return HttpResponse(json.dumps({'status':'success'}))
+
+def get_coupons(request, subscription_type):
+    coupon_obj = Coupon()
+    coupons = coupon_obj.get_coupons(subscription_type)
+    return HttpResponse(json.dumps({'status':'ok', 'coupons':coupons}))
+

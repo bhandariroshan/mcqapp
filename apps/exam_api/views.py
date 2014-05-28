@@ -26,7 +26,7 @@ class ExamHandler():
         this function lists the available exam models
         '''
         exam_set = ExammodelApi()
-        exam_list = exam_set.find_all_exammodel({})
+        exam_list = exam_set.find_all_exammodel({})        
         return exam_list
 
     def check_answers(self, exam_code, answer_list):
@@ -77,26 +77,14 @@ def save_user_answers(request):
     '''
     the function receives the information of answer checked by
     user and saved in the answer database
-    '''
+    '''   
     ans = AttemptedAnswerDatabase()
-    question_number = request.POST.get('qid', '')
-    selected_ans = request.POST.get('sans', '')
-    exam_code = request.POST.get('exam_code', '')
-    current_question_number = int(request.POST.get('current_question_number',
-                                                   ''))
+    question_number = request.POST.get('qid','')
+    selected_ans = request.POST.get('sans','')
+    exam_code = request.POST.get('exam_code','')
+    current_question_number = int(request.POST.get('current_question_number',''))
     attempt_time = datetime.datetime.now()
     attempt_time = time.mktime(attempt_time.timetuple())
-    ans.update_upsert_attempted_answer(
-        {
-            'q_id': question_number, 'exam_code': exam_code,
-            'user_id': request.user.id
-        },
-        {
-            'user_id': request.user.id,
-            'q_id': question_number,
-            'exam_code': exam_code,
-            'selected_ans': selected_ans,
-            'attempt_time': int(attempt_time),
-            'q_no': current_question_number
-        }
-    )
+    ans.update_upsert_push(
+        {'user_id':request.user.id,'q_id':question_number,'exam_code':exam_code,'q_no':current_question_number},
+        {'attempt_details':{'selected_ans':selected_ans,'attempt_time':int(attempt_time)}})

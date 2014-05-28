@@ -42,6 +42,13 @@
   {% endif %}
 
   <style type="text/css">
+  
+  .tos-margin{
+    margin-left: 14%;
+    margin-right: 17%;
+    margin-top: 7%;
+  }
+
   .site-header {
       background-color: #134450;
        background-image: none; 
@@ -247,8 +254,8 @@
   <script src="{% static "js/jquery.bxslider.min.js" %}"></script>
   <script src="{% static "js/waypoints.min.js" %}"></script>
   <script src="{% static "js/placeholders.js" %}"></script>
-  <script src="{% static "js/scrollIt.min.js" %}"></script>
   {% if not request.user.is_authenticated %}  
+    <script src="{% static "js/scrollIt.min.js" %}"></script>
     <script type="text/javascript" src="{% static "js/meroans.js" %}"></script>
     <!-- <script type="text/javascript" src="{% static "js/jssor.core.js" %}"></script>
     <script type="text/javascript" src="{% static "js/jssor.utils.js" %}"></script>
@@ -298,7 +305,8 @@ UserVoice.push(['addTrigger', { mode: 'contact', trigger_position: 'right' }]);
 // Autoprompt for Satisfaction and SmartVote (only displayed under certain conditions)
 UserVoice.push(['autoprompt', {}]);
 </script>
-  
+
+{% if not request.user.is_authenticated %}
 <script type="text/javascript">
 $(function(){
   $.scrollIt({
@@ -312,7 +320,7 @@ $(function(){
   });
 });
 </script>
-
+{% endif %}
 {% block footer %}
 {% endblock %}
 

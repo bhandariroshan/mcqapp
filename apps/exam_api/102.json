@@ -1,181 +1,129 @@
 [
     {
         "question": {
-            "text": "The general solution of $ 3cosec^{2}x - 4 = 0 $ is"
+            "text": "Which one of the following is correct"
         },
         "answer": {
             "a": {
-                "text": " $ n\\pi + (-1)^{n}\\frac{\\pi}{3} $ "
+                "text": " $ sin1{^0} > sin1 $ "
             },
             "b": {
-                "text": " $ n\\pi + \\frac{\\pi}{3} $ "
+                "text": " $ sin1{^0} < sin1 $ "
             },
             "c": {
-                "text": " $ n\\pi \\pm \\frac{\\pi}{3} $ "
+                "text": " $ sin1{^0} = sin1 $ "
             },
             "d": {
-                "text": " $ 2n\\pi \\pm \\frac{\\pi}{3} $ "
+                "text": " $ sin1{^0} = \\frac{\\pi}{180}sin1 $ "
+            },
+            "correct": "b"
+        },
+        "subject": "Mathematics",
+        "exam_code": 101
+    },
+    {
+        "question": {
+            "text": "f(x-2) = x then f(x) = "
+        },
+        "answer": {
+            "a": {
+                "text": " x-2 "
+            },
+            "b": {
+                "text": "x + 2$"
+            },
+            "c": {
+                "text": "2x"
+            },
+            "d": {
+                "text": "x + 4"
+            },
+            "correct": "b"
+        },
+        "subject": "Mathematics",
+        "exam_code": 101
+    },
+    {
+        "question": {
+            "text": " which  one is  the best alternative for the root of quadratic equation $ ax{^2}+bx +c=0, a\\neq 0, a,b,c \\epsilon R,  to be real? $ "
+        },
+        "answer": {
+            "a": {
+                "text": " $ b{^2} - 4ac = 0 $ "
+                
+            },
+            "b": {
+                "text": " $ b{^2} - 4ac > 0 $ "
+                
+            },
+            "c": {
+                "text": "$ b{^2} - 4ac \\geq 0 $"
+                
+            },
+            "d": {
+                "text": " $ b{^2} - 4ac < 0 $ "
+                
             },
             "correct": "c"
         },
         "subject": "Mathematics",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
-            "text": " $ [3, \\infty) U (-\\infty, -3] $ is the solution set for the inequality:"
+            "text": "The value of $ \\begin{bmatrix}-a{^2} & ab & ac \\\\ab & -b{^2} & bc \\\\ac &bc & -c{^2}  \\end{bmatrix} $"
         },
         "answer": {
             "a": {
-                "text": " $ |x| \\le 3 $ "
-            },
-            "b": {
-                "text": "$ |x| \\lt 3 $"
-            },
-            "c": {
-                "text": "$ |x| \\ge 3 $"
-            },
-            "d": {
-                "text": "$ |x| \\gt 3 $"
-            },
-            "correct": "c"
-        },
-        "subject": "Mathematics",
-        "exam_code": 100
-    },
-    {
-        "question": {
-            "text": " $ \\frac{1}{3 + \\sqrt{5}} $ "
-        },
-        "answer": {
-            "a": {
-                "text": " $ \\frac{3 + \\sqrt{5}}{4} $ "
+                "text": " $ 4a^{2}b{^2}{c^2} $ "
                 
             },
             "b": {
-                "text": " $ \\frac{3 - \\sqrt{5}}{4} $ "
+                "text": "$ a^{2}b{^2}{c^2} $ "
                 
             },
             "c": {
-                "text": " $ \\frac{3}{14} + \\frac{\\sqrt{5}}{14} $ "
+                "text": " $ 2a^{2}b{^2}{c^2} $  "
                 
             },
             "d": {
-                "text": " $ \\frac{3}{14} - \\frac{\\sqrt{5}}{14} $ "
+                "text": "0"
                 
             },
             "correct": "a"
         },
         "subject": "Mathematics",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
-            "text": "Which one of the following is NOT true for a non singular square matrix A ?"
+            "text": "$ \\int[\\frac{1}{lnx}-\\frac{1}{{(lnx)^2}}]dx $"
         },
         "answer": {
             "a": {
-                "text": " $ A^{2} and A^{3} $ always commute for multiplication."
+                "text": " $ e{^x}lnx +c $ "
                 
             },
             "b": {
-                "text": "A and adj(A) always commute for multiplication"
+                "text": " $ \\frac{x}{lnx} + c $ "
                 
             },
             "c": {
-                "text": " $ (A^{T})^{-1} = (A^{-1})^{T} $ "
+                "text": "$ \\frac{2lnx}{x} + c $"
                 
             },
             "d": {
-                "text": "A adj(A) = |A|"
-                
-            },
-            "correct": "d"
-        },
-        "subject": "Mathematics",
-        "exam_code": 100
-    },
-    {
-        "question": {
-            "text": "$ \\int Sin^{-1}(Cosx)dx $ equals to"
-        },
-        "answer": {
-            "a": {
-                "text": " $ \\frac{\\pi x^{2}}{2} - x + C $ "
-                
-            },
-            "b": {
-                "text": " $ \\frac{\\pi}{2}x - \\frac{x^{2}}{2} + C $ "
-                
-            },
-            "c": {
-                "text": "cosecx + C"
-                
-            },
-            "d": {
-                "text": " $ \\frac{1}{\\sqrt{1-x^{2}}} + C $ "
+                "text": " $ lnx - \\frac{x}{2} + c $ "
                 
             },
             "correct": "b"
         },
         "subject": "Mathematics",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
-            "text": "If the abscissa and ordinate of a point increase at the same rate, then the locus of the point represents"
-        },
-        "answer": {
-            "a": {
-                "text": "family of concentric circles"
-                
-            },
-            "b": {
-                "text": "family parabolas with same vertex"
-                
-            },
-            "c": {
-                "text": "family of parallel lines with slope 1"
-                
-            },
-            "d": {
-                "text": "an empty locus"
-                
-            },
-            "correct": "c"
-        },
-        "subject": "Mathematics",
-        "exam_code": 100
-    },
-    {
-        "question": {
-            "text": " $ \\lim_{x \\rightarrow 0}-\\frac{sin|x|}{x}= $ "
-        },
-        "answer": {
-            "a": {
-                "text": "does not exist"
-                
-            },
-            "b": {
-                "text": "equals to -1"
-                
-            },
-            "c": {
-                "text": "equals to 1"
-                
-            },
-            "d": {
-                "text": "equals to 0"
-                
-            },
-            "correct": "b"
-        },
-        "subject": "Mathematics",
-        "exam_code": 100
-    },
-    {
-        "question": {
-            "text": "If the line 2x - 3y + 4 +k(-x + y + 5) = 0 is horizontal, then the value of k is"
+            "text": "\\lim_{x \rightarrow 0} \\frac{|x|}{x}"
         },
         "answer": {
             "a": {
@@ -187,226 +135,277 @@
                 
             },
             "c": {
-                "text": "2"
+                "text": "-1"
                 
             },
             "d": {
-                "text": "3"
-                
-            },
-            "correct": "c"
-        },
-        "subject": "Mathematics",
-        "exam_code": 100
-    },
-    {
-        "question": {
-            "text": "If $ \\vec{a} $ and $ \\vec{b} $ are unit vectors, then which one of the following is true?"
-        },
-        "answer": {
-            "a": {
-                "text": " $ \\vec{a}.\\vec{b} $ = 0 "
-                
-            },
-            "b": {
-                "text": " $ \\vec{a} \\times\\vec{b} $ = 0 "
-                
-            },
-            "c": {
-                "text": " $ \\vec{a} $ and $ \\vec{b} $ are collinear"
-                
-            },
-            "d": {
-                "text": " $ |\\vec{a}| = |\\vec{b}| $ "
+                "text": "doesn't exist"
                 
             },
             "correct": "d"
         },
         "subject": "Mathematics",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
-            "text": "$ x^{2} - 6xy + 9y^{2} + 4x - 12y + 4 = 0 $ represents"
+            "text": " $ y=e{^{ax+b}} $ then $ \\frac{d{^2}y}{dx{^2}} $ at x = 0 is"
         },
         "answer": {
             "a": {
-                "text": "a pair of perpendicular lines"
+                "text": "$ ae{^b} $"
                 
             },
             "b": {
-                "text": "a pair of parallel lines"
+                "text": "$ a{^2}e{^b} $"
                 
             },
             "c": {
-                "text": "a pair of coincident lines"
+                "text": "$ e{^b} $"
                 
             },
             "d": {
-                "text": "a parabola"
+                "text": "e{^a}e{^b}"
                 
             },
             "correct": "b"
         },
         "subject": "Mathematics",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
-            "text": "Locate the word with /m/ sound in the final position"
+            "text": "The number of spheres of a given radius and touching the co-ordinate plane is"
         },
         "answer": {
             "a": {
-                "text": "comb"
+                "text": "4"
                 
             },
             "b": {
-                "text": "thumb"
+                "text": "6"
                 
             },
             "c": {
-                "text": "some"
+                "text": "5"
                 
             },
             "d": {
-                "text": " all of the above"
+                "text": "8"
+                
+            },
+            "correct": "d"
+        },
+        "subject": "Mathematics",
+        "exam_code": 101
+    },
+    {
+        "question": {
+            "text": "If $ \\vec{a} $ , $ \\vec{b} $, $ \\vec{c} $ are unit vectors with relation $ \\vec{a} + \\vec{b} + \\vec{c} = 0 $, what is the angle between $ \\vec{b} and \\vec{c} $"
+        },
+        "answer": {
+            "a": {
+                "text": " $ \\frac{\\pi}{3} $ "
+                
+            },
+            "b": {
+                "text": " $ \\frac{2\\pi}{3} $ "
+                
+            },
+            "c": {
+                "text": "$ \\frac{3\\pi}{4} $"
+                
+            },
+            "d": {
+                "text": "$ \\frac{\\pi}{6} $"
+                
+            },
+            "correct": "b"
+        },
+        "subject": "Mathematics",
+        "exam_code": 101
+    },
+    {
+        "question": {
+            "text": "The are of triangle with two vertices (1,2), (4,5) and centroid (0,0) is"
+        },
+        "answer": {
+            "a": {
+                "text": "$ \\frac {1}{2} $"
+                
+            },
+            "b": {
+                "text": "$ \\frac {3}{2} $"
+                
+            },
+            "c": {
+                "text": "$ \\frac {7}{2} $"
+                
+            },
+            "d": {
+                "text": "$ \\frac {9}{2} $"
+                
+            },
+            "correct": "a"
+        },
+        "subject": "Mathematics",
+        "exam_code": 101
+    },
+    {
+        "question": {
+            "text": "The initial sound of the word 'eight' represents the phonemic"
+        },
+        "answer": {
+            "a": {
+                "text": "/e/"
+                
+            },
+            "b": {
+                "text": "/ei/"
+                
+            },
+            "c": {
+                "text": "/)I/"
+                
+            },
+            "d": {
+                "text": "/aI/"
+                
+            },
+            "correct": "b"
+        },
+        "subject": "English",
+        "exam_code": 101
+    },
+    {
+        "question": {
+            "text": "How many different consonants does the word 'momentum' consist of?"
+        },
+        "answer": {
+            "a": {
+                "text": "3 each"
+                
+            },
+            "b": {
+                "text": "4 each"
+                
+            },
+            "c": {
+                "text": "5 and 3"
+                
+            },
+            "d": {
+                "text": "4 and 3"
                 
             },
             "correct": "a"
         },
         "subject": "English",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
-            "text": "Identify the odd option in incase of nasal sound"
+            "text": "Which of the underlined constituents is a present participle?"
         },
         "answer": {
             "a": {
-                "text": "none"
+                "text": "<u>Hunting</u>, tiger is a favorite sport. "
                 
             },
             "b": {
-                "text": "mine"
+                "text": "<u>Hunting</u>, we were arrested"
                 
             },
             "c": {
-                "text": "king"
+                "text": "Hunting tiger is a favorite sport"
                 
             },
             "d": {
-                "text": "nanny"
+                "text": "None"
                 
             },
             "correct": "b"
         },
         "subject": "English",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
-            "text": "He said, 'Bring your book Ram'."
+            "text": "Which of the following sentences is correct?"
         },
         "answer": {
             "a": {
-                "text": "He said to bring his book"
+                "text": "The fan is hanging on the ceiling."
                 
             },
             "b": {
-                "text": "He told Ram to bring your book"
+                "text": "The fan is hanging into the ceiling."
                 
             },
             "c": {
-                "text": "He told Ram to bring his book"
+                "text": "The fan is hanging from the ceiling."
                 
             },
             "d": {
-                "text": "He told Ram not to bring his book"
+                "text": "The fan is hanging unto the ceiling."
                 
             },
             "correct": "c"
         },
         "subject": "English",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
-            "text": "The students said, 'Let us play Sir'."
+            "text": "The pattern of the sentence 'I saw her glaring at me' is "
         },
         "answer": {
             "a": {
-                "text": "The students suggested playing"
+                "text": "S + $ V_t $ + O + present participle"
                 
             },
             "b": {
-                "text": "The students requested him to let them play"
+                "text": "S + $ V_1 $ + O + present participle"
                 
             },
             "c": {
-                "text": "The students requested him to let us play"
+                "text": "S + $ V_t $ + O + present participle + PP"
                 
             },
             "d": {
-                "text": "The students requested him to play"
+                "text": "None"
                 
             },
-            "correct": "b"
+            "correct": "a"
         },
         "subject": "English",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
-            "text": "I went to bed after I ---- television."
+            "text": "Which of the time expression is correct? "
         },
         "answer": {
             "a": {
-                "text": "was watching"
-                
+                "text": "9:30"                
             },
             "b": {
-                "text": "watched"
-                
+                "text": "9;30"                
             },
             "c": {
-                "text": "had watched"
+                "text": "9.30"
                 
             },
             "d": {
-                "text": "an watching"
+                "text": "9-30"
                 
             },
-            "correct": "c"
+            "correct": "a"
         },
         "subject": "English",
-        "exam_code": 100
+        "exam_code": 101
     },
-    {
-        "question": {
-            "text": "She ---- her work when the bell rang"
-        },
-        "answer": {
-            "a": {
-                "text": "shall do"
-                
-            },
-            "b": {
-                "text": "was doing"
-                
-            },
-            "c": {
-                "text": "will do"
-                
-            },
-            "d": {
-                "text": "am doing"
-                
-            },
-            "correct": "b"
-        },
-        "subject": "English",
-        "exam_code": 100
-    },
+    ==================17
     {
         "question": {
             "text": "Which sentence is correctly punctuated? The company  needs ----- employees."
@@ -431,7 +430,7 @@
             "correct": "c"
         },
         "subject": "English",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -457,7 +456,7 @@
             "correct": "d"
         },
         "subject": "English",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -483,7 +482,7 @@
             "correct": "d"
         },
         "subject": "English",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -509,7 +508,7 @@
             "correct": "a"
         },
         "subject": "English",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -535,7 +534,7 @@
             "correct": "c"
         },
         "subject": "English",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -561,7 +560,7 @@
             "correct": "d"
         },
         "subject": "English",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -587,7 +586,7 @@
             "correct": "c"
         },
         "subject": "English",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -613,7 +612,7 @@
             "correct": "c"
         },
         "subject": "English",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -639,7 +638,7 @@
             "correct": "a"
         },
         "subject": "English",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -665,7 +664,7 @@
             "correct": "b"
         },
         "subject": "Physics",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -691,7 +690,7 @@
             "correct": "d"
         },
         "subject": "Physics",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -717,7 +716,7 @@
             "correct": "c"
         },
         "subject": "Physics",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -743,7 +742,7 @@
             "correct": "d"
         },
         "subject": "Physics",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -769,7 +768,7 @@
             "correct": "b"
         },
         "subject": "Physics",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -795,7 +794,7 @@
             "correct": "a"
         },
         "subject": "Physics",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -821,7 +820,7 @@
             "correct": "b"
         },
         "subject": "Physics",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -847,7 +846,7 @@
             "correct": "d"
         },
         "subject": "Physics",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -873,7 +872,7 @@
             "correct": "b"
         },
         "subject": "Physics",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -899,7 +898,7 @@
             "correct": "d"
         },
         "subject": "Physics",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -925,7 +924,7 @@
             "correct": "b"
         },
         "subject": "Physics",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -951,7 +950,7 @@
             "correct": "c"
         },
         "subject": "Chemistry",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -977,7 +976,7 @@
             "correct": "a"
         },
         "subject": "Chemistry",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -1003,7 +1002,7 @@
             "correct": "c"
         },
         "subject": "Chemistry",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -1029,7 +1028,7 @@
             "correct": "b"
         },
         "subject": "Chemistry",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -1055,7 +1054,7 @@
             "correct": "d"
         },
         "subject": "Chemistry",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -1081,7 +1080,7 @@
             "correct": "c"
         },
         "subject": "Chemistry",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -1107,7 +1106,7 @@
             "correct": "c"
         },
         "subject": "Chemistry",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -1133,7 +1132,7 @@
             "correct": "d"
         },
         "subject": "Chemistry",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -1159,7 +1158,7 @@
             "correct": "d"
         },
         "subject": "Chemistry",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -1185,7 +1184,7 @@
             "correct": "a"
         },
         "subject": "Chemistry",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -1211,7 +1210,7 @@
             "correct": "d"
         },
         "subject": "Chemistry",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -1237,7 +1236,7 @@
             "correct": "b"
         },
         "subject": "Chemistry",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -1263,7 +1262,7 @@
             "correct": "d"
         },
         "subject": "Chemistry",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -1289,7 +1288,7 @@
             "correct": "b"
         },
         "subject": "Chemistry",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -1315,7 +1314,7 @@
             "correct": "a"
         },
         "subject": "Drawing",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -1341,7 +1340,7 @@
             "correct": "d"
         },
         "subject": "Drawing",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -1367,7 +1366,7 @@
             "correct": "c"
         },
         "subject": "Drawing",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -1393,7 +1392,7 @@
             "correct": "b"
         },
         "subject": "Drawing",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -1419,7 +1418,7 @@
             "correct": "a"
         },
         "subject": "Drawing",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -1445,7 +1444,7 @@
             "correct": "c"
         },
         "subject": "Drawing",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -1471,7 +1470,7 @@
             "correct": "a"
         },
         "subject": "Drawing",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -1497,7 +1496,7 @@
             "correct": "d"
         },
         "subject": "Drawing",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -1523,7 +1522,7 @@
             "correct": "d"
         },
         "subject": "Drawing",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -1549,7 +1548,7 @@
             "correct": "d"
         },
         "subject": "Drawing",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -1575,7 +1574,7 @@
             "correct": "d"
         },
         "subject": "Drawing",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -1601,7 +1600,7 @@
             "correct": "d"
         },
         "subject": "Mathematics",
-        "exam_code": 100
+        "exam_code": 101
     },    
     {
         "question": {
@@ -1627,7 +1626,7 @@
             "correct": "b"
         },
         "subject": "Mathematics",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -1653,7 +1652,7 @@
             "correct": "b"
         },
         "subject": "Mathematics",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -1679,7 +1678,7 @@
             "correct": "b"
         },
         "subject": "Mathematics",
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -1706,7 +1705,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -1733,7 +1732,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -1760,7 +1759,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -1787,7 +1786,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -1814,7 +1813,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },    
     {
         "question": {
@@ -1841,7 +1840,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },    
     {
         "question": {
@@ -1868,7 +1867,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },    
     {
         "question": {
@@ -1895,7 +1894,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -1922,7 +1921,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },    
     {
         "question": {
@@ -1949,7 +1948,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },        
     {
         "question": {
@@ -1976,7 +1975,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -2003,7 +2002,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },     
     {
         "question": {
@@ -2030,7 +2029,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },    
     {
         "question": {
@@ -2057,7 +2056,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },     
     {
         "question": {
@@ -2084,7 +2083,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     }, 
     {
         "question": {
@@ -2111,7 +2110,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -2138,7 +2137,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -2165,7 +2164,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -2192,7 +2191,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -2220,7 +2219,7 @@
         },
         "subject": "English",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -2248,7 +2247,7 @@
         },
         "subject": "English",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -2276,7 +2275,7 @@
         },
         "subject": "English",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -2304,7 +2303,7 @@
         },
         "subject": "English",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -2332,7 +2331,7 @@
         },
         "subject": "English",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -2359,7 +2358,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -2386,7 +2385,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -2413,7 +2412,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -2440,7 +2439,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -2467,7 +2466,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -2494,7 +2493,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -2521,7 +2520,7 @@
         },
         "subject": "Mathematics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -2548,7 +2547,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -2575,7 +2574,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -2602,7 +2601,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -2629,7 +2628,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -2656,7 +2655,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -2683,7 +2682,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -2710,7 +2709,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -2737,7 +2736,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -2764,7 +2763,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -2791,7 +2790,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -2818,7 +2817,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -2845,7 +2844,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -2872,7 +2871,7 @@
         },
         "subject": "Physics",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -2899,7 +2898,7 @@
         },
         "subject": "Chemistry",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -2926,7 +2925,7 @@
         },
         "subject": "Chemistry",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -2953,7 +2952,7 @@
         },
         "subject": "Chemistry",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -2980,7 +2979,7 @@
         },
         "subject": "Chemistry",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -3007,7 +3006,7 @@
         },
         "subject": "Chemistry",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -3035,7 +3034,7 @@
         },
         "subject": "Drawing",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -3067,7 +3066,7 @@
         },
         "subject": "Drawing",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -3095,7 +3094,7 @@
         },
         "subject": "Drawing",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -3123,7 +3122,7 @@
         },
         "subject": "Drawing",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     },
     {
         "question": {
@@ -3151,6 +3150,6 @@
         },
         "subject": "Drawing",
         "marks":2,
-        "exam_code": 100
+        "exam_code": 101
     }
 ]

@@ -78,6 +78,24 @@
         </div>
       </div>
     </div>    
+    <div id="trigger_gumby_div" style="visibility:hidden;" class="pretty medium primary btn switch" gumby-trigger="#modalwarning"></div>
+    <div class="modal" id="modalwarning">
+      <div class="content">
+        <a id= "closegumby" class="close switch" gumby-trigger="|#modalwarning"><i class="icon-cancel" /></i></a>
+        <div class="row">
+          <div id="dangerMessage"></div>
+          <div class="ten columns centered text-center" style="margin-top:6%;">
+            <p id="infoText">You have successfully reached the end of this exam. What would you like to do?</p>
+              <li class="prepend field">
+                <div class="medium primary btn" >
+                  <a href="#" onclick="set_exam_finished()">Submit</a>
+                  <a id="reviewAns" href="#" onclick="review()">Review</a>
+                </div>
+              </li>
+          </div>
+        </div>
+      </div>
+    </div>    
 {% endblock %}
 {% block javascript %}
 <script type="text/x-mathjax-config">
@@ -124,4 +142,12 @@ var exam_duration = {{exam_details.exam_duration}};
 </script>
 <script src="/static/js/ajax-handle.js"></script>
 <script src="/static/js/exam.js"></script>
+<script type="text/javascript">
+  function set_exam_finished(){
+    ajax_set_exam_finished(exam_code);
+  }
+  function review(){
+    $('#closegumby').click();
+  }
+</script>
 {% endblock %}
