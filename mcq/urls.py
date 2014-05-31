@@ -4,7 +4,6 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns(
-
     '',
     url(r'^$', 'apps.mainapp.views.landing'),
     url(r'^latex-store$', 'apps.mainapp.views.add_html'),
@@ -20,5 +19,5 @@ urlpatterns = patterns(
     url(r'^', include('apps.mainapp.urls', app_name='mainapp')),
     url(r'^exam/', include('apps.exam_api.urls', app_name='exam_api')),
     url(r'^subscription/', 'apps.mainapp.views.subscription'),
+    url(r'^results/(?P<exam_code>\w{1,15})', 'apps.mainapp.views.results'),
 )
-

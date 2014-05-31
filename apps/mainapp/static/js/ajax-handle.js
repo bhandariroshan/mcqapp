@@ -59,12 +59,18 @@ function honor_code_accept_success(data){
 		window.location = data['url'];
 	}
 }
-function ajax_set_exam_finished(exam_code){
-	ajax_request('set_exam_finished', 'set_exam_finished_success', {'exam_code':exam_code})
+function ajax_set_exam_finished(exam_code, redirect){
+	if (redirect){
+		ajax_request('set_exam_finished', 'set_exam_finished_success', {'exam_code':exam_code,'redirect':1});
+	}
+	else{
+		ajax_request('set_exam_finished', 'set_exam_finished_success', {'exam_code':exam_code, 'redirect':0});		
+	}
 }
 function set_exam_finished_success(data){
 	data= jQuery.parseJSON(data);
-	if(data['status'] =='ok'){
+	dat = data;	
+	if(data['status'] =='ok' && data['redirect'] == '1'){
 		$('#closegumby').click();
 		window.location = data['url'];
 	}

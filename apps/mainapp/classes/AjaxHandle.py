@@ -7,6 +7,10 @@ import json
 from apps.mainapp.classes.Coupon import Coupon
 from apps.mainapp.classes.Userprofile import UserProfile
 import datetime, time
+from apps.mainapp.classes.query_database import ExammodelApi
+
+from apps.mainapp.classes.query_database import ExamStartSignal
+from apps.mainapp.classes.query_database import HonorCodeAcceptSingal
 
 ACCESS_TOKEN = ''
 ACCESS_TOKEN_SECRET = ''
@@ -29,19 +33,14 @@ class AjaxHandle():
             if exam_code !='subs':
                 up_exm = exam_obj.get_exam_detail(int(exam_code))
             else:                
-                print "Roshan"
                 if coupon_obj.has_susbcription_plan_in_coupon(coupon_code):
-                    print "Username"
                     coupon_obj.change_used_status_of_coupon(coupon_code, request.user.username) 
                     user_profile_obj.change_subscription_plan(request.user.username, coupon_code)                
                     user_profile_obj.save_coupon(request.user.username, coupon_code)
                     return HttpResponse(json.dumps({'status':'ok','url':'/'}))
                 else:
-                    print "Bhandari"
                     return HttpResponse(json.dumps({'status':'error','message':'Invalid Coupon code.'}))
 
-            # if exam_code.strip() != 'sample' and coupon_code.lower()=='sample-1234':
-            #     return HttpResponse(json.dumps({'status':'error','message':'Invalid Coupon code.'}))
 
             if coupon_obj.validate_coupon(coupon_code, up_exm['exam_category'], up_exm['exam_family']) == True:
                 #save the coupon code in user's couponcode array 
@@ -49,11 +48,13 @@ class AjaxHandle():
                 user_profile_obj.change_subscription_plan(request.user.username, coupon_code)                
                 user_profile_obj.save_coupon(request.user.username, coupon_code)
 
+                #Refreshment of user
+                user = user_profile_obj.get_user_by_username(request.user.username)
                 subscription_type = user['subscription_type']
                 #if coupon_code != 'IDP' or 'BE-IOE' or 'MBBS-IOM' then save the exam code in the valid exams
                 if   'IDP' not in subscription_type and 'BE-IOE' not in subscription_type and 'MBBS-IOM' not in subscription_type:
                     user_profile_obj.save_valid_exam(request.user.username, exam_code)                    
-                
+
                 if 'IDP' in subscription_type:
                     return HttpResponse(json.dumps({'status':'ok','url':'/honorcode/' + exam_code}))
 
@@ -61,7 +62,7 @@ class AjaxHandle():
                     return HttpResponse(json.dumps({'status':'ok','url':'/honorcode/' + exam_code}))
                 else:
                     subscribed_exams = user_profile_obj.get_subscribed_exams(request.user.username)
-                    if exam_code in subscribed_exams:
+                    if int(exam_code) in subscribed_exams:
                         return HttpResponse(json.dumps({'status':'ok','url':'/honorcode/' + exam_code}))
                     else:
                         return HttpResponse(json.dumps({'status':'error','message':'Invalid Coupon code.'}))
@@ -89,10 +90,10 @@ class AjaxHandle():
     def save_answer(self, request):
         if request.user.is_authenticated():
             from apps.exam_api.views import save_user_answers
-            from apps.mainapp.classes.query_database import ExamStartSignal
+            from apps.mainapp.classes.query_database import ExamStartSignal, CurrentQuestionNumber
             ess = ExamStartSignal()
             exam_code =request.POST.get('exam_code','')
-            validate = ess.check_exam_started({'exam_code':int(exam_code), 'useruid':request.user.id, 'start':1})
+            validate = ess.check_exam_started({'exam_code':int(exam_code), 'useruid':request.user.id, 'start':1,'end':0})
             if validate != None:
                 from apps.mainapp.classes.query_database import ExammodelApi
                 ema = ExammodelApi()
@@ -102,9 +103,14 @@ class AjaxHandle():
                 if time_elapsed > exam_details['exam_duration']*60:
                     return HttpResponse(json.dumps({'status':'TimeElapsedError', 'message':'Time has elapsed'}))
                 else:
-                    save_user_answers(request)
+                    save_user_answers(request, int(validate['start_time']))
                     # if request.session.get('has_commented', False):
-                    request.session['current_question_number'] = int(request.POST.get('current_question_number',''))+1
+                    cqn = CurrentQuestionNumber()
+                    cqn.update_current_question_number({
+                        'ess_time':int(validate['start_time']),
+                        'exam_code':int(exam_code),
+                        'useruid':request.user.id
+                        }, {'cqn':int(request.POST.get('current_question_number',''))+1})
                     request.session['exam_code'] = request.POST.get('exam_code','')
                     return HttpResponse(json.dumps({'status':'ok', 'message':'Answer successfully saved'}))
             else:
@@ -116,17 +122,34 @@ class AjaxHandle():
         if request.user.is_authenticated():
             exam_code = request.POST.get('exam_code','')
             request.session[exam_code] = True
-            from apps.mainapp.classes.query_database import ExamStartSignal
+
             ess = ExamStartSignal()
-            print exam_code 
-            print request.POST
-            print int(exam_code)
-            validate = ess.check_exam_started({'exam_code':int(exam_code), 'useruid':request.user.id, 'start':1})
-            if validate == None:
-                start_time = datetime.datetime.now().timetuple()                        
-                start_time = time.mktime(start_time)
-                ess.insert_exam_start_signal({'exam_code':int(exam_code), 'useruid':request.user.id, 'start':1, 'start_time':start_time})
-            return HttpResponse(json.dumps({'status':'ok', 'url':'/attend-exam/'+exam_code+'/'}))
+            exam_obj = ExammodelApi()
+            exam_details = exam_obj.find_one_exammodel({'exam_code':int(exam_code)})            
+            exam_duration = exam_details['exam_duration'] * 60
+
+
+            validate = ess.check_exam_started({
+                'exam_code':int(exam_code), 
+                'useruid':request.user.id, 
+                'start':1, 
+                'end':0})
+            
+            start_time = datetime.datetime.now().timetuple()                        
+            start_time = time.mktime(start_time)
+
+            h_a_s = HonorCodeAcceptSingal()
+            h_a_s.update_honor_code_accept_Signal({'useruid':request.user.id, 
+                'exam_code':int(exam_code), 'ess_time':int(start_time)},{'accept':1})
+            
+            ess.insert_exam_start_signal({
+                'exam_code':int(exam_code), 
+                'useruid':request.user.id, 
+                'start':1, 
+                'start_time':int(start_time),
+                'end':0
+            })
+            return HttpResponse(json.dumps({'status':'ok', 'url':'/attend-exam/'+ exam_code + '/'}))
         else:
             return HttpResponse(json.dumps({'status':'error', 'message':'Not Authorized for this action'}))
 
@@ -134,12 +157,31 @@ class AjaxHandle():
     def set_exam_finished(self, request):
         if request.user.is_authenticated():
             exam_code = request.POST.get('exam_code','')
-            from apps.mainapp.classes.query_database import ExamStartSignal
+            redirect = request.POST.get('redirect','')
             ess = ExamStartSignal()
             end_time = datetime.datetime.now().timetuple()                        
-            end_time = time.mktime(end_time)            
-            ess.insert_exam_start_signal({'exam_code':int(exam_code), 'useruid':request.user.id, 'end':1, 'end_time':end_time})
+            end_time = time.mktime(end_time) 
+
+            validate = ess.check_exam_started({
+                'exam_code':int(exam_code), 
+                'useruid':request.user.id, 
+                'start':1, 
+                'end':0})           
+            
+            h_a_s = HonorCodeAcceptSingal()
+            h_a_s.update_honor_code_accept_Signal({
+                'useruid':request.user.id, 
+                'exam_code':int(exam_code), 
+                'ess_time':int(validate['start_time'])},{'accept':0})            
+
+            ess.update_exam_start_signal({
+                'exam_code':int(exam_code), 
+                'useruid':request.user.id, 
+                'start':1},{'end':1,'start':0, 'end_time':end_time})
             request.session['current_question_number'] = ''
-            return HttpResponse(json.dumps({'status':'ok', 'url':'/result/'+exam_code+'/'}))
+            if redirect=='1':
+                return HttpResponse(json.dumps({'status':'ok', 'redirect':1 ,'url':'/results/'+exam_code+'/'}))
+            else:
+                return HttpResponse(json.dumps({'status':'ok', 'redirect':0}))
         else:
             return HttpResponse(json.dumps({'status':'error', 'message':'Not Authorized for this action'}))

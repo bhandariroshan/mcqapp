@@ -148,6 +148,7 @@
 </head>
 <body class="{% if request.user.is_authenticated %} bgimage {% endif %} over" >
   <div class="navbar fixed" id="nav1" gumby-fixed="top" data-target="top" style="top: 0px;">
+    <a class="toggle" gumby-trigger="#nav1 > ul" href="#"><i class="icon-menu"></i></a>
     {% if request.user.is_authenticated %}<div class="row">{% endif %}
       <h2 class="columns logo">
         <a href="/" data-scroll-nav="0">
