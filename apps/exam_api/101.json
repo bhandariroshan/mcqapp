@@ -1,0 +1,800 @@
+[
+    {
+        "question": {
+            "text": "Which of the following system of units cannot enter into fundamental units?"
+        },
+        "answer": {
+            "a": {
+                "text": "length, mass and time"
+            },
+            "b": {
+                "text": "velocity, frequency and acceleration"
+            },
+            "c": {
+                "text": "energy, force and density"
+            },
+            "d": {
+                "text": "volume, time period and density"
+            },
+            "correct": "b"
+        },
+        "subject": "Physics",
+        "exam_code": 101
+    },
+    {
+        "question": {
+            "text": "A vehicle moving along a straight road covers half distance of its journey at 40 km/h and next half distance at 60 km/h in same direction. The average velocity for entire journey is"
+        },
+        "answer": {
+            "a": {
+                "text": "45 km/h"
+            },
+            "b": {
+                "text": "48 km/h"
+            },
+            "c": {
+                "text": "54 km/h"
+            },
+            "d": {
+                "text": "50 km/h"
+            },
+            "correct": "b"
+        },
+        "subject": "Physics",
+        "exam_code": 101
+    },
+    {
+        "question": {
+            "text": "A 60 kg man pushes a 40 kg man by a force of 60 N. The 40 kg man has pushed the other man with a force of:"
+        },
+        "answer": {
+            "a": {
+                "text": "40 N"
+                
+            },
+            "b": {
+                "text": "0"
+                
+            },
+            "c": {
+                "text": "60 N"
+                
+            },
+            "d": {
+                "text": "20 N"
+                
+            },
+            "correct": "c"
+        },
+        "subject": "Physics",
+        "exam_code": 101
+    },
+    {
+        "question": {
+            "text": "A body is moved through certain distance from rest under constant force. Then K.E. gained by the body is:"
+        },
+        "answer": {
+            "a": {
+                "text": "directly proportional to its mass"
+                
+            },
+            "b": {
+                "text": "inversely proportional to its mass"
+                
+            },
+            "c": {
+                "text": "directly proportional to square root of mass"
+                
+            },
+            "d": {
+                "text": "independent of its mass"
+                
+            },
+            "correct": "d"
+        },
+        "subject": "Physics",
+        "exam_code": 101
+    },
+    {
+        "question": {
+            "text": "At what height from earth, g becomes g/2?"
+        },
+        "answer": {
+            "a": {
+                "text": "R/2"
+                
+            },
+            "b": {
+                "text": "0.414 R"
+                
+            },
+            "c": {
+                "text": "0.7 R"
+                
+            },
+            "d": {
+                "text": "R"
+                
+            },
+            "correct": "b"
+        },
+        "subject": "Physics",
+        "exam_code": 101
+    },
+    {
+        "question": {
+            "text": "When a particle executing SHM is just midway from mean position to extreme position, then ratio of its KE and PE will be:"
+        },
+        "answer": {
+            "a": {
+                "text": "1:1"
+                
+            },
+            "b": {
+                "text": "2:1"
+                
+            },
+            "c": {
+                "text": " $ \\sqrt{2}: 1 $ "
+                
+            },
+            "d": {
+                "text": "3:1"
+                
+            },
+            "correct": "d"
+        },
+        "subject": "Physics",
+        "exam_code": 101
+    },
+    {
+        "question": {
+            "text": "If Young's modulus of iron is $ 2 \\times 10^{11} N/m^{2} $ and the interatomic spacing between two molecules is $ 3 \\times 10^{-10} m $, the interatomic force constant is:"
+        },
+        "answer": {
+            "a": {
+                "text": "60 N/m"
+                
+            },
+            "b": {
+                "text": "120 N/m"
+                
+            },
+            "c": {
+                "text": "3 N/m"
+                
+            },
+            "d": {
+                "text": "180 N/m"
+                
+            },
+            "correct": "a"
+        },
+        "subject": "Physics",
+        "exam_code": 101
+    },
+    {
+        "question": {
+            "text": "When two soap bubbles of radii 3 mm and 4 mm coalesce, the radius of curvature of common interface is:"
+        },
+        "answer": {
+            "a": {
+                "text": "5 mm"
+                
+            },
+            "b": {
+                "text": "3.5 mm"
+                
+            },
+            "c": {
+                "text": "12 mm"
+                
+            },
+            "d": {
+                "text": "7 mm"
+                
+            },
+            "correct": "c"
+        },
+        "subject": "Physics",
+        "exam_code": 101
+    },
+    {
+        "question": {
+            "text": "When an electron moves through a uniform magnetic field, its speed:"
+        },
+        "answer": {
+            "a": {
+                "text": "increases"
+                
+            },
+            "b": {
+                "text": "decreases"
+                
+            },
+            "c": {
+                "text": "remains constant"
+                
+            },
+            "d": {
+                "text": "depends in field"
+                
+            },
+            "correct": "c"
+        },
+        "subject": "Physics",
+        "exam_code": 101
+    },
+    {
+        "question": {
+            "text": "The de-Broglie wavelength of neutron at $ 927^{o}C $ is $ \\lambda $. What will be its wavelength at $ 27^{o}C $?"
+        },
+        "answer": {
+            "a": {
+                "text": " $ 2\\lambda $ "
+                
+            },
+            "b": {
+                "text": " $ \\lambda/2 $ "
+                
+            },
+            "c": {
+                "text": " $ 4\\lambda $ "
+                
+            },
+            "d": {
+                "text": " $ \\lambda/4 $ "
+                
+            },
+            "correct": "a"
+        },
+        "subject": "Physics",
+        "exam_code": 101
+    },
+    {
+        "question": {
+            "text": "X-ray are produced by energy changes in:"
+        },
+        "answer": {
+            "a": {
+                "text": "electrons close to the nucleus"
+                
+            },
+            "b": {
+                "text": "electrons far from the nucleus"
+                
+            },
+            "c": {
+                "text": "electrons and protons"
+                
+            },
+            "d": {
+                "text": "the nucleus"
+                
+            },
+            "correct": "a"
+        },
+        "subject": "Physics",
+        "exam_code": 101
+    },
+    {
+        "question": {
+            "text": "If total energy of electron is $ E_{o} $. Then its PE is:"
+        },
+        "answer": {
+            "a": {
+                "text": " $ E_{o} $ "
+                
+            },
+            "b": {
+                "text": " $ 2E_{o} $ "
+                
+            },
+            "c": {
+                "text": " $ E_{o}/2 $ "
+                
+            },
+            "d": {
+                "text": " $ E_{o} $ "
+                
+            },
+            "correct": "b"
+        },
+        "subject": "Physics",
+        "exam_code": 101
+    },
+    {
+        "question": {
+            "text": "The rate of decay of a radioactive element:"
+        },
+        "answer": {
+            "a": {
+                "text": "increases with increase in time"
+                
+            },
+            "b": {
+                "text": "decreases with increase in time"
+                
+            },
+            "c": {
+                "text": "remains constant with increase in time"
+                
+            },
+            "d": {
+                "text": "decreases exponentially with time"
+                
+            },
+            "correct": "d"
+        },
+        "subject": "Physics",
+        "exam_code": 101
+    },
+    {
+        "question": {
+            "text": "The silicon semiconductor formed by doping trivalent atoms will be?"
+        },
+        "answer": {
+            "a": {
+                "text": "n-type"
+                
+            },
+            "b": {
+                "text": "p-type"
+                
+            },
+            "c": {
+                "text": "n-p-n type"
+                
+            },
+            "d": {
+                "text": "p-n-p type"
+                
+            },
+            "correct": "b"
+        },
+        "subject": "Physics",
+        "exam_code": 101
+    },
+    {
+        "question": {
+            "text": "On heating liquid of cubical expansion $ \\alpha $ in a container having linear expansion $ \\alpha/3 $ , the level of liquid in the container will:"
+        },
+        "answer": {
+            "a": {
+                "text": "rise"
+                
+            },
+            "b": {
+                "text": "fall"
+                
+            },
+            "c": {
+                "text": "remains almost stationary"
+                
+            },
+            "d": {
+                "text": "unpredictable"
+                
+            },
+            "correct": "c"
+        },
+        "subject": "Physics",
+        "exam_code": 101
+    },
+    {
+        "question": {
+            "text": "On a particular day the relative humidity is 100 % and the room temperature is $ 30^{o}C $, then dew point is:"
+        },
+        "answer": {
+            "a": {
+                "text": " $ 0^{o}C $ "
+                
+            },
+            "b": {
+                "text": " $ 30^{o}C $ "
+                
+            },
+            "c": {
+                "text": " $ 70^{o}C $ "
+                
+            },
+            "d": {
+                "text": " $ 100^{o}C $ "
+                
+            },
+            "correct": "b"
+        },
+        "subject": "Physics",
+        "exam_code": 101
+    },
+    {
+        "question": {
+            "text": "The most appropriate material for making a cooking pot is the one having:"
+        },
+        "answer": {
+            "a": {
+                "text": "low specific heat and high conductivity"
+                
+            },
+            "b": {
+                "text": "low specific heat and low conductivity"
+                
+            },
+            "c": {
+                "text": "high specific heat and low conductivity"
+                
+            },
+            "d": {
+                "text": "high specific heat and high conductivity"
+                
+            },
+            "correct": "a"
+        },
+        "subject": "Physics",
+        "exam_code": 101
+    },
+    {
+        "question": {
+            "text": "The velocity of sound in air is independent of change in:"
+        },
+        "answer": {
+            "a": {
+                "text": "pressure"
+                
+            },
+            "b": {
+                "text": "density"
+                
+            },
+            "c": {
+                "text": "temperature"
+                
+            },
+            "d": {
+                "text": "humidity"
+                
+            },
+            "correct": "a"
+        },
+        "subject": "Physics",
+        "exam_code": 101
+    },
+    {
+        "question": {
+            "text": "The third harmonic of open ended pipe of length 50 cm is:"
+        },
+        "answer": {
+            "a": {
+                "text": "332 Hz"
+                
+            },
+            "b": {
+                "text": "166 Hz"
+                
+            },
+            "c": {
+                "text": "996 Hz"
+                
+            },
+            "d": {
+                "text": "100 Hz"
+                
+            },
+            "correct": "c"
+        },
+        "subject": "Physics",
+        "exam_code": 101
+    },
+    {
+        "question": {
+            "text": "When air pressure in musical instrument is increased, what will increase?"
+        },
+        "answer": {
+            "a": {
+                "text": "Pitch"
+                
+            },
+            "b": {
+                "text": "Loudness"
+                
+            },
+            "c": {
+                "text": "Quality"
+                
+            },
+            "d": {
+                "text": "Timber"
+                
+            },
+            "correct": "b"
+        },
+        "subject": "Physics",
+        "exam_code": 101
+    },
+    {
+        "question": {
+            "text": "A concave mirror of focal length f (in air) is immersed in water ( $ \\mu = 4/3 $ ). The focal length of the mirror in water will be"
+        },
+        "answer": {
+            "a": {
+                "text": "f"
+                
+            },
+            "b": {
+                "text": "4/3 f"
+                
+            },
+            "c": {
+                "text": "3/4 f"
+                
+            },
+            "d": {
+                "text": "7/3 f"
+                
+            },
+            "correct": "a"
+        },
+        "subject": "Physics",
+        "exam_code": 101
+    },
+    {
+        "question": {
+            "text": "If there had been one eye of the man, then"
+        },
+        "answer": {
+            "a": {
+                "text": "image of the object would have been inverted"
+                
+            },
+            "b": {
+                "text": "visible region would have decreased"
+                
+            },
+            "c": {
+                "text": "image would have not been seen three dimensional"
+                
+            },
+            "d": {
+                "text": "both (b) and (c)"
+                
+            },
+            "correct": "d"
+        },
+        "subject": "Physics",
+        "exam_code": 101
+    },
+    {
+        "question": {
+            "text": "In double slits experiment, for light for which color the fringe width would be minimum"
+        },
+        "answer": {
+            "a": {
+                "text": "violet"
+                
+            },
+            "b": {
+                "text": "red"
+                
+            },
+            "c": {
+                "text": "green"
+                
+            },
+            "d": {
+                "text": "yellow"
+                
+            },
+            "correct": "a"
+        },
+        "subject": "Physics",
+        "exam_code": 101
+    },
+    {
+        "question": {
+            "text": "An alternating voltage E = $ 200 \\sqrt{2} $ sin 100 t volt is connected to a $ 1\\mu F $ capacitor through an AC ammeter. The reading of the ammeter is:"
+        },
+        "answer": {
+            "a": {
+                "text": "10 mA"
+                
+            },
+            "b": {
+                "text": "20 mA"
+                
+            },
+            "c": {
+                "text": "40 mA"
+                
+            },
+            "d": {
+                "text": "80 mA"
+                
+            },
+            "correct": "b"
+        },
+        "subject": "Physics",
+        "exam_code": 101
+    },
+    {
+        "question": {
+            "text": "The number of turns in a secondary coil is twice the number of turns in primary. Avalanche cell of 1.5 V is connected across the primary. The voltage across the secondary is:"
+        },
+        "answer": {
+            "a": {
+                "text": "1.5 V"
+                
+            },
+            "b": {
+                "text": "3 V"
+                
+            },
+            "c": {
+                "text": "240 V"
+                
+            },
+            "d": {
+                "text": "zero"
+                
+            },
+            "correct": "d"
+        },
+        "subject": "Physics",
+        "exam_code": 101
+    },
+    {
+        "question": {
+            "text": "A thin bar magnet of length 2L and magnetic moment M is bent at the midpoint so that the angle between them is $ 60^{o} $.The new magnetic moment is:"
+        },
+        "answer": {
+            "a": {
+                "text": "M"
+                
+            },
+            "b": {
+                "text": "M/2"
+                
+            },
+            "c": {
+                "text": "2M"
+                
+            },
+            "d": {
+                "text": " $ M\\sqrt{3} $ "
+                
+            },
+            "correct": "b"
+        },
+        "subject": "Physics",
+        "exam_code": 101
+    },
+    {
+        "question": {
+            "text": "An electron moving upwards vertically enters a uniform magnetic field directed towards the north. The force on the electron will be towards:"
+        },
+        "answer": {
+            "a": {
+                "text": "north"
+                
+            },
+            "b": {
+                "text": "east"
+                
+            },
+            "c": {
+                "text": "west"
+                
+            },
+            "d": {
+                "text": "south"
+                
+            },
+            "correct": "b"
+        },
+        "subject": "Physics",
+        "exam_code": 101
+    },
+    {
+        "question": {
+            "text": "The emf in a thermocouple changes sign at 600 K. If the neutral temperature is $ 210^{o} $, the temperature of cold junction is:"
+        },
+        "answer": {
+            "a": {
+                "text": "180 K"
+                
+            },
+            "b": {
+                "text": "117 K"
+                
+            },
+            "c": {
+                "text": " $ 93^{o} $ "
+                
+            },
+            "d": {
+                "text": " $ 90^{o} $ "
+                
+            },
+            "correct": "c"
+        },
+        "subject": "Physics",
+        "exam_code": 101
+    },
+    {
+        "question": {
+            "text": "In an ordinary heater if the length of the coil is halved, then a given quantity of water will boil in"
+        },
+        "answer": {
+            "a": {
+                "text": "less time"
+                
+            },
+            "b": {
+                "text": "more time"
+                
+            },
+            "c": {
+                "text": "same time"
+                
+            },
+            "d": {
+                "text": "cannot compared"
+                
+            },
+            "correct": "a"
+        },
+        "subject": "Physics",
+        "exam_code": 101
+    },
+    {
+        "question": {
+            "text": "When two electrons are brought nearer, the potential energy of the system:"
+        },
+        "answer": {
+            "a": {
+                "text": "increases"
+                
+            },
+            "b": {
+                "text": "decreases"
+                
+            },
+            "c": {
+                "text": "remains same"
+                
+            },
+            "d": {
+                "text": "first increases then decreases"
+                
+            },
+            "correct": "a"
+        },
+        "subject": "Physics",
+        "exam_code": 101
+    },
+    {
+        "question": {
+            "text": "Two forces of magnitude F have a resultant of the same magnitude F. The angle between the two force is:"
+        },
+        "answer": {
+            "a": {
+                "text": " $ 45^{o} $ "
+                
+            },
+            "b": {
+                "text": " $ 120^{o} $ "
+                
+            },
+            "c": {
+                "text": " $ 150^{o} $ "
+                
+            },
+            "d": {
+                "text": " $ 180^{o} $ "
+                
+            },
+            "correct": "b"
+        },
+        "subject": "Physics",
+        "exam_code": 101
+    }
+]

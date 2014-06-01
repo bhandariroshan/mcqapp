@@ -30,6 +30,8 @@ class QuestionApi():
     def latex_html(self, where, what):
         return self.db_object.update_upsert(self.table_name, where, what)
 
+    def get_count(self, where):
+        return self.db_object.get_count(self.table_name, where)
 
 class ExammodelApi():
 
@@ -64,18 +66,17 @@ class AttemptedAnswerDatabase():
     def find_one_atttempted_answer(self, condition):
         return self.db_object.get_one(self.table_name, condition)
 
-    def find_all_atttempted_answer(self, condition, sort_index="q_no"):
-        return self.db_object.get_all(self.table_name, condition)
+    def find_all_atttempted_answer(self, condition, fields=None, sort_index="q_no"):
+        return self.db_object.get_all(self.table_name, condition, fields, sort_index)
 
     def update_atttempted_answer(self, where, what):
         return self.db_object.update(self.table_name, where, what)
 
-    def update_upsert_attempted_answer(self, where, what):
-        return self.db_object.update_upsert(self.table_name, where, what)
+    def update_upsert_push(self, where, what):
+        return self.db_object.update_upsert_push(self.table_name, where, what)
         
 
 class CorrectAnswerDatabase():
-
     def __init__(self):
         self.db_object = MongoConnection("localhost", 27017, 'mcq')
         self.table_name = 'correctanswers'
@@ -92,3 +93,48 @@ class CorrectAnswerDatabase():
 
     def update_correct_answer(self, where, what):
         return self.db_object.update(self.table_name, where, what)
+
+class ExamStartSignal():
+    def __init__(self):
+        self.db_object = MongoConnection("localhost", 27017, 'mcq')
+        self.table_name = 'examstartsignal'
+        self.db_object.create_table(self.table_name, 'useruid')
+
+    def insert_exam_start_signal(self, value):
+        self.db_object.update_upsert(self.table_name, value, value)
+
+    def check_exam_started(self, condition):
+        return self.db_object.get_one(self.table_name, condition)     
+
+    def update_exam_start_signal(self, where, what):
+        return self.db_object.update_upsert(self.table_name, where, what)           
+
+class HonorCodeAcceptSingal():
+    def __init__(self):
+        self.db_object = MongoConnection("localhost", 27017, 'mcq')
+        self.table_name = 'honorcodeacceptsingal'
+        self.db_object.create_table(self.table_name, 'useruid')
+
+    def insert_honor_code_accept_signal(self, value):
+        self.db_object.update_upsert(self.table_name, value, value)
+
+    def check_honor_code_accepted(self, condition):
+        return self.db_object.get_one(self.table_name, condition)     
+
+    def update_honor_code_accept_Signal(self, where, what):
+        return self.db_object.update_upsert(self.table_name, where, what)
+
+class CurrentQuestionNumber():
+    def __init__(self):
+        self.db_object = MongoConnection("localhost", 27017, 'mcq')
+        self.table_name = 'currentquestionnumber'
+        self.db_object.create_table(self.table_name, 'useruid')
+
+    def insert_current_question_number(self, value):
+        self.db_object.update_upsert(self.table_name, value, value)
+
+    def check_current_question_number(self, condition):
+        return self.db_object.get_one(self.table_name, condition)     
+
+    def update_current_question_number(self, where, what):
+        return self.db_object.update_upsert(self.table_name, where, what)

@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load staticfiles %} 
+{% block content %}
+<div class="row">
+<div class="twelve columns" style="margin-top:12%; margin-bottom:7%;">
+    <h3 class="h-text-align ui-corner-all" style="text-align: center;"><strong>{{exam_Details.exam_name}}</strong></h3>
+    <section class="tabs">
+		<ul class="tab-nav">
+		    <li class="active"> <a href="#">Score Card</a></li>		    
+		    <li><a href="#">Rank Card</a></li>
+		</ul>
+		<div class="tab-content active">
+			<table>
+				<thead>				
+					<tr>
+						<th>Subject</th>
+						<th>Mark Scored</th>
+						<th>Total Marks</th>
+					</tr>
+				</thead>
+				<tbody>
+				{% for eachSubject in result %}
+					<tr>
+						<td>{{eachSubject.subject}}</td>
+						<td>{{eachSubject.score}}</td>
+						<td>50</td>
+					</tr>
+				{% endfor %}
+				</tbody>
+			</table>
+		</div>
+
+		<div class="tab-content">
+			{% if not myrankcard %}
+				<table>
+					<thead>
+						<tr>
+							<th>Rank Card</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr><td>Your Rank</td><td>{{myrankcard.rank}}</td></tr>
+						<tr><td>Total Participants</td><td>{{myrankcard.total}}</td></tr>
+					</tbody>
+				</table>
+			{% else %}
+
+			{% endif %}
+		</div>
+	</section>
+</div>
+</div>
+
+{% endblock %}

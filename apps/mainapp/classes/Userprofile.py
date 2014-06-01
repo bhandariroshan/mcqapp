@@ -22,10 +22,10 @@ class UserProfile():
         if user != None:
             if user['subscription_type'] == 'IDP':
                 return {'status':'ok', 'subscription_type':'IDP'}
-            elif user['subscription_type'] == 'BE-IOE-071':
-                return {'status':'ok', 'subscription_type':'BE-IOE-071'}
-            elif user['subscription_type'] == 'MBBS-IOM-071':
-                return {'status':'ok', 'subscription_type':'MBBS-IOM-071'}
+            elif user['subscription_type'] == 'BE-IOE':
+                return {'status':'ok', 'subscription_type':'BE-IOE'}
+            elif user['subscription_type'] == 'MBBS-IOM':
+                return {'status':'ok', 'subscription_type':'MBBS-IOM'}
             else:                
                 return {'status':'error', 'message':'no subscription plan associated'}
         else:

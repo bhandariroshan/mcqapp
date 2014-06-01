@@ -2,10 +2,10 @@ from pymongo import MongoClient
 import pymongo
 import json
 from bson import json_util
+from bson.objectid import ObjectId
 
 
 class MongoConnection():
-
     def __init__(self, host="localhost", port=27017, db_name='indexer'):
         self.host = host
         self.port = port
@@ -25,10 +25,8 @@ class MongoConnection():
         json_doc = json_doc.replace("_id", "uid")
         return json.loads(json_doc)
 
-    def get_all(self, table_name, conditions={}, fields=None, sort_index='_id',
-                limit=200):
-        all_doc = self.db[table_name].find(conditions, fields).sort(
-            sort_index, pymongo.ASCENDING).limit(limit)
+    def get_all(self, table_name, conditions={}, fields=None, sort_index='_id',limit=200):
+        all_doc = self.db[table_name].find(conditions, fields).sort(sort_index, pymongo.ASCENDING).limit(limit)
         json_doc = json.dumps(list(all_doc), default=json_util.default)
         json_doc = json_doc.replace("$oid", "id")
         json_doc = json_doc.replace("_id", "uid")
@@ -39,6 +37,9 @@ class MongoConnection():
 
     def update_push(self, table_name, where, what):
         self.db[table_name].update(where, {"$push": what}, upsert=False)
+
+    def update_upsert_push(self, table_name, where, what):
+        self.db[table_name].update(where, {"$push": what}, upsert=True)
 
     def update(self, table_name, where, what):
         self.db[table_name].update(where, {"$set": what}, upsert=False)

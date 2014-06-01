@@ -23,7 +23,7 @@
                 <li class="active">-</li>
               </ul>
 
-              <a id="js-button-get-free" href="#"
+              <a id="js-button-get-free" href="/"
               class="button">
                 Subscribe
               </a>
@@ -33,7 +33,7 @@
               <h1>All session </h1><p style="font-size: 13px;">one full package (IOM/IOE session)</p>
               <p class="premium-tag">
               </p>
-              <p class="premium-price"><strong>Rs. 150 for all exams </strong><br>(One time coupon code entry)</p>
+              <p class="premium-price"><strong>Rs. 200 for all exams </strong><br>(One time coupon code entry)</p>
               <!-- <aside>
                 <img src="//d2c87l0yth4zbw.cloudfront.net/i/home/devices-free-new-en.png" class="device-img">
               </aside> -->
@@ -47,7 +47,7 @@
                 <li class="active">Progress card</li>
               </ul>
 
-              <a id="js-button-get-free" href="/dashboard/" class="button">
+              <a id="js-button-get-free" href="#" '{% if request.user.is_authenticated %} onclick="attempt_exam('subs')" {% endif %}' class="button">
                 Subscribe
               </a>
             </div>
@@ -57,7 +57,7 @@
               <h1>Inter subscription </h1> <p style="font-size: 13px;">access to both IOM and IOE exams</p>
               <p class="premium-tag">
               </p>
-              <p class="premium-price"><strong>Rs. 200 for all exams</strong><br>(One time coupon code entry)</p>
+              <p class="premium-price"><strong>Rs. 250 for all exams</strong><br>(One time coupon code entry)</p>
               <!-- <aside>
                 <img src="//d2c87l0yth4zbw.cloudfront.net/i/home/devices-free-new-en.png" class="device-img">
               </aside> -->
@@ -70,9 +70,7 @@
                 <li class="active zebra">Participate in discussion related to question</li>
                 <li class="active">Progress card</li>
               </ul>
-
-              <a id="js-button-get-free" href="#"
-              class="button">
+              <a id="js-button-get-free" href="#" '{% if request.user.is_authenticated %} onclick="attempt_exam('subs')" {% endif %}' class="button">
                 Subscribe
               </a>
             </div>
@@ -95,7 +93,7 @@
                 <li class="active">-</li>
               </ul>
 
-              <a id="js-button-get-free" href="#"
+              <a id="js-button-get-free" href="/"
               class="button">
                 Subscribe
               </a>
@@ -110,5 +108,28 @@
 {% endblock %}
 
 {% block javascript %}
+<script src="{% static "js/ajax-handle.js" %}"></script>
+<script type="text/javascript">
+var ex_code;
+  function attempt_exam(exam_code){
+    ex_code=exam_code;
+    $('#infoText').html('');
+    if (exam_code.toLowerCase() == 'sample'){
+      var html_str = 'Every time you give exam, you need to enter <a href="/coupon-codes/" style="color:red;"><strong>coupon codes</strong></a> are available at various <a href="/#/" style="color:red;"><strong>distributors</strong></a>. Please enter your coupon code'
+      $('#infoText').html(html_str);
+    }
+    else{      
+      var html_str = 'Coupon code are necessary to ensure the regular operation of exam. <a href="/coupon-codes/" style="color:red;"><strong>coupon codes</strong></a> available at various <a href="/#/" style="color:red;"><strong>distributors</strong></a>. Please enter code your below'
+      $('#infoText').html(html_str);
+    }
+    /*is_subscribed(exam_code);    */
+    $('#trigger_gumby_div').click();
+  }
+
+  function validate_coupon_code() {
+    coupon_id = $('#couponID').val();
+    validate_coupon(ex_code, coupon_id);
+  }
+</script>
 {% endblock %}
 

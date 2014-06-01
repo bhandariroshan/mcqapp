@@ -65,7 +65,7 @@ class Coupon():
         # print exam_family, coupon, coupon_code, exam_category
         if coupon != None and coupon['subscription_type']=='IDP':
             return True
-        elif coupon != None and (coupon['subscription_type'] == 'BE-IOE-071' or coupon['subscription_type']=='MBBS-IOM-071'):
+        elif coupon != None and (coupon['subscription_type'] == 'BE-IOE' or coupon['subscription_type']=='MBBS-IOM'):
             return True
         else:
             return False
@@ -81,16 +81,6 @@ class Coupon():
         request_time  = time.mktime(request_time.timetuple())    
         return self.db_object.update_upsert(self.table_name, {'code':coupon_code},{'used':{'status':1}})
 
+    def get_coupons(self, subscription_type):
+        return self.db_object.get_all_vals(self.table_name,{'subscription_type':subscription_type, 'used.status':0})
 
-# 1. DPS (Daily Practice Set)
-# 2. CPS (Competitive Pracice Set)
-# 3. MBBS-IOM-071
-# 4. BE-IOE-071
-# 5. IDP (Inter Disciplinary Plan)
-
-# coupon = Coupon()        
-# coupon.generate_coupons('IDP')
-# coupon.generate_coupons('DPS')
-# coupon.generate_coupons('CPS')
-# coupon.generate_coupons('BE-IOE-071')
-# coupon.generate_coupons('MBBS-IOM-071')
