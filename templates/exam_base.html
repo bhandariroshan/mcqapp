@@ -36,20 +36,11 @@
 
 {% block content %}  
 <div class="row my-margin-top row-bg-color">
-    <div class="twelve columns" style="text-align: center;">
-		  <div class="centered twelve columns"><strong>{{exam_details.exam_name}}</strong></div>
-		  <!-- <div class="six columns"><strong>Date: {{exam_details.exam_date}}</strong></div> -->
-    </div>
-    <div class="twelve columns">
-    <div class="example-grid">
-    </div>
-    </div>
+  {% block timer %}
+  {% endblock %}
 
-      {% block timer %}
-      {% endblock %}
-
-      {% block exam_content %}
-      {% endblock %}
+  {% block exam_content %}
+  {% endblock %}
 </div>
 {% endblock %}
 {% block javascript %}

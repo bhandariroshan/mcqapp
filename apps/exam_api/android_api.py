@@ -130,7 +130,20 @@ def get_scores(request):
             )
             )
 
-        exam_handler = ExamHandler()
+        # from apps.mainapp.query_database import AttemptedAnswerDatabase
+        # ans = AttemptedAnswerDatabase()
+        # attempt_time = datetime.datetime.now()
+        # attempt_time = time.mktime(attempt_time.timetuple())
+        # for i in range(0,len(answer_list)):
+        #     ans.insert_new_attempted_answer({
+        #         'user_id':request.user.id,
+        #         'exam_code':exam_code,
+        #         'q_no':int(i),
+        #         'selected_ans':answer_list[i],
+        #         'attempt_time':int(attempt_time)
+        #     })
+
+        exam_handler = ExamHandler()                
         score_dict = exam_handler.check_answers(exam_code, answer_list)
         return HttpResponse(json.dumps(
             {'status': 'ok', 'result': score_dict}

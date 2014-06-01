@@ -5,7 +5,6 @@ from bson import json_util
 
 
 class MongoConnection():
-
     def __init__(self, host="localhost", port=27017, db_name='indexer'):
         self.host = host
         self.port = port
@@ -25,10 +24,10 @@ class MongoConnection():
         json_doc = json_doc.replace("_id", "uid")
         return json.loads(json_doc)
 
-    def get_all(self, table_name, conditions={}, fields=None, sort_index='_id',
-                limit=200):
+    def get_all(self, table_name, conditions={}, fields=None, sort_index='_id',limit=200):
         all_doc = self.db[table_name].find(conditions, fields).sort(
             sort_index, pymongo.ASCENDING).limit(limit)
+        print all_doc
         json_doc = json.dumps(list(all_doc), default=json_util.default)
         json_doc = json_doc.replace("$oid", "id")
         json_doc = json_doc.replace("_id", "uid")

@@ -18,37 +18,27 @@ def load_examset_in_database(request):
          "exam_date": 1401359880,
          "image": "exam.jpg",
          "exam_code": 100,
-         "exam_time": "7.00pm",
-         "exam_category": "BE-IOE-071",
+         "exam_category": "BE-IOE",
          "exam_duration": 180,
-         "exam_family": 'CPS'
+         "exam_family": 'DPS'
          },
         {"exam_name": "IOM model exam 1",
          "exam_date": 1399978500,
          "image": "exam.jpg",
          "exam_code": 101,
-         "exam_time": "7.00pm",
-         "exam_category": "MBBS-IOM-071",
-         "exam_duration": 180,
+         "exam_category": "MBBS-IOM",
+         "exam_duration": 15,
          "exam_family": 'DPS'
          },
         {"exam_name": "IOE model exam 2",
-         "exam_date": 1399968500,
+         # "exam_date": 1401258859,
+         "exam_date": 1401606847,
          "image": "exam.jpg",
          "exam_code": 102,
-         "exam_time": "7.00pm",
-         "exam_duration": 180,
-         "exam_category": "BE-IOE-071",
+         "exam_time": "1.00pm",
+         "exam_duration": 15,
+         "exam_category": "BE-IOE",
          "exam_family": 'CPS'
-         },
-        {"exam_name": "IOM model exam 2",
-         "exam_date": 1399968500,
-         "image": "exam.jpg",
-         "exam_code": 103,
-         "exam_duration": 180,
-         "exam_time": "7.00pm",
-         "exam_category": "MBBS-IOM-071",
-         "exam_family": 'DPS'
          }
     ]
     exam_model.insert_new_model(exam_dict)
@@ -60,14 +50,13 @@ def load_modelquestion_in_database(request):
     the function is used to load fake data in question collection
     of mcq database in mongodb
     '''
-    f = open('apps/exam_api/iom_model_question_101.json', 'rb')
-
-    json_obj = json.loads(f.read())
-    for i, x in enumerate(json_obj):
-        x['question_number'] = i + 1
-
-    question_api = QuestionApi()
-    question_api.insert_new_question(json_obj)
+    for var in range(100,103):
+        f = open('apps/exam_api/' + str(var) +'.json', 'rb')
+        json_obj = json.loads(f.read())
+        for i, x in enumerate(json_obj):
+            x['question_number'] = i + 1
+        question_api = QuestionApi()
+        question_api.insert_new_question(json_obj)
     return HttpResponse("Question saved in the database")
 
 

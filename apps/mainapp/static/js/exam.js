@@ -122,6 +122,7 @@ var myVar=setInterval(function(){
     {
       $('#reviewAns').hide();
       $('#infoText').html('Your time is up. Please submit answers to view result.');
+      ajax_set_exam_finished(exam_code, false);
       $('#trigger_gumby_div').click();
     }
 },1000);
@@ -134,7 +135,7 @@ function myTimer() {
 $(document).ready(function(){
   ans_html = $('#myAnswers').html();
   var q_no = []
-  for (var i = 0; i < all_answers.length; i++ ){
+  for (var i = 0; i < all_answers.length; i++){
     q_no.push(all_answers[i]['q_no']);
   }
   for (var i = 0; i < max_questions_number; i++ ){
