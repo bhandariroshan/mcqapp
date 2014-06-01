@@ -32,7 +32,7 @@ def load_examset_in_database(request):
          },
         {"exam_name": "IOE model exam 2",
          # "exam_date": 1401258859,
-         "exam_date": 1401519152,
+         "exam_date": 1401598858,
          "image": "exam.jpg",
          "exam_code": 102,
          "exam_time": "12.00pm",
