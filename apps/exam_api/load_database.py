@@ -15,7 +15,7 @@ def load_examset_in_database(request):
     exam_model = ExammodelApi()
     exam_dict = [
         {"exam_name": "IOE model exam 1",
-         "exam_date": 1399998500,
+         "exam_date": 1401359880,
          "image": "exam.jpg",
          "exam_code": 100,
          "exam_category": "BE-IOE",

@@ -21,16 +21,13 @@ class ExamHandler():
             questions, key=lambda k: k['question_number'])
         return sorted_questions
 
-    def get_question_count(self, exam_code):
-        question_api = QuestionApi()
-        return question_api.get_count(exam_code)
-
+    
     def list_upcoming_exams(self):
         '''
         this function lists the available exam models
         '''
         exam_set = ExammodelApi()
-        exam_list = exam_set.find_all_exammodel({})        
+        exam_list = exam_set.find_all_exammodel({})
         return exam_list
 
     def check_answers(self, exam_code, answer_list):
@@ -41,11 +38,11 @@ class ExamHandler():
         '''
 
         question_api = QuestionApi()
-        questions = question_api.find_all_questions({"exam_code": int(exam_code)})
-        sorted_questions = sorted(questions, key=lambda k: k['question_number'])
-        correct_answers = {}        
-        for i in range(0,len(sorted_questions)):
-            print sorted_questions[i]    
+        questions = question_api.find_all_questions(
+            {"exam_code": int(exam_code)})
+        sorted_questions = sorted(
+            questions, key=lambda k: k['question_number'])
+        correct_answers = {}
         for index, choice in enumerate(answer_list):
             if sorted_questions[index]['answer']['correct'] == choice:
                 try:
@@ -55,12 +52,22 @@ class ExamHandler():
         total = 0
         score_list = []
         for key, value in correct_answers.iteritems():
+            total_question = question_api.find_all_questions(
+                {"exam_code": int(exam_code), "subject": key}
+            )
             temp = {}
             temp['subject'] = key
             temp['score'] = value
+            temp['total_question'] = len(total_question)
             total += value
             score_list.append(temp)
-        score_list.append({'subject': 'Total', 'score': total})
+        score_list.append(
+            {
+                'subject': 'Total',
+                'score': total,
+                'total_question': len(sorted_questions)
+            }
+        )
         return score_list
 
 
