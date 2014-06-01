@@ -15,7 +15,7 @@ def load_examset_in_database(request):
     exam_model = ExammodelApi()
     exam_dict = [
         {"exam_name": "IOE model exam 1",
-         "created_date": 1399998500,
+         "exam_date": 1399998500,
          "image": "exam.jpg",
          "exam_code": 100,
          "exam_category": "BE-IOE",
@@ -23,7 +23,7 @@ def load_examset_in_database(request):
          "exam_family": 'DPS'
          },
         {"exam_name": "IOM model exam 1",
-         "created_date": 1399978500,
+         "exam_date": 1399978500,
          "image": "exam.jpg",
          "exam_code": 101,
          "exam_category": "MBBS-IOM",
@@ -32,7 +32,7 @@ def load_examset_in_database(request):
          },
         {"exam_name": "IOE model exam 2",
          # "exam_date": 1401258859,
-         "exam_date": 1401599858,
+         "exam_date": 1401699858,
          "image": "exam.jpg",
          "exam_code": 102,
          "exam_time": "12.00pm",

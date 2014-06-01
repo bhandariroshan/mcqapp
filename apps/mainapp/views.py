@@ -454,3 +454,11 @@ def results(request, exam_code):
     parameters['result'] = score_dict
     parameters['myrankcard'] = {'total':200, 'rank':1}
     return render_to_response('results.html', parameters, context_instance=RequestContext(request))
+
+def notifications(request):
+    if request.user.is_authenticated:
+        from apps.mainapp.classes.notification import Notification
+        notices = Notification()
+        return HttpResponse(json.dumps(notices.get_notifications()))
+    else:
+        return HttpResponse(json.dumps({'status':'error', 'message':'You are not authorized to perform this action.'}))
