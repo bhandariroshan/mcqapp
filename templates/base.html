@@ -15,11 +15,12 @@
   <meta property="fb:app_id" content="" /> 
   <meta property="fb:admins" content="" /> 
   <meta property="og:type" content="website" />
-
+  <meta name="keywords" content="MeroAnswer - Sign up and become a part of smart and success study.">
+  <meta name="description" content="MeroAnswer - web and android solution to prepare competitive exams.">
+  <meta property="og:site_name" content="MeroAnswer" />      
+  <meta property="og:url" content="http://{{request.META.HTTP_HOST}}{{request.path}}" /> 
   {% if request.user.is_authenticated %} 
     {% ifequal request.path  '/' %}
-      <meta name="keywords" content="MeroAnswer - Sign up and become a part of smart and success study.">
-      <meta name="description" content="MeroAnswer - web and android solution to give prepare competitive exams.">
       <title>Home - MeroAnswer</title>
         <!-- Facebook Metadata /-->
       <meta property="fb:page_id" content="">
@@ -36,8 +37,6 @@
 
   {% if not request.user.is_authenticated %} 
     {% ifequal request.path '/' %}
-      <meta name="keywords" content="MeroAnswer - Sign up and become a part of smart and success study.">
-      <meta name="description" content="MeroAnswer - web and android solution to give prepare competitive exams.">
       <title>MeroAnswer | Sign up and become a part of smart studying for success.</title>
       <!-- Facebook Metadata /-->
       <meta property="fb:page_id" content="">
@@ -53,8 +52,6 @@
   {% endif %}
 
   {% if 'honorcode' in request.path %}
-      <meta name="keywords" content="MeroAnswer - Sign up and become a part of smart and success study.">
-      <meta name="description" content="MeroAnswer - web and android solution to give prepare competitive exams.">
       <title>Honorcode | MeroAnswer</title>
       <!-- Facebook Metadata /-->
       <meta property="fb:page_id" content="">
@@ -69,8 +66,6 @@
   {% endif %}
 
   {% if 'distributors' in request.path %}
-      <meta name="keywords" content="MeroAnswer - Sign up and become a part of smart and success study.">
-      <meta name="description" content="MeroAnswer - web and android solution to give prepare competitive exams.">
       <title>Coupon Distributors | MeroAnswer</title>
       <!-- Facebook Metadata /-->
       <meta property="fb:page_id" content="">
@@ -85,8 +80,6 @@
   {% endif %}
 
   {% if 'subscription' in request.path %}
-      <meta name="keywords" content="MeroAnswer - Sign up and become a part of smart and success study.">
-      <meta name="description" content="MeroAnswer - web and android solution to give prepare competitive exams.">
       <title>Subscription Plans | MeroAnswer</title>
       <!-- Facebook Metadata /-->
       <meta property="fb:page_id" content="">
@@ -101,8 +94,6 @@
   {% endif %}
 
   {% if 'attend-exam' in request.path %}
-      <meta name="keywords" content="MeroAnswer - Sign up and become a part of smart and success study.">
-      <meta name="description" content="MeroAnswer - web and android solution to give prepare competitive exams.">
       <title>{{exam_details.exam_name}} | MeroAnswer</title>
       <!-- Facebook Metadata /-->
       <meta property="fb:page_id" content="">
@@ -117,8 +108,6 @@
   {% endif %}
 
   {% if 'coupon' in request.path %}
-      <meta name="keywords" content="MeroAnswer - Sign up and become a part of smart and success study.">
-      <meta name="description" content="MeroAnswer - web and android solution to give prepare competitive exams.">
       <title>Coupon code | MeroAnswer</title>
       <!-- Facebook Metadata /-->
       <meta property="fb:page_id" content="">
@@ -133,8 +122,6 @@
   {% endif %}
 
   {% if 'terms' in request.path %}
-      <meta name="keywords" content="MeroAnswer - Sign up and become a part of smart and success study.">
-      <meta name="description" content="MeroAnswer - web and android solution to give prepare competitive exams.">
       <title>Terms of service | MeroAnswer</title>
       <!-- Facebook Metadata /-->
       <meta property="fb:page_id" content="">
@@ -149,8 +136,6 @@
   {% endif %}
 
   {% if 'privacy' in request.path %}
-      <meta name="keywords" content="MeroAnswer - Sign up and become a part of smart and success study.">
-      <meta name="description" content="MeroAnswer - web and android solution to give prepare competitive exams.">
       <title>Privacy Policies | MeroAnswer</title>
       <!-- Facebook Metadata /-->
       <meta property="fb:page_id" content="">
@@ -165,18 +150,13 @@
   {% endif %}
 
   {% if 'results' in request.path %}
-      <meta name="keywords" content="MeroAnswer - Sign up and become a part of smart and success study.">
-      <meta name="description" content="MeroAnswer - web and android solution to give prepare competitive exams.">
       <title>Result {{ exam_details.exam_name }} | MeroAnswer</title>
       <!-- Facebook Metadata /-->
       <meta property="fb:page_id" content="">
       <meta property="og:image" content="">
       <meta property="og:description" content="">
-      <meta property="og:title" content="Result {{ exam_details.exam_name }} | MeroAnswer">    
-      <meta property="og:site_name" content="FoodTrade" />
-      <!-- 
-      <meta property="og:url" content="http://{{request.META.HTTP_HOST}}{{request.path}}" /> 
-      -->
+      <meta property="og:title" content="Result {{ exam_details.exam_name }} | MeroAnswer">          
+           
       <!-- Google+ Metadata /-->
       <meta itemprop="name" content="Result | {{ exam_details.exam_name }}">
       <meta itemprop="description" content="">
