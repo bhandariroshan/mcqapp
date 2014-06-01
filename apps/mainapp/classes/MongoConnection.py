@@ -2,6 +2,7 @@ from pymongo import MongoClient
 import pymongo
 import json
 from bson import json_util
+from bson.objectid import ObjectId
 
 
 class MongoConnection():
@@ -25,9 +26,7 @@ class MongoConnection():
         return json.loads(json_doc)
 
     def get_all(self, table_name, conditions={}, fields=None, sort_index='_id',limit=200):
-        all_doc = self.db[table_name].find(conditions, fields).sort(
-            sort_index, pymongo.ASCENDING).limit(limit)
-        print all_doc
+        all_doc = self.db[table_name].find(conditions, fields).sort(sort_index, pymongo.ASCENDING).limit(limit)
         json_doc = json.dumps(list(all_doc), default=json_util.default)
         json_doc = json_doc.replace("$oid", "id")
         json_doc = json_doc.replace("_id", "uid")

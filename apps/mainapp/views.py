@@ -269,6 +269,19 @@ def attend_exam(request,exam_code):
 
                 time_elapsed = time.mktime(datetime.datetime.now().timetuple()) - validate_start['start_time']
                 exam_details['exam_duration'] = exam_details['exam_duration'] - time_elapsed/60
+                if exam_details['exam_duration'] <= 0:
+                    end_time = datetime.datetime.now().timetuple()                        
+                    end_time = time.mktime(end_time)                     
+                    h_a_s.update_honor_code_accept_Signal({
+                        'useruid':request.user.id, 
+                        'exam_code':int(exam_code), 
+                        'ess_time':int(validate_start['start_time'])},{'accept':0})
+                    ess.update_exam_start_signal({
+                        'exam_code':int(exam_code), 
+                        'useruid':request.user.id, 
+                        'start':1},{'end':1,'start':0, 'end_time':end_time})
+                    request.session['current_question_number'] = ''
+                    return HttpResponseRedirect('/honorcode/' + str(exam_code) + '/')
 
                 parameters['all_answers'] = json.dumps(all_answers)                        
                 question_obj = QuestionApi()    
@@ -442,14 +455,11 @@ def results(request, exam_code):
             answer_list += all_ans[i]['attempt_details'][0]['selected_ans']
         except:
             answer_list += 'e'
-
+    print answer_list
     exam_handler = ExamHandler()    
     score_dict = exam_handler.check_answers(exam_code, answer_list)
 
-    res['scores'] = [
-        {'name':'Phyiscs', 'score':20, 'total':50}, 
-        {'name':'Chemistry', 'score':15, 'total':25}, 
-        {'name':'Biology', 'score':25, 'total':30}]
+    print score_dict
 
     parameters['result'] = score_dict
     parameters['myrankcard'] = {'total':200, 'rank':1}
@@ -457,8 +467,8 @@ def results(request, exam_code):
 
 def notifications(request):
     if request.user.is_authenticated:
-        from apps.mainapp.classes.notifications import Notification
-        notices = Notification()
-        return HttpResponse(json.dumps(notices.get_notifications()))
+        from apps.mainapp.classes.notifications import Notifications
+        notices = Notifications()
+        return HttpResponse(json.dumps(notices.get_notifications(request.user.id)))
     else:
         return HttpResponse(json.dumps({'status':'error', 'message':'You are not authorized to perform this action.'}))

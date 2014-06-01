@@ -186,7 +186,11 @@
     margin-right: 17%;
     margin-top: 7%;
   }
-
+  .footer-center{
+    position: absolute;
+    left: 50%;
+    margin-left: -136px;
+  }
   .site-header {
       background-color: #134450;
        background-image: none; 
@@ -372,7 +376,7 @@
     <div class="row">
       <div class="four columns">      
       </div>
-      <div class="push_one six columns social-wrapper">
+      <div class="six columns social-wrapper footer-center">
         <ul class="social-list">
           <li class="social-item">
             <a href="https://www.facebook.com/meroanswer" class="social-link">
@@ -411,9 +415,9 @@
   <script src="{% static "js/gumby.navbar.js" %}"></script>
   <script src="{% static "js/gumby.shuffle.js" %}"></script> 
   <script src="{% static "js/gumby.init.js" %}"></script>
-  <!--<script src="{% static "js/waypoints.min.js" %}"></script>
   <script src="{% static "js/jquery.bxslider.min.js" %}"></script>
-  <script src="{% static "js/placeholders.js" %}"></script>-->
+  <script src="{% static "js/waypoints.min.js" %}"></script>
+  <script src="{% static "js/placeholders.js" %}"></script>
   {% if not request.user.is_authenticated %}  
     <script src="{% static "js/scrollIt.min.js" %}"></script>
     <script type="text/javascript" src="{% static "js/meroans.js" %}"></script>
