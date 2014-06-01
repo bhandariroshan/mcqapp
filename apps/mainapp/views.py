@@ -457,8 +457,8 @@ def results(request, exam_code):
 
 def notifications(request):
     if request.user.is_authenticated:
-        from apps.mainapp.classes.notifications import Notification
-        notices = Notification()
-        return HttpResponse(json.dumps(notices.get_notifications()))
+        from apps.mainapp.classes.notifications import Notifications
+        notices = Notifications()
+        return HttpResponse(json.dumps(notices.get_notifications(request.user.id)))
     else:
         return HttpResponse(json.dumps({'status':'error', 'message':'You are not authorized to perform this action.'}))
