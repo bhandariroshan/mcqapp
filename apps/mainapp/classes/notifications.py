@@ -32,7 +32,7 @@ noti.save_notifications({
             'content':'IOM model exam set is scheduled for today.'
         },
     'date':1401699858,
-    'to_userid':[1,2,5],
-    'sent_userid':[1,2,5]
+    'to_userid':[1,2,3],
+    'sent_userid':[1,2,3]
     })
 
