@@ -9,22 +9,180 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>MeroAnswer - Sign up and become a part of smart studying for success. </title>
-  <meta name="description" content="MeroAnswer - web and android solution to give prepare competitive exams.">
-  <meta name="keywords" content="MeroAnswer - Sign up and become a part of smart and success study.">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  
   <link rel="shortcut icon" href="{% static "images/favicon.png" %}" type="image/x-icon">
+  
+  <meta property="fb:app_id" content="" /> 
+  <meta property="fb:admins" content="" /> 
+  <meta property="og:type" content="website" />
 
-  <!-- Facebook Metadata /-->
-  <meta property="fb:page_id" content="">
-  <meta property="og:image" content="">
-  <meta property="og:description" content="">
-  <meta property="og:title" content="">
+  {% if request.user.is_authenticated %} 
+    {% ifequal request.path  '/' %}
+      <meta name="keywords" content="MeroAnswer - Sign up and become a part of smart and success study.">
+      <meta name="description" content="MeroAnswer - web and android solution to give prepare competitive exams.">
+      <title>Home - MeroAnswer</title>
+        <!-- Facebook Metadata /-->
+      <meta property="fb:page_id" content="">
+      <meta property="og:image" content="">
+      <meta property="og:description" content="">
+      <meta property="og:title" content="Home - MeroAnswer">
 
-  <!-- Google+ Metadata /-->
-  <meta itemprop="name" content="">
-  <meta itemprop="description" content="">
-  <meta itemprop="image" content="">
+      <!-- Google+ Metadata /-->
+      <meta itemprop="name" content="Home - MeroAnswer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="">
+    {% endifequal %}
+  {% endif %}
+
+  {% if not request.user.is_authenticated %} 
+    {% ifequal request.path '/' %}
+      <meta name="keywords" content="MeroAnswer - Sign up and become a part of smart and success study.">
+      <meta name="description" content="MeroAnswer - web and android solution to give prepare competitive exams.">
+      <title>MeroAnswer | Sign up and become a part of smart studying for success.</title>
+      <!-- Facebook Metadata /-->
+      <meta property="fb:page_id" content="">
+      <meta property="og:image" content="">
+      <meta property="og:description" content="">
+      <meta property="og:title" content="MeroAnswer | Sign up and become a part of smart studying for success.">
+
+      <!-- Google+ Metadata /-->
+      <meta itemprop="name" content="MeroAnswer | Sign up and become a part of smart studying for success.">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="">
+    {% endifequal %}
+  {% endif %}
+
+  {% if 'honorcode' in request.path %}
+      <meta name="keywords" content="MeroAnswer - Sign up and become a part of smart and success study.">
+      <meta name="description" content="MeroAnswer - web and android solution to give prepare competitive exams.">
+      <title>Honorcode | MeroAnswer</title>
+      <!-- Facebook Metadata /-->
+      <meta property="fb:page_id" content="">
+      <meta property="og:image" content="">
+      <meta property="og:description" content="">
+      <meta property="og:title" content="Honorcode | MeroAnswer">
+
+      <!-- Google+ Metadata /-->
+      <meta itemprop="name" content="Honorcode | MeroAnswer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="">
+  {% endif %}
+
+  {% if 'distributors' in request.path %}
+      <meta name="keywords" content="MeroAnswer - Sign up and become a part of smart and success study.">
+      <meta name="description" content="MeroAnswer - web and android solution to give prepare competitive exams.">
+      <title>Coupon Distributors | MeroAnswer</title>
+      <!-- Facebook Metadata /-->
+      <meta property="fb:page_id" content="">
+      <meta property="og:image" content="">
+      <meta property="og:description" content="">
+      <meta property="og:title" content="Coupon Distributors | MeroAnswer">
+
+      <!-- Google+ Metadata /-->
+      <meta itemprop="name" content="Coupon Distributors | MeroAnswer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="">
+  {% endif %}
+
+  {% if 'subscription' in request.path %}
+      <meta name="keywords" content="MeroAnswer - Sign up and become a part of smart and success study.">
+      <meta name="description" content="MeroAnswer - web and android solution to give prepare competitive exams.">
+      <title>Subscription Plans | MeroAnswer</title>
+      <!-- Facebook Metadata /-->
+      <meta property="fb:page_id" content="">
+      <meta property="og:image" content="">
+      <meta property="og:description" content="">
+      <meta property="og:title" content="Subscription Plans | MeroAnswer">
+
+      <!-- Google+ Metadata /-->
+      <meta itemprop="name" content="Subscription Plans | MeroAnswer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="">
+  {% endif %}
+
+  {% if 'attend-exam' in request.path %}
+      <meta name="keywords" content="MeroAnswer - Sign up and become a part of smart and success study.">
+      <meta name="description" content="MeroAnswer - web and android solution to give prepare competitive exams.">
+      <title>{{exam_details.exam_name}} | MeroAnswer</title>
+      <!-- Facebook Metadata /-->
+      <meta property="fb:page_id" content="">
+      <meta property="og:image" content="">
+      <meta property="og:description" content="">
+      <meta property="og:title" content="{{exam_details.exam_name}} | MeroAnswer">
+
+      <!-- Google+ Metadata /-->
+      <meta itemprop="name" content="{{exam_details.exam_name}} | MeroAnswer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="">
+  {% endif %}
+
+  {% if 'coupon' in request.path %}
+      <meta name="keywords" content="MeroAnswer - Sign up and become a part of smart and success study.">
+      <meta name="description" content="MeroAnswer - web and android solution to give prepare competitive exams.">
+      <title>Coupon code | MeroAnswer</title>
+      <!-- Facebook Metadata /-->
+      <meta property="fb:page_id" content="">
+      <meta property="og:image" content="">
+      <meta property="og:description" content="">
+      <meta property="og:title" content="Coupon code | MeroAnswer">
+
+      <!-- Google+ Metadata /-->
+      <meta itemprop="name" content="Coupon code | MeroAnswer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="">
+  {% endif %}
+
+  {% if 'terms' in request.path %}
+      <meta name="keywords" content="MeroAnswer - Sign up and become a part of smart and success study.">
+      <meta name="description" content="MeroAnswer - web and android solution to give prepare competitive exams.">
+      <title>Terms of service | MeroAnswer</title>
+      <!-- Facebook Metadata /-->
+      <meta property="fb:page_id" content="">
+      <meta property="og:image" content="">
+      <meta property="og:description" content="">
+      <meta property="og:title" content="Terms of service | MeroAnswer">
+
+      <!-- Google+ Metadata /-->
+      <meta itemprop="name" content="Terms of service | MeroAnswer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="">
+  {% endif %}
+
+  {% if 'privacy' in request.path %}
+      <meta name="keywords" content="MeroAnswer - Sign up and become a part of smart and success study.">
+      <meta name="description" content="MeroAnswer - web and android solution to give prepare competitive exams.">
+      <title>Privacy Policies | MeroAnswer</title>
+      <!-- Facebook Metadata /-->
+      <meta property="fb:page_id" content="">
+      <meta property="og:image" content="">
+      <meta property="og:description" content="">
+      <meta property="og:title" content="Privacy Policies | MeroAnswer">
+
+      <!-- Google+ Metadata /-->
+      <meta itemprop="name" content="Privacy Policies | MeroAnswer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="">
+  {% endif %}
+
+  {% if 'results' in request.path %}
+      <meta name="keywords" content="MeroAnswer - Sign up and become a part of smart and success study.">
+      <meta name="description" content="MeroAnswer - web and android solution to give prepare competitive exams.">
+      <title>Result | {{ exam_details.exam_name }}</title>
+      <!-- Facebook Metadata /-->
+      <meta property="fb:page_id" content="">
+      <meta property="og:image" content="">
+      <meta property="og:description" content="">
+      <meta property="og:title" content="Result {{ exam_details.exam_name }} | MeroAnswer">    
+      <meta property="og:site_name" content="FoodTrade" />
+      <!-- 
+      <meta property="og:url" content="http://{{request.META.HTTP_HOST}}{{request.path}}" /> 
+      -->
+      <!-- Google+ Metadata /-->
+      <meta itemprop="name" content="Result | {{ exam_details.exam_name }}">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="">
+  {% endif %}
+
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
   <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
@@ -224,11 +382,11 @@
   <footer role="contentinfo" class="site-footer">
     <div class="row">
         <p style="text-align:center;">
-          <a href="#">TOS</a>&nbsp;&nbsp;
-          <a href="#">Privacy policy</a>&nbsp;&nbsp;
+          <a href="/terms/">Terms</a>&nbsp;&nbsp;
+          <a href="/privacy/">Privacy policy</a>&nbsp;&nbsp;
           <a href="#">Partners</a>&nbsp;&nbsp;
           <a href="#">Coupon Distributors</a>&nbsp;&nbsp;
-          <a href="#">Subscription Models</a>&nbsp;&nbsp;
+          <a href="/subscription/">Subscription Models</a>&nbsp;&nbsp;
         </p>
     </div>
     <div class="row">
@@ -267,22 +425,18 @@
   <script src="{% static "js/gumby.toggleswitch.js" %}"></script>
   <script src="{% static "js/gumby.radiobtn.js" %}"></script>
   <script src="{% static "js/gumby.checkbox.js" %}"></script>
-  <script src="{% static "js/gumby.radiobtn.js" %}"></script>
   <script src="{% static "js/gumby.tabs.js" %}"></script>
   <!--<script src="{% static "js/gumby.fittext.js" %}"></script>-->
   <script src="{% static "js/jquery.validation.js" %}"></script>
   <script src="{% static "js/gumby.navbar.js" %}"></script>
   <script src="{% static "js/gumby.shuffle.js" %}"></script> 
   <script src="{% static "js/gumby.init.js" %}"></script>
+  <!--<script src="{% static "js/waypoints.min.js" %}"></script>
   <script src="{% static "js/jquery.bxslider.min.js" %}"></script>
-  <script src="{% static "js/waypoints.min.js" %}"></script>
-  <script src="{% static "js/placeholders.js" %}"></script>
+  <script src="{% static "js/placeholders.js" %}"></script>-->
   {% if not request.user.is_authenticated %}  
     <script src="{% static "js/scrollIt.min.js" %}"></script>
     <script type="text/javascript" src="{% static "js/meroans.js" %}"></script>
-    <!-- <script type="text/javascript" src="{% static "js/jssor.core.js" %}"></script>
-    <script type="text/javascript" src="{% static "js/jssor.utils.js" %}"></script>
-    <script type="text/javascript" src="{% static "js/jssor.slider.min.js" %}"></script> -->
   {% endif %}
 <script>
 // Include the UserVoice JavaScript SDK (only needed once on a page)
@@ -333,8 +487,8 @@ UserVoice.push(['autoprompt', {}]);
 <script type="text/javascript">
 $(function(){
   $.scrollIt({
-  upKey: 38,             // key code to navigate to the next section
-  downKey: 40,           // key code to navigate to the previous section
+  //upKey: 38,             // key code to navigate to the next section
+  //downKey: 40,           // key code to navigate to the previous section
   easing: 'linear',      // the easing function for animation
   scrollTime: 600,       // how long (in ms) the animation takes
   activeClass: 'active', // class given to the active nav element

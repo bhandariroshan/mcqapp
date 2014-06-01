@@ -11,7 +11,7 @@ urlpatterns = patterns(
     url(r'^home/$', 'apps.mainapp.views.dashboard'),
     url(r'^generate-coupon/$', 'apps.mainapp.views.generate_coupon'),
     url(r'^get-coupons/(?P<subscription_type>\w{1,15})/$', 'apps.mainapp.views.get_coupons'),
-    url(r'^tos/$', 'apps.mainapp.views.tos'),
+    url(r'^terms/$', 'apps.mainapp.views.tos'),
     url(r'^privacy/$', 'apps.mainapp.views.privacy'),
     url(r'^android/$', 'apps.mainapp.views.android'),
     url(r'^admin/', include(admin.site.urls)),

@@ -409,7 +409,6 @@ def get_coupons(request, subscription_type):
     elif subscription_type == 'mbbsiom':
         subscription_type = 'MBBS-IOM'
     subscription_type = subscription_type.upper()
-    print subscription_type
     coupons = coupon_obj.get_coupons(subscription_type)
     return HttpResponse(json.dumps({'status':'ok', 'coupons':coupons}))
 
@@ -428,15 +427,21 @@ def results(request, exam_code):
     total_questions = question_obj.get_count({"exam_code": int(exam_code)})
 
     ans = AttemptedAnswerDatabase()
-    all_ans = ans.find_all_atttempted_answer({
-        'exam_code':int(exam_code), 
-        'user_id':request.user.id,
-        'ess_time':ess_check['start_time']
-         }, fields={'q_no':1, 'attempt_details':1})
+    try:
+        all_ans = ans.find_all_atttempted_answer({
+            'exam_code':int(exam_code), 
+            'user_id':request.user.id,
+            'ess_time':ess_check['start_time']
+            }, fields={'q_no':1, 'attempt_details':1})
+    except:
+        all_ans = ''
 
     answer_list = ''
     for i in range(0,total_questions):
-        answer_list += all_ans[i]['attempt_details'][0]['selected_ans']
+        try:
+            answer_list += all_ans[i]['attempt_details'][0]['selected_ans']
+        except:
+            answer_list += 'e'
 
     exam_handler = ExamHandler()    
     score_dict = exam_handler.check_answers(exam_code, answer_list)
