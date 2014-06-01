@@ -32,10 +32,10 @@ def load_examset_in_database(request):
          },
         {"exam_name": "IOE model exam 2",
          # "exam_date": 1401258859,
-         "exam_date": 1401604715,
+         "exam_date": 1401606847
          "image": "exam.jpg",
          "exam_code": 102,
-         "exam_time": "12.00pm",
+         "exam_time": "1.00pm",
          "exam_duration": 15,
          "exam_category": "BE-IOE",
          "exam_family": 'CPS'
