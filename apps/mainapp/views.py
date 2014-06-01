@@ -270,6 +270,8 @@ def attend_exam(request,exam_code):
                 time_elapsed = time.mktime(datetime.datetime.now().timetuple()) - validate_start['start_time']
                 exam_details['exam_duration'] = exam_details['exam_duration'] - time_elapsed/60
                 if exam_details['exam_duration'] <= 0:
+                    end_time = datetime.datetime.now().timetuple()                        
+                    end_time = time.mktime(end_time)                     
                     h_a_s.update_honor_code_accept_Signal({
                         'useruid':request.user.id, 
                         'exam_code':int(exam_code), 
