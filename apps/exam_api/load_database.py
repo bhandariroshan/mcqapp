@@ -15,7 +15,7 @@ def load_examset_in_database(request):
     exam_model = ExammodelApi()
     exam_dict = [
         {"exam_name": "IOE model exam 1",
-         "exam_date": 1399998500,
+         "exam_date": 1401359880,
          "image": "exam.jpg",
          "exam_code": 100,
          "exam_time": "7.00pm",
@@ -60,7 +60,7 @@ def load_modelquestion_in_database(request):
     the function is used to load fake data in question collection
     of mcq database in mongodb
     '''
-    f = open('apps/exam_api/question_testdata.json', 'rb')
+    f = open('apps/exam_api/iom_model_question_101.json', 'rb')
 
     json_obj = json.loads(f.read())
     for i, x in enumerate(json_obj):
