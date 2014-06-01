@@ -457,7 +457,7 @@ def results(request, exam_code):
 
 def notifications(request):
     if request.user.is_authenticated:
-        from apps.mainapp.classes.notification import Notification
+        from apps.mainapp.classes.notifications import Notification
         notices = Notification()
         return HttpResponse(json.dumps(notices.get_notifications()))
     else:
