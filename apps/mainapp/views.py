@@ -469,6 +469,6 @@ def notifications(request):
     if request.user.is_authenticated:
         from apps.mainapp.classes.notifications import Notifications
         notices = Notifications()
-        return HttpResponse(json.dumps({'status':'ok', 'result':notices.get_notifications(request.user.id))})
+        return HttpResponse(json.dumps({'status':'ok', 'result':notices.get_notifications(request.user.id)}))
     else:
         return HttpResponse(json.dumps({'status':'error', 'message':'You are not authorized to perform this action.'}))
