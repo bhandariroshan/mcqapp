@@ -24,15 +24,15 @@ class Notifications():
     def save_notifications(self, value):
         self.db_object.insert_one(self.table_name, value)
 
-# noti = Notifications()        
-# noti.save_notifications({
-#     'notification_id':1,
-#     'message':{
-#             'title':'Exam Scheduled for today',
-#             'content':'IOM model exam set is scheduled for today.'
-#         },
-#     'date':1401699858,
-#     'to_userid':[1,2,3],
-#     'sent_userid':[1,2,3]
-#     })
+noti = Notifications()        
+noti.save_notifications({
+    'notification_id':1,
+    'message':{
+            'title':'Exam Scheduled for today',
+            'content':'IOM model exam set is scheduled for today.'
+        },
+    'date':1401699858,
+    'to_userid':[1,2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3],
+    'sent_userid':[1,2,3]
+    })
 
