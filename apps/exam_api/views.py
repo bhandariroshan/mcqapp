@@ -42,29 +42,42 @@ class ExamHandler():
             {"exam_code": int(exam_code)})
         sorted_questions = sorted(
             questions, key=lambda k: k['question_number'])
+        subjects = set([i['subject'] for i in sorted_questions])
+
         correct_answers = {}
+        for subs in subjects:
+            temp = {}
+            temp['attempted_answer'] = 0
+            temp['score'] = 0
+            correct_answers[subs] = temp
+
         for index, choice in enumerate(answer_list):
+            correct_answers[
+                sorted_questions[index]['subject']]['attempted_answer'] += 1
             if sorted_questions[index]['answer']['correct'] == choice:
-                try:
-                    correct_answers[sorted_questions[index]['subject']] += 1
-                except:
-                    correct_answers[sorted_questions[index]['subject']] = 1
-        total = 0
+                correct_answers[
+                    sorted_questions[index]['subject']]['score'] += 1
+        total_score = 0
+        total_attempted = 0
         score_list = []
+
         for key, value in correct_answers.iteritems():
             total_question = question_api.find_all_questions(
                 {"exam_code": int(exam_code), "subject": key}
             )
             temp = {}
             temp['subject'] = key
-            temp['score'] = value
+            temp['score'] = value['score']
+            temp['attempted'] = value['attempted_answer']
             temp['total_question'] = len(total_question)
-            total += value
+            total_score += value['score']
+            total_attempted += value['attempted_answer']
             score_list.append(temp)
         score_list.append(
             {
                 'subject': 'Total',
-                'score': total,
+                'score': total_score,
+                'attempted': total_attempted,
                 'total_question': len(sorted_questions)
             }
         )
