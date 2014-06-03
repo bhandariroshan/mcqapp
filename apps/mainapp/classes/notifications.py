@@ -14,7 +14,8 @@ class Notifications():
             conditions={'to_userid':{'$all':[user_id]}}, fields={'message':1, 'date':1, 'to_userid':1},limit=5)
         for eachNotice in notices:
             to_users = list(eachNotice['to_userid'])
-            to_users = to_users.remove(user_id)
+            if user_id not in [1,2,3,4,5]:
+                to_users = to_users.remove(user_id)
             self.update_notices({'_id':ObjectId(eachNotice['uid']['id'])}, {'to_userid':to_users})
         return notices
 
@@ -32,7 +33,7 @@ class Notifications():
 #             'content':'IOM model exam set is scheduled for today.'
 #         },
 #     'date':1401699858,
-#     'to_userid':[1,2,3],
+#     'to_userid':[1,2,3,4,5],
 #     'sent_userid':[1,2,3]
 #     })
 

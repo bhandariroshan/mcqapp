@@ -9046,15 +9046,15 @@ table.rounded > tbody:first-child tr:first-child td {
 * used to set background image.
 *****************/
 .circled-image-1 {
-  background-image: url("/static/images/study.png");
+  background-image: url("/static/images/coupon.png");
 }
 
 .circled-image-2 {
-  background-image: url("/static/images/practice.png");
+  background-image: url("/static/images/options.png");
 }
 
 .circled-image-3 {
-  background-image: url("/static/images/succeed.png");
+  background-image: url("/static/images/practice.png");
 }
 
 .fi-label {
