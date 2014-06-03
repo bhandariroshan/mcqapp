@@ -475,9 +475,9 @@ $(function(){
   //downKey: 40,           // key code to navigate to the previous section
   /*easing: 'linear',      // the easing function for animation*/
   scrollTime: 600,       // how long (in ms) the animation takes
-  activeClass: 'active', // class given to the active nav element
+  /*activeClass: 'active', // class given to the active nav element
   onPageChange: null,    // function(pageIndex) that is called when page is changed
-  topOffset: 0           // offste (in px) for fixed top navigation
+  topOffset: 0           // offste (in px) for fixed top navigation*/
   });
 });
 </script>
@@ -503,7 +503,7 @@ $(function(){
 
 <script type='text/javascript'>(function () { var done = false; var script = document.createElement('script'); script.async = true; script.type = 'text/javascript'; script.src = 'https://widget.purechat.com/VisitorWidget/WidgetScript'; document.getElementsByTagName('HEAD').item(0).appendChild(script); script.onreadystatechange = script.onload = function (e) { if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { var w = new PCWidget({ c: 'c987e20a-d50f-4121-822f-2af5f0011045', f: true }); done = true; } }; })();
 </script>
-
+<script src="{% static "js/mixpanel.js" %}"></script>
 </body>
 
 </html>
