@@ -59,7 +59,7 @@ def sign_up_sign_in(request, android_user=False):
     try:
         student_category = user['student_category']
     except:
-        student_category = 'both'
+        student_category = 'IDP'
     try:
         student_category_set = user['student_category_set']
     except:
