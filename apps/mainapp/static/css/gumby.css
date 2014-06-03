@@ -9046,7 +9046,7 @@ table.rounded > tbody:first-child tr:first-child td {
 * used to set background image.
 *****************/
 .circled-image-1 {
-  background-image: url("/static/images/coupons.png");
+  background-image: url("/static/images/coupon.png");
 }
 
 .circled-image-2 {
