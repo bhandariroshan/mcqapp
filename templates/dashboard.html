@@ -31,8 +31,28 @@
 
 {% block content %}  
 
-<div class="row my-margin-top row-bg-color">    
-    <div class="eight columns">      
+<div class="row my-margin-top row-bg-color">   
+
+    {% ifequal user.student_category_set 0 %}
+      <div class="twelve columns success alert" id="categorySelect">
+        <li class="field">
+          <p>You have not selected categories for exams you would like to attend. Please select one or more.</p>
+          <label class="checkbox {% ifequal user.student_category 'both' %} checked {% endifequal %}" for="iomCheck">
+            <input name="checkbox[]" id="iomCheck" value="1" type="checkbox" checked="checked">
+            <span></span> IOM Exams &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </label>
+          <label class="checkbox {% ifequal user.student_category 'both' %} checked {% endifequal %} " for="ioeCheck">
+            <input name="checkbox[]" id="ioeCheck" value="2" type="checkbox">
+            <span></span> IOE Exams &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </label>
+        <div class="medium primary btn pretty button-margin" >
+           <a href="#" {% ifequal user.student_category_set 0 %} onclick="save_category()" {% endifequal %}> Save </a>
+        </div>
+        </li>
+      </div> 
+    {% endifequal %}
+    <div class="twelve columns">
+      <div class="eight columns">      
         <section class="twelve columns tabs" style="margin-top: 5%;">
             <ul class="tab-nav">
                 <li class="active"><a href="#">Competitive Exams</a></li>                
@@ -43,15 +63,16 @@
             <div id="upcomingExams" class="tab-content active">
               {% for eachExam in upcoming_exams %}
                 {% ifequal eachExam.exam_family 'CPS' %}
-               <article class="valign row text-color-white ui-widget-content ui-corner-all my-margin {% if eachExam.subscribed %} subscribed {% else %} notsubscribed {% endif %}">
-                <!-- <div style="width:10%"> -->
-                  {% if eachExam.subscribed %}
+                  {% if user.student_category == 'IDP' or user.student_category == eachExam.exam_category %}
+                    <article class="valign row text-color-white ui-widget-content ui-corner-all my-margin {% if eachExam.subscribed %} subscribed {% else %} notsubscribed {% endif %}">
+                    <!-- <div style="width:10%"> -->
+                    {% if eachExam.subscribed %}
                       <i class="icon-check icon-color-subscribed myicon" style="margin-top: 12px;margin-left: 10px;"></i>
-                  {% else %}
+                    {% else %}
                       <i class="icon-lock icon-color-notsubscribed myicon" style="margin-top:12px;margin-left: 10px;"></i>
-                  {% endif %}
-                <!-- </div> -->
-                <div style="width:25%">
+                    {% endif %}
+                    <!-- </div> -->
+                  <div style="width:25%">
                     <img src="/static/images/{{eachExam.image}}" width="145px" />
                 </div>
                 <div style="width:65%">
@@ -66,6 +87,7 @@
                       </div>
                   </div>
                 </article>
+                {% endif %}
                 {% endifequal %}
               {% endfor %}
             </div> 
@@ -73,6 +95,7 @@
             <div id="upcomingPracticeExams" class="tab-content">
               {% for eachExam in upcoming_exams %}
                 {% ifequal eachExam.exam_family  'DPS' %}
+                {% if user.student_category == 'IDP' or user.student_category == eachExam.exam_category %}
                <article class="valign row text-color-white ui-widget-content ui-corner-all my-margin {% if eachExam.subscribed %} subscribed {% else %} notsubscribed {% endif %}">
                 <!-- <div style="width:10%"> -->
                   {% if eachExam.subscribed %}
@@ -96,6 +119,7 @@
                       </div>
                   </div>
                 </article>
+                {% endif %}
                 {% endifequal %}
               {% endfor %}
 
@@ -191,6 +215,7 @@
       </section>
     </div>
 </div> 
+</div>
 {% endblock %}
 {% block javascript %}
 <script src="{% static "js/ajax-handle.js" %}"></script>
@@ -214,6 +239,12 @@ var ex_code;
   function validate_coupon_code() {
     coupon_id = $('#couponID').val();
     validate_coupon(ex_code, coupon_id);
+  }
+
+  function save_category(){
+    ioeCheck = $('#ioeCheck').prop('checked');
+    iomCheck = $('#ioeCheck').prop('checked');
+    ajax_save_category(ioeCheck, iomCheck);
   }
 </script>
 {% endblock %}

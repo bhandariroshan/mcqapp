@@ -239,7 +239,8 @@ def attend_exam(request,exam_code):
 
         h_a_s = HonorCodeAcceptSingal()
         ess = ExamStartSignal()            
-        validate_start = ess.check_exam_started({'exam_code':int(exam_code), 'useruid':request.user.id, 'start':1,'end':0})
+        validate_start = ess.check_exam_started({
+            'exam_code':int(exam_code), 'useruid':request.user.id, 'start':1,'end':0})
 
         if exam_details['exam_family'] == 'CPS':
             check = exam_details['exam_date'] 
@@ -247,6 +248,7 @@ def attend_exam(request,exam_code):
         elif exam_details['exam_family'] == 'DPS':
             check = validate_start['start_time']
 
+        print validate_start
         if validate_start != None:
             h_a_s_accepted = h_a_s.check_honor_code_accepted({
                 'exam_code':int(exam_code), 
@@ -256,7 +258,8 @@ def attend_exam(request,exam_code):
         else:
             h_a_s_accepted = None
 
-        if not h_a_s_accepted:
+        if h_a_s_accepted == None:
+            print "honorcode not accepted"
             return HttpResponseRedirect('/honorcode/'+str(exam_code) +'/')
 
         if exam_details['exam_family'] =='CPS' or exam_details['exam_family'] =='DPS':
@@ -270,6 +273,7 @@ def attend_exam(request,exam_code):
                 time_elapsed = time.mktime(datetime.datetime.now().timetuple()) - validate_start['start_time']
                 exam_details['exam_duration'] = exam_details['exam_duration'] - time_elapsed/60
                 if exam_details['exam_duration'] <= 0:
+                    print "Less than 0"
                     end_time = datetime.datetime.now().timetuple()                        
                     end_time = time.mktime(end_time)                     
                     h_a_s.update_honor_code_accept_Signal({
@@ -364,7 +368,7 @@ def honorcode(request, exam_code):
             exam_details['exam_date'] = datetime.datetime.fromtimestamp(int(exam_details['exam_date']))
             # print exam_details['exam_date']
 
-        validate_start = ess.check_exam_started({'exam_code':int(exam_code), 'useruid':request.user.id, 'start':1})        
+        validate_start = ess.check_exam_started({'eam_code':int(exam_code), 'useruid':request.user.id, 'start':1})
         if validate_start != None:
             h_a_s_accepted = h_a_s.check_honor_code_accepted({
                 'exam_code':int(exam_code), 

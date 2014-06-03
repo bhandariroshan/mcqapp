@@ -141,7 +141,7 @@ class AjaxHandle():
             h_a_s = HonorCodeAcceptSingal()
             h_a_s.update_honor_code_accept_Signal({'useruid':request.user.id, 
                 'exam_code':int(exam_code), 'ess_time':int(start_time)},{'accept':1})
-            
+            print validate
             ess.insert_exam_start_signal({
                 'exam_code':int(exam_code), 
                 'useruid':request.user.id, 
@@ -185,3 +185,19 @@ class AjaxHandle():
                 return HttpResponse(json.dumps({'status':'ok', 'redirect':0}))
         else:
             return HttpResponse(json.dumps({'status':'error', 'message':'Not Authorized for this action'}))
+
+    def save_category(self, request):
+        user =  UserProfile()
+        if request.user.is_authenticated():
+            ioe_check = bool(request.POST.get('ioe_check', ''))
+            iom_check = bool(request.POST.get('iom_check', ''))
+            if ioe_check and iom_check:
+                cat = 'IDP'
+            elif ioe_check:
+                cat = 'BE-IOE'
+            elif iom_check:
+                cat = 'MBBS-IOM'
+            user.update_upsert({'username':request.user.username}, {'student_category':cat, 'student_category_set':1})
+            return HttpResponse(json.dumps({'status':'ok'}))
+        else:
+            return HttpResponse(json.dumps({'status':'error','message':'You are not authorized to perform this action.'}))
