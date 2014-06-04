@@ -306,7 +306,7 @@
         <!-- <li><a href="#main-signup">Join</a></li> -->
         <li>
           <!-- <div class="medium primary btn pretty" style="background: #3b5998;"> -->
-          <a href="{% provider_login_url "facebook" method="oauth2" %}">
+          <a id="fbLoginNavbar" href="{% provider_login_url "facebook" method="oauth2" %}">
             {% comment %}<a href="{% provider_login_url "twitter" process="login" %}">{% endcomment %}
               <span class="adjoined"><!-- <i class="icon-facebook"></i> --></span>
               <span style="font-size:14px;">Join using facebook </span>
@@ -366,11 +366,11 @@
   <footer role="contentinfo" class="site-footer">
     <div class="row">
         <p style="text-align:center;">
-          <a href="/terms/">Terms</a>&nbsp;&nbsp;
-          <a href="/privacy/">Privacy policy</a>&nbsp;&nbsp;
-          <a href="#">Partners</a>&nbsp;&nbsp;
-          <a href="#">Coupon Distributors</a>&nbsp;&nbsp;
-          <a href="/subscription/">Subscription Models</a>&nbsp;&nbsp;
+          <a id="terms" href="/terms/">Terms</a>&nbsp;&nbsp;
+          <a id="privacy" href="/privacy/">Privacy policy</a>&nbsp;&nbsp;
+          <a id="partners" href="#">Partners</a>&nbsp;&nbsp;
+          <a id="distributors" href="#">Coupon Distributors</a>&nbsp;&nbsp;
+          <a id="subscriptionModels" href="/subscription/">Subscription Models</a>&nbsp;&nbsp;
         </p>
     </div>
     <div class="row">
@@ -432,6 +432,19 @@
 <script src="{% static "js/purechat.js" %}"></script>
 <script src="{% static "js/mixpanel.js" %}"></script>
 {% block footer %}
+<script type="text/javascript">
+  mixpanel.track_links("#fbLogin", "Tried to login with facebook button on homepage", {"referrer": document.referrer});
+  mixpanel.track_links("#terms", "Read Terms page", {"referrer": document.referrer});
+  mixpanel.track_links("#privacy", "Read Privacy page", {"referrer": document.referrer});
+  mixpanel.track_links("#subscriptionModels", "Read Subscription Models", {"referrer": document.referrer});
+  mixpanel.track_links("#distributors", "Read distributors page", {"referrer": document.referrer});
+  mixpanel.track_links("#fbLoginNavbar", "Facebook login via Navbar", {"referrer": document.referrer});
+
+var myVar=setInterval(function(){
+  $('.bx-next').click();
+},2000);
+</script>
+
 {% endblock %}
 
 {% block javascript %}

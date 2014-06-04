@@ -87,8 +87,11 @@ def sign_up_sign_in(request, android_user=False):
 
     if android_user == True:
         data['android_user'] = True
+        data['registration_id'] = request.POST.get('registration_id', '')        
     else:
         data['android_user'] = False
+        data['registration_id'] = ''
+        
     try:
         mc_subscribed = user['subscribed_to_mailchimp']            
     except:
