@@ -239,6 +239,7 @@ var ex_code;
   function validate_coupon_code() {
     coupon_id = $('#couponID').val();
     validate_coupon(ex_code, coupon_id);
+    return false;
   }
 
   function save_category(){
