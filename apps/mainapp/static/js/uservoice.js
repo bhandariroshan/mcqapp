@@ -11,6 +11,7 @@ UserVoice.push(['set', {
   accent_color: '#448dd6',
   trigger_color: 'white',
   trigger_style : 'tab',
+  tab_label: 'Feedback & Support'
   /*trigger_background_color: '#448dd6'*/
 }]);
 

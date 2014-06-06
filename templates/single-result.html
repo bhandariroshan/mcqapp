@@ -1,0 +1,114 @@
+{% extends 'exam_base.html' %}
+{% load staticfiles %} 
+{% block exam_content %}
+    <div class="twelve columns">
+      <div class="seven columns">      
+        <div style=" height: 40px; ">
+          <span>
+            <div class="small primary btn pretty" id="loadPrev">
+              <a href="#"  data-intro="Attempt previous question" data-position="top"><i class="icon-arrow-left"></i>Previous</a>
+            </div>
+          </span>
+          <span style="float:right">
+            <div class="small primary btn pretty loadNext" id="loadNext{{next_to_start.uid.id}}">
+              <a href="#" data-intro="Attempt this question later" data-position="top"><i class="icon-arrow-right" ></i>Skip to Next</a>
+            </div>
+          </span>
+        </div>        
+        <div id="questionText" data-intro="Read the question carefully" data-position="top" class="div-margin twelve columns ui-widget-content ui-corner-all question-min-height">          
+          <span><p><strong style="color:blue;">{{question_number}}. </strong><strong> {{question.question.text}} </strong></p> </span>
+          {% if question.question.image %}
+          <img src="/static/images/{{exam_code}}/{{question.question.image}}" style="margin-left:15%; height:140px" />
+          {% endif %}
+        </div>
+        <div>           
+          <ul class="two_up tiles" id="{{start_question.uid.id}}">
+            <li class="field ui-widget-content ui-corner-all li-height forum_hover attempt" data-intro="Click on correct answer to submit" data-position="bottom" id="a" >
+              <p class="h-text-align ui-widget-header ui-corner-all">
+                <i class="icon-check"></i>
+                A</p>
+              <div class="clickDiv " id="divOptionA" ><span></span>
+                {{question.answer.a.text}}<br></div>
+               {% if question.answer.a.image %}
+                <img src="/static/images/{{exam_code}}/{{question.answer.a.image}}" style="margin-left:15%; height:140px;" />
+               {% endif %}
+            </li>
+                        
+            <li class="field ui-widget-content ui-corner-all li-height forum_hover attempt" data-intro="Click on correct answer to submit" data-position="bottom" id="b">              
+              <p class="h-text-align ui-widget-header ui-corner-all">
+              <i class="icon-check"></i>B</p>
+              <div class="clickDiv" id="divOptionB"><span></span>
+                {{question.answer.b.text}}<br></div>
+               {% if question.answer.b.image %}
+                <img src="/static/images/{{exam_code}}/{{question.answer.b.image}}" style="margin-left:15%; height:140px;" />
+               {% endif %}
+            </li>
+
+            <li class="field ui-widget-content ui-corner-all li-height forum_hover attempt" id="c">
+              <p class="h-text-align ui-widget-header ui-corner-all">
+              <i class="icon-check"></i>C</p>
+              <div class="clickDiv " id="divOptionC"><span></span>
+                {{question.answer.a.text}}<br></div>
+               {% if start_question.answer.a.image %}
+                <img src="/static/images/{{exam_code}}/{{question.answer.c.image}}" style="margin-left:15%; height:140px;" />
+               {% endif %}
+            </li>
+
+            <li class="field ui-widget-content ui-corner-all li-height forum_hover attempt" id="d">              
+              <p class="h-text-align ui-widget-header ui-corner-all">
+              <i class="icon-check"></i>
+              D</p>
+              <div class="clickDiv " id="divOptionD"><span></span>
+                {{question.answer.d.text}}<br></div>
+               {% if question.answer.d.image %}
+                <img src="/static/images/{{exam_code}}/{{question.answer.d.image}}" style="margin-left:15%; height:140px;" />
+               {% endif %}
+              </li>
+          </ul>
+        </div>
+      
+      </div>
+      <div data-intro="Resubmit your answers by clicking on question number on answersheet. NA = Not Attempted, so make sure you answer all the questions." data-position="top" class="five columns ui-widget-content ui-corner-all" id="myAnswerSheet" style="height:350px; overflow-y:scroll; overflow-x:hidden">
+        <h5 class="h-text-align ui-widget-header ui-corner-all"><strong>Answer sheet</strong></h5>
+        <div id="myAnswers" style="margin-left:4%;">
+        </div>
+      </div>
+    </div>    
+    <div id="trigger_gumby_div" style="visibility:hidden;" class="pretty medium primary btn switch" gumby-trigger="#modalwarning"></div>
+    <div class="modal" id="modalwarning">
+      <div class="content">
+        <a id= "closegumby" class="close switch" gumby-trigger="|#modalwarning"><i class="icon-cancel" /></i></a>
+        <div class="row">
+          <div id="dangerMessage"></div>
+          <div class="ten columns centered text-center" style="margin-top:6%;">
+            <p id="infoText">You have successfully reached the end of this exam. What would you like to do?</p>
+              <li class="prepend field">
+                <div class="medium primary btn" >
+                  <a href="#" onclick="set_exam_finished()">Submit</a>
+                  <a id="reviewAns" href="#" onclick="review()">Review</a>
+                </div>
+              </li>
+          </div>
+        </div>
+      </div>
+    </div>    
+{% endblock %}
+{% block javascript %}
+<script type="text/x-mathjax-config">
+  //MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="/static/js/chardinjs.min.js"></script> 
+<script src="/static/js/ajax-handle.js"></script>
+{% endblock %}

@@ -108,14 +108,14 @@
                     <img src="/static/images/{{eachExam.image}}" width="145px" />
                 </div>
                 <div style="width:65%">
-                    <h4><a onclick="attend_exam('{{eachExam.code}}')" href="#" id="{{eachExam.code}}/"><strong>{{eachExam.name}}</strong></a></h4>
+                    <h4><a href="#" id="{{eachExam.code}}/"><strong>{{eachExam.name}}</strong></a></h4>
                     <p><strong>Date: </strong>When ever you like in a single sitting</p>
                     <p><strong>Time: </strong>Anytime</p>
                     {% if not eachExam.subscribed %}
                     <p><strong>Cost: </strong>Rs. 10 (<a href="/coupon/">coupon code</a> entry required)</p>
                     {% endif %}
                      <div class="medium primary btn pretty button-margin" >
-                          <a href="{% if eachExam.subscribed %}/honorcode/{{eachExam.code}}/{% else %}#{% endif %}" {% if not eachExam.subscribed %} onclick="attempt_exam('{{eachExam.code}}')" {% endif %}>Give Exam</a>
+                          <a href="{% if eachExam.subscribed %}/dps/{{eachExam.code}}/{% else %}#{% endif %}" {% if not eachExam.subscribed %} onclick="attempt_exam('{{eachExam.code}}')" {% endif %}>Give Exam</a>
                       </div>
                   </div>
                 </article>

@@ -186,6 +186,9 @@
     margin-right: 17%;
     margin-top: 7%;
   }
+  .attempt{
+    background: rgb(123, 216, 115);
+  }
   .footer-center{
     position: absolute;
     left: 50%;
@@ -205,13 +208,13 @@
       padding: 150px 0;
     }
   .section-signup{
-    height: 600px;
+    min-height: 600px;
   }
   .over{
     overflow-x:hidden;
   }
     .navbar .logo a {
-      {% if not request.user.is_authenticated %}  margin-left: 100px; {% endif %}
+      /*{% if not request.user.is_authenticated %}  margin-left: 100px; {% endif %}*/
     }    
     .navbar ul li {
       text-align: right;
@@ -293,11 +296,12 @@
   <div class="navbar fixed" id="nav1" gumby-fixed="top" data-target="top" style="top: 0px;">
     <a class="toggle" gumby-trigger="#nav1 > ul" href="#"><i class="icon-menu"></i></a>
     {% if request.user.is_authenticated %}<div class="row">{% endif %}
-      <h2 class="columns logo">
+      <h2 class="columns logo" style="{% if not request.user.is_authenticated %} margin-left:10%; {% endif %}">
         <a href="/" data-scroll-nav="0">
           <img src="{% static 'images/meroanswer.png' %}" width="120" height="60" alt="">
         </a>
       </h2>
+
       {% if not request.user.is_authenticated %}
       <ul class="" style="float:right;clear:none; margin-right: 50px;">
         <!-- <li><a href="#whatisit">What is it?</a></li> -->
