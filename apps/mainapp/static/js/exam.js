@@ -108,14 +108,14 @@ $('#loadPrev').click(function(){
 var hour_rem = exam_duration/60;
 var min_rem = parseInt(exam_duration%60);
 var sec_rem = min_rem * 60;
-var toal_time = parseInt(exam_duration) * 60;
+var toal_time = exam_duration * 60;
 
 var myVar=setInterval(function(){
     if (toal_time >0 ){
         toal_time = toal_time-1;  
         hour_rem  = parseInt(toal_time/3600);
         min_rem   = parseInt(toal_time/60) - hour_rem *60;
-        sec_rem   = toal_time - hour_rem*3600 - min_rem*60;
+        sec_rem   = parseInt(toal_time - hour_rem*3600 - min_rem*60);
         myTimer();        
     }
     else

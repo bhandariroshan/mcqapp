@@ -9,12 +9,11 @@
     width: 300px;
   }
   .gallery-slider-wrapper {
-margin-top: -62px;
-}
+    margin-top: -62px;
+  }
 .playstore{
   width: 200px;
-margin-left: 30%;
-margin-top: 10%;
+  margin-top: 10%;
 }
 
 </style>
@@ -36,20 +35,18 @@ margin-top: 10%;
           </div>
         </div>
         <!-- /END: Section Header -->
-        <div class="row">
-          <div class="twelve columns centered">
-            <div class="twelve columns centered">
-              <div class="large primary btn pretty five columns centered" style="background: #3b5998; margin-top: 3%; margin-bottom:4%;">
-                  <a href="{% provider_login_url "facebook" method="oauth2" %}">
-                      <span class="adjoined"><i class="icon-facebook"></i></span>
-                      <span style="font-size:14px;"><strong>Signup/Login with facebook</strong> </span>
-                  </a>
-                </div>
-              </div>
+        <div class="row">                            
               <div class="twelve columns centered">  
-                <p class="twelve columns centered text-center"><strong>EXAM ANYWHERE ANYTIME </strong> <br><strong> Exactly based on the syllabus of <strong>IOM</strong> and <strong>IOE</strong></strong> entrance exam</p>
+                <p class="twelve columns centered text-center">
+                    <a class="btn primary large pretty five columns centered" style="background: #3b5998;" id="fbLogin" href="{% provider_login_url "facebook" method="oauth2" %}">
+                      <span class="adjoined"><i class="icon-facebook" style="color:white"></i></span>
+                      <span style="font-size:14px;"><strong style="color:white">Signup/Login with facebook</strong> </span>
+                    </a>
+                </p>
+                <p class="twelve columns centered text-center">
+                  <strong>EXAM ANYWHERE ANYTIME </strong> <br><strong> Exactly based on the syllabus of <strong>IOM</strong> and <strong>IOE</strong></strong> entrance exam
+                </p>
               </div>
-          </div>
         </div>
       <!-- /END: Animation Wrapper  -->
     </section>
@@ -60,7 +57,10 @@ margin-top: 10%;
     <!-- START: Details Section -->
     <section class="site-section section-details" data-target="details" data-scroll-index="1" style="overflow-x:hidden;">
       <!-- START: Detail Item -->
-      <h1 class="row detail-list-item" style=" margin-left:40%">How it works</h1>
+    <div class="" style="margin-left:35%">
+      <h1 class="row detail-list-item">How it works</h1>
+    </div>
+    <div class="">
       <div class="row detail-list-item">
         <div class="four columns detail-list-graphic">
           <div class="circ-img circled-image-1">
@@ -72,7 +72,7 @@ margin-top: 10%;
         <div class="eight columns details">
           <h2>get a coupon</h2>
           <!-- <br><br><br> -->
-          <p>To appear online exam, you need to get a <a href="/coupon/" alt="coupon" style="color:red">coupon </a>from <a href="#" alt="coupon code distributors" style="color:red">distributors nearby you.</a> Cheaper rates for coupon codes are available for different <a href="/subscription/" style="color:red" alt="subscription models">subscription models.</a></p>
+          <p>To appear online exam, you need to get a <a id="linkCouponlanding" href="/coupon/" alt="coupon" style="color:red">coupon </a>from <a href="#" alt="coupon code distributors" style="color:red">distributors nearby you.</a> Cheaper rates for coupon codes are available for different <a href="/subscription/" style="color:red" alt="subscription models">subscription models.</a></p>
         </div>
       </div>
       <!-- /END: Detail Item -->
@@ -108,6 +108,7 @@ margin-top: 10%;
         </div>
       </div>
       <!-- /END: Detail Item -->
+    </div>
     </section>
 
   <!-- START: Site Header -->
@@ -127,7 +128,7 @@ margin-top: 10%;
         <h1 style="font-size: 45px;">MeroAnswer Android App</h1>
         <h6 style="line-height: 150%">You can download our android app and give exam from anywhere.</h6>
         
-        <a href="#" class="" gumby-duration="1000">
+        <a id="appStoreLink" href="#" class="" gumby-duration="1000">
           <img class="playstore" src="/static/images/playstore.png"/>
         </a>
         </div>
@@ -138,4 +139,19 @@ margin-top: 10%;
     
 
   </main>
+{% endblock %}
+{% block javascript %}
+<script type="text/javascript">
+    mixpanel.track_links("#fbLogin", "Tried to login with facebook button on homepage", {
+        "referrer": document.referrer
+});
+    mixpanel.track_links("#appStoreLink", "Clicked on playstore link", {
+        "referrer": document.referrer
+});
+    mixpanel.track_links("#linkCouponlanding", "Clicked on coupon link on landing How it works section", {
+        "referrer": document.referrer
+});    
+  
+    
+</script>
 {% endblock %}

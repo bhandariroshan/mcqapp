@@ -12,7 +12,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  
   <link rel="shortcut icon" href="{% static "images/fab.png" %}" type="image/x-icon">
   
-  <meta property="fb:app_id" content="" /> 
+  <meta property="fb:app_id" content="238848396304709" /> 
   <meta property="fb:admins" content="" /> 
   <meta property="og:type" content="website" />
   <meta name="keywords" content="MeroAnswer - Sign up and become a part of smart and success study.">
@@ -21,16 +21,16 @@
   <meta property="og:url" content="http://{{request.META.HTTP_HOST}}{{request.path}}" /> 
   {% if request.user.is_authenticated %} 
     {% ifequal request.path  '/' %}
-      <title>Home - MeroAnswer</title>
+      <title>Home | MeroAnswer</title>
         <!-- Facebook Metadata /-->
       <meta property="fb:page_id" content="">
-      <meta property="og:image" content="">
-      <meta property="og:description" content="">
-      <meta property="og:title" content="Home - MeroAnswer">
+      <meta property="og:image" content="http://meroanswer.com/static/images/meroanswer-fb.png">
+      <meta property="og:description" content="MeroAnswer - web and android solution to prepare competitive exams.">
+      <meta property="og:title" content="Home | MeroAnswer">
 
       <!-- Google+ Metadata /-->
-      <meta itemprop="name" content="Home - MeroAnswer">
-      <meta itemprop="description" content="">
+      <meta itemprop="name" content="Home | MeroAnswer">
+      <meta itemprop="description" content="MeroAnswer - web and android solution to prepare competitive exams.">
       <meta itemprop="image" content="">
     {% endifequal %}
   {% endif %}
@@ -40,7 +40,7 @@
       <title>MeroAnswer | Sign up and become a part of smart studying for success.</title>
       <!-- Facebook Metadata /-->
       <meta property="fb:page_id" content="">
-      <meta property="og:image" content="">
+      <meta property="og:image" content="http://meroanswer.com/static/images/meroanswer-fb.png">
       <meta property="og:description" content="">
       <meta property="og:title" content="MeroAnswer | Sign up and become a part of smart studying for success.">
 
@@ -55,7 +55,7 @@
       <title>Honorcode | MeroAnswer</title>
       <!-- Facebook Metadata /-->
       <meta property="fb:page_id" content="">
-      <meta property="og:image" content="">
+      <meta property="og:image" content="http://meroanswer.com/static/images/meroanswer-fb.png">
       <meta property="og:description" content="">
       <meta property="og:title" content="Honorcode | MeroAnswer">
 
@@ -69,7 +69,7 @@
       <title>Coupon Distributors | MeroAnswer</title>
       <!-- Facebook Metadata /-->
       <meta property="fb:page_id" content="">
-      <meta property="og:image" content="">
+      <meta property="og:image" content="http://meroanswer.com/static/images/meroanswer-fb.png">
       <meta property="og:description" content="">
       <meta property="og:title" content="Coupon Distributors | MeroAnswer">
 
@@ -83,7 +83,7 @@
       <title>Subscription Plans | MeroAnswer</title>
       <!-- Facebook Metadata /-->
       <meta property="fb:page_id" content="">
-      <meta property="og:image" content="">
+      <meta property="og:image" content="http://meroanswer.com/static/images/meroanswer-fb.png">
       <meta property="og:description" content="">
       <meta property="og:title" content="Subscription Plans | MeroAnswer">
 
@@ -97,7 +97,7 @@
       <title>{{exam_details.exam_name}} | MeroAnswer</title>
       <!-- Facebook Metadata /-->
       <meta property="fb:page_id" content="">
-      <meta property="og:image" content="">
+      <meta property="og:image" content="http://meroanswer.com/static/images/meroanswer-fb.png">
       <meta property="og:description" content="">
       <meta property="og:title" content="{{exam_details.exam_name}} | MeroAnswer">
 
@@ -111,7 +111,7 @@
       <title>Coupon code | MeroAnswer</title>
       <!-- Facebook Metadata /-->
       <meta property="fb:page_id" content="">
-      <meta property="og:image" content="">
+      <meta property="og:image" content="http://meroanswer.com/static/images/meroanswer-fb.png">
       <meta property="og:description" content="">
       <meta property="og:title" content="Coupon code | MeroAnswer">
 
@@ -125,7 +125,7 @@
       <title>Terms of service | MeroAnswer</title>
       <!-- Facebook Metadata /-->
       <meta property="fb:page_id" content="">
-      <meta property="og:image" content="">
+      <meta property="og:image" content="http://meroanswer.com/static/images/meroanswer-fb.png">
       <meta property="og:description" content="">
       <meta property="og:title" content="Terms of service | MeroAnswer">
 
@@ -139,7 +139,7 @@
       <title>Privacy Policies | MeroAnswer</title>
       <!-- Facebook Metadata /-->
       <meta property="fb:page_id" content="">
-      <meta property="og:image" content="">
+      <meta property="og:image" content="http://meroanswer.com/static/images/meroanswer-fb.png">
       <meta property="og:description" content="">
       <meta property="og:title" content="Privacy Policies | MeroAnswer">
 
@@ -153,7 +153,7 @@
       <title>Result {{ exam_details.exam_name }} | MeroAnswer</title>
       <!-- Facebook Metadata /-->
       <meta property="fb:page_id" content="">
-      <meta property="og:image" content="">
+      <meta property="og:image" content="http://meroanswer.com/static/images/meroanswer-fb.png">
       <meta property="og:description" content="">
       <meta property="og:title" content="Result {{ exam_details.exam_name }} | MeroAnswer">          
            
@@ -186,6 +186,9 @@
     margin-right: 17%;
     margin-top: 7%;
   }
+  .attempt{
+    background: rgb(123, 216, 115);
+  }
   .footer-center{
     position: absolute;
     left: 50%;
@@ -205,13 +208,13 @@
       padding: 150px 0;
     }
   .section-signup{
-    height: 600px;
+    min-height: 600px;
   }
   .over{
     overflow-x:hidden;
   }
     .navbar .logo a {
-      {% if not request.user.is_authenticated %}  margin-left: 100px; {% endif %}
+      /*{% if not request.user.is_authenticated %}  margin-left: 100px; {% endif %}*/
     }    
     .navbar ul li {
       text-align: right;
@@ -293,11 +296,12 @@
   <div class="navbar fixed" id="nav1" gumby-fixed="top" data-target="top" style="top: 0px;">
     <a class="toggle" gumby-trigger="#nav1 > ul" href="#"><i class="icon-menu"></i></a>
     {% if request.user.is_authenticated %}<div class="row">{% endif %}
-      <h2 class="columns logo">
+      <h2 class="columns logo" style="{% if not request.user.is_authenticated %} margin-left:10%; {% endif %}">
         <a href="/" data-scroll-nav="0">
           <img src="{% static 'images/meroanswer.png' %}" width="120" height="60" alt="">
         </a>
       </h2>
+
       {% if not request.user.is_authenticated %}
       <ul class="" style="float:right;clear:none; margin-right: 50px;">
         <!-- <li><a href="#whatisit">What is it?</a></li> -->
@@ -306,7 +310,7 @@
         <!-- <li><a href="#main-signup">Join</a></li> -->
         <li>
           <!-- <div class="medium primary btn pretty" style="background: #3b5998;"> -->
-          <a href="{% provider_login_url "facebook" method="oauth2" %}">
+          <a id="fbLoginNavbar" href="{% provider_login_url "facebook" method="oauth2" %}">
             {% comment %}<a href="{% provider_login_url "twitter" process="login" %}">{% endcomment %}
               <span class="adjoined"><!-- <i class="icon-facebook"></i> --></span>
               <span style="font-size:14px;">Join using facebook </span>
@@ -347,15 +351,17 @@
       <div id="dangerMessage"></div>
       <div class="ten columns centered text-center" style="margin-top:6%;">
         <p id="infoText">Every time you give exam, you need to enter <a href="/coupon-codes/" style="color:red;"><strong>coupon code</strong></a> available at various <a href="/distributors/" style="color:red;"><strong>distributors</strong></a>. Please enter <strong>your</strong> as coupon code for now.</p>
+        <form onsubmit="validate_coupon_code()">
           <li class="prepend field">
             <span class="adjoined">Coupon: </span>
             <input id="couponID" class="xwide text input" type="text" placeholder="Please enter the coupon code" />
           </li>
           <li class="prepend field">
-            <div class="medium primary btn" >
+            <button class="medium primary btn" type="submit">
               <a href="#" onclick="validate_coupon_code()">Start Exam</a>
-            </div>
+            </button>
           </li>
+        </form>
       </div>
     </div>
   </div>
@@ -366,11 +372,11 @@
   <footer role="contentinfo" class="site-footer">
     <div class="row">
         <p style="text-align:center;">
-          <a href="/terms/">Terms</a>&nbsp;&nbsp;
-          <a href="/privacy/">Privacy policy</a>&nbsp;&nbsp;
-          <a href="#">Partners</a>&nbsp;&nbsp;
-          <a href="#">Coupon Distributors</a>&nbsp;&nbsp;
-          <a href="/subscription/">Subscription Models</a>&nbsp;&nbsp;
+          <a id="terms" href="/terms/">Terms</a>&nbsp;&nbsp;
+          <a id="privacy" href="/privacy/">Privacy policy</a>&nbsp;&nbsp;
+          <a id="partners" href="#">Partners</a>&nbsp;&nbsp;
+          <a id="distributors" href="#">Coupon Distributors</a>&nbsp;&nbsp;
+          <a id="subscriptionModels" href="/subscription/">Subscription Models</a>&nbsp;&nbsp;
         </p>
     </div>
     <div class="row">
@@ -432,6 +438,19 @@
 <script src="{% static "js/purechat.js" %}"></script>
 <script src="{% static "js/mixpanel.js" %}"></script>
 {% block footer %}
+<script type="text/javascript">
+  mixpanel.track_links("#fbLogin", "Tried to login with facebook button on homepage", {"referrer": document.referrer});
+  mixpanel.track_links("#terms", "Read Terms page", {"referrer": document.referrer});
+  mixpanel.track_links("#privacy", "Read Privacy page", {"referrer": document.referrer});
+  mixpanel.track_links("#subscriptionModels", "Read Subscription Models", {"referrer": document.referrer});
+  mixpanel.track_links("#distributors", "Read distributors page", {"referrer": document.referrer});
+  mixpanel.track_links("#fbLoginNavbar", "Facebook login via Navbar", {"referrer": document.referrer});
+
+var myVar=setInterval(function(){
+  $('.bx-next').click();
+},2000);
+</script>
+
 {% endblock %}
 
 {% block javascript %}

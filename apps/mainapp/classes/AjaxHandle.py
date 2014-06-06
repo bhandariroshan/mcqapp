@@ -149,7 +149,7 @@ class AjaxHandle():
                 'start_time':int(start_time),
                 'end':0
             })
-            return HttpResponse(json.dumps({'status':'ok', 'url':'/attend-exam/'+ exam_code + '/'}))
+            return HttpResponse(json.dumps({'status':'ok', 'url':'/cps/'+ exam_code + '/'}))
         else:
             return HttpResponse(json.dumps({'status':'error', 'message':'Not Authorized for this action'}))
 
@@ -169,10 +169,13 @@ class AjaxHandle():
                 'end':0})           
             
             h_a_s = HonorCodeAcceptSingal()
-            h_a_s.update_honor_code_accept_Signal({
-                'useruid':request.user.id, 
-                'exam_code':int(exam_code), 
-                'ess_time':int(validate['start_time'])},{'accept':0})            
+            try:
+                h_a_s.update_honor_code_accept_Signal({
+                    'useruid':request.user.id, 
+                    'exam_code':int(exam_code), 
+                    'ess_time':int(validate['start_time'])},{'accept':0})            
+            except:
+                pass
 
             ess.update_exam_start_signal({
                 'exam_code':int(exam_code), 
@@ -201,3 +204,5 @@ class AjaxHandle():
             return HttpResponse(json.dumps({'status':'ok'}))
         else:
             return HttpResponse(json.dumps({'status':'error','message':'You are not authorized to perform this action.'}))
+
+    
