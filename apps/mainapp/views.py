@@ -537,6 +537,7 @@ def results(request, exam_code):
     exam_handler = ExamHandler()    
     score_dict = exam_handler.check_answers(exam_code, answer_list)
     parameters['result'] = score_dict
+    parameters['exam_code'] = exam_code
     parameters['myrankcard'] = {'total':200, 'rank':1}
     return render_to_response('results.html', parameters, context_instance=RequestContext(request))
 
