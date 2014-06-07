@@ -562,20 +562,20 @@ def show_result(request, exam_code, subject_name):
         total_questions = question_obj.get_count({"exam_code": int(exam_code), 
             'subject':subject_name})
         sorted_questions = sorted(questions, key=lambda k: k['question_number'])
-        # try:
-        what = request.GET.get('q','')
-        if what == 'next':
-            current_q_no = int(request.session['current_q_no']) + 1
-            if current_q_no >= total_questions:
-                current_q_no = total_questions-1
-        elif what == 'prev':
-            current_q_no = int(request.session['current_q_no']) - 1
-            if current_q_no <= 0:
-                current_q_no = 0   
-        else:
-            current_q_no = int(request.session['current_q_no'])            
-        # except:
-        #     current_q_no = 0
+        try:
+            what = request.GET.get('q','')
+            if what == 'next':
+                current_q_no = int(request.session['current_q_no']) + 1
+                if current_q_no >= total_questions:
+                    current_q_no = total_questions-1
+            elif what == 'prev':
+                current_q_no = int(request.session['current_q_no']) - 1
+                if current_q_no <= 0:
+                    current_q_no = 0   
+            else:
+                current_q_no = int(request.session['current_q_no'])            
+        except:
+            current_q_no = 0
 
 
         request.session['current_q_no'] = current_q_no
