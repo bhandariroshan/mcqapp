@@ -555,7 +555,10 @@ def show_result(request, exam_code, subject_name):
     subscribed = user_profile_obj.check_subscribed(request.user.username, exam_code)
     exam_details = exam_obj.find_one_exammodel({'exam_code':int(exam_code)})
     parameters = {}
-    if request.user.is_authenticated() and subscribed and exam_details['exam_family']=='DPS':        
+    if request.user.is_authenticated() and subscribed:        
+        current_time = time.mktime(datetime.datetime.now().timetuple())
+        if exam_details['exam_family'] == 'CPS' and current_time - exam_details['exam_date'] < exam_details['exam_duration']*60:
+            return HttpResponseRedirect('/')            
         parameters['exam_details'] = exam_details
         question_obj = QuestionApi()    
         questions = question_obj.find_all_questions({"exam_code": int(exam_code),
