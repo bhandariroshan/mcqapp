@@ -2,16 +2,16 @@
 {% load staticfiles %} 
 {% block exam_content %}
     <div class="twelve columns">
-      <div class="seven columns">      
-        <div style=" height: 40px; ">
+      <div class="twelve columns" style="margin-top: 10%;">      
+        <div style=" height: 50px; ">
           <span>
             <div class="small primary btn pretty" id="loadPrev">
-              <a href="#"  data-intro="Attempt previous question" data-position="top"><i class="icon-arrow-left"></i>Previous</a>
+              <a href="/answers/{{exam_code}}/{{subject}}/?q=prev"  data-intro="Attempt previous question" data-position="top"><i class="icon-arrow-left"></i>Previous</a>
             </div>
           </span>
           <span style="float:right">
-            <div class="small primary btn pretty loadNext" id="loadNext{{next_to_start.uid.id}}">
-              <a href="#" data-intro="Attempt this question later" data-position="top"><i class="icon-arrow-right" ></i>Skip to Next</a>
+            <div class="small primary btn pretty loadNext" id="loadNext">
+              <a href="/answers/{{exam_code}}/{{subject}}/?q=next" data-intro="Attempt this question later" data-position="top"><i class="icon-arrow-right" ></i>Next</a>
             </div>
           </span>
         </div>        
@@ -23,10 +23,9 @@
         </div>
         <div>           
           <ul class="two_up tiles" id="{{start_question.uid.id}}">
-            <li class="field ui-widget-content ui-corner-all li-height forum_hover attempt" data-intro="Click on correct answer to submit" data-position="bottom" id="a" >
+            <li class="field ui-widget-content ui-corner-all li-height forum_hover {% ifequal attempted|lower 'a' %} attempt {% endifequal %}"  data-intro="Click on correct answer to submit" data-position="bottom" id="a" >
               <p class="h-text-align ui-widget-header ui-corner-all">
-                <i class="icon-check"></i>
-                A</p>
+                {% ifequal question.answer.correct|lower 'a' %}<i class="icon-check"></i>{% endifequal %}A</p>
               <div class="clickDiv " id="divOptionA" ><span></span>
                 {{question.answer.a.text}}<br></div>
                {% if question.answer.a.image %}
@@ -34,9 +33,9 @@
                {% endif %}
             </li>
                         
-            <li class="field ui-widget-content ui-corner-all li-height forum_hover attempt" data-intro="Click on correct answer to submit" data-position="bottom" id="b">              
+            <li class="field ui-widget-content ui-corner-all li-height forum_hover {% ifequal attempted|lower 'b' %} attempt {% endifequal %}" data-intro="Click on correct answer to submit" data-position="bottom" id="b">              
               <p class="h-text-align ui-widget-header ui-corner-all">
-              <i class="icon-check"></i>B</p>
+              {% ifequal question.answer.correct|lower 'b' %}<i class="icon-check"></i>{% endifequal %}B</p>
               <div class="clickDiv" id="divOptionB"><span></span>
                 {{question.answer.b.text}}<br></div>
                {% if question.answer.b.image %}
@@ -44,9 +43,9 @@
                {% endif %}
             </li>
 
-            <li class="field ui-widget-content ui-corner-all li-height forum_hover attempt" id="c">
+            <li class="field ui-widget-content ui-corner-all li-height forum_hover {% ifequal attempted|lower 'c' %} attempt {% endifequal %}" id="c">
               <p class="h-text-align ui-widget-header ui-corner-all">
-              <i class="icon-check"></i>C</p>
+              {% ifequal question.answer.correct|lower 'c' %}<i class="icon-check"></i>{% endifequal %}C</p>
               <div class="clickDiv " id="divOptionC"><span></span>
                 {{question.answer.a.text}}<br></div>
                {% if start_question.answer.a.image %}
@@ -54,10 +53,9 @@
                {% endif %}
             </li>
 
-            <li class="field ui-widget-content ui-corner-all li-height forum_hover attempt" id="d">              
+            <li class="field ui-widget-content ui-corner-all li-height forum_hover {% ifequal attempted|lower 'd' %} attempt {% endifequal %}" id="d">              
               <p class="h-text-align ui-widget-header ui-corner-all">
-              <i class="icon-check"></i>
-              D</p>
+              {% ifequal question.answer.correct|lower 'd' %}<i class="icon-check"></i>{% endifequal %}D</p>
               <div class="clickDiv " id="divOptionD"><span></span>
                 {{question.answer.d.text}}<br></div>
                {% if question.answer.d.image %}
@@ -68,12 +66,25 @@
         </div>
       
       </div>
-      <div data-intro="Resubmit your answers by clicking on question number on answersheet. NA = Not Attempted, so make sure you answer all the questions." data-position="top" class="five columns ui-widget-content ui-corner-all" id="myAnswerSheet" style="height:350px; overflow-y:scroll; overflow-x:hidden">
+        <!--<div data-intro="Resubmit your answers by clicking on question number on answersheet. NA = Not Attempted, so make sure you answer all the questions." data-position="top" class="five columns ui-widget-content ui-corner-all" id="myAnswerSheet" style="height:350px; overflow-y:scroll; overflow-x:hidden">
         <h5 class="h-text-align ui-widget-header ui-corner-all"><strong>Answer sheet</strong></h5>
         <div id="myAnswers" style="margin-left:4%;">
         </div>
-      </div>
-    </div>    
+      </div> -->
+    </div>  
+    <div class="twelve columns">
+      <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=238848396304709";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        <fb:comments data-href='http://{{request.host}}{{request.path}}' data-numposts='5' data-colorscheme='light'></fb:comments>
+    </div>
+
+
     <div id="trigger_gumby_div" style="visibility:hidden;" class="pretty medium primary btn switch" gumby-trigger="#modalwarning"></div>
     <div class="modal" id="modalwarning">
       <div class="content">

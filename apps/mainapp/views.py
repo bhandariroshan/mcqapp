@@ -243,7 +243,7 @@ def attend_cps_exam(request, exam_code):
         ess = ExamStartSignal()            
         cqn = CurrentQuestionNumber()
         atte_ans = AttemptedAnswerDatabase()
-        questions = question_obj.find_all_questions({"exam_code": int(exam_code)})
+        questions = question_obj.find_all_questions({"exam_code": int(exam_code)}, fields={'answer.correct':0})
         user = user_profile_obj.get_user_by_username(request.user.username)
         exam_details = exam_obj.find_one_exammodel({'exam_code':int(exam_code)})
 
@@ -366,7 +366,7 @@ def attend_dps_exam(request,exam_code):
 
             parameters['all_answers'] = json.dumps(all_answers)                        
             question_obj = QuestionApi()    
-            questions = question_obj.find_all_questions({"exam_code": int(exam_code)})
+            questions = question_obj.find_all_questions({"exam_code": int(exam_code)}, fields={'answer.correct':0})
             total_questions = question_obj.get_count({"exam_code": int(exam_code)})
             sorted_questions = sorted(questions, key=lambda k: k['question_number'])
 
@@ -541,7 +541,7 @@ def results(request, exam_code):
     return render_to_response('results.html', parameters, context_instance=RequestContext(request))
 
 def notifications(request):
-    if request.user.is_authenticated:
+    if request.user.is_authenticated():
         from apps.mainapp.classes.notifications import Notifications
         notices = Notifications()
         return HttpResponse(json.dumps({'status':'ok', 'result':notices.get_notifications(request.user.id)}))
@@ -554,7 +554,7 @@ def show_result(request, exam_code, subject_name):
     subscribed = user_profile_obj.check_subscribed(request.user.username, exam_code)
     exam_details = exam_obj.find_one_exammodel({'exam_code':int(exam_code)})
     parameters = {}
-    if request.user.is_authenticated:        
+    if request.user.is_authenticated():        
         parameters['exam_details'] = exam_details
         question_obj = QuestionApi()    
         questions = question_obj.find_all_questions({"exam_code": int(exam_code),
@@ -562,36 +562,42 @@ def show_result(request, exam_code, subject_name):
         total_questions = question_obj.get_count({"exam_code": int(exam_code), 
             'subject':subject_name})
         sorted_questions = sorted(questions, key=lambda k: k['question_number'])
-        try:
-            currnet_q_no = int(request.session['current_q_no'])
-        except:
-            current_q_no = 0
+        # try:
+        what = request.GET.get('q','')
+        if what == 'next':
+            current_q_no = int(request.session['current_q_no']) + 1
+            if current_q_no >= total_questions:
+                current_q_no = total_questions-1
+        elif what == 'prev':
+            current_q_no = int(request.session['current_q_no']) - 1
+            if current_q_no <= 0:
+                current_q_no = 0   
+        else:
+            current_q_no = int(request.session['current_q_no'])            
+        # except:
+        #     current_q_no = 0
 
-        # if current_q_no != total_questions -1:
-        #     next_to_start = current_q_no + 1
 
-        # if current_q_no > 0:
-        #     previous_question = current_q_no -1
-
-        # parameters['question_number'] = current_q_no + 1
-        # parameters['next_question_number'] = next_to_start
-        # parameters['previous_question_number'] = previous_question
+        request.session['current_q_no'] = current_q_no
+        parameters['question_number'] = questions[current_q_no]['question_number']
         parameters['question'] =  questions[current_q_no]
+        parameters['subject'] = subject_name
+        parameters['exam_code'] = exam_code
 
         ess = ExamStartSignal()            
         ans = AttemptedAnswerDatabase()
         ess_check = ess.check_exam_started({'exam_code':int(exam_code), 'useruid':request.user.id})
         total_questions = question_obj.get_count({"exam_code": int(exam_code)})
+
         try:
-            att_ans = ans.find_all_atttempted_answer({
-                'exam_code':int(exam_code), 
-                'user_id':request.user.id,
-                'ess_time':ess_check['start_time'],
-                'q_no':current_q_no
-                }, fields={'q_no':1, 'attempt_details':1})
+            query = {'exam_code':int(exam_code), 'user_id':int(request.user.id),
+                'ess_time':ess_check['start_time'],'q_no':questions[current_q_no]['question_number']}
+            att_ans = ans.find_all_atttempted_answer(query)
+            parameters['attempted'] = att_ans[0]['attempt_details'][len(att_ans[0]['attempt_details'])-1]['selected_ans']
         except:
             att_ans = ''
-        print att_ans
+            parameters['attempted'] = ''
+
         return render_to_response('single-result.html', parameters, context_instance=RequestContext(request))
     else:
         return HttpResponseRedirect('/')        
@@ -625,7 +631,7 @@ def get_list_of_result(request):
                             answer_list +='e'
                     except:
                         answer_list += 'e'
-                
+
                 exam_handler = ExamHandler()    
                 score_dict = exam_handler.check_answers(exam_code, answer_list)
                 return_dict.append({'exam_code':exam_code, 'ess_time':eachAttempt, 'result':score_dict})
