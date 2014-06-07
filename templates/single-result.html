@@ -6,12 +6,12 @@
         <div style=" height: 50px; ">
           <span>
             <div class="small primary btn pretty" id="loadPrev">
-              <a href="/answers/{{exam_code}}/{{subject}}/?q=prev"  data-intro="Attempt previous question" data-position="top"><i class="icon-arrow-left"></i>Previous</a>
+              <a href="/answers/{{exam_code}}/{{subject}}/?q={{previous_q_no}}"  data-intro="Attempt previous question" data-position="top"><i class="icon-arrow-left"></i>Previous</a>
             </div>
           </span>
           <span style="float:right">
             <div class="small primary btn pretty loadNext" id="loadNext">
-              <a href="/answers/{{exam_code}}/{{subject}}/?q=next" data-intro="Attempt this question later" data-position="top"><i class="icon-arrow-right" ></i>Next</a>
+              <a href="/answers/{{exam_code}}/{{subject}}/?q={{next_q_no}}" data-intro="Attempt this question later" data-position="top"><i class="icon-arrow-right" ></i>Next</a>
             </div>
           </span>
         </div>        
@@ -81,7 +81,7 @@
         js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=238848396304709";
         fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
-        <fb:comments data-href='http://{{request.META.HTTP_HOST}}{{request.path}}' data-numposts='5' data-colorscheme='light'></fb:comments>
+        <fb:comments data-href='http://{{request.META.HTTP_HOST}}{{request.path}}/q={{current_q_no}}' data-numposts='5' data-colorscheme='light'></fb:comments>
     </div>
 
 
