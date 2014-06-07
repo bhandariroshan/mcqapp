@@ -81,7 +81,7 @@
         js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=238848396304709";
         fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
-        <fb:comments data-href='http://{{request.META.HTTP_HOST}}{{request.path}}/q={{current_q_no}}' data-numposts='5' data-colorscheme='light'></fb:comments>
+        <fb:comments data-href='http://{{request.META.HTTP_HOST}}{{request.path}}q={{current_q_no}}' data-numposts='5' data-colorscheme='light'></fb:comments>
     </div>
 
 
