@@ -578,6 +578,10 @@ def show_result(request, exam_code, subject_name):
             previous_q_no = 0
             next_q_no = 1
 
+        if current_q_no >=total_questions:
+            current_q_no = total_questions -1
+        if current_q_no <=0:
+            current_q_no = 0
         parameters['current_q_no'] = current_q_no
         parameters['question_number'] = questions[current_q_no]['question_number']
         parameters['question'] =  questions[current_q_no]
