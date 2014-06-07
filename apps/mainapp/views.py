@@ -274,6 +274,7 @@ def attend_cps_exam(request, exam_code):
         time_elapsed = time.mktime(datetime.datetime.now().timetuple()) - int(exam_details['exam_date'])
         total_questions = question_obj.get_count({"exam_code": int(exam_code)})
         sorted_questions = sorted(questions, key=lambda k: k['question_number'])
+        print sorted_questions
 
         start_question_number = 0 
         current_q_no = cqn.check_current_question_number({
@@ -368,7 +369,6 @@ def attend_dps_exam(request,exam_code):
             questions = question_obj.find_all_questions({"exam_code": int(exam_code)})
             total_questions = question_obj.get_count({"exam_code": int(exam_code)})
             sorted_questions = sorted(questions, key=lambda k: k['question_number'])
-
 
             parameters['questions'] = json.dumps(sorted_questions)
             parameters['exam_details'] = exam_details
@@ -582,7 +582,6 @@ def show_result(request, exam_code, subject_name):
         ans = AttemptedAnswerDatabase()
         ess_check = ess.check_exam_started({'exam_code':int(exam_code), 'useruid':request.user.id})
         total_questions = question_obj.get_count({"exam_code": int(exam_code)})
-        print ess_check
         try:
             att_ans = ans.find_all_atttempted_answer({
                 'exam_code':int(exam_code), 
@@ -596,3 +595,40 @@ def show_result(request, exam_code, subject_name):
         return render_to_response('single-result.html', parameters, context_instance=RequestContext(request))
     else:
         return HttpResponseRedirect('/')        
+
+def get_list_of_result(request):
+    if request.user.is_authenticated():
+        user_id = request.user.id 
+        ans = AttemptedAnswerDatabase()
+        exam_attempts = ans.get_attempted_exams('exam_code', {'user_id':request.user.id})
+        return_dict = []
+        for exam_code in exam_attempts['results']:
+            attempt_timestamps = ans.get_attempted_exams('ess_time', 
+                {'user_id':request.user.id, 'exam_code':int(exam_code)})
+            for eachAttempt in attempt_timestamps['results']:
+                all_ans = ans.find_all_atttempted_answer({
+                    'exam_code':int(exam_code), 
+                    'user_id':user_id,
+                    'ess_time':eachAttempt
+                    })
+                answer_list = ''
+                anss = []
+                for eachAns in all_ans:
+                    anss.append(eachAns['q_no'])
+                question_obj = QuestionApi()
+                total_questions = question_obj.get_count({"exam_code": int(exam_code)})                    
+                for i in range(0,total_questions):       
+                    try:
+                        if i in anss:
+                            answer_list += all_ans[anss.index(i)]['attempt_details'][0]['selected_ans']
+                        else:
+                            answer_list +='e'
+                    except:
+                        answer_list += 'e'
+                
+                exam_handler = ExamHandler()    
+                score_dict = exam_handler.check_answers(exam_code, answer_list)
+                return_dict.append({'exam_code':exam_code, 'ess_time':eachAttempt, 'result':score_dict})
+        return HttpResponse(json.dumps(return_dict))
+    else:
+        return HttpResponse(json.dumps({'status':'error','message':'You are not authorized to perform this action.'}))

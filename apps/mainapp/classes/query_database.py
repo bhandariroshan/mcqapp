@@ -74,6 +74,9 @@ class AttemptedAnswerDatabase():
 
     def update_upsert_push(self, where, what):
         return self.db_object.update_upsert_push(self.table_name, where, what)
+
+    def get_attempted_exams(self, field, where):
+        return self.db_object.get_distinct(self.table_name, field, where)
         
 
 class CorrectAnswerDatabase():

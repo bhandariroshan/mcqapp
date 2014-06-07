@@ -118,12 +118,18 @@ var myVar=setInterval(function(){
         sec_rem   = parseInt(toal_time - hour_rem*3600 - min_rem*60);
         myTimer();        
     }
-    else
+    else if (toal_time == 0)
     {
+      toal_time = toal_time -1;
       $('#reviewAns').hide();
       $('#infoText').html('Your time is up. Please submit answers to view result.');
       ajax_set_exam_finished(exam_code, false);
       $('#trigger_gumby_div').click();
+    }
+    else{
+      $('#reviewAns').hide();
+      $('#infoText').html('Your time is up. Please submit answers to view result.');
+      $('#trigger_gumby_div').click(); 
     }
 },1000);
 

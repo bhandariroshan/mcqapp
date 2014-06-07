@@ -130,18 +130,25 @@ def get_scores(request):
             )
             )
 
-        # from apps.mainapp.query_database import AttemptedAnswerDatabase
-        # ans = AttemptedAnswerDatabase()
-        # attempt_time = datetime.datetime.now()
-        # attempt_time = time.mktime(attempt_time.timetuple())
-        # for i in range(0,len(answer_list)):
-        #     ans.insert_new_attempted_answer({
-        #         'user_id':request.user.id,
-        #         'exam_code':exam_code,
-        #         'q_no':int(i),
-        #         'selected_ans':answer_list[i],
-        #         'attempt_time':int(attempt_time)
-        #     })
+        from apps.mainapp.classes.query_database import AttemptedAnswerDatabase, QuestionApi
+        question_obj = QuestionApi() 
+        ans = AttemptedAnswerDatabase()
+        questions = question_obj.find_all_questions({"exam_code": int(exam_code)})        
+        sorted_questions = sorted(questions, key=lambda k: k['question_number'])
+        attempt_time = time.mktime(datetime.datetime.now().timetuple())
+
+        for i in range(0,len(answer_list)):
+            ans.update_upsert_push({
+                'user_id':request.user.id,
+                'ess_time':int(attempt_time),
+                'attempt_device':'android',
+                'q_id':sorted_questions[i]['uid']['id'],
+                'exam_code':int(exam_code),
+                'q_no':i},{
+                'attempt_details':{
+                    'selected_ans':eachAns,
+                    'attempt_time':int(attempt_time)
+                }})
 
         exam_handler = ExamHandler()                
         score_dict = exam_handler.check_answers(exam_code, answer_list)

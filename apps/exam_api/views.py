@@ -36,7 +36,6 @@ class ExamHandler():
         and return the dictionary with correct answers of each subject
         and sum of correct answers
         '''
-        print len(answer_list), answer_list
         question_api = QuestionApi()
         questions = question_api.find_all_questions(
             {"exam_code": int(exam_code)})
