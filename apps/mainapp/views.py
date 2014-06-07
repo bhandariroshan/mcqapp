@@ -577,7 +577,7 @@ def show_result(request, exam_code, subject_name):
             previous_q_no = 0
             next_q_no = 1
 
-        request.session['current_q_no'] = current_q_no
+        parameters['current_q_no'] = current_q_no
         parameters['question_number'] = questions[current_q_no]['question_number']
         parameters['question'] =  questions[current_q_no]
         parameters['subject'] = subject_name
