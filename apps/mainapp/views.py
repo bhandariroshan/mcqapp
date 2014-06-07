@@ -563,7 +563,7 @@ def show_result(request, exam_code, subject_name):
             'subject':subject_name})
         sorted_questions = sorted(questions, key=lambda k: k['question_number'])
         try:            
-            current_q_no = int(request.GET.get('q','')) + 1
+            current_q_no = int(request.GET.get('q',''))
             if current_q_no >= total_questions:
                 next_q_no = total_questions-1
             else:
