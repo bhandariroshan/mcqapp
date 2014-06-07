@@ -644,6 +644,6 @@ def get_list_of_result(request):
                 exam_handler = ExamHandler()    
                 score_dict = exam_handler.check_answers(exam_code, answer_list)
                 return_dict.append({'exam_code':exam_code, 'ess_time':eachAttempt, 'result':score_dict})
-        return HttpResponse(json.dumps(return_dict))
+        return HttpResponse(json.dumps({'status':'ok', 'result':return_dict}))
     else:
         return HttpResponse(json.dumps({'status':'error','message':'You are not authorized to perform this action.'}))

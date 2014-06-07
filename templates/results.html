@@ -21,7 +21,7 @@
 				<tbody>
 				{% for eachSubject in result %}
 					<tr>
-						<td>{{if eachSubject.subject !='Total' }}<a href="/answers/{{exam_code}}/{{eachSubject.subject}}/?q=0">{{eachSubject.subject}}</a></td>
+						<td>{% if eachSubject.subject != 'Total' %}<a href="/answers/{{exam_code}}/{{eachSubject.subject}}/?q=0">{% endif %}{{eachSubject.subject}}</a></td>
 						<td>{{eachSubject.score}}</td>
 						<td>{{eachSubject.total_question}}</td>
 					</tr>
