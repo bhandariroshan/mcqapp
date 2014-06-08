@@ -7,7 +7,7 @@ from apps.mainapp.classes.Coupon import Coupon
 from apps.mainapp.classes.Userprofile import UserProfile
 
 from .views import ExamHandler
-
+import datetime, time
 
 @csrf_exempt
 def get_question_set(request, exam_code):
@@ -119,16 +119,16 @@ def get_scores(request):
     '''
     the function returns api of scores obtained in each subject
     '''
-    # if request.user.is_authenticated():
-    IMPROPER_REQUEST = 'Couldn\'t process improper request'
-    try:
-        exam_code = int(request.GET['exam_code'])
-        answer_list = list(request.GET['answers'])
-    except Exception:
-        return HttpResponse(json.dumps(
-            {'status': 'error', 'message': IMPROPER_REQUEST}
-        )
-        )
+    if request.user.is_authenticated():
+        IMPROPER_REQUEST = 'Couldn\'t process improper request'
+        try:
+            exam_code = int(request.POST['exam_code'])
+            answer_list = list(request.POST['answers'])
+        except Exception:
+            return HttpResponse(json.dumps(
+                {'status': 'error', 'message': IMPROPER_REQUEST}
+            )
+            )
 
         from apps.mainapp.classes.query_database import AttemptedAnswerDatabase, QuestionApi
         question_obj = QuestionApi() 
@@ -146,7 +146,7 @@ def get_scores(request):
                 'exam_code':int(exam_code),
                 'q_no':i},{
                 'attempt_details':{
-                    'selected_ans':eachAns,
+                    'selected_ans':answer_list[i],
                     'attempt_time':int(attempt_time)
                 }})
 
