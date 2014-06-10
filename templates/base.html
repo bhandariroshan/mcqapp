@@ -40,10 +40,10 @@
       <!-- Facebook Metadata /-->
       <meta property="og:image" content="http://meroanswer.com/static/images/logos/meroanswerfb.png">
       <meta property="og:description" content="">
-      <meta property="og:title" content="MeroAnswer | Sign up and become a part of smart studying for success.">
+      <meta property="og:title" content="MeroAnswer | Sign up and become a part of smart studying.">
 
       <!-- Google+ Metadata /-->
-      <meta itemprop="name" content="MeroAnswer | Sign up and become a part of smart studying for success.">
+      <meta itemprop="name" content="MeroAnswer | Sign up and become a part of smart studying.">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="">
     {% endifequal %}
@@ -301,7 +301,7 @@
     {% if request.user.is_authenticated %}<div class="row">{% endif %}
       <h2 class="columns logo" style="{% if not request.user.is_authenticated %} margin-left:10%; {% endif %}">
         <a href="/" data-scroll-nav="0">
-          <img src="{% static 'images/meroanswer.png' %}" width="120" height="60" alt="">
+          <img src="{% static 'images/logos/meroanswer.png' %}" width="120" height="60" alt="">
         </a>
       </h2>
 
@@ -333,7 +333,7 @@
         {% endif %}
         <li>
           <a href="#"><span>{{user.name}} </span><i class="icon-down-open"></i></a>
-          <div class="dropdown" style="width:180px;{% if 'terms' in request.path or 'privacy' in request.path %} margin-left: -120px;{% endif %}">
+          <div class="dropdown" style="width:180px;{% if 'terms' in request.path or 'privacy' in request.path or 'results' in request.path or 'answers' in request.path %} margin-left: -120px;{% endif %}">
             <ul>
               <li><a href="/accounts/logout">logout</a></li>
             </ul>
@@ -436,9 +436,12 @@
 {% if not request.user.is_authenticated %}
 <script src="{% static "js/newscroll.js" %}"></script>
 {% endif %}
+
+{% if 'answers' not in request.path and 'results' not in request.path and 'dps' not in request.path and 'cps' not in request.path %}
 <script src="{% static "js/uservoice.js" %}"></script>
-<script src="{% static "js/ga.js" %}"></script>
 <script src="{% static "js/purechat.js" %}"></script>
+{% endif %}
+<script src="{% static "js/ga.js" %}"></script>
 <script src="{% static "js/mixpanel.js" %}"></script>
 {% block footer %}
 <script type="text/javascript">
