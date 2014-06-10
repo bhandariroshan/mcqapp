@@ -39,7 +39,7 @@ function load_question(q_no){
   current_question_number = next_question;
   question_id = questions[current_question_number]['uid']['id'];
   $('#loadNext').attr('id', 'loadNext' + questions[current_question_number]['uid']['id']);
-    var question_text = '<span><strong style="color:blue;">' + String(String(current_question_number+1)) + '. </strong><strong>' +  questions[next_question]['question']['html'] + '</strong></span>';
+    var question_text = '<span  style="font-weight:bold;"><span style="color:blue;">' + (current_question_number+1) + '. </span>' +  questions[next_question]['question']['html'] + '</span>';
 
       if (questions[next_question]['question']['image'] != undefined){
         question_text = question_text + '<img src="/static/images/'+ exam_code + '/' + String(questions[next_question]['question']['image']) + '" style="margin-left:15%; height:140px;" />'; 

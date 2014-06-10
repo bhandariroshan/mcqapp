@@ -27,7 +27,7 @@
           </span>
         </div>        
         <div id="questionText" data-intro="Read the question carefully" data-position="top" class="div-margin twelve columns ui-widget-content ui-corner-all question-min-height">
-          <span><strong style="color:blue;">{{start_question.question_number}}. </strong><strong> {{ start_question.question.html }} </strong></span>
+          <span style="font-weight:bold;"><span style="color:blue;">{{start_question.question_number}}. </span> {{ start_question.question.html }} </span>
           {% if start_question.question.image %}
           <img src="/static/images/{{exam_code}}/{{start_question.question.image}}" style="margin-left:15%; height:140px" />
           {% endif %}
