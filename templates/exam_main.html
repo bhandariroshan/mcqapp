@@ -14,7 +14,7 @@
 {% block exam_content %}
     <div class="twelve columns">
       <div class="seven columns">      
-        <div style=" height: 40px; ">
+        <div style=" height: 40px; " class="twelve columns">
           <span>
             <div class="small primary btn pretty" id="loadPrev">
               <a href="#"  data-intro="Attempt previous question" data-position="top"><i class="icon-arrow-left"></i>Previous</a>
@@ -32,7 +32,7 @@
           <img src="/static/images/{{exam_code}}/{{start_question.question.image}}" style="margin-left:15%; height:140px" />
           {% endif %}
         </div>
-        <div>           
+        <div class="twelve columns">           
           <ul class="two_up tiles" id="{{start_question.uid.id}}">
             <li class="field ui-widget-content ui-corner-all li-height forum_hover" data-intro="Click on correct answer to submit" data-position="bottom" id="a">
               <p class="h-text-align ui-widget-header ui-corner-all">A</p>
@@ -70,7 +70,8 @@
                {% endif %}
             </li>
           </ul>
-        </div>      
+        </div> 
+        <div style="clear:both"></div>     
       </div>
       <div data-intro="Resubmit your answers by clicking on question number on answersheet. NA = Not Attempted, so make sure you answer all the questions." data-position="top" class="five columns ui-widget-content ui-corner-all" id="myAnswerSheet" style="height:350px; overflow-y:scroll; overflow-x:hidden">
         <h5 class="h-text-align ui-widget-header ui-corner-all"><strong>Answer sheet</strong></h5>
