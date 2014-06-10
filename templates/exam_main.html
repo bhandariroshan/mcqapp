@@ -27,7 +27,7 @@
           </span>
         </div>        
         <div id="questionText" data-intro="Read the question carefully" data-position="top" class="div-margin twelve columns ui-widget-content ui-corner-all question-min-height">
-          <span><p><strong style="color:blue;">{{start_question.question_number}}. </strong><strong> {{start_question.question.text}} </strong></p> </span>
+          <span><p><strong style="color:blue;">{{start_question.question_number}}. </strong><strong> {{start_question.question.html}} </strong></p> </span>
           {% if start_question.question.image %}
           <img src="/static/images/{{exam_code}}/{{start_question.question.image}}" style="margin-left:15%; height:140px" />
           {% endif %}
@@ -37,7 +37,7 @@
             <li class="field ui-widget-content ui-corner-all li-height forum_hover" data-intro="Click on correct answer to submit" data-position="bottom" id="a">
               <p class="h-text-align ui-widget-header ui-corner-all">A</p>
               <div class="clickDiv " id="divOptionA" ><span></span>
-                {{start_question.answer.a.text}}<br></div>
+                {{start_question.answer.a.html}}<br></div>
                {% if start_question.answer.a.image %}
                 <img src="/static/images/{{exam_code}}/{{start_question.answer.a.image}}" style="margin-left:15%; height:140px;" />
                {% endif %}
@@ -46,7 +46,7 @@
             <li class="field ui-widget-content ui-corner-all li-height forum_hover" data-intro="Click on correct answer to submit" data-position="bottom" id="b">
               <p class="h-text-align ui-widget-header ui-corner-all">B</p>
               <div class="clickDiv" id="divOptionB"><span></span>
-                {{start_question.answer.b.text}}<br></div>
+                {{start_question.answer.b.html}}<br></div>
                {% if start_question.answer.b.image %}
                 <img src="/static/images/{{exam_code}}/{{start_question.answer.b.image}}" style="margin-left:15%; height:140px;" />
                {% endif %}
@@ -55,7 +55,7 @@
             <li class="field ui-widget-content ui-corner-all li-height forum_hover" id="c">
               <p class="h-text-align ui-widget-header ui-corner-all">C</p>
               <div class="clickDiv " id="divOptionC"><span></span>
-                {{start_question.answer.c.text}}<br></div>
+                {{start_question.answer.c.html}}<br></div>
                {% if start_question.answer.c.image %}
                 <img src="/static/images/{{exam_code}}/{{start_question.answer.c.image}}" style="margin-left:15%; height:140px;" />
                {% endif %}
@@ -64,7 +64,7 @@
             <li class="field ui-widget-content ui-corner-all li-height forum_hover" id="d">
             <p class="h-text-align ui-widget-header ui-corner-all">D</p>
               <div class="clickDiv " id="divOptionD"><span></span>
-                {{start_question.answer.d.text}}<br></div>
+                {{start_question.answer.d.html}}<br></div>
                {% if start_question.answer.d.image %}
                 <img src="/static/images/{{exam_code}}/{{start_question.answer.d.image}}" style="margin-left:15%; height:140px;" />
                {% endif %}
