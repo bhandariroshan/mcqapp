@@ -2,14 +2,7 @@
 {% load staticfiles %} 
 {% block timer %}
     <h5 class="h-text-align ui-widget-header ui-corner-all" style="margin-top:0%;"><strong>{{exam_details.exam_name}}</strong></h5>
-    <div class="twelve columns" style="margin-top:2%; margin-bottom:2%;">
-          <div class="six columns" id="startTimer">
-                <h5 id="timeRemained" data-intro="determine the time left" data-position="bottom" style="float:left; color:rgb(104, 16, 16);"><strong></strong></h5>
-          </div>
-          <div class="six columns">
-          </div>
-    </div>
-    <div></div>
+    <h5 id="timeRemained" data-intro="determine the time left" data-position="bottom" style="float:left; color:rgb(104, 16, 16);"><strong></strong></h5>
 {% endblock %}
 {% block exam_content %}
     <div class="twelve columns">
