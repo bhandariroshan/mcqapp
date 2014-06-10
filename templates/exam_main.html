@@ -2,13 +2,13 @@
 {% load staticfiles %} 
 {% block timer %}
     <h5 class="h-text-align ui-widget-header ui-corner-all" style="margin-top:0%;"><strong>{{exam_details.exam_name}}</strong></h5>
-    <div class="twelve columns" style="margin-top:2%; margin-bottom:2%;">
+    <div class="twelve columns" style="margin-top:2%; margin-bottom:2%;">          
           <div class="six columns" id="startTimer">
-                <h5 style="color:rgb(104, 16, 16);"><strong><i class="icon-clock"></i>Started {{exam_details.exam_time}}</strong></h5>
+                <!-- <h5 style="color:rgb(104, 16, 16);"><strong><i class="icon-clock"></i>Started {{exam_details.exam_time}}</strong></h5> -->
           </div>
           <div class="six columns">
                 <h5 id="timeRemained" data-intro="determine the time left" data-position="bottom" style="float:right; color:rgb(104, 16, 16);"><strong></strong></h5>
-          </div>
+          </div><br/><br/>
     </div>
 {% endblock %}
 {% block exam_content %}
@@ -27,7 +27,7 @@
           </span>
         </div>        
         <div id="questionText" data-intro="Read the question carefully" data-position="top" class="div-margin twelve columns ui-widget-content ui-corner-all question-min-height">
-          <span><p><strong style="color:blue;">{{start_question.question_number}}. </strong><strong> {{start_question.question.text}} </strong></p> </span>
+          <span  style="font-weight:bold;"><span style="color:blue;">{{start_question.question_number}}. </span> {{ start_question.question.html|safe }} </span>
           {% if start_question.question.image %}
           <img src="/static/images/{{exam_code}}/{{start_question.question.image}}" style="margin-left:15%; height:140px" />
           {% endif %}
@@ -37,7 +37,7 @@
             <li class="field ui-widget-content ui-corner-all li-height forum_hover" data-intro="Click on correct answer to submit" data-position="bottom" id="a">
               <p class="h-text-align ui-widget-header ui-corner-all">A</p>
               <div class="clickDiv " id="divOptionA" ><span></span>
-                {{start_question.answer.a.text}}<br></div>
+                {{ start_question.answer.a.html|safe }}<br></div>
                {% if start_question.answer.a.image %}
                 <img src="/static/images/{{exam_code}}/{{start_question.answer.a.image}}" style="margin-left:15%; height:140px;" />
                {% endif %}
@@ -46,7 +46,7 @@
             <li class="field ui-widget-content ui-corner-all li-height forum_hover" data-intro="Click on correct answer to submit" data-position="bottom" id="b">
               <p class="h-text-align ui-widget-header ui-corner-all">B</p>
               <div class="clickDiv" id="divOptionB"><span></span>
-                {{start_question.answer.b.text}}<br></div>
+                {{ start_question.answer.b.html|safe }}<br></div>
                {% if start_question.answer.b.image %}
                 <img src="/static/images/{{exam_code}}/{{start_question.answer.b.image}}" style="margin-left:15%; height:140px;" />
                {% endif %}
@@ -55,7 +55,7 @@
             <li class="field ui-widget-content ui-corner-all li-height forum_hover" id="c">
               <p class="h-text-align ui-widget-header ui-corner-all">C</p>
               <div class="clickDiv " id="divOptionC"><span></span>
-                {{start_question.answer.c.text}}<br></div>
+                {{ start_question.answer.c.html|safe }}<br></div>
                {% if start_question.answer.c.image %}
                 <img src="/static/images/{{exam_code}}/{{start_question.answer.c.image}}" style="margin-left:15%; height:140px;" />
                {% endif %}
@@ -64,19 +64,18 @@
             <li class="field ui-widget-content ui-corner-all li-height forum_hover" id="d">
             <p class="h-text-align ui-widget-header ui-corner-all">D</p>
               <div class="clickDiv " id="divOptionD"><span></span>
-                {{start_question.answer.d.text}}<br></div>
+                {{ start_question.answer.d.html|safe }}<br></div>
                {% if start_question.answer.d.image %}
                 <img src="/static/images/{{exam_code}}/{{start_question.answer.d.image}}" style="margin-left:15%; height:140px;" />
                {% endif %}
             </li>
           </ul>
         </div>
-      
-      </div>
       <div data-intro="Resubmit your answers by clicking on question number on answersheet. NA = Not Attempted, so make sure you answer all the questions." data-position="top" class="five columns ui-widget-content ui-corner-all" id="myAnswerSheet" style="height:350px; overflow-y:scroll; overflow-x:hidden">
         <h5 class="h-text-align ui-widget-header ui-corner-all"><strong>Answer sheet</strong></h5>
         <div id="myAnswers" style="margin-left:4%;">
         </div>
+      </div>      
       </div>
     </div>    
     <div id="trigger_gumby_div" style="visibility:hidden;" class="pretty medium primary btn switch" gumby-trigger="#modalwarning"></div>
@@ -99,7 +98,7 @@
     </div>    
 {% endblock %}
 {% block javascript %}
-<script type="text/x-mathjax-config">
+<!--<script type="text/x-mathjax-config">
   //MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -113,7 +112,7 @@
   });
 </script>
 
- <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+ <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
 <script src="/static/js/chardinjs.min.js"></script> 
 <script type="text/javascript">
 var click_count = 1;
