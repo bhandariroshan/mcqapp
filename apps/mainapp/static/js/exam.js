@@ -134,7 +134,7 @@ var myVar=setInterval(function(){
 },1000);
 
 function myTimer() {    
-    $("#timeRemained").html('<i class="icon-bell"></i><strong> '+ hour_rem + 'h ' + min_rem + 'm ' + sec_rem  +'s</strong>')
+    $("#timeRemained").html('<i class="icon-clock"></i><strong> '+ hour_rem + 'h ' + min_rem + 'm ' + sec_rem  +'s</strong>')
 }
 
 
