@@ -310,7 +310,127 @@
 {% endblock %}
 </head>
 <body class="{% if request.user.is_authenticated %} bgimage {% endif %} over" style="background:#000000;" >
+<div id="fb-root"></div>  
+ 
 
+{% block content %}
+{% endblock %}
+<div id="trigger_gumby_div" style="visibility:hidden;" class="pretty medium primary btn switch" gumby-trigger="#modalentercouponcode"></div>
+<div class="modal" id="modalentercouponcode">
+  <div class="content">
+    <a class="close switch" gumby-trigger="|#modalentercouponcode"><i class="icon-cancel" /></i></a>
+    <div class="row">
+      <div id="dangerMessage"></div>
+      <div class="ten columns centered text-center" style="margin-top:6%;">
+        <p id="infoText">Every time you give exam, you need to enter <a href="/coupon-codes/" style="color:red;"><strong>coupon code</strong></a> available at various <a href="/distributors/" style="color:red;"><strong>distributors</strong></a>. Please enter <strong>your</strong> as coupon code for now.</p>
+        <form onsubmit="validate_coupon_code()">
+          <li class="prepend field">
+            <span class="adjoined">Coupon: </span>
+            <input id="couponID" class="xwide text input" type="text" placeholder="Please enter the coupon code" />
+          </li>
+          <li class="prepend field">
+            <button class="medium primary btn" type="submit">
+              <a id="couponValidateBtn" href="#" onclick="validate_coupon_code()">Start Exam</a>
+            </button>
+          </li>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- START: Site Footer -->
+  <footer role="contentinfo" class="site-footer">
+    <div class="row">
+        <p style="text-align:center;">
+          <a id="terms" href="/terms/">Terms</a>&nbsp;&nbsp;
+          <a id="privacy" href="/privacy/">Privacy policy</a>&nbsp;&nbsp;
+          <a id="partners" href="#">Partners</a>&nbsp;&nbsp;
+          <a id="distributors" href="#">Coupon Distributors</a>&nbsp;&nbsp;
+          <a id="subscriptionModels" href="/subscription/">Subscription Models</a>&nbsp;&nbsp;
+        </p>
+    </div>
+    <div class="row">
+      <div class="four columns">      
+      </div>
+      <div class="six columns social-wrapper footer-center">
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="https://www.facebook.com/meroanswer" class="social-link">
+              <i class="icon-facebook-circled"></i>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="http://twitter.com/meroanswer/" class="social-link">
+              <i class="icon-twitter-circled"></i>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://plus.google.com/b/114101135208125129678/" class="social-link">
+              <i class="icon-gplus-circled"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- /END: Site Footer -->
+
+
+  <!--Include gumby.js followed by UI modules followed by gumby.init.js
+  Or concatenate and minify into a single file -->
+  <script gumby-touch="js/libs" src="{% static "js/gumby.js" %}"></script>
+  <script src="{% static "js/gumby.retina.js" %}"></script>
+  <script src="{% static "js/gumby.fixed.js" %}"></script>
+  <script src="{% static "js/gumby.skiplink.js" %}"></script>
+  <script src="{% static "js/gumby.toggleswitch.js" %}"></script>
+  <script src="{% static "js/gumby.radiobtn.js" %}"></script>
+  <script src="{% static "js/gumby.checkbox.js" %}"></script>
+  <script src="{% static "js/gumby.tabs.js" %}"></script>
+  <!--<script src="{% static "js/gumby.fittext.js" %}"></script>-->
+  <script src="{% static "js/jquery.validation.js" %}"></script>
+  <script src="{% static "js/gumby.navbar.js" %}"></script>
+  <script src="{% static "js/gumby.shuffle.js" %}"></script> 
+  <script src="{% static "js/gumby.init.js" %}"></script>
+  <script src="{% static "js/jquery.bxslider.min.js" %}"></script>
+  <script src="{% static "js/waypoints.min.js" %}"></script>
+  <script src="{% static "js/placeholders.js" %}"></script>
+  {% if not request.user.is_authenticated %}  
+    <script src="{% static "js/scrollIt.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/meroans.js" %}"></script>
+  {% endif %}
+
+
+{% if not request.user.is_authenticated %}
+<script src="{% static "js/newscroll.js" %}"></script>
+{% endif %}
+
+{% if 'answers' not in request.path and 'results' not in request.path and 'dps' not in request.path and 'cps' not in request.path %}
+<!-- <script src="{% static "js/uservoice.js" %}"></script>
+<script src="{% static "js/purechat.js" %}"></script> -->
+{% endif %}
+<script src="{% static "js/ga.js" %}"></script>
+<script src="{% static "js/mixpanel.js" %}"></script>
+{% block footer %}
+<script type="text/javascript">
+  mixpanel.track_links("#fbLogin", "Tried to login with facebook button on homepage", {"referrer": document.referrer});
+  mixpanel.track_links("#terms", "Read Terms page", {"referrer": document.referrer});
+  mixpanel.track_links("#privacy", "Read Privacy page", {"referrer": document.referrer});
+  mixpanel.track_links("#subscriptionModels", "Read Subscription Models", {"referrer": document.referrer});
+  mixpanel.track_links("#distributors", "Read distributors page", {"referrer": document.referrer});
+  mixpanel.track_links("#fbLoginNavbar", "Facebook login via Navbar", {"referrer": document.referrer});
+  mixpanel.track_links("#couponValidateBtn", "Entered a coupon and tried to validate to give a exam from dashboard", {"referrer": document.referrer});
+
+var myVar=setInterval(function(){
+  $('.bx-next').click();
+},2000);
+</script>
+
+{% endblock %}
+
+{% block javascript %}
+{% endblock %}
 
 </body>
 </html>
