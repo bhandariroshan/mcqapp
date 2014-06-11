@@ -26,9 +26,10 @@
         </div>
         <div>           
           <ul class="two_up tiles" id="{{start_question.uid.id}}">
-            <li class="field ui-widget-content ui-corner-all li-height forum_hover {% ifequal attempted|lower 'a' %} attempt {% endifequal %}"  data-intro="Click on correct answer to submit" data-position="bottom" id="a" >
+            <li class="field ui-widget-content ui-corner-all li-height forum_hover {% if question.answer.correct|lower == 'a' and attempted|lower == 'a' %}attempt-and-correct{% endif %}{% if question.answer.correct|lower == 'a' and attempted|lower != 'a' %} correct {% endif %}{% if question.answer.correct|lower != 'a' and attempted|lower == 'a' %} attempted {% endif %}"  data-intro="Click on correct answer to submit" data-position="bottom" id="a" >
               <p class="h-text-align ui-widget-header ui-corner-all">
-                {% ifequal question.answer.correct|lower 'a' %}<i class="icon-check"></i>{% endifequal %}A</p>
+                {% if question.answer.correct|lower == 'a' and attempted|lower == 'a' %}<i class="icon-check"></i>{% endif %}
+                {% if question.answer.correct|lower == 'a' and attempted|lower != 'a' %} <i class="icon-check"></i>{% endif %}{% if question.answer.correct|lower != 'a' and attempted|lower == 'a' %} <i class="icon-cancel"></i>{% endif %}A</p>
               <div class="clickDiv " id="divOptionA" ><span></span>
                 {{question.answer.a.text}}<br></div>
                {% if question.answer.a.image %}
@@ -36,9 +37,10 @@
                {% endif %}
             </li>
                         
-            <li class="field ui-widget-content ui-corner-all li-height forum_hover {% ifequal attempted|lower 'b' %} attempt {% endifequal %}" data-intro="Click on correct answer to submit" data-position="bottom" id="b">              
+            <li class="field ui-widget-content ui-corner-all li-height forum_hover {% if question.answer.correct|lower == 'b' and attempted|lower == 'b' %}attempt-and-correct {% endif %}{% if question.answer.correct|lower == 'b' and attempted|lower != 'b' %} correct {% endif %}{% if question.answer.correct|lower != 'b' and attempted|lower == 'b' %} attempted {% endif %}" data-intro="Click on correct answer to submit" data-position="bottom" id="b">              
               <p class="h-text-align ui-widget-header ui-corner-all">
-              {% ifequal question.answer.correct|lower 'b' %}<i class="icon-check"></i>{% endifequal %}B</p>
+              {% if question.answer.correct|lower == 'b' and attempted|lower == 'b' %}<i class="icon-check"></i>{% endif %}
+              {% if question.answer.correct|lower == 'b' and attempted|lower != 'b' %} <i class="icon-check"></i>{% endif %}{% if question.answer.correct|lower != 'b' and attempted|lower == 'b' %} <i class="icon-cancel"></i>{% endif %}B</p>
               <div class="clickDiv" id="divOptionB"><span></span>
                 {{question.answer.b.text}}<br></div>
                {% if question.answer.b.image %}
@@ -46,9 +48,10 @@
                {% endif %}
             </li>
 
-            <li class="field ui-widget-content ui-corner-all li-height forum_hover {% ifequal attempted|lower 'c' %} attempt {% endifequal %}" id="c">
+            <li class="field ui-widget-content ui-corner-all li-height forum_hover {% if question.answer.correct|lower == 'c' and attempted|lower == 'c' %}attempt-and-correct {% endif %}{% if question.answer.correct|lower == 'c' and attempted|lower != 'c' %} correct {% endif %}{% if question.answer.correct|lower != 'c' and attempted|lower == 'c' %} attempted {% endif %}" id="c">
               <p class="h-text-align ui-widget-header ui-corner-all">
-              {% ifequal question.answer.correct|lower 'c' %}<i class="icon-check"></i>{% endifequal %}C</p>
+                {% if question.answer.correct|lower == 'c' and attempted|lower == 'c' %}<i class="icon-check"></i>{% endif %}
+                {% if question.answer.correct|lower == 'c' and attempted|lower != 'c' %} <i class="icon-check"></i>{% endif %}{% if question.answer.correct|lower != 'c' and attempted|lower == 'c' %} <i class="icon-cancel"></i>{% endif %}C</p>
               <div class="clickDiv " id="divOptionC"><span></span>
                 {{question.answer.c.text}}<br></div>
                {% if start_question.answer.c.image %}
@@ -56,9 +59,10 @@
                {% endif %}
             </li>
 
-            <li class="field ui-widget-content ui-corner-all li-height forum_hover {% ifequal attempted|lower 'd' %} attempt {% endifequal %}" id="d">              
+            <li class="field ui-widget-content ui-corner-all li-height forum_hover {% if question.answer.correct|lower == 'd' and attempted|lower == 'd' %} attempt-and-correct {% endif %}{% if question.answer.correct|lower == 'd' and attempted|lower != 'd' %} correct {% endif %} {% if question.answer.correct|lower != 'd' and attempted|lower == 'd' %} attempted {% endif %}" id="d">              
               <p class="h-text-align ui-widget-header ui-corner-all">
-              {% ifequal question.answer.correct|lower 'd' %}<i class="icon-check"></i>{% endifequal %}D</p>
+                {% if question.answer.correct|lower == 'd' and attempted|lower == 'd' %}<i class="icon-check"></i>{% endif %}
+                {% if question.answer.correct|lower == 'd' and attempted|lower != 'd' %} <i class="icon-check"></i>{% endif %}{% if question.answer.correct|lower != 'd' and attempted|lower == 'd' %} <i class="icon-cancel"></i>{% endif %}D</p>
               <div class="clickDiv " id="divOptionD"><span></span>
                 {{question.answer.d.text}}<br></div>
                {% if question.answer.d.image %}

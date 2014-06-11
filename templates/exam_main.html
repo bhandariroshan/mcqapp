@@ -34,41 +34,44 @@
         </div>
         <div class="twelve columns" id="optionsDiv" style="margin-left: 0%;">           
           <ul class="two_up tiles" id="{{start_question.uid.id}}">
-            <li class="field ui-widget-content ui-corner-all li-height forum_hover" data-intro="Click on correct answer to submit" data-position="bottom" id="a">
-              <p class="h-text-align ui-widget-header ui-corner-all">A</p>
-              <div class="clickDiv " id="divOptionA" ><span></span>
-                {{ start_question.answer.a.text }}<br></div>
+            
+              <li class="field ui-widget-content ui-corner-all li-height" data-intro="Click on correct answer to submit" data-position="bottom" id="a">
+                <p class="h-text-align ui-widget-header ui-corner-all">A</p>
+                <div class="clickDiv " id="divOptionA" ><span></span><a href="javascript:void(0)">
+                {{ start_question.answer.a.text }}<br>
                {% if start_question.answer.a.image %}
-                <img src="/static/images/{{exam_code}}/{{start_question.answer.a.image}}" style="margin-left:15%; height:140px;" />
+                  <img src="/static/images/{{exam_code}}/{{start_question.answer.a.image}}" style="margin-left:15%; height:140px;" /></a></div>
                {% endif %}
-            </li>
-                        
-            <li class="field ui-widget-content ui-corner-all li-height forum_hover" data-intro="Click on correct answer to submit" data-position="bottom" id="b">
-              <p class="h-text-align ui-widget-header ui-corner-all">B</p>
-              <div class="clickDiv" id="divOptionB"><span></span>
-                {{ start_question.answer.b.text }}<br></div>
-               {% if start_question.answer.b.image %}
-                <img src="/static/images/{{exam_code}}/{{start_question.answer.b.image}}" style="margin-left:15%; height:140px;" />
-               {% endif %}
-            </li>
+              </li>
+            
+                                    
+              <li class="field ui-widget-content ui-corner-all li-height" data-intro="Click on correct answer to submit" data-position="bottom" id="b">              
+                <p class="h-text-align ui-widget-header ui-corner-all">B</p>
+                <div class="clickDiv" id="divOptionB"><span></span><a href="javascript:void(0)">
+                  {{ start_question.answer.b.text }}<br>
+                 {% if start_question.answer.b.image %}
+                  <img src="/static/images/{{exam_code}}/{{start_question.answer.b.image}}" style="margin-left:15%; height:140px;" /></a></div>
+                 {% endif %}
+              </li>
+            
 
-            <li class="field ui-widget-content ui-corner-all li-height forum_hover" id="c">
-              <p class="h-text-align ui-widget-header ui-corner-all">C</p>
-              <div class="clickDiv " id="divOptionC"><span></span>
-                {{ start_question.answer.c.text }}<br></div>
-               {% if start_question.answer.c.image %}
-                <img src="/static/images/{{exam_code}}/{{start_question.answer.c.image}}" style="margin-left:15%; height:140px;" />
-               {% endif %}
-            </li>
-
-            <li class="field ui-widget-content ui-corner-all li-height forum_hover" id="d">
-            <p class="h-text-align ui-widget-header ui-corner-all">D</p>
-              <div class="clickDiv " id="divOptionD"><span></span>
-                {{ start_question.answer.d.text }}<br></div>
-               {% if start_question.answer.d.image %}
-                <img src="/static/images/{{exam_code}}/{{start_question.answer.d.image}}" style="margin-left:15%; height:140px;" />
-               {% endif %}
-            </li>
+              <li class="field ui-widget-content ui-corner-all li-height forum_hover" id="c">
+                <p class="h-text-align ui-widget-header ui-corner-all">C</p>
+                <div class="clickDiv " id="divOptionC"><span></span><a href="javascript:void(0)">
+                  {{ start_question.answer.c.text }}<br>
+                {% if start_question.answer.c.image %}
+                <img src="/static/images/{{exam_code}}/{{start_question.answer.c.image}}" style="margin-left:15%; height:140px;" /></a></div>
+                {% endif %}
+              </li>
+            
+              <li class="field ui-widget-content ui-corner-all li-height forum_hover" id="d">              
+                <p class="h-text-align ui-widget-header ui-corner-all">D</p>
+                <div class="clickDiv " id="divOptionD"><span></span><a href="javascript:void(0)">
+                  {{ start_question.answer.d.text }}<br>
+                 {% if start_question.answer.d.image %}
+                  <img src="/static/images/{{exam_code}}/{{start_question.answer.d.image}}" style="margin-left:15%; height:140px;" /></a></div>
+                {% endif %}
+                </li>
           </ul>
         </div> 
         <div style="clear:both"></div>     

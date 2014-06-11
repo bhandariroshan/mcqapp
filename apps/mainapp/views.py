@@ -464,6 +464,7 @@ def subscription(request):
     parameters = {}    
     user_profile_obj = UserProfile()
     user = user_profile_obj.get_user_by_username(request.user.username)
+    print user['subscription_type']    
     parameters['user'] = user
     return render_to_response('subscription.html', parameters, context_instance=RequestContext(request))
 
