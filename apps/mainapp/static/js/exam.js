@@ -66,9 +66,33 @@ function load_question(q_no){
           option_d_text= option_d_text + '<img src="/static/images/' + exam_code + '/' + questions[next_question]['answer']['d']['image'] + '" style="margin-left:15%; height:140px;" />';
     }
 
-  sel = $('liAns'+ (next_question)).html();
+  sel = $('#liAns'+ (next_question)).html();
   if (sel !='NA'){
-    $('#'+sel).css("background","yellow");
+    if (sel=='A'){
+      $('#a').css("background","orange");      
+      $('#b').css("background","none");      
+      $('#c').css("background","none");      
+      $('#d').css("background","none");      
+    }
+    else if (sel=='B'){
+      $('#b').css("background","orange");      
+      $('#a').css("background","none");      
+      $('#c').css("background","none");      
+      $('#d').css("background","none");       
+    }
+    else if (sel=='C'){
+      $('#c').css("background","orange");      
+      $('#a').css("background","none");      
+      $('#b').css("background","none");      
+      $('#d').css("background","none");       
+    }
+    else if (sel=='D'){
+      $('#d').css("background","orange");      
+      $('#a').css("background","none");      
+      $('#c').css("background","none");      
+      $('#b').css("background","none");       
+    }
+
   }
   $('#divOptionD').html(option_d_text);  
   MathJax.Hub.Queue(["Typeset",MathJax.Hub]);

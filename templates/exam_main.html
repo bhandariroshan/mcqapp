@@ -151,11 +151,16 @@ var exam_duration = {{exam_details.exam_duration}};
     $('#closegumby').click();
   }
 
-$("#optionsDiv > ul > li").hover(function(){
+if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+}
+else{
+  $("#optionsDiv > ul > li").hover(function(){
   id = this.id;
-  $("#"+id).css("background","yellow");
+  $("#"+id).css("background","orange");
   },function(){
   $("#"+id).css("background","none");
 });
+}
+
 </script>
 {% endblock %}
