@@ -311,7 +311,53 @@
 </head>
 <body class="{% if request.user.is_authenticated %} bgimage {% endif %} over" style="background:#000000;" >
 <div id="fb-root"></div>  
- 
+  <div class="navbar fixed" id="nav1" gumby-fixed="top" data-target="top" style="top: 0px;">
+    <a class="toggle" gumby-trigger="#nav1 > ul" href="#"><i class="icon-menu"></i></a>
+    {% if request.user.is_authenticated %}<div class="row">{% endif %}
+      <h2 class="columns logo" style="{% if not request.user.is_authenticated %} margin-left:10%; {% endif %}">
+        <a href="/" data-scroll-nav="0">
+          <img src="{% static 'images/logos/meroanswer.png' %}" width="120" height="60" alt="">
+        </a>
+      </h2>
+
+      {% if not request.user.is_authenticated %}
+      <ul class="" style="float:right;clear:none; margin-right: 50px;">
+        <!-- <li><a href="#whatisit">What is it?</a></li> -->
+        <li><a href="#" data-scroll-nav="1">How it works</a></li>
+        <li><a href="#" data-scroll-nav="2">android app</a></li>
+        <!-- <li><a href="#main-signup">Join</a></li> -->
+        <li>
+          <!-- <div class="medium primary btn pretty" style="background: #3b5998;"> -->
+          <a id="fbLoginNavbar" href="{% provider_login_url "facebook" method="oauth2" %}">
+            {% comment %}<a href="{% provider_login_url "twitter" process="login" %}">{% endcomment %}
+              <span class="adjoined"><!-- <i class="icon-facebook"></i> --></span>
+              <span style="font-size:14px;">Join using facebook </span>
+            </a>
+          <!-- </div> -->
+        </li>        
+      </ul>
+      {% else %}
+      <ul class="eight columns" style="float:right;clear:none;">
+        <li><a href="#">Partners</a></li>
+        <li><a href="#">Coupon Distributors</a></li>
+        <li><a href="/subscription/">Subscription Models</a></li>
+        {% if 'attend-exam' in request.path %}
+          <li>
+              <a href="#" data-toggle="chardinjs">Instructions</a>
+          </li>
+        {% endif %}
+        <li>
+          <a href="#"><span>{{user.name}} </span><i class="icon-down-open"></i></a>
+          <div class="dropdown" style="width:180px;{% if 'terms' in request.path or 'privacy' in request.path or 'results' in request.path or 'answers' in request.path %} margin-left: -120px;{% endif %}">
+            <ul>
+              <li><a href="/accounts/logout">logout</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      {% endif %}
+    {% if request.user.is_authenticated %}</div>{% endif %}
+  </div>
 
 {% block content %}
 {% endblock %}
@@ -341,40 +387,7 @@
 
 
   <!-- START: Site Footer -->
-  <footer role="contentinfo" class="site-footer">
-    <div class="row">
-        <p style="text-align:center;">
-          <a id="terms" href="/terms/">Terms</a>&nbsp;&nbsp;
-          <a id="privacy" href="/privacy/">Privacy policy</a>&nbsp;&nbsp;
-          <a id="partners" href="#">Partners</a>&nbsp;&nbsp;
-          <a id="distributors" href="#">Coupon Distributors</a>&nbsp;&nbsp;
-          <a id="subscriptionModels" href="/subscription/">Subscription Models</a>&nbsp;&nbsp;
-        </p>
-    </div>
-    <div class="row">
-      <div class="four columns">      
-      </div>
-      <div class="six columns social-wrapper footer-center">
-        <ul class="social-list">
-          <li class="social-item">
-            <a href="https://www.facebook.com/meroanswer" class="social-link">
-              <i class="icon-facebook-circled"></i>
-            </a>
-          </li>
-          <li class="social-item">
-            <a href="http://twitter.com/meroanswer/" class="social-link">
-              <i class="icon-twitter-circled"></i>
-            </a>
-          </li>
-          <li class="social-item">
-            <a href="https://plus.google.com/b/114101135208125129678/" class="social-link">
-              <i class="icon-gplus-circled"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </footer>
+  
   <!-- /END: Site Footer -->
 
 
