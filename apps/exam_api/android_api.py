@@ -140,6 +140,7 @@ def get_scores(request):
         questions = question_obj.find_all_questions({"exam_code": int(exam_code)})        
         sorted_questions = sorted(questions, key=lambda k: k['question_number'])
         attempt_time = time.mktime(datetime.datetime.now().timetuple())
+        
 
         for i in range(0,len(answer_list)):
             ans.update_upsert_push({

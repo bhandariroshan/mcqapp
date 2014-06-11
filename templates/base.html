@@ -175,6 +175,7 @@
   <!--<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>-->
   <!-- We highly recommend you use SASS and write your custom styles in sass/_theme.scss.
   However, there is a blank style.css in the css directory should you prefer -->
+<link rel="stylesheet" href="{% static "css/font-awesome.css" %}">
   <link rel="stylesheet" href="{% static "css/gumby.css" %}">
   <link href="{% static "css/chardinjs.css" %}" rel="stylesheet">
   <link rel="stylesheet" href="http://gumbyframework.com/css/prism.css?v=091613">    
@@ -220,7 +221,8 @@
     min-height: 600px;
   }
   .over{
-    overflow-x:hidden;
+    overflow-x: hidden;
+    width: 100%;
   }
     .navbar .logo a {
       /*{% if not request.user.is_authenticated %}  margin-left: 100px; {% endif %}*/
