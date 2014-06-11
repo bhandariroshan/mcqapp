@@ -55,8 +55,8 @@
       <div class="eight columns">      
         <section class="twelve columns tabs" style="margin-top: 5%;">
             <ul class="tab-nav">
-                <li class="active"><a href="#">Competitive Exams</a></li>                
-                <li><a href="#">Practice Exams</a></li> 
+                <li class="active" id="CPSExamsTab"><a href="#">Competitive Exams</a></li>                
+                <li><a href="#" id="DPSExamsTab">Practice Exams</a></li> 
                 <!-- <li><a href="#">Notices</a></li> -->
                 <!-- <li class="ttip" data-tooltip="Subscription required."><a href="#">Progress Card</a></li> -->
             </ul>
@@ -83,7 +83,7 @@
                     <p><strong>Cost: </strong>Rs. 15 (<a href="/coupon/">coupon code</a> entry required)</p>
                     {% endif %}
                      <div class="medium primary btn pretty button-margin" >
-                          <a href="{% if eachExam.subscribed %}/honorcode/{{eachExam.code}}/{% else %}#{% endif %}" {% if not eachExam.subscribed %} onclick="attempt_exam('{{eachExam.code}}')" {% endif %}>Give Exam</a>
+                          <a id="giveCPSExamBtn" href="{% if eachExam.subscribed %}/honorcode/{{eachExam.code}}/{% else %}#{% endif %}" {% if not eachExam.subscribed %} onclick="attempt_exam('{{eachExam.code}}')" {% endif %}>Give Exam</a>
                       </div>
                   </div>
                 </article>
@@ -115,7 +115,7 @@
                     <p><strong>Cost: </strong>Rs. 10 (<a href="/coupon/">coupon code</a> entry required)</p>
                     {% endif %}
                      <div class="medium primary btn pretty button-margin" >
-                          <a href="{% if eachExam.subscribed %}/dps/{{eachExam.code}}/{% else %}#{% endif %}" {% if not eachExam.subscribed %} onclick="attempt_exam('{{eachExam.code}}')" {% endif %}>Give Exam</a>
+                          <a id="giveDPSExamBtn" href="{% if eachExam.subscribed %}/dps/{{eachExam.code}}/{% else %}#{% endif %}" {% if not eachExam.subscribed %} onclick="attempt_exam('{{eachExam.code}}')" {% endif %}>Give Exam</a>
                       </div>
                   </div>
                 </article>
@@ -160,7 +160,7 @@
             <li class="success alert">
               <p>Do you have a coupon code for subscription plan?  </p> 
               <div class="medium primary btn pretty" >
-                  <a href="#" style="width: 150px;" onclick="attempt_exam('subs')">Enter here</a>
+                  <a href="#" id="enterSubsCoupon" style="width: 150px;" onclick="attempt_exam('subs')">Enter here</a>
               </div>              
             </li>
           </div>
@@ -247,5 +247,14 @@ var ex_code;
     iomCheck = $('#ioeCheck').prop('checked');
     ajax_save_category(ioeCheck, iomCheck);
   }
+</script>
+<script type="text/javascript">
+  mixpanel.track_links("#DPSExamsTab", "Viewed DPS Exams on dashboard", {"referrer": document.referrer});
+  mixpanel.track_links("#CPSExamsTab", "Viewed CPS Exams on dashboard", {"referrer": document.referrer});
+  mixpanel.track_links("#enterSubsCoupon", "Clicked on enter a subscription coupon on dashboard", {"referrer": document.referrer});
+  mixpanel.track_links("#giveCPSExamBtn", "Clicked on give CPS Exam btn on dashboard", {"referrer": document.referrer});
+  mixpanel.track_links("#giveDPSExamBtn", "Clicked on give DPS Exam btn on dashboard", {"referrer": document.referrer});
+  
+
 </script>
 {% endblock %}

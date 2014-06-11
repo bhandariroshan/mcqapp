@@ -368,7 +368,7 @@
           </li>
           <li class="prepend field">
             <button class="medium primary btn" type="submit">
-              <a href="#" onclick="validate_coupon_code()">Start Exam</a>
+              <a id="couponValidateBtn" href="#" onclick="validate_coupon_code()">Start Exam</a>
             </button>
           </li>
         </form>
@@ -458,6 +458,7 @@
   mixpanel.track_links("#subscriptionModels", "Read Subscription Models", {"referrer": document.referrer});
   mixpanel.track_links("#distributors", "Read distributors page", {"referrer": document.referrer});
   mixpanel.track_links("#fbLoginNavbar", "Facebook login via Navbar", {"referrer": document.referrer});
+  mixpanel.track_links("#couponValidateBtn", "Entered a coupon and tried to validate to give a exam from dashboard", {"referrer": document.referrer});
 
 var myVar=setInterval(function(){
   $('.bx-next').click();

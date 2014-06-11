@@ -66,6 +66,10 @@ function load_question(q_no){
           option_d_text= option_d_text + '<img src="/static/images/' + exam_code + '/' + questions[next_question]['answer']['d']['image'] + '" style="margin-left:15%; height:140px;" />';
     }
 
+  sel = $('liAns'+ (next_question)).html();
+  if (sel !='NA'){
+    $('#'+sel).css("background","yellow");
+  }
   $('#divOptionD').html(option_d_text);  
   MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 }
@@ -96,7 +100,7 @@ $('.loadNext').click(function(){
 
 
 $('#loadPrev').click(function(){
-    if(current_question_number != 0){      
+    if(current_question_number != 0){                  
       load_question(current_question_number-1);
       /*$('#aHref'+ String(current_question_number-1)).click();*/
     }
