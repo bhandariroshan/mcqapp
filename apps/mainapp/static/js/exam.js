@@ -65,11 +65,11 @@ function load_question(q_no){
     if (questions[next_question]['answer']['d']['image'] != undefined){
           option_d_text= option_d_text + '<img src="/static/images/' + exam_code + '/' + questions[next_question]['answer']['d']['image'] + '" style="margin-left:15%; height:140px;" />';
     }
-
+  $('#divOptionD').html(option_d_text);  
     sel = $('#liAns'+ (next_question)).html();
     if (sel !='NA'){
       if (sel=='A'){
-        $('#a').css("background","#58c026");      
+        $('#a').addClass("background","#58c026");      
         $('#b').css("background","none");      
         $('#c').css("background","none");      
         $('#d').css("background","none");      
@@ -99,7 +99,6 @@ function load_question(q_no){
         $('#c').css("background","none");      
         $('#d').css("background","none");      
     }
-  $('#divOptionD').html(option_d_text);  
   MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 }
 
