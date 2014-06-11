@@ -618,6 +618,10 @@ def get_list_of_result(request):
         exam_attempts = ans.get_attempted_exams('exam_code', {'user_id':request.user.id})
         return_dict = []
         for exam_code in exam_attempts['results']:
+            exam_obj = ExammodelApi()
+            exam_details = exam_obj.find_one_exammodel({'exam_code':int(exam_code)})
+            if exam_details['exam_family'] =='DPS':
+                continue
             attempt_timestamps = ans.get_attempted_exams('ess_time', 
                 {'user_id':request.user.id, 'exam_code':int(exam_code)})
             for eachAttempt in attempt_timestamps['results']:
@@ -643,7 +647,8 @@ def get_list_of_result(request):
 
                 exam_handler = ExamHandler()    
                 score_dict = exam_handler.check_answers(exam_code, answer_list)
-                return_dict.append({'exam_code':exam_code, 'ess_time':eachAttempt, 'result':score_dict})
+                rank = 0
+                return_dict.append({'exam_code':exam_code, 'ess_time':eachAttempt, 'result':score_dict, 'exam_details':exam_details, 'rank':'0'})
         return HttpResponse(json.dumps({'status':'ok', 'result':return_dict}))
     else:
         return HttpResponse(json.dumps({'status':'error','message':'You are not authorized to perform this action.'}))

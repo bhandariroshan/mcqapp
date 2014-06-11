@@ -21,6 +21,10 @@ def get_question_set(request, exam_code):
         exam_obj = Exam()
 
         up_exm = exam_obj.get_exam_detail(int(exam_code))
+        if up_exm['exam_family'] == 'CPS':
+            if time.mktime(datetime.datetime.now().timetuple()) < up_exm['exam_date']:
+                return HttpResponse(json.dumps({'status':'error','message':'Exam has not begin yet, please check back later.'}))
+                
         coupon_obj = Coupon()
         user_profile_obj = UserProfile()
         subscription_status = user_obj.check_subscribed(request.user.username,
