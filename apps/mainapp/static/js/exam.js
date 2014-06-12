@@ -41,31 +41,35 @@ function load_question(q_no){
   $('#loadNext').attr('id', 'loadNext' + questions[current_question_number]['uid']['id']);
     var question_text = '<span  style="font-weight:bold;"><span style="color:blue;">' + (current_question_number+1) + '. </span>' +  questions[next_question]['question']['text'] + '</span>';
 
-      if (questions[next_question]['question']['image'] != undefined){
+  if (questions[next_question]['question']['image'] != undefined){
         question_text = question_text + '<img src="/static/images/'+ exam_code + '/' + String(questions[next_question]['question']['image']) + '" style="margin-left:15%; height:140px;" />'; 
       }
   $('#questionText').html(question_text);
 
-  var option_a_text = '<span></span>' + questions[next_question]['answer']['a']['text'] + '<br></div>';
+  var option_a_text = '<a href="javascript:void(0)"><span></span>' + questions[next_question]['answer']['a']['text'] + '<br>';
   if (questions[next_question]['answer']['a']['image'] != undefined){
         option_a_text= option_a_text + '<img src="/static/images/' + exam_code + '/'+ questions[next_question]['answer']['a']['image'] + '" style="margin-left:15%; height:140px;" />';
     }
-  $('#divOptionA').html(option_a_text);
-    var option_b_text = '<span></span>' + questions[next_question]['answer']['b']['text'] + '<br></div>';
-    if (questions[next_question]['answer']['b']['image'] != undefined){
+  $('#divOptionA').html(option_a_text + "</a>");
+
+  var option_b_text = '<a href="javascript:void(0)"><span></span>' + questions[next_question]['answer']['b']['text'] + '<br>';
+  if (questions[next_question]['answer']['b']['image'] != undefined){
         option_b_text= option_b_text + '<img src="/static/images/' + exam_code +'/'+ questions[next_question]['answer']['b']['image'] + '" style="margin-left:15%; height:140px;" />';
     }
-  $('#divOptionB').html(option_b_text);
-      var option_c_text = '<span></span>' + questions[next_question]['answer']['c']['text'] + '<br></div>';
-      if (questions[next_question]['answer']['c']['image'] != undefined){
+  $('#divOptionB').html(option_b_text + "</a>");
+
+  var option_c_text = '<a href="javascript:void(0)"><span></span>' + questions[next_question]['answer']['c']['text'] + '<br>';
+  if (questions[next_question]['answer']['c']['image'] != undefined){
           option_c_text = option_c_text + '<img src="/static/images/' + exam_code + '/'+ questions[next_question]['answer']['c']['image'] + '" style="margin-left:15%; height:140px;" />';
-      }
-  $('#divOptionC').html(option_c_text);
-    var option_d_text = '<span></span>' + questions[next_question]['answer']['d']['text'] + '<br></div>';
-    if (questions[next_question]['answer']['d']['image'] != undefined){
+    }    
+  $('#divOptionC').html(option_c_text + "</a>");
+
+  var option_d_text = '<a href="javascript:void(0)"><span></span>' + questions[next_question]['answer']['d']['text'] + '<br>';
+  if (questions[next_question]['answer']['d']['image'] != undefined){
           option_d_text= option_d_text + '<img src="/static/images/' + exam_code + '/' + questions[next_question]['answer']['d']['image'] + '" style="margin-left:15%; height:140px;" />';
     }
-  $('#divOptionD').html(option_d_text);  
+  $('#divOptionD').html(option_d_text + "</a>");  
+
     sel = $('#liAns'+ (next_question)).html();
     if (sel !='NA'){
       if (sel=='A'){
