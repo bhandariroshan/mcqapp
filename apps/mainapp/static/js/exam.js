@@ -69,7 +69,7 @@ function load_question(q_no){
     sel = $('#liAns'+ (next_question)).html();
     if (sel !='NA'){
       if (sel=='A'){
-        $('#a').addClass("background","#58c026");      
+        $('#a').css("background","#58c026");      
         $('#b').css("background","none");      
         $('#c').css("background","none");      
         $('#d').css("background","none");      
