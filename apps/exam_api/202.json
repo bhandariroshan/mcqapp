@@ -1,0 +1,3362 @@
+[
+   {
+      "answer":{
+         "a":{
+            "text":"$ \\lambda = 0  $",
+            "image":""
+         },
+         "c":{
+            "text":"$ \\lambda = -5 $",
+            "image":""
+         },
+         "b":{
+            "text":"$  \\lambda = 5 $",
+            "image":""
+         },
+         "d":{
+            "text":"no $ \\lambda \\in R $",
+            "image":""
+         },
+         "correct":"c"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"The system of homogeneousequations 2x-y+z=0, x-2y+z=0, $ \\lambda x -y +2z=0 $ has nontrivial solutions, too for",
+         "image":""
+      },
+      "subject":"Mathematics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"2",
+            "image":""
+         },
+         "c":{
+            "text":"6",
+            "image":""
+         },
+         "b":{
+            "text":"3",
+            "image":""
+         },
+         "d":{
+            "text":"12",
+            "image":""
+         },
+         "correct":"b"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"The area of the triangle formed by the line 2x-3y+6=0 with coordinate axes is ",
+         "image":""
+      },
+      "subject":"Mathematics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"a pair if ines at right angle",
+            "image":""
+         },
+         "c":{
+            "text":"a pair of parallel lines",
+            "image":""
+         },
+         "b":{
+            "text":"a rectangular hyperbola",
+            "image":""
+         },
+         "d":{
+            "text":"a parabola",
+            "image":""
+         },
+         "correct":"b"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"The equation xy-4x-3y+13=0 represents",
+         "image":""
+      },
+      "subject":"Mathematics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"$  -\\frac{1}{(1-x)^{2}}$",
+            "image":""
+         },
+         "c":{
+            "text":"$ \\frac{x^{2}-1}{x} $",
+            "image":""
+         },
+         "b":{
+            "text":"$ \\frac{1}{(1-x)^{2}} $",
+            "image":""
+         },
+         "d":{
+            "text":"$  \\frac{y}{x} $",
+            "image":""
+         },
+         "correct":"a"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"If $ y = 1 + \\frac{1}{x} + \\frac{1}{x^{2}} + .... to\\space \\infty \\space and \\space |x|>1 \\space then \\space \\frac{dy}{dx}=  $ ",
+         "image":""
+      },
+      "subject":"Mathematics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"$ r < max\\{p,1\\} $",
+            "image":""
+         },
+         "c":{
+            "text":"$ r^{2} = p^{2} + q^{2} $",
+            "image":""
+         },
+         "b":{
+            "text":"$ r \\in [-\\sqrt{p^{2} + q^{2}}, \\sqrt{p^2+q^{2}}] $",
+            "image":""
+         },
+         "d":{
+            "text":"$ |r| > \\sqrt{p^2 + q^2} $",
+            "image":""
+         },
+         "correct":"b"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"The equation pcosx + qsinx = r has a solution if",
+         "image":""
+      },
+      "subject":"Mathematics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"an odd function",
+            "image":""
+         },
+         "c":{
+            "text":"one to one",
+            "image":""
+         },
+         "b":{
+            "text":"an even function",
+            "image":""
+         },
+         "d":{
+            "text":"many to one",
+            "image":""
+         },
+         "correct":"d"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"$     f:R\\rightarrow R \\space given \\space by \\space f(x) = x^2 -4x +4  $",
+         "image":""
+      },
+      "subject":"Mathematics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"x + y + z = 3",
+            "image":""
+         },
+         "c":{
+            "text":"z = 1",
+            "image":""
+         },
+         "b":{
+            "text":"x + y + z = -1",
+            "image":""
+         },
+         "d":{
+            "text":"z + 1 = 0",
+            "image":""
+         },
+         "correct":"d"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"$ The locus of the point which is equidistant from the points (1,-1,3) and (1,-1, -5)  $ is",
+         "image":""
+      },
+      "subject":"Mathematics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"$ tan^{-1}x^{2} +c $",
+            "image":""
+         },
+         "c":{
+            "text":"$ \\ln{(1+x^{4})} +c $",
+            "image":""
+         },
+         "b":{
+            "text":"$ \\frac{1}{2}tan^{-1}x^{2} +c $",
+            "image":""
+         },
+         "d":{
+            "text":"$ \\frac{1}{2}\\ln{(1+x^{4})} +c $",
+            "image":""
+         },
+         "correct":"b"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"$ \\int_{}{} \\frac {xdx}{x^4+1} $",
+         "image":""
+      },
+      "subject":"Mathematics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"$ f(0) = 1 $",
+            "image":""
+         },
+         "c":{
+            "text":"$ if f(0) = -1 $",
+            "image":""
+         },
+         "b":{
+            "text":"$ if f(0) = 0 $",
+            "image":""
+         },
+         "d":{
+            "text":"for no value of f(0)",
+            "image":""
+         },
+         "correct":"d"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"$ f(x) = cos\\frac{1}{x}; x \\ne0 \\space can\\space be \\space made\\space continuous \\space at\\space x=0 $",
+         "image":""
+      },
+      "subject":"Mathematics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"$ \\sqrt{2} $",
+            "image":""
+         },
+         "c":{
+            "text":"$ \\frac{3}{4} $",
+            "image":""
+         },
+         "b":{
+            "text":"2",
+            "image":""
+         },
+         "d":{
+            "text":"$ 3\\sqrt{2} $",
+            "image":""
+         },
+         "correct":"a"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"The eccentricity of the conic section $ 4(x^{2} - y^{2} ) = 1 $ is",
+         "image":""
+      },
+      "subject":"Mathematics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"/hadI/",
+            "image":""
+         },
+         "c":{
+            "text":"$ /h\\partial edlI/  $",
+            "image":""
+         },
+         "b":{
+            "text":"/hardli:/",
+            "image":""
+         },
+         "d":{
+            "text":"/h\\supset dlI/",
+            "image":""
+         },
+         "correct":"a"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"The phonemic transcription of the word - 'hardly' is -------------",
+         "image":""
+      },
+      "subject":"English"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"first",
+            "image":""
+         },
+         "c":{
+            "text":"third",
+            "image":""
+         },
+         "b":{
+            "text":"second",
+            "image":""
+         },
+         "d":{
+            "text":"all of these",
+            "image":""
+         },
+         "correct":"a"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"The word hardship has its primary stress on the -------------- syllable",
+         "image":""
+      },
+      "subject":"English"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"spectators",
+            "image":""
+         },
+         "c":{
+            "text":"mob",
+            "image":""
+         },
+         "b":{
+            "text":"audience",
+            "image":""
+         },
+         "d":{
+            "text":"viewers",
+            "image":""
+         },
+         "correct":"b"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"A1 a lecture ",
+         "image":""
+      },
+      "subject":"English"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"emigrant",
+            "image":""
+         },
+         "c":{
+            "text":"expatriate",
+            "image":""
+         },
+         "b":{
+            "text":"immigrant",
+            "image":""
+         },
+         "d":{
+            "text":"pirate",
+            "image":""
+         },
+         "correct":"c"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"To send out of one's country",
+         "image":""
+      },
+      "subject":"English"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"with",
+            "image":""
+         },
+         "c":{
+            "text":"from",
+            "image":""
+         },
+         "b":{
+            "text":"to",
+            "image":""
+         },
+         "d":{
+            "text":"for",
+            "image":""
+         },
+         "correct":"b"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"Introduce a person ---------someone",
+         "image":""
+      },
+      "subject":"English"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"at ",
+            "image":""
+         },
+         "c":{
+            "text":"into",
+            "image":""
+         },
+         "b":{
+            "text":"for ",
+            "image":""
+         },
+         "d":{
+            "text":"upon",
+            "image":""
+         },
+         "correct":"d"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"Look ------------ someoneas a friend",
+         "image":""
+      },
+      "subject":"English"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"are ",
+            "image":""
+         },
+         "c":{
+            "text":"is",
+            "image":""
+         },
+         "b":{
+            "text":"were",
+            "image":""
+         },
+         "d":{
+            "text":"none of these",
+            "image":""
+         },
+         "correct":"c"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"The number of persons present ................very small.",
+         "image":""
+      },
+      "subject":"English"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"are ",
+            "image":""
+         },
+         "c":{
+            "text":"was",
+            "image":""
+         },
+         "b":{
+            "text":"is ",
+            "image":""
+         },
+         "d":{
+            "text":"all of these",
+            "image":""
+         },
+         "correct":"a"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"Half of them ....... rotten.",
+         "image":""
+      },
+      "subject":"English"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"very rapidly",
+            "image":""
+         },
+         "c":{
+            "text":"to reduce",
+            "image":""
+         },
+         "b":{
+            "text":"a search",
+            "image":""
+         },
+         "d":{
+            "text":"to affect",
+            "image":""
+         },
+         "correct":"a"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"By leaps and bound",
+         "image":""
+      },
+      "subject":"English"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"is it?",
+            "image":""
+         },
+         "c":{
+            "text":"isn't it?",
+            "image":""
+         },
+         "b":{
+            "text":"doesn't it?",
+            "image":""
+         },
+         "d":{
+            "text":"does it?",
+            "image":""
+         },
+         "correct":"a"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"All that glitters is not gold .......... ?",
+         "image":""
+      },
+      "subject":"English"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"weren't they?",
+            "image":""
+         },
+         "c":{
+            "text":"weren't there?",
+            "image":""
+         },
+         "b":{
+            "text":"didn't they?",
+            "image":""
+         },
+         "d":{
+            "text":"did they?",
+            "image":""
+         },
+         "correct":"a"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"These were some people at the gate, ...... ?",
+         "image":""
+      },
+      "subject":"English"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"simple",
+            "image":""
+         },
+         "c":{
+            "text":"complex",
+            "image":""
+         },
+         "b":{
+            "text":"compound",
+            "image":""
+         },
+         "d":{
+            "text":"mixed",
+            "image":""
+         },
+         "correct":"c"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"Black as she is, she is a beauty' is a ...............sentence.",
+         "image":""
+      },
+      "subject":"English"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"simple",
+            "image":""
+         },
+         "c":{
+            "text":"complex",
+            "image":""
+         },
+         "b":{
+            "text":"compound",
+            "image":""
+         },
+         "d":{
+            "text":"mixed",
+            "image":""
+         },
+         "correct":"d"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"She would have come if you had invited her, for she was free ' is a ........sentence",
+         "image":""
+      },
+      "subject":"English"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"have telephoned",
+            "image":""
+         },
+         "c":{
+            "text":"telephone",
+            "image":""
+         },
+         "b":{
+            "text":"have been telephonng",
+            "image":""
+         },
+         "d":{
+            "text":"telephoned",
+            "image":""
+         },
+         "correct":"d"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"I .............. you all the morning.",
+         "image":""
+      },
+      "subject":"English"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"will",
+            "image":""
+         },
+         "c":{
+            "text":"should",
+            "image":""
+         },
+         "b":{
+            "text":"may",
+            "image":""
+         },
+         "d":{
+            "text":"shall",
+            "image":""
+         },
+         "correct":"d"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"Her father said. 'If you score above 80%, in the IOE entrance exam you .................. be given galaxy grand 2.",
+         "image":""
+      },
+      "subject":"English"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"$ \\frac{2a}{3b} $",
+            "image":""
+         },
+         "c":{
+            "text":"$ \\frac{a}{3b} $",
+            "image":""
+         },
+         "b":{
+            "text":"$ \\frac{a}{b} $",
+            "image":""
+         },
+         "d":{
+            "text":"0",
+            "image":""
+         },
+         "correct":"c"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"The position x of a particle varies with time (t) as x = $ at^{2} -bt^{3} $. The acceleration of the particle will be 0 at a time",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"7.2J",
+            "image":""
+         },
+         "c":{
+            "text":"120J",
+            "image":""
+         },
+         "b":{
+            "text":"3.6J",
+            "image":""
+         },
+         "d":{
+            "text":"1200J",
+            "image":""
+         },
+         "correct":"b"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"A uniform chain of length 2m is kept on a table such that a length of 60cm hangs freely from the edge of the table. The total mass of chain is 4kg then work done on pulling whole chain on the table is",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"100cm",
+            "image":""
+         },
+         "c":{
+            "text":"5cm",
+            "image":""
+         },
+         "b":{
+            "text":"2cm",
+            "image":""
+         },
+         "d":{
+            "text":"$ \\pi cm $",
+            "image":""
+         },
+         "correct":"b"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"The equation of wave travelling in a string can be written as $ y=3cos\\pi(100t-x) $. The wavelength of the wave is",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"$ \\frac{Y_1}{Y_2} = \\frac {\\alpha_1}{\\alpha_2}$ ",
+            "image":""
+         },
+         "c":{
+            "text":"$ \\frac{Y_1}{Y_2} =\\sqrt \\frac {\\alpha_1}{\\alpha_2}$ ",
+            "image":""
+         },
+         "b":{
+            "text":"$ \\frac{Y_1}{Y_2} = \\frac {\\alpha_2}{\\alpha_1}$ ",
+            "image":""
+         },
+         "d":{
+            "text":"$ \\frac{Y_1}{Y_2} =\\sqrt \\frac {\\alpha_2}{\\alpha_1}$ ",
+            "image":""
+         },
+         "correct":"b"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"Two rods of different material of linear expansivities $ \\alpha_1 \\space and \\space \\alpha_2 $. Young's modulus $ Y_1 and Y_2 $ are fixed between two rigid massive wall. The rods are heated by the same temperature and there is no bending on rod then stress will be equal if",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"8000",
+            "image":""
+         },
+         "c":{
+            "text":"4000",
+            "image":""
+         },
+         "b":{
+            "text":"2000",
+            "image":""
+         },
+         "d":{
+            "text":"500",
+            "image":""
+         },
+         "correct":"d"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"An electrical refrigerator abstracts 2000 calories heat from ice trays. The coefficient of performance is 4 then work done by motor in calories is ",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"$ \\frac{1}{1000}mv $",
+            "image":""
+         },
+         "c":{
+            "text":"10mv",
+            "image":""
+         },
+         "b":{
+            "text":"1000mv",
+            "image":""
+         },
+         "d":{
+            "text":"100mv",
+            "image":""
+         },
+         "correct":"d"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"When 1000 drops of mercury of potential 1mv each coalese to form a single drop then potential of single drop will be",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"l,d",
+            "image":""
+         },
+         "c":{
+            "text":"l/2, d",
+            "image":""
+         },
+         "b":{
+            "text":"2l, d",
+            "image":""
+         },
+         "d":{
+            "text":"2l, d/2",
+            "image":""
+         },
+         "correct":"c"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"A piece of copper is shaped into a conductor of minimum resistance. Its length and diameter should be",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"10cm",
+            "image":""
+         },
+         "c":{
+            "text":"15cm",
+            "image":""
+         },
+         "b":{
+            "text":"6.67cm",
+            "image":""
+         },
+         "d":{
+            "text":"20cm",
+            "image":""
+         },
+         "correct":"c"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"Air bubble in glass slab of $ \\mu = 1.5 $ is found 6cm from one side and 4cm from other side. The thickness of slab is ",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"$ \\frac {1}{2} $",
+            "image":""
+         },
+         "c":{
+            "text":"$ \\frac{1}{\\sqrt{2}}$",
+            "image":""
+         },
+         "b":{
+            "text":"2",
+            "image":""
+         },
+         "d":{
+            "text":"3",
+            "image":""
+         },
+         "correct":"c"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"The KE of  a free electron is doubled, its debroglie wavelength will be",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"$24 \\mu A $",
+            "image":""
+         },
+         "c":{
+            "text":"$ 26 \\mu A $",
+            "image":""
+         },
+         "b":{
+            "text":"$ 25 \\mu A $",
+            "image":""
+         },
+         "d":{
+            "text":"$ 27 \\mu A $",
+            "image":""
+         },
+         "correct":"c"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"A transisitor is connected in common emittor configuration. The collector supply is 8V and voltage drop across resistor $ 800 \\Omega $ in the collector is 0.5V. The current gain is 0.96 then base current is ",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"-3, +1",
+            "image":""
+         },
+         "c":{
+            "text":"-3, +5",
+            "image":""
+         },
+         "b":{
+            "text":"1",
+            "image":""
+         },
+         "d":{
+            "text":"-3, +3",
+            "image":""
+         },
+         "correct":"c"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"The oxidation state of N in given compound $ NH_4NO_3 $ is",
+         "image":""
+      },
+      "subject":"Chemistry"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"1 $ N_A $",
+            "image":""
+         },
+         "c":{
+            "text":"5$ N_A $",
+            "image":""
+         },
+         "b":{
+            "text":"$ 2N_A $",
+            "image":""
+         },
+         "d":{
+            "text":"10 $  N_A $",
+            "image":""
+         },
+         "correct":"d"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"The number of electrons present in 1 mole of $ CH_4 $",
+         "image":""
+      },
+      "subject":"Chemistry"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"MCl",
+            "image":""
+         },
+         "c":{
+            "text":"$ MCl_3 $",
+            "image":""
+         },
+         "b":{
+            "text":"$ MCl_2 $",
+            "image":""
+         },
+         "d":{
+            "text":"$ MCl_4 $",
+            "image":""
+         },
+         "correct":"c"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"The equivalent weight of metal is 25. The vapour density of chloride  is 91. The formula of Metal Chloride is",
+         "image":""
+      },
+      "subject":"Chemistry"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"M/3",
+            "image":""
+         },
+         "c":{
+            "text":"M/5",
+            "image":""
+         },
+         "b":{
+            "text":"M/4",
+            "image":""
+         },
+         "d":{
+            "text":"M/8",
+            "image":""
+         },
+         "correct":"a"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"The equivalent weight of $ HNO_3 $ in the given condition $ HNO_3 \\rightarrow NO $. The molecular wt of $ HNO_3 $is M",
+         "image":""
+      },
+      "subject":"Chemistry"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"s-block",
+            "image":""
+         },
+         "c":{
+            "text":"d-block",
+            "image":""
+         },
+         "b":{
+            "text":"p-block",
+            "image":""
+         },
+         "d":{
+            "text":"f-block",
+            "image":""
+         },
+         "correct":"d"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"The electronic configuration of element ends at an antepenultimate shell is ",
+         "image":""
+      },
+      "subject":"Chemistry"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"$ 2n^{2} $",
+            "image":""
+         },
+         "c":{
+            "text":"$ 2(2l+1) $",
+            "image":""
+         },
+         "b":{
+            "text":"$ n^{2} $",
+            "image":""
+         },
+         "d":{
+            "text":"$ 2l +1 $",
+            "image":""
+         },
+         "correct":"d"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"The total number of orbitals present in each sub-shell is equivalent to the relation",
+         "image":""
+      },
+      "subject":"Chemistry"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"$ NH_3 $",
+            "image":""
+         },
+         "c":{
+            "text":"$ NaOH $",
+            "image":""
+         },
+         "b":{
+            "text":"$ H_2O $",
+            "image":""
+         },
+         "d":{
+            "text":"$ CN^{-1} $",
+            "image":""
+         },
+         "correct":"c"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"Which compound is not Bronsted-Lowry base?",
+         "image":""
+      },
+      "subject":"Chemistry"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"$ NH_3 $",
+            "image":""
+         },
+         "c":{
+            "text":"$ ASH_3 $",
+            "image":""
+         },
+         "b":{
+            "text":"$ PH_3 $",
+            "image":""
+         },
+         "d":{
+            "text":"$ SbH_3 $",
+            "image":""
+         },
+         "correct":"b"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"Which of these have least boiling point?",
+         "image":""
+      },
+      "subject":"Chemistry"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"HF",
+            "image":""
+         },
+         "c":{
+            "text":"HBr",
+            "image":""
+         },
+         "b":{
+            "text":"HCL",
+            "image":""
+         },
+         "d":{
+            "text":"HI",
+            "image":""
+         },
+         "correct":"d"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"The maximum covalent character is found in ",
+         "image":""
+      },
+      "subject":"Chemistry"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"$ H_2SO_3 $",
+            "image":""
+         },
+         "c":{
+            "text":"$ H_2SO_5 $",
+            "image":""
+         },
+         "b":{
+            "text":"$ H_2SO_4 $",
+            "image":""
+         },
+         "d":{
+            "text":"$ H_2S_2O_8 $",
+            "image":""
+         },
+         "correct":"a"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"Oil of Vitrol is",
+         "image":""
+      },
+      "subject":"Chemistry"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"Li",
+            "image":""
+         },
+         "c":{
+            "text":"$ C_s $",
+            "image":""
+         },
+         "b":{
+            "text":"Na",
+            "image":""
+         },
+         "d":{
+            "text":"$ Fr $",
+            "image":""
+         },
+         "correct":"c"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"Which of the following alkali metals is used in photoelectric cell?",
+         "image":""
+      },
+      "subject":"Chemistry"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"impure Cu",
+            "image":""
+         },
+         "c":{
+            "text":"ZnO",
+            "image":""
+         },
+         "b":{
+            "text":"impure Zn",
+            "image":""
+         },
+         "d":{
+            "text":"CuO",
+            "image":""
+         },
+         "correct":"b"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"Spelter is",
+         "image":""
+      },
+      "subject":"Chemistry"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"Steel",
+            "image":""
+         },
+         "c":{
+            "text":"solder",
+            "image":""
+         },
+         "b":{
+            "text":"Invar",
+            "image":""
+         },
+         "d":{
+            "text":"none of these",
+            "image":""
+         },
+         "correct":"c"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"Which of these is an nonferrous alloy?",
+         "image":""
+      },
+      "subject":"Chemistry"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"aromatic compounds ",
+            "image":""
+         },
+         "c":{
+            "text":"aliphatic compounds",
+            "image":""
+         },
+         "b":{
+            "text":"alkanes",
+            "image":""
+         },
+         "d":{
+            "text":"alcohols",
+            "image":""
+         },
+         "correct":"d"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"Kerosene is a mixture of ",
+         "image":""
+      },
+      "subject":"Chemistry"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"Butanol-1",
+            "image":""
+         },
+         "c":{
+            "text":"2-methyl propanol-1",
+            "image":""
+         },
+         "b":{
+            "text":"Butanol-2",
+            "image":""
+         },
+         "d":{
+            "text":"2-methyl propanol-2",
+            "image":""
+         },
+         "correct":"d"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"The IUPAC name of t-butyl alcohol is",
+         "image":""
+      },
+      "subject":"Chemistry"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"Petrol Engine",
+            "image":""
+         },
+         "c":{
+            "text":"Steam Engine",
+            "image":""
+         },
+         "b":{
+            "text":"Diesel Engine",
+            "image":""
+         },
+         "d":{
+            "text":"none of these",
+            "image":""
+         },
+         "correct":"a"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"Which one is the spark ignition engine?",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"1",
+            "image":""
+         },
+         "c":{
+            "text":"3",
+            "image":""
+         },
+         "b":{
+            "text":"2",
+            "image":""
+         },
+         "d":{
+            "text":"4",
+            "image":""
+         },
+         "correct":"b"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"In a 2-stroke engine the working cycle is completed in the no of revolution of the crank shaft equal to .........",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"0.04",
+            "image":""
+         },
+         "c":{
+            "text":"0.12",
+            "image":""
+         },
+         "b":{
+            "text":"0.08",
+            "image":""
+         },
+         "d":{
+            "text":"0.16",
+            "image":""
+         },
+         "correct":"d"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"About ......... of global final energy consumption comes from renewals",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"Ordinary Pozzolana Cement",
+            "image":""
+         },
+         "c":{
+            "text":"Overall Portland Cement",
+            "image":""
+         },
+         "b":{
+            "text":"Ordinary Portland Cement",
+            "image":""
+         },
+         "d":{
+            "text":"Ordinary Particle Cement",
+            "image":""
+         },
+         "correct":"b"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"For Cement OPC stands for .............",
+         "image":""
+      },
+      "subject":"Aptitude"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"rounded ",
+            "image":""
+         },
+         "c":{
+            "text":"flat",
+            "image":""
+         },
+         "b":{
+            "text":"irregular",
+            "image":""
+         },
+         "d":{
+            "text":"flaky",
+            "image":""
+         },
+         "correct":"a"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"The ship of riverbed aggregate is .....................",
+         "image":""
+      },
+      "subject":"Aptitude"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"top face",
+            "image":""
+         },
+         "c":{
+            "text":"exposed face",
+            "image":""
+         },
+         "b":{
+            "text":"bottom face",
+            "image":""
+         },
+         "d":{
+            "text":"interior face",
+            "image":""
+         },
+         "correct":"a"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"In brick masonary the frog of the brick is generally kept is ",
+         "image":""
+      },
+      "subject":"Aptitude"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"Red standing man",
+            "image":""
+         },
+         "c":{
+            "text":"Flashing Green Man",
+            "image":""
+         },
+         "b":{
+            "text":"Green walking man",
+            "image":""
+         },
+         "d":{
+            "text":"none",
+            "image":""
+         },
+         "correct":"a"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"Which of the following sign denotes that pedestrian are prohibited from crossing the road except where they have started to cross the road.",
+         "image":""
+      },
+      "subject":"Aptitude"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"1.5Ohm and 2.5Ohm",
+            "image":""
+         },
+         "c":{
+            "text":"3ohm and 1 ohm",
+            "image":""
+         },
+         "b":{
+            "text":"2 ohm",
+            "image":""
+         },
+         "d":{
+            "text":"4 ohm and 1 ohm",
+            "image":""
+         },
+         "correct":"b"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"Two resistances p1 and p2 give combined resistance of 4.0 ohms when in series and 1 ohm when in parallel. The resistances are",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"geothermal energy sources",
+            "image":""
+         },
+         "c":{
+            "text":"biomass",
+            "image":""
+         },
+         "b":{
+            "text":"fossil fuels",
+            "image":""
+         },
+         "d":{
+            "text":"all of these",
+            "image":""
+         },
+         "correct":"c"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"Energy resources derived from natural organic materials are called ...........",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"which has greater number of winding",
+            "image":""
+         },
+         "c":{
+            "text":"in which electrical source is applied",
+            "image":""
+         },
+         "b":{
+            "text":"which has less mumber of winding than the other",
+            "image":""
+         },
+         "d":{
+            "text":"from which electrical power is taken out",
+            "image":""
+         },
+         "correct":"d"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"In a transformer, secondary winding is that ",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"Compression Ignition",
+            "image":""
+         },
+         "c":{
+            "text":"Dual Ignition",
+            "image":""
+         },
+         "b":{
+            "text":"Spark Ignition",
+            "image":""
+         },
+         "d":{
+            "text":"Otto Ignition",
+            "image":""
+         },
+         "correct":"a"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"The diesel engines are also known as .........................Engine",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"Hindu counting system",
+            "image":""
+         },
+         "c":{
+            "text":"Arabic counting system",
+            "image":""
+         },
+         "b":{
+            "text":"Christinal counting system",
+            "image":""
+         },
+         "d":{
+            "text":"none",
+            "image":""
+         },
+         "correct":"a"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"Decimal is also known as ",
+         "image":""
+      },
+      "subject":"Aptitude"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"0",
+            "image":""
+         },
+         "c":{
+            "text":"1",
+            "image":""
+         },
+         "b":{
+            "text":"<1",
+            "image":""
+         },
+         "d":{
+            "text":">1",
+            "image":""
+         },
+         "correct":"d"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"The current gain of the common emitter transistor amplifier is",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"5mbps",
+            "image":""
+         },
+         "c":{
+            "text":"100mbps",
+            "image":""
+         },
+         "b":{
+            "text":"10mbps",
+            "image":""
+         },
+         "d":{
+            "text":"2mbps",
+            "image":""
+         },
+         "correct":"c"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"The max speed supported by fast ethernet is .......",
+         "image":""
+      },
+      "subject":"Aptitude"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"input device",
+            "image":""
+         },
+         "c":{
+            "text":"both a and b",
+            "image":""
+         },
+         "b":{
+            "text":"output device",
+            "image":""
+         },
+         "d":{
+            "text":"none",
+            "image":""
+         },
+         "correct":"c"
+      },
+      "exam_code":"202",
+      "marks":"1",
+      "question":{
+         "text":"Printers are ",
+         "image":""
+      },
+      "subject":"Aptitude"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"$ ^{12}C_6 $",
+            "image":""
+         },
+         "c":{
+            "text":"$ ^12C_4 $",
+            "image":""
+         },
+         "b":{
+            "text":"$ -^{12}C_6 $",
+            "image":""
+         },
+         "d":{
+            "text":"0",
+            "image":""
+         },
+         "correct":"d"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":" The coefficient of $ \\frac {x^{6}}{y^{2}} $ in the expansion of $ (\\frac{x^{2}}{y} + \\frac{y}{x})^{12} \\space is $",
+         "image":""
+      },
+      "subject":"Mathematics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"5a -6b=2",
+            "image":""
+         },
+         "c":{
+            "text":"5a-6b=4",
+            "image":""
+         },
+         "b":{
+            "text":"6a-5b=4",
+            "image":""
+         },
+         "d":{
+            "text":"-5a+6b=2",
+            "image":""
+         },
+         "correct":"c"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"The lines ax + by =1 is a normal to the circle $ 2x^{2} + 2y^{2} -5x +6y -1 =0 $ if ",
+         "image":""
+      },
+      "subject":"Mathematics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"$ \\frac{\\int_{}^{} tan^{3}x}{3} - sec^{2}x + tanx +x+ c $",
+            "image":""
+         },
+         "c":{
+            "text":"$ \\frac{\\int_{}^{} tan^{3}x}{3} - sec^{2}x + tanx + c $",
+            "image":""
+         },
+         "b":{
+            "text":"$ \\frac{\\int_{}^{} tan^{5}x}{5} + c $",
+            "image":""
+         },
+         "d":{
+            "text":"$ \\frac{ tan^{3}x -x -tanx}{3} + c $",
+            "image":""
+         },
+         "correct":"a"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"$ \\int_{}^{} tan^{4}xdx $",
+         "image":""
+      },
+      "subject":"Mathematics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"4, -6, 8",
+            "image":""
+         },
+         "c":{
+            "text":"-2, 3, 4",
+            "image":""
+         },
+         "b":{
+            "text":"1, -2, -2",
+            "image":""
+         },
+         "d":{
+            "text":"1,2,2",
+            "image":""
+         },
+         "correct":"a"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"The plane 2x - 3y +4z +7 is perpendicular to the line with drs",
+         "image":""
+      },
+      "subject":"Mathematics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"$ \\frac{sinx}{1-2y} $",
+            "image":""
+         },
+         "c":{
+            "text":"$ \\frac{1}{cos(2y-1)} $",
+            "image":""
+         },
+         "b":{
+            "text":"$ \\frac{cosx}{2y+1} $",
+            "image":""
+         },
+         "d":{
+            "text":"$ \\frac {cosx}{2y-1} $",
+            "image":""
+         },
+         "correct":"d"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"If y= $ \\sqrt {sinx + \\sqrt{sinx+ \\sqrt{sinx+...}}}\\space then \\space \\frac{dy}{dx} $",
+         "image":""
+      },
+      "subject":"Mathematics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"$ \\sqrt{6} $",
+            "image":""
+         },
+         "c":{
+            "text":"$ \\frac{2}{3} \\sqrt{6} $",
+            "image":""
+         },
+         "b":{
+            "text":"3",
+            "image":""
+         },
+         "d":{
+            "text":"2$ \\sqrt{6} $",
+            "image":""
+         },
+         "correct":"d"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"In the ellipse $ x^{2} + 3y^{2} =9 $, the distance between the foci is ",
+         "image":""
+      },
+      "subject":"Mathematics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"2$ \\triangle $",
+            "image":""
+         },
+         "c":{
+            "text":"4$ \\triangle $",
+            "image":""
+         },
+         "b":{
+            "text":"$ \\triangle $",
+            "image":""
+         },
+         "d":{
+            "text":"$ \\triangle^{2} $",
+            "image":""
+         },
+         "correct":"c"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"In any $ \\triangle ABC, \\space a^{2} sin2B + b^{2}sin2A $ = ",
+         "image":""
+      },
+      "subject":"Mathematics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"$ \\frac{1}{7} $",
+            "image":""
+         },
+         "c":{
+            "text":"$ \\frac{1}{6} $",
+            "image":""
+         },
+         "b":{
+            "text":"$ \\frac{-1}{7} $",
+            "image":""
+         },
+         "d":{
+            "text":"$ \\frac{1}{8} $",
+            "image":""
+         },
+         "correct":"a"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"$ \\int_{0}^{\\frac{\\pi}{4}} \\frac{cos^6x}{sin^8x}dx $",
+         "image":""
+      },
+      "subject":"Mathematics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"2",
+            "image":""
+         },
+         "c":{
+            "text":"4",
+            "image":""
+         },
+         "b":{
+            "text":"-2",
+            "image":""
+         },
+         "d":{
+            "text":"0",
+            "image":""
+         },
+         "correct":"d"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"The gradient of y= |x+2| + |x-3| at x =1 is",
+         "image":""
+      },
+      "subject":"Mathematics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":" $ x^{2} +x + 6 =0 $ ",
+            "image":""
+         },
+         "c":{
+            "text":"$ x^{2} -2x -6 =0 $",
+            "image":""
+         },
+         "b":{
+            "text":"$ x^{2} + x -6 =0 $",
+            "image":""
+         },
+         "d":{
+            "text":"$ x^{2} + x -6 =0 $",
+            "image":""
+         },
+         "correct":"b"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":" The quadratic equation whose root are the AM and HM of the roots of $ x^2 - 4x -6 =0 $ is",
+         "image":""
+      },
+      "subject":"Mathematics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"$ ^{11}C_5 $",
+            "image":""
+         },
+         "c":{
+            "text":"$ ^{10}C_3 $",
+            "image":""
+         },
+         "b":{
+            "text":"$ ^{10}C_4 $",
+            "image":""
+         },
+         "d":{
+            "text":"$ ^{6}C_3 $ + $ ^{5}C_2 $",
+            "image":""
+         },
+         "correct":"a"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"The constant term in the expansion of $ (1-x^{2})(x+ \\frac{1}{x})^{10} $",
+         "image":""
+      },
+      "subject":"Mathematics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"0",
+            "image":""
+         },
+         "c":{
+            "text":"$ \\frac{1}{2} $",
+            "image":""
+         },
+         "b":{
+            "text":"1",
+            "image":""
+         },
+         "d":{
+            "text":"$  \\frac{-1}{2} $",
+            "image":""
+         },
+         "correct":"d"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"If $ \\delta(x) = \\begin{bmatrix}1 & 1+sinx \\\\cosx & cosx \\end{bmatrix}, then \\space \\int_{0}^{\\frac{\\pi}{2}} \\delta(x)dx = $",
+         "image":""
+      },
+      "subject":"Mathematics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"unit vector",
+            "image":""
+         },
+         "c":{
+            "text":"proper vector",
+            "image":""
+         },
+         "b":{
+            "text":"null vector",
+            "image":""
+         },
+         "d":{
+            "text":"equally inclined with $ \\overrightarrow{a} + \\overrightarrow{b} + \\overrightarrow{c}  $ ",
+            "image":""
+         },
+         "correct":"b"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"If $ \\overrightarrow{a}, \\overrightarrow{b} and \\overrightarrow{c} are \\space  pair \\space wise \\space non-collinear \\space but \\space \\overrightarrow{a} + \\overrightarrow{b} is \\space collinear \\space with \\overrightarrow{c} and \\space \\overrightarrow{b} + \\overrightarrow{c}is \\space collinear \\space with \\space \\overrightarrow{a}. Now \\overrightarrow{a} + \\overrightarrow{b} + \\overrightarrow{c} is \\space a $",
+         "image":""
+      },
+      "subject":"Mathematics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"10 * (9!)",
+            "image":""
+         },
+         "c":{
+            "text":"9 * 9!",
+            "image":""
+         },
+         "b":{
+            "text":"8 * 9!",
+            "image":""
+         },
+         "d":{
+            "text":"9 * 10!",
+            "image":""
+         },
+         "correct":"c"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"The total number of 9-digit numbers of different digits is",
+         "image":""
+      },
+      "subject":"Mathematics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"4 $ \\pi $",
+            "image":""
+         },
+         "c":{
+            "text":"$ \\pi $",
+            "image":""
+         },
+         "b":{
+            "text":"$ 2\\pi $",
+            "image":""
+         },
+         "d":{
+            "text":"$ \\frac {\\pi}{2} $",
+            "image":""
+         },
+         "correct":"c"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"The area bounded by the curve y = $ \\sqrt{(4-x^{2})} $ and the x-axis is",
+         "image":""
+      },
+      "subject":"Mathematics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"$ x \\in [-1,1] $",
+            "image":""
+         },
+         "c":{
+            "text":"$ x=(2n +1) \\frac {\\pi}{2} $",
+            "image":""
+         },
+         "b":{
+            "text":"$ x \\in R $",
+            "image":""
+         },
+         "d":{
+            "text":"$ x=n \\pi $",
+            "image":""
+         },
+         "correct":"d"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"$ cosec^{-1}(cosx) $ is real if ",
+         "image":""
+      },
+      "subject":"Mathematics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"i",
+            "image":""
+         },
+         "c":{
+            "text":"(1-5i)",
+            "image":""
+         },
+         "b":{
+            "text":"2(-1+5i)",
+            "image":""
+         },
+         "d":{
+            "text":"0",
+            "image":""
+         },
+         "correct":"b"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"$ (1 + i)^{3} + (1-i)^{6} = $",
+         "image":""
+      },
+      "subject":"Mathematics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"-1",
+            "image":""
+         },
+         "c":{
+            "text":"-2",
+            "image":""
+         },
+         "b":{
+            "text":"-3",
+            "image":""
+         },
+         "d":{
+            "text":"$ \\frac{-1}{2} $",
+            "image":""
+         },
+         "correct":"c"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"In a geometric progression of alternatively positive and negative terms, if each term in the arithmatic mean of the next two terms, then the common ratio is",
+         "image":""
+      },
+      "subject":"Mathematics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"$ x = t^{2} +1 $,  y = $ (2t -1) $",
+            "image":""
+         },
+         "c":{
+            "text":"$ x = t^{2} $,  y = $ (2t) $",
+            "image":""
+         },
+         "b":{
+            "text":"$ x = t^{2} +1 $,  y = $ (2t +1) $",
+            "image":""
+         },
+         "d":{
+            "text":"$ x = t^{2} -1 $,  y = $ (2t +1) $",
+            "image":""
+         },
+         "correct":"d"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"The parametric equation of the parabola with focus (0,1) and directrix x +2 =0 is ",
+         "image":""
+      },
+      "subject":"Mathematics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"$ \\frac{\\pi}{2} $",
+            "image":""
+         },
+         "c":{
+            "text":"$ \\frac{5\\pi}{6} $",
+            "image":""
+         },
+         "b":{
+            "text":"$ \\frac{\\3\\pi}{2} $",
+            "image":""
+         },
+         "d":{
+            "text":"$ \\frac{2\\pi}{3} $",
+            "image":""
+         },
+         "correct":"d"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"If the points (-2, 0), (-1, $ \\frac {1}{\\sqrt{3}} $) and (cos$ \\theta $, sin$\\theta $) are collinear then $ \\theta \\in [0, 2\\pi] $ is",
+         "image":""
+      },
+      "subject":"Mathematics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"5m/s",
+            "image":""
+         },
+         "c":{
+            "text":"15m/s",
+            "image":""
+         },
+         "b":{
+            "text":"10m/s",
+            "image":""
+         },
+         "d":{
+            "text":"20 m/s",
+            "image":""
+         },
+         "correct":"a"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"A parachusist drops freely from an aeroplane for 10 seconds before parachute open. After that he descends with retardation of 2.5 m/$s^{2}$. The Plane is at 2495m when person is thrown then velocity of person while reaching on the ground is",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"$ \\frac{3}{2} \\frac {u^{2}sin2\\theta}{g} $",
+            "image":""
+         },
+         "c":{
+            "text":"$ \\frac{2}{3} \\frac {u^{2}sin2\\theta}{g} $",
+            "image":""
+         },
+         "b":{
+            "text":"$ \\frac {u^{2}sin2\\theta}{g} $",
+            "image":""
+         },
+         "d":{
+            "text":"$  \\frac {3u^{2}sin^{2}2\\theta}{2g} $",
+            "image":""
+         },
+         "correct":"a"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"A shell of mass 2m fired with speed u at an angle $ \\theta $ to the horizontal explodes at the highest point of its motion into two fragments of mass 'm' each. If one of the fragment whose initial speed is zero fall verticaly, the distance at which other fragment fall from the gun is",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"5N",
+            "image":""
+         },
+         "c":{
+            "text":"7.46N",
+            "image":""
+         },
+         "b":{
+            "text":"5.36N",
+            "image":""
+         },
+         "d":{
+            "text":"10N",
+            "image":""
+         },
+         "correct":"b"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"A block of mass 1kg is at rest on a horizontal table. The coefficient of static friction between block and table is 0.5 then force acting at an angle $ 60 ^{o} $ with horizontal that will just move the block on the table is ",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"$ \\frac{n}{n+1} $",
+            "image":""
+         },
+         "c":{
+            "text":"$ \\frac{2n}{(n+1)^{2}} $",
+            "image":""
+         },
+         "b":{
+            "text":"$ \\frac{n}{(n+1)^{2}} $",
+            "image":""
+         },
+         "d":{
+            "text":"$ \\frac{4n}{(n+1)^{2}} $",
+            "image":""
+         },
+         "correct":"d"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"A ball of mass m moving with velocity u undergoes a head on collision with a ball of mass 'nm' initially at rest. The fraction of incident energy is transferred to heavier ball is ",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"$ \\frac{GMm}{R} $",
+            "image":""
+         },
+         "c":{
+            "text":"$ \\frac{3GMm}{2R} ",
+            "image":""
+         },
+         "b":{
+            "text":"$ \\frac{GMm}{2R} $",
+            "image":""
+         },
+         "d":{
+            "text":"$ \\frac{4GMm}{2R}",
+            "image":""
+         },
+         "correct":"a"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"A body of mass is placed on the surface of earth of mass M and radius R then work done to remove the body from gravitatonal pull of earth is",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"8m/s",
+            "image":""
+         },
+         "c":{
+            "text":"70m/s",
+            "image":""
+         },
+         "b":{
+            "text":"80m/s",
+            "image":""
+         },
+         "d":{
+            "text":"6m/s",
+            "image":""
+         },
+         "correct":"a"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"The frequency of sound of car horn is perceived by an observer towards when the car is moving differes from the frequency of horn by 2.5%. The velocity os sound is 320m/s then velocity of car is ",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"40cm",
+            "image":""
+         },
+         "c":{
+            "text":"70 cm",
+            "image":""
+         },
+         "b":{
+            "text":"50 cm ",
+            "image":""
+         },
+         "d":{
+            "text":"80cm",
+            "image":""
+         },
+         "correct":"d"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"A sonometer wire of length 1m is stretched by 4kg. Another wire of same material and diameter is stretched by 16kg. The length of second wire whose second harmonic is same as fifth harmonic of first is ",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"340s",
+            "image":""
+         },
+         "c":{
+            "text":"620s",
+            "image":""
+         },
+         "b":{
+            "text":"550s",
+            "image":""
+         },
+         "d":{
+            "text":"760s",
+            "image":""
+         },
+         "correct":"b"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"Two litres of water in an open lid insulated kettle is heated by an electric heater of 1Kw. The heat lost from the lid at the rate of 160watt. The time in which water is heated from $20^{o}C to 75^{o}C $ is",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"1w",
+            "image":""
+         },
+         "c":{
+            "text":"3w",
+            "image":""
+         },
+         "b":{
+            "text":"2w",
+            "image":""
+         },
+         "d":{
+            "text":"4w",
+            "image":""
+         },
+         "correct":"a"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"A body of surface area 10 cm^{2} is heated 10 $ 127^{o}C $ and placed in a room of $ 27^{o}C $.The rate of loss of heat from the body is ",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"0",
+            "image":""
+         },
+         "c":{
+            "text":"$\\frac {\\sqrt{2}Q^{2}}{\\pi\\epsilon_0a}$",
+            "image":""
+         },
+         "b":{
+            "text":"$ \\frac {\\sqrt{2}Q^{2}}{4\\pi\\epsilon_0a} $",
+            "image":""
+         },
+         "d":{
+            "text":"$ \\frac {Q}{\\pi\\epsilon_0a} $",
+            "image":""
+         },
+         "correct":"c"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"Four equal charges q are placed at the four cornors of square of side 'a' each. Work done in removing a charge -Q from center to infinity is",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"$ 200\\mu F $",
+            "image":""
+         },
+         "c":{
+            "text":"$ 400 \\mu F $",
+            "image":""
+         },
+         "b":{
+            "text":"$ 300 \\mu F $",
+            "image":""
+         },
+         "d":{
+            "text":"$ 500 \\mu F $",
+            "image":""
+         },
+         "correct":"d"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":" A capacitor of capacitance C is fully charged by a 200V supply. It is then discharged through a small coil of resistance wire embeeded in thermally insulated block of specific heat $ 2.5 * 10^{2}JKg^{-1}K^{-1} $ and mass of 0.1Kg. The temperature of the block rises by 0.4K. Then value of 'C' is  ",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"5",
+            "image":""
+         },
+         "c":{
+            "text":"12",
+            "image":""
+         },
+         "b":{
+            "text":"10",
+            "image":""
+         },
+         "d":{
+            "text":"15",
+            "image":""
+         },
+         "correct":"c"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"A number of 110V lamps connected in parallel are fed by a 130V battery having an internal resistance of 2.6 $\\Omega$. If the resistance of each lamp is 200 $\\Omega$ and resistance of wire is 0.4 $ \\Omega $ the number of lamps are ",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"$ 2.5 * 10^{-10} N $",
+            "image":""
+         },
+         "c":{
+            "text":"$ 2.5 * 10 ^{-11}N$",
+            "image":""
+         },
+         "b":{
+            "text":"$ 8 * 10^{-11} N $",
+            "image":""
+         },
+         "d":{
+            "text":"$ 8 * 10^{-12} N$",
+            "image":""
+         },
+         "correct":"d"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"A 2meV proton is moving perpendicular to a uniform magnetic field of 2.5T. The force on proton is",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"8 rotation/s",
+            "image":""
+         },
+         "c":{
+            "text":"16 rotation/s",
+            "image":""
+         },
+         "b":{
+            "text":"12 rotation/s",
+            "image":""
+         },
+         "d":{
+            "text":"20 rotation/s",
+            "image":""
+         },
+         "correct":"a"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"The spokes of wheel are metallic and their length is 0.5m. On rotaiting the wheel at right angles to a uniform magnetic field of $ 5* 10^{-4}T $, A potential difference of 3.14 mv is produced between rim and axis. The rate of rotation of wheel is?",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"10 cm",
+            "image":""
+         },
+         "c":{
+            "text":"20cm",
+            "image":""
+         },
+         "b":{
+            "text":"5cm",
+            "image":""
+         },
+         "d":{
+            "text":"15cm",
+            "image":""
+         },
+         "correct":"b"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"A thin equiconvex lens has focal length of 10 cm and refractive index 1.5. One face is silvered and for an object placed at a disctance of 'u' infront of the image coincide with the object.  The value of 'u' is ",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"1mm",
+            "image":""
+         },
+         "c":{
+            "text":"3mm",
+            "image":""
+         },
+         "b":{
+            "text":"2mm",
+            "image":""
+         },
+         "d":{
+            "text":"4mm",
+            "image":""
+         },
+         "correct":"c"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"A parallel beam of light of 6000$ A^{o} $ is incident normally on a slit of width o.2mm. A diffraction pattern is observed on a screen which is placed at a focal plane of convex lens of focal length 50cm. Lens is close to slit then distance between mininma on both side of central maxima will be",
+         "image":""
+      },
+      "subject":"physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"0.75ev",
+            "image":""
+         },
+         "c":{
+            "text":"3eV",
+            "image":""
+         },
+         "b":{
+            "text":"1.5eV",
+            "image":""
+         },
+         "d":{
+            "text":"3.5eV",
+            "image":""
+         },
+         "correct":"b"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"The stopping potential for metal surface is 0.5V for the light of wavelength 0.6$\\mu m$.The stopping potential for the light of wavelength 0.4 $\\mu m$ is 1.5V. The work function of the metal is",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"912$A^{o}$",
+            "image":""
+         },
+         "c":{
+            "text":"3648$A^{o}$",
+            "image":""
+         },
+         "b":{
+            "text":"1824$A^{o}$",
+            "image":""
+         },
+         "d":{
+            "text":"456$A^{o}$",
+            "image":""
+         },
+         "correct":"c"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"The wavelength of series light of lyman series for hydrogen atom is 912$A6{o}$ Then series limit of Balmer series in Hydrogen atom is",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"5.5 MeV",
+            "image":""
+         },
+         "c":{
+            "text":"5.3MeV",
+            "image":""
+         },
+         "b":{
+            "text":"5.4MeV",
+            "image":""
+         },
+         "d":{
+            "text":"5.1MeV",
+            "image":""
+         },
+         "correct":"b"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"A nucleus of mass number 220 undergoes an $\\ alpha $ decay . The value of energy of reaction is 5.5MeV.The KE of $ \\alpha $ Particle is ",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"4675years",
+            "image":""
+         },
+         "c":{
+            "text":"546 years",
+            "image":""
+         },
+         "b":{
+            "text":"720years",
+            "image":""
+         },
+         "d":{
+            "text":"324 years",
+            "image":""
+         },
+         "correct":"c"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"A radioactive metal has mean lives of 1620 years and 520 years for $ \\alpha $ and $ \\beta $ emission respectively. The material decays $ \\alpha $ and $ \\beta $ simultaneoulsy. Then the time of $ (\\frac{1}{4})^{th}  $ of material remain is",
+         "image":""
+      },
+      "subject":"Physics"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"sound and dependable",
+            "image":""
+         },
+         "c":{
+            "text":"of questionable",
+            "image":""
+         },
+         "b":{
+            "text":"utterly unconvincing",
+            "image":""
+         },
+         "d":{
+            "text":"of no value  at all",
+            "image":""
+         },
+         "correct":"c"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"<b> Read the following passage and give the answer of the question </b></br>At a time when we are enjoying longer, more healthful lives, ominous headlines, announces: 'Researchers tie Aluminum to Alzheimer's Disease ' and 'Coffee linked to Cholestrol Rise'. As a result of alarming and something ambiguous bulletins, worriers often become major threats and speculations about disease prevention become 'proven' cures. Part to the problem isthat the media often trumpet the questionable research finding as major medical breakthroughs. In 1985, three French scientists told reporters at a press that the drug Cyclosporine appeared to halt the grownth of AIDS Virus. They based the announcement on their observation of Two AIDS patients treated for 8 days. Never mind no actual study had been done; for the media the announcement was enough, and the story became frontpage news around the world. Unfortunately one of the patient died within days. Cyclosporine was no  miracle cure.</br> <b> According to the writer a lot present day research is a </b>",
+         "image":""
+      },
+      "subject":"English"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"Has no impact on people's life in general",
+            "image":""
+         },
+         "c":{
+            "text":"fills people's life with death and destruction",
+            "image":""
+         },
+         "b":{
+            "text":"adds to people's worries and gives them false hope",
+            "image":""
+         },
+         "d":{
+            "text":"makes people aware of the disease",
+            "image":""
+         },
+         "correct":"b"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"<b> Read the following passage and give the answer of the question </b></br>At a time when we are enjoying longer, more healthful lives, ominous headlines, announces: 'Researchers tie Aluminum to Alzheimer's Disease ' and 'Coffee linked to Cholestrol Rise'. As a result of alarming and something ambiguous bulletins, worriers often become major threats and speculations about disease prevention become 'proven' cures. Part to the problem isthat the media often trumpet the questionable research finding as major medical breakthroughs. In 1985, three French scientists told reporters at a press that the drug Cyclosporine appeared to halt the grownth of AIDS Virus. They based the announcement on their observation of Two AIDS patients treated for 8 days. Never mind no actual study had been done; for the media the announcement was enough, and the story became frontpage news around the world. Unfortunately one of the patient died within days. Cyclosporine was no  miracle cure.<br/> <b> The undue publicity given to such research",
+         "image":""
+      },
+      "subject":"English"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"To make public aware of health hazards",
+            "image":""
+         },
+         "c":{
+            "text":"To dispel people's fear about unknown disease",
+            "image":""
+         },
+         "b":{
+            "text":"To give publicity to questionable research findings",
+            "image":""
+         },
+         "d":{
+            "text":"To report major medical discoveries",
+            "image":""
+         },
+         "correct":"b"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"<b> Read the following passage and give the answer of the question </b></br>At a time when we are enjoying longer, more healthful lives, ominous headlines, announces: 'Researchers tie Aluminum to Alzheimer's Disease ' and 'Coffee linked to Cholestrol Rise'. As a result of alarming and something ambiguous bulletins, worriers often become major threats and speculations about disease prevention become 'proven' cures. Part to the problem isthat the media often trumpet the questionable research finding as major medical breakthroughs. In 1985, three French scientists told reporters at a press that the drug Cyclosporine appeared to halt the grownth of AIDS Virus. They based the announcement on their observation of Two AIDS patients treated for 8 days. Never mind no actual study had been done; for the media the announcement was enough, and the story became frontpage news around the world. Unfortunately one of the patient died within days. Cyclosporine was no miracle cure.<br><b>The role of media has been</b>",
+         "image":""
+      },
+      "subject":"English"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"Cyclosporine",
+            "image":""
+         },
+         "c":{
+            "text":"AIDS",
+            "image":""
+         },
+         "b":{
+            "text":"Alzheimer's disease",
+            "image":""
+         },
+         "d":{
+            "text":"Cholestrol Level",
+            "image":""
+         },
+         "correct":"d"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"<b> Read the following passage and give the answer of the question </b></br>At a time when we are enjoying longer, more healthful lives, ominous headlines, announces: 'Researchers tie Aluminum to Alzheimer's Disease ' and 'Coffee linked to Cholestrol Rise'. As a result of alarming and something ambiguous bulletins, worriers often become major threats and speculations about disease prevention become 'proven' cures. Part to the problem isthat the media often trumpet the questionable research finding as major medical breakthroughs. In 1985, three French scientists told reporters at a press that the drug Cyclosporine appeared to halt the grownth of AIDS Virus. They based the announcement on their observation of Two AIDS patients treated for 8 days. Never mind no actual study had been done; for the media the announcement was enough, and the story became frontpage news around the world. Unfortunately one of the patient died within days. Cyclosporine was no miracle cure.<br><b>According to some of the research findings, coffee is responsible for the rise in  </b>",
+         "image":""
+      },
+      "subject":"English"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"as a treatment for AIDS",
+            "image":""
+         },
+         "c":{
+            "text":"as accelerating the growth of AIDS",
+            "image":""
+         },
+         "b":{
+            "text":"as having no effect in treatment of AIDS",
+            "image":""
+         },
+         "d":{
+            "text":"as being responsible for the death of 2 AIDS patient",
+            "image":""
+         },
+         "correct":"a"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"<b> Read the following passage and give the answer of the question </b></br>At a time when we are enjoying longer, more healthful lives, ominous headlines, announces: 'Researchers tie Aluminum to Alzheimer's Disease ' and 'Coffee linked to Cholestrol Rise'. As a result of alarming and something ambiguous bulletins, worriers often become major threats and speculations about disease prevention become 'proven' cures. Part to the problem isthat the media often trumpet the questionable research finding as major medical breakthroughs. In 1985, three French scientists told reporters at a press that the drug Cyclosporine appeared to halt the grownth of AIDS Virus. They based the announcement on their observation of Two AIDS patients treated for 8 days. Never mind no actual study had been done; for the media the announcement was enough, and the story became frontpage news around the world. Unfortunately one of the patient died within days. Cyclosporine was no miracle cure.<br> <b>The druug cyclosporine was reported </b>",
+         "image":""
+      },
+      "subject":"English"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"ehtyne, ethane and ethane",
+            "image":""
+         },
+         "c":{
+            "text":"ethane, ethene and ethyne",
+            "image":""
+         },
+         "b":{
+            "text":"ethane  ethyne and ethane",
+            "image":""
+         },
+         "d":{
+            "text":"ethane, ethane and ethyne",
+            "image":""
+         },
+         "correct":"c"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"Electrolysis of sodium salt of ethanoic acid succinic acid, maleic acid produce respectively",
+         "image":""
+      },
+      "subject":"English"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"Acidified $ ZnSO_4 $",
+            "image":""
+         },
+         "c":{
+            "text":"Acidified $ FeCl_3 $ ",
+            "image":""
+         },
+         "b":{
+            "text":"Acidified $ MnSO_4 $",
+            "image":""
+         },
+         "d":{
+            "text":"Acidified $ CdSO_4 $",
+            "image":""
+         },
+         "correct":"d"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"Which of this forms ppt with a gas formed by reacting FeS with dilute $H_2SO_4$",
+         "image":""
+      },
+      "subject":"English"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"50",
+            "image":""
+         },
+         "c":{
+            "text":"60",
+            "image":""
+         },
+         "b":{
+            "text":"55",
+            "image":""
+         },
+         "d":{
+            "text":"65",
+            "image":""
+         },
+         "correct":"b"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"The mass of $ 1.94 *10^{18} $ atoms of iron is equal to mass of 2cc of $ H_2 $ at NTP. Find the atomic mass of iron",
+         "image":""
+      },
+      "subject":"Chemistry"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"0.16",
+            "image":""
+         },
+         "c":{
+            "text":"0.32",
+            "image":""
+         },
+         "b":{
+            "text":"0.24",
+            "image":""
+         },
+         "d":{
+            "text":"0.48",
+            "image":""
+         },
+         "correct":"a"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"100ml of xM NaOH are mixed with 100ml of 0.1ml of 0.1M $ H_2SO_4 $. So that the pH of the resulting solution is 1.699. Find x",
+         "image":""
+      },
+      "subject":"Chemistry"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"15lit",
+            "image":""
+         },
+         "c":{
+            "text":"19lit",
+            "image":""
+         },
+         "b":{
+            "text":"17lit",
+            "image":""
+         },
+         "d":{
+            "text":"21lit",
+            "image":""
+         },
+         "correct":"c"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"What volume of $H_2$ at NTP will be produced at cathode. When an aqueous acid solution is electrolysed by passing 15A of current for 3 hours.",
+         "image":""
+      },
+      "subject":"Chemistry"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"A vertical hidden (dash) line",
+            "image":""
+         },
+         "c":{
+            "text":"A horizontal hidden (dash) line",
+            "image":""
+         },
+         "b":{
+            "text":"A horizontal solid (visible) line",
+            "image":""
+         },
+         "d":{
+            "text":"A vertical solid (visible) line",
+            "image":""
+         },
+         "correct":"c"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"Which is wrong for LSV of given object",
+         "image":"116.jpg"
+      },
+      "subject":"Drawing"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"",
+            "image":"117_a.jpg"
+         },
+         "c":{
+            "text":"",
+            "image":"117_c.jpg"
+         },
+         "b":{
+            "text":"",
+            "image":"117_b.jpg"
+         },
+         "d":{
+            "text":"",
+            "image":"117_d.jpg"
+         },
+         "correct":"d"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"Select the correct front view of the given image",
+         "image":"117.jpg"
+      },
+      "subject":"Drawing"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"",
+            "image":"118_a.jpg"
+         },
+         "c":{
+            "text":"",
+            "image":"118_c.jpg"
+         },
+         "b":{
+            "text":"",
+            "image":"118_b.jpg"
+         },
+         "d":{
+            "text":"",
+            "image":"118_d.jpg"
+         },
+         "correct":"d"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"Select the correct top view of the given image",
+         "image":"118.jpg"
+      },
+      "subject":"Drawing"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":"",
+            "image":"119_a.jpg"
+         },
+         "c":{
+            "text":"",
+            "image":"119_c.jpg"
+         },
+         "b":{
+            "text":"",
+            "image":"119_b.jpg"
+         },
+         "d":{
+            "text":"",
+            "image":"119_d.jpg"
+         },
+         "correct":"c"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"Select the correct object for given set of orthrographic views",
+         "image":"119.jpg"
+      },
+      "subject":"Drawing"
+   },
+   {
+      "answer":{
+         "a":{
+            "text":">0",
+            "image":""
+         },
+         "c":{
+            "text":"<1",
+            "image":""
+         },
+         "b":{
+            "text":"<0",
+            "image":""
+         },
+         "d":{
+            "text":">1",
+            "image":""
+         },
+         "correct":"d"
+      },
+      "exam_code":"202",
+      "marks":"2",
+      "question":{
+         "text":"Hyperbola has its eccentricity always",
+         "image":""
+      },
+      "subject":"Drawing"
+   }
+]
