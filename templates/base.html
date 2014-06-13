@@ -313,55 +313,53 @@
 </head>
 <body class="{% if request.user.is_authenticated %} bgimage {% endif %} over">
 <div id="fb-root"></div>  
-<nav id="navbar-main-nav" class="navbar">
-  <div class="row">
-    <a class="toggle" gumby-trigger="#navbar-main-nav #main-nav" href="#"><i class="icon-menu"></i></a>
-    <h1 class="four columns logo">
-      <a href="/">
-        <img src="http://gumbyframework.com/img/gumby_mainlogo.png" gumby-retina>
-      </a>
-    </h1>
-    <nav class="ten columns pull_right">
-      <ul id="main-nav">
-        <li><a href="/features/"><span>Features </span><i class="icon-archive" title="Features"></i></a>
-          <div class="dropdown">
+  <div class="navbar fixed" id="nav1" gumby-fixed="top" data-target="top" style="top: 0px;">
+    <a class="toggle" gumby-trigger="#nav1 > ul" href="#"><i class="icon-menu"></i></a>
+    {% if request.user.is_authenticated %}<div class="row">{% endif %}
+      <h2 class="columns logo" style="{% if not request.user.is_authenticated %} margin-left:10%; {% endif %}">
+        <a href="/" data-scroll-nav="0">
+          <img src="{% static 'images/logos/meroanswer.png' %}" width="120" height="60" alt="">
+        </a>
+      </h2>
+
+      {% if not request.user.is_authenticated %}
+      <ul class="" style="float:right;clear:none; margin-right: 50px;">
+        <!-- <li><a href="#whatisit">What is it?</a></li> -->
+        <li><a href="#" data-scroll-nav="1">How it works</a></li>
+        <li><a href="#" data-scroll-nav="2">Android app</a></li>
+        <!-- <li><a href="#main-signup">Join</a></li> -->
+        <li>
+          <!-- <div class="medium primary btn pretty" style="background: #3b5998;"> -->
+          <a id="fbLoginNavbar" href="{% provider_login_url "facebook" method="oauth2" %}">
+            {% comment %}<a href="{% provider_login_url "twitter" process="login" %}">{% endcomment %}
+              <span class="adjoined"><!-- <i class="icon-facebook"></i> --></span>
+              <span style="font-size:14px;">Join </span>
+            </a>
+          <!-- </div> -->
+        </li>        
+      </ul>
+      {% else %}
+      <ul class="eight columns" style="float:right;clear:none;">
+        <li><a href="#">Partners</a></li>
+        <li><a href="#">Coupon Distributors</a></li>
+        <li><a href="/subscription/">Subscription Models</a></li>
+        {% if 'attend-exam' in request.path %}
+          <li>
+              <a href="#" data-toggle="chardinjs">Instructions</a>
+          </li>
+        {% endif %}
+        <li>
+          <a href="#"><span>{{user.name}} </span><i class="icon-down-open"></i></a>
+          <div class="dropdown" style="width:180px;{% if 'terms' in request.path or 'privacy' in request.path or 'results' in request.path or 'answers' in request.path %} margin-left: -120px;{% endif %}">
             <ul>
-              <li><a href="/features/">The Grid</a></li>
-              <li><a href="/features/ui-kit/">UI Kit</a></li>
-              <li><a href="/features/toggles-switches/">Toggles &amp; Switches</a></li>
-              <li><a href="/features/fancy-tiles/">Fancy Tiles</a></li>
-              <li><a href="/features/shuffle/">Shuffle</a></li>
-              <li><a href="/features/responsive-images/">Responsive Images</a></li>
+              <li><a href="/accounts/logout">logout</a></li>
             </ul>
           </div>
-        </li>
-        <li>
-          <a href="/docs/"><span>Documentation </span><i class="icon-doc-text" title="Documentation"></i></a>
-          <div class="dropdown">
-            <ul>
-              <li><a href="/docs/">Getting Started</a></li>
-              <li><a href="/docs/claymate/">Claymate</a></li>
-              <li><a href="/docs/grid/">The Grid</a></li>
-              <li><a href="/docs/ui-kit/">UI Kit</a></li>
-              <li><a href="/docs/components/">Components</a></li>
-              <li><a href="/docs/extensions/">Extensions</a></li>
-              <li><a href="/docs/mixins/">Mixins</a></li>
-              <li><a href="/docs/javascript/">JavaScript</a></li>
-              <li><a href="/docs/designers/">Designers</a></li>
-            </ul>
-          </div>
-        </li>
-        <li><a href="http://gumbyframework.com/customize"><span>Customize </span><i class="icon-cog" title="Customize"></i></a></li>
-        <li><a href="https://plus.google.com/communities/108760896951473344451" target="_blank"><span>Community </span><i class="icon-chat" title="community"></i></a></li>
-        <li>
-          <p class="medium pretty default btn icon-github icon-left">
-            <a href="https://github.com/GumbyFramework/Gumby">GitHub</a>
-          </p>
         </li>
       </ul>
-    </nav>
+      {% endif %}
+    {% if request.user.is_authenticated %}</div>{% endif %}
   </div>
-</nav>
 
 {% block content %}
 {% endblock %}
