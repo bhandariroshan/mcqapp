@@ -463,8 +463,7 @@ def honorcode(request, exam_code):
 def subscription(request):
     parameters = {}    
     user_profile_obj = UserProfile()
-    user = user_profile_obj.get_user_by_username(request.user.username)
-    print user['subscription_type']    
+    user = user_profile_obj.get_user_by_username(request.user.username)   
     parameters['user'] = user
     return render_to_response('subscription.html', parameters, context_instance=RequestContext(request))
 
