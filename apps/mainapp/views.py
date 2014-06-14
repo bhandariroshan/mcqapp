@@ -187,7 +187,8 @@ def landing(request):
 
             up_exm['code'] = eachExam['exam_code']
             if eachExam['exam_family'] != 'DPS':
-                up_exm['exam_time'] = eachExam['exam_time']
+                exam_start_time = datetime.datetime.strptime(str(datetime.datetime.fromtimestamp(int(eachExam['exam_date']))), "%Y-%m-%d %H:%M:%S").time()
+                up_exm['exam_time'] = exam_start_time
                 up_exm['exam_date'] = datetime.datetime.fromtimestamp(int(eachExam['exam_date'])).strftime("%A, %d. %B %Y")
             up_exm['exam_category'] = eachExam['exam_category']
             up_exm['exam_family'] = eachExam['exam_family']
@@ -274,7 +275,6 @@ def attend_cps_exam(request, exam_code):
         time_elapsed = time.mktime(datetime.datetime.now().timetuple()) - int(exam_details['exam_date'])
         total_questions = question_obj.get_count({"exam_code": int(exam_code)})
         sorted_questions = sorted(questions, key=lambda k: k['question_number'])
-        print sorted_questions
 
         start_question_number = 0 
         current_q_no = cqn.check_current_question_number({
@@ -438,9 +438,9 @@ def honorcode(request, exam_code):
             # if current_time - int(exam_details['exam_date']) > int(exam_details['exam_duration'])*60:
             #     return HttpResponseRedirect('/results/' + str(exam_code) +'/')
 
+        
         exam_details['exam_date'] = datetime.datetime.fromtimestamp(int(exam_details['exam_date']))
         validate_start = ess.check_exam_started({'exam_code':int(exam_code), 'useruid':request.user.id, 'start':1})
-        print validate_start
         if validate_start != None:
             h_a_s_accepted = h_a_s.check_honor_code_accepted({
                 'exam_code':int(exam_code), 
@@ -454,6 +454,8 @@ def honorcode(request, exam_code):
             parameters['exam_code'] = exam_code 
             parameters['user'] = user
             parameters['exam_details'] = exam_details
+            
+            
             return render_to_response('exam_tips_and_honor_code.html', parameters, context_instance=RequestContext(request))
         else:
             return HttpResponseRedirect('/cps/' + str(exam_code)+'/')
