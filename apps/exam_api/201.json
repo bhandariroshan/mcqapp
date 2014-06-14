@@ -19,7 +19,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"Which one of the following is correct?",
@@ -47,7 +47,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"If f(x-2) = x then f(x)=",
@@ -75,7 +75,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"Which one is the best alternative for the roots of quadratic equation $ ax^{2}+bx+c=0, a \\neq 0, a, b, c \\in \\mathbb{R} $, to be real?",
@@ -103,7 +103,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"The value of $ \\begin{vmatrix}\n-a^{2} & ab & ac \\\\ab & -b^{2} & bc \\\\ac & bc & -c^{2}\n\\end{vmatrix} $ =",
@@ -131,7 +131,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"$ \\int\\begin{bmatrix} \\frac{1}{lnx}- \\frac{1}{(lnx)^{2}} \\end{bmatrix}dx = $",
@@ -159,7 +159,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"$ \\lim_{x \\rightarrow 0} \\frac{\\begin{vmatrix}x\\end{vmatrix}}{x} = $",
@@ -187,7 +187,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"If $ y = e^{ax+b} $ then $ \\frac{d^{2}y}{dx^{2}} $ at x=0 is",
@@ -215,7 +215,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"The number of spheres of a given radius and touching the co-ordinate planes is",
@@ -243,7 +243,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"If $ \\overrightarrow{a}, \\overrightarrow{b}, \\overrightarrow{c} $ are three unit vectors with relation $ \\overrightarrow{a} + \\overrightarrow{b} + \\overrightarrow{c} = 0 $, what is the angle between $ \\overrightarrow{b} and \\overrightarrow{c} $ ?",
@@ -271,7 +271,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"The area of $ \\triangle $ with two vertices (1, 2), (4, 5) and centroid (0, 0) is",
@@ -299,7 +299,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"The initial sound of the word 'eight' represents the phonemic",
@@ -327,7 +327,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"How many different consonants are vowels does the word 'momentum' consist of?",
@@ -355,7 +355,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"Which of the underlined constituents is a present participle?",
@@ -383,7 +383,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"Which of the following sentences is correct?",
@@ -411,7 +411,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"The pattern of the sentence 'I saw her glaring at me' is",
@@ -439,7 +439,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"Which of the time expressions is correct?",
@@ -467,7 +467,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"Which one is incorrect?",
@@ -495,7 +495,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"Which of the following is a correct conditional?",
@@ -523,7 +523,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"The passive of 'The pen needs filling' is",
@@ -551,7 +551,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"Which one of the following is a disjunct?",
@@ -579,7 +579,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"The complex sentence is \u2026.......",
@@ -607,7 +607,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"Which of the underlined is a subject?",
@@ -635,7 +635,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"The correct construction is \u2026....",
@@ -663,7 +663,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"The antonym of 'race' is",
@@ -691,7 +691,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"Which one of the sentences is correct?",
@@ -719,7 +719,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"A stone projected at angle 30 degree to the horizontal has range $ R_1 $ and projected an angle 45 degree to the horizontal with same speed has range $ R_2 $ then $ R_1:R_2 $ equals",
@@ -747,7 +747,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"An object of mass 10kg is whirled round a horizontal circle of radius 4m by revolving string inclined at 30 degree to the vertical. If the uniform speed of the object is $ 5ms^{-1} $, the tension in string is",
@@ -775,7 +775,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"Water is falling from a height of 80m. If half of energy of water is converted into heat, increase in temperature is",
@@ -803,7 +803,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"The angle of prism is $ 4^{\\circ} $ and R.I. For green light is 1.5. If a green ray passes through it, the deviation will be",
@@ -831,7 +831,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"One open organ pipe of length 27cm and another closed organ pipe of length 21cm sound in unison in their first overtone. The end correction of both pipe is",
@@ -859,7 +859,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"A charge q is placed at the centre of cube of side a. The electric flux through one side of cube is",
@@ -887,7 +887,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"In LCR series circuit, the capacitor is changed from C to 4C. For the same resonant frequency, the inductance should be changed from L to",
@@ -915,7 +915,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"If an electron jumps from sixth excited state to second excited state, the number of emission transitions between these states will be",
@@ -943,7 +943,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"A transistor circuit has $ \\alpha $ = 0.984. If $ I_c $ = 2mA, value of $ I_B $ is",
@@ -971,7 +971,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"In a hydrogen atom an electron revolves in a circular orbit of radius 0.5A with a frequency 6.6 $ \\times 10^{15} $ per sec. Then the magnetic induction at the centre of orbit is",
@@ -999,7 +999,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"The no. of molecules of water produced by dissolving 10gm of $ CaCO_3 $ (Calcium carbonate) in excess Hcl solution is",
@@ -1027,7 +1027,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"Total no. of unpaired electrons present in $ Co^{++} $ is",
@@ -1055,7 +1055,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"Which of the following elements was named as eka-Boron by Mendeleev?",
@@ -1083,7 +1083,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"Which of the followings has least bpt.?",
@@ -1111,7 +1111,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"The O.N. Of Fe in $ Fe_4[Fe(CN)_6]_3 $ is",
@@ -1139,7 +1139,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"The pH of solution formed by mixing equal vol. Of pH=4 and pH=6 is",
@@ -1167,7 +1167,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"Which of the following is not lewis acid?",
@@ -1195,7 +1195,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"In organic ion-exchange process, cation of hard water is exchanged with",
@@ -1223,7 +1223,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"Which of these is added to table salt to prevent goitre?",
@@ -1251,7 +1251,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"Which of these is ore of zinc?",
@@ -1279,7 +1279,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"$ CuSO_4 $ solution can be stored in",
@@ -1307,7 +1307,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"The reducing agent utilized in Gold Schmidt process is",
@@ -1335,7 +1335,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"The IUPAC name of following formmula is",
@@ -1363,7 +1363,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"The Wurtz reaction of chlorobenzene produces",
@@ -1391,7 +1391,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"Total no. of isomers in Hexane is",
@@ -1419,7 +1419,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"Solar energy is \u2026......... source of energy.",
@@ -1447,7 +1447,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"The sources of energy which have been in use over a long period of time are called \u2026........ sources.",
@@ -1475,7 +1475,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"Natural gas is an example of \u2026.................... source.",
@@ -1503,7 +1503,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"The soupy mixture obtained by mixing limestone, clay and water is called",
@@ -1531,7 +1531,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"Sand mostly consists of",
@@ -1559,7 +1559,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"Siliceous inorganic materials contain",
@@ -1587,7 +1587,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"\u2026......... rocks are softer than any other type of rocks.",
@@ -1615,7 +1615,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"In parallel combination the resistance decreases due to increase in",
@@ -1643,7 +1643,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"In parallel combination of the electrical appliances, total power",
@@ -1671,7 +1671,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"Three resistors $ R_1, R_2, R_3 $ are connected in parallel across a cell. If $ R_1 > R_2 > R_3 $, then",
@@ -1699,7 +1699,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"With increase in temperature, the resistance of a conductor",
@@ -1727,7 +1727,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"The OR operation implies Boolean",
@@ -1755,7 +1755,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"Depending upon the technologies used computer can be divided into \u2026.......... generations.",
@@ -1783,7 +1783,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"The first electronic computer was",
@@ -1811,7 +1811,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"1",
       "question":{
          "text":"One character takes \u2026............ bytes of memory.",
@@ -1839,7 +1839,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"The angles of a $ \\triangle $ are in the ratio 1:2:7, then the ratio of the greatest side to the least side is",
@@ -1867,7 +1867,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"If z and w are two complex numbers, then $ z\\overline{w}+w\\overline{z} $ =",
@@ -1895,7 +1895,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"$ \\lim_{x \\rightarrow \\theta} \\frac{xcos\\theta - \\theta cosx}{x-\\theta} $",
@@ -1923,7 +1923,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"$ \\frac {d}{dx} $ (arctan sinh x) =",
@@ -1951,7 +1951,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"The number of ways in which five identical balls can be distributed among ten identical boxes such that no box contains more than one ball is",
@@ -1979,7 +1979,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"The sum to infinity of the series $ 1 + \\left(1-\\frac{1}{n}\\right) + 3\\left(1-\\frac{1}{n}\\right)^{2} + \\dots\\dots + \\infty $ is",
@@ -2007,7 +2007,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"The coefficient of $ x^{p} $ and $ x^{q} $ in the expansion of $ (1+x)^{p+q} $ where p and q are positive integers are",
@@ -2035,7 +2035,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"The point (1, 2) lies outside of the circle $ x^{2} + y^{2} = k $ if k satisfies the condition",
@@ -2063,7 +2063,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"The equation of common tangent of the parabola $ y^{2} = x $ and $ x^{2} = y $ is",
@@ -2091,7 +2091,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"In an ellipse, the distance between its foci is 6 and its minor axis is 8. Then the eccentricity of the ellipse is",
@@ -2119,7 +2119,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"$ \\int\\frac{dx}{\\sqrt{e^{2x}-1}} $ =",
@@ -2147,7 +2147,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"If the curve $ y = ax^{2} \u2013 6x + b $ passes through (0, 2) and has its horizontal tangent at $ x = \\frac{3}{2} $, then the values of a and b are",
@@ -2175,7 +2175,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"If $ \\overrightarrow{a} and \\overrightarrow{b} $ are two unit vectors inclined to x-axis at angles of $ 30^{\\circ} $ and $ 120^{\\circ} $ respectively then $ \\begin{vmatrix}\\overrightarrow{a} + \\overrightarrow{b}\\end{vmatrix} = $ ?",
@@ -2203,7 +2203,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"$ \\int_{0}^{\\pi} cos^{3}x dx = $",
@@ -2231,7 +2231,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"If A = $ \\left(\\begin{array}{c}x && x \\\\ x && x\\end{array}\\right) $, then the value of $ A^{3} $ equals to",
@@ -2259,7 +2259,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"If the length of the perpendicular drawn from the origin on a plane is 7 units and its direction ratios are -3, 2, -6, then the equation of the plane is",
@@ -2287,7 +2287,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"Distance between the pair of parallel lines represented by $ x^{2} \u2013 6xy + 9y^{2} + 3x -9y -4 = 0 $ is",
@@ -2315,7 +2315,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"If $ tan7\\theta = cot5\\theta $, then general solution for $ \\theta $ is",
@@ -2343,7 +2343,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"A and B are two sets having 3 and 5 element respectively and having 2 elements common to both. Then the number of elements in $ (A \\times B) $ is",
@@ -2371,7 +2371,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"The area bounded by the curves $ y = x^{2} $ and $ y = \\begin{vmatrix}x\\end{vmatrix} $ is",
@@ -2399,7 +2399,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"A steel wire of length 20cm and uniform cross section $ 1mm^{2} $ is tied rigidly at both the ends. The temperature of the wire is altered from $ 40^{\\circ}c $ to $ 20^{\\circ}c $. If $ \\alpha $ for steel is $ 1.1 \\times 10^{-5}/^{\\circ}c $ and Young's modulus is $ 2.0 \\times 10^{11}N/m^{2} $. The change in tension of the wire is",
@@ -2427,7 +2427,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"A satellite is launched into a circular orbit of radius R around earth while a second satellite is launched into an orbit of radius 1.02 R. The percentage difference in the time period of the two satellite is",
@@ -2455,7 +2455,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"A wheel having moment of inertia of 2 $ kg-m^{2} $ about its vertical axis, rotates at the rate of 60 rpm about this axis. The torque which can stop, the wheel's rotation in one minute would be",
@@ -2483,7 +2483,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"A body of mass 5 kg falls from a height of 20 m on the ground and it rebounds to a height of 0.2m. If the loss in P.E. Is used up by the body then the temperature rise is (sp heat of material = 0.09 cal $ /gm/^{\\circ}c $ )",
@@ -2511,7 +2511,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"A car turns a corner on a slippery road at a constant speed of 12 m/s. If the coefficient of friction is 0.4 the minimum radius of the arc in meter in which the car turns is",
@@ -2539,7 +2539,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"A radioactive element X with a half life of 2 hours decays giving a stable element Y. After time of 't' hours the ratio of X to Y atoms is 1:7. Then 't' is equal to",
@@ -2567,7 +2567,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"A particle is moving with a speed of 90 % of the speed of light. The ratio of $ m/m_0 $ where $ m_0 $ is the rest mass is",
@@ -2595,7 +2595,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"The velocity of an electron in the second orbit of sodium atom (z=11) is v. The velocity of an electron in its fifth orbit will be",
@@ -2623,7 +2623,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"Light of wavelength 5000 Amstrong is incident on a metallic surface with a work function equal to 2eV. Then the stopping potential is nearly equal to",
@@ -2651,7 +2651,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"The reactance of a coil at frequency $ 10^{4} $ HZ is $ 10^{4} \\Omega $. The reactance at $ 2 \\times 10^{4} $ Hz frequency will be",
@@ -2679,7 +2679,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"Two coils X and Y are placed in a circuit such that a current changes by 2 amp per sec in coil X and the magnetic flux change of 0.4 weber occurs in Y. The value of mutual inductance of the coils and its unit are.",
@@ -2707,7 +2707,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"Two long, thin wires at certain distance apart exert a force F on the another when current through each wire is I. The distance between the wire is doubled and current decreased to I/3. The force is now",
@@ -2735,7 +2735,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"The parallel plate capacitor has a capacitance of $ 50\\mu F $ in air and $110\\mu F $ when immersed in an oil. The dielectric constant of the oil is",
@@ -2763,7 +2763,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"A tyre pumped to a pressure of 6 atm brusts suddenly. The temperature of room is $ 15^{\\circ}c then temperature of gas escaping is",
@@ -2791,7 +2791,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"The heat is flowing through a rod of length 50 cm and area of cross-section $ 5cm^{2} $. If the ends of rod are at different temperature and heat flowing at 2w then temperature gradient for conductivity $ 400wm^{-1}k^{-1} $ is",
@@ -2819,7 +2819,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"A far sighted man cannot focus distinctly any objects closer than 40cm. The lens that will permit him to read from a distance of 30cm will have focal length",
@@ -2847,7 +2847,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"Water is slowly drained out from a resonance tube of 1m length. A vibrating tuning fork of frequency 512 Hz is held horizontally on the mouth tube then the number of resonance possible is (v = 330 m/s)",
@@ -2875,7 +2875,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"The ratio of density for Nitrogen and oxygen is 14 : 16. The temperature at which velocity of sound in oxygen is equal to that in Nitrogen at $ 15^{\\circ}c $ is",
@@ -2903,7 +2903,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"Two Nicols are oriented with their principal plane making an angle of $ 45^{\\circ} $. Then the percentage of incident unpolarized light which passes through the system is",
@@ -2931,7 +2931,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"Two metal plates have p.d. Of 300V are 1cm apart. A charge particle of mass $ 1.96 \\times 10^{-15} $ kg is held in equilibrium between the plates then charge on particle is (g = 9.8 $ m/s^{2} $ )",
@@ -2959,7 +2959,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"$ \\textbf{Read the following passage and give the answer of the given questions (106 \u2013 110):} \\\\ $ Another common blues instrument that flourished in the rural south during the 1920s and 1930s was the blue harp or harmonica. It was played mainly in bands called jug bands that commonly performed on street corners, in saloons, and at country stores. Jug bands used a variety of instruments including the banjo, guitar, washboard, fiddle, jugs and blue harp. In these bands, the blue harp is used primarily for melodic and rhythmic support. The earliest evidence of the harp use as a solo or lead instrument in the jug bands was in the late 1920s, as heard in the recordings of George 'Bullet' Williams. Other good harp men such as Sony Terry, Little Walter and Sony Boy followed Williams harp's role as a lead instrument. $ \\\\ $ What does this passage mainly discuss?",
@@ -2987,7 +2987,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"What does the phrase 'rural south' refers to?",
@@ -3015,7 +3015,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"What can be inferred about George 'Bullet' Williams?",
@@ -3043,7 +3043,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"According to the passage, where do jug bands not perform?",
@@ -3071,7 +3071,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"What would most likely be the topic of the above paragraph?",
@@ -3099,7 +3099,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"An alkene that gives acetaldehyde and formaldehyde on ozonolysis is allowed to react with Hbr in presence of peroxide. The product formed is",
@@ -3127,7 +3127,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"A gas formed by roasting of iron pyrite can be catalytically oxidized using",
@@ -3155,7 +3155,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"The total volume of gaseous product formed at STP by the electrolysis of brine solution by passing 2 Ampere current for an hour using graphite as electrodes is",
@@ -3183,7 +3183,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"The mass of $ CaCl_2 $ formed when 5g of $ CaCO_3 $ is added to 200 ml of M Hcl solution is",
@@ -3211,7 +3211,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"The volume of $ NH_3 $ gas at STP required to reduce the concentration of 300 ml of N $ H_2SO_4 $ to 0.1 N $ H_2SO_4 $ is",
@@ -3239,7 +3239,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"What is wrong on Front View of the given figure?",
@@ -3267,7 +3267,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"Select the correct top view (plan) for the given figure",
@@ -3295,7 +3295,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"Select the correct Left side view for the given figure",
@@ -3323,7 +3323,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"Select the correct pictorial object for given set of orthographic views",
@@ -3351,7 +3351,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"201",
+      "exam_code":201,
       "marks":"2",
       "question":{
          "text":"For the given figure, which of the following view is wrong?",
