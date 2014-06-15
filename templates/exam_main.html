@@ -29,8 +29,9 @@
         </div>        
         <div id="questionText" data-intro="Read the question carefully" data-position="top" class="div-margin twelve columns ui-widget-content ui-corner-all question-min-height">
           <span  style="font-weight:bold;"><span style="color:blue;">{{start_question.question_number}}. </span> {{ start_question.question.text }} </span>
-          {% if start_question.question.image %}
-          <img src="/static/images/{{exam_code}}/{{start_question.question.image}}" style="margin-left:15%; height:140px" />
+          {% if start_question.question.image != '' %}
+
+          <img src="/static/images/{{exam_code}}/{{start_question.question.image}}" style=" height:140px" />
           {% endif %}
         </div>
         <div class="twelve columns" id="optionsDiv" style="margin-left: 0%;">           
@@ -41,8 +42,8 @@
                 <div class="clickDiv " id="divOptionA" ><span></span>
                     <a href="javascript:void(0)">
                     {{ start_question.answer.a.text }}<br>
-                    {% if start_question.answer.a.image %}
-                      <img src="/static/images/{{exam_code}}/{{start_question.answer.a.image}}" style="margin-left:15%; height:140px;" />
+                    {% if start_question.answer.a.image != '' %}
+                      <img src="/static/images/{{exam_code}}/{{start_question.answer.a.image}}" style="height:140px;" />
                     {% endif %}
                     </a>
                 </div>
@@ -54,8 +55,8 @@
                 <div class="clickDiv " id="divOptionB" ><span></span>
                     <a href="javascript:void(0)">
                     {{ start_question.answer.b.text }}<br>
-                    {% if start_question.answer.b.image %}
-                      <img src="/static/images/{{exam_code}}/{{start_question.answer.b.image}}" style="margin-left:15%; height:140px;" />
+                    {% if start_question.answer.b.image != '' %}
+                      <img src="/static/images/{{exam_code}}/{{start_question.answer.b.image}}" style="height:140px;" />
                     {% endif %}
                     </a>
                 </div>
@@ -67,8 +68,8 @@
                 <div class="clickDiv " id="divOptionC" ><span></span>
                     <a href="javascript:void(0)">
                     {{ start_question.answer.c.text }}<br>
-                    {% if start_question.answer.c.image %}
-                      <img src="/static/images/{{exam_code}}/{{start_question.answer.c.image}}" style="margin-left:15%; height:140px;" />
+                    {% if start_question.answer.c.image != '' %}
+                      <img src="/static/images/{{exam_code}}/{{start_question.answer.c.image}}" style=" height:140px;" />
                     {% endif %}
                     </a>
                 </div>
@@ -79,8 +80,8 @@
                 <div class="clickDiv " id="divOptionD" ><span></span>
                     <a href="javascript:void(0)">
                     {{ start_question.answer.d.text }}<br>
-                    {% if start_question.answer.d.image %}
-                      <img src="/static/images/{{exam_code}}/{{start_question.answer.d.image}}" style="margin-left:15%; height:140px;" />
+                    {% if start_question.answer.d.image != '' %}
+                      <img src="/static/images/{{exam_code}}/{{start_question.answer.d.image}}" style="height:140px;" />
                     {% endif %}
                     </a>
                 </div>

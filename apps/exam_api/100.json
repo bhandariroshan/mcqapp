@@ -1,20 +1,25 @@
 [
     {
         "question": {
-            "text": "The general solution of $ 3cosec^{2}x - 4 = 0 $ is"
+            "text": "The general solution of $ 3cosec^{2}x - 4 = 0 $ is",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": " $ n\\pi + (-1)^{n}\\frac{\\pi}{3} $ "
+                "text": " $ n\\pi + (-1)^{n}\\frac{\\pi}{3} $ ",
+				"image":""
             },
             "b": {
-                "text": " $ n\\pi + \\frac{\\pi}{3} $ "
+                "text": " $ n\\pi + \\frac{\\pi}{3} $ ",
+				"image":""
             },
             "c": {
-                "text": " $ n\\pi \\pm \\frac{\\pi}{3} $ "
+                "text": " $ n\\pi \\pm \\frac{\\pi}{3} $ ",
+            "image":""
             },
             "d": {
-                "text": " $ 2n\\pi \\pm \\frac{\\pi}{3} $ "
+                "text": " $ 2n\\pi \\pm \\frac{\\pi}{3} $ ",
+				"image":""
             },
             "correct": "c"
         },
@@ -23,20 +28,25 @@
     },
     {
         "question": {
-            "text": " $ [3, \\infty) U (-\\infty, -3] $ is the solution set for the inequality:"
+            "text": " $ [3, \\infty) U (-\\infty, -3] $ is the solution set for the inequality:",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": " $ |x| \\le 3 $ "
+                "text": " $ |x| \\le 3 $ ",
+				"image":""
             },
             "b": {
-                "text": "$ |x| \\lt 3 $"
+                "text": "$ |x| \\lt 3 $",
+				"image":""
             },
             "c": {
-                "text": "$ |x| \\ge 3 $"
+                "text": "$ |x| \\ge 3 $",
+				"image":""
             },
             "d": {
-                "text": "$ |x| \\gt 3 $"
+                "text": "$ |x| \\gt 3 $",
+				"image":""
             },
             "correct": "c"
         },
@@ -45,23 +55,26 @@
     },
     {
         "question": {
-            "text": " $ \\frac{1}{3 + \\sqrt{5}} $ "
+            "text": " $ \\frac{1}{3 + \\sqrt{5}} $ ",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": " $ \\frac{3 + \\sqrt{5}}{4} $ "
+                "text": " $ \\frac{3 + \\sqrt{5}}{4} $ ",
+				"image":""
                 
             },
             "b": {
-                "text": " $ \\frac{3 - \\sqrt{5}}{4} $ "
-                
+                "text": " $ \\frac{3 - \\sqrt{5}}{4} $ ",
+				"image":""                
             },
             "c": {
-                "text": " $ \\frac{3}{14} + \\frac{\\sqrt{5}}{14} $ "
-                
+                "text": " $ \\frac{3}{14} + \\frac{\\sqrt{5}}{14} $ ",
+				"image":""                
             },
             "d": {
-                "text": " $ \\frac{3}{14} - \\frac{\\sqrt{5}}{14} $ "
+                "text": " $ \\frac{3}{14} - \\frac{\\sqrt{5}}{14} $ ",
+            "image":""
                 
             },
             "correct": "a"
@@ -71,23 +84,28 @@
     },
     {
         "question": {
-            "text": "Which one of the following is NOT true for a non singular square matrix A ?"
+            "text": "Which one of the following is NOT true for a non singular square matrix A ?",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": " $ A^{2} and A^{3} $ always commute for multiplication."
+                "text": " $ A^{2} and A^{3} $ always commute for multiplication.",
+            "image":""
                 
             },
             "b": {
-                "text": "A and adj(A) always commute for multiplication"
+                "text": "A and adj(A) always commute for multiplication",
+            "image":""
                 
             },
             "c": {
-                "text": " $ (A^{T})^{-1} = (A^{-1})^{T} $ "
+                "text": " $ (A^{T})^{-1} = (A^{-1})^{T} $ ",
+				"image":""
                 
             },
             "d": {
-                "text": "A adj(A) = |A|"
+                "text": "A adj(A) = |A|",
+				"image":""
                 
             },
             "correct": "d"
@@ -97,23 +115,28 @@
     },
     {
         "question": {
-            "text": "$ \\int Sin^{-1}(Cosx)dx $ equals to"
+            "text": "$ \\int Sin^{-1}(Cosx)dx $ equals to",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": " $ \\frac{\\pi x^{2}}{2} - x + C $ "
+                "text": " $ \\frac{\\pi x^{2}}{2} - x + C $ ",
+            "image":""
                 
             },
             "b": {
-                "text": " $ \\frac{\\pi}{2}x - \\frac{x^{2}}{2} + C $ "
+                "text": " $ \\frac{\\pi}{2}x - \\frac{x^{2}}{2} + C $ ",
+            "image":""
                 
             },
             "c": {
-                "text": "cosecx + C"
+                "text": "cosecx + C",
+            "image":""
                 
             },
             "d": {
-                "text": " $ \\frac{1}{\\sqrt{1-x^{2}}} + C $ "
+                "text": " $ \\frac{1}{\\sqrt{1-x^{2}}} + C $ ",
+            "image":""
                 
             },
             "correct": "b"
@@ -123,23 +146,28 @@
     },
     {
         "question": {
-            "text": "If the abscissa and ordinate of a point increase at the same rate, then the locus of the point represents"
+            "text": "If the abscissa and ordinate of a point increase at the same rate, then the locus of the point represents",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "family of concentric circles"
+                "text": "family of concentric circles",
+            "image":""
                 
             },
             "b": {
-                "text": "family parabolas with same vertex"
+                "text": "family parabolas with same vertex",
+            "image":""
                 
             },
             "c": {
-                "text": "family of parallel lines with slope 1"
+                "text": "family of parallel lines with slope 1",
+            "image":""
                 
             },
             "d": {
-                "text": "an empty locus"
+                "text": "an empty locus",
+            "image":""
                 
             },
             "correct": "c"
@@ -149,23 +177,28 @@
     },
     {
         "question": {
-            "text": " $ \\lim_{x \\rightarrow 0}-\\frac{sin|x|}{x}= $ "
+            "text": " $ \\lim_{x \\rightarrow 0}-\\frac{sin|x|}{x}= $ ",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "does not exist"
+                "text": "does not exist",
+				"image":""
                 
             },
             "b": {
-                "text": "equals to -1"
+                "text": "equals to -1",
+				"image":""
                 
             },
             "c": {
-                "text": "equals to 1"
+                "text": "equals to 1",
+				"image":""
                 
             },
             "d": {
-                "text": "equals to 0"
+                "text": "equals to 0",
+				"image":""
                 
             },
             "correct": "b"
@@ -175,23 +208,28 @@
     },
     {
         "question": {
-            "text": "If the line 2x - 3y + 4 +k(-x + y + 5) = 0 is horizontal, then the value of k is"
+            "text": "If the line 2x - 3y + 4 +k(-x + y + 5) = 0 is horizontal, then the value of k is",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "0"
+                "text": "0",
+				"image":""
                 
             },
             "b": {
-                "text": "1"
+                "text": "1",
+				"image":""
                 
             },
             "c": {
-                "text": "2"
+                "text": "2",
+				"image":""
                 
             },
             "d": {
-                "text": "3"
+                "text": "3",
+				"image":""
                 
             },
             "correct": "c"
@@ -201,23 +239,28 @@
     },
     {
         "question": {
-            "text": "If $ \\vec{a} $ and $ \\vec{b} $ are unit vectors, then which one of the following is true?"
+            "text": "If $ \\vec{a} $ and $ \\vec{b} $ are unit vectors, then which one of the following is true?",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": " $ \\vec{a}.\\vec{b} $ = 0 "
+                "text": " $ \\vec{a}.\\vec{b} $ = 0 ",
+            "image":""
                 
             },
             "b": {
-                "text": " $ \\vec{a} \\times\\vec{b} $ = 0 "
+                "text": " $ \\vec{a} \\times\\vec{b} $ = 0 ",
+            "image":""
                 
             },
             "c": {
-                "text": " $ \\vec{a} $ and $ \\vec{b} $ are collinear"
+                "text": " $ \\vec{a} $ and $ \\vec{b} $ are collinear",
+            "image":""
                 
             },
             "d": {
-                "text": " $ |\\vec{a}| = |\\vec{b}| $ "
+                "text": " $ |\\vec{a}| = |\\vec{b}| $ ",
+            "image":""
                 
             },
             "correct": "d"
@@ -227,23 +270,28 @@
     },
     {
         "question": {
-            "text": "$ x^{2} - 6xy + 9y^{2} + 4x - 12y + 4 = 0 $ represents"
+            "text": "$ x^{2} - 6xy + 9y^{2} + 4x - 12y + 4 = 0 $ represents",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "a pair of perpendicular lines"
+                "text": "a pair of perpendicular lines",
+            "image":""
                 
             },
             "b": {
-                "text": "a pair of parallel lines"
+                "text": "a pair of parallel lines",
+            "image":""
                 
             },
             "c": {
-                "text": "a pair of coincident lines"
+                "text": "a pair of coincident lines",
+            "image":""
                 
             },
             "d": {
-                "text": "a parabola"
+                "text": "a parabola",
+            "image":""
                 
             },
             "correct": "b"
@@ -253,23 +301,28 @@
     },
     {
         "question": {
-            "text": "Locate the word with /m/ sound in the final position"
+            "text": "Locate the word with /m/ sound in the final position",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "comb"
+                "text": "comb",
+            "image":""
                 
             },
             "b": {
-                "text": "thumb"
+                "text": "thumb",
+            "image":""
                 
             },
             "c": {
-                "text": "some"
+                "text": "some",
+            "image":""
                 
             },
             "d": {
-                "text": " all of the above"
+                "text": " all of the above",
+            "image":""
                 
             },
             "correct": "a"
@@ -279,24 +332,26 @@
     },
     {
         "question": {
-            "text": "Identify the odd option in incase of nasal sound"
+            "text": "Identify the odd option in incase of nasal sound",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "none"
-                
+                "text": "none",
+				"image":""                
             },
             "b": {
-                "text": "mine"
+                "text": "mine",
+				"image":""
                 
             },
             "c": {
-                "text": "king"
-                
+                "text": "king",
+				"image":""                
             },
             "d": {
-                "text": "nanny"
-                
+                "text": "nanny",
+				"image":""                
             },
             "correct": "b"
         },
@@ -305,23 +360,80 @@
     },
     {
         "question": {
-            "text": "He said, 'Bring your book Ram'."
+            "text": "He said, 'Bring your book Ram'.",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "He said to bring his book"
+                "text": "He said to bring his book",
+				"image":""
                 
             },
             "b": {
-                "text": "He told Ram to bring your book"
-                
+                "text": "He told Ram to bring your book",
+				"image":""                
             },
             "c": {
-                "text": "He told Ram to bring his book"
-                
+                "text": "He told Ram to bring his book",
+				"image":""                
             },
             "d": {
-                "text": "He told Ram not to bring his book"
+                "text": "He told Ram not to bring his book",
+				"image":""                
+            },
+            "correct": "c"
+        },
+        "subject": "English",
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "The students said, 'Let us play Sir'.",
+			"image":""
+        },
+        "answer": {
+            "a": {
+                "text": "The students suggested playing",
+				"image":""                
+            },
+            "b": {
+                "text": "The students requested him to let them play",
+				"image":""                
+            },
+            "c": {
+                "text": "The students requested him to let us play",
+				"image":""                
+            },
+            "d": {
+                "text": "The students requested him to play",
+				"image":""                
+            },
+            "correct": "b"
+        },
+        "subject": "English",
+        "exam_code": 100
+    },
+    {
+        "question": {
+            "text": "I went to bed after I ---- television.",
+            "image":""
+        },
+        "answer": {
+            "a": {
+                "text": "was watching",
+				"image":""                
+            },
+            "b": {
+                "text": "watched",
+				"image":""               
+            },
+            "c": {
+                "text": "had watched",
+				"image":""                
+            },
+            "d": {
+                "text": "an watching",
+				"image":""
                 
             },
             "correct": "c"
@@ -331,24 +443,25 @@
     },
     {
         "question": {
-            "text": "The students said, 'Let us play Sir'."
+            "text": "She ---- her work when the bell rang",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "The students suggested playing"
-                
+                "text": "shall do",
+				"image":""                
             },
             "b": {
-                "text": "The students requested him to let them play"
-                
+                "text": "was doing",
+				"image":""                
             },
             "c": {
-                "text": "The students requested him to let us play"
-                
+                "text": "will do",
+				"image":""                
             },
             "d": {
-                "text": "The students requested him to play"
-                
+                "text": "am doing",
+				"image":""                
             },
             "correct": "b"
         },
@@ -357,24 +470,26 @@
     },
     {
         "question": {
-            "text": "I went to bed after I ---- television."
+            "text": "Which sentence is correctly punctuated? The company  needs ----- employees.",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "was watching"
+                "text": "effective;dedicated; and honest",
+				"image":""
                 
             },
             "b": {
-                "text": "watched"
-                
+                "text": "effective, dedicated; and honest",
+				"image":""                
             },
             "c": {
-                "text": "had watched"
-                
+                "text": "effective, dedicated and honest",
+				"image":""                
             },
             "d": {
-                "text": "an watching"
-                
+                "text": "effective, dedicated, and honest",
+				"image":""                
             },
             "correct": "c"
         },
@@ -383,75 +498,25 @@
     },
     {
         "question": {
-            "text": "She ---- her work when the bell rang"
+            "text": "Which of the following is a noun?",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "shall do"
-                
+                "text": "thicken",
+				"image":""                
             },
             "b": {
-                "text": "was doing"
-                
+                "text": "impoverish",
+				"image":""                
             },
             "c": {
-                "text": "will do"
-                
+                "text": "mercantile",
+				"image":""                
             },
             "d": {
-                "text": "am doing"
-                
-            },
-            "correct": "b"
-        },
-        "subject": "English",
-        "exam_code": 100
-    },
-    {
-        "question": {
-            "text": "Which sentence is correctly punctuated? The company  needs ----- employees."
-        },
-        "answer": {
-            "a": {
-                "text": "effective;dedicated; and honest"
-                
-            },
-            "b": {
-                "text": "effective, dedicated; and honest"
-                
-            },
-            "c": {
-                "text": "effective, dedicated and honest"
-                
-            },
-            "d": {
-                "text": "effective, dedicated, and honest"
-                
-            },
-            "correct": "c"
-        },
-        "subject": "English",
-        "exam_code": 100
-    },
-    {
-        "question": {
-            "text": "Which of the following is a noun?"
-        },
-        "answer": {
-            "a": {
-                "text": "thicken"
-                
-            },
-            "b": {
-                "text": "impoverish"
-                
-            },
-            "c": {
-                "text": "mercantile"
-                
-            },
-            "d": {
-                "text": "mercy"
+                "text": "mercy",
+				"image":""
                 
             },
             "correct": "d"
@@ -461,23 +526,27 @@
     },
     {
         "question": {
-            "text": "Which of the following underlined word is an adjective?"
+            "text": "Which of the following underlined word is an adjective?",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "<u>Swimming</u> is a good form of exercise"
-                
+                "text": "<u>Swimming</u> is a good form of exercise",
+				"image":""                
             },
             "b": {
-                "text": "They are <u>walking</u> on the lawn"
+                "text": "They are <u>walking</u> on the lawn",
+				"image":""
                 
             },
             "c": {
-                "text": "He likes <u>smoking</u>"
+                "text": "He likes <u>smoking</u>",
+            "image":""
                 
             },
             "d": {
-                "text": "She is taking <u>knitting</u> classes"
+                "text": "She is taking <u>knitting</u> classes",
+            "image":""
                 
             },
             "correct": "d"
@@ -487,23 +556,28 @@
     },
     {
         "question": {
-            "text": "Mary got her husband ---- (arrest)."
+            "text": "Mary got her husband ---- (arrest).",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "to arrest"
+                "text": "to arrest",
+            "image":""
                 
             },
             "b": {
-                "text": "arrest"
+                "text": "arrest",
+            "image":""
                 
             },
             "c": {
-                "text": "arresting"
+                "text": "arresting",
+            "image":""
                 
             },
             "d": {
-                "text": "all of these"
+                "text": "all of these",
+            "image":""
                 
             },
             "correct": "a"
@@ -513,23 +587,28 @@
     },
     {
         "question": {
-            "text": "The lady takes pride ---- her beauty."
+            "text": "The lady takes pride ---- her beauty.",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "about"
+                "text": "about",
+            "image":""
                 
             },
             "b": {
-                "text": "over"
+                "text": "over",
+            "image":""
                 
             },
             "c": {
-                "text": "in"
+                "text": "in",
+            "image":""
                 
             },
             "d": {
-                "text": "on"
+                "text": "on",
+            "image":""
                 
             },
             "correct": "c"
@@ -539,23 +618,28 @@
     },
     {
         "question": {
-            "text": "The test begins ---- Sunday"
+            "text": "The test begins ---- Sunday",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "in"
+                "text": "in",
+            "image":""
                 
             },
             "b": {
-                "text": "during"
+                "text": "during",
+            "image":""
                 
             },
             "c": {
-                "text": "at"
+                "text": "at",
+            "image":""
                 
             },
             "d": {
-                "text": "on"
+                "text": "on",
+            "image":""
                 
             },
             "correct": "d"
@@ -565,23 +649,28 @@
     },
     {
         "question": {
-            "text": "Which of the following is a compound sentence?"
+            "text": "Which of the following is a compound sentence?",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "He works the whole day through"
+                "text": "He works the whole day through",
+            "image":""
                 
             },
             "b": {
-                "text": "It is known fact that the earth rotate around its axis"
+                "text": "It is known fact that the earth rotate around its axis",
+            "image":""
                 
             },
             "c": {
-                "text": "Besides completed the work he also corrected it"
+                "text": "Besides completed the work he also corrected it",
+            "image":""
                 
             },
             "d": {
-                "text": "In spite of the weather, she went out"
+                "text": "In spite of the weather, she went out",
+            "image":""
                 
             },
             "correct": "c"
@@ -591,23 +680,28 @@
     },
     {
         "question": {
-            "text": "He was <u>granted</u> permission"
+            "text": "He was <u>granted</u> permission",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "refused"
+                "text": "refused",
+            "image":""
                 
             },
             "b": {
-                "text": "confined"
+                "text": "confined",
+            "image":""
                 
             },
             "c": {
-                "text": "allowed"
+                "text": "allowed",
+            "image":""
                 
             },
             "d": {
-                "text": "prolonged"
+                "text": "prolonged",
+            "image":""
                 
             },
             "correct": "c"
@@ -617,23 +711,28 @@
     },
     {
         "question": {
-            "text": "People knew him for his <u>vanity</u>"
+            "text": "People knew him for his <u>vanity</u>",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "humble"
+                "text": "humble",
+            "image":""
                 
             },
             "b": {
-                "text": "proud"
+                "text": "proud",
+            "image":""
                 
             },
             "c": {
-                "text": "self esteem"
+                "text": "self esteem",
+            "image":""
                 
             },
             "d": {
-                "text": "spiteful"
+                "text": "spiteful",
+            "image":""
                 
             },
             "correct": "a"
@@ -643,23 +742,28 @@
     },
     {
         "question": {
-            "text": "During projectile motion the quantities that remain unchanged are"
+            "text": "During projectile motion the quantities that remain unchanged are",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "force and vertical velocity"
+                "text": "force and vertical velocity",
+            "image":""
                 
             },
             "b": {
-                "text": "acceleration and horizontal velocity"
+                "text": "acceleration and horizontal velocity",
+            "image":""
                 
             },
             "c": {
-                "text": "kinetic energy and acceleration"
+                "text": "kinetic energy and acceleration",
+            "image":""
                 
             },
             "d": {
-                "text": "acceleration and momentum"
+                "text": "acceleration and momentum",
+            "image":""
                 
             },
             "correct": "b"
@@ -669,23 +773,28 @@
     },
     {
         "question": {
-            "text": "The velocity of falling rain drop attains limiting value because of"
+            "text": "The velocity of falling rain drop attains limiting value because of",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "upthrust"
+                "text": "upthrust",
+            "image":""
                 
             },
             "b": {
-                "text": "surface tension"
+                "text": "surface tension",
+            "image":""
                 
             },
             "c": {
-                "text": "air current"
+                "text": "air current",
+            "image":""
                 
             },
             "d": {
-                "text": "viscous force exerted by air"
+                "text": "viscous force exerted by air",
+            "image":""
                 
             },
             "correct": "d"
@@ -695,23 +804,28 @@
     },
     {
         "question": {
-            "text": "Which of the following thermometer is used to measure very high temperature"
+            "text": "Which of the following thermometer is used to measure very high temperature",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "gas thermometer"
+                "text": "gas thermometer",
+            "image":""
                 
             },
             "b": {
-                "text": "liquid thermometer"
+                "text": "liquid thermometer",
+            "image":""
                 
             },
             "c": {
-                "text": "pyrometer"
+                "text": "pyrometer",
+            "image":""
                 
             },
             "d": {
-                "text": "resistance thermometer"
+                "text": "resistance thermometer",
+            "image":""
                 
             },
             "correct": "c"
@@ -721,23 +835,28 @@
     },
     {
         "question": {
-            "text": "When an ideal diatomic gas is heated at constant pressure the fraction of heat energy supplied which increases the internal energy of the gas is"
+            "text": "When an ideal diatomic gas is heated at constant pressure the fraction of heat energy supplied which increases the internal energy of the gas is",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "2/5"
+                "text": "2/5",
+            "image":""
                 
             },
             "b": {
-                "text": "3/5"
+                "text": "3/5",
+            "image":""
                 
             },
             "c": {
-                "text": "3/7"
+                "text": "3/7",
+            "image":""
                 
             },
             "d": {
-                "text": "5/7"
+                "text": "5/7",
+            "image":""
                 
             },
             "correct": "d"
@@ -747,23 +866,28 @@
     },
     {
         "question": {
-            "text": "On heating liquid the refractive index generally"
+            "text": "On heating liquid the refractive index generally",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "Increases"
+                "text": "Increases",
+            "image":""
                 
             },
             "b": {
-                "text": "decreases"
+                "text": "decreases",
+            "image":""
                 
             },
             "c": {
-                "text": "does not change"
+                "text": "does not change",
+            "image":""
                 
             },
             "d": {
-                "text": "may increase or decrease depending on rate of heating"
+                "text": "may increase or decrease depending on rate of heating",
+            "image":""
                 
             },
             "correct": "b"
@@ -773,23 +897,28 @@
     },
     {
         "question": {
-            "text": "In a longitudinal stationary wave produced in a gas, pressure is maximum at"
+            "text": "In a longitudinal stationary wave produced in a gas, pressure is maximum at",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "nodes"
+                "text": "nodes",
+            "image":""
                 
             },
             "b": {
-                "text": "antinodes"
+                "text": "antinodes",
+            "image":""
                 
             },
             "c": {
-                "text": "all point"
+                "text": "all point",
+            "image":""
                 
             },
             "d": {
-                "text": "neither nodes nor antinodes"
+                "text": "neither nodes nor antinodes",
+            "image":""
                 
             },
             "correct": "a"
@@ -799,23 +928,28 @@
     },
     {
         "question": {
-            "text": "Value of relative permeability of diamagnetic substance is"
+            "text": "Value of relative permeability of diamagnetic substance is",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "1"
+                "text": "1",
+            "image":""
                 
             },
             "b": {
-                "text": "less than 1"
+                "text": "less than 1",
+            "image":""
                 
             },
             "c": {
-                "text": "greater than 1"
+                "text": "greater than 1",
+            "image":""
                 
             },
             "d": {
-                "text": "very very large"
+                "text": "very very large",
+            "image":""
                 
             },
             "correct": "b"
@@ -825,23 +959,28 @@
     },
     {
         "question": {
-            "text": "A parallel plate capacitor has capacitance C. The plates of capacitors are joined by a conducting wire, then capacitance becomes"
+            "text": "A parallel plate capacitor has capacitance C. The plates of capacitors are joined by a conducting wire, then capacitance becomes",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "C"
+                "text": "C",
+            "image":""
                 
             },
             "b": {
-                "text": "2 C"
+                "text": "2 C",
+            "image":""
                 
             },
             "c": {
-                "text": "C/2"
+                "text": "C/2",
+            "image":""
                 
             },
             "d": {
-                "text": "infinite"
+                "text": "infinite",
+            "image":""
                 
             },
             "correct": "d"
@@ -851,23 +990,28 @@
     },
     {
         "question": {
-            "text": "The current amplification of common base pNp transistor is 0.96 the current gain in common emitter amplifies is"
+            "text": "The current amplification of common base pNp transistor is 0.96 the current gain in common emitter amplifies is",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "16"
+                "text": "16",
+            "image":""
                 
             },
             "b": {
-                "text": "24"
+                "text": "24",
+            "image":""
                 
             },
             "c": {
-                "text": "20"
+                "text": "20",
+            "image":""
                 
             },
             "d": {
-                "text": "32"
+                "text": "32",
+            "image":""
                 
             },
             "correct": "b"
@@ -877,23 +1021,28 @@
     },
     {
         "question": {
-            "text": "Which of the following phenomenon support the quantum nature of light"
+            "text": "Which of the following phenomenon support the quantum nature of light",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "Interference"
+                "text": "Interference",
+            "image":""
                 
             },
             "b": {
-                "text": "Diffraction"
+                "text": "Diffraction",
+            "image":""
                 
             },
             "c": {
-                "text": "Polarisation"
+                "text": "Polarisation",
+            "image":""
                 
             },
             "d": {
-                "text": "Photoelectric effect"
+                "text": "Photoelectric effect",
+            "image":""
                 
             },
             "correct": "d"
@@ -903,23 +1052,28 @@
     },
     {
         "question": {
-            "text": "The quantum number that can give the idea about shape of subshell is ---- quantum number"
+            "text": "The quantum number that can give the idea about shape of subshell is ---- quantum number",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "principal"
+                "text": "principal",
+            "image":""
                 
             },
             "b": {
-                "text": "azimuthal"
+                "text": "azimuthal",
+            "image":""
                 
             },
             "c": {
-                "text": "magnetic"
+                "text": "magnetic",
+            "image":""
                 
             },
             "d": {
-                "text": "spin"
+                "text": "spin",
+            "image":""
                 
             },
             "correct": "b"
@@ -929,23 +1083,28 @@
     },
     {
         "question": {
-            "text": "The ionic product of water will increase if"
+            "text": "The ionic product of water will increase if",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "Pressure is decreased"
+                "text": "Pressure is decreased",
+            "image":""
                 
             },
             "b": {
-                "text": "temperature is increased"
+                "text": "temperature is increased",
+            "image":""
                 
             },
             "c": {
-                "text": " $ H^{+} $ are added"
+                "text": " $ H^{+} $ are added",
+            "image":""
                 
             },
             "d": {
-                "text": " $ OH^{-1} $ ions are added"
+                "text": " $ OH^{-1} $ ions are added",
+            "image":""
                 
             },
             "correct": "c"
@@ -955,23 +1114,28 @@
     },
     {
         "question": {
-            "text": "O.S. of which of the following elements doesn't change in its compound?"
+            "text": "O.S. of which of the following elements doesn't change in its compound?",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "F"
+                "text": "F",
+            "image":""
                 
             },
             "b": {
-                "text": "Cl"
+                "text": "Cl",
+            "image":""
                 
             },
             "c": {
-                "text": "Br"
+                "text": "Br",
+            "image":""
                 
             },
             "d": {
-                "text": "I"
+                "text": "I",
+            "image":""
                 
             },
             "correct": "a"
@@ -981,23 +1145,28 @@
     },
     {
         "question": {
-            "text": "Dipole moment is zero in"
+            "text": "Dipole moment is zero in",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "NaCl"
+                "text": "NaCl",
+            "image":""
                 
             },
             "b": {
-                "text": " $ H_{2}O $ "
+                "text": " $ H_{2}O $ ",
+            "image":""
                 
             },
             "c": {
-                "text": " $ CO_{2} $ "
+                "text": " $ CO_{2} $ ",
+            "image":""
                 
             },
             "d": {
-                "text": "ZnO"
+                "text": "ZnO",
+            "image":""
                 
             },
             "correct": "c"
@@ -1007,23 +1176,28 @@
     },
     {
         "question": {
-            "text": "Which of the following is neutral oxide?"
+            "text": "Which of the following is neutral oxide?",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": " $ K_{2}O $ "
+                "text": " $ K_{2}O $ ",
+            "image":""
                 
             },
             "b": {
-                "text": " N_{2}O $ "
+                "text": " N_{2}O $ ",
+            "image":""
                 
             },
             "c": {
-                "text": "ZnO"
+                "text": "ZnO",
+            "image":""
                 
             },
             "d": {
-                "text": " $ SO_{2} $ "
+                "text": " $ SO_{2} $ ",
+            "image":""
                 
             },
             "correct": "b"
@@ -1033,23 +1207,28 @@
     },
     {
         "question": {
-            "text": "Group number of an element indicates"
+            "text": "Group number of an element indicates",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "Valency"
+                "text": "Valency",
+            "image":""
                 
             },
             "b": {
-                "text": "Atomicity"
+                "text": "Atomicity",
+            "image":""
                 
             },
             "c": {
-                "text": "no of electrons"
+                "text": "no of electrons",
+            "image":""
                 
             },
             "d": {
-                "text": "Valence electrons"
+                "text": "Valence electrons",
+            "image":""
                 
             },
             "correct": "d"
@@ -1059,23 +1238,28 @@
     },
     {
         "question": {
-            "text": "A gas is found to have the formula (CO)x. Its vapor density of 70. The value of x must be"
+            "text": "A gas is found to have the formula (CO)x. Its vapor density of 70. The value of x must be",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "4"
+                "text": "4",
+            "image":""
                 
             },
             "b": {
-                "text": "6"
+                "text": "6",
+            "image":""
                 
             },
             "c": {
-                "text": "5"
+                "text": "5",
+            "image":""
                 
             },
             "d": {
-                "text": "9"
+                "text": "9",
+            "image":""
                 
             },
             "correct": "c"
@@ -1085,23 +1269,28 @@
     },
     {
         "question": {
-            "text": "Water sample on shaking with soap solution gave a ppt. The water sample may contain"
+            "text": "Water sample on shaking with soap solution gave a ppt. The water sample may contain",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": " $ CaCl_{2} $ "
+                "text": " $ CaCl_{2} $ ",
+            "image":""
                 
             },
             "b": {
-                "text": " $ Na_{2}SO_{4} $ "
+                "text": " $ Na_{2}SO_{4} $ ",
+            "image":""
                 
             },
             "c": {
-                "text": " $ MgCO_{3} $ "
+                "text": " $ MgCO_{3} $ ",
+            "image":""
                 
             },
             "d": {
-                "text": "KCl"
+                "text": "KCl",
+            "image":""
                 
             },
             "correct": "c"
@@ -1111,23 +1300,28 @@
     },
     {
         "question": {
-            "text": "The active species in aqua-regia is"
+            "text": "The active species in aqua-regia is",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": " $ NO_{2}^{+} $ "
+                "text": " $ NO_{2}^{+} $ ",
+            "image":""
                 
             },
             "b": {
-                "text": "Nascent O"
+                "text": "Nascent O",
+            "image":""
                 
             },
             "c": {
-                "text": "Nascent H"
+                "text": "Nascent H",
+            "image":""
                 
             },
             "d": {
-                "text": "Nascent Cl"
+                "text": "Nascent Cl",
+            "image":""
                 
             },
             "correct": "d"
@@ -1137,23 +1331,28 @@
     },
     {
         "question": {
-            "text": "Process in which $ HNO_{3} $ is manufactured by catalytic oxidation of $ NH_{3} $ is"
+            "text": "Process in which $ HNO_{3} $ is manufactured by catalytic oxidation of $ NH_{3} $ is",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "Birkland Process"
+                "text": "Birkland Process",
+            "image":""
                 
             },
             "b": {
-                "text": "Ezde Process"
+                "text": "Ezde Process",
+            "image":""
                 
             },
             "c": {
-                "text": "Haber's Process"
+                "text": "Haber's Process",
+            "image":""
                 
             },
             "d": {
-                "text": "Ostwald's Process"
+                "text": "Ostwald's Process",
+            "image":""
                 
             },
             "correct": "d"
@@ -1163,23 +1362,28 @@
     },
     {
         "question": {
-            "text": "Philosopher's wool is"
+            "text": "Philosopher's wool is",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "ZnO"
+                "text": "ZnO",
+            "image":""
                 
             },
             "b": {
-                "text": " $ ZnCO_{3} $ "
+                "text": " $ ZnCO_{3} $ ",
+            "image":""
                 
             },
             "c": {
-                "text": " $ ZnSO_{4}.7H_{2}O $ "
+                "text": " $ ZnSO_{4}.7H_{2}O $ ",
+            "image":""
                 
             },
             "d": {
-                "text": " $ CoZnO_{2} $ "
+                "text": " $ CoZnO_{2} $ ",
+            "image":""
                 
             },
             "correct": "a"
@@ -1189,23 +1393,28 @@
     },
     {
         "question": {
-            "text": "The process of converting hydrated alumina to anhydrous alumina is called"
+            "text": "The process of converting hydrated alumina to anhydrous alumina is called",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "roasting"
+                "text": "roasting",
+            "image":""
                 
             },
             "b": {
-                "text": "smelting"
+                "text": "smelting",
+            "image":""
                 
             },
             "c": {
-                "text": "dressing"
+                "text": "dressing",
+            "image":""
                 
             },
             "d": {
-                "text": "calcinations"
+                "text": "calcinations",
+            "image":""
                 
             },
             "correct": "d"
@@ -1215,23 +1424,28 @@
     },
     {
         "question": {
-            "text": "Refining of petroleum involves the process of ---- distillation"
+            "text": "Refining of petroleum involves the process of ---- distillation",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "Simple"
+                "text": "Simple",
+            "image":""
                 
             },
             "b": {
-                "text": "Fractional"
+                "text": "Fractional",
+            "image":""
                 
             },
             "c": {
-                "text": "steam"
+                "text": "steam",
+            "image":""
                 
             },
             "d": {
-                "text": "vaccum"
+                "text": "vaccum",
+            "image":""
                 
             },
             "correct": "b"
@@ -1241,23 +1455,28 @@
     },
     {
         "question": {
-            "text": "Benzene when treated with $ Cl_{2} $ in dark gives"
+            "text": "Benzene when treated with $ Cl_{2} $ in dark gives",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "Gammaxene"
+                "text": "Gammaxene",
+            "image":""
                 
             },
             "b": {
-                "text": "Glyoxal"
+                "text": "Glyoxal",
+            "image":""
                 
             },
             "c": {
-                "text": "Phenol"
+                "text": "Phenol",
+            "image":""
                 
             },
             "d": {
-                "text": "chlorobenzene"
+                "text": "chlorobenzene",
+            "image":""
                 
             },
             "correct": "d"
@@ -1267,23 +1486,28 @@
     },
     {
         "question": {
-            "text": "IUPAC name of iso-butyl-acetylene is"
+            "text": "IUPAC name of iso-butyl-acetylene is",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "4-ethylbut-1-ene"
+                "text": "4-ethylbut-1-ene",
+            "image":""
                 
             },
             "b": {
-                "text": "4-methypent-1-yne"
+                "text": "4-methypent-1-yne",
+            "image":""
                 
             },
             "c": {
-                "text": "3-methylpent-2-yne"
+                "text": "3-methylpent-2-yne",
+            "image":""
                 
             },
             "d": {
-                "text": "2-methypent-4-yne"
+                "text": "2-methypent-4-yne",
+            "image":""
                 
             },
             "correct": "b"
@@ -1293,23 +1517,28 @@
     },
     {
         "question": {
-            "text": "For first angle of projection the observer is ----"
+            "text": "For first angle of projection the observer is ----",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "at infinity"
+                "text": "at infinity",
+            "image":""
                 
             },
             "b": {
-                "text": "in plane plane of projection and object"
+                "text": "in plane plane of projection and object",
+            "image":""
                 
             },
             "c": {
-                "text": "at finite distance"
+                "text": "at finite distance",
+            "image":""
                 
             },
             "d": {
-                "text": "any of three"
+                "text": "any of three",
+            "image":""
                 
             },
             "correct": "a"
@@ -1319,23 +1548,28 @@
     },
     {
         "question": {
-            "text": "For an equilateral triangle, which of the following does not lies at the same point where the centroid lies"
+            "text": "For an equilateral triangle, which of the following does not lies at the same point where the centroid lies",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "Incenter"
+                "text": "Incenter",
+            "image":""
                 
             },
             "b": {
-                "text": "Orthocenter"
+                "text": "Orthocenter",
+            "image":""
                 
             },
             "c": {
-                "text": "Circumcenter"
+                "text": "Circumcenter",
+            "image":""
                 
             },
             "d": {
-                "text": "Excenter"
+                "text": "Excenter",
+            "image":""
                 
             },
             "correct": "d"
@@ -1345,23 +1579,28 @@
     },
     {
         "question": {
-            "text": "Which of the following is not a two-dimensional (planer) curve?"
+            "text": "Which of the following is not a two-dimensional (planer) curve?",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "involute"
+                "text": "involute",
+            "image":""
                 
             },
             "b": {
-                "text": "spiral"
+                "text": "spiral",
+            "image":""
                 
             },
             "c": {
-                "text": "helix"
+                "text": "helix",
+            "image":""
                 
             },
             "d": {
-                "text": "cycloid"
+                "text": "cycloid",
+            "image":""
                 
             },
             "correct": "c"
@@ -1371,23 +1610,28 @@
     },
     {
         "question": {
-            "text": "Name the curve for eccentricity less than one but greater than zero?"
+            "text": "Name the curve for eccentricity less than one but greater than zero?",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "circle"
+                "text": "circle",
+            "image":""
                 
             },
             "b": {
-                "text": "ellipse"
+                "text": "ellipse",
+            "image":""
                 
             },
             "c": {
-                "text": "parabola"
+                "text": "parabola",
+            "image":""
                 
             },
             "d": {
-                "text": "hyperbola"
+                "text": "hyperbola",
+            "image":""
                 
             },
             "correct": "b"
@@ -1397,23 +1641,28 @@
     },
     {
         "question": {
-            "text": "How many faces does a tetrahedron have?"
+            "text": "How many faces does a tetrahedron have?",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "4"
+                "text": "4",
+            "image":""
                 
             },
             "b": {
-                "text": "6"
+                "text": "6",
+            "image":""
                 
             },
             "c": {
-                "text": "8"
+                "text": "8",
+            "image":""
                 
             },
             "d": {
-                "text": "12"
+                "text": "12",
+            "image":""
                 
             },
             "correct": "a"
@@ -1423,23 +1672,28 @@
     },
     {
         "question": {
-            "text": "---- is used to attach drawing in drawing boards"
+            "text": "---- is used to attach drawing in drawing boards",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "Compass"
+                "text": "Compass",
+            "image":""
                 
             },
             "b": {
-                "text": "Set Square"
+                "text": "Set Square",
+            "image":""
                 
             },
             "c": {
-                "text": "Drafting tape"
+                "text": "Drafting tape",
+            "image":""
                 
             },
             "d": {
-                "text": "French Curve"
+                "text": "French Curve",
+            "image":""
                 
             },
             "correct": "c"
@@ -1449,23 +1703,28 @@
     },
     {
         "question": {
-            "text": "Which of the following line is more dark?"
+            "text": "Which of the following line is more dark?",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "Solid line"
+                "text": "Solid line",
+            "image":""
                 
             },
             "b": {
-                "text": "Hidden line"
+                "text": "Hidden line",
+            "image":""
                 
             },
             "c": {
-                "text": "Center line"
+                "text": "Center line",
+            "image":""
                 
             },
             "d": {
-                "text": "Projection line"
+                "text": "Projection line",
+            "image":""
                 
             },
             "correct": "a"
@@ -1475,23 +1734,28 @@
     },
     {
         "question": {
-            "text": "Which of the following letter is more stable?"
+            "text": "Which of the following letter is more stable?",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "P"
+                "text": "P",
+            "image":""
                 
             },
             "b": {
-                "text": "F"
+                "text": "F",
+            "image":""
                 
             },
             "c": {
-                "text": "O"
+                "text": "O",
+            "image":""
                 
             },
             "d": {
-                "text": "H"
+                "text": "H",
+            "image":""
                 
             },
             "correct": "d"
@@ -1501,23 +1765,28 @@
     },
     {
         "question": {
-            "text": "Sum of the total internal angles of hexagon is ---- degree"
+            "text": "Sum of the total internal angles of hexagon is ---- degree",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "360"
+                "text": "360",
+            "image":""
                 
             },
             "b": {
-                "text": "800"
+                "text": "800",
+            "image":""
                 
             },
             "c": {
-                "text": "540"
+                "text": "540",
+            "image":""
                 
             },
             "d": {
-                "text": "720"
+                "text": "720",
+            "image":""
                 
             },
             "correct": "d"
@@ -1527,23 +1796,28 @@
     },
     {
         "question": {
-            "text": "Angles that are not right angle or a multiple of a right angles are called ---- angles."
+            "text": "Angles that are not right angle or a multiple of a right angles are called ---- angles.",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "Obtuse"
+                "text": "Obtuse",
+            "image":""
                 
             },
             "b": {
-                "text": "Acute"
+                "text": "Acute",
+            "image":""
                 
             },
             "c": {
-                "text": "Reflex"
+                "text": "Reflex",
+            "image":""
                 
             },
             "d": {
-                "text": "Oblique"
+                "text": "Oblique",
+            "image":""
                 
             },
             "correct": "d"
@@ -1553,23 +1827,28 @@
     },
     {
         "question": {
-            "text": "How many maximum number of A4 papers could be made from a A0 paper?"
+            "text": "How many maximum number of A4 papers could be made from a A0 paper?",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "2"
+                "text": "2",
+            "image":""
                 
             },
             "b": {
-                "text": "4"
+                "text": "4",
+            "image":""
                 
             },
             "c": {
-                "text": "8"
+                "text": "8",
+            "image":""
                 
             },
             "d": {
-                "text": "16"
+                "text": "16",
+            "image":""
                 
             },
             "correct": "d"
@@ -1579,23 +1858,28 @@
     },
     {
         "question": {
-            "text": "What is formed when a point moves in space in such a way that its distance from a point is always constant?"
+            "text": "What is formed when a point moves in space in such a way that its distance from a point is always constant?",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "A circle"
+                "text": "A circle",
+            "image":""
                 
             },
             "b": {
-                "text": "4"
+                "text": "4",
+            "image":""
                 
             },
             "c": {
-                "text": "8"
+                "text": "8",
+            "image":""
                 
             },
             "d": {
-                "text": "16"
+                "text": "16",
+            "image":""
                 
             },
             "correct": "d"
@@ -1605,23 +1889,28 @@
     },    
     {
         "question": {
-            "text": "To rotate two two circle in opposite direction, which of the following belt must be used?"
+            "text": "To rotate two two circle in opposite direction, which of the following belt must be used?",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "Open Belt"
+                "text": "Open Belt",
+            "image":""
                 
             },
             "b": {
-                "text": "Cross Belt"
+                "text": "Cross Belt",
+            "image":""
                 
             },
             "c": {
-                "text": "Any of a and b"
+                "text": "Any of a and b",
+            "image":""
                 
             },
             "d": {
-                "text": "none of the all"
+                "text": "none of the all",
+            "image":""
                 
             },
             "correct": "b"
@@ -1631,23 +1920,28 @@
     },
     {
         "question": {
-            "text": "An enlarging circle has drawing size ........... than/to the real object"
+            "text": "An enlarging circle has drawing size ........... than/to the real object",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "smaller"
+                "text": "smaller",
+            "image":""
                 
             },
             "b": {
-                "text": "greater"
+                "text": "greater",
+            "image":""
                 
             },
             "c": {
-                "text": "exactly equal"
+                "text": "exactly equal",
+            "image":""
                 
             },
             "d": {
-                "text": "any of the above"
+                "text": "any of the above",
+            "image":""
                 
             },
             "correct": "b"
@@ -1657,23 +1951,28 @@
     },
     {
         "question": {
-            "text": ".............. indicates size of the object."
+            "text": ".............. indicates size of the object.",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "scale"
+                "text": "scale",
+            "image":""
                 
             },
             "b": {
-                "text": "dimension"
+                "text": "dimension",
+            "image":""
                 
             },
             "c": {
-                "text": "lettering"
+                "text": "lettering",
+            "image":""
                 
             },
             "d": {
-                "text": "geometry"
+                "text": "geometry",
+            "image":""
                 
             },
             "correct": "b"
@@ -1683,23 +1982,28 @@
     },
     {
         "question": {
-            "text": "For f(x) = $ x^{2} $ and g(x) = $ 2^{x} $, the solution set of fog(x) = gof(x) is"
+            "text": "For f(x) = $ x^{2} $ and g(x) = $ 2^{x} $, the solution set of fog(x) = gof(x) is",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "R"
+                "text": "R",
+            "image":""
                 
             },
             "b": {
-                "text": "$ z^{+} $"
+                "text": "$ z^{+} $",
+            "image":""
                 
             },
             "c": {
-                "text": "{0}"
+                "text": "{0}",
+            "image":""
                 
             },
             "d": {
-                "text": "{0,2}"
+                "text": "{0,2}",
+            "image":""
                 
             },
             "correct": "d"
@@ -1710,23 +2014,28 @@
     },
     {
         "question": {
-            "text": "The angle of $ \\triangle $ ABC are in A.P. such that b:c = $ \\sqrt{3} : \\sqrt{2} $, then $ \\triangle $ ABC is"
+            "text": "The angle of $ \\triangle $ ABC are in A.P. such that b:c = $ \\sqrt{3} : \\sqrt{2} $, then $ \\triangle $ ABC is",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "acute angled triangle"
+                "text": "acute angled triangle",
+            "image":""
                 
             },
             "b": {
-                "text": "right angled triangle"
+                "text": "right angled triangle",
+            "image":""
                 
             },
             "c": {
-                "text": "obtuse angled triangle"
+                "text": "obtuse angled triangle",
+            "image":""
                 
             },
             "d": {
-                "text": "right angled isosceles triangle"
+                "text": "right angled isosceles triangle",
+            "image":""
                 
             },
             "correct": "a"
@@ -1737,23 +2046,28 @@
     },
     {
         "question": {
-            "text": "The coefficient of $ x^{30} $ in the expansion of $(1 + x)^{56} (1-x+x^{2})^{56} $ is "
+            "text": "The coefficient of $ x^{30} $ in the expansion of $(1 + x)^{56} (1-x+x^{2})^{56} $ is ",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "^{50}C_9"
+                "text": "^{50}C_9",
+            "image":""
                 
             },
             "b": {
-                "text": "^{50}C_10"
+                "text": "^{50}C_10",
+            "image":""
                 
             },
             "c": {
-                "text": "^{50}C_29"
+                "text": "^{50}C_29",
+            "image":""
                 
             },
             "d": {
-                "text": "^{50}C_30"
+                "text": "^{50}C_30",
+            "image":""
                 
             },
             "correct": "d"
@@ -1764,23 +2078,28 @@
     },
     {
         "question": {
-            "text": "The product of all real roots of an equation $ x^{2} $ - |x| -6 $ \\ge $ 0 is"
+            "text": "The product of all real roots of an equation $ x^{2} $ - |x| -6 $ \\ge $ 0 is",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "-4"
+                "text": "-4",
+            "image":""
                 
             },
             "b": {
-                "text": "-9"
+                "text": "-9",
+            "image":""
                 
             },
             "c": {
-                "text": "-6"
+                "text": "-6",
+            "image":""
                 
             },
             "d": {
-                "text": "36"
+                "text": "36",
+            "image":""
                 
             },
             "correct": "b"
@@ -1791,23 +2110,28 @@
     },
     {
         "question": {
-            "text": "For x $ \\gt $ 0, if $ \\log_{2}\\sqrt[4]{x} $ +  $ \\log_{2}\\sqrt[8]{x} $ + $ \\log_{2}\\sqrt[16]{x} $ + ..... x = 2, then x is equal to  "
+            "text": "For x $ \\gt $ 0, if $ \\log_{2}\\sqrt[4]{x} $ +  $ \\log_{2}\\sqrt[8]{x} $ + $ \\log_{2}\\sqrt[16]{x} $ + ..... x = 2, then x is equal to  ",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "1"
+                "text": "1",
+            "image":""
                 
             },
             "b": {
-                "text": "2"
+                "text": "2",
+            "image":""
                 
             },
             "c": {
-                "text": "4"
+                "text": "4",
+            "image":""
                 
             },
             "d": {
-                "text": "$ \\log_{2}\\sqrt{2} $"
+                "text": "$ \\log_{2}\\sqrt{2} $",
+            "image":""
                 
             },
             "correct": "c"
@@ -1818,23 +2142,28 @@
     },    
     {
         "question": {
-            "text": "if $ \\begin{bmatrix}a & b & 0 \\\\0 & a & b \\\b & 0 & a \\end{bmatrix} $ = 0 then"
+            "text": "if $ \\begin{bmatrix}a & b & 0 \\\\0 & a & b \\\b & 0 & a \\end{bmatrix} $ = 0 then",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "a is one of the cube roots of unity"
+                "text": "a is one of the cube roots of unity",
+            "image":""
                 
             },
             "b": {
-                "text": "b is one of the cube roots of unity"
+                "text": "b is one of the cube roots of unity",
+            "image":""
                 
             },
             "c": {
-                "text": "a/b is one of the cube roots of unity"
+                "text": "a/b is one of the cube roots of unity",
+            "image":""
                 
             },
             "d": {
-                "text": "a/b is one of the cube roots of -1"
+                "text": "a/b is one of the cube roots of -1",
+            "image":""
                 
             },
             "correct": "d"
@@ -1845,23 +2174,28 @@
     },    
     {
         "question": {
-            "text": "The number of ways in which letters of word \"ACCountant\" can be arranged so that vowels come together is"
+            "text": "The number of ways in which letters of word \"ACCountant\" can be arranged so that vowels come together is",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "7560"
+                "text": "7560",
+            "image":""
                 
             },
             "b": {
-                "text": "4845"
+                "text": "4845",
+            "image":""
                 
             },
             "c": {
-                "text": "240"
+                "text": "240",
+            "image":""
                 
             },
             "d": {
-                "text": "60"
+                "text": "60",
+            "image":""
                 
             },
             "correct": "a"
@@ -1872,23 +2206,28 @@
     },    
     {
         "question": {
-            "text": "if z = x + iy = (k + 3) + i $ \\sqrt{5-k^{2}} $, then locus of z is"
+            "text": "if z = x + iy = (k + 3) + i $ \\sqrt{5-k^{2}} $, then locus of z is",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "a straight line"
+                "text": "a straight line",
+            "image":""
                 
             },
             "b": {
-                "text": "a parabola"
+                "text": "a parabola",
+            "image":""
                 
             },
             "c": {
-                "text": "a circle"
+                "text": "a circle",
+            "image":""
                 
             },
             "d": {
-                "text": "an ellipse"
+                "text": "an ellipse",
+            "image":""
                 
             },
             "correct": "c"
@@ -1899,23 +2238,28 @@
     },
     {
         "question": {
-            "text": "if f(x) = $ \\begin{cases} \\frac {(x-|x|)}{2} & when \\space  x \\neq 0\\\\0 & x = 0\\end{cases} $"
+            "text": "if f(x) = $ \\begin{cases} \\frac {(x-|x|)}{2} & when \\space  x \\neq 0\\\\0 & x = 0\\end{cases} $",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "f(x) is continuous at x = 0"
+                "text": "f(x) is continuous at x = 0",
+            "image":""
                 
             },
             "b": {
-                "text": "f(x) is discontinuous at x = 0"
+                "text": "f(x) is discontinuous at x = 0",
+            "image":""
                 
             },
             "c": {
-                "text": "$ \\lim_{x \\rightarrow 0^{+}} f(x) =\\lim_{x \\rightarrow 0^{-}} f(x) $"
+                "text": "$ \\lim_{x \\rightarrow 0^{+}} f(x) =\\lim_{x \\rightarrow 0^{-}} f(x) $",
+            "image":""
                 
             },
             "d": {
-                "text": "$ \\lim_{x \\rightarrow 0^{+}} $ f(x)=f(0)"
+                "text": "$ \\lim_{x \\rightarrow 0^{+}} $ f(x)=f(0)",
+            "image":""
                 
             },
             "correct": "d"
@@ -1926,23 +2270,28 @@
     },    
     {
         "question": {
-            "text": "$ sin^{-1}\\frac{2x}{1+x^{2}} $ is equal to"
+            "text": "$ sin^{-1}\\frac{2x}{1+x^{2}} $ is equal to",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "2$ sin^{-1}x $"
+                "text": "2$ sin^{-1}x $",
+            "image":""
                 
             },
             "b": {
-                "text": "$ cos^{-1}x $"
+                "text": "$ cos^{-1}x $",
+            "image":""
                 
             },
             "c": {
-                "text": "$ tan^{-1}x $"
+                "text": "$ tan^{-1}x $",
+            "image":""
                 
             },
             "d": {
-                "text": "undefined"
+                "text": "undefined",
+            "image":""
                 
             },
             "correct": "d"
@@ -1953,23 +2302,28 @@
     },        
     {
         "question": {
-            "text": "let a, b, c be three distinct non negative numbers. If the vectors a$ \\overrightarrow{i} $ + a $ \\overrightarrow{j} $ + c $ \\overrightarrow{k} $, $ \\overrightarrow{i} $ + $ \\overrightarrow{k} $ and c $ \\overrightarrow{i} $+ c$ \\overrightarrow{j} $ + b $ \\overrightarrow{k} $ lie on a plane, then"
+            "text": "let a, b, c be three distinct non negative numbers. If the vectors a$ \\overrightarrow{i} $ + a $ \\overrightarrow{j} $ + c $ \\overrightarrow{k} $, $ \\overrightarrow{i} $ + $ \\overrightarrow{k} $ and c $ \\overrightarrow{i} $+ c$ \\overrightarrow{j} $ + b $ \\overrightarrow{k} $ lie on a plane, then",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "c is arithmatic mean of a and b"
+                "text": "c is arithmatic mean of a and b",
+            "image":""
                 
             },
             "b": {
-                "text": "c is geometric mean of a and b"
+                "text": "c is geometric mean of a and b",
+            "image":""
                 
             },
             "c": {
-                "text": "c is harmonic mean of a and b"
+                "text": "c is harmonic mean of a and b",
+            "image":""
                 
             },
             "d": {
-                "text": "b is geometric mean of a and b"
+                "text": "b is geometric mean of a and b",
+            "image":""
                 
             },
             "correct": "b"
@@ -1980,23 +2334,28 @@
     },
     {
         "question": {
-            "text": "if y = $ tan^{-1}\\sqrt\\frac{1-cosx}{1+cosx} $, then dy/dx "
+            "text": "if y = $ tan^{-1}\\sqrt\\frac{1-cosx}{1+cosx} $, then dy/dx ",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "1/2"
+                "text": "1/2",
+            "image":""
                 
             },
             "b": {
-                "text": "1/x"
+                "text": "1/x",
+            "image":""
                 
             },
             "c": {
-                "text": "x/2"
+                "text": "x/2",
+            "image":""
                 
             },
             "d": {
-                "text": "$ x^{2} $"
+                "text": "$ x^{2} $",
+            "image":""
                 
             },
             "correct": "a"
@@ -2007,23 +2366,28 @@
     },     
     {
         "question": {
-            "text": "\\int\\frac{(x+1)(x+logx)^{3}}{x} dx = "
+            "text": "\\int\\frac{(x+1)(x+logx)^{3}}{x} dx = ",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "$ (x + logx)^{4} $ + c "
+                "text": "$ (x + logx)^{4} $ + c ",
+            "image":""
                 
             },
             "b": {
-                "text": "$ \\frac{(x+logx)^{4}}{4x} $ + c"
+                "text": "$ \\frac{(x+logx)^{4}}{4x} $ + c",
+            "image":""
                 
             },
             "c": {
-                "text": "$ \\frac{(x+logx)^{4}}{4} $ + c"
+                "text": "$ \\frac{(x+logx)^{4}}{4} $ + c",
+            "image":""
                 
             },
             "d": {
-                "text": "$ \\frac{(x+logx)^{4}}{x} $ + c"
+                "text": "$ \\frac{(x+logx)^{4}}{x} $ + c",
+            "image":""
                 
             },
             "correct": "c"
@@ -2034,23 +2398,28 @@
     },    
     {
         "question": {
-            "text": "Area bounded by $y^2 = x$ and $ x=2y $ is"
+            "text": "Area bounded by $y^2 = x$ and $ x=2y $ is",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "1/3"
+                "text": "1/3",
+            "image":""
                 
             },
             "b": {
-                "text": "2/3"
+                "text": "2/3",
+            "image":""
                 
             },
             "c": {
-                "text": "4/3"
+                "text": "4/3",
+            "image":""
                 
             },
             "d": {
-                "text": "8/3"
+                "text": "8/3",
+            "image":""
                 
             },
             "correct": "d"
@@ -2061,23 +2430,28 @@
     },     
     {
         "question": {
-            "text": "OA and OB are two tangents drawn from origin to $ x^{2} + y^{2} + 2fy +c =0 $ with center at s, then quadrilateral CASB is"
+            "text": "OA and OB are two tangents drawn from origin to $ x^{2} + y^{2} + 2fy +c =0 $ with center at s, then quadrilateral CASB is",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "$ \\frac{1}{2} \\sqrt{c(g^{2} + f^{2} -c)} $"
+                "text": "$ \\frac{1}{2} \\sqrt{c(g^{2} + f^{2} -c)} $",
+            "image":""
                 
             },
             "b": {
-                "text": "$ \\frac{1}{2} c\\sqrt{(g^{2} + f^{2} -c)} $"
+                "text": "$ \\frac{1}{2} c\\sqrt{(g^{2} + f^{2} -c)} $",
+            "image":""
                 
             },
             "c": {
-                "text": "$ \\sqrt{c(g^{2} + f^{2} -c)} $"
+                "text": "$ \\sqrt{c(g^{2} + f^{2} -c)} $",
+            "image":""
                 
             },
             "d": {
-                "text": "c$ \\frac{1}{2} \\sqrt{c(g^{2} + f^{2} -c)} $"
+                "text": "c$ \\frac{1}{2} \\sqrt{c(g^{2} + f^{2} -c)} $",
+            "image":""
                 
             },
             "correct": "a"
@@ -2088,23 +2462,28 @@
     }, 
     {
         "question": {
-            "text": "The eccentricity of conic in polarform $ r^{2} = 32coses2\\theta $ is"
+            "text": "The eccentricity of conic in polarform $ r^{2} = 32coses2\\theta $ is",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "0"
+                "text": "0",
+            "image":""
                 
             },
             "b": {
-                "text": "1"
+                "text": "1",
+            "image":""
                 
             },
             "c": {
-                "text": "$ \\sqrt{2} $"
+                "text": "$ \\sqrt{2} $",
+            "image":""
                 
             },
             "d": {
-                "text": "undefined"
+                "text": "undefined",
+            "image":""
                 
             },
             "correct": "c"
@@ -2115,23 +2494,28 @@
     },
     {
         "question": {
-            "text": "The locus of a point which divides the line segment joining (1,0) and ($ 2cos\\theta, 2sin\\theta) $ internally in the ratio 2:3, for all $ \\theta $, is"
+            "text": "The locus of a point which divides the line segment joining (1,0) and ($ 2cos\\theta, 2sin\\theta) $ internally in the ratio 2:3, for all $ \\theta $, is",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "a straight line"
+                "text": "a straight line",
+            "image":""
                 
             },
             "b": {
-                "text": "a pair of line"
+                "text": "a pair of line",
+            "image":""
                 
             },
             "c": {
-                "text": "a circle "
+                "text": "a circle ",
+            "image":""
                 
             },
             "d": {
-                "text": "an ellipse"
+                "text": "an ellipse",
+            "image":""
                 
             },
             "correct": "c"
@@ -2142,23 +2526,28 @@
     },
     {
         "question": {
-            "text": "If one of the lines $ my^{2} + (1-m^{2})xy - mx^{2} = 0$ is bisector of the angle between the lines xy = 0 then m = "
+            "text": "If one of the lines $ my^{2} + (1-m^{2})xy - mx^{2} = 0$ is bisector of the angle between the lines xy = 0 then m = ",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "-2"
+                "text": "-2",
+            "image":""
                 
             },
             "b": {
-                "text": "-1/2"
+                "text": "-1/2",
+            "image":""
                 
             },
             "c": {
-                "text": "0"
+                "text": "0",
+            "image":""
                 
             },
             "d": {
-                "text": "1"
+                "text": "1",
+            "image":""
                 
             },
             "correct": "d"
@@ -2169,23 +2558,28 @@
     },
     {
         "question": {
-            "text": "The projection of a line on a coordinate axes are 2, 3, 6 then length of the line is"
+            "text": "The projection of a line on a coordinate axes are 2, 3, 6 then length of the line is",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "1"
+                "text": "1",
+            "image":""
                 
             },
             "b": {
-                "text": "6"
+                "text": "6",
+            "image":""
                 
             },
             "c": {
-                "text": "7"
+                "text": "7",
+            "image":""
                 
             },
             "d": {
-                "text": "11"
+                "text": "11",
+            "image":""
                 
             },
             "correct": "c"
@@ -2201,19 +2595,23 @@
         },
         "answer": {
             "a": {
-                "text": "lasting and irreparable"
+                "text": "lasting and irreparable",
+            "image":""
                 
             },
             "b": {
-                "text": "like the friendship in modern societies"
+                "text": "like the friendship in modern societies",
+            "image":""
                 
             },
             "c": {
-                "text": "born out of solitude"
+                "text": "born out of solitude",
+            "image":""
                 
             },
             "d": {
-                "text": "inspired by the beauties of nature"
+                "text": "inspired by the beauties of nature",
+            "image":""
                 
             },
             "correct": "a"
@@ -2229,19 +2627,23 @@
         },
         "answer": {
             "a": {
-                "text": "failures"
+                "text": "failures",
+            "image":""
                 
             },
             "b": {
-                "text": "success"
+                "text": "success",
+            "image":""
                 
             },
             "c": {
-                "text": "danger"
+                "text": "danger",
+            "image":""
                 
             },
             "d": {
-                "text": "1, 2 and 3 together"
+                "text": "1, 2 and 3 together",
+            "image":""
                 
             },
             "correct": "d"
@@ -2257,19 +2659,23 @@
         },
         "answer": {
             "a": {
-                "text": "You will meet him at the party afterwards"
+                "text": "You will meet him at the party afterwards",
+            "image":""
                 
             },
             "b": {
-                "text": "You will have really appreciated the beauty later"
+                "text": "You will have really appreciated the beauty later",
+            "image":""
                 
             },
             "c": {
-                "text": "You will get tired easily"
+                "text": "You will get tired easily",
+            "image":""
                 
             },
             "d": {
-                "text": "You will have an irreplaceable foundation for a friendship"
+                "text": "You will have an irreplaceable foundation for a friendship",
+            "image":""
                 
             },
             "correct": "a"
@@ -2285,19 +2691,23 @@
         },
         "answer": {
             "a": {
-                "text": "that which cannot be overcome or taken by force"
+                "text": "that which cannot be overcome or taken by force",
+            "image":""
                 
             },
             "b": {
-                "text": "that which exhibits a lot of strength"
+                "text": "that which exhibits a lot of strength",
+            "image":""
                 
             },
             "c": {
-                "text": "that which lasts forever"
+                "text": "that which lasts forever",
+            "image":""
                 
             },
             "d": {
-                "text": "that which is very impressive"
+                "text": "that which is very impressive",
+            "image":""
                 
             },
             "correct": "c"
@@ -2313,19 +2723,23 @@
         },
         "answer": {
             "a": {
-                "text": "walked on feather with someone"
+                "text": "walked on feather with someone",
+            "image":""
                 
             },
             "b": {
-                "text": "walked with someone on the edge of mountain"
+                "text": "walked with someone on the edge of mountain",
+            "image":""
                 
             },
             "c": {
-                "text": "walked together with feather like steps"
+                "text": "walked together with feather like steps",
+            "image":""
                 
             },
             "d": {
-                "text": "walked where the dividing line between danger and safety is very thin. "
+                "text": "walked where the dividing line between danger and safety is very thin. ",
+            "image":""
                 
             },
             "correct": "d"
@@ -2336,23 +2750,28 @@
     },
     {
         "question": {
-            "text": "A ship is moving in a straight line due north at a velocity of 6km/hr. After one minute its velocity changes to 8km/hr eastwards. Average acceleration is,"
+            "text": "A ship is moving in a straight line due north at a velocity of 6km/hr. After one minute its velocity changes to 8km/hr eastwards. Average acceleration is,",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "2.77 m/$s^{2}$"
+                "text": "2.77 m/$s^{2}$",
+            "image":""
                 
             },
             "b": {
-                "text": "5/30 $ m/s^{2} $"
+                "text": "5/30 $ m/s^{2} $",
+            "image":""
                 
             },
             "c": {
-                "text": "1/6 $ m/s^{2}  $"
+                "text": "1/6 $ m/s^{2}  $",
+            "image":""
                 
             },
             "d": {
-                "text": "5/108 $ m/s^{2} $ "
+                "text": "5/108 $ m/s^{2} $ ",
+            "image":""
                 
             },
             "correct": "d"
@@ -2363,23 +2782,28 @@
     },
     {
         "question": {
-            "text": "A homogeneous sphere is rolling down an inclined plane of height 'h' then velocity of sphere while reaching the bottom of the plane is,"
+            "text": "A homogeneous sphere is rolling down an inclined plane of height 'h' then velocity of sphere while reaching the bottom of the plane is,",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "$ \\sqrt\\frac{10gh}{7} $"
+                "text": "$ \\sqrt\\frac{10gh}{7} $",
+            "image":""
                 
             },
             "b": {
-                "text": "$ \\sqrt{gh} $"
+                "text": "$ \\sqrt{gh} $",
+            "image":""
                 
             },
             "c": {
-                "text": "$ \\sqt{2gh} $"
+                "text": "$ \\sqt{2gh} $",
+            "image":""
                 
             },
             "d": {
-                "text": "$ \\sqrt\\frac{4gh}{3} $ "
+                "text": "$ \\sqrt\\frac{4gh}{3} $ ",
+            "image":""
                 
             },
             "correct": "a"
@@ -2390,23 +2814,28 @@
     },
     {
         "question": {
-            "text": "A square frame of side L is dipped in a liquid soap. When it is taken out of the liquid a soap film is formed on it. If the surface tension of soap is T, then the force acting on frame is,"
+            "text": "A square frame of side L is dipped in a liquid soap. When it is taken out of the liquid a soap film is formed on it. If the surface tension of soap is T, then the force acting on frame is,",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "2TL"
+                "text": "2TL",
+            "image":""
                 
             },
             "b": {
-                "text": "4TL"
+                "text": "4TL",
+            "image":""
                 
             },
             "c": {
-                "text": "8TL"
+                "text": "8TL",
+            "image":""
                 
             },
             "d": {
-                "text": "10TL"
+                "text": "10TL",
+            "image":""
                 
             },
             "correct": "c"
@@ -2417,23 +2846,28 @@
     },
     {
         "question": {
-            "text": "Two springs of spring constants 2 and 4 are connected in series. A mass of 2 kg is attached to this combination then period of oscillation be"
+            "text": "Two springs of spring constants 2 and 4 are connected in series. A mass of 2 kg is attached to this combination then period of oscillation be",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "5s"
+                "text": "5s",
+            "image":""
                 
             },
             "b": {
-                "text": "10s"
+                "text": "10s",
+            "image":""
                 
             },
             "c": {
-                "text": "15s"
+                "text": "15s",
+            "image":""
                 
             },
             "d": {
-                "text": "20s"
+                "text": "20s",
+            "image":""
                 
             },
             "correct": "b"
@@ -2444,23 +2878,28 @@
     },
     {
         "question": {
-            "text": "The radius in kilometer to which the present radius of earh [R=6400km] is to be compressed so that escape velocity is decreased to 10 times is"
+            "text": "The radius in kilometer to which the present radius of earh [R=6400km] is to be compressed so that escape velocity is decreased to 10 times is",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "6.4"
+                "text": "6.4",
+            "image":""
                 
             },
             "b": {
-                "text": "64"
+                "text": "64",
+            "image":""
                 
             },
             "c": {
-                "text": "640"
+                "text": "640",
+            "image":""
                 
             },
             "d": {
-                "text": "4800"
+                "text": "4800",
+            "image":""
                 
             },
             "correct": "b"
@@ -2471,23 +2910,28 @@
     },
     {
         "question": {
-            "text": "When cylinder is heated, its length increases by 2% the area of base increases by"
+            "text": "When cylinder is heated, its length increases by 2% the area of base increases by",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "0.5%"
+                "text": "0.5%",
+            "image":""
                 
             },
             "b": {
-                "text": "1%"
+                "text": "1%",
+            "image":""
                 
             },
             "c": {
-                "text": "2%"
+                "text": "2%",
+            "image":""
                 
             },
             "d": {
-                "text": "4%"
+                "text": "4%",
+            "image":""
                 
             },
             "correct": "d"
@@ -2498,23 +2942,28 @@
     },
     {
         "question": {
-            "text": "At $ 27^{0}c $ two moles of ideal mono-atomic gas occupy volume V is expanded adiabatically to volume 2V. The work done by gas during the process is "
+            "text": "At $ 27^{0}c $ two moles of ideal mono-atomic gas occupy volume V is expanded adiabatically to volume 2V. The work done by gas during the process is ",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "1689.2 J"
+                "text": "1689.2 J",
+            "image":""
                 
             },
             "b": {
-                "text": "-1933.5 J"
+                "text": "-1933.5 J",
+            "image":""
                 
             },
             "c": {
-                "text": "-2763.9 J"
+                "text": "-2763.9 J",
+            "image":""
                 
             },
             "d": {
-                "text": "2763.9 J"
+                "text": "2763.9 J",
+            "image":""
                 
             },
             "correct": "d"
@@ -2525,23 +2974,28 @@
     },
     {
         "question": {
-            "text": "A parallel beam of light of wave length $ 5000 A^{0} $ is incident normally on a single slit of width 0.0001mm. The light is focused by a convex lens on a screen placed in  focal plane. The first minima is formed for the angle of diffraction equal to"
+            "text": "A parallel beam of light of wave length $ 5000 A^{0} $ is incident normally on a single slit of width 0.0001mm. The light is focused by a convex lens on a screen placed in  focal plane. The first minima is formed for the angle of diffraction equal to",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "$ 0^{o} $"
+                "text": "$ 0^{o} $",
+            "image":""
                 
             },
             "b": {
-                "text": "$ 15^{o} "
+                "text": "$ 15^{o} ",
+            "image":""
                 
             },
             "c": {
-                "text": "$ 30^{o} "
+                "text": "$ 30^{o} ",
+            "image":""
                 
             },
             "d": {
-                "text": "$ 60^{o} "
+                "text": "$ 60^{o} ",
+            "image":""
                 
             },
             "correct": "c"
@@ -2552,23 +3006,28 @@
     },
     {
         "question": {
-            "text": "In plano convex lens, the radius of curvature of the convex surface is 10cm and the focal length 30. The R.I of material of the lens will be"
+            "text": "In plano convex lens, the radius of curvature of the convex surface is 10cm and the focal length 30. The R.I of material of the lens will be",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "1.5"
+                "text": "1.5",
+            "image":""
                 
             },
             "b": {
-                "text": "1.66"
+                "text": "1.66",
+            "image":""
                 
             },
             "c": {
-                "text": "1.33"
+                "text": "1.33",
+            "image":""
                 
             },
             "d": {
-                "text": "3"
+                "text": "3",
+            "image":""
                 
             },
             "correct": "c"
@@ -2579,23 +3038,28 @@
     },
     {
         "question": {
-            "text": "Velocity of sound is measured in hydrogen and oxygen at a given temperature. The ratio of two velocities $ V_H$ and $ V_o $ will be"
+            "text": "Velocity of sound is measured in hydrogen and oxygen at a given temperature. The ratio of two velocities $ V_H$ and $ V_o $ will be",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "1:4"
+                "text": "1:4",
+            "image":""
                 
             },
             "b": {
-                "text": "4:1"
+                "text": "4:1",
+            "image":""
                 
             },
             "c": {
-                "text": "1:1"
+                "text": "1:1",
+            "image":""
                 
             },
             "d": {
-                "text": "3:1"
+                "text": "3:1",
+            "image":""
                 
             },
             "correct": "a"
@@ -2606,23 +3070,28 @@
     },
     {
         "question": {
-            "text": "The equation of stationary wave is y = 4sin$ \\pi $x/15 * cos40$ \\pi $t, the distance between node-antinode is if x is in cm"
+            "text": "The equation of stationary wave is y = 4sin$ \\pi $x/15 * cos40$ \\pi $t, the distance between node-antinode is if x is in cm",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "15cm"
+                "text": "15cm",
+            "image":""
                 
             },
             "b": {
-                "text": "30cm"
+                "text": "30cm",
+            "image":""
                 
             },
             "c": {
-                "text": "5.5cm"
+                "text": "5.5cm",
+            "image":""
                 
             },
             "d": {
-                "text": "7.5cm"
+                "text": "7.5cm",
+            "image":""
                 
             },
             "correct": "d"
@@ -2633,23 +3102,28 @@
     },
     {
         "question": {
-            "text": "Two circular coils of radius 20cm and 40cm are made of similar wires are connected in parallel. The ratio of the magnetic field at their centres"
+            "text": "Two circular coils of radius 20cm and 40cm are made of similar wires are connected in parallel. The ratio of the magnetic field at their centres",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "4:1"
+                "text": "4:1",
+            "image":""
                 
             },
             "b": {
-                "text": "1:4"
+                "text": "1:4",
+            "image":""
                 
             },
             "c": {
-                "text": "2:1"
+                "text": "2:1",
+            "image":""
                 
             },
             "d": {
-                "text": "1:2"
+                "text": "1:2",
+            "image":""
                 
             },
             "correct": "c"
@@ -2660,23 +3134,28 @@
     },
     {
         "question": {
-            "text": "Light of two different frequencies whose photons have energies 1eV and 2.5eV respectively successively illuminate a metal work function 0.5eV. The ratio of maximum speeds of emitted electron is"
+            "text": "Light of two different frequencies whose photons have energies 1eV and 2.5eV respectively successively illuminate a metal work function 0.5eV. The ratio of maximum speeds of emitted electron is",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "1:5"
+                "text": "1:5",
+            "image":""
                 
             },
             "b": {
-                "text": "1:4"
+                "text": "1:4",
+            "image":""
                 
             },
             "c": {
-                "text": "1:2"
+                "text": "1:2",
+            "image":""
                 
             },
             "d": {
-                "text": "1:1"
+                "text": "1:1",
+            "image":""
                 
             },
             "correct": "c"
@@ -2687,23 +3166,28 @@
     },
     {
         "question": {
-            "text": "The weight based ratio $ U^{238} $ and $ Pb^{126} $ in a sample rock is 4:3. If half life of $ U^{238} $ is $ 4.5 x 10^{9}$, then age of rock is (all the lead present in the rock is final stable product of $ U^{238}.$)"
+            "text": "The weight based ratio $ U^{238} $ and $ Pb^{126} $ in a sample rock is 4:3. If half life of $ U^{238} $ is $ 4.5 x 10^{9}$, then age of rock is (all the lead present in the rock is final stable product of $ U^{238}.$)",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "$ 9x10^{9} years $"
+                "text": "$ 9x10^{9} years $",
+            "image":""
                 
             },
             "b": {
-                "text": "$ 6.3x10^{9} $"
+                "text": "$ 6.3x10^{9} $",
+            "image":""
                 
             },
             "c": {
-                "text": "$ 4.5x10^{9} $years"
+                "text": "$ 4.5x10^{9} $years",
+            "image":""
                 
             },
             "d": {
-                "text": "$ 3.63 x 10^{9} $ years"
+                "text": "$ 3.63 x 10^{9} $ years",
+            "image":""
                 
             },
             "correct": "d"
@@ -2714,23 +3198,28 @@
     },
     {
         "question": {
-            "text": "Two identical cells send the same current in 3ohm resistor whether connected in series or in parallel. The internal resistance of cell should be"
+            "text": "Two identical cells send the same current in 3ohm resistor whether connected in series or in parallel. The internal resistance of cell should be",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "1ohm"
+                "text": "1ohm",
+            "image":""
                 
             },
             "b": {
-                "text": "3ohm"
+                "text": "3ohm",
+            "image":""
                 
             },
             "c": {
-                "text": "0.5ohm"
+                "text": "0.5ohm",
+            "image":""
                 
             },
             "d": {
-                "text": "3.5ohm"
+                "text": "3.5ohm",
+            "image":""
                 
             },
             "correct": "b"
@@ -2741,23 +3230,28 @@
     },
     {
         "question": {
-            "text": "Two metallic spheres of radii 1cm and 2cm are given changes $ 10^{-2} $ and 5x$ 10^{-2} respectively. $ If they are connected by a conducting wire then final charge on smaller sphere is"
+            "text": "Two metallic spheres of radii 1cm and 2cm are given changes $ 10^{-2} $ and 5x$ 10^{-2} respectively. $ If they are connected by a conducting wire then final charge on smaller sphere is",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "$ 3x10^{-2}c $"
+                "text": "$ 3x10^{-2}c $",
+            "image":""
                 
             },
             "b": {
-                "text": "$ 1x10^{-2}c $"
+                "text": "$ 1x10^{-2}c $",
+            "image":""
                 
             },
             "c": {
-                "text": "$ 4x10^{-2}c $"
+                "text": "$ 4x10^{-2}c $",
+            "image":""
                 
             },
             "d": {
-                "text": "$ 2 x 10^{-2}c $ "
+                "text": "$ 2 x 10^{-2}c $ ",
+            "image":""
                 
             },
             "correct": "d"
@@ -2768,23 +3262,28 @@
     },
     {
         "question": {
-            "text": "An alternating current is given as $  i=i_1coswt +i_2sinwt the rms current is given by $"
+            "text": "An alternating current is given as $  i=i_1coswt +i_2sinwt the rms current is given by $",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "$ \\frac{(I_1 +I_2)}{2} $"
+                "text": "$ \\frac{(I_1 +I_2)}{2} $",
+            "image":""
                 
             },
             "b": {
-                "text": "$ \\frac{(I_1 - I_2)}{2} $"
+                "text": "$ \\frac{(I_1 - I_2)}{2} $",
+            "image":""
                 
             },
             "c": {
-                "text": "$ \\sqrt\\frac{(I_1^{2} +I_2^{2})}{2} $"
+                "text": "$ \\sqrt\\frac{(I_1^{2} +I_2^{2})}{2} $",
+            "image":""
                 
             },
             "d": {
-                "text": "\\frac{(I_1 + I_2)}{\\sqrt{2}}"
+                "text": "\\frac{(I_1 + I_2)}{\\sqrt{2}}",
+            "image":""
                 
             },
             "correct": "c"
@@ -2795,23 +3294,28 @@
     },
     {
         "question": {
-            "text": "An current in an electron beam of a cathode ray tube is 4.8mA. If an electrons striking the screen each seconds is"
+            "text": "An current in an electron beam of a cathode ray tube is 4.8mA. If an electrons striking the screen each seconds is",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "$ 6x 10^{16} $"
+                "text": "$ 6x 10^{16} $",
+            "image":""
                 
             },
             "b": {
-                "text": "$ 3x10^{16} $"
+                "text": "$ 3x10^{16} $",
+            "image":""
                 
             },
             "c": {
-                "text": "$ 3x10^{18} $"
+                "text": "$ 3x10^{18} $",
+            "image":""
                 
             },
             "d": {
-                "text": "$ 7.68x10^{22} $"
+                "text": "$ 7.68x10^{22} $",
+            "image":""
                 
             },
             "correct": "b"
@@ -2822,23 +3326,28 @@
     },
     {
         "question": {
-            "text": "The radius of electron in second stationary orbit in Bohr's atom is R. The radius of third orbit will be"
+            "text": "The radius of electron in second stationary orbit in Bohr's atom is R. The radius of third orbit will be",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "3R/12"
+                "text": "3R/12",
+            "image":""
                 
             },
             "b": {
-                "text": "2.25R"
+                "text": "2.25R",
+            "image":""
                 
             },
             "c": {
-                "text": "$ 9R $"
+                "text": "$ 9R $",
+            "image":""
                 
             },
             "d": {
-                "text": "$ R/3 $"
+                "text": "$ R/3 $",
+            "image":""
                 
             },
             "correct": "b"
@@ -2849,23 +3358,28 @@
     },
     {
         "question": {
-            "text": "A body of mass 1kg carrying a charge of 1coulumb falls in an electric field through a potential difference of 1volt. It's velocity is,"
+            "text": "A body of mass 1kg carrying a charge of 1coulumb falls in an electric field through a potential difference of 1volt. It's velocity is,",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "1m/s"
+                "text": "1m/s",
+            "image":""
                 
             },
             "b": {
-                "text": "2m/s"
+                "text": "2m/s",
+            "image":""
                 
             },
             "c": {
-                "text": "0.5m/s"
+                "text": "0.5m/s",
+            "image":""
                 
             },
             "d": {
-                "text": "1.4m/s"
+                "text": "1.4m/s",
+            "image":""
                 
             },
             "correct": "d"
@@ -2876,23 +3390,28 @@
     },
     {
         "question": {
-            "text": "The number of hydrogen ions in 1ml. of solution whose pH is 13 is"
+            "text": "The number of hydrogen ions in 1ml. of solution whose pH is 13 is",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "$ 10^{-13} $"
+                "text": "$ 10^{-13} $",
+            "image":""
                 
             },
             "b": {
-                "text": "$ 6.023x10^{10} $"
+                "text": "$ 6.023x10^{10} $",
+            "image":""
                 
             },
             "c": {
-                "text": "$ 6.023x10^{7} $"
+                "text": "$ 6.023x10^{7} $",
+            "image":""
                 
             },
             "d": {
-                "text": "$ 10^{13} $"
+                "text": "$ 10^{13} $",
+            "image":""
                 
             },
             "correct": "c"
@@ -2903,23 +3422,28 @@
     },
     {
         "question": {
-            "text": "6 moles of Al reacts with HCL to give how many grams of $ H_2 $?"
+            "text": "6 moles of Al reacts with HCL to give how many grams of $ H_2 $?",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "18gm"
+                "text": "18gm",
+            "image":""
                 
             },
             "b": {
-                "text": "9gm"
+                "text": "9gm",
+            "image":""
                 
             },
             "c": {
-                "text": "12gm"
+                "text": "12gm",
+            "image":""
                 
             },
             "d": {
-                "text": "6gm"
+                "text": "6gm",
+            "image":""
                 
             },
             "correct": "a"
@@ -2930,23 +3454,28 @@
     },
     {
         "question": {
-            "text": "75ml of 0.2 M HCL will neutralize how many millilitres of 0.1M $ Ba(OH)_2$"
+            "text": "75ml of 0.2 M HCL will neutralize how many millilitres of 0.1M $ Ba(OH)_2$",
+            "image":""
         },
         "answer": {
             "a": {
-                "text": "300ml"
+                "text": "300ml",
+            "image":""
                 
             },
             "b": {
-                "text": "150ml"
+                "text": "150ml",
+            "image":""
                 
             },
             "c": {
-                "text": "75ml"
+                "text": "75ml",
+            "image":""
                 
             },
             "d": {
-                "text": "38ml"
+                "text": "38ml",
+            "image":""
                 
             },
             "correct": "c"
@@ -2961,19 +3490,23 @@
         },
         "answer": {
             "a": {
-                "text": "2"
+                "text": "2",
+            "image":""
                 
             },
             "b": {
-                "text": "1"
+                "text": "1",
+            "image":""
                 
             },
             "c": {
-                "text": "3"
+                "text": "3",
+            "image":""
                 
             },
             "d": {
-                "text": "0"
+                "text": "0",
+            "image":""
                 
             },
             "correct": "a"
@@ -2988,19 +3521,23 @@
         },
         "answer": {
             "a": {
-                "text": "ethane, propane and butane"
+                "text": "ethane, propane and butane",
+            "image":""
                 
             },
             "b": {
-                "text": "ethane, propane and ethyne"
+                "text": "ethane, propane and ethyne",
+            "image":""
                 
             },
             "c": {
-                "text": "ethane, propane and ethyne"
+                "text": "ethane, propane and ethyne",
+            "image":""
                 
             },
             "d": {
-                "text": "ethane, ethyne and ethanol"
+                "text": "ethane, ethyne and ethanol",
+            "image":""
                 
             },
             "correct": "c"
@@ -3016,19 +3553,23 @@
         },
         "answer": {
             "a": {
-                "text": "First"
+                "text": "First",
+            "image":""
                 
             },
             "b": {
-                "text": "Second"
+                "text": "Second",
+            "image":""
                 
             },
             "c": {
-                "text": "Third"
+                "text": "Third",
+            "image":""
                 
             },
             "d": {
-                "text": "Fourth"
+                "text": "Fourth",
+            "image":""
                 
             },
             "correct": "a"
@@ -3076,19 +3617,23 @@
         },
         "answer": {
             "a": {
-                "text": "A solid horizontal line"
+                "text": "A solid horizontal line",
+            "image":""
                 
             },
             "b": {
-                "text": "A solid vertical line"
+                "text": "A solid vertical line",
+            "image":""
                 
             },
             "c": {
-                "text": "A dash(hidden) horizontal line"
+                "text": "A dash(hidden) horizontal line",
+            "image":""
                 
             },
             "d": {
-                "text": "A dash(hidden) vertical line"
+                "text": "A dash(hidden) vertical line",
+            "image":""
                 
             },
             "correct": "d"
@@ -3104,19 +3649,23 @@
         },
         "answer": {
             "a": {
-                "text": "A solid horizontal line"
+                "text": "A solid horizontal line",
+            "image":""
                 
             },
             "b": {
-                "text": "A solid vertical line"
+                "text": "A solid vertical line",
+            "image":""
                 
             },
             "c": {
-                "text": "A dash(hidden) horizontal line"
+                "text": "A dash(hidden) horizontal line",
+            "image":""
                 
             },
             "d": {
-                "text": "A dash(hidden) vertical line"
+                "text": "A dash(hidden) vertical line",
+            "image":""
                 
             },
             "correct": "a"
@@ -3132,19 +3681,23 @@
         },
         "answer": {
             "a": {
-                "text": "A solid horizontal line"
+                "text": "A solid horizontal line",
+            "image":""
                 
             },
             "b": {
-                "text": "A solid vertical line"
+                "text": "A solid vertical line",
+            "image":""
                 
             },
             "c": {
-                "text": "A dash(hidden) horizontal line"
+                "text": "A dash(hidden) horizontal line",
+            "image":""
                 
             },
             "d": {
-                "text": "A dash(hidden) vertical line"
+                "text": "A dash(hidden) vertical line",
+				"image":""
                 
             },
             "correct": "c"

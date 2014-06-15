@@ -19,7 +19,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"The system of homogeneousequations 2x-y+z=0, x-2y+z=0, $ \\lambda x -y +2z=0 $ has nontrivial solutions, too for",
@@ -47,7 +47,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"The area of the triangle formed by the line 2x-3y+6=0 with coordinate axes is ",
@@ -75,7 +75,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"The equation xy-4x-3y+13=0 represents",
@@ -103,7 +103,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"If $ y = 1 + \\frac{1}{x} + \\frac{1}{x^{2}} + .... to\\space \\infty \\space and \\space |x|>1 \\space then \\space \\frac{dy}{dx}=  $ ",
@@ -131,7 +131,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"The equation pcosx + qsinx = r has a solution if",
@@ -159,7 +159,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"$     f:R\\rightarrow R \\space given \\space by \\space f(x) = x^2 -4x +4  $",
@@ -187,7 +187,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"$ The locus of the point which is equidistant from the points (1,-1,3) and (1,-1, -5)  $ is",
@@ -215,7 +215,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"$ \\int_{}{} \\frac {xdx}{x^4+1} $",
@@ -243,10 +243,10 @@
          },
          "correct":"d"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
-         "text":"$ f(x) = cos\\frac{1}{x}; x \\ne0 \\space can\\space be \\space made\\space continuous \\space at\\space x=0 $",
+         "text":"$ f(x) = cos\\frac{1}{x}; x \\ne0 $ can be made continuous at x=0 ",
          "image":""
       },
       "subject":"Mathematics"
@@ -271,7 +271,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"The eccentricity of the conic section $ 4(x^{2} - y^{2} ) = 1 $ is",
@@ -299,7 +299,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"The phonemic transcription of the word - 'hardly' is -------------",
@@ -327,7 +327,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"The word hardship has its primary stress on the -------------- syllable",
@@ -355,7 +355,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"A1 a lecture ",
@@ -383,7 +383,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"To send out of one's country",
@@ -411,7 +411,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"Introduce a person ---------someone",
@@ -439,7 +439,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"Look ------------ someoneas a friend",
@@ -467,7 +467,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"The number of persons present ................very small.",
@@ -495,7 +495,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"Half of them ....... rotten.",
@@ -523,7 +523,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"By leaps and bound",
@@ -551,7 +551,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"All that glitters is not gold .......... ?",
@@ -579,7 +579,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"These were some people at the gate, ...... ?",
@@ -607,7 +607,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"Black as she is, she is a beauty' is a ...............sentence.",
@@ -635,7 +635,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"She would have come if you had invited her, for she was free ' is a ........sentence",
@@ -663,7 +663,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"I .............. you all the morning.",
@@ -691,7 +691,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"Her father said. 'If you score above 80%, in the IOE entrance exam you .................. be given galaxy grand 2.",
@@ -719,7 +719,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"The position x of a particle varies with time (t) as x = $ at^{2} -bt^{3} $. The acceleration of the particle will be 0 at a time",
@@ -747,7 +747,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"A uniform chain of length 2m is kept on a table such that a length of 60cm hangs freely from the edge of the table. The total mass of chain is 4kg then work done on pulling whole chain on the table is",
@@ -775,7 +775,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"The equation of wave travelling in a string can be written as $ y=3cos\\pi(100t-x) $. The wavelength of the wave is",
@@ -803,7 +803,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"Two rods of different material of linear expansivities $ \\alpha_1 \\space and \\space \\alpha_2 $. Young's modulus $ Y_1 and Y_2 $ are fixed between two rigid massive wall. The rods are heated by the same temperature and there is no bending on rod then stress will be equal if",
@@ -831,7 +831,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"An electrical refrigerator abstracts 2000 calories heat from ice trays. The coefficient of performance is 4 then work done by motor in calories is ",
@@ -859,7 +859,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"When 1000 drops of mercury of potential 1mv each coalese to form a single drop then potential of single drop will be",
@@ -887,7 +887,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"A piece of copper is shaped into a conductor of minimum resistance. Its length and diameter should be",
@@ -915,7 +915,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"Air bubble in glass slab of $ \\mu = 1.5 $ is found 6cm from one side and 4cm from other side. The thickness of slab is ",
@@ -943,7 +943,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"The KE of  a free electron is doubled, its debroglie wavelength will be",
@@ -971,7 +971,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"A transisitor is connected in common emittor configuration. The collector supply is 8V and voltage drop across resistor $ 800 \\Omega $ in the collector is 0.5V. The current gain is 0.96 then base current is ",
@@ -999,7 +999,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"The oxidation state of N in given compound $ NH_4NO_3 $ is",
@@ -1027,7 +1027,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"The number of electrons present in 1 mole of $ CH_4 $",
@@ -1055,7 +1055,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"The equivalent weight of metal is 25. The vapour density of chloride  is 91. The formula of Metal Chloride is",
@@ -1083,7 +1083,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"The equivalent weight of $ HNO_3 $ in the given condition $ HNO_3 \\rightarrow NO $. The molecular wt of $ HNO_3 $is M",
@@ -1111,7 +1111,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"The electronic configuration of element ends at an antepenultimate shell is ",
@@ -1139,7 +1139,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"The total number of orbitals present in each sub-shell is equivalent to the relation",
@@ -1167,7 +1167,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"Which compound is not Bronsted-Lowry base?",
@@ -1195,7 +1195,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"Which of these have least boiling point?",
@@ -1223,7 +1223,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"The maximum covalent character is found in ",
@@ -1251,7 +1251,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"Oil of Vitrol is",
@@ -1279,7 +1279,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"Which of the following alkali metals is used in photoelectric cell?",
@@ -1307,7 +1307,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"Spelter is",
@@ -1335,7 +1335,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"Which of these is an nonferrous alloy?",
@@ -1363,7 +1363,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"Kerosene is a mixture of ",
@@ -1391,7 +1391,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"The IUPAC name of t-butyl alcohol is",
@@ -1419,7 +1419,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"Which one is the spark ignition engine?",
@@ -1447,7 +1447,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"In a 2-stroke engine the working cycle is completed in the no of revolution of the crank shaft equal to .........",
@@ -1475,7 +1475,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"About ......... of global final energy consumption comes from renewals",
@@ -1503,7 +1503,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"For Cement OPC stands for .............",
@@ -1531,7 +1531,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"The ship of riverbed aggregate is .....................",
@@ -1559,7 +1559,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"In brick masonary the frog of the brick is generally kept is ",
@@ -1587,7 +1587,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"Which of the following sign denotes that pedestrian are prohibited from crossing the road except where they have started to cross the road.",
@@ -1615,7 +1615,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"Two resistances p1 and p2 give combined resistance of 4.0 ohms when in series and 1 ohm when in parallel. The resistances are",
@@ -1643,7 +1643,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"Energy resources derived from natural organic materials are called ...........",
@@ -1671,7 +1671,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"In a transformer, secondary winding is that ",
@@ -1699,7 +1699,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"The diesel engines are also known as .........................Engine",
@@ -1727,7 +1727,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"Decimal is also known as ",
@@ -1755,7 +1755,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"The current gain of the common emitter transistor amplifier is",
@@ -1783,7 +1783,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"The max speed supported by fast ethernet is .......",
@@ -1811,7 +1811,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"1",
       "question":{
          "text":"Printers are ",
@@ -1839,7 +1839,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":" The coefficient of $ \\frac {x^{6}}{y^{2}} $ in the expansion of $ (\\frac{x^{2}}{y} + \\frac{y}{x})^{12} \\space is $",
@@ -1867,7 +1867,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"The lines ax + by =1 is a normal to the circle $ 2x^{2} + 2y^{2} -5x +6y -1 =0 $ if ",
@@ -1895,7 +1895,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"$ \\int_{}^{} tan^{4}xdx $",
@@ -1923,7 +1923,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"The plane 2x - 3y +4z +7 is perpendicular to the line with drs",
@@ -1951,7 +1951,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"If y= $ \\sqrt {sinx + \\sqrt{sinx+ \\sqrt{sinx+...}}}\\space then \\space \\frac{dy}{dx} $",
@@ -1979,7 +1979,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"In the ellipse $ x^{2} + 3y^{2} =9 $, the distance between the foci is ",
@@ -2007,7 +2007,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"In any $ \\triangle ABC, \\space a^{2} sin2B + b^{2}sin2A $ = ",
@@ -2035,7 +2035,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"$ \\int_{0}^{\\frac{\\pi}{4}} \\frac{cos^6x}{sin^8x}dx $",
@@ -2063,7 +2063,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"The gradient of y= |x+2| + |x-3| at x =1 is",
@@ -2091,7 +2091,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":" The quadratic equation whose root are the AM and HM of the roots of $ x^2 - 4x -6 =0 $ is",
@@ -2119,7 +2119,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"The constant term in the expansion of $ (1-x^{2})(x+ \\frac{1}{x})^{10} $",
@@ -2147,7 +2147,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"If $ \\delta(x) = \\begin{bmatrix}1 & 1+sinx \\\\cosx & cosx \\end{bmatrix}, then \\space \\int_{0}^{\\frac{\\pi}{2}} \\delta(x)dx = $",
@@ -2175,10 +2175,10 @@
          },
          "correct":"b"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
-         "text":"If $ \\overrightarrow{a}, \\overrightarrow{b} and \\overrightarrow{c} are \\space  pair \\space wise \\space non-collinear \\space but \\space \\overrightarrow{a} + \\overrightarrow{b} is \\space collinear \\space with \\overrightarrow{c} and \\space \\overrightarrow{b} + \\overrightarrow{c}is \\space collinear \\space with \\space \\overrightarrow{a}. Now \\overrightarrow{a} + \\overrightarrow{b} + \\overrightarrow{c} is \\space a $",
+         "text":"If $ \\overrightarrow{a}, \\overrightarrow{b} and \\overrightarrow{c} $ are pair wise non-collinear but $ \\overrightarrow{a} + \\overrightarrow{b} $ is collinear  with $ \\overrightarrow{c} and \\space \\overrightarrow{b} + \\overrightarrow{c} $ is  collinear with $ \\overrightarrow{a} $ . Now $ \\overrightarrow{a} + \\overrightarrow{b} + \\overrightarrow{c} is \\space a $",
          "image":""
       },
       "subject":"Mathematics"
@@ -2203,7 +2203,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"The total number of 9-digit numbers of different digits is",
@@ -2231,7 +2231,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"The area bounded by the curve y = $ \\sqrt{(4-x^{2})} $ and the x-axis is",
@@ -2259,7 +2259,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"$ cosec^{-1}(cosx) $ is real if ",
@@ -2287,7 +2287,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"$ (1 + i)^{3} + (1-i)^{6} = $",
@@ -2315,7 +2315,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"In a geometric progression of alternatively positive and negative terms, if each term in the arithmatic mean of the next two terms, then the common ratio is",
@@ -2343,7 +2343,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"The parametric equation of the parabola with focus (0,1) and directrix x +2 =0 is ",
@@ -2362,7 +2362,7 @@
             "image":""
          },
          "b":{
-            "text":"$ \\frac{\\3\\pi}{2} $",
+            "text":"$ \\frac{3\\pi}{2} $",
             "image":""
          },
          "d":{
@@ -2371,7 +2371,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"If the points (-2, 0), (-1, $ \\frac {1}{\\sqrt{3}} $) and (cos$ \\theta $, sin$\\theta $) are collinear then $ \\theta \\in [0, 2\\pi] $ is",
@@ -2399,7 +2399,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"A parachusist drops freely from an aeroplane for 10 seconds before parachute open. After that he descends with retardation of 2.5 m/$s^{2}$. The Plane is at 2495m when person is thrown then velocity of person while reaching on the ground is",
@@ -2427,7 +2427,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"A shell of mass 2m fired with speed u at an angle $ \\theta $ to the horizontal explodes at the highest point of its motion into two fragments of mass 'm' each. If one of the fragment whose initial speed is zero fall verticaly, the distance at which other fragment fall from the gun is",
@@ -2455,7 +2455,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"A block of mass 1kg is at rest on a horizontal table. The coefficient of static friction between block and table is 0.5 then force acting at an angle $ 60 ^{o} $ with horizontal that will just move the block on the table is ",
@@ -2483,7 +2483,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"A ball of mass m moving with velocity u undergoes a head on collision with a ball of mass 'nm' initially at rest. The fraction of incident energy is transferred to heavier ball is ",
@@ -2498,7 +2498,7 @@
             "image":""
          },
          "c":{
-            "text":"$ \\frac{3GMm}{2R} ",
+            "text":"$ \\frac{3GMm}{2R} $",
             "image":""
          },
          "b":{
@@ -2506,12 +2506,12 @@
             "image":""
          },
          "d":{
-            "text":"$ \\frac{4GMm}{2R}",
+            "text":"$ \\frac{4GMm}{2R} $",
             "image":""
          },
          "correct":"a"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"A body of mass is placed on the surface of earth of mass M and radius R then work done to remove the body from gravitatonal pull of earth is",
@@ -2539,7 +2539,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"The frequency of sound of car horn is perceived by an observer towards when the car is moving differes from the frequency of horn by 2.5%. The velocity os sound is 320m/s then velocity of car is ",
@@ -2567,7 +2567,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"A sonometer wire of length 1m is stretched by 4kg. Another wire of same material and diameter is stretched by 16kg. The length of second wire whose second harmonic is same as fifth harmonic of first is ",
@@ -2595,7 +2595,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"Two litres of water in an open lid insulated kettle is heated by an electric heater of 1Kw. The heat lost from the lid at the rate of 160watt. The time in which water is heated from $20^{o}C to 75^{o}C $ is",
@@ -2623,7 +2623,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"A body of surface area 10 cm^{2} is heated 10 $ 127^{o}C $ and placed in a room of $ 27^{o}C $.The rate of loss of heat from the body is ",
@@ -2651,7 +2651,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"Four equal charges q are placed at the four cornors of square of side 'a' each. Work done in removing a charge -Q from center to infinity is",
@@ -2679,7 +2679,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":" A capacitor of capacitance C is fully charged by a 200V supply. It is then discharged through a small coil of resistance wire embeeded in thermally insulated block of specific heat $ 2.5 * 10^{2}JKg^{-1}K^{-1} $ and mass of 0.1Kg. The temperature of the block rises by 0.4K. Then value of 'C' is  ",
@@ -2707,7 +2707,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"A number of 110V lamps connected in parallel are fed by a 130V battery having an internal resistance of 2.6 $\\Omega$. If the resistance of each lamp is 200 $\\Omega$ and resistance of wire is 0.4 $ \\Omega $ the number of lamps are ",
@@ -2735,7 +2735,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"A 2meV proton is moving perpendicular to a uniform magnetic field of 2.5T. The force on proton is",
@@ -2763,7 +2763,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"The spokes of wheel are metallic and their length is 0.5m. On rotaiting the wheel at right angles to a uniform magnetic field of $ 5* 10^{-4}T $, A potential difference of 3.14 mv is produced between rim and axis. The rate of rotation of wheel is?",
@@ -2791,7 +2791,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"A thin equiconvex lens has focal length of 10 cm and refractive index 1.5. One face is silvered and for an object placed at a disctance of 'u' infront of the image coincide with the object.  The value of 'u' is ",
@@ -2819,13 +2819,13 @@
          },
          "correct":"c"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"A parallel beam of light of 6000$ A^{o} $ is incident normally on a slit of width o.2mm. A diffraction pattern is observed on a screen which is placed at a focal plane of convex lens of focal length 50cm. Lens is close to slit then distance between mininma on both side of central maxima will be",
          "image":""
       },
-      "subject":"physics"
+      "subject":"Physics"
    },
    {
       "answer":{
@@ -2847,7 +2847,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"The stopping potential for metal surface is 0.5V for the light of wavelength 0.6$\\mu m$.The stopping potential for the light of wavelength 0.4 $\\mu m$ is 1.5V. The work function of the metal is",
@@ -2875,7 +2875,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"The wavelength of series light of lyman series for hydrogen atom is 912$A6{o}$ Then series limit of Balmer series in Hydrogen atom is",
@@ -2903,7 +2903,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"A nucleus of mass number 220 undergoes an $\\ alpha $ decay . The value of energy of reaction is 5.5MeV.The KE of $ \\alpha $ Particle is ",
@@ -2931,7 +2931,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"A radioactive metal has mean lives of 1620 years and 520 years for $ \\alpha $ and $ \\beta $ emission respectively. The material decays $ \\alpha $ and $ \\beta $ simultaneoulsy. Then the time of $ (\\frac{1}{4})^{th}  $ of material remain is",
@@ -2959,7 +2959,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"<b> Read the following passage and give the answer of the question </b></br>At a time when we are enjoying longer, more healthful lives, ominous headlines, announces: 'Researchers tie Aluminum to Alzheimer's Disease ' and 'Coffee linked to Cholestrol Rise'. As a result of alarming and something ambiguous bulletins, worriers often become major threats and speculations about disease prevention become 'proven' cures. Part to the problem isthat the media often trumpet the questionable research finding as major medical breakthroughs. In 1985, three French scientists told reporters at a press that the drug Cyclosporine appeared to halt the grownth of AIDS Virus. They based the announcement on their observation of Two AIDS patients treated for 8 days. Never mind no actual study had been done; for the media the announcement was enough, and the story became frontpage news around the world. Unfortunately one of the patient died within days. Cyclosporine was no  miracle cure.</br> <b> According to the writer a lot present day research is a </b>",
@@ -2987,7 +2987,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"<b> Read the following passage and give the answer of the question </b></br>At a time when we are enjoying longer, more healthful lives, ominous headlines, announces: 'Researchers tie Aluminum to Alzheimer's Disease ' and 'Coffee linked to Cholestrol Rise'. As a result of alarming and something ambiguous bulletins, worriers often become major threats and speculations about disease prevention become 'proven' cures. Part to the problem isthat the media often trumpet the questionable research finding as major medical breakthroughs. In 1985, three French scientists told reporters at a press that the drug Cyclosporine appeared to halt the grownth of AIDS Virus. They based the announcement on their observation of Two AIDS patients treated for 8 days. Never mind no actual study had been done; for the media the announcement was enough, and the story became frontpage news around the world. Unfortunately one of the patient died within days. Cyclosporine was no  miracle cure.<br/> <b> The undue publicity given to such research",
@@ -3015,7 +3015,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"<b> Read the following passage and give the answer of the question </b></br>At a time when we are enjoying longer, more healthful lives, ominous headlines, announces: 'Researchers tie Aluminum to Alzheimer's Disease ' and 'Coffee linked to Cholestrol Rise'. As a result of alarming and something ambiguous bulletins, worriers often become major threats and speculations about disease prevention become 'proven' cures. Part to the problem isthat the media often trumpet the questionable research finding as major medical breakthroughs. In 1985, three French scientists told reporters at a press that the drug Cyclosporine appeared to halt the grownth of AIDS Virus. They based the announcement on their observation of Two AIDS patients treated for 8 days. Never mind no actual study had been done; for the media the announcement was enough, and the story became frontpage news around the world. Unfortunately one of the patient died within days. Cyclosporine was no miracle cure.<br><b>The role of media has been</b>",
@@ -3043,7 +3043,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"<b> Read the following passage and give the answer of the question </b></br>At a time when we are enjoying longer, more healthful lives, ominous headlines, announces: 'Researchers tie Aluminum to Alzheimer's Disease ' and 'Coffee linked to Cholestrol Rise'. As a result of alarming and something ambiguous bulletins, worriers often become major threats and speculations about disease prevention become 'proven' cures. Part to the problem isthat the media often trumpet the questionable research finding as major medical breakthroughs. In 1985, three French scientists told reporters at a press that the drug Cyclosporine appeared to halt the grownth of AIDS Virus. They based the announcement on their observation of Two AIDS patients treated for 8 days. Never mind no actual study had been done; for the media the announcement was enough, and the story became frontpage news around the world. Unfortunately one of the patient died within days. Cyclosporine was no miracle cure.<br><b>According to some of the research findings, coffee is responsible for the rise in  </b>",
@@ -3071,7 +3071,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"<b> Read the following passage and give the answer of the question </b></br>At a time when we are enjoying longer, more healthful lives, ominous headlines, announces: 'Researchers tie Aluminum to Alzheimer's Disease ' and 'Coffee linked to Cholestrol Rise'. As a result of alarming and something ambiguous bulletins, worriers often become major threats and speculations about disease prevention become 'proven' cures. Part to the problem isthat the media often trumpet the questionable research finding as major medical breakthroughs. In 1985, three French scientists told reporters at a press that the drug Cyclosporine appeared to halt the grownth of AIDS Virus. They based the announcement on their observation of Two AIDS patients treated for 8 days. Never mind no actual study had been done; for the media the announcement was enough, and the story became frontpage news around the world. Unfortunately one of the patient died within days. Cyclosporine was no miracle cure.<br> <b>The druug cyclosporine was reported </b>",
@@ -3099,7 +3099,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"Electrolysis of sodium salt of ethanoic acid succinic acid, maleic acid produce respectively",
@@ -3127,7 +3127,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"Which of this forms ppt with a gas formed by reacting FeS with dilute $H_2SO_4$",
@@ -3155,7 +3155,7 @@
          },
          "correct":"b"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"The mass of $ 1.94 *10^{18} $ atoms of iron is equal to mass of 2cc of $ H_2 $ at NTP. Find the atomic mass of iron",
@@ -3183,7 +3183,7 @@
          },
          "correct":"a"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"100ml of xM NaOH are mixed with 100ml of 0.1ml of 0.1M $ H_2SO_4 $. So that the pH of the resulting solution is 1.699. Find x",
@@ -3211,7 +3211,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"What volume of $H_2$ at NTP will be produced at cathode. When an aqueous acid solution is electrolysed by passing 15A of current for 3 hours.",
@@ -3239,7 +3239,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"Which is wrong for LSV of given object",
@@ -3267,7 +3267,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"Select the correct front view of the given image",
@@ -3295,7 +3295,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"Select the correct top view of the given image",
@@ -3323,7 +3323,7 @@
          },
          "correct":"c"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"Select the correct object for given set of orthrographic views",
@@ -3351,7 +3351,7 @@
          },
          "correct":"d"
       },
-      "exam_code":"202",
+      "exam_code":202,
       "marks":"2",
       "question":{
          "text":"Hyperbola has its eccentricity always",

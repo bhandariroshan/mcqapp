@@ -55,44 +55,13 @@
       <div class="eight columns">      
         <section class="twelve columns tabs" style="margin-top: 5%;">
             <ul class="tab-nav">
-                <li class="active" id="CPSExamsTab"><a href="#">Competitive Exams</a></li>                
-                <li><a href="#" id="DPSExamsTab">Practice Exams</a></li> 
+                <li class="active"><a href="javascript:void(0)" id="DPSExamsTab">Practice Exams</a></li> 
+                <li><a href="javascript:void(0)" id="CPSExamsTab">Competitive Exams</a></li>                
                 <!-- <li><a href="#">Notices</a></li> -->
                 <!-- <li class="ttip" data-tooltip="Subscription required."><a href="#">Progress Card</a></li> -->
             </ul>
-            <div id="upcomingExams" class="tab-content active">
-              {% for eachExam in upcoming_exams %}
-                {% ifequal eachExam.exam_family 'CPS' %}
-                  {% if user.student_category == 'IDP' or user.student_category == eachExam.exam_category %}
-                    <article class="valign row text-color-white ui-widget-content ui-corner-all my-margin {% if eachExam.subscribed %} subscribed {% else %} notsubscribed {% endif %}">
-                    <!-- <div style="width:10%"> -->
-                    {% if eachExam.subscribed %}
-                      <i class="icon-check icon-color-subscribed myicon" style="margin-top: 12px;margin-left: 10px;"></i>
-                    {% else %}
-                      <i class="icon-lock icon-color-notsubscribed myicon" style="margin-top:12px;margin-left: 10px;"></i>
-                    {% endif %}
-                    <!-- </div> -->
-                  <div style="width:25%">
-                    <img src="/static/images/{{eachExam.image}}" width="145px" />
-                </div>
-                <div style="width:65%">
-                    <h4><a onclick="attend_exam('{{eachExam.code}}')" href="#" id="{{eachExam.code}}/"><strong>{{eachExam.name}}</strong></a></h4>
-                    <p><strong>Date: </strong>{{eachExam.exam_date}}</p>
-                    <p><strong>Time: </strong>{{eachExam.exam_time}}</p>
-                    {% if not eachExam.subscribed %}
-                    <p><strong>Cost: </strong>Rs. 15 (<a href="/coupon/">coupon code</a> entry required)</p>
-                    {% endif %}
-                     <div class="medium primary btn pretty button-margin" >
-                          <a id="giveCPSExamBtn" href="{% if eachExam.subscribed %}/honorcode/{{eachExam.code}}/{% else %}#{% endif %}" {% if not eachExam.subscribed %} onclick="attempt_exam('{{eachExam.code}}')" {% endif %}>Give Exam</a>
-                      </div>
-                  </div>
-                </article>
-                {% endif %}
-                {% endifequal %}
-              {% endfor %}
-            </div> 
 
-            <div id="upcomingPracticeExams" class="tab-content">
+            <div id="upcomingPracticeExams" class="tab-content active">
               {% for eachExam in upcoming_exams %}
                 {% ifequal eachExam.exam_family  'DPS' %}
                 {% if user.student_category == 'IDP' or user.student_category == eachExam.exam_category %}
@@ -122,7 +91,37 @@
                 {% endif %}
                 {% endifequal %}
               {% endfor %}
-
+            </div> 
+            <div id="upcomingExams" class="tab-content">
+              {% for eachExam in upcoming_exams %}
+                {% ifequal eachExam.exam_family 'CPS' %}
+                  {% if user.student_category == 'IDP' or user.student_category == eachExam.exam_category %}
+                    <article class="valign row text-color-white ui-widget-content ui-corner-all my-margin {% if eachExam.subscribed %} subscribed {% else %} notsubscribed {% endif %}">
+                    <!-- <div style="width:10%"> -->
+                    {% if eachExam.subscribed %}
+                      <i class="icon-check icon-color-subscribed myicon" style="margin-top: 12px;margin-left: 10px;"></i>
+                    {% else %}
+                      <i class="icon-lock icon-color-notsubscribed myicon" style="margin-top:12px;margin-left: 10px;"></i>
+                    {% endif %}
+                    <!-- </div> -->
+                  <div style="width:25%">
+                    <img src="/static/images/{{eachExam.image}}" width="145px" />
+                </div>
+                <div style="width:65%">
+                    <h4><a onclick="attend_exam('{{eachExam.code}}')" href="#" id="{{eachExam.code}}/"><strong>{{eachExam.name}}</strong></a></h4>
+                    <p><strong>Date: </strong>{{eachExam.exam_date}}</p>
+                    <p><strong>Time: </strong>{{eachExam.exam_time}}</p>
+                    {% if not eachExam.subscribed %}
+                    <p><strong>Cost: </strong>Rs. 15 (<a href="/coupon/">coupon code</a> entry required)</p>
+                    {% endif %}
+                     <div class="medium primary btn pretty button-margin" >
+                          <a id="giveCPSExamBtn" href="{% if eachExam.subscribed %}/honorcode/{{eachExam.code}}/{% else %}#{% endif %}" {% if not eachExam.subscribed %} onclick="attempt_exam('{{eachExam.code}}')" {% endif %}>Give Exam</a>
+                      </div>
+                  </div>
+                </article>
+                {% endif %}
+                {% endifequal %}
+              {% endfor %}
             </div> 
             <!-- <div class="tab-content" id="notices">
               {% for eachSchedule in upcoming_schedules %}

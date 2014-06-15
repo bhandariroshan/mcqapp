@@ -171,6 +171,7 @@
   <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
   <script src="{% static "js/jquery-1.10.2.js" %}"></script>
   <script src="{% static "js/jquery-ui.js" %}"></script>
+
   <!--<script src="//code.jquery.com/jquery-1.10.2.js"></script>-->
   <!--<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>-->
   <!-- We highly recommend you use SASS and write your custom styles in sass/_theme.scss.
@@ -305,6 +306,7 @@
   </style>
   <!-- <link rel="stylesheet" href="css/style.css"> -->
   <script src="{% static "js/modernizr-min.js" %}"></script>
+  <script gumby-debug gumby-touch="/bower_components/gumby/js/libs" src="http://gumbyframework.com/js/libs/gumby.min.js?1379449666"></script>
 
 {% block head %}
 {% endblock %}
@@ -426,7 +428,7 @@
 
   <!--Include gumby.js followed by UI modules followed by gumby.init.js
   Or concatenate and minify into a single file -->
-  <script gumby-touch="js/libs" src="{% static "js/gumby.js" %}"></script>
+  <!--<script gumby-touch="js/libs" src="{% static "js/gumby.js" %}"></script>-->
   <script src="{% static "js/gumby.retina.js" %}"></script>
   <script src="{% static "js/gumby.fixed.js" %}"></script>
   <script src="{% static "js/gumby.skiplink.js" %}"></script>
@@ -434,7 +436,7 @@
   <script src="{% static "js/gumby.radiobtn.js" %}"></script>
   <script src="{% static "js/gumby.checkbox.js" %}"></script>
   <script src="{% static "js/gumby.tabs.js" %}"></script>
-  <!--<script src="{% static "js/gumby.fittext.js" %}"></script>-->
+  <script src="{% static "js/gumby.fittext.js" %}"></script>
   <script src="{% static "js/jquery.validation.js" %}"></script>
   <script src="{% static "js/gumby.navbar.js" %}"></script>
   <script src="{% static "js/gumby.shuffle.js" %}"></script> 
@@ -442,6 +444,7 @@
   <script src="{% static "js/jquery.bxslider.min.js" %}"></script>
   <script src="{% static "js/waypoints.min.js" %}"></script>
   <script src="{% static "js/placeholders.js" %}"></script>
+
   {% if not request.user.is_authenticated %}  
     <script src="{% static "js/scrollIt.min.js" %}"></script>
     <script type="text/javascript" src="{% static "js/meroans.js" %}"></script>
