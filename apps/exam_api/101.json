@@ -149,7 +149,7 @@
     },
     {
         "question": {
-            "text": "If Young's modulus of iron is $ 2 \\times 10^{11} N/m^{2} $ and the interatomic spacing between two molecules is $ 3 \\times 10^{-10} m $, the interatomic force constant is:"
+            "text": "If Young's modulus of iron is $ 2 \\times 10^{11} N/m^{2} $ and the inter atomic spacing between two molecules is $ 3 \\times 10^{-10} m $, the interatomic force constant is:"
         },
         "answer": {
             "a": {
