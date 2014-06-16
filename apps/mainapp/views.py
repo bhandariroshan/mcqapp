@@ -20,6 +20,8 @@ from allauth.socialaccount import providers
 from allauth.socialaccount.models import SocialLogin, SocialToken, SocialApp
 from allauth.socialaccount.providers.facebook.views import fb_complete_login
 from allauth.socialaccount.helpers import complete_social_login
+from django.contrib.auth.decorators import user_passes_test
+
 
 from django import forms
 from django.contrib.auth.models import User
@@ -477,6 +479,7 @@ def privacy(request):
     parameters = {}
     return render_to_response('privacy.html', parameters, context_instance=RequestContext(request))    
 
+@user_passes_test(lambda u: u.is_superuser)
 def generate_coupon(request):
     # 1. DPS (Daily Practice Set)
     # 2. CPS (Competitive Pracice Set)
@@ -490,7 +493,8 @@ def generate_coupon(request):
     coupon.generate_coupons('BE-IOE')
     coupon.generate_coupons('MBBS-IOM')
     return HttpResponse(json.dumps({'status':'success'}))
-
+    
+@user_passes_test(lambda u: u.is_superuser)
 def get_coupons(request, subscription_type):
     coupon_obj = Coupon()
     if subscription_type == 'beioe':
