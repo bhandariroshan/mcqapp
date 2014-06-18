@@ -298,7 +298,7 @@ def attend_cps_exam(request, exam_code):
     
         parameters['all_answers'] = json.dumps(all_answers)                        
         parameters['questions'] = json.dumps(sorted_questions)
-        exam_details['exam_duration'] = exam_details['exam_duration'] - time_elapsed/60
+        exam_details['exam_duration'] = (exam_details['exam_duration']*60 - time_elapsed)/60
         exam_details['exam_date'] = datetime.datetime.fromtimestamp(int(exam_details['exam_date'])).strftime('%Y-%m-%d')
         parameters['exam_details'] = exam_details
         parameters['start_question_number'] = start_question_number
