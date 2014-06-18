@@ -98,7 +98,11 @@ class AjaxHandle():
                 from apps.mainapp.classes.query_database import ExammodelApi
                 ema = ExammodelApi()
                 exam_details = ema.find_one_exammodel({'exam_code':int(exam_code)})
-                time_elapsed = time.mktime(datetime.datetime.now().timetuple()) - validate['start_time']
+                if exam_details['exam_family'] == 'CPS':
+                    time_elapsed = time.mktime(datetime.datetime.now().timetuple()) - exam_details['exam_date']
+                else:
+                    time_elapsed = time.mktime(datetime.datetime.now().timetuple()) - validate['start_time']
+                time_remained = (exam_details['exam_duration']*60 - time_elapsed)/60
                 '''check if user time has expired or not '''
                 if time_elapsed > exam_details['exam_duration']*60:
                     return HttpResponse(json.dumps({'status':'TimeElapsedError', 'message':'Time has elapsed'}))
@@ -112,7 +116,8 @@ class AjaxHandle():
                         'useruid':request.user.id
                         }, {'cqn':int(request.POST.get('current_question_number',''))+1})
                     request.session['exam_code'] = request.POST.get('exam_code','')
-                    return HttpResponse(json.dumps({'status':'ok', 'message':'Answer successfully saved'}))
+                    return HttpResponse(json.dumps({'status':'ok', 'message':'Answer successfully saved', 'time_remained':time_remained}))
+
             else:
                 return HttpResponse(json.dumps({'status':'error', 'message':'Exam not Validated'}))
         else:

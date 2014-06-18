@@ -364,7 +364,7 @@ def attend_dps_exam(request,exam_code):
                 'exam_code':int(exam_code), 'user_id':int(request.user.id),
                 'ess_time':int(validate_start['start_time'])})
             time_elapsed = time.mktime(datetime.datetime.now().timetuple()) - validate_start['start_time']
-            exam_details['exam_duration'] = exam_details['exam_duration'] - time_elapsed/60
+            exam_details['exam_duration'] = (exam_details['exam_duration']*60 - time_elapsed)/60
 
             parameters['all_answers'] = json.dumps(all_answers)                        
             question_obj = QuestionApi()    

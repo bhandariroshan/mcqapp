@@ -47,7 +47,11 @@ function save_answer(exam_code, question_id, selected_ans,current_question_numbe
 function save_answer_success(data){
 	data = jQuery.parseJSON(data);
 	if (data['status'] == 'TimeElapsedError'){
-		
+
+	}
+	else{
+		toal_time = data['time_remained']*60;
+
 	}
 }
 function ajax_honor_code_accept(exam_code){
