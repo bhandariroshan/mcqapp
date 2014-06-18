@@ -1,6 +1,6 @@
 $('.li-height').click(function(){
   /*$(this).effect("highlight", {}, 2000);*/
-  save_answer(exam_code, question_id, this.id, current_question_number);
+  ret_value = save_answer(exam_code, question_id, this.id, current_question_number);
 
   var clicked = this.children[1].id.substr(9,this.children[1].id.length);
   var check_id = "#inputoption"+clicked;
@@ -41,32 +41,32 @@ function load_question(q_no){
   $('#loadNext').attr('id', 'loadNext' + questions[current_question_number]['uid']['id']);
     var question_text = '<span  style="font-weight:bold;"><span style="color:blue;">' + (current_question_number+1) + '. </span>' +  questions[next_question]['question']['text'] + '</span>';
 
-  if (questions[next_question]['question']['image'] != undefined){
-        question_text = question_text + '<img src="/static/images/'+ exam_code + '/' + String(questions[next_question]['question']['image']) + '" style="margin-left:15%; height:140px;" />'; 
+  if (questions[next_question]['question']['image'] != undefined && questions[next_question]['question']['image'] != ''){
+        question_text = question_text + '<img src="/static/images/'+ exam_code + '/' + String(questions[next_question]['question']['image']) + '" style=" height:140px;" />'; 
       }
   $('#questionText').html(question_text);
 
   var option_a_text = '<a href="javascript:void(0)"><span></span>' + questions[next_question]['answer']['a']['text'] + '<br>';
-  if (questions[next_question]['answer']['a']['image'] != undefined){
-        option_a_text= option_a_text + '<img src="/static/images/' + exam_code + '/'+ questions[next_question]['answer']['a']['image'] + '" style="margin-left:15%; height:140px;" />';
+  if (questions[next_question]['answer']['a']['image'] != undefined && questions[next_question]['answer']['a']['image'] != ''){
+        option_a_text= option_a_text + '<img src="/static/images/' + exam_code + '/'+ questions[next_question]['answer']['a']['image'] + '" style=" height:140px;" />';
     }
   $('#divOptionA').html(option_a_text + "</a>");
 
   var option_b_text = '<a href="javascript:void(0)"><span></span>' + questions[next_question]['answer']['b']['text'] + '<br>';
-  if (questions[next_question]['answer']['b']['image'] != undefined){
-        option_b_text= option_b_text + '<img src="/static/images/' + exam_code +'/'+ questions[next_question]['answer']['b']['image'] + '" style="margin-left:15%; height:140px;" />';
+  if (questions[next_question]['answer']['b']['image'] != undefined && questions[next_question]['answer']['a']['image'] != ''){
+        option_b_text= option_b_text + '<img src="/static/images/' + exam_code +'/'+ questions[next_question]['answer']['b']['image'] + '" style=" height:140px;" />';
     }
   $('#divOptionB').html(option_b_text + "</a>");
 
   var option_c_text = '<a href="javascript:void(0)"><span></span>' + questions[next_question]['answer']['c']['text'] + '<br>';
-  if (questions[next_question]['answer']['c']['image'] != undefined){
-          option_c_text = option_c_text + '<img src="/static/images/' + exam_code + '/'+ questions[next_question]['answer']['c']['image'] + '" style="margin-left:15%; height:140px;" />';
+  if (questions[next_question]['answer']['c']['image'] != undefined && questions[next_question]['answer']['a']['image'] != ''){
+          option_c_text = option_c_text + '<img src="/static/images/' + exam_code + '/'+ questions[next_question]['answer']['c']['image'] + '" style=" height:140px;" />';
     }    
   $('#divOptionC').html(option_c_text + "</a>");
 
   var option_d_text = '<a href="javascript:void(0)"><span></span>' + questions[next_question]['answer']['d']['text'] + '<br>';
-  if (questions[next_question]['answer']['d']['image'] != undefined){
-          option_d_text= option_d_text + '<img src="/static/images/' + exam_code + '/' + questions[next_question]['answer']['d']['image'] + '" style="margin-left:15%; height:140px;" />';
+  if (questions[next_question]['answer']['d']['image'] != undefined && questions[next_question]['answer']['a']['image'] != ''){
+          option_d_text= option_d_text + '<img src="/static/images/' + exam_code + '/' + questions[next_question]['answer']['d']['image'] + '" style=" height:140px;" />';
     }
   $('#divOptionD').html(option_d_text + "</a>");  
 
@@ -112,7 +112,8 @@ $('.loadNext').click(function(){
        if ((ans_list.indexOf(current_question_number) > -1)==false)  {
            $('#myAnswers').html(ans_html);
           ans_list.push(current_question_number);
-          save_answer(exam_code, question_id, 'NA', current_question_number);
+          ret_value = save_answer(exam_code, question_id, 'NA', current_question_number);
+          
         }
         else{
           try{

@@ -20,6 +20,8 @@ from allauth.socialaccount import providers
 from allauth.socialaccount.models import SocialLogin, SocialToken, SocialApp
 from allauth.socialaccount.providers.facebook.views import fb_complete_login
 from allauth.socialaccount.helpers import complete_social_login
+from django.contrib.auth.decorators import user_passes_test
+
 
 from django import forms
 from django.contrib.auth.models import User
@@ -187,7 +189,8 @@ def landing(request):
 
             up_exm['code'] = eachExam['exam_code']
             if eachExam['exam_family'] != 'DPS':
-                up_exm['exam_time'] = eachExam['exam_time']
+                exam_start_time = datetime.datetime.strptime(str(datetime.datetime.fromtimestamp(int(eachExam['exam_date']))), "%Y-%m-%d %H:%M:%S").time()
+                up_exm['exam_time'] = exam_start_time
                 up_exm['exam_date'] = datetime.datetime.fromtimestamp(int(eachExam['exam_date'])).strftime("%A, %d. %B %Y")
             up_exm['exam_category'] = eachExam['exam_category']
             up_exm['exam_family'] = eachExam['exam_family']
@@ -274,7 +277,6 @@ def attend_cps_exam(request, exam_code):
         time_elapsed = time.mktime(datetime.datetime.now().timetuple()) - int(exam_details['exam_date'])
         total_questions = question_obj.get_count({"exam_code": int(exam_code)})
         sorted_questions = sorted(questions, key=lambda k: k['question_number'])
-        print sorted_questions
 
         start_question_number = 0 
         current_q_no = cqn.check_current_question_number({
@@ -296,7 +298,7 @@ def attend_cps_exam(request, exam_code):
     
         parameters['all_answers'] = json.dumps(all_answers)                        
         parameters['questions'] = json.dumps(sorted_questions)
-        exam_details['exam_duration'] = exam_details['exam_duration'] - time_elapsed/60
+        exam_details['exam_duration'] = (exam_details['exam_duration']*60 - time_elapsed)/60
         exam_details['exam_date'] = datetime.datetime.fromtimestamp(int(exam_details['exam_date'])).strftime('%Y-%m-%d')
         parameters['exam_details'] = exam_details
         parameters['start_question_number'] = start_question_number
@@ -362,7 +364,7 @@ def attend_dps_exam(request,exam_code):
                 'exam_code':int(exam_code), 'user_id':int(request.user.id),
                 'ess_time':int(validate_start['start_time'])})
             time_elapsed = time.mktime(datetime.datetime.now().timetuple()) - validate_start['start_time']
-            exam_details['exam_duration'] = exam_details['exam_duration'] - time_elapsed/60
+            exam_details['exam_duration'] = (exam_details['exam_duration']*60 - time_elapsed)/60
 
             parameters['all_answers'] = json.dumps(all_answers)                        
             question_obj = QuestionApi()    
@@ -438,9 +440,9 @@ def honorcode(request, exam_code):
             # if current_time - int(exam_details['exam_date']) > int(exam_details['exam_duration'])*60:
             #     return HttpResponseRedirect('/results/' + str(exam_code) +'/')
 
+        
         exam_details['exam_date'] = datetime.datetime.fromtimestamp(int(exam_details['exam_date']))
         validate_start = ess.check_exam_started({'exam_code':int(exam_code), 'useruid':request.user.id, 'start':1})
-        print validate_start
         if validate_start != None:
             h_a_s_accepted = h_a_s.check_honor_code_accepted({
                 'exam_code':int(exam_code), 
@@ -454,6 +456,8 @@ def honorcode(request, exam_code):
             parameters['exam_code'] = exam_code 
             parameters['user'] = user
             parameters['exam_details'] = exam_details
+            
+            
             return render_to_response('exam_tips_and_honor_code.html', parameters, context_instance=RequestContext(request))
         else:
             return HttpResponseRedirect('/cps/' + str(exam_code)+'/')
@@ -463,8 +467,7 @@ def honorcode(request, exam_code):
 def subscription(request):
     parameters = {}    
     user_profile_obj = UserProfile()
-    user = user_profile_obj.get_user_by_username(request.user.username)
-    print user['subscription_type']    
+    user = user_profile_obj.get_user_by_username(request.user.username)   
     parameters['user'] = user
     return render_to_response('subscription.html', parameters, context_instance=RequestContext(request))
 
@@ -476,6 +479,7 @@ def privacy(request):
     parameters = {}
     return render_to_response('privacy.html', parameters, context_instance=RequestContext(request))    
 
+@user_passes_test(lambda u: u.is_superuser)
 def generate_coupon(request):
     # 1. DPS (Daily Practice Set)
     # 2. CPS (Competitive Pracice Set)
@@ -489,7 +493,8 @@ def generate_coupon(request):
     coupon.generate_coupons('BE-IOE')
     coupon.generate_coupons('MBBS-IOM')
     return HttpResponse(json.dumps({'status':'success'}))
-
+    
+@user_passes_test(lambda u: u.is_superuser)
 def get_coupons(request, subscription_type):
     coupon_obj = Coupon()
     if subscription_type == 'beioe':

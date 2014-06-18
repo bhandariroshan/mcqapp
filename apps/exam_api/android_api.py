@@ -135,12 +135,19 @@ def get_scores(request):
             )
 
         from apps.mainapp.classes.query_database import AttemptedAnswerDatabase, QuestionApi
+        from apps.mainapp.classes.query_database import ExammodelApi
+        exam_obj = ExammodelApi()
+        exam_details = exam_obj.find_one_exammodel({'exam_code':int(exam_code)})
+
         question_obj = QuestionApi() 
         ans = AttemptedAnswerDatabase()
         questions = question_obj.find_all_questions({"exam_code": int(exam_code)})        
         sorted_questions = sorted(questions, key=lambda k: k['question_number'])
         attempt_time = time.mktime(datetime.datetime.now().timetuple())
-        
+        if exam_details['exam_family'] == 'CPS':
+            if (attempt_time - (exam_details['exam_date'] + exam_details['exam_duration']*60)) > 15*60:
+                return HttpResponse(json.dumps({'status':'error', 
+                    'message':'We are sorry, you are late in submitting your answers.'}))
 
         for i in range(0,len(answer_list)):
             ans.update_upsert_push({
