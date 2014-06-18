@@ -1,6 +1,6 @@
 $('.li-height').click(function(){
   /*$(this).effect("highlight", {}, 2000);*/
-  save_answer(exam_code, question_id, this.id, current_question_number);
+  ret_value = save_answer(exam_code, question_id, this.id, current_question_number);
 
   var clicked = this.children[1].id.substr(9,this.children[1].id.length);
   var check_id = "#inputoption"+clicked;
@@ -112,7 +112,8 @@ $('.loadNext').click(function(){
        if ((ans_list.indexOf(current_question_number) > -1)==false)  {
            $('#myAnswers').html(ans_html);
           ans_list.push(current_question_number);
-          save_answer(exam_code, question_id, 'NA', current_question_number);
+          ret_value = save_answer(exam_code, question_id, 'NA', current_question_number);
+          
         }
         else{
           try{
