@@ -1,4 +1,5 @@
-
+#!/usr/bin/env python
+# encoding: utf-8
 from django.shortcuts import render_to_response
 from django.http import HttpResponseRedirect
 from django.template import RequestContext
