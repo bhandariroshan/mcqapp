@@ -474,11 +474,31 @@ def subscription(request):
 
 def tos(request):
     parameters = {}
+    user_profile_obj = UserProfile()
+    user = user_profile_obj.get_user_by_username(request.user.username)   
+    parameters['user'] = user    
     return render_to_response('tos.html', parameters, context_instance=RequestContext(request))
+
+def request_coupon(request):
+    parameters = {}
+    user_profile_obj = UserProfile()
+    user = user_profile_obj.get_user_by_username(request.user.username)   
+    parameters['user'] = user    
+    return render_to_response('coupon_contact.html', parameters, context_instance=RequestContext(request))
 
 def privacy(request):
     parameters = {}
-    return render_to_response('privacy.html', parameters, context_instance=RequestContext(request))    
+    user_profile_obj = UserProfile()
+    user = user_profile_obj.get_user_by_username(request.user.username)   
+    parameters['user'] = user    
+    return render_to_response('privacy.html', parameters, context_instance=RequestContext(request))
+
+def distributors(request):
+    parameters = {}
+    user_profile_obj = UserProfile()
+    user = user_profile_obj.get_user_by_username(request.user.username)   
+    parameters['user'] = user
+    return render_to_response('distributors.html', parameters, context_instance=RequestContext(request))
 
 @user_passes_test(lambda u: u.is_superuser)
 def generate_coupon(request):

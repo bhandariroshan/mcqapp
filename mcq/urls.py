@@ -20,5 +20,7 @@ urlpatterns = patterns(
     url(r'^', include('apps.mainapp.urls', app_name='mainapp')),
     url(r'^exam/', include('apps.exam_api.urls', app_name='exam_api')),
     url(r'^subscription/', 'apps.mainapp.views.subscription'),
+    url(r'^distributors/', 'apps.mainapp.views.distributors'),
+    url(r'^request/', 'apps.mainapp.views.request_coupon'),
     url(r'^results/(?P<exam_code>\w{1,15})', 'apps.mainapp.views.results'),
 )

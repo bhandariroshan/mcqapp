@@ -1186,7 +1186,7 @@
                 
             },
             "b": {
-                "text": " N_{2}O $ ",
+                "text": "$ N_{2}O $ ",
             "image":""
                 
             },
@@ -2590,8 +2590,8 @@
     },
     {
         "question": {
-            "text": "The friendship established during mountain climbing  are",
-            "image":"passage.jpg"
+            "text": "<b>Read the following passage carefully and select the best alternative. (85-89). </b><br>Very closely associated with the beauty of the mountains are some special emotions, which the highest and wildest peaks provoke. The companionship provided by climbing together is almost universally valued by mountaineers. Lonely though the mountain peaks are the teams of mountaineers who climb them find a unique kind of bond developing between them. The friendship established on the mountains are lasting and irreplaceable when you have walked the feather edge of danger with someone, when you have held his life at the end of rope of in your hand and he has held yours, you have an almost impregnable foundation of friendship. For the deepest friendships spring from sharing failure as well as success, danger as well as safety. <br> The friendship established during mountain climbing  are",
+            "image":""
         },
         "answer": {
             "a": {
@@ -2623,7 +2623,7 @@
     {
         "question": {
             "text": "Real friendship is born when people share their ",
-            "image":"passage.jpg"
+            "image":""
         },
         "answer": {
             "a": {
@@ -2655,7 +2655,7 @@
     {
         "question": {
             "text": "When you have walked the feather edge of danger with someone",
-            "image":"passage.jpg"
+            "image":""
         },
         "answer": {
             "a": {
@@ -2687,7 +2687,7 @@
     {
         "question": {
             "text": "The word 'impregnable' implies",
-            "image":"passage.jpg"
+            "image":""
         },
         "answer": {
             "a": {
@@ -2719,7 +2719,7 @@
     {
         "question": {
             "text": "'Walked the feather edge of danger with someone' means",
-            "image":"passage.jpg"
+            "image":""
         },
         "answer": {
             "a": {
@@ -2797,7 +2797,7 @@
                 
             },
             "c": {
-                "text": "$ \\sqt{2gh} $",
+                "text": "$ \\sqrt{2gh} $",
             "image":""
                 
             },

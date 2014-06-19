@@ -340,8 +340,9 @@
       </ul>
       {% else %}
       <ul class="eight columns" style="float:right;clear:none;">
-        <li><a href="#">Partners</a></li>
-        <li><a href="#">Coupon Distributors</a></li>
+        <!-- <li><a href="#">Partners</a></li> -->
+        <li><a href="/request/">Request coupon</a></li>
+        <li><a href="/distributors/">Coupon Distributors</a></li>
         <li><a href="/subscription/">Subscription Models</a></li>
         {% if 'attend-exam' in request.path %}
           <li>
@@ -394,8 +395,8 @@
         <p style="text-align:center;">
           <a id="terms" href="/terms/">Terms</a>&nbsp;&nbsp;
           <a id="privacy" href="/privacy/">Privacy policy</a>&nbsp;&nbsp;
-          <a id="partners" href="#">Partners</a>&nbsp;&nbsp;
-          <a id="distributors" href="#">Coupon Distributors</a>&nbsp;&nbsp;
+          <!-- <a id="partners" href="#">Partners</a>&nbsp;&nbsp; -->
+          <a id="distributors" href="/distributors/">Coupon Distributors</a>&nbsp;&nbsp;
           <a id="subscriptionModels" href="/subscription/">Subscription Models</a>&nbsp;&nbsp;
         </p>
     </div>
