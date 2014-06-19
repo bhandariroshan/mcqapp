@@ -1,12 +1,12 @@
 import json
 from bson.objectid import ObjectId
-
 from django.http import HttpResponse
-
+from django.contrib.auth.decorators import user_passes_test
 from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi,\
     CorrectAnswerDatabase
 
 
+@user_passes_test(lambda u: u.is_superuser)
 def load_examset_in_database(request):
     '''
     the function is used to load fake exam set in the exam collection
@@ -61,7 +61,7 @@ def load_examset_in_database(request):
     exam_model.insert_new_model(exam_dict)
     return HttpResponse("Exam model saved in the database")
 
-
+@user_passes_test(lambda u: u.is_superuser)
 def load_modelquestion_in_database(request):
     '''
     the function is used to load fake data in question collection
