@@ -1,21 +1,116 @@
 {% extends 'exam_base.html' %}
 {% load staticfiles %} 
 {% block timer %}
-    <h5 class="h-text-align ui-widget-header ui-corner-all" style="margin-top:0%;"><strong>{{exam_details.exam_name}}</strong></h5>
+    <h5 class="h-text-align " style="margin-top:0%;margin-left: 2%;margin-right: -2%;">
+    <strong>Tribhuvan University</strong><br>
+    <strong>Institute of Engineering </strong><br>
+    <strong>Pulchowk, Lalitpur, Nepal</strong><br>
+    <strong>{{exam_details.exam_name}}</strong>
+    </h5>
     <div class="twelve columns" style="margin-top:2%; margin-bottom:2%;">          
           <div class="six columns" id="startTimer">
                 <!-- <h5 style="color:rgb(104, 16, 16);"><strong><i class="icon-clock"></i>Started {{exam_details.exam_time}}</strong></h5> -->
           </div>
           <div class="six columns">
-                <h5 id="timeRemained" data-intro="determine the time left" data-position="bottom" style="float:right; color:rgb(104, 16, 16);"><strong></strong></h5>
+                <div class="twelve columns">
+                  <div class="seven columns">                  
+                  </div>                
+                  <div class="four columns" style="float: right;">
+                    <img src="{{user.profile_image}}" style="height: 100px; "/>
+                    <p style="font-weight: 400; font-size: 12px; margin-bottom: 0px;">{{user.name}}</p> 
+                    <p  style="font-weight: 400; font-size: 12px;margin-bottom: 0px;">Attempted: 5 </p>
+                    <p style="font-weight: 400; margin-bottom: 0px; font-size: 12px;">Remaining: 25</p>
+                    <p  style="font-weight: 400; margin-bottom: 0px; font-size: 12px;">Total: 65</p>
+                  </div>
+                  <div class="one columns"></div>
+                </div>
+                <div class="twelve columns">
+                  <div class="seven columns">                  
+                  </div>                
+                  <div class="four columns">
+                    <h5 id="timeRemained" data-intro="determine the time left" data-position="bottom" style="float:right; color:rgb(104, 16, 16);"><strong></strong></h5>
+                  </div>
+                  <div class="one columns"></div>
+                </div>
           </div><br/><br/>
     </div>
 {% endblock %}
 {% block exam_content %}
     <div class="twelve columns">
 
-      <div class="seven columns">      
-        <div style=" height: 40px; " class="twelve columns">
+      <div class="twelve columns">      
+       
+        <div id="questionText" data-intro="Read the question carefully" data-position="top" class="div-margin twelve columns ui-widget-content ui-corner-all question-min-height" style="margin-left:-2%">
+          <span  style="font-weight:bold;"><span style="color:blue;">{{start_question.question_number}}. </span> {{ start_question.question.text }} </span>
+          {% if start_question.question.image != '' %}
+
+          <img src="/static/images/{{exam_code}}/{{start_question.question.image}}" style=" height:140px" />
+          {% endif %}
+
+        <ul class="row" id="{{start_question.uid.id}}">
+          <li class="field" style="min-height:30px;">
+            <label class="radio checked" for="radio1">
+              <input name="radio" id="radio1" value="A" type="radio" checked="checked">
+              <span></span> 
+            </label>
+            <div class="clickDiv " id="divOptionA" style="margin-top: -3%;"><span></span>
+                    <a href="javascript:void(0)">
+                    {{ start_question.answer.a.text }}<br>
+                    {% if start_question.answer.a.image != '' %}
+                      <img src="/static/images/{{exam_code}}/{{start_question.answer.a.image}}" style="height:140px;" />
+                    {% endif %}
+                    </a>
+            </div>
+          </li>
+
+          <li class="field" style="min-height:30px;">
+            <label class="radio" for="radio2">
+              <input name="radio" id="radio2" value="2" type="radio">
+              <span></span> 
+            </label>
+            <div class="clickDiv " id="divOptionB" style="margin-top: -3%;"><span></span>
+                    <a href="javascript:void(0)">
+                    {{ start_question.answer.b.text }}<br>
+                    {% if start_question.answer.b.image != '' %}
+                      <img src="/static/images/{{exam_code}}/{{start_question.answer.b.image}}" style="height:140px;" />
+                    {% endif %}
+                    </a>
+            </div>
+          </li>
+
+          <li class="field" style="min-height:30px;">
+            <label class="radio" for="radio3">
+              <input name="radio" id="radio3" value="2" type="radio">
+              <span></span> 
+            </label>
+            <div class="clickDiv " id="divOptionC" style="margin-top: -3%;"><span></span>
+                    <a href="javascript:void(0)">
+                    {{ start_question.answer.c.text }}<br>
+                    {% if start_question.answer.c.image != '' %}
+                      <img src="/static/images/{{exam_code}}/{{start_question.answer.c.image}}" style=" height:140px;" />
+                    {% endif %}
+                    </a>
+            </div>
+          </li>
+
+          <li class="field" style="min-height:30px;">
+            <label class="radio" for="radio4">
+              <input name="radio" id="radio4" value="2" type="radio">
+              <span></span> 
+            </label>
+            <div class="clickDiv " id="divOptionD" style="margin-top: -3%;"><span></span>
+                    <a href="javascript:void(0)">
+                    {{ start_question.answer.d.text }}<br>
+                    {% if start_question.answer.d.image != '' %}
+                      <img src="/static/images/{{exam_code}}/{{start_question.answer.d.image}}" style="height:140px;" />
+                    {% endif %}
+                    </a>
+            </div>            
+          </li>       
+        </ul>          
+        </div>
+                     
+        <div style=" height: 40px; margin-left: -2%;" class="twelve columns">
           <span>
             <div class="small primary btn pretty" id="loadPrev">
               <a href="#"  data-intro="Attempt previous question" data-position="top"><i class="icon-arrow-left"></i>Previous</a>
@@ -26,76 +121,8 @@
               <a href="#" data-intro="Attempt this question later" data-position="top"><i class="icon-arrow-right" ></i>Skip to Next</a>
             </div>
           </span>
-        </div>        
-        <div id="questionText" data-intro="Read the question carefully" data-position="top" class="div-margin twelve columns ui-widget-content ui-corner-all question-min-height">
-          <span  style="font-weight:bold;"><span style="color:blue;">{{start_question.question_number}}. </span> {{ start_question.question.text }} </span>
-          {% if start_question.question.image != '' %}
-
-          <img src="/static/images/{{exam_code}}/{{start_question.question.image}}" style=" height:140px" />
-          {% endif %}
-        </div>
-        <div class="twelve columns" id="optionsDiv" style="margin-left: 0%;">           
-          <ul class="two_up tiles" id="{{start_question.uid.id}}">
-            
-              <li class="field ui-widget-content ui-corner-all li-height" data-intro="Click on correct answer to submit" data-position="bottom" id="a">
-                <p class="h-text-align ui-widget-header ui-corner-all">A</p>
-                <div class="clickDiv " id="divOptionA" ><span></span>
-                    <a href="javascript:void(0)">
-                    {{ start_question.answer.a.text }}<br>
-                    {% if start_question.answer.a.image != '' %}
-                      <img src="/static/images/{{exam_code}}/{{start_question.answer.a.image}}" style="height:140px;" />
-                    {% endif %}
-                    </a>
-                </div>
-              </li>
-            
-                                    
-              <li class="field ui-widget-content ui-corner-all li-height" data-intro="Click on correct answer to submit" data-position="bottom" id="b">              
-                <p class="h-text-align ui-widget-header ui-corner-all">B</p>
-                <div class="clickDiv " id="divOptionB" ><span></span>
-                    <a href="javascript:void(0)">
-                    {{ start_question.answer.b.text }}<br>
-                    {% if start_question.answer.b.image != '' %}
-                      <img src="/static/images/{{exam_code}}/{{start_question.answer.b.image}}" style="height:140px;" />
-                    {% endif %}
-                    </a>
-                </div>
-              </li>
-            
-
-              <li class="field ui-widget-content ui-corner-all li-height forum_hover" id="c">
-                <p class="h-text-align ui-widget-header ui-corner-all">C</p>
-                <div class="clickDiv " id="divOptionC" ><span></span>
-                    <a href="javascript:void(0)">
-                    {{ start_question.answer.c.text }}<br>
-                    {% if start_question.answer.c.image != '' %}
-                      <img src="/static/images/{{exam_code}}/{{start_question.answer.c.image}}" style=" height:140px;" />
-                    {% endif %}
-                    </a>
-                </div>
-              </li>
-            
-              <li class="field ui-widget-content ui-corner-all li-height forum_hover" id="d">              
-                <p class="h-text-align ui-widget-header ui-corner-all">D</p>
-                <div class="clickDiv " id="divOptionD" ><span></span>
-                    <a href="javascript:void(0)">
-                    {{ start_question.answer.d.text }}<br>
-                    {% if start_question.answer.d.image != '' %}
-                      <img src="/static/images/{{exam_code}}/{{start_question.answer.d.image}}" style="height:140px;" />
-                    {% endif %}
-                    </a>
-                </div>
-          </ul>
-        </div>              
-        <div style="clear:both"></div>
-      </div>
-      
-      <div data-intro="Resubmit your answers by clicking on question number on answersheet. NA = Not Attempted, so make sure you answer all the questions." data-position="top" class="five columns ui-widget-content ui-corner-all" id="myAnswerSheet" style="height:350px; overflow-y:scroll; overflow-x:hidden">
-        <h5 class="h-text-align ui-widget-header ui-corner-all"><strong>Answer sheet</strong></h5>
-        <div id="myAnswers" style="margin-left:4%;">
-        </div>
-      </div>
-    </div>    
+        </div> 
+      </div>      
     <div id="trigger_gumby_div" style="visibility:hidden;" class="pretty medium primary btn switch" gumby-trigger="#modalwarning"></div>
     <div class="modal" id="modalwarning">
       <div class="content">

@@ -37,15 +37,26 @@ from apps.mainapp.classes.query_database import AttemptedAnswerDatabase,CurrentQ
 
 def sign_up_sign_in(request, android_user=False):
     social_account = SocialAccount.objects.get(user__id=request.user.id)
+    access_token = SocialToken.objects.get(account__user__id=request.user.id)
     from apps.mainapp.classes.Userprofile import UserProfile        
     user_profile_object = UserProfile()
+
+
     user = user_profile_object.get_user_by_username(request.user.username)
     try:
         valid_exams = user['valid_exam']
     except:
         # valid_exams=[100, 101]
         valid_exams=[]
-
+    try:
+        profile_image = user['profile_image']
+    except:
+        from facepy import GraphAPI
+        graph = GraphAPI(access_token)
+        det = graph.get(social_account.uid + '/picture/?redirect=0&height=300&type=normal&width=300')
+        profile_image = det['data']['url']
+        print profile_image
+    
     try:
         coupons = user['coupons']
     except:
@@ -86,7 +97,8 @@ def sign_up_sign_in(request, android_user=False):
             'newsletter_freq':'Weekly',
             'join_time':int(join_time),
             'student_category':student_category,
-            'student_category_set':student_category_set
+            'student_category_set':student_category_set,
+            'profile_image':profile_image
     }
 
     if android_user == True:
@@ -316,7 +328,9 @@ def attend_dps_exam(request,exam_code):
     user_profile_obj = UserProfile()
     subscribed = user_profile_obj.check_subscribed(request.user.username, exam_code)
     if request.user.is_authenticated() and subscribed:
+        user_det = user_profile_obj.get_user_by_username(request.user.username)
         parameters = {}
+        parameters['user'] = user_det
         ess = ExamStartSignal()        
         exam_obj = ExammodelApi()
         ess = ExamStartSignal()            
