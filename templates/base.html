@@ -318,8 +318,10 @@
     {% if request.user.is_authenticated %}<div class="row">{% endif %}
       <h2 class="columns logo" style="{% if not request.user.is_authenticated %} margin-left:10%; {% endif %}">
         <a href="/" data-scroll-nav="0">
-         {% if not request.user.is_authenticated %}
+         {% if request.user.is_authenticated %}
           <img src="{% static 'images/logos/icon_512.png' %}" width="120" height="60" alt="">
+          {% else %}
+          <img src="{% static 'images/logos/meroanswer.png' %}" width="120" height="60" alt="">
          {% endif %}         
         </a>
       </h2>
