@@ -133,17 +133,15 @@ def add_html(request):
 @csrf_exempt
 def android(request): 
     login_by_token(request)
-
-    if len(request.META['HTTP_USER_AGENT'])>0:
-        # return HttpResponseRedirect('https://play.google.com/store/apps/details?id=com.meroanswer')
-        return HttpResponseRedirect('http://bit.ly/meroanswer')
-        
     if request.user.is_authenticated():
         sign_up_sign_in(request, android_user=True)
         return HttpResponse(json.dumps({'status':'ok'}))
     else:
         return HttpResponse(json.dumps({'status':'error', 'message':'User not authenticated'}))
 
+def androidapk(request):
+    # return HttpResponseRedirect('https://play.google.com/store/apps/details?id=com.meroanswer')
+    return HttpResponseRedirect('http://bit.ly/meroanswer')
 
 def dashboard(request):
     if request.user.is_authenticated():
