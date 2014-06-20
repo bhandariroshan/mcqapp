@@ -348,9 +348,9 @@
         <li><a href="/request/">Request coupon</a></li>
         <li><a href="/distributors/">Coupon Distributors</a></li>
         <li><a href="/subscription/">Subscription Models</a></li>
-        {% if 'dps in request.path or 'cps' in request.path %}
+        {% if 'dps' in request.path or 'cps' in request.path %}
           <li>
-              <a href="#" data-toggle="chardinjs">Instructions</a>
+              <a href="#" data-toggle="chardinjs">Help</a>
           </li>
         {% endif %}
         <li>
