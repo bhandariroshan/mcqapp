@@ -54,8 +54,13 @@ class ExamHandler():
             correct_answers[
                 sorted_questions[index]['subject']]['attempted_answer'] += 1
             if sorted_questions[index]['answer']['correct'] == choice:
-                correct_answers[
-                    sorted_questions[index]['subject']]['score'] += 1
+                try:
+                    correct_answers[                    
+                        sorted_questions[index]['subject']]['score'] += 1 * int(sorted_questions[index]['marks'])
+                except:
+                    correct_answers[                    
+                        sorted_questions[index]['subject']]['score'] += 1
+                        
         total_score = 0
         total_attempted = 0
         score_list = []
