@@ -42,7 +42,7 @@ var $JssorDebug$ = new function () {
         var debug = this.$DebugMode;
 
         if (debug && console.log) {
-            console.log(msg);
+            //console.log(msg);
         } else if (debug && important) {
             alert(msg);
         }

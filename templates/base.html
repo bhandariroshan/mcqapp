@@ -371,7 +371,7 @@
 <div id="trigger_gumby_div" style="visibility:hidden;" class="pretty medium primary btn switch" gumby-trigger="#modalentercouponcode"></div>
 <div class="modal" id="modalentercouponcode">
   <div class="content">
-    <a class="close switch" gumby-trigger="|#modalentercouponcode"><i class="icon-cancel" /></i></a>
+    <a class="close switch" gumby-trigger="|#modalentercouponcode" id="closeEnterCoupon"><i class="icon-cancel" /></i></a>
     <div class="row">
       <div id="dangerMessage"></div>
       <div class="ten columns centered text-center" style="margin-top:6%;">
@@ -479,6 +479,12 @@
 var myVar=setInterval(function(){
   $('.bx-next').click();
 },2000);
+
+$(document).keyup(function(e) {
+  if (e.keyCode == 27) { 
+      $('#closeEnterCoupon').click();
+  }   // esc
+});
 </script>
 
 {% endblock %}
