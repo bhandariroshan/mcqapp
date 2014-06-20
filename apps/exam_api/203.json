@@ -1842,7 +1842,7 @@
         "exam_code": 203,
         "marks": 2,
         "question": {
-            "text": "If $ \\log_{2}y = x and log_{3}z = x then (108)^{x} = $",
+            "text": "If $ \\log_{2} $ y = x and $ log_{3}z = x $ then $ (108)^{x} = $",
             "image": ""
         },
         "subject": "mathematics"
