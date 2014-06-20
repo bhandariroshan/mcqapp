@@ -1868,21 +1868,21 @@
                 
             },
             "b": {
-                "text": "4",
+                "text": "A st. line",
             "image":""
                 
             },
             "c": {
-                "text": "8",
+                "text": "A cone",
             "image":""
                 
             },
             "d": {
-                "text": "16",
+                "text": "A triangle",
             "image":""
                 
             },
-            "correct": "d"
+            "correct": "a"
         },
         "subject": "Mathematics",
         "exam_code": 100
@@ -2051,22 +2051,22 @@
         },
         "answer": {
             "a": {
-                "text": "^{50}C_9",
+                "text": "$ ^{50}C_9$ ",
             "image":""
                 
             },
             "b": {
-                "text": "^{50}C_10",
+                "text": "$ ^{50}C_10 $",
             "image":""
                 
             },
             "c": {
-                "text": "^{50}C_29",
+                "text": "$ ^{50}C_29 $",
             "image":""
                 
             },
             "d": {
-                "text": "^{50}C_30",
+                "text": "$ ^{50}C_30 $",
             "image":""
                 
             },
@@ -2366,7 +2366,7 @@
     },     
     {
         "question": {
-            "text": "\\int\\frac{(x+1)(x+logx)^{3}}{x} dx = ",
+            "text": "$ \\int\\frac{(x+1)(x+logx)^{3}}{x} dx = $",
             "image":""
         },
         "answer": {
@@ -2984,17 +2984,17 @@
                 
             },
             "b": {
-                "text": "$ 15^{o} ",
+                "text": "$ 15^{o} $",
             "image":""
                 
             },
             "c": {
-                "text": "$ 30^{o} ",
+                "text": "$ 30^{o} $",
             "image":""
                 
             },
             "d": {
-                "text": "$ 60^{o} ",
+                "text": "$ 60^{o} $",
             "image":""
                 
             },
@@ -3262,7 +3262,7 @@
     },
     {
         "question": {
-            "text": "An alternating current is given as $  i=i_1coswt +i_2sinwt the rms current is given by $",
+            "text": "An alternating current is given as $  i=i_1coswt +i_2sinwt $ the rms current is given by ",
             "image":""
         },
         "answer": {
