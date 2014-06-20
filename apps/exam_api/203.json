@@ -90,7 +90,7 @@
                 "image": ""
             },
             "c": {
-                "text": "\\frac{1}{e}",
+                "text": "$ \\frac{1}{e} $",
                 "image": ""
             },
             "b": {
@@ -126,7 +126,7 @@
                 "image": ""
             },
             "d": {
-                "text": "\\frac{1}{a} \\tan^{-1} \\frac{x}{a}",
+                "text": "$ \\frac{1}{a} \\tan^{-1} \\frac{x}{a} $",
                 "image": ""
             },
             "correct": "a"
@@ -162,7 +162,7 @@
         "exam_code": 203,
         "marks": 1,
         "question": {
-            "text": "Area of $ \\triangle OAB. where \\overrightarrow{OA} = \\overrightarrow{a} and \\overrightarrow{OB} = \\overrightarrow{b}$ is ",
+            "text": "Area of $ \\triangle OAB $. where $ \\overrightarrow{OA} $ = $ \\overrightarrow{a} $ and $\\overrightarrow{OB} $ = $ \\overrightarrow{b} $ is ",
             "image": ""
         },
         "subject": "mathematics"
@@ -722,7 +722,7 @@
         "exam_code": 203,
         "marks": 1,
         "question": {
-            "text": "The coordinates of a moving particle at time t and $ x = ct{2} and y = bt{2} $. The speed of particle is",
+            "text": "The coordinates of a moving particle at time t and $ x = ct^{2} $ and $ y = bt^{2} $. The speed of particle is",
             "image": ""
         },
         "subject": "physics"
@@ -798,7 +798,7 @@
                 "image": ""
             },
             "d": {
-                "text": "$ \\omega= 2\\pi and k= \\pi/2  $",
+                "text": "$ \\omega= 2\\pi $ and $ k= \\pi/2  $",
                 "image": ""
             },
             "correct": "c"
@@ -974,7 +974,7 @@
         "exam_code": 203,
         "marks": 1,
         "question": {
-            "text": "Wgeb arsebuc us added as impurity to silicon, the resulting material is",
+            "text": "When arsenic is added as impurity to silicon, the resulting material is",
             "image": ""
         },
         "subject": "physics"
@@ -1066,7 +1066,7 @@
     {
         "answer": {
             "a": {
-                "text": "$ Na_{2}C)_{3} $",
+                "text": "$ Na_{2}CO_{3} $",
                 "image": ""
             },
             "c": {
@@ -1834,7 +1834,7 @@
                 "image": ""
             },
             "d": {
-                "text": "$ y^z^{2} $",
+                "text": "$ yz^{2} $",
                 "image": ""
             },
             "correct": "c"
@@ -1934,15 +1934,15 @@
     {
         "answer": {
             "a": {
-                "text": "$ ax^{2} + 2hxy + by${2} $",
+                "text": "$ ax^{2} + 2hxy + by^{2} $",
                 "image": ""
             },
             "c": {
-                "text": "$ l^{2}x^{2} + 2lmxy +m^{2}y^{2} = 0 $",
+                "text": "$ l^{2}x^{2} + 2lmxy + m^{2}y^{2} = 0 $",
                 "image": ""
             },
             "b": {
-                "text": "$ ax^{2} + 2hxy + by${2} +2gpx +2fpy + cp^{2} $ where p = lx + my",
+                "text": "$ ax^{2} + 2hxy + by^{2} +2gpx +2fpy + cp^{2} $ where p = lx + my",
                 "image": ""
             },
             "d": {
@@ -2246,15 +2246,15 @@
                 "image": ""
             },
             "c": {
-                "text": "$ frac{3}{7} $",
+                "text": "$ \\frac{3}{7} $",
                 "image": ""
             },
             "b": {
-                "text": "$ frac{sqrt{45}}{7} $",
+                "text": "$ \\frac{\\sqrt{45}}{7} $",
                 "image": ""
             },
             "d": {
-                "text": "$ frac{1}{7} $",
+                "text": "$ \\frac{1}{7} $",
                 "image": ""
             },
             "correct": "a"
@@ -2334,7 +2334,7 @@
                 "image": ""
             },
             "b": {
-                "text": "$ frac{8}{3} $",
+                "text": "$ \\frac{8}{3} $",
                 "image": ""
             },
             "d": {
@@ -2346,7 +2346,7 @@
         "exam_code": 203,
         "marks": 2,
         "question": {
-            "text": "AThe area bounded by the parabola $ y^{2} = x $, y = 4 and y-axis is",
+            "text": "The area bounded by the parabola $ y^{2} = x $, y = 4 and y-axis is",
             "image": ""
         },
         "subject": "mathematics"
@@ -2358,11 +2358,11 @@
                 "image": ""
             },
             "c": {
-                "text": "\\overrightarrow{b} - \\overrightarrow{a}",
+                "text": "$ \\overrightarrow{b} - \\overrightarrow{a} $",
                 "image": ""
             },
             "b": {
-                "text": "\\overrightarrow{a} - \\overrightarrow{b}",
+                "text": "$ \\overrightarrow{a} - \\overrightarrow{b} $",
                 "image": ""
             },
             "d": {
@@ -2522,7 +2522,7 @@
     {
         "answer": {
             "a": {
-                "text": "0.,01%",
+                "text": "0.01%",
                 "image": ""
             },
             "c": {
@@ -2542,7 +2542,7 @@
         "exam_code": 203,
         "marks": 2,
         "question": {
-            "text": "A metallic bar is headed from 0°C to 100°C. The coefficient of linear expansion is $ 10^{-5}K^{-1} $. What will be the percentage increase in length?",
+            "text": "A metallic bar is heated from 0°C to 100°C. The coefficient of linear expansion is $ 10^{-5}K^{-1} $. What will be the percentage increase in length?",
             "image": ""
         },
         "subject": "physics"
