@@ -110,7 +110,6 @@ def sign_up_sign_in(request, android_user=False):
     return user_profile_object.update_upsert({'username':request.user.username}, data)
 
 def latex_html(request): 
-
     return render_to_response("sample-tex.html",{'exam':request.GET.get('exam')})
 
 @csrf_exempt
@@ -139,6 +138,9 @@ def android(request):
     else:
         return HttpResponse(json.dumps({'status':'error', 'message':'User not authenticated'}))
 
+def androidapk(request):
+    return HttpResponseRedirect('https://play.google.com/store/apps/details?id=com.meroanswer')
+    # return HttpResponseRedirect('http://bit.ly/meroanswer')
 
 def dashboard(request):
     if request.user.is_authenticated():
@@ -679,3 +681,14 @@ def get_list_of_result(request):
         return HttpResponse(json.dumps({'status':'ok', 'result':return_dict}))
     else:
         return HttpResponse(json.dumps({'status':'error','message':'You are not authorized to perform this action.'}))
+
+def androidurl(request):
+    # return HttpResponseRedirect('https://play.google.com/store/apps/details?id=com.meroanswer')
+    return HttpResponseRedirect('http://bit.ly/meroanswer')
+
+def couponpage(request):
+    parameters = {}
+    user_profile_obj = UserProfile()
+    user = user_profile_obj.get_user_by_username(request.user.username)   
+    parameters['user'] = user
+    return render_to_response('coupon.html', parameters, context_instance=RequestContext(request))

@@ -36,7 +36,7 @@
 
   {% if not request.user.is_authenticated %} 
     {% ifequal request.path '/' %}
-      <title>MeroAnswer | Sign up and become a part of smart studying for success.</title>
+      <title>MeroAnswer | IOE and IOM based online entrance preparation. </title>
       <!-- Facebook Metadata /-->
       <meta property="og:image" content="http://meroanswer.com/static/images/logos/meroanswerfb.png">
       <meta property="og:description" content="">
@@ -318,11 +318,7 @@
     {% if request.user.is_authenticated %}<div class="row">{% endif %}
       <h2 class="columns logo" style="{% if not request.user.is_authenticated %} margin-left:10%; {% endif %}">
         <a href="/" data-scroll-nav="0">
-         {% if request.user.is_authenticated %}
-          <img src="{% static 'images/logos/icon_512.png' %}" width="80" height="60" alt="">
-          {% else %}
-          <img src="{% static 'images/logos/meroanswer.png' %}" width="120" height="60" alt="">
-         {% endif %}         
+          <img src="{% static 'images/logos/meroanswer_400.png' %}" style="max-width:125px" alt="">
         </a>
       </h2>
 
@@ -345,7 +341,7 @@
       {% else %}
       <ul class="eight columns" style="float:right;clear:none;">
         <!-- <li><a href="#">Partners</a></li> -->
-        <li><a href="/request/">Request coupon</a></li>
+        <li><a href="/coupon/">Request coupon</a></li>
         <li><a href="/distributors/">Coupon Distributors</a></li>
         <li><a href="/subscription/">Subscription Models</a></li>
         {% if 'dps' in request.path or 'cps' in request.path %}
