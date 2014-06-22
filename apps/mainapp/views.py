@@ -566,6 +566,9 @@ def results(request, exam_code):
             answer_list += 'e'
     exam_handler = ExamHandler()    
     score_dict = exam_handler.check_answers(exam_code, answer_list)
+    user_profile_obj = UserProfile()
+    user = user_profile_obj.get_user_by_username(request.user.username)
+    parameters['user'] = user            
     parameters['result'] = score_dict
     parameters['exam_code'] = exam_code
     parameters['myrankcard'] = {'total':200, 'rank':1}
