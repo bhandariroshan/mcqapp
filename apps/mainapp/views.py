@@ -352,7 +352,7 @@ def attend_dps_exam(request,exam_code):
                 'end':0,                
                 'end_time':''
                 })
-            validate_start = ess.check_exam_started({'exam_code':int(exam_code), 'useruid':request.user.id, 'start':1,'end':0})        
+            validate_start = ess.check_exam_started({'exam_code':int(exam_code), 'useruid':request.user.id, 'start':1, 'end':0})        
             check = validate_start['start_time']
 
         dps_exam_start = exam_details['exam_family']=='DPS' and current_time - check > exam_details['exam_duration']*60
@@ -384,31 +384,36 @@ def attend_dps_exam(request,exam_code):
 
             parameters['all_answers'] = json.dumps(all_answers)                        
             question_obj = QuestionApi()    
-            questions = question_obj.get_paginated_questions({"exam_code": int(exam_code)}, fields={'answer.correct':0}, )
+
+            
+            current_pg_num = 1
+            next_page = 0
+
+            if request.GET.get('current','') !='':
+                current_pg_num = int(request.GET.get('current',''))
+
+            if request.GET.get('next','') !='':
+                next_page = int(request.GET.get('next',''))            
+
+            if next_page == 1:
+                current_pg_num = current_pg_num + 1
+            if next_page == -1:
+                current_pg_num = current_pg_num - 1
+
+            if current_pg_num < 1:
+                current_pg_num = 1
+
+            if current_pg_num > 5:
+                current_pg_num = 5
+
+            parameters['current_pg_num'] = current_pg_num
+            questions = question_obj.get_paginated_questions({"exam_code": int(exam_code)}, fields={'answer.correct':0}, page_num = current_pg_num)
+
             total_questions = question_obj.get_count({"exam_code": int(exam_code)})
-            sorted_questions = sorted(questions, key=lambda k: k['question_number'])
+            sorted_questions = sorted(questions, key=lambda k: k['question_number'])  
 
             # parameters['questions'] = json.dumps(sorted_questions)            
-            parameters['questions'] = sorted_questions[0:5]
-            try:
-                parameters['prev_pg_num'] = request.GET.get('prev','')
-                prev_val = True
-                next_val = False
-            except:                 
-                parameters['current_pg_num'] = 1
-                parameters['next_pg_num'] = 2
-                parameters['prev_pg_num'] = 1        
-
-            try:
-                parameters['next_pg_num'] = request.GET.get('next', '')
-                prev_val = False
-                next_val = True
-            except:                                 
-                parameters['current_pg_num'] = 1
-                parameters['next_pg_num'] = 2
-                parameters['prev_pg_num'] = 1        
-
-
+            parameters['questions'] = sorted_questions
             parameters['exam_details'] = exam_details
         
             start_question_number = 0 

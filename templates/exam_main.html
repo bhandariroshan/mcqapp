@@ -40,7 +40,7 @@
       <div class="twelve columns">      
         {% for each_question in questions %}       
         <div id="questionText_{{each_question.question_number}}" data-intro="Read the question carefully" data-position="top" class="div-margin twelve columns ui-widget-content ui-corner-all question-min-height" style="margin-left:-2%">
-          <span  style="font-weight:bold;"><span style="color:blue;">{{each_question.question_number}}. </span> {{ each_question.question.text }} </span>
+          <span  style="font-weight:bold;"><span style="color:blue;">{{each_question.question_number}}. </span> {{ each_question.question.text }} </span><br>
           {% if each_question.question.image != '' %}
 
           <img src="/static/images/{{exam_code}}/{{each_question.question.image}}" style=" height:140px" />
@@ -49,11 +49,12 @@
         <ul class="row" id="{{each_question.uid.id}}">
           <li class="field" style="min-height:30px;">
             <div class="clickDiv" id="div_{{each_question.question_number}}_OptionA" style="vertical-align:middle;"><span></span>            
+                <a href="javascript:void(0)">
                 <label class="radio" for="radio_{{each_question.question_number}}">
                   <input name="radio_{{each_question.question_number}}" id="radio_{{each_question.question_number}}" value="A" type="radio">
                   <span></span> 
                 </label>
-                <a href="javascript:void(0)">
+                
                 {{ each_question.answer.a.text }}<br>
                 {% if each_question.answer.a.image != '' %}
                   <img src="/static/images/{{exam_code}}/{{each_question.answer.a.image}}" style="height:140px;" />
@@ -64,11 +65,11 @@
 
           <li class="field" style="min-height:30px;">
             <div class="clickDiv " id="div_{{each_question.question_number}}_OptionB" style="vertical-align:middle;"><span></span>
+                <a href="javascript:void(0)">
                     <label class="radio" for="radio_{{each_question.question_number}}">
                         <input name="radio_{{each_question.question_number}}" id="radio_{{each_question.question_number}}" value="B" type="radio">
                         <span></span> 
-                    </label>
-                    <a href="javascript:void(0)">
+                    </label>                  
                     {{ each_question.answer.b.text }}<br>
                     {% if each_question.answer.b.image != '' %}
                       <img src="/static/images/{{exam_code}}/{{each_question.answer.b.image}}" style="height:140px;" />
@@ -79,11 +80,11 @@
 
           <li class="field" style="min-height:30px;">
             <div class="clickDiv " id="div_{{each_question.question_number}}_OptionC" style="vertical-align:middle;"><span></span>
+                  <a href="javascript:void(0)">
                   <label class="radio" for="radio_{{each_question.question_number}}_C">
                     <input name="radio_{{each_question.question_number}}" id="radio_{{each_question.question_number}}_C" value="C" type="radio">
                     <span></span> 
-                  </label>
-                    <a href="javascript:void(0)">
+                  </label>                    
                     {{ each_question.answer.c.text }}<br>
                     {% if each_question.answer.c.image != '' %}
                       <img src="/static/images/{{exam_code}}/{{each_question.answer.c.image}}" style=" height:140px;" />
@@ -94,11 +95,11 @@
 
           <li class="field" style="min-height:30px;">
             <div class="clickDiv " id="div_{{each_question.question_number}}_OptionD" style="vertical-align:middle;"><span></span>
+                  <a href="javascript:void(0)">
                   <label class="radio" for="radio_{{each_question.question_number}}_D">
                     <input name="radio_{{each_question.question_number}}" id="radio_{{each_question.question_number}}_D" value="D" type="radio">
                     <span></span> 
-                  </label>            
-                    <a href="javascript:void(0)">
+                  </label>                                
                     {{ each_question.answer.d.text }}<br>
                     {% if each_question.answer.d.image != '' %}
                       <img src="/static/images/{{exam_code}}/{{each_question.answer.d.image}}" style="height:140px;" />
@@ -112,12 +113,12 @@
         <div style=" height: 40px; margin-left: -2%;" class="twelve columns">
           <span>
             <div class="small primary btn pretty" id="loadPrev">
-              <a href="./?prev={{prev_pg_num}}"  data-intro="Attempt previous question" data-position="top"><i class="icon-arrow-left"></i>Previous</a>
+              <a href="./?current={{current_pg_num}}&next=-1"  data-intro="Attempt previous question" data-position="top"><i class="icon-arrow-left"></i>Previous</a>
             </div>
           </span>
           <span style="float:right">
             <div class="small primary btn pretty loadNext" id="loadNext{{next_to_start.uid.id}}">
-              <a href="./?next={{next_pg_num}}" data-intro="Attempt this question later" data-position="top"><i class="icon-arrow-right" ></i>Skip to Next</a>
+              <a href="./?current={{current_pg_num}}&next=1" data-intro="Attempt this question later" data-position="top"><i class="icon-arrow-right" ></i>Skip to Next</a>
             </div>
           </span>
         </div> 
