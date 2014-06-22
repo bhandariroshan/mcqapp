@@ -526,7 +526,7 @@ def get_coupons(request, subscription_type):
         subscription_type = 'MBBS-IOM'
     subscription_type = subscription_type.upper()
     coupons = coupon_obj.get_coupons(subscription_type)
-    coupon_obj.update_coupons(subscription_type)
+    # coupon_obj.update_coupons(subscription_type)
     return HttpResponse(json.dumps({'status':'ok', 'coupons':coupons}))
 
 
@@ -595,6 +595,7 @@ def show_result(request, exam_code, subject_name):
             'subject':str(subject_name), 'marks':1})
         total_questions = question_obj.get_count({"exam_code": int(exam_code), 
             'subject':subject_name, 'marks':1})
+        print total_questions
         sorted_questions = sorted(questions, key=lambda k: k['question_number'])
         try:            
             current_q_no = int(request.GET.get('q',''))
