@@ -38,11 +38,11 @@
                 "image": ""
             },
             "b": {
-                "text": "X+2",
+                "text": "x+2",
                 "image": ""
             },
             "d": {
-                "text": "X+4",
+                "text": "x+4",
                 "image": ""
             },
             "correct": "b"
@@ -114,19 +114,19 @@
     {
         "answer": {
             "a": {
-                "text": "$ e^{x} lnx + c $",
+                "text": "$ e^{x} ln x + c $",
                 "image": ""
             },
             "c": {
-                "text": "$ \\frac{2lnx}{x} + c $",
+                "text": "$ \\frac{2ln x}{x} + c $",
                 "image": ""
             },
             "b": {
-                "text": "$ \\frac{x}{lnx} + c $",
+                "text": "$ \\frac{x}{ln x} + c $",
                 "image": ""
             },
             "d": {
-                "text": "$ lnx - \\frac{x}{2} + c $",
+                "text": "$ ln x - \\frac{x}{2} + c $",
                 "image": ""
             },
             "correct": "b"
@@ -134,7 +134,7 @@
         "exam_code": 201,
         "marks": 1,
         "question": {
-            "text": "$ \\int\\begin{bmatrix} \\frac{1}{lnx}- \\frac{1}{(lnx)^{2}} \\end{bmatrix}dx = $",
+            "text": "$ \\int\\begin{bmatrix} \\frac{1}{ln x}- \\frac{1}{(ln x)^{2}} \\end{bmatrix}dx = $",
             "image": ""
         },
         "subject": "Math"
@@ -286,7 +286,7 @@
                 "image": ""
             },
             "c": {
-                "text": "$ /\\supsetI/ $",
+                "text": "$ /\\supset I/ $",
                 "image": ""
             },
             "b": {
@@ -338,15 +338,15 @@
     {
         "answer": {
             "a": {
-                "text": "$ \\underline {Hunting} tiger is a favorite sport $",
+                "text": "$ \\underline {Hunting} $ tiger is a favorite sport",
                 "image": ""
             },
             "c": {
-                "text": "$ \\underline {Hunted} tiger is a favorite sport $",
+                "text": "$ \\underline {Hunted} $ tiger is a favorite sport",
                 "image": ""
             },
             "b": {
-                "text": "$ \\underline {Hunting}, we were arrested $",
+                "text": "$ \\underline {Hunting} $, we were arrested",
                 "image": ""
             },
             "d": {
@@ -422,7 +422,7 @@
     {
         "answer": {
             "a": {
-                "text": "$ 9:30 $",
+                "text": "9:30",
                 "image": ""
             },
             "c": {
@@ -434,7 +434,7 @@
                 "image": ""
             },
             "d": {
-                "text": "$ 9-30 $",
+                "text": "9-30",
                 "image": ""
             },
             "correct": "a"
@@ -590,7 +590,7 @@
     {
         "answer": {
             "a": {
-                "text": "$ \\underline {what you said} $ broke my heart",
+                "text": "$ \\underline {what \\space you \\space said} $ broke my heart",
                 "image": ""
             },
             "c": {
@@ -602,7 +602,7 @@
                 "image": ""
             },
             "d": {
-                "text": "what you said broke $ \\underline {my heart} $",
+                "text": "what you said broke $ \\underline {my \\space heart} $",
                 "image": ""
             },
             "correct": "a"
@@ -626,7 +626,7 @@
                 "image": ""
             },
             "b": {
-                "text": "Dide in the night he.",
+                "text": "Died in the night he.",
                 "image": ""
             },
             "d": {
@@ -722,7 +722,7 @@
         "exam_code": 201,
         "marks": 1,
         "question": {
-            "text": "A stone projected at angle 30 degree to the horizontal has range $ R_1 $ and projected an angle 45 degree to the horizontal with same speed has range $ R_2 $ then $ R_1:R_2 $ equals",
+            "text": "A stone projected at angle $ 30^o $ to the horizontal has range $ R_1 $ and projected an angle $ 45^o $ to the horizontal with same speed has range $ R_2 $ then $ R_1:R_2 $ equals",
             "image": ""
         },
         "subject": "Physics"
@@ -750,7 +750,7 @@
         "exam_code": 201,
         "marks": 1,
         "question": {
-            "text": "An object of mass 10kg is whirled round a horizontal circle of radius 4m by revolving string inclined at 30 degree to the vertical. If the uniform speed of the object is $ 5ms^{-1} $, the tension in string is",
+            "text": "An object of mass 10kg is whirled round a horizontal circle of radius 4m by revolving string inclined at $ 30^o $ to the vertical. If the uniform speed of the object is $ 5ms^{-1} $, the tension in string is",
             "image": ""
         },
         "subject": "Physics"
@@ -806,7 +806,7 @@
         "exam_code": 201,
         "marks": 1,
         "question": {
-            "text": "The angle of prism is $ 4^{\\circ} $ and R.I. For green light is 1.5. If a green ray passes through it, the deviation will be",
+            "text": "The angle of prism is $ 4^{\\circ} $ and R.I. for green light is 1.5. If a green ray passes through it, the deviation will be",
             "image": ""
         },
         "subject": "Physics"
@@ -1002,7 +1002,7 @@
         "exam_code": 201,
         "marks": 1,
         "question": {
-            "text": "The no. of molecules of water produced by dissolving 10gm of $ CaCO_3 $ (Calcium carbonate) in excess Hcl solution is",
+            "text": "The no. of molecules of water produced by dissolving 10gm of $ CaCO_3 $ (Calcium Carbonate) in excess HCl solution is",
             "image": ""
         },
         "subject": "Chemistry"
@@ -1014,7 +1014,7 @@
                 "image": ""
             },
             "c": {
-                "text": "2x",
+                "text": "2",
                 "image": ""
             },
             "b": {
@@ -1142,7 +1142,7 @@
         "exam_code": 201,
         "marks": 1,
         "question": {
-            "text": "The pH of solution formed by mixing equal vol. Of pH=4 and pH=6 is",
+            "text": "The pH of solution formed by mixing equal vol. of pH=4 and pH=6 is",
             "image": ""
         },
         "subject": "Chemistry"
@@ -1374,7 +1374,7 @@
     {
         "answer": {
             "a": {
-                "text": "3 each",
+                "text": "3",
                 "image": ""
             },
             "c": {
@@ -1982,7 +1982,7 @@
         "exam_code": 201,
         "marks": 2,
         "question": {
-            "text": "The sum to infinity of the series $ 1 + \\left(1-\\frac{1}{n}\\right) + 3\\left(1-\\frac{1}{n}\\right)^{2} + \\dots\\dots + \\infty $ is",
+            "text": "The sum to infinity of the series $ 1 + 2\\left(1-\\frac{1}{n}\\right) + 3\\left(1-\\frac{1}{n}\\right)^{2} + \\dots\\dots + \\infty $ is",
             "image": ""
         },
         "subject": "Math"
@@ -2046,7 +2046,7 @@
     {
         "answer": {
             "a": {
-                "text": "X + y + 1 = 0",
+                "text": "x + y + 1 = 0",
                 "image": ""
             },
             "c": {
@@ -2054,7 +2054,7 @@
                 "image": ""
             },
             "b": {
-                "text": "X + y + 4 = 0",
+                "text": "x + y + 4 = 0",
                 "image": ""
             },
             "d": {
@@ -2178,7 +2178,7 @@
         "exam_code": 201,
         "marks": 2,
         "question": {
-            "text": "If $ \\overrightarrow{a} and \\overrightarrow{b} $ are two unit vectors inclined to x-axis at angles of $ 30^{\\circ} $ and $ 120^{\\circ} $ respectively then $ \\begin{vmatrix}\\overrightarrow{a} + \\overrightarrow{b}\\end{vmatrix} = $ ?",
+            "text": "If $ \\vec{a} $ and $ \\vec{b} $ are two unit vectors inclined to x-axis at angles of $ 30^o $ and $ 120^o $ respectively then $ |\\vec{a} + \\vec{b}| = $ ?",
             "image": ""
         },
         "subject": "Math"
@@ -2346,7 +2346,7 @@
         "exam_code": 201,
         "marks": 2,
         "question": {
-            "text": "A and B are two sets having 3 and 5 element respectively and having 2 elements common to both. Then the number of elements in $ (A \\times B) $ is",
+            "text": "A and B are two sets having 3 and 5 element respectively and having 2 elements common to both. Then the number of elements in (A x B) is",
             "image": ""
         },
         "subject": "Math"
@@ -2374,7 +2374,7 @@
         "exam_code": 201,
         "marks": 2,
         "question": {
-            "text": "The area bounded by the curves $ y = x^{2} $ and $ y = \\begin{vmatrix}x\\end{vmatrix} $ is",
+            "text": "The area bounded by the curves $ y = x^{2} $ and y = |x| is",
             "image": ""
         },
         "subject": "Math"
@@ -2466,19 +2466,19 @@
     {
         "answer": {
             "a": {
-                "text": "$ 0.5^{\\circ}c $",
+                "text": "$ 0.5^oc $",
                 "image": ""
             },
             "c": {
-                "text": "$ 0.8^{\\circ}c $",
+                "text": "$ 0.8^oc $",
                 "image": ""
             },
             "b": {
-                "text": "$ 0.4^{\\circ}c $",
+                "text": "$ 0.4^oc $",
                 "image": ""
             },
             "d": {
-                "text": "$ 1.25^{\\circ}c $",
+                "text": "$ 1.25^oc $",
                 "image": ""
             },
             "correct": "a"
@@ -2486,7 +2486,7 @@
         "exam_code": 201,
         "marks": 2,
         "question": {
-            "text": "A body of mass 5 kg falls from a height of 20 m on the ground and it rebounds to a height of 0.2m. If the loss in P.E. Is used up by the body then the temperature rise is (sp heat of material = 0.09 cal $ /gm/^{\\circ}c $ )",
+            "text": "A body of mass 5 kg falls from a height of 20 m on the ground and it rebounds to a height of 0.2m. If the loss in P.E. is used up by the body then the temperature rise is (sp heat of material = 0.09 $ cal\\space gm^{-1}\\space {^o}c^{-1} $ )",
             "image": ""
         },
         "subject": "Physics"
@@ -2626,7 +2626,7 @@
         "exam_code": 201,
         "marks": 2,
         "question": {
-            "text": "Light of wavelength 5000 Amstrong is incident on a metallic surface with a work function equal to 2eV. Then the stopping potential is nearly equal to",
+            "text": "Light of wavelength 5000 $ \\overset o{A} $ is incident on a metallic surface with a work function equal to 2eV. Then the stopping potential is nearly equal to",
             "image": ""
         },
         "subject": "Physics"
@@ -2766,7 +2766,7 @@
         "exam_code": 201,
         "marks": 2,
         "question": {
-            "text": "A tyre pumped to a pressure of 6 atm brusts suddenly. The temperature of room is $ 15^{\\circ}c then temperature of gas escaping is",
+            "text": "A tyre pumped to a pressure of 6 atm brusts suddenly. The temperature of room is $ 15^oc $ then temperature of gas escaping is",
             "image": ""
         },
         "subject": "Physics"
@@ -2886,15 +2886,15 @@
     {
         "answer": {
             "a": {
-                "text": "100.00%",
+                "text": "100%",
                 "image": ""
             },
             "c": {
-                "text": "25.00%",
+                "text": "25%",
                 "image": ""
             },
             "b": {
-                "text": "50.00%",
+                "text": "50%",
                 "image": ""
             },
             "d": {
@@ -2906,7 +2906,7 @@
         "exam_code": 201,
         "marks": 2,
         "question": {
-            "text": "Two Nicols are oriented with their principal plane making an angle of $ 45^{\\circ} $. Then the percentage of incident unpolarized light which passes through the system is",
+            "text": "Two Nicols are oriented with their principal plane making an angle of $ 45^o $. Then the percentage of incident unpolarized light which passes through the system is",
             "image": ""
         },
         "subject": "Physics"
@@ -2934,7 +2934,7 @@
         "exam_code": 201,
         "marks": 2,
         "question": {
-            "text": "Two metal plates have p.d. Of 300V are 1cm apart. A charge particle of mass $ 1.96 \\times 10^{-15} $ kg is held in equilibrium between the plates then charge on particle is (g = 9.8 $ m/s^{2} $ )",
+            "text": "Two metal plates have p.d. of 300V are 1cm apart. A charge particle of mass $ 1.96 \\times 10^{-15} $ kg is held in equilibrium between the plates then charge on particle is (g = 9.8 $ m/s^{2} $ )",
             "image": ""
         },
         "subject": "Physics"
@@ -3186,7 +3186,7 @@
         "exam_code": 201,
         "marks": 2,
         "question": {
-            "text": "The mass of $ CaCl_2 $ formed when 5g of $ CaCO_3 $ is added to 200 ml of M Hcl solution is",
+            "text": "The mass of $ CaCl_2 $ formed when 5g of $ CaCO_3 $ is added to 200 ml of M HCl solution is",
             "image": ""
         },
         "subject": "Chemistry"

@@ -53,19 +53,19 @@ function load_question(q_no){
   $('#divOptionA').html(option_a_text + "</a>");
 
   var option_b_text = '<a href="javascript:void(0)"><span></span>' + questions[next_question]['answer']['b']['text'] + '<br>';
-  if (questions[next_question]['answer']['b']['image'] != undefined && questions[next_question]['answer']['a']['image'] != ''){
+  if (questions[next_question]['answer']['b']['image'] != undefined && questions[next_question]['answer']['b']['image'] != ''){
         option_b_text= option_b_text + '<img src="/static/images/' + exam_code +'/'+ questions[next_question]['answer']['b']['image'] + '" style=" height:140px;" />';
     }
   $('#divOptionB').html(option_b_text + "</a>");
 
   var option_c_text = '<a href="javascript:void(0)"><span></span>' + questions[next_question]['answer']['c']['text'] + '<br>';
-  if (questions[next_question]['answer']['c']['image'] != undefined && questions[next_question]['answer']['a']['image'] != ''){
+  if (questions[next_question]['answer']['c']['image'] != undefined && questions[next_question]['answer']['c']['image'] != ''){
           option_c_text = option_c_text + '<img src="/static/images/' + exam_code + '/'+ questions[next_question]['answer']['c']['image'] + '" style=" height:140px;" />';
     }    
   $('#divOptionC').html(option_c_text + "</a>");
 
   var option_d_text = '<a href="javascript:void(0)"><span></span>' + questions[next_question]['answer']['d']['text'] + '<br>';
-  if (questions[next_question]['answer']['d']['image'] != undefined && questions[next_question]['answer']['a']['image'] != ''){
+  if (questions[next_question]['answer']['d']['image'] != undefined && questions[next_question]['answer']['d']['image'] != ''){
           option_d_text= option_d_text + '<img src="/static/images/' + exam_code + '/' + questions[next_question]['answer']['d']['image'] + '" style=" height:140px;" />';
     }
   $('#divOptionD').html(option_d_text + "</a>");  
