@@ -19,7 +19,7 @@ def load_examset_in_database(request):
          "image": "exam.jpg",
          "exam_code": 201,
          "exam_category": "BE-IOE",
-         "exam_duration": 180,
+         "exam_duration": 60,
          "exam_family": 'DPS'
          },
         # {"exam_name": "IOM Model Exam 1",
@@ -46,7 +46,7 @@ def load_examset_in_database(request):
          "image": "exam.jpg",
          "exam_code": 202,
          "exam_category": "BE-IOE",
-         "exam_duration": 180,
+         "exam_duration": 60,
          "exam_family": 'DPS'
          },         
          {"exam_name": "IOE Practice Exam 3",
@@ -54,7 +54,7 @@ def load_examset_in_database(request):
          "image": "exam.jpg",
          "exam_code": 203,
          "exam_category": "BE-IOE",
-         "exam_duration": 180,
+         "exam_duration": 60,
          "exam_family": 'DPS'
          }
     ]
