@@ -37,10 +37,11 @@ class ExamHandler():
         '''
         question_api = QuestionApi()
         questions = question_api.find_all_questions(
-            {"exam_code": int(exam_code)})
+            {"exam_code": int(exam_code), 'marks':1})
         sorted_questions = sorted(
             questions, key=lambda k: k['question_number'])
         subjects = set([i['subject'] for i in sorted_questions])
+        print answer_list,len(answer_list)
 
         correct_answers = {}
         for subs in subjects:

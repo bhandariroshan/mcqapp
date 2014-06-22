@@ -371,8 +371,8 @@ def attend_dps_exam(request,exam_code):
 
             parameters['all_answers'] = json.dumps(all_answers)                        
             question_obj = QuestionApi()    
-            questions = question_obj.find_all_questions({"exam_code": int(exam_code)}, fields={'answer.correct':0})
-            total_questions = question_obj.get_count({"exam_code": int(exam_code)})
+            questions = question_obj.find_all_questions({"exam_code": int(exam_code), 'marks':1}, fields={'answer.correct':0})
+            total_questions = question_obj.get_count({"exam_code": int(exam_code), 'marks':1})
             sorted_questions = sorted(questions, key=lambda k: k['question_number'])
 
             parameters['questions'] = json.dumps(sorted_questions)
@@ -540,7 +540,7 @@ def results(request, exam_code):
     ess_check = ess.check_exam_started({'exam_code':int(exam_code), 'useruid':request.user.id})
 
     question_obj = QuestionApi()    
-    total_questions = question_obj.get_count({"exam_code": int(exam_code)})
+    total_questions = question_obj.get_count({"exam_code": int(exam_code), 'marks':1})
 
     ans = AttemptedAnswerDatabase()
     try:
@@ -591,9 +591,9 @@ def show_result(request, exam_code, subject_name):
         parameters['exam_details'] = exam_details
         question_obj = QuestionApi()    
         questions = question_obj.find_all_questions({"exam_code": int(exam_code),
-            'subject':str(subject_name)})
+            'subject':str(subject_name), 'marks':1})
         total_questions = question_obj.get_count({"exam_code": int(exam_code), 
-            'subject':subject_name})
+            'subject':subject_name, 'marks':1})
         sorted_questions = sorted(questions, key=lambda k: k['question_number'])
         try:            
             current_q_no = int(request.GET.get('q',''))
