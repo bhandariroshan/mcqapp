@@ -595,7 +595,7 @@ def show_result(request, exam_code, subject_name):
             'subject':str(subject_name), 'marks':1})
         total_questions = question_obj.get_count({"exam_code": int(exam_code), 
             'subject':subject_name, 'marks':1})
-        print total_questions
+
         sorted_questions = sorted(questions, key=lambda k: k['question_number'])
         try:            
             current_q_no = int(request.GET.get('q',''))
@@ -638,6 +638,9 @@ def show_result(request, exam_code, subject_name):
             att_ans = ''
             parameters['attempted'] = ''
 
+        user_profile_obj = UserProfile()
+        user = user_profile_obj.get_user_by_username(request.user.username)
+        parameters['user'] = user        
         return render_to_response('single-result.html', parameters, context_instance=RequestContext(request))
     else:
         return HttpResponseRedirect('/')        
