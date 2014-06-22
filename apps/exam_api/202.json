@@ -2094,7 +2094,7 @@
         "exam_code": 202,
         "marks": 2,
         "question": {
-            "text": " The quadratic equation whose root are the AM and HM of the roots of $ x^2 - 4x -6 =0 $ is",
+            "text": " The quadratic equation whose roots are the AM and HM of the roots of $ x^2 - 4x -6 =0 $ is",
             "image": ""
         },
         "subject": "Mathematics"
@@ -2170,7 +2170,7 @@
                 "image": ""
             },
             "d": {
-                "text": "equally inclined with $ \\overrightarrow{a} + \\overrightarrow{b} + \\overrightarrow{c}  $ ",
+                "text": "equally inclined with $ \\vec{a}, \\vec{b} \\space and \\space \\vec{c}  $ ",
                 "image": ""
             },
             "correct": "b"
@@ -2178,7 +2178,7 @@
         "exam_code": 202,
         "marks": 2,
         "question": {
-            "text": "If $ \\overrightarrow{a} $, $ \\overrightarrow{b} $ and $ \\overrightarrow{c} $ are pair wise non-collinear but $ \\overrightarrow{a} $ + $ \\overrightarrow{b} $ is collinear with $ \\overrightarrow{c} $ and $ \\overrightarrow{b} $ + $ \\overrightarrow{c} $ is collinear with $ \\overrightarrow{a} $. Now $ \\overrightarrow{a} + \\overrightarrow{b} + \\overrightarrow{c} $ is a ",
+            "text": "If $ \\vec{a} $, $ \\vec{b} $ and $ \\vec{c} $ are pair wise non-collinear vectors but $ \\vec{a} + \\vec{b} $ is collinear with $ \\vec{c} $ and $ \\vec{b} + \\vec{c} $ is collinear with $ \\vec{a} $. Now $ \\vec{a} + \\vec{b} + \\vec{c} $ is a ",
             "image": ""
         },
         "subject": "Mathematics"
@@ -2186,19 +2186,19 @@
     {
         "answer": {
             "a": {
-                "text": "10 * (9!)",
+                "text": "10 x (9!)",
                 "image": ""
             },
             "c": {
-                "text": "9 * 9!",
+                "text": "9 x 9!",
                 "image": ""
             },
             "b": {
-                "text": "8 * 9!",
+                "text": "8 x 9!",
                 "image": ""
             },
             "d": {
-                "text": "9 * 10!",
+                "text": "9 x 10!",
                 "image": ""
             },
             "correct": "c"
@@ -2250,7 +2250,7 @@
                 "image": ""
             },
             "b": {
-                "text": "$ x \\in R $",
+                "text": "$ x \\in \textbf{R} $",
                 "image": ""
             },
             "d": {
@@ -2318,7 +2318,7 @@
         "exam_code": 202,
         "marks": 2,
         "question": {
-            "text": "In a geometric progression of alternatively positive and negative terms, if each term in the arithmatic mean of the next two terms, then the common ratio is",
+            "text": "In a geometric progression of alternatively positive and negative terms, if each term is the arithmatic mean of the next two terms, then the common ratio is",
             "image": ""
         },
         "subject": "Mathematics"
@@ -2330,7 +2330,7 @@
                 "image": ""
             },
             "c": {
-                "text": "$ x = t^{2} $,  y = $ (2t) $",
+                "text": "$ x = t^{2} $,  y = 2t",
                 "image": ""
             },
             "b": {
@@ -2346,7 +2346,7 @@
         "exam_code": 202,
         "marks": 2,
         "question": {
-            "text": "The parametric equation of the parabola with focus (0,1) and directrix x +2 =0 is ",
+            "text": "The parametric equation of the parabola with focus (0,1) and directrix $ x +2 =0 $ is ",
             "image": ""
         },
         "subject": "Mathematics"
@@ -2374,7 +2374,7 @@
         "exam_code": 202,
         "marks": 2,
         "question": {
-            "text": "If the points (-2, 0), (-1, $ \\frac {1}{\\sqrt{3}} $) and (cos$ \\theta $, sin$\\theta $) are collinear then $ \\theta \\in [0, 2\\pi] $ is",
+            "text": "If the points $ (-2, 0), (-1, \\frac {1}{\\sqrt{3}}) \\space and \\space (cos \\theta, sin\\theta) $ are collinear then $ \\theta \\in [0, 2\\pi] $ is",
             "image": ""
         },
         "subject": "Mathematics"
@@ -2382,15 +2382,15 @@
     {
         "answer": {
             "a": {
-                "text": "5m/s",
+                "text": "5 m/s",
                 "image": ""
             },
             "c": {
-                "text": "15m/s",
+                "text": "15 m/s",
                 "image": ""
             },
             "b": {
-                "text": "10m/s",
+                "text": "10 m/s",
                 "image": ""
             },
             "d": {
@@ -2402,7 +2402,7 @@
         "exam_code": 202,
         "marks": 2,
         "question": {
-            "text": "A parachusist drops freely from an aeroplane for 10 seconds before parachute open. After that he descends with retardation of 2.5 m/$s^{2}$. The Plane is at 2495m when person is thrown then velocity of person while reaching on the ground is",
+            "text": "A parachutist drops freely from an aeroplane for 10 seconds before parachute open. After that he descends with retardation of 2.5 m/$s^{2}$. The plane is at 2495 m when person is thrown, then velocity of person while reaching on the ground is",
             "image": ""
         },
         "subject": "Physics"
@@ -2514,7 +2514,7 @@
         "exam_code": 202,
         "marks": 2,
         "question": {
-            "text": "A body of mass is placed on the surface of earth of mass M and radius R then work done to remove the body from gravitatonal pull of earth is",
+            "text": "A body of mass 'm' is placed on the surface of earth of mass M and radius R then work done to remove the body from gravitatonal pull of earth is",
             "image": ""
         },
         "subject": "Physics"
@@ -2522,19 +2522,19 @@
     {
         "answer": {
             "a": {
-                "text": "8m/s",
+                "text": "8 m/s",
                 "image": ""
             },
             "c": {
-                "text": "70m/s",
+                "text": "70 m/s",
                 "image": ""
             },
             "b": {
-                "text": "80m/s",
+                "text": "80 m/s",
                 "image": ""
             },
             "d": {
-                "text": "6m/s",
+                "text": "6 m/s",
                 "image": ""
             },
             "correct": "a"
@@ -2542,7 +2542,7 @@
         "exam_code": 202,
         "marks": 2,
         "question": {
-            "text": "The frequency of sound of car horn is perceived by an observer towards when the car is moving differes from the frequency of horn by 2.5%. The velocity os sound is 320m/s then velocity of car is ",
+            "text": "The frequency of sound of car horn is perceived by an observer towards when the car is moving differs from the frequency of horn by 2.5%. The velocity of sound is 320 m/s then velocity of car is ",
             "image": ""
         },
         "subject": "Physics"
@@ -2550,7 +2550,7 @@
     {
         "answer": {
             "a": {
-                "text": "40cm",
+                "text": "40 cm",
                 "image": ""
             },
             "c": {
@@ -2562,7 +2562,7 @@
                 "image": ""
             },
             "d": {
-                "text": "80cm",
+                "text": "80 cm",
                 "image": ""
             },
             "correct": "d"
@@ -2570,7 +2570,7 @@
         "exam_code": 202,
         "marks": 2,
         "question": {
-            "text": "A sonometer wire of length 1m is stretched by 4kg. Another wire of same material and diameter is stretched by 16kg. The length of second wire whose second harmonic is same as fifth harmonic of first is ",
+            "text": "A sonometer wire of length 1 m is stretched by 4 kg. Another wire of same material and diameter is stretched by 16kg. The length of second wire whose second harmonic is same as fifth harmonic of first is ",
             "image": ""
         },
         "subject": "Physics"
@@ -2578,19 +2578,19 @@
     {
         "answer": {
             "a": {
-                "text": "340s",
+                "text": "340 s",
                 "image": ""
             },
             "c": {
-                "text": "620s",
+                "text": "620 s",
                 "image": ""
             },
             "b": {
-                "text": "550s",
+                "text": "550 s",
                 "image": ""
             },
             "d": {
-                "text": "760s",
+                "text": "760 s",
                 "image": ""
             },
             "correct": "b"
@@ -2626,7 +2626,7 @@
         "exam_code": 202,
         "marks": 2,
         "question": {
-            "text": "A body of surface area $ 10 cm^{2} $ is heated 10 $ 127^{o}C $ and placed in a room of $ 27^{o}C $.The rate of loss of heat from the body is ",
+            "text": "A body of surface area $ 10 cm^{2} $ is heated t0 $ 127^{o}C $ and placed in a room of $ 27^{o}C $.The rate of loss of heat from the body is ",
             "image": ""
         },
         "subject": "Physics"
@@ -2646,7 +2646,7 @@
                 "image": ""
             },
             "d": {
-                "text": "$ \\frac {Q}{\\pi\\epsilon_0a} $",
+                "text": "$ \\frac {Q}{2\\pi\\epsilon_0a} $",
                 "image": ""
             },
             "correct": "c"
@@ -2654,7 +2654,7 @@
         "exam_code": 202,
         "marks": 2,
         "question": {
-            "text": "Four equal charges q are placed at the four cornors of square of side 'a' each. Work done in removing a charge -Q from center to infinity is",
+            "text": "Four equal charges Q are placed at the four corners of square of side 'a' each. Work done in removing a charge -Q from center to infinity is",
             "image": ""
         },
         "subject": "Physics"
@@ -2682,7 +2682,7 @@
         "exam_code": 202,
         "marks": 2,
         "question": {
-            "text": " A capacitor of capacitance C is fully charged by a 200V supply. It is then discharged through a small coil of resistance wire embeeded in thermally insulated block of specific heat $ 2.5 * 10^{2}JKg^{-1}K^{-1} $ and mass of 0.1Kg. The temperature of the block rises by 0.4K. Then value of 'C' is  ",
+            "text": " A capacitor of capacitance C is fully charged by a 200V supply. It is then discharged through a small coil of resistance wire embedded in thermally insulated block of specific heat $ 2.5 x 10^{2}JKg^{-1}K^{-1} $ and of mass of 0.1Kg. The temperature of the block rises by 0.4K. Then value of 'C' is  ",
             "image": ""
         },
         "subject": "Physics"
@@ -2718,19 +2718,19 @@
     {
         "answer": {
             "a": {
-                "text": "$ 2.5 * 10^{-10} N $",
+                "text": "$ 2.5 x 10^{-10} N $",
                 "image": ""
             },
             "c": {
-                "text": "$ 2.5 * 10 ^{-11}N$",
+                "text": "$ 2.5 x 10 ^{-11}N$",
                 "image": ""
             },
             "b": {
-                "text": "$ 8 * 10^{-11} N $",
+                "text": "$ 8 x 10^{-11} N $",
                 "image": ""
             },
             "d": {
-                "text": "$ 8 * 10^{-12} N$",
+                "text": "$ 8 x 10^{-12} N$",
                 "image": ""
             },
             "correct": "d"
@@ -2766,7 +2766,7 @@
         "exam_code": 202,
         "marks": 2,
         "question": {
-            "text": "The spokes of wheel are metallic and their length is 0.5m. On rotaiting the wheel at right angles to a uniform magnetic field of $ 5* 10^{-4}T $, A potential difference of 3.14 mv is produced between rim and axis. The rate of rotation of wheel is?",
+            "text": "The spokes of wheel are metallic and their length is 0.5 m. On rotating the wheel at right angles to a uniform magnetic field of $ 5 x 10^{-4}T $, A potential difference of 3.14 mv is produced between rim and axis. The rate of rotation of wheel is?",
             "image": ""
         },
         "subject": "Physics"
@@ -2822,7 +2822,7 @@
         "exam_code": 202,
         "marks": 2,
         "question": {
-            "text": "A parallel beam of light of 6000$ A^{o} $ is incident normally on a slit of width o.2mm. A diffraction pattern is observed on a screen which is placed at a focal plane of convex lens of focal length 50cm. Lens is close to slit then distance between mininma on both side of central maxima will be",
+            "text": "A parallel beam of light of 6000 $ \\overset o{A} $ is incident normally on a slit of width 0.2 mm. A diffraction pattern is observed on a screen which is placed at a focal plane of convex lens of focal length 50 cm. Lens is close to slit then distance between minima on both side of central maxima will be",
             "image": ""
         },
         "subject": "Physics"
@@ -2858,19 +2858,19 @@
     {
         "answer": {
             "a": {
-                "text": "912 $ A^{o} $",
+                "text": "912 $ \\overset o{A} $",
                 "image": ""
             },
             "c": {
-                "text": "3648 $ A^{o} $",
+                "text": "3648 $ \\overset o{A} $",
                 "image": ""
             },
             "b": {
-                "text": "1824 $ A^{o} $",
+                "text": "1824 $ \\overset o{A} $",
                 "image": ""
             },
             "d": {
-                "text": "456 $ A^{o} $",
+                "text": "456 $ \\overset o{A} $",
                 "image": ""
             },
             "correct": "c"
@@ -2878,7 +2878,7 @@
         "exam_code": 202,
         "marks": 2,
         "question": {
-            "text": "The wavelength of series light of lyman series for hydrogen atom is 912$ A^{o} $ Then series limit of Balmer series in Hydrogen atom is",
+            "text": "The wavelength of series limit of lyman series for hydrogen atom is 912 $ \\overset o{A} $ then series limit of Balmer series in Hydrogen atom is",
             "image": ""
         },
         "subject": "Physics"
@@ -2906,7 +2906,7 @@
         "exam_code": 202,
         "marks": 2,
         "question": {
-            "text": "A nucleus of mass number 220 undergoes an $\\ alpha $ decay . The value of energy of reaction is 5.5MeV.The KE of $ \\alpha $ Particle is ",
+            "text": "A nucleus of mass number 220 undergoes an $ \\alpha $ decay . The value of energy of reaction is 5.5MeV.The KE of $ \\alpha $ Particle is ",
             "image": ""
         },
         "subject": "Physics"
@@ -2914,7 +2914,7 @@
     {
         "answer": {
             "a": {
-                "text": "4675years",
+                "text": "4675 years",
                 "image": ""
             },
             "c": {
@@ -2922,7 +2922,7 @@
                 "image": ""
             },
             "b": {
-                "text": "720years",
+                "text": "720 years",
                 "image": ""
             },
             "d": {
@@ -2934,7 +2934,7 @@
         "exam_code": 202,
         "marks": 2,
         "question": {
-            "text": "A radioactive metal has mean lives of 1620 years and 520 years for $ \\alpha $ and $ \\beta $ emission respectively. The material decays $ \\alpha $ and $ \\beta $ simultaneoulsy. Then the time of $ (\\frac{1}{4})^{th}  $ of material remain is",
+            "text": "A radioactive metal has mean lives of 1620 years and 520 years for $ \\alpha $ and $ \\beta $ emission respectively. The material decays $ \\alpha $ and $ \\beta $ simultaneously then the time in which $ (\\frac{1}{4})^{th}  $ of material remain is",
             "image": ""
         },
         "subject": "Physics"
@@ -3082,7 +3082,7 @@
     {
         "answer": {
             "a": {
-                "text": "ehtyne, ethane and ethane",
+                "text": "ehtyne, ethane and ethene",
                 "image": ""
             },
             "c": {
@@ -3090,11 +3090,11 @@
                 "image": ""
             },
             "b": {
-                "text": "ethane  ethyne and ethane",
+                "text": "ethane  ethyne and ethene",
                 "image": ""
             },
             "d": {
-                "text": "ethane, ethane and ethyne",
+                "text": "ethene, ethane and ethyne",
                 "image": ""
             },
             "correct": "c"
@@ -3158,7 +3158,7 @@
         "exam_code": 202,
         "marks": 2,
         "question": {
-            "text": "The mass of $ 1.94 *10^{18} $ atoms of iron is equal to mass of 2cc of $ H_2 $ at NTP. Find the atomic mass of iron",
+            "text": "The mass of $ 1.94 x 10^{18} $ atoms of iron is equal to mass of 2 cc of $ H_2 $ at NTP. Find the atomic mass of iron",
             "image": ""
         },
         "subject": "Chemistry"
@@ -3186,7 +3186,7 @@
         "exam_code": 202,
         "marks": 2,
         "question": {
-            "text": "100ml of xM NaOH are mixed with 100ml of 0.1ml of 0.1M $ H_2SO_4 $. So that the pH of the resulting solution is 1.699. Find x",
+            "text": "100 ml of xM NaOH are mixed with 100 ml of 0.1 ml of 0.1M $ H_2SO_4 $ so that the pH of the resulting solution is 1.699. Find x",
             "image": ""
         },
         "subject": "Chemistry"
@@ -3194,19 +3194,19 @@
     {
         "answer": {
             "a": {
-                "text": "15lit",
+                "text": "15 lit",
                 "image": ""
             },
             "c": {
-                "text": "19lit",
+                "text": "19 lit",
                 "image": ""
             },
             "b": {
-                "text": "17lit",
+                "text": "17 lit",
                 "image": ""
             },
             "d": {
-                "text": "21lit",
+                "text": "21 lit",
                 "image": ""
             },
             "correct": "c"
@@ -3242,10 +3242,10 @@
         "exam_code": 202,
         "marks": 2,
         "question": {
-            "text": "Which is wrong for LSV of given object",
+            "text": "What is wrong for LSV of given object",
             "image": "116.jpg"
         },
-        "subject": "Drawing"
+        "subject": "Aptitude"
     },
     {
         "answer": {
@@ -3273,7 +3273,7 @@
             "text": "Select the correct front view of the given image",
             "image": "117.jpg"
         },
-        "subject": "Drawing"
+        "subject": "Aptitude"
     },
     {
         "answer": {
@@ -3301,7 +3301,7 @@
             "text": "Select the correct top view of the given image",
             "image": "118.jpg"
         },
-        "subject": "Drawing"
+        "subject": "Aptitude"
     },
     {
         "answer": {
@@ -3329,24 +3329,24 @@
             "text": "Select the correct object for given set of orthrographic views",
             "image": "119.jpg"
         },
-        "subject": "Drawing"
+        "subject": "Aptitude"
     },
     {
         "answer": {
             "a": {
-                "text": ">0",
+                "text": " greater than 0",
                 "image": ""
             },
             "c": {
-                "text": "<1",
+                "text": "less than 1",
                 "image": ""
             },
             "b": {
-                "text": "<0",
+                "text": "less than 0",
                 "image": ""
             },
             "d": {
-                "text": ">1",
+                "text": "greater than 1",
                 "image": ""
             },
             "correct": "d"
@@ -3357,6 +3357,6 @@
             "text": "Hyperbola has its eccentricity always",
             "image": ""
         },
-        "subject": "Drawing"
+        "subject": "Aptitude"
     }
 ]
