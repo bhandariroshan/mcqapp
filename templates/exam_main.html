@@ -37,92 +37,93 @@
 {% endblock %}
 {% block exam_content %}
     <div class="twelve columns">
-
       <div class="twelve columns">      
-       
-        <div id="questionText" data-intro="Read the question carefully" data-position="top" class="div-margin twelve columns ui-widget-content ui-corner-all question-min-height" style="margin-left:-2%">
-          <span  style="font-weight:bold;"><span style="color:blue;">{{start_question.question_number}}. </span> {{ start_question.question.text }} </span>
-          {% if start_question.question.image != '' %}
+        {% for each_question in questions %}       
+        <div id="questionText_{{each_question.question_number}}" data-intro="Read the question carefully" data-position="top" class="div-margin twelve columns ui-widget-content ui-corner-all question-min-height" style="margin-left:-2%">
+          <span  style="font-weight:bold;"><span style="color:blue;">{{each_question.question_number}}. </span> {{ each_question.question.text }} </span>
+          {% if each_question.question.image != '' %}
 
-          <img src="/static/images/{{exam_code}}/{{start_question.question.image}}" style=" height:140px" />
+          <img src="/static/images/{{exam_code}}/{{each_question.question.image}}" style=" height:140px" />
           {% endif %}
 
-        <ul class="row" id="{{start_question.uid.id}}">
+        <ul class="row" id="{{each_question.uid.id}}">
           <li class="field" style="min-height:30px;">
-            <label class="radio checked" for="radio1">
-              <input name="radio" id="radio1" value="A" type="radio" checked="checked">
-              <span></span> 
-            </label>
-            <div class="clickDiv " id="divOptionA" style="margin-top: -3%;"><span></span>
+            <div class="clickDiv" id="div_{{each_question.question_number}}_OptionA" style="vertical-align:middle;"><span></span>            
+                <label class="radio" for="radio_{{each_question.question_number}}">
+                  <input name="radio_{{each_question.question_number}}" id="radio_{{each_question.question_number}}" value="A" type="radio">
+                  <span></span> 
+                </label>
+                <a href="javascript:void(0)">
+                {{ each_question.answer.a.text }}<br>
+                {% if each_question.answer.a.image != '' %}
+                  <img src="/static/images/{{exam_code}}/{{each_question.answer.a.image}}" style="height:140px;" />
+                {% endif %}
+                </a>
+            </div>
+          </li>
+
+          <li class="field" style="min-height:30px;">
+            <div class="clickDiv " id="div_{{each_question.question_number}}_OptionB" style="vertical-align:middle;"><span></span>
+                    <label class="radio" for="radio_{{each_question.question_number}}">
+                        <input name="radio_{{each_question.question_number}}" id="radio_{{each_question.question_number}}" value="B" type="radio">
+                        <span></span> 
+                    </label>
                     <a href="javascript:void(0)">
-                    {{ start_question.answer.a.text }}<br>
-                    {% if start_question.answer.a.image != '' %}
-                      <img src="/static/images/{{exam_code}}/{{start_question.answer.a.image}}" style="height:140px;" />
+                    {{ each_question.answer.b.text }}<br>
+                    {% if each_question.answer.b.image != '' %}
+                      <img src="/static/images/{{exam_code}}/{{each_question.answer.b.image}}" style="height:140px;" />
                     {% endif %}
                     </a>
             </div>
           </li>
 
           <li class="field" style="min-height:30px;">
-            <label class="radio" for="radio2">
-              <input name="radio" id="radio2" value="2" type="radio">
-              <span></span> 
-            </label>
-            <div class="clickDiv " id="divOptionB" style="margin-top: -3%;"><span></span>
+            <div class="clickDiv " id="div_{{each_question.question_number}}_OptionC" style="vertical-align:middle;"><span></span>
+                  <label class="radio" for="radio_{{each_question.question_number}}_C">
+                    <input name="radio_{{each_question.question_number}}" id="radio_{{each_question.question_number}}_C" value="C" type="radio">
+                    <span></span> 
+                  </label>
                     <a href="javascript:void(0)">
-                    {{ start_question.answer.b.text }}<br>
-                    {% if start_question.answer.b.image != '' %}
-                      <img src="/static/images/{{exam_code}}/{{start_question.answer.b.image}}" style="height:140px;" />
+                    {{ each_question.answer.c.text }}<br>
+                    {% if each_question.answer.c.image != '' %}
+                      <img src="/static/images/{{exam_code}}/{{each_question.answer.c.image}}" style=" height:140px;" />
                     {% endif %}
                     </a>
             </div>
           </li>
 
           <li class="field" style="min-height:30px;">
-            <label class="radio" for="radio3">
-              <input name="radio" id="radio3" value="2" type="radio">
-              <span></span> 
-            </label>
-            <div class="clickDiv " id="divOptionC" style="margin-top: -3%;"><span></span>
+            <div class="clickDiv " id="div_{{each_question.question_number}}_OptionD" style="vertical-align:middle;"><span></span>
+                  <label class="radio" for="radio_{{each_question.question_number}}_D">
+                    <input name="radio_{{each_question.question_number}}" id="radio_{{each_question.question_number}}_D" value="D" type="radio">
+                    <span></span> 
+                  </label>            
                     <a href="javascript:void(0)">
-                    {{ start_question.answer.c.text }}<br>
-                    {% if start_question.answer.c.image != '' %}
-                      <img src="/static/images/{{exam_code}}/{{start_question.answer.c.image}}" style=" height:140px;" />
-                    {% endif %}
-                    </a>
-            </div>
-          </li>
-
-          <li class="field" style="min-height:30px;">
-            <label class="radio" for="radio4">
-              <input name="radio" id="radio4" value="2" type="radio">
-              <span></span> 
-            </label>
-            <div class="clickDiv " id="divOptionD" style="margin-top: -3%;"><span></span>
-                    <a href="javascript:void(0)">
-                    {{ start_question.answer.d.text }}<br>
-                    {% if start_question.answer.d.image != '' %}
-                      <img src="/static/images/{{exam_code}}/{{start_question.answer.d.image}}" style="height:140px;" />
+                    {{ each_question.answer.d.text }}<br>
+                    {% if each_question.answer.d.image != '' %}
+                      <img src="/static/images/{{exam_code}}/{{each_question.answer.d.image}}" style="height:140px;" />
                     {% endif %}
                     </a>
             </div>            
           </li>       
         </ul>          
         </div>
-                     
+    {% endfor %}                  
         <div style=" height: 40px; margin-left: -2%;" class="twelve columns">
           <span>
             <div class="small primary btn pretty" id="loadPrev">
-              <a href="#"  data-intro="Attempt previous question" data-position="top"><i class="icon-arrow-left"></i>Previous</a>
+              <a href="./?prev={{prev_pg_num}}"  data-intro="Attempt previous question" data-position="top"><i class="icon-arrow-left"></i>Previous</a>
             </div>
           </span>
           <span style="float:right">
             <div class="small primary btn pretty loadNext" id="loadNext{{next_to_start.uid.id}}">
-              <a href="#" data-intro="Attempt this question later" data-position="top"><i class="icon-arrow-right" ></i>Skip to Next</a>
+              <a href="./?next={{next_pg_num}}" data-intro="Attempt this question later" data-position="top"><i class="icon-arrow-right" ></i>Skip to Next</a>
             </div>
           </span>
         </div> 
-      </div>      
+      </div> 
+        
+
     <div id="trigger_gumby_div" style="visibility:hidden;" class="pretty medium primary btn switch" gumby-trigger="#modalwarning"></div>
     <div class="modal" id="modalwarning">
       <div class="content">

@@ -33,6 +33,9 @@ class QuestionApi():
     def get_count(self, where):
         return self.db_object.get_count(self.table_name, where)
 
+    def get_paginated_questions(self, where, fields= {}, page_num =1):
+        return self.db_object.get_paginated_values(self.table_name, where, fields, sort_index='question_number', pageNumber=page_num)
+
 class ExammodelApi():
 
     def __init__(self):

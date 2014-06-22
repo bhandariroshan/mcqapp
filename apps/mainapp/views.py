@@ -311,6 +311,7 @@ def attend_cps_exam(request, exam_code):
     
         parameters['all_answers'] = json.dumps(all_answers)                        
         parameters['questions'] = json.dumps(sorted_questions)
+        # parameters['questions'] = sorted_questions
         exam_details['exam_duration'] = (exam_details['exam_duration']*60 - time_elapsed)/60
         exam_details['exam_date'] = datetime.datetime.fromtimestamp(int(exam_details['exam_date'])).strftime('%Y-%m-%d')
         parameters['exam_details'] = exam_details
@@ -383,11 +384,20 @@ def attend_dps_exam(request,exam_code):
 
             parameters['all_answers'] = json.dumps(all_answers)                        
             question_obj = QuestionApi()    
-            questions = question_obj.find_all_questions({"exam_code": int(exam_code)}, fields={'answer.correct':0})
+            questions = question_obj.get_paginated_questions({"exam_code": int(exam_code)}, fields={'answer.correct':0}, )
             total_questions = question_obj.get_count({"exam_code": int(exam_code)})
             sorted_questions = sorted(questions, key=lambda k: k['question_number'])
 
-            parameters['questions'] = json.dumps(sorted_questions)
+            # parameters['questions'] = json.dumps(sorted_questions)            
+            parameters['questions'] = sorted_questions[0:5]
+            try:
+                parameters['prev_pg_num'] = request.GET.get()
+            except:
+                pass 
+                parameters['current_pg_num'] = 1
+                parameters['next_pg_num'] = 2
+                parameters['prev_pg_num'] = 1        
+
             parameters['exam_details'] = exam_details
         
             start_question_number = 0 
