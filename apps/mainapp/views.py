@@ -526,6 +526,7 @@ def get_coupons(request, subscription_type):
         subscription_type = 'MBBS-IOM'
     subscription_type = subscription_type.upper()
     coupons = coupon_obj.get_coupons(subscription_type)
+    coupon_obj.update_coupons(subscription_type)
     return HttpResponse(json.dumps({'status':'ok', 'coupons':coupons}))
 
 

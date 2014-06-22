@@ -40,7 +40,8 @@ class Coupon():
                 data = {
                     'code':coupon,
                     'subscription_type':subscription_type, 
-                    'used':{'status':0}
+                    'used':{'status':0},
+                    'printed':False
                     }
                 self.db_object.insert_one(self.table_name, data)
         return 'generated'            
@@ -82,5 +83,7 @@ class Coupon():
         return self.db_object.update_upsert(self.table_name, {'code':coupon_code},{'used':{'status':1}})
 
     def get_coupons(self, subscription_type):
-        return self.db_object.get_all_vals(self.table_name,{'subscription_type':subscription_type, 'used.status':0})
+        return self.db_object.get_all_vals(self.table_name,{'subscription_type':subscription_type, 'used.status':0, 'printed':False})
 
+    def update_coupons(self, subscription_type):
+        return self.db_object.update_multi(self.table_name, {'subscription_type':subscription_type} ,{'printed':True})
