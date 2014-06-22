@@ -63,7 +63,11 @@ class AjaxHandle():
                 else:
                     subscribed_exams = user_profile_obj.get_subscribed_exams(request.user.username)
                     if int(exam_code) in subscribed_exams:
-                        return HttpResponse(json.dumps({'status':'ok','url':'/honorcode/' + exam_code}))
+                        #Check if exam is cps or dps 
+                        #if exam is cps then return url '/cps/exam_code'
+                        #else return  url '/dps/exam_code/'
+                        print "Roshan Bhandari and DPS"
+                        return HttpResponse(json.dumps({'status':'ok','url':'/dps/' + exam_code}))
                     else:
                         return HttpResponse(json.dumps({'status':'error','message':'Invalid Coupon code.'}))
             else:
