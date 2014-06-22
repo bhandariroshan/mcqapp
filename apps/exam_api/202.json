@@ -58,7 +58,7 @@
     {
         "answer": {
             "a": {
-                "text": "a pair if ines at right angle",
+                "text": "a pair of lines at right angle",
                 "image": ""
             },
             "c": {
@@ -162,7 +162,7 @@
         "exam_code": 202,
         "marks": 1,
         "question": {
-            "text": "$     f:R\\rightarrow R \\space given \\space by \\space f(x) = x^2 -4x +4  $",
+            "text": "$ f:R\\rightarrow \\textbf{R} \\space given \\space by \\space f(x) = x^2 -4x +4  $",
             "image": ""
         },
         "subject": "Mathematics"
@@ -218,7 +218,7 @@
         "exam_code": 202,
         "marks": 1,
         "question": {
-            "text": "$ \\int_{}{} \\frac {xdx}{x^4+1} $",
+            "text": "$ \\int \\frac {x}{x^4+1}dx $",
             "image": ""
         },
         "subject": "Mathematics"
