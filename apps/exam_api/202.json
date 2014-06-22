@@ -226,15 +226,15 @@
     {
         "answer": {
             "a": {
-                "text": "$ f(0) = 1 $",
+                "text": "if f(0) = 1",
                 "image": ""
             },
             "c": {
-                "text": "$ if f(0) = -1 $",
+                "text": "if f(0) = -1",
                 "image": ""
             },
             "b": {
-                "text": "$ if f(0) = 0 $",
+                "text": "if f(0) = 0",
                 "image": ""
             },
             "d": {
@@ -282,7 +282,7 @@
     {
         "answer": {
             "a": {
-                "text": "/hadI/",
+                "text": " $ /hadI/ $ ",
                 "image": ""
             },
             "c": {
@@ -290,11 +290,11 @@
                 "image": ""
             },
             "b": {
-                "text": "/hardli:/",
+                "text": " 4 /hardlI:/ $ ",
                 "image": ""
             },
             "d": {
-                "text": "$ /h \\supset dlI/ $",
+                "text": "$ /h\\supset dlI/ $",
                 "image": ""
             },
             "correct": "a"
@@ -330,7 +330,7 @@
         "exam_code": 202,
         "marks": 1,
         "question": {
-            "text": "The word hardship has its primary stress on the -------------- syllable",
+            "text": "The word - 'hardship' has its primary stress on the -------------- syllable",
             "image": ""
         },
         "subject": "English"
@@ -442,7 +442,7 @@
         "exam_code": 202,
         "marks": 1,
         "question": {
-            "text": "Look ------------ someoneas a friend",
+            "text": "Look ------------ someone as a friend",
             "image": ""
         },
         "subject": "English"
@@ -554,7 +554,7 @@
         "exam_code": 202,
         "marks": 1,
         "question": {
-            "text": "All that glitters is not gold .......... ?",
+            "text": "All that glitters is not gold, .......... ?",
             "image": ""
         },
         "subject": "English"
@@ -610,7 +610,7 @@
         "exam_code": 202,
         "marks": 1,
         "question": {
-            "text": "Black as she is, she is a beauty' is a ...............sentence.",
+            "text": "'Black as she is, she is a beauty' is a ...............sentence.",
             "image": ""
         },
         "subject": "English"
@@ -638,7 +638,7 @@
         "exam_code": 202,
         "marks": 1,
         "question": {
-            "text": "She would have come if you had invited her, for she was free ' is a ........sentence",
+            "text": "'She would have come if you had invited her, for she was free ' is a ........sentence",
             "image": ""
         },
         "subject": "English"
@@ -694,7 +694,7 @@
         "exam_code": 202,
         "marks": 1,
         "question": {
-            "text": "Her father said. 'If you score above 80%, in the IOE entrance exam you .................. be given galaxy grand 2.",
+            "text": "Her father said, 'If you score above 80%, in the IOE entrance exam you .................. be given galaxy grand 2.",
             "image": ""
         },
         "subject": "English"
@@ -730,19 +730,19 @@
     {
         "answer": {
             "a": {
-                "text": "7.2J",
+                "text": "7.2 J",
                 "image": ""
             },
             "c": {
-                "text": "120J",
+                "text": "120 J",
                 "image": ""
             },
             "b": {
-                "text": "3.6J",
+                "text": "3.6 J",
                 "image": ""
             },
             "d": {
-                "text": "1200J",
+                "text": "1200 J",
                 "image": ""
             },
             "correct": "b"
@@ -758,15 +758,15 @@
     {
         "answer": {
             "a": {
-                "text": "100cm",
+                "text": "100 cm",
                 "image": ""
             },
             "c": {
-                "text": "5cm",
+                "text": "5 cm",
                 "image": ""
             },
             "b": {
-                "text": "2cm",
+                "text": "2 cm",
                 "image": ""
             },
             "d": {
@@ -778,7 +778,7 @@
         "exam_code": 202,
         "marks": 1,
         "question": {
-            "text": "The equation of wave travelling in a string can be written as $ y=3cos\\pi(100t-x) $. The wavelength of the wave is",
+            "text": "The equation of wave traveling in a string can be written as $ y=3cos\\pi(100t-x) $. The wavelength of the wave is",
             "image": ""
         },
         "subject": "Physics"
@@ -806,7 +806,7 @@
         "exam_code": 202,
         "marks": 1,
         "question": {
-            "text": "Two rods of different material of linear expansivities $ \\alpha_1 \\space and \\space \\alpha_2 $. Young's modulus $ Y_1 and Y_2 $ are fixed between two rigid massive wall. The rods are heated by the same temperature and there is no bending on rod then stress will be equal if",
+            "text": "Two rods of different material of linear expansivities $ \\alpha_1 \\space and \\space \\alpha_2 $, Young's modulus $ Y_1 \\space and \\space Y_2 $ are fixed between two rigid massive wall. The rods are heated by the same temperature and there is no bending on rod then stress will be equal if",
             "image": ""
         },
         "subject": "Physics"
@@ -842,19 +842,19 @@
     {
         "answer": {
             "a": {
-                "text": "$ \\frac{1}{1000}mv $",
+                "text": "$ \\frac{1}{1000} $ mv",
                 "image": ""
             },
             "c": {
-                "text": "10mv",
+                "text": "10 mv",
                 "image": ""
             },
             "b": {
-                "text": "1000mv",
+                "text": "1000 mv",
                 "image": ""
             },
             "d": {
-                "text": "100mv",
+                "text": "100 mv",
                 "image": ""
             },
             "correct": "d"
@@ -870,19 +870,19 @@
     {
         "answer": {
             "a": {
-                "text": "l,d",
+                "text": " $ l, d $",
                 "image": ""
             },
             "c": {
-                "text": "l/2, d",
+                "text": " $ l/2, d $ ",
                 "image": ""
             },
             "b": {
-                "text": "2l, d",
+                "text": " $ 2l, d $ ",
                 "image": ""
             },
             "d": {
-                "text": "2l, d/2",
+                "text": " $ 2l, d/2 $ ",
                 "image": ""
             },
             "correct": "c"
@@ -946,7 +946,7 @@
         "exam_code": 202,
         "marks": 1,
         "question": {
-            "text": "The KE of  a free electron is doubled, its debroglie wavelength will be",
+            "text": "The KE of  a free electron is doubled, its de Broglie's wavelength will be",
             "image": ""
         },
         "subject": "Physics"
@@ -954,19 +954,19 @@
     {
         "answer": {
             "a": {
-                "text": "$24 \\mu A $",
+                "text": "24 $ \\mu A $",
                 "image": ""
             },
             "c": {
-                "text": "$ 26 \\mu A $",
+                "text": "26 $ \\mu A $",
                 "image": ""
             },
             "b": {
-                "text": "$ 25 \\mu A $",
+                "text": "25 $ \\mu A $",
                 "image": ""
             },
             "d": {
-                "text": "$ 27 \\mu A $",
+                "text": "27 $ \\mu A $",
                 "image": ""
             },
             "correct": "c"
@@ -974,7 +974,7 @@
         "exam_code": 202,
         "marks": 1,
         "question": {
-            "text": "A transisitor is connected in common emittor configuration. The collector supply is 8V and voltage drop across resistor $ 800 \\Omega $ in the collector is 0.5V. The current gain is 0.96 then base current is ",
+            "text": "A transistor is connected in common emitter configuration. The collector supply is 8V and voltage drop across resistor $ 800 \\Omega $ in the collector is 0.5V. The current gain is 0.96 then base current is ",
             "image": ""
         },
         "subject": "Physics"
@@ -1058,7 +1058,7 @@
         "exam_code": 202,
         "marks": 1,
         "question": {
-            "text": "The equivalent weight of metal is 25. The vapour density of chloride  is 91. The formula of Metal Chloride is",
+            "text": "The equivalent weight of metal is 25. The vapor density of chloride  is 91. The formula of Metal Chloride is",
             "image": ""
         },
         "subject": "Chemistry"
@@ -1086,7 +1086,7 @@
         "exam_code": 202,
         "marks": 1,
         "question": {
-            "text": "The equivalent weight of $ HNO_3 $ in the given condition $ HNO_3 \\rightarrow NO $. The molecular wt of $ HNO_3 $is M",
+            "text": "The equivalent weight of $ HNO_3 $ in the given condition $ HNO_3 \\rightarrow NO $ when the molecular wt of $ HNO_3 $is M is",
             "image": ""
         },
         "subject": "Chemistry"
@@ -1182,7 +1182,7 @@
                 "image": ""
             },
             "c": {
-                "text": "$ ASH_3 $",
+                "text": "$ AsH_3 $",
                 "image": ""
             },
             "b": {
@@ -1214,7 +1214,7 @@
                 "image": ""
             },
             "b": {
-                "text": "HCL",
+                "text": "HCl",
                 "image": ""
             },
             "d": {
@@ -1266,7 +1266,7 @@
                 "image": ""
             },
             "c": {
-                "text": "$ C_s $",
+                "text": "Cs",
                 "image": ""
             },
             "b": {
@@ -1274,7 +1274,7 @@
                 "image": ""
             },
             "d": {
-                "text": "$ Fr $",
+                "text": "Fr",
                 "image": ""
             },
             "correct": "c"
@@ -1534,7 +1534,7 @@
         "exam_code": 202,
         "marks": 1,
         "question": {
-            "text": "The ship of riverbed aggregate is .....................",
+            "text": "The shape of river bed aggregate is .....................",
             "image": ""
         },
         "subject": "Aptitude"
@@ -1562,7 +1562,7 @@
         "exam_code": 202,
         "marks": 1,
         "question": {
-            "text": "In brick masonary the frog of the brick is generally kept is ",
+            "text": "In brick masonry the face of the brick generally kept is ",
             "image": ""
         },
         "subject": "Aptitude"
@@ -1598,19 +1598,19 @@
     {
         "answer": {
             "a": {
-                "text": "1.5Ohm and 2.5Ohm",
+                "text": "1.5 and 2.5 ohm",
                 "image": ""
             },
             "c": {
-                "text": "3ohm and 1 ohm",
+                "text": "3 and 1 ohm",
                 "image": ""
             },
             "b": {
-                "text": "2 ohm",
+                "text": "2 ohms each",
                 "image": ""
             },
             "d": {
-                "text": "4 ohm and 1 ohm",
+                "text": "4 and 1 ohm",
                 "image": ""
             },
             "correct": "b"
@@ -1718,7 +1718,7 @@
                 "image": ""
             },
             "b": {
-                "text": "Christinal counting system",
+                "text": "Christian counting system",
                 "image": ""
             },
             "d": {
@@ -1746,11 +1746,11 @@
                 "image": ""
             },
             "b": {
-                "text": "<1",
+                "text": "less than 1",
                 "image": ""
             },
             "d": {
-                "text": ">1",
+                "text": "more than 1",
                 "image": ""
             },
             "correct": "d"
@@ -1766,19 +1766,19 @@
     {
         "answer": {
             "a": {
-                "text": "5mbps",
+                "text": "5 mbps",
                 "image": ""
             },
             "c": {
-                "text": "100mbps",
+                "text": "100 mbps",
                 "image": ""
             },
             "b": {
-                "text": "10mbps",
+                "text": "10 mbps",
                 "image": ""
             },
             "d": {
-                "text": "2mbps",
+                "text": "2 mbps",
                 "image": ""
             },
             "correct": "c"
@@ -1809,7 +1809,7 @@
                 "text": "none",
                 "image": ""
             },
-            "correct": "c"
+            "correct": "b"
         },
         "exam_code": 202,
         "marks": 1,
@@ -1826,11 +1826,11 @@
                 "image": ""
             },
             "c": {
-                "text": "$ ^12C_4 $",
+                "text": "$ ^{12}C_4 $",
                 "image": ""
             },
             "b": {
-                "text": "$ -^{12}C_6 $",
+                "text": "$ -^{12}C_5 $",
                 "image": ""
             },
             "d": {
@@ -1878,15 +1878,15 @@
     {
         "answer": {
             "a": {
-                "text": "$ \\frac{\\int_{}^{} tan^{3}x}{3} - sec^{2}x + tanx +x+ c $",
+                "text": "$ \\frac {tan^{3}x}{3} - tanx +x+ c $",
                 "image": ""
             },
             "c": {
-                "text": "$ \\frac{\\int_{}^{} tan^{3}x}{3} - sec^{2}x + tanx + c $",
+                "text": "$ \\frac{tan^{3}x}{3} - sec^{2}x + tanx + c $",
                 "image": ""
             },
             "b": {
-                "text": "$ \\frac{\\int_{}^{} tan^{5}x}{5} + c $",
+                "text": "$ \\frac{tan^{5}x}{5} + c $",
                 "image": ""
             },
             "d": {
@@ -1918,7 +1918,7 @@
                 "image": ""
             },
             "d": {
-                "text": "1,2,2",
+                "text": "1, 2, 2",
                 "image": ""
             },
             "correct": "a"
@@ -1926,7 +1926,7 @@
         "exam_code": 202,
         "marks": 2,
         "question": {
-            "text": "The plane 2x - 3y +4z +7 is perpendicular to the line with drs",
+            "text": "The plane 2x - 3y +4z +7 is perpendicular to the line with d.r's",
             "image": ""
         },
         "subject": "Mathematics"
@@ -1938,7 +1938,7 @@
                 "image": ""
             },
             "c": {
-                "text": "$ \\frac{1}{cos(2y-1)} $",
+                "text": "$ \\frac{1}{cosx(2y-1)} $",
                 "image": ""
             },
             "b": {
