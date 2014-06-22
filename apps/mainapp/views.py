@@ -391,12 +391,23 @@ def attend_dps_exam(request,exam_code):
             # parameters['questions'] = json.dumps(sorted_questions)            
             parameters['questions'] = sorted_questions[0:5]
             try:
-                parameters['prev_pg_num'] = request.GET.get()
-            except:
-                pass 
+                parameters['prev_pg_num'] = request.GET.get('prev','')
+                prev_val = True
+                next_val = False
+            except:                 
                 parameters['current_pg_num'] = 1
                 parameters['next_pg_num'] = 2
                 parameters['prev_pg_num'] = 1        
+
+            try:
+                parameters['next_pg_num'] = request.GET.get('next', '')
+                prev_val = False
+                next_val = True
+            except:                                 
+                parameters['current_pg_num'] = 1
+                parameters['next_pg_num'] = 2
+                parameters['prev_pg_num'] = 1        
+
 
             parameters['exam_details'] = exam_details
         
