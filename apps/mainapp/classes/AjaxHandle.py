@@ -66,8 +66,8 @@ class AjaxHandle():
                         #Check if exam is cps or dps 
                         #if exam is cps then return url '/cps/exam_code'
                         #else return  url '/dps/exam_code/'
-                        print "Roshan Bhandari and DPS"
-                        return HttpResponse(json.dumps({'status':'ok','url':'/dps/' + exam_code}))
+                        exm_dtls = exam_obj.get_exam_detail(int(exam_code))
+                        return HttpResponse(json.dumps({'status':'ok','url':'/' + exm_dtls['exam_family'] + '/' + exam_code}))
                     else:
                         return HttpResponse(json.dumps({'status':'error','message':'Invalid Coupon code.'}))
             else:
