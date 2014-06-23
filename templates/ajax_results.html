@@ -1,0 +1,60 @@
+
+<div class="row">
+<div class="twelve columns centered" style="margin-top:12%; margin-bottom:2%;">                
+      <h5 class="h-text-align " style="margin-top:0%;">
+      <strong>Tribhuvan University</strong><br>
+      <strong>Institute of Engineering </strong><br>
+      <strong>Pulchowk, Lalitpur, Nepal</strong><br>
+      <strong>{{exam_details.exam_name}}</strong>
+      </h5>
+      
+</div>
+<div class="twelve columns" style="margin-top:0%; margin-bottom:7%;">
+    <h3 class="h-text-align ui-corner-all" style="text-align: center;"><strong>{{exam_details.exam_name}}</strong></h3>
+    <section class="tabs">
+    <ul class="tab-nav">
+        <li class="active"> <a href="#">Score Card</a></li>       
+        <!-- <li><a href="#">Rank Card</a></li> -->
+    </ul>
+    <div class="tab-content active">
+      <table>
+        <thead>       
+          <tr>
+            <th>Subject</th>
+            <th>Mark Scored</th>
+            <th>Total Marks</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for eachSubject in result %}
+          <tr>
+            <td>{{eachSubject.subject}}</td>
+            <td>{{eachSubject.score}}</td>
+            <td>{{eachSubject.total_question}}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tab-content">
+      {% if not myrankcard %}
+        <table>
+          <thead>
+            <tr>
+              <th>Rank Card</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Your Rank</td><td>{{myrankcard.rank}}</td></tr>
+            <tr><td>Total Participants</td><td>{{myrankcard.total}}</td></tr>
+          </tbody>
+        </table>
+      {% else %}
+
+      {% endif %}
+    </div>
+  </section>
+</div>
+</div>

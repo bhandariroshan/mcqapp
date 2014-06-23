@@ -26,6 +26,17 @@ function get_next_page_success(data){
 	}
 
 }
+function load_result(exm_code){
+	ajax_request('load_result', 'load_result_success', {'exam_code':exm_code});
+}
+
+function load_result_success(data){
+	data= jQuery.parseJSON(data);
+	$('#showExam').html('');
+	if (data['status'] == 'ok'){
+		$('#showExam').html(data['html']);
+	}
+}
 
 function validate_coupon_success(data){
 	data=jQuery.parseJSON(data);

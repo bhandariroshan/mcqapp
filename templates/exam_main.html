@@ -252,15 +252,20 @@ $('#ansSubmit').on('click', function(){
 });
 
 var current_pg_num = {{current_pg_num|safe}};
-$('#loadNext').on('click', function(){
+$('#showExam').on('click', '#loadNext', function(){
   get_next_page(exm_code, current_pg_num, 1);
 });
 
-$('#loadPrev').on('click', function(){
+$('#showExam').on('click', '#loadPrev', function(){
   get_next_page(exm_code, current_pg_num, -1);
 });
 
-$('.clickDiv').on('click', function(){
+$('#showExam').on('click', '#ansSubmit', function(){
+  load_result(exm_code);
+});
+
+
+$('#showExam').on('click', '.clickDiv' , function(){
 
   var clicked = this.id.substring(4, 4 + this.id.substr(4,this.id.length).indexOf('_'));
   var option  = this.id.substring(this.id.indexOf('Option')+6,this.id.length);

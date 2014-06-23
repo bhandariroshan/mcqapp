@@ -7,7 +7,7 @@ import json
 from apps.mainapp.classes.Coupon import Coupon
 from apps.mainapp.classes.Userprofile import UserProfile
 import datetime, time
-
+from apps.exam_api.views import ExamHandler
 from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi
 
 
@@ -325,6 +325,56 @@ class AjaxHandle():
                 return HttpResponse(json.dumps({'status':'ok', 'html':html}))            
         else:
             return HttpResponse(json.dumps({'status':'error','message':'You are not authorized to perform this action.'}))
+
+    def load_result(self, request):
+        parameters ={}
+        res={}
+        exam_code = int(request.POST['exam_code'])    
+        res['exam_code'] = exam_code
+        exam_obj = ExammodelApi()
+        exam_details = exam_obj.find_one_exammodel({'exam_code':int(exam_code)})
+        res['exam_details'] = exam_details
+        ess = ExamStartSignal()            
+        ess_check = ess.check_exam_started({'exam_code':int(exam_code), 'useruid':request.user.id})
+
+        question_obj = QuestionApi()    
+        total_questions = question_obj.get_count({"exam_code": int(exam_code), 'marks':1})
+
+        ans = AttemptedAnswerDatabase()
+        try:
+            all_ans = ans.find_all_atttempted_answer({
+                'exam_code':int(exam_code), 
+                'user_id':request.user.id,
+                'ess_time':ess_check['start_time']
+                }, fields={'q_no':1, 'attempt_details':1})
+        except:
+            all_ans = ''
+        answer_list = ''
+        anss = []
+
+        print all_ans
+
+        for eachAns in all_ans:
+            anss.append(eachAns['q_no'])
+
+        for i in range(1,total_questions):       
+            try:
+                if i in anss:
+                    answer_list += all_ans[anss.index(i)]['attempt_details'][0]['selected_ans']
+                else:
+                    answer_list +='e'
+            except:
+                answer_list += 'e'
+
+        print len(answer_list), answer_list
+        exam_handler = ExamHandler()    
+        score_dict = exam_handler.check_answers(exam_code, answer_list)
+        parameters['result'] = score_dict
+        parameters['exam_code'] = exam_code
+        parameters['myrankcard'] = {'total':200, 'rank':1}
+        html =  str(render_to_response('ajax_results.html', parameters, context_instance=RequestContext(request)))
+        html = html.replace('Content-Type: text/html; charset=utf-8', '')
+        return HttpResponse(json.dumps({'status':'ok', 'html':html})) 
 
 
     
