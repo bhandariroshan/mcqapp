@@ -2,56 +2,172 @@
     {
         "answer": {
             "a": {
-                "text": "$ sin1^{0} > sin1 $",
+                "text": "$ \\lambda = 0  $",
                 "image": ""
             },
             "c": {
-                "text": "$ sin1^{0} = sin1 $",
+                "text": "$ \\lambda = -5 $",
                 "image": ""
             },
             "b": {
-                "text": "$ sin1^{0} < sin1 $",
+                "text": "$  \\lambda = 5 $",
                 "image": ""
             },
             "d": {
-                "text": "$ sin1^{0} = \\frac {\\pi}{180} sin1 $",
+                "text": "no $ \\lambda \\in R $",
                 "image": ""
             },
-            "correct": "b"
+            "correct": "c"
         },
-        "exam_code": 201,
+        "exam_code": 202,
         "marks": 1,
         "question": {
-            "text": "Which one of the following is correct?",
+            "text": "The system of homogeneous equations 2x-y+z=0, x-2y+z=0, $ \\lambda x -y +2z=0 $ has nontrivial solutions, too for",
             "image": ""
         },
         "subject": "Mathematics",
-        "topic": "Trigonometry"
+        "topic": "Coordinate geometry"
     },
     {
         "answer": {
             "a": {
-                "text": "x-2",
+                "text": "2",
                 "image": ""
             },
             "c": {
-                "text": "2x",
+                "text": "6",
                 "image": ""
             },
             "b": {
-                "text": "x+2",
+                "text": "3",
                 "image": ""
             },
             "d": {
-                "text": "x+4",
+                "text": "12",
                 "image": ""
             },
             "correct": "b"
         },
-        "exam_code": 201,
+        "exam_code": 202,
         "marks": 1,
         "question": {
-            "text": "If f(x-2) = x then f(x)=",
+            "text": "The area of the triangle formed by the line 2x-3y+6=0 with coordinate axes is ",
+            "image": ""
+        },
+        "subject": "Mathematics",
+        "topic": "Coordinate geometry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "a pair of lines at right angle",
+                "image": ""
+            },
+            "c": {
+                "text": "a pair of parallel lines",
+                "image": ""
+            },
+            "b": {
+                "text": "a rectangular hyperbola",
+                "image": ""
+            },
+            "d": {
+                "text": "a parabola",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "The equation xy-4x-3y+13=0 represents",
+            "image": ""
+        },
+        "subject": "Mathematics",
+        "topic": "Coordinate geometry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "$  -\\frac{1}{(1-x)^{2}}$",
+                "image": ""
+            },
+            "c": {
+                "text": "$ \\frac{x^{2}-1}{x} $",
+                "image": ""
+            },
+            "b": {
+                "text": "$ \\frac{1}{(1-x)^{2}} $",
+                "image": ""
+            },
+            "d": {
+                "text": "$  \\frac{y}{x} $",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "If $ y = 1 + \\frac{1}{x} + \\frac{1}{x^{2}} + .... to\\space \\infty \\space and \\space |x|>1 \\space then \\space \\frac{dy}{dx}=  $ ",
+            "image": ""
+        },
+        "subject": "Mathematics",
+        "topic": "Calculus"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "$ r < max\\{p,1\\} $",
+                "image": ""
+            },
+            "c": {
+                "text": "$ r^{2} = p^{2} + q^{2} $",
+                "image": ""
+            },
+            "b": {
+                "text": "$ r \\in [-\\sqrt{p^{2} + q^{2}}, \\sqrt{p^2+q^{2}}] $",
+                "image": ""
+            },
+            "d": {
+                "text": "$ |r| > \\sqrt{p^2 + q^2} $",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "The equation pcosx + qsinx = r has a solution if",
+            "image": ""
+        },
+        "subject": "Mathematics",
+        "topic": "Algebra"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "an odd function",
+                "image": ""
+            },
+            "c": {
+                "text": "one to one",
+                "image": ""
+            },
+            "b": {
+                "text": "an even function",
+                "image": ""
+            },
+            "d": {
+                "text": "many to one",
+                "image": ""
+            },
+            "correct": "d"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "$ f:R\\rightarrow \\textbf{R} \\space given \\space by \\space f(x) = x^2 -4x +4  $",
             "image": ""
         },
         "subject": "Mathematics",
@@ -60,172 +176,114 @@
     {
         "answer": {
             "a": {
-                "text": "$ b^{2}-4ac = 0 $",
+                "text": "x + y + z = 3",
                 "image": ""
             },
             "c": {
-                "text": "$ b^{2}-4ac \\geq 0 $",
+                "text": "z = 1",
                 "image": ""
             },
             "b": {
-                "text": "$ b^{2}-4ac > 0 $",
+                "text": "x + y + z = -1",
                 "image": ""
             },
             "d": {
-                "text": "$ b^{2}-4ac < 0 $",
+                "text": "z + 1 = 0",
                 "image": ""
             },
-            "correct": "c"
+            "correct": "d"
         },
-        "exam_code": 201,
+        "exam_code": 202,
         "marks": 1,
         "question": {
-            "text": "Which one is the best alternative for the roots of quadratic equation $ ax^{2}+bx+c=0, a \\neq 0, a, b, c \\in \\Mathematicsbb{R} $, to be real?",
+            "text": "The locus of the point which is equidistant from the points (1,-1,3) and (1,-1, -5) is",
             "image": ""
         },
         "subject": "Mathematics",
-        "topic": "Algebra"
+        "topic": "Coordinate geometry"
     },
     {
         "answer": {
             "a": {
-                "text": "$ 4a^{2}b^{2}c^{2} $",
+                "text": "$ tan^{-1}x^{2} +c $",
                 "image": ""
             },
             "c": {
-                "text": "$ 2a^{2}b^{2}c^{2} $",
+                "text": "$ \\ln{(1+x^{4})} +c $",
                 "image": ""
             },
             "b": {
-                "text": "$ a^{2}b^{2}c^{2} $",
+                "text": "$ \\frac{1}{2}tan^{-1}x^{2} +c $",
                 "image": ""
             },
             "d": {
-                "text": "0",
+                "text": "$ \\frac{1}{2}\\ln{(1+x^{4})} +c $",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "$ \\int \\frac {x}{x^4+1}dx $",
+            "image": ""
+        },
+        "subject": "Mathematics",
+        "topic": "Calculus"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "if f(0) = 1",
+                "image": ""
+            },
+            "c": {
+                "text": "if f(0) = -1",
+                "image": ""
+            },
+            "b": {
+                "text": "if f(0) = 0",
+                "image": ""
+            },
+            "d": {
+                "text": "for no value of f(0)",
+                "image": ""
+            },
+            "correct": "d"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "$ f(x) = cos\\frac{1}{x}; x \\ne0 \\space can\\space be \\space made\\space continuous \\space at\\space x=0 $",
+            "image": ""
+        },
+        "subject": "Mathematics",
+        "topic": "Calculus"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "$ \\sqrt{2} $",
+                "image": ""
+            },
+            "c": {
+                "text": "$ \\frac{3}{4} $",
+                "image": ""
+            },
+            "b": {
+                "text": "2",
+                "image": ""
+            },
+            "d": {
+                "text": "$ 3\\sqrt{2} $",
                 "image": ""
             },
             "correct": "a"
         },
-        "exam_code": 201,
+        "exam_code": 202,
         "marks": 1,
         "question": {
-            "text": "The value of $ \\begin{vmatrix}\n-a^{2} & ab & ac \\\\ab & -b^{2} & bc \\\\ac & bc & -c^{2}\n\\end{vmatrix} $ =",
-            "image": ""
-        },
-        "subject": "Mathematics",
-        "topic": "Algebra"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "$ e^{x} ln x + c $",
-                "image": ""
-            },
-            "c": {
-                "text": "$ \\frac{2ln x}{x} + c $",
-                "image": ""
-            },
-            "b": {
-                "text": "$ \\frac{x}{ln x} + c $",
-                "image": ""
-            },
-            "d": {
-                "text": "$ ln x - \\frac{x}{2} + c $",
-                "image": ""
-            },
-            "correct": "b"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "$ \\int\\begin{bmatrix} \\frac{1}{ln x}- \\frac{1}{(ln x)^{2}} \\end{bmatrix}dx = $",
-            "image": ""
-        },
-        "subject": "Mathematics",
-        "topic": "Algebra"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "0",
-                "image": ""
-            },
-            "c": {
-                "text": "-1",
-                "image": ""
-            },
-            "b": {
-                "text": "1",
-                "image": ""
-            },
-            "d": {
-                "text": "doesn't exist",
-                "image": ""
-            },
-            "correct": "d"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "$ \\lim_{x \\rightarrow 0} \\frac{\\begin{vmatrix}x\\end{vmatrix}}{x} = $",
-            "image": ""
-        },
-        "subject": "Mathematics",
-        "topic": "Calculus"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "$ ae^{b} $",
-                "image": ""
-            },
-            "c": {
-                "text": "$ e^{b} $",
-                "image": ""
-            },
-            "b": {
-                "text": "$ a^{2}e^{b} $",
-                "image": ""
-            },
-            "d": {
-                "text": "$ e^{a}.e^{b} $",
-                "image": ""
-            },
-            "correct": "b"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "If $ y = e^{ax+b} $ then $ \\frac{d^{2}y}{dx^{2}} $ at x=0 is",
-            "image": ""
-        },
-        "subject": "Mathematics",
-        "topic": "Calculus"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "4",
-                "image": ""
-            },
-            "c": {
-                "text": "5",
-                "image": ""
-            },
-            "b": {
-                "text": "6",
-                "image": ""
-            },
-            "d": {
-                "text": "8",
-                "image": ""
-            },
-            "correct": "d"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "The number of spheres of a given radius and touching the co-ordinate planes is",
+            "text": "The eccentricity of the conic section $ 4(x^{2} - y^{2} ) = 1 $ is",
             "image": ""
         },
         "subject": "Mathematics",
@@ -234,85 +292,27 @@
     {
         "answer": {
             "a": {
-                "text": "$ \\frac{\\pi}{3} $",
+                "text": " $ /hadI/ $ ",
                 "image": ""
             },
             "c": {
-                "text": "$ \\frac{3\\pi}{4} $",
+                "text": "$ /h\\partial edlI/  $",
                 "image": ""
             },
             "b": {
-                "text": "$ \\frac{2\\pi}{3} $",
+                "text": " 4 /hardlI:/ $ ",
                 "image": ""
             },
             "d": {
-                "text": "$ \\frac{\\pi}{6} $",
+                "text": "$ /h\\supset dlI/ $",
                 "image": ""
             },
-            "correct": "b"
+            "correct": "a"
         },
-        "exam_code": 201,
+        "exam_code": 202,
         "marks": 1,
         "question": {
-            "text": "If $ \\overrightarrow{a}, \\overrightarrow{b}, \\overrightarrow{c} $ are three unit vectors with relation $ \\overrightarrow{a} + \\overrightarrow{b} + \\overrightarrow{c} = 0 $, what is the angle between $ \\overrightarrow{b} and \\overrightarrow{c} $ ?",
-            "image": ""
-        },
-        "subject": "Mathematics",
-        "topic": "Vectors"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "$ \\frac{1}{2} $",
-                "image": ""
-            },
-            "c": {
-                "text": "$ \\frac{7}{2} $",
-                "image": ""
-            },
-            "b": {
-                "text": "$ \\frac{3}{2} $",
-                "image": ""
-            },
-            "d": {
-                "text": "$ \\frac{9}{2} $",
-                "image": ""
-            },
-            "correct": "d"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "The area of $ \\triangle $ with two vertices (1, 2), (4, 5) and centroid (0, 0) is",
-            "image": ""
-        },
-        "subject": "Mathematics",
-        "topic": "Coordinate geometry"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "/e/",
-                "image": ""
-            },
-            "c": {
-                "text": "$ /\\supset I/ $",
-                "image": ""
-            },
-            "b": {
-                "text": "/eI/",
-                "image": ""
-            },
-            "d": {
-                "text": "/aI/",
-                "image": ""
-            },
-            "correct": "b"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "The initial sound of the word 'eight' represents the phonemic",
+            "text": "The phonemic transcription of the word - 'hardly' is -------------",
             "image": ""
         },
         "subject": "English",
@@ -321,27 +321,56 @@
     {
         "answer": {
             "a": {
-                "text": "3 each",
+                "text": "first",
                 "image": ""
             },
             "c": {
-                "text": "5 and 3",
+                "text": "third",
                 "image": ""
             },
             "b": {
-                "text": "4 each",
+                "text": "second",
                 "image": ""
             },
             "d": {
-                "text": "4 and 3",
+                "text": "all of these",
                 "image": ""
             },
             "correct": "a"
         },
-        "exam_code": 201,
+        "exam_code": 202,
         "marks": 1,
         "question": {
-            "text": "How many different consonants and vowels does the word 'momentum' consist of?",
+            "text": "The word - 'hardship' has its primary stress on the -------------- syllable",
+            "image": ""
+        },
+        "subject": "English",
+        "topic": "Phonemes and Stress"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "spectators",
+                "image": ""
+            },
+            "c": {
+                "text": "mob",
+                "image": ""
+            },
+            "b": {
+                "text": "audience",
+                "image": ""
+            },
+            "d": {
+                "text": "viewers",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "A1 a lecture ",
             "image": ""
         },
         "subject": "English",
@@ -350,346 +379,27 @@
     {
         "answer": {
             "a": {
-                "text": "$ \\underline {Hunting} $ tiger is a favorite sport",
+                "text": "emigrant",
                 "image": ""
             },
             "c": {
-                "text": "$ \\underline {Hunted} $ tiger is a favorite sport",
+                "text": "expatriate",
                 "image": ""
             },
             "b": {
-                "text": "$ \\underline {Hunting} $, we were arrested",
+                "text": "immigrant",
                 "image": ""
             },
             "d": {
-                "text": "None",
-                "image": ""
-            },
-            "correct": "b"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "Which of the underlined constituents is a present participle?",
-            "image": ""
-        },
-        "subject": "English",
-        "topic": "Grammar"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "The fan is hanging on the ceiling",
-                "image": ""
-            },
-            "c": {
-                "text": "The fan is hanging from the ceiling",
-                "image": ""
-            },
-            "b": {
-                "text": "The fan is hanging into the ceiling",
-                "image": ""
-            },
-            "d": {
-                "text": "The fan is hanging unto the ceiling",
+                "text": "pirate",
                 "image": ""
             },
             "correct": "c"
         },
-        "exam_code": 201,
+        "exam_code": 202,
         "marks": 1,
         "question": {
-            "text": "Which of the following sentences is correct?",
-            "image": ""
-        },
-        "subject": "English",
-        "topic": "Grammar"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "$ S + V_t + O + $ present participle",
-                "image": ""
-            },
-            "c": {
-                "text": "$ S + V_t + O + $ present participle + PP",
-                "image": ""
-            },
-            "b": {
-                "text": "$ S + V_i + O + $ present participle",
-                "image": ""
-            },
-            "d": {
-                "text": "None",
-                "image": ""
-            },
-            "correct": "a"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "The pattern of the sentence 'I saw her glaring at me' is",
-            "image": ""
-        },
-        "subject": "English",
-        "topic": "Grammar"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "9:30",
-                "image": ""
-            },
-            "c": {
-                "text": "9.3",
-                "image": ""
-            },
-            "b": {
-                "text": "9;30",
-                "image": ""
-            },
-            "d": {
-                "text": "9-30",
-                "image": ""
-            },
-            "correct": "a"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "Which of the time expressions is correct?",
-            "image": ""
-        },
-        "subject": "English",
-        "topic": "Grammar"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "She suggests seeing a doctor",
-                "image": ""
-            },
-            "c": {
-                "text": "She suggest that I saw a doctor",
-                "image": ""
-            },
-            "b": {
-                "text": "She suggests to have seen a doctor",
-                "image": ""
-            },
-            "d": {
-                "text": "None",
-                "image": ""
-            },
-            "correct": "a"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "Which one is incorrect?",
-            "image": ""
-        },
-        "subject": "English",
-        "topic": "Grammar"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "Providing you are working hard",
-                "image": ""
-            },
-            "c": {
-                "text": "Provided you worked hard, you will see the exams through",
-                "image": ""
-            },
-            "b": {
-                "text": "Proving that you work hard, you will see the exams though",
-                "image": ""
-            },
-            "d": {
-                "text": "None",
-                "image": ""
-            },
-            "correct": "d"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "Which of the following is a correct conditional?",
-            "image": ""
-        },
-        "subject": "English",
-        "topic": "Grammar"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "The pen is filling",
-                "image": ""
-            },
-            "c": {
-                "text": "The pen should have been filled",
-                "image": ""
-            },
-            "b": {
-                "text": "Filling is needed by pen",
-                "image": ""
-            },
-            "d": {
-                "text": "None",
-                "image": ""
-            },
-            "correct": "d"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "The passive of 'The pen needs filling' is",
-            "image": ""
-        },
-        "subject": "English",
-        "topic": "Grammar"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "$ \\underline {Naturally} $, she dances",
-                "image": ""
-            },
-            "c": {
-                "text": "$ \\underline {Nature} $ she danced",
-                "image": ""
-            },
-            "b": {
-                "text": "$ \\underline {Naturally} $, wise, she danced",
-                "image": ""
-            },
-            "d": {
-                "text": "None",
-                "image": ""
-            },
-            "correct": "a"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "Which one of the following is a disjunct?",
-            "image": ""
-        },
-        "subject": "English",
-        "topic": "Grammar"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "However, she is an idiot.",
-                "image": ""
-            },
-            "c": {
-                "text": "Poor although he is, he still enjoyed night life.",
-                "image": ""
-            },
-            "b": {
-                "text": "Poor though he is, he still enjoys night life.",
-                "image": ""
-            },
-            "d": {
-                "text": "None",
-                "image": ""
-            },
-            "correct": "b"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "The complex sentence is ….......",
-            "image": ""
-        },
-        "subject": "English",
-        "topic": "Grammar"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "$ \\underline {what \\space you \\space said} $ broke my heart",
-                "image": ""
-            },
-            "c": {
-                "text": "What $ \\underline {you} $ said broke my heart",
-                "image": ""
-            },
-            "b": {
-                "text": "$ \\underline {what} $ you said broke my heart",
-                "image": ""
-            },
-            "d": {
-                "text": "what you said broke $ \\underline {my \\space heart} $",
-                "image": ""
-            },
-            "correct": "a"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "Which of the underlined is a subject?",
-            "image": ""
-        },
-        "subject": "English",
-        "topic": "Grammar"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "At night, he died.",
-                "image": ""
-            },
-            "c": {
-                "text": "He in the night died.",
-                "image": ""
-            },
-            "b": {
-                "text": "Died in the night he.",
-                "image": ""
-            },
-            "d": {
-                "text": "None",
-                "image": ""
-            },
-            "correct": "a"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "The correct construction is …....",
-            "image": ""
-        },
-        "subject": "English",
-        "topic": "Grammar"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "Derace",
-                "image": ""
-            },
-            "c": {
-                "text": "inrace",
-                "image": ""
-            },
-            "b": {
-                "text": "unrace",
-                "image": ""
-            },
-            "d": {
-                "text": "unraced",
-                "image": ""
-            },
-            "correct": "a"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "The antonym of 'race' is",
+            "text": "To send out of one's country",
             "image": ""
         },
         "subject": "English",
@@ -698,27 +408,27 @@
     {
         "answer": {
             "a": {
-                "text": "Hammer and Sickle is a flag",
+                "text": "with",
                 "image": ""
             },
             "c": {
-                "text": "Hammers is a flag",
+                "text": "from",
                 "image": ""
             },
             "b": {
-                "text": "Hammer and sickle are flag",
+                "text": "to",
                 "image": ""
             },
             "d": {
-                "text": "Both A and C",
+                "text": "for",
                 "image": ""
             },
-            "correct": "d"
+            "correct": "b"
         },
-        "exam_code": 201,
+        "exam_code": 202,
         "marks": 1,
         "question": {
-            "text": "Which one of the sentences is correct?",
+            "text": "Introduce a person ---------someone",
             "image": ""
         },
         "subject": "English",
@@ -727,143 +437,375 @@
     {
         "answer": {
             "a": {
-                "text": "$ 1:\\sqrt{3} $",
+                "text": "at ",
                 "image": ""
             },
             "c": {
-                "text": "$ 1:2 $",
+                "text": "into",
                 "image": ""
             },
             "b": {
-                "text": "$ \\sqrt{3}:2 $",
+                "text": "for ",
                 "image": ""
             },
             "d": {
-                "text": "$ 1:\\sqrt{2} $",
-                "image": ""
-            },
-            "correct": "b"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "A stone projected at angle $ 30^o $ to the horizontal has range $ R_1 $ and projected an angle $ 45^o $ to the horizontal with same speed has range $ R_2 $ then $ R_1:R_2 $ equals",
-            "image": ""
-        },
-        "subject": "Physics",
-        "topic": "Mechanics"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "720 N",
-                "image": ""
-            },
-            "c": {
-                "text": "113 N",
-                "image": ""
-            },
-            "b": {
-                "text": "960 N",
-                "image": ""
-            },
-            "d": {
-                "text": "228 N",
-                "image": ""
-            },
-            "correct": "c"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "An object of mass 10kg is whirled round a horizontal circle of radius 4m by revolving string inclined at $ 30^o $ to the vertical. If the uniform speed of the object is $ 5ms^{-1} $, the tension in string is",
-            "image": ""
-        },
-        "subject": "Physics",
-        "topic": "Mechanics"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "$ 0.75^{\\circ}C $",
-                "image": ""
-            },
-            "c": {
-                "text": "$ 0.095^{\\circ}C $",
-                "image": ""
-            },
-            "b": {
-                "text": "$ 0.085^{\\circ}C $",
-                "image": ""
-            },
-            "d": {
-                "text": "$ 0.1^{\\circ}C $",
-                "image": ""
-            },
-            "correct": "c"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "Water is falling from a height of 80m. If half of energy of water is converted into heat, increase in temperature is",
-            "image": ""
-        },
-        "subject": "Physics",
-        "topic": "Heat and Thermodynamics"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "$ 20^{\\circ} $",
-                "image": ""
-            },
-            "c": {
-                "text": "$ 6^{\\circ} $",
-                "image": ""
-            },
-            "b": {
-                "text": "$ 10^{\\circ} $",
-                "image": ""
-            },
-            "d": {
-                "text": "$ 2^{\\circ} $",
+                "text": "upon",
                 "image": ""
             },
             "correct": "d"
         },
-        "exam_code": 201,
+        "exam_code": 202,
         "marks": 1,
         "question": {
-            "text": "The angle of prism is $ 4^{\\circ} $ and R.I. for green light is 1.5. If a green ray passes through it, the deviation will be",
+            "text": "Look ------------ someone as a friend",
             "image": ""
         },
-        "subject": "Physics",
-        "topic": "Optics"
+        "subject": "English",
+        "topic": "Grammar"
     },
     {
         "answer": {
             "a": {
-                "text": "1.5 cm",
+                "text": "are ",
                 "image": ""
             },
             "c": {
-                "text": "0.9 cm",
+                "text": "is",
                 "image": ""
             },
             "b": {
-                "text": "1.2 cm",
+                "text": "were",
                 "image": ""
             },
             "d": {
-                "text": "0.6 cm",
+                "text": "none of these",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "The number of persons present ................very small.",
+            "image": ""
+        },
+        "subject": "English",
+        "topic": "Grammar"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "are ",
+                "image": ""
+            },
+            "c": {
+                "text": "was",
+                "image": ""
+            },
+            "b": {
+                "text": "is ",
+                "image": ""
+            },
+            "d": {
+                "text": "all of these",
                 "image": ""
             },
             "correct": "a"
         },
-        "exam_code": 201,
+        "exam_code": 202,
         "marks": 1,
         "question": {
-            "text": "One open organ pipe of length 27cm and another closed organ pipe of length 21cm sound in unison in their first overtone. The end correction of both pipe is",
+            "text": "Half of them ....... rotten.",
+            "image": ""
+        },
+        "subject": "English",
+        "topic": "Grammar"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "very rapidly",
+                "image": ""
+            },
+            "c": {
+                "text": "to reduce",
+                "image": ""
+            },
+            "b": {
+                "text": "a search",
+                "image": ""
+            },
+            "d": {
+                "text": "to affect",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "By leaps and bound",
+            "image": ""
+        },
+        "subject": "English",
+        "topic": "Grammar"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "is it?",
+                "image": ""
+            },
+            "c": {
+                "text": "isn't it?",
+                "image": ""
+            },
+            "b": {
+                "text": "doesn't it?",
+                "image": ""
+            },
+            "d": {
+                "text": "does it?",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "All that glitters is not gold, .......... ?",
+            "image": ""
+        },
+        "subject": "English",
+        "topic": "Grammar"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "weren't they?",
+                "image": ""
+            },
+            "c": {
+                "text": "weren't there?",
+                "image": ""
+            },
+            "b": {
+                "text": "didn't they?",
+                "image": ""
+            },
+            "d": {
+                "text": "did they?",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "These were some people at the gate, ...... ?",
+            "image": ""
+        },
+        "subject": "English",
+        "topic": "Grammar"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "simple",
+                "image": ""
+            },
+            "c": {
+                "text": "complex",
+                "image": ""
+            },
+            "b": {
+                "text": "compound",
+                "image": ""
+            },
+            "d": {
+                "text": "mixed",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "'Black as she is, she is a beauty' is a ...............sentence.",
+            "image": ""
+        },
+        "subject": "English",
+        "topic": "Grammar"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "simple",
+                "image": ""
+            },
+            "c": {
+                "text": "complex",
+                "image": ""
+            },
+            "b": {
+                "text": "compound",
+                "image": ""
+            },
+            "d": {
+                "text": "mixed",
+                "image": ""
+            },
+            "correct": "d"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "'She would have come if you had invited her, for she was free ' is a ........sentence",
+            "image": ""
+        },
+        "subject": "English",
+        "topic": "Grammar"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "have telephoned",
+                "image": ""
+            },
+            "c": {
+                "text": "telephone",
+                "image": ""
+            },
+            "b": {
+                "text": "have been telephonng",
+                "image": ""
+            },
+            "d": {
+                "text": "telephoned",
+                "image": ""
+            },
+            "correct": "d"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "I .............. you all the morning.",
+            "image": ""
+        },
+        "subject": "English",
+        "topic": "Grammar"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "will",
+                "image": ""
+            },
+            "c": {
+                "text": "should",
+                "image": ""
+            },
+            "b": {
+                "text": "may",
+                "image": ""
+            },
+            "d": {
+                "text": "shall",
+                "image": ""
+            },
+            "correct": "d"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "Her father said, 'If you score above 80%, in the IOE entrance exam you .................. be given galaxy grand 2.",
+            "image": ""
+        },
+        "subject": "English",
+        "topic": "Grammar"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "$ \\frac{2a}{3b} $",
+                "image": ""
+            },
+            "c": {
+                "text": "$ \\frac{a}{3b} $",
+                "image": ""
+            },
+            "b": {
+                "text": "$ \\frac{a}{b} $",
+                "image": ""
+            },
+            "d": {
+                "text": "0",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "The position x of a particle varies with time (t) as x = $ at^{2} -bt^{3} $. The acceleration of the particle will be 0 at a time",
+            "image": ""
+        },
+        "subject": "Physics",
+        "topic": "Mechanics"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "7.2 J",
+                "image": ""
+            },
+            "c": {
+                "text": "120 J",
+                "image": ""
+            },
+            "b": {
+                "text": "3.6 J",
+                "image": ""
+            },
+            "d": {
+                "text": "1200 J",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "A uniform chain of length 2m is kept on a table such that a length of 60cm hangs freely from the edge of the table. The total mass of chain is 4kg then work done on pulling whole chain on the table is",
+            "image": ""
+        },
+        "subject": "Physics",
+        "topic": "Mechanics"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "100 cm",
+                "image": ""
+            },
+            "c": {
+                "text": "5 cm",
+                "image": ""
+            },
+            "b": {
+                "text": "2 cm",
+                "image": ""
+            },
+            "d": {
+                "text": "$ \\pi cm $",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "The equation of wave traveling in a string can be written as $ y=3cos\\pi(100t-x) $. The wavelength of the wave is",
             "image": ""
         },
         "subject": "Physics",
@@ -872,230 +814,230 @@
     {
         "answer": {
             "a": {
-                "text": "$ \\frac{q}{\\epsilon_0} $",
+                "text": "$ \\frac{Y_1}{Y_2} = \\frac {\\alpha_1}{\\alpha_2}$ ",
                 "image": ""
             },
             "c": {
-                "text": "$ \\frac{q}{6\\epsilon_0} $",
+                "text": "$ \\frac{Y_1}{Y_2} =\\sqrt \\frac {\\alpha_1}{\\alpha_2}$ ",
                 "image": ""
             },
             "b": {
-                "text": "$ \\frac{q^{2}}{\\epsilon_0} $",
+                "text": "$ \\frac{Y_1}{Y_2} = \\frac {\\alpha_2}{\\alpha_1}$ ",
                 "image": ""
             },
             "d": {
-                "text": "$ \\frac{q^{2}}{6\\epsilon_0} $",
-                "image": ""
-            },
-            "correct": "c"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "A charge q is placed at the centre of cube of side a. The electric flux through one side of cube is",
-            "image": ""
-        },
-        "subject": "Physics",
-        "topic": "Electricity and Magnetism"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "2L",
-                "image": ""
-            },
-            "c": {
-                "text": "4L",
-                "image": ""
-            },
-            "b": {
-                "text": "$ \\frac{L}{2} $",
-                "image": ""
-            },
-            "d": {
-                "text": "$ \\frac{L}{4} $",
-                "image": ""
-            },
-            "correct": "d"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "In LCR series circuit, the capacitor is changed from C to 4C. For the same resonant frequency, the inductance should be changed from L to",
-            "image": ""
-        },
-        "subject": "Physics",
-        "topic": "Electricity and Magnetism"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "4",
-                "image": ""
-            },
-            "c": {
-                "text": "8",
-                "image": ""
-            },
-            "b": {
-                "text": "6",
-                "image": ""
-            },
-            "d": {
-                "text": "10",
-                "image": ""
-            },
-            "correct": "d"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "If an electron jumps from sixth excited state to second excited state, the number of emission transitions between these states will be",
-            "image": ""
-        },
-        "subject": "Physics",
-        "topic": "Modern Physics and Electronics"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "0.03 mA",
-                "image": ""
-            },
-            "c": {
-                "text": "0.66 mA",
-                "image": ""
-            },
-            "b": {
-                "text": "0.003 mA",
-                "image": ""
-            },
-            "d": {
-                "text": "0.015 mA",
-                "image": ""
-            },
-            "correct": "a"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "A transistor circuit has $ \\alpha $ = 0.984. If $ I_c $ = 2mA, value of $ I_B $ is",
-            "image": ""
-        },
-        "subject": "Physics",
-        "topic": "Electricity and Magnetism"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "0.13 T",
-                "image": ""
-            },
-            "c": {
-                "text": "13 T",
-                "image": ""
-            },
-            "b": {
-                "text": "1.3 T",
-                "image": ""
-            },
-            "d": {
-                "text": "130 T",
-                "image": ""
-            },
-            "correct": "c"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "In a hydrogen atom an electron revolves in a circular orbit of radius 0.5A with a frequency 6.6 $ \\times 10^{15} $ per sec. Then the magnetic induction at the centre of orbit is",
-            "image": ""
-        },
-        "subject": "Physics",
-        "topic": "Modern Physics and Electronics"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "$ 0.1 N_A $",
-                "image": ""
-            },
-            "c": {
-                "text": "$ 2 N_A $",
-                "image": ""
-            },
-            "b": {
-                "text": "$ N_A $",
-                "image": ""
-            },
-            "d": {
-                "text": "$ 5 N_A $",
-                "image": ""
-            },
-            "correct": "a"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "The no. of molecules of water produced by dissolving 10gm of $ CaCO_3 $ (Calcium Carbonate) in excess HCl solution is",
-            "image": ""
-        },
-        "subject": "Chemistry",
-        "topic": "Physical Chemistry"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "4",
-                "image": ""
-            },
-            "c": {
-                "text": "2",
-                "image": ""
-            },
-            "b": {
-                "text": "3",
-                "image": ""
-            },
-            "d": {
-                "text": "5",
+                "text": "$ \\frac{Y_1}{Y_2} =\\sqrt \\frac {\\alpha_2}{\\alpha_1}$ ",
                 "image": ""
             },
             "correct": "b"
         },
-        "exam_code": 201,
+        "exam_code": 202,
         "marks": 1,
         "question": {
-            "text": "Total no. of unpaired electrons present in $ Co^{++} $ is",
+            "text": "Two rods of different material of linear expansivities $ \\alpha_1 \\space and \\space \\alpha_2 $, Young's modulus $ Y_1 \\space and \\space Y_2 $ are fixed between two rigid massive wall. The rods are heated by the same temperature and there is no bending on rod then stress will be equal if",
             "image": ""
         },
-        "subject": "Chemistry",
-        "topic": "Physical Chemistry"
+        "subject": "Physics",
+        "topic": "Heat and Thermodynamics"
     },
     {
         "answer": {
             "a": {
-                "text": "Al",
+                "text": "8000",
                 "image": ""
             },
             "c": {
-                "text": "Sc",
+                "text": "4000",
                 "image": ""
             },
             "b": {
-                "text": "Ge",
+                "text": "2000",
                 "image": ""
             },
             "d": {
-                "text": "Ga",
+                "text": "500",
+                "image": ""
+            },
+            "correct": "d"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "An electrical refrigerator abstracts 2000 calories heat from ice trays. The coefficient of performance is 4 then work done by motor in calories is ",
+            "image": ""
+        },
+        "subject": "Physics",
+        "topic": "Heat and Thermodynamics"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "$ \\frac{1}{1000} $ mv",
+                "image": ""
+            },
+            "c": {
+                "text": "10 mv",
+                "image": ""
+            },
+            "b": {
+                "text": "1000 mv",
+                "image": ""
+            },
+            "d": {
+                "text": "100 mv",
+                "image": ""
+            },
+            "correct": "d"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "When 1000 drops of mercury of potential 1mv each coalese to form a single drop then potential of single drop will be",
+            "image": ""
+        },
+        "subject": "Physics",
+        "topic": "Electricity and Magnetism"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": " $ l, d $",
+                "image": ""
+            },
+            "c": {
+                "text": " $ l/2, d $ ",
+                "image": ""
+            },
+            "b": {
+                "text": " $ 2l, d $ ",
+                "image": ""
+            },
+            "d": {
+                "text": " $ 2l, d/2 $ ",
                 "image": ""
             },
             "correct": "c"
         },
-        "exam_code": 201,
+        "exam_code": 202,
         "marks": 1,
         "question": {
-            "text": "Which of the following elements was named as eka-Boron by Mendeleev?",
+            "text": "A piece of copper is shaped into a conductor of minimum resistance. Its length and diameter should be",
+            "image": ""
+        },
+        "subject": "Physics",
+        "topic": "Electricity and Magnetism"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "10cm",
+                "image": ""
+            },
+            "c": {
+                "text": "15cm",
+                "image": ""
+            },
+            "b": {
+                "text": "6.67cm",
+                "image": ""
+            },
+            "d": {
+                "text": "20cm",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "Air bubble in glass slab of $ \\mu = 1.5 $ is found 6cm from one side and 4cm from other side. The thickness of slab is ",
+            "image": ""
+        },
+        "subject": "Physics",
+        "topic": "Optics"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "$ \\frac {1}{2} $",
+                "image": ""
+            },
+            "c": {
+                "text": "$ \\frac{1}{\\sqrt{2}}$",
+                "image": ""
+            },
+            "b": {
+                "text": "2",
+                "image": ""
+            },
+            "d": {
+                "text": "3",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "The KE of  a free electron is doubled, its de Broglie's wavelength will be",
+            "image": ""
+        },
+        "subject": "Physics",
+        "topic": "Modern Physics and Electronics"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "24 $ \\mu A $",
+                "image": ""
+            },
+            "c": {
+                "text": "26 $ \\mu A $",
+                "image": ""
+            },
+            "b": {
+                "text": "25 $ \\mu A $",
+                "image": ""
+            },
+            "d": {
+                "text": "27 $ \\mu A $",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "A transistor is connected in common emitter configuration. The collector supply is 8V and voltage drop across resistor $ 800 \\Omega $ in the collector is 0.5V. The current gain is 0.96 then base current is ",
+            "image": ""
+        },
+        "subject": "Physics",
+        "topic": "Modern Physics and Electronics"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "-3, +1",
+                "image": ""
+            },
+            "c": {
+                "text": "-3, +5",
+                "image": ""
+            },
+            "b": {
+                "text": "1",
+                "image": ""
+            },
+            "d": {
+                "text": "-3, +3",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "The oxidation state of N in given compound $ NH_4NO_3 $ is",
             "image": ""
         },
         "subject": "Chemistry",
@@ -1104,11 +1046,156 @@
     {
         "answer": {
             "a": {
-                "text": "$ H_2S $",
+                "text": "1 $ N_A $",
                 "image": ""
             },
             "c": {
-                "text": "$ H_2Se $",
+                "text": "5$ N_A $",
+                "image": ""
+            },
+            "b": {
+                "text": "$ 2N_A $",
+                "image": ""
+            },
+            "d": {
+                "text": "10 $  N_A $",
+                "image": ""
+            },
+            "correct": "d"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "The number of electrons present in 1 mole of $ CH_4 $",
+            "image": ""
+        },
+        "subject": "Chemistry",
+        "topic": "Physical Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "MCl",
+                "image": ""
+            },
+            "c": {
+                "text": "$ MCl_3 $",
+                "image": ""
+            },
+            "b": {
+                "text": "$ MCl_2 $",
+                "image": ""
+            },
+            "d": {
+                "text": "$ MCl_4 $",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "The equivalent weight of metal is 25. The vapor density of chloride  is 91. The formula of Metal Chloride is",
+            "image": ""
+        },
+        "subject": "Chemistry",
+        "topic": "Physical Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "M/3",
+                "image": ""
+            },
+            "c": {
+                "text": "M/5",
+                "image": ""
+            },
+            "b": {
+                "text": "M/4",
+                "image": ""
+            },
+            "d": {
+                "text": "M/8",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "The equivalent weight of $ HNO_3 $ in the given condition $ HNO_3 \\rightarrow NO $ when the molecular wt of $ HNO_3 $is M is",
+            "image": ""
+        },
+        "subject": "Chemistry",
+        "topic": "Physical Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "s-block",
+                "image": ""
+            },
+            "c": {
+                "text": "d-block",
+                "image": ""
+            },
+            "b": {
+                "text": "p-block",
+                "image": ""
+            },
+            "d": {
+                "text": "f-block",
+                "image": ""
+            },
+            "correct": "d"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "The electronic configuration of element ends at an antepenultimate shell is ",
+            "image": ""
+        },
+        "subject": "Chemistry",
+        "topic": "Physical Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "$ 2n^{2} $",
+                "image": ""
+            },
+            "c": {
+                "text": "$ 2(2l+1) $",
+                "image": ""
+            },
+            "b": {
+                "text": "$ n^{2} $",
+                "image": ""
+            },
+            "d": {
+                "text": "$ 2l +1 $",
+                "image": ""
+            },
+            "correct": "d"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "The total number of orbitals present in each sub-shell is equivalent to the relation",
+            "image": ""
+        },
+        "subject": "Chemistry",
+        "topic": "Physical Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "$ NH_3 $",
+                "image": ""
+            },
+            "c": {
+                "text": "$ NaOH $",
                 "image": ""
             },
             "b": {
@@ -1116,44 +1203,15 @@
                 "image": ""
             },
             "d": {
-                "text": "$ H_2Te $",
-                "image": ""
-            },
-            "correct": "a"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "Which of the followings has least bpt.?",
-            "image": ""
-        },
-        "subject": "Chemistry",
-        "topic": "Physical Chemistry"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "$ +2 $ only ",
-                "image": ""
-            },
-            "c": {
-                "text": "$ +3 $ and $ +2 $",
-                "image": ""
-            },
-            "b": {
-                "text": "$ +3 $ only",
-                "image": ""
-            },
-            "d": {
-                "text": "$ +2 $ and $ +1 $",
+                "text": "$ CN^{-1} $",
                 "image": ""
             },
             "correct": "c"
         },
-        "exam_code": 201,
+        "exam_code": 202,
         "marks": 1,
         "question": {
-            "text": "The O.N. Of Fe in $ Fe_4[Fe(CN)_6]_3 $ is",
+            "text": "Which compound is not Bronsted-Lowry base?",
             "image": ""
         },
         "subject": "Chemistry",
@@ -1162,259 +1220,201 @@
     {
         "answer": {
             "a": {
-                "text": "4.29",
+                "text": "$ NH_3 $",
                 "image": ""
             },
             "c": {
-                "text": "5",
+                "text": "$ AsH_3 $",
                 "image": ""
             },
             "b": {
-                "text": "4.25",
+                "text": "$ PH_3 $",
                 "image": ""
             },
             "d": {
-                "text": "7",
-                "image": ""
-            },
-            "correct": "a"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "The pH of solution formed by mixing equal vol. of pH=4 and pH=6 is",
-            "image": ""
-        },
-        "subject": "Chemistry",
-        "topic": "Physical Chemistry"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "Ag",
-                "image": ""
-            },
-            "c": {
-                "text": "$ BF_3 $",
-                "image": ""
-            },
-            "b": {
-                "text": "",
-                "image": "42_b.jpg"
-            },
-            "d": {
-                "text": "R-O-H",
-                "image": ""
-            },
-            "correct": "d"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "Which of the following is not lewis acid?",
-            "image": ""
-        },
-        "subject": "Chemistry",
-        "topic": "Physical Chemistry"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "$ Na^{+} $",
-                "image": ""
-            },
-            "c": {
-                "text": "$ H^{+} $",
-                "image": ""
-            },
-            "b": {
-                "text": "$ OH^{-} $",
-                "image": ""
-            },
-            "d": {
-                "text": "$ Ca^{++} $",
-                "image": ""
-            },
-            "correct": "c"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "In organic ion-exchange process, cation of hard water is exchanged with",
-            "image": ""
-        },
-        "subject": "Chemistry",
-        "topic": "Physical Chemistry"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "$ NaIO_3 $",
-                "image": ""
-            },
-            "c": {
-                "text": "$ I_2 $",
-                "image": ""
-            },
-            "b": {
-                "text": "KI",
-                "image": ""
-            },
-            "d": {
-                "text": "all",
+                "text": "$ SbH_3 $",
                 "image": ""
             },
             "correct": "b"
         },
-        "exam_code": 201,
+        "exam_code": 202,
         "marks": 1,
         "question": {
-            "text": "Which of these is added to table salt to prevent goitre?",
+            "text": "Which of these have least boiling point?",
             "image": ""
         },
         "subject": "Chemistry",
-        "topic": "Inorganic Chemistry"
+        "topic": "Physical Chemistry"
     },
     {
         "answer": {
             "a": {
-                "text": "Cinnabar",
+                "text": "HF",
                 "image": ""
             },
             "c": {
-                "text": "Willimite",
+                "text": "HBr",
                 "image": ""
             },
             "b": {
-                "text": "Bauxite",
+                "text": "HCl",
                 "image": ""
             },
             "d": {
-                "text": "Pyrolussite",
-                "image": ""
-            },
-            "correct": "c"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "Which of these is ore of zinc?",
-            "image": ""
-        },
-        "subject": "Chemistry",
-        "topic": "Inorganic Chemistry"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "Ag-vessel",
-                "image": ""
-            },
-            "c": {
-                "text": "Ni-vessel",
-                "image": ""
-            },
-            "b": {
-                "text": "Zn-vessel",
-                "image": ""
-            },
-            "d": {
-                "text": "all",
-                "image": ""
-            },
-            "correct": "a"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "$ CuSO_4 $ solution can be stored in",
-            "image": ""
-        },
-        "subject": "Chemistry",
-        "topic": "Inorganic Chemistry"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "Au",
-                "image": ""
-            },
-            "c": {
-                "text": "Al",
-                "image": ""
-            },
-            "b": {
-                "text": "C",
-                "image": ""
-            },
-            "d": {
-                "text": "Mg",
-                "image": ""
-            },
-            "correct": "c"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "The reducing agent utilized in Gold Schmidt process is",
-            "image": ""
-        },
-        "subject": "Chemistry",
-        "topic": "Inorganic Chemistry"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "Methtetral",
-                "image": ""
-            },
-            "c": {
-                "text": "2,2 – Diformyl propanedial",
-                "image": ""
-            },
-            "b": {
-                "text": "Tetraformyl methane",
-                "image": ""
-            },
-            "d": {
-                "text": "2,2 – Diformylmethane dial",
-                "image": ""
-            },
-            "correct": "c"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "The IUPAC name of following formmula is",
-            "image": "48.jpg"
-        },
-        "subject": "Chemistry",
-        "topic": "Organic Chemistry"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "Toluene",
-                "image": ""
-            },
-            "c": {
-                "text": "Naphthelene",
-                "image": ""
-            },
-            "b": {
-                "text": "Xylene",
-                "image": ""
-            },
-            "d": {
-                "text": "Diphenyl",
+                "text": "HI",
                 "image": ""
             },
             "correct": "d"
         },
-        "exam_code": 201,
+        "exam_code": 202,
         "marks": 1,
         "question": {
-            "text": "The Wurtz reaction of chlorobenzene produces",
+            "text": "The maximum covalent character is found in ",
+            "image": ""
+        },
+        "subject": "Chemistry",
+        "topic": "Physical Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "$ H_2SO_3 $",
+                "image": ""
+            },
+            "c": {
+                "text": "$ H_2SO_5 $",
+                "image": ""
+            },
+            "b": {
+                "text": "$ H_2SO_4 $",
+                "image": ""
+            },
+            "d": {
+                "text": "$ H_2S_2O_8 $",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "Oil of Vitrol is",
+            "image": ""
+        },
+        "subject": "Chemistry",
+        "topic": "Physical Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "Li",
+                "image": ""
+            },
+            "c": {
+                "text": "Cs",
+                "image": ""
+            },
+            "b": {
+                "text": "Na",
+                "image": ""
+            },
+            "d": {
+                "text": "Fr",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "Which of the following alkali metals is used in photoelectric cell?",
+            "image": ""
+        },
+        "subject": "Chemistry",
+        "topic": "Inorganic Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "impure Cu",
+                "image": ""
+            },
+            "c": {
+                "text": "ZnO",
+                "image": ""
+            },
+            "b": {
+                "text": "impure Zn",
+                "image": ""
+            },
+            "d": {
+                "text": "CuO",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "Spelter is",
+            "image": ""
+        },
+        "subject": "Chemistry",
+        "topic": "Inorganic Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "Steel",
+                "image": ""
+            },
+            "c": {
+                "text": "solder",
+                "image": ""
+            },
+            "b": {
+                "text": "Invar",
+                "image": ""
+            },
+            "d": {
+                "text": "none of these",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "Which of these is an nonferrous alloy?",
+            "image": ""
+        },
+        "subject": "Chemistry",
+        "topic": "Inorganic Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "aromatic compounds ",
+                "image": ""
+            },
+            "c": {
+                "text": "aliphatic compounds",
+                "image": ""
+            },
+            "b": {
+                "text": "alkanes",
+                "image": ""
+            },
+            "d": {
+                "text": "alcohols",
+                "image": ""
+            },
+            "correct": "d"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "Kerosene is a mixture of ",
             "image": ""
         },
         "subject": "Chemistry",
@@ -1423,201 +1423,143 @@
     {
         "answer": {
             "a": {
+                "text": "Butanol-1",
+                "image": ""
+            },
+            "c": {
+                "text": "2-methyl propanol-1",
+                "image": ""
+            },
+            "b": {
+                "text": "Butanol-2",
+                "image": ""
+            },
+            "d": {
+                "text": "2-methyl propanol-2",
+                "image": ""
+            },
+            "correct": "d"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "The IUPAC name of t-butyl alcohol is",
+            "image": ""
+        },
+        "subject": "Chemistry",
+        "topic": "Organic Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "Petrol Engine",
+                "image": ""
+            },
+            "c": {
+                "text": "Steam Engine",
+                "image": ""
+            },
+            "b": {
+                "text": "Diesel Engine",
+                "image": ""
+            },
+            "d": {
+                "text": "none of these",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "Which one is the spark ignition engine?",
+            "image": ""
+        },
+        "subject": "Aptitude",
+        "topic": "Mechanical"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "1",
+                "image": ""
+            },
+            "c": {
                 "text": "3",
                 "image": ""
             },
-            "c": {
-                "text": "7",
-                "image": ""
-            },
             "b": {
-                "text": "5",
+                "text": "2",
                 "image": ""
             },
             "d": {
-                "text": "9",
+                "text": "4",
                 "image": ""
             },
             "correct": "b"
         },
-        "exam_code": 201,
+        "exam_code": 202,
         "marks": 1,
         "question": {
-            "text": "Total no. of isomers in Hexane is",
-            "image": ""
-        },
-        "subject": "Chemistry",
-        "topic": "Organic Chemistry"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "conventional",
-                "image": ""
-            },
-            "c": {
-                "text": "Non-renewable",
-                "image": ""
-            },
-            "b": {
-                "text": "Non-conventional",
-                "image": ""
-            },
-            "d": {
-                "text": "none",
-                "image": ""
-            },
-            "correct": "b"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "Solar energy is …......... source of energy.",
+            "text": "In a 2-stroke engine the working cycle is completed in the no of revolution of the crank shaft equal to .........",
             "image": ""
         },
         "subject": "Aptitude",
-        "topic": "Energy"
+        "topic": "Mechanical"
     },
     {
         "answer": {
             "a": {
-                "text": "conventional",
+                "text": "0.04",
                 "image": ""
             },
             "c": {
-                "text": "perpetual",
+                "text": "0.12",
                 "image": ""
             },
             "b": {
-                "text": "Non-conventional",
+                "text": "0.08",
                 "image": ""
             },
             "d": {
-                "text": "none",
-                "image": ""
-            },
-            "correct": "a"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "The sources of energy which have been in use over a long period of time are called …........ sources.",
-            "image": ""
-        },
-        "subject": "Aptitude",
-        "topic": "Energy"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "conventional",
-                "image": ""
-            },
-            "c": {
-                "text": "perpetual",
-                "image": ""
-            },
-            "b": {
-                "text": "Non-conventional",
-                "image": ""
-            },
-            "d": {
-                "text": "none",
-                "image": ""
-            },
-            "correct": "a"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "Natural gas is an example of ….................... source.",
-            "image": ""
-        },
-        "subject": "Aptitude",
-        "topic": "Energy"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "mortar",
-                "image": ""
-            },
-            "c": {
-                "text": "concrete",
-                "image": ""
-            },
-            "b": {
-                "text": "slurry",
-                "image": ""
-            },
-            "d": {
-                "text": "clay",
-                "image": ""
-            },
-            "correct": "b"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "The soupy mixture obtained by mixing limestone, clay and water is called",
-            "image": ""
-        },
-        "subject": "Aptitude",
-        "topic": "Civil"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "silicon dioxide",
-                "image": ""
-            },
-            "c": {
-                "text": "aluminum oxide",
-                "image": ""
-            },
-            "b": {
-                "text": "silicon trioxide",
-                "image": ""
-            },
-            "d": {
-                "text": "magnesium oxide",
-                "image": ""
-            },
-            "correct": "a"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "Sand mostly consists of",
-            "image": ""
-        },
-        "subject": "Aptitude",
-        "topic": "Civil"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "limestone",
-                "image": ""
-            },
-            "c": {
-                "text": "carbon dioxide",
-                "image": ""
-            },
-            "b": {
-                "text": "alumina",
-                "image": ""
-            },
-            "d": {
-                "text": "silica",
+                "text": "0.16",
                 "image": ""
             },
             "correct": "d"
         },
-        "exam_code": 201,
+        "exam_code": 202,
         "marks": 1,
         "question": {
-            "text": "Siliceous inorganic materials contain",
+            "text": "About ......... of global final energy consumption comes from renewals",
+            "image": ""
+        },
+        "subject": "Aptitude",
+        "topic": "Energy"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "Ordinary Pozzolana Cement",
+                "image": ""
+            },
+            "c": {
+                "text": "Overall Portland Cement",
+                "image": ""
+            },
+            "b": {
+                "text": "Ordinary Portland Cement",
+                "image": ""
+            },
+            "d": {
+                "text": "Ordinary Particle Cement",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "For Cement OPC stands for .............",
             "image": ""
         },
         "subject": "Aptitude",
@@ -1626,36 +1568,297 @@
     {
         "answer": {
             "a": {
-                "text": "igneous",
+                "text": "rounded ",
                 "image": ""
             },
             "c": {
-                "text": "metamorphic",
+                "text": "flat",
                 "image": ""
             },
             "b": {
-                "text": "sedimentary",
+                "text": "irregular",
+                "image": ""
+            },
+            "d": {
+                "text": "flaky",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "The shape of river bed aggregate is .....................",
+            "image": ""
+        },
+        "subject": "Aptitude",
+        "topic": "Civil"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "top face",
+                "image": ""
+            },
+            "c": {
+                "text": "exposed face",
+                "image": ""
+            },
+            "b": {
+                "text": "bottom face",
+                "image": ""
+            },
+            "d": {
+                "text": "interior face",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "In brick masonry the face of the brick generally kept is ",
+            "image": ""
+        },
+        "subject": "Aptitude",
+        "topic": "Civil"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "Red standing man",
+                "image": ""
+            },
+            "c": {
+                "text": "Flashing Green Man",
+                "image": ""
+            },
+            "b": {
+                "text": "Green walking man",
                 "image": ""
             },
             "d": {
                 "text": "none",
                 "image": ""
             },
-            "correct": "b"
+            "correct": "a"
         },
-        "exam_code": 201,
+        "exam_code": 202,
         "marks": 1,
         "question": {
-            "text": "…......... rocks are softer than any other type of rocks.",
+            "text": "Which of the following sign denotes that pedestrian are prohibited from crossing the road except where they have started to cross the road.",
             "image": ""
         },
         "subject": "Aptitude",
-        "topic": "Civil"
+        "topic": "General Knowledge"
     },
     {
         "answer": {
             "a": {
-                "text": "area of cross section",
+                "text": "1.5 and 2.5 ohm",
+                "image": ""
+            },
+            "c": {
+                "text": "3 and 1 ohm",
+                "image": ""
+            },
+            "b": {
+                "text": "2 ohms each",
+                "image": ""
+            },
+            "d": {
+                "text": "4 and 1 ohm",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "Two resistances p1 and p2 give combined resistance of 4.0 ohms when in series and 1 ohm when in parallel. The resistances are",
+            "image": ""
+        },
+        "subject": "Aptitude",
+        "topic": "Electrical"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "geothermal energy sources",
+                "image": ""
+            },
+            "c": {
+                "text": "biomass",
+                "image": ""
+            },
+            "b": {
+                "text": "fossil fuels",
+                "image": ""
+            },
+            "d": {
+                "text": "all of these",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "Energy resources derived from natural organic materials are called ...........",
+            "image": ""
+        },
+        "subject": "Aptitude",
+        "topic": "Energy"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "which has greater number of winding",
+                "image": ""
+            },
+            "c": {
+                "text": "in which electrical source is applied",
+                "image": ""
+            },
+            "b": {
+                "text": "which has less mumber of winding than the other",
+                "image": ""
+            },
+            "d": {
+                "text": "from which electrical power is taken out",
+                "image": ""
+            },
+            "correct": "d"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "In a transformer, secondary winding is that ",
+            "image": ""
+        },
+        "subject": "Aptitude",
+        "topic": "Electrical"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "Compression Ignition",
+                "image": ""
+            },
+            "c": {
+                "text": "Dual Ignition",
+                "image": ""
+            },
+            "b": {
+                "text": "Spark Ignition",
+                "image": ""
+            },
+            "d": {
+                "text": "Otto Ignition",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "The diesel engines are also known as .........................Engine",
+            "image": ""
+        },
+        "subject": "Aptitude",
+        "topic": "Mechanical"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "Hindu counting system",
+                "image": ""
+            },
+            "c": {
+                "text": "Arabic counting system",
+                "image": ""
+            },
+            "b": {
+                "text": "Christian counting system",
+                "image": ""
+            },
+            "d": {
+                "text": "none",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "Decimal is also known as ",
+            "image": ""
+        },
+        "subject": "Aptitude",
+        "topic": "Computer"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "0",
+                "image": ""
+            },
+            "c": {
+                "text": "1",
+                "image": ""
+            },
+            "b": {
+                "text": "less than 1",
+                "image": ""
+            },
+            "d": {
+                "text": "more than 1",
+                "image": ""
+            },
+            "correct": "d"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "The current gain of the common emitter transistor amplifier is",
+            "image": ""
+        },
+        "subject": "Aptitude",
+        "topic": "Electronics"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "5 mbps",
+                "image": ""
+            },
+            "c": {
+                "text": "100 mbps",
+                "image": ""
+            },
+            "b": {
+                "text": "10 mbps",
+                "image": ""
+            },
+            "d": {
+                "text": "2 mbps",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 202,
+        "marks": 1,
+        "question": {
+            "text": "The max speed supported by fast ethernet is .......",
+            "image": ""
+        },
+        "subject": "Aptitude",
+        "topic": "Computer"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "input device",
                 "image": ""
             },
             "c": {
@@ -1663,222 +1866,19 @@
                 "image": ""
             },
             "b": {
-                "text": "length",
+                "text": "output device",
                 "image": ""
             },
             "d": {
-                "text": "none of the above",
-                "image": ""
-            },
-            "correct": "a"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "In parallel combination the resistance decreases due to increase in",
-            "image": ""
-        },
-        "subject": "Aptitude",
-        "topic": "Electrical"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "increases",
-                "image": ""
-            },
-            "c": {
-                "text": "remains same",
-                "image": ""
-            },
-            "b": {
-                "text": "decreases",
-                "image": ""
-            },
-            "d": {
-                "text": "none of the above",
-                "image": ""
-            },
-            "correct": "a"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "In parallel combination of the electrical appliances, total power",
-            "image": ""
-        },
-        "subject": "Aptitude",
-        "topic": "Electrical"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "$ I_1 < I_2 < I_3 $",
-                "image": ""
-            },
-            "c": {
-                "text": "$ I_1 > I_2 > I_3 $",
-                "image": ""
-            },
-            "b": {
-                "text": "$ I_1 = I_2 = I_3 $",
-                "image": ""
-            },
-            "d": {
-                "text": "none of the above",
-                "image": ""
-            },
-            "correct": "a"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "Three resistors $ R_1, R_2, R_3 $ are connected in parallel across a cell. If $ R_1 > R_2 > R_3 $, then",
-            "image": ""
-        },
-        "subject": "Aptitude",
-        "topic": "Electrical"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "increases",
-                "image": ""
-            },
-            "c": {
-                "text": "remains same",
-                "image": ""
-            },
-            "b": {
-                "text": "decreases",
-                "image": ""
-            },
-            "d": {
-                "text": "may increase or decrease",
-                "image": ""
-            },
-            "correct": "a"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "With increase in temperature, the resistance of a conductor",
-            "image": ""
-        },
-        "subject": "Aptitude",
-        "topic": "Electrical"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "Addition",
-                "image": ""
-            },
-            "c": {
-                "text": "Multiplication",
-                "image": ""
-            },
-            "b": {
-                "text": "Subtraction",
-                "image": ""
-            },
-            "d": {
-                "text": "Division",
-                "image": ""
-            },
-            "correct": "a"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "The OR operation implies Boolean",
-            "image": ""
-        },
-        "subject": "Aptitude",
-        "topic": "Computer"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "4",
-                "image": ""
-            },
-            "c": {
-                "text": "6",
-                "image": ""
-            },
-            "b": {
-                "text": "5",
-                "image": ""
-            },
-            "d": {
-                "text": "7",
+                "text": "none",
                 "image": ""
             },
             "correct": "b"
         },
-        "exam_code": 201,
+        "exam_code": 202,
         "marks": 1,
         "question": {
-            "text": "Depending upon the technologies used computer can be divided into ….......... generations.",
-            "image": ""
-        },
-        "subject": "Aptitude",
-        "topic": "Computer"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "UNIVAC",
-                "image": ""
-            },
-            "c": {
-                "text": "ENIAC",
-                "image": ""
-            },
-            "b": {
-                "text": "EDSAC",
-                "image": ""
-            },
-            "d": {
-                "text": "IBM-PC",
-                "image": ""
-            },
-            "correct": "c"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "The first electronic computer was",
-            "image": ""
-        },
-        "subject": "Aptitude",
-        "topic": "Computer"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "One",
-                "image": ""
-            },
-            "c": {
-                "text": "Eight",
-                "image": ""
-            },
-            "b": {
-                "text": "Two",
-                "image": ""
-            },
-            "d": {
-                "text": "Sixteen",
-                "image": ""
-            },
-            "correct": "c"
-        },
-        "exam_code": 201,
-        "marks": 1,
-        "question": {
-            "text": "One character takes …............ bytes of memory.",
+            "text": "Printers are ",
             "image": ""
         },
         "subject": "Aptitude",
