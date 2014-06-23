@@ -2,7 +2,7 @@
 {% load staticfiles %} 
 {% block timer %}
 <div id="ioe_exam_starter" style="text-align:center;">
-<input type="button" id="full_screen_button" value="Start Exam" onclick="show_fullscreen()">
+<input type="button" id="full_screen_button" class="medium primary btn pretty button-margin" value="Start Exam" onclick="show_fullscreen()">
 </div>
 <div id="ioe_exam_zoomer" style="text-align:right;">
 <img src="/static/images/fullscreen.png" value="Start Exam" onclick="show_fullscreen()">
@@ -294,7 +294,7 @@ function start_ioe_exam()
 $("#full_screen_content").hide();
 $("#ioe_exam_zoomer").hide();
 $("#exam_questions").hide();
-  var debug = true;
+  var debug = false;
   $(function () {
         $('#exam_login_container').children('.osk-trigger').onScreenKeyboard({
           rewireReturn : 'submit',
