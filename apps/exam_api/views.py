@@ -38,7 +38,7 @@ class ExamHandler():
         '''
         question_api = QuestionApi()
         questions = question_api.find_all_questions(
-            {"exam_code": int(exam_code)})
+            {"exam_code": int(exam_code), 'marks':1})
         sorted_questions = sorted(
             questions, key=lambda k: k['question_number'])
         subjects = set([i['subject'] for i in sorted_questions])
@@ -59,10 +59,10 @@ class ExamHandler():
         total_score = 0
         total_attempted = 0
         score_list = []
-
+        
         for key, value in correct_answers.iteritems():
             total_question = question_api.find_all_questions(
-                {"exam_code": int(exam_code), "subject": key}
+                {"exam_code": int(exam_code), "subject": key, 'marks':1}
             )
             temp = {}
             temp['subject'] = key
@@ -91,7 +91,7 @@ def save_user_answers(request, ess_starttimestamp):
     ans = AttemptedAnswerDatabase()
     question_number = request.POST.get('qid','')
     selected_ans = request.POST.get('sans','')
-    exam_code = request.POST.get('exam_code','')    
+    exam_code = request.POST.get('exam_code','')     
     current_question_number = int(request.POST.get('current_question_number',''))
     attempt_time = datetime.datetime.now()
     attempt_time = time.mktime(attempt_time.timetuple())
