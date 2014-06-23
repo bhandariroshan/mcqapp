@@ -404,11 +404,12 @@ def attend_dps_exam(request,exam_code):
                 current_pg_num = 1
 
             parameters['page_end'] = False
-            if current_pg_num > 5:
+            if current_pg_num > 4:
                 current_pg_num = 5
                 parameters['page_end'] = True
 
             parameters['current_pg_num'] = current_pg_num
+            
             questions = question_obj.get_paginated_questions({"exam_code": int(exam_code), 'marks':1}, fields={'answer.correct':0}, page_num = current_pg_num)
             total_questions = question_obj.get_count({"exam_code": int(exam_code), 'marks':1})
             sorted_questions = sorted(questions, key=lambda k: k['question_number'])  
@@ -561,7 +562,7 @@ def results(request, exam_code):
     ess_check = ess.check_exam_started({'exam_code':int(exam_code), 'useruid':request.user.id})
 
     question_obj = QuestionApi()    
-    total_questions = question_obj.get_count({"exam_code": int(exam_code)})
+    total_questions = question_obj.get_count({"exam_code": int(exam_code), 'marks':1})
 
     ans = AttemptedAnswerDatabase()
     try:
@@ -574,9 +575,13 @@ def results(request, exam_code):
         all_ans = ''
     answer_list = ''
     anss = []
+
+    print all_ans
+
     for eachAns in all_ans:
         anss.append(eachAns['q_no'])
-    for i in range(0,total_questions):       
+
+    for i in range(1,total_questions):       
         try:
             if i in anss:
                 answer_list += all_ans[anss.index(i)]['attempt_details'][0]['selected_ans']
@@ -584,6 +589,8 @@ def results(request, exam_code):
                 answer_list +='e'
         except:
             answer_list += 'e'
+
+    print len(answer_list), answer_list
     exam_handler = ExamHandler()    
     score_dict = exam_handler.check_answers(exam_code, answer_list)
     parameters['result'] = score_dict

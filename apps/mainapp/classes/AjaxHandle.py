@@ -7,10 +7,14 @@ import json
 from apps.mainapp.classes.Coupon import Coupon
 from apps.mainapp.classes.Userprofile import UserProfile
 import datetime, time
-from apps.mainapp.classes.query_database import ExammodelApi
+
+from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi
+
+
 
 from apps.mainapp.classes.query_database import ExamStartSignal
-from apps.mainapp.classes.query_database import HonorCodeAcceptSingal
+from apps.mainapp.classes.query_database import HonorCodeAcceptSingal 
+from apps.mainapp.classes.query_database import AttemptedAnswerDatabase,CurrentQuestionNumber
 
 ACCESS_TOKEN = ''
 ACCESS_TOKEN_SECRET = ''
@@ -209,5 +213,118 @@ class AjaxHandle():
             return HttpResponse(json.dumps({'status':'ok'}))
         else:
             return HttpResponse(json.dumps({'status':'error','message':'You are not authorized to perform this action.'}))
+
+    def get_nexp_page_of_questions(self, request):        
+        user_profile_obj = UserProfile()
+        exam_code = int(request.POST['exam_code'])
+        subscribed = user_profile_obj.check_subscribed(request.user.username, exam_code)
+        if request.user.is_authenticated() and subscribed:
+            user_det = user_profile_obj.get_user_by_username(request.user.username)
+            parameters = {}
+            parameters['user'] = user_det
+            ess = ExamStartSignal()        
+            exam_obj = ExammodelApi()
+            ess = ExamStartSignal()            
+
+            exam_details = exam_obj.find_one_exammodel({'exam_code':int(exam_code)})
+            current_time = time.mktime(datetime.datetime.now().timetuple())
+
+            validate_start = ess.check_exam_started({'exam_code':int(exam_code), 'useruid':request.user.id, 'start':1,'end':0})        
+            
+            if validate_start != None:
+                check = validate_start['start_time']
+            else:
+                ess.update_exam_start_signal({
+                    'exam_code':int(exam_code), 
+                    'useruid':request.user.id},{
+                    'start':1, 
+                    'start_time':int(time.mktime(datetime.datetime.now().timetuple())),
+                    'end':0,                
+                    'end_time':''
+                    })
+                validate_start = ess.check_exam_started({'exam_code':int(exam_code), 'useruid':request.user.id, 'start':1, 'end':0})        
+                check = validate_start['start_time']
+
+            dps_exam_start = exam_details['exam_family']=='DPS' and current_time - check > exam_details['exam_duration']*60
+            if current_time - check > exam_details['exam_duration']*60:            
+                ess.update_exam_start_signal({
+                    'exam_code':int(exam_code), 
+                    'useruid':request.user.id, 
+                    'start':1},{'end':1,'start':0, 
+                    'end_time':int(time.mktime(datetime.datetime.now().timetuple()))})
+                ess.update_exam_start_signal({
+                    'exam_code':int(exam_code), 
+                    'useruid':request.user.id},{
+                    'start':1, 
+                    'start_time':int(time.mktime(datetime.datetime.now().timetuple())),
+                    'end':0,                
+                    'end_time':''
+                    })
+                validate_start = ess.check_exam_started({'exam_code':int(exam_code), 'useruid':request.user.id, 'start':1,'end':0})        
+                check = validate_start['start_time']
+                
+
+            if current_time - check < exam_details['exam_duration']*60:
+                atte_ans = AttemptedAnswerDatabase()
+                all_answers = atte_ans.find_all_atttempted_answer({
+                    'exam_code':int(exam_code), 'user_id':int(request.user.id),
+                    'ess_time':int(validate_start['start_time'])})
+                time_elapsed = time.mktime(datetime.datetime.now().timetuple()) - validate_start['start_time']
+                exam_details['exam_duration'] = (exam_details['exam_duration']*60 - time_elapsed)/60
+
+                parameters['all_answers'] = json.dumps(all_answers)                        
+                question_obj = QuestionApi()    
+
+                
+                current_pg_num = 1
+                next_page = 0
+
+                if request.POST.get('current','') !='':
+                    current_pg_num = int(request.POST.get('current',''))
+
+                if request.POST.get('next','') !='':
+                    next_page = int(request.POST.get('next',''))            
+
+                if next_page == 1:
+                    current_pg_num = current_pg_num + 1
+                if next_page == -1:
+                    current_pg_num = current_pg_num - 1
+
+                if current_pg_num < 1:
+                    current_pg_num = 1
+
+                parameters['page_end'] = False
+                if current_pg_num > 4:
+                    current_pg_num = 5
+                    parameters['page_end'] = True
+
+                parameters['current_pg_num'] = current_pg_num
+                questions = question_obj.get_paginated_questions({"exam_code": int(exam_code), 'marks':1}, fields={'answer.correct':0}, page_num = current_pg_num)
+                total_questions = question_obj.get_count({"exam_code": int(exam_code), 'marks':1})
+                sorted_questions = sorted(questions, key=lambda k: k['question_number'])  
+
+
+                # parameters['questions'] = json.dumps(sorted_questions)            
+                parameters['questions'] = sorted_questions
+                parameters['exam_details'] = exam_details
+            
+                start_question_number = 0 
+                cqn = CurrentQuestionNumber()
+                current_q_no = cqn.check_current_question_number({
+                    'exam_code':int(exam_code), 
+                    'useruid':request.user.id, 
+                    'ess_time':validate_start['start_time']})
+                parameters['max_questions_number'] =  total_questions
+
+                parameters['exam_code'] = exam_code        
+                user_profile_obj = UserProfile()
+                user = user_profile_obj.get_user_by_username(request.user.username)
+                parameters['user'] = user
+                html =  str(render_to_response('ajax_exammain.html', parameters, context_instance=RequestContext(request)))
+                html = html.replace('Content-Type: text/html; charset=utf-8', '')
+                return HttpResponse(json.dumps({'status':'ok', 'html':html}))            
+        else:
+            return HttpResponse(json.dumps({'status':'error','message':'You are not authorized to perform this action.'}))
+
 
     
