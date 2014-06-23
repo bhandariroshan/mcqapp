@@ -115,7 +115,7 @@ class MongoConnection():
 
     def get_paginated_values(self, table_name, conditions={}, fields={}, sort_index='_id', pageNumber=1):
         all_doc = self.db[table_name].find(conditions).sort(
-            sort_index, pymongo.DESCENDING).skip(
+            sort_index, pymongo.ASCENDING).skip(
             (pageNumber - 1) * 13).limit(13)
         json_doc = json.dumps(list(all_doc), default=json_util.default)
         json_doc = json_doc.replace("$oid", "id")

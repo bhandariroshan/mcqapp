@@ -31,7 +31,38 @@
 .clickDiv{
   margin-left: 3%;
 }
+  html {
+    font-family: Calibri, Arial, sans-serif;
+  }
+
+  #input_container {
+    width: 50%;
+    margin: 2% auto;
+    display: block;
+  }
+
+    input[type=text],
+    textarea {
+      font-family: inherit;
+      font-size: 3em;
+      width: 98%;
+      display: block;
+      resize: none;
+      margin-bottom: 1em;
+      border: 1px solid #333;
+      padding: 0.25em;
+      background: #FEFEFE;
+    }
+    .keyboard-style
+    {
+      bottom: 2%;
+    }
+    .exam-hidden
+    {
+      visibility: hidden;
+    }
 </style>
+<link rel="stylesheet" type="text/css" href="/static/css/onScreenKeyboard.css">
 {% endblock %}
 
 {% block content %}  

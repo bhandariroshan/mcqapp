@@ -11,5 +11,6 @@ urlpatterns = patterns('',
     url(r'answers/(?P<exam_code>\w{1,40})/(?P<subject_name>\w{1,40})/$','apps.mainapp.views.show_result'),
     url(r'list-results/$','apps.mainapp.views.get_list_of_result'),
     url(r'^ajax-handler/(?P<func_name>\w{1,40})$', 'apps.mainapp.home.ajax_request', name='ajax_handle'),	
+    url(r'^demo/$', 'apps.mainapp.views.demo', name='demo'),
     
 )

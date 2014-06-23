@@ -403,14 +403,16 @@ def attend_dps_exam(request,exam_code):
             if current_pg_num < 1:
                 current_pg_num = 1
 
+            parameters['page_end'] = False
             if current_pg_num > 5:
                 current_pg_num = 5
+                parameters['page_end'] = True
 
             parameters['current_pg_num'] = current_pg_num
-            questions = question_obj.get_paginated_questions({"exam_code": int(exam_code)}, fields={'answer.correct':0}, page_num = current_pg_num)
-
-            total_questions = question_obj.get_count({"exam_code": int(exam_code)})
+            questions = question_obj.get_paginated_questions({"exam_code": int(exam_code), 'marks':1}, fields={'answer.correct':0}, page_num = current_pg_num)
+            total_questions = question_obj.get_count({"exam_code": int(exam_code), 'marks':1})
             sorted_questions = sorted(questions, key=lambda k: k['question_number'])  
+
 
             # parameters['questions'] = json.dumps(sorted_questions)            
             parameters['questions'] = sorted_questions
@@ -422,21 +424,22 @@ def attend_dps_exam(request,exam_code):
                 'exam_code':int(exam_code), 
                 'useruid':request.user.id, 
                 'ess_time':validate_start['start_time']})
-            try:
-                start_question_number = current_q_no['cqn']
-                if start_question_number == '':
-                    start_question_number = 0
-            except:
-                start_question_number = 0 
 
-            if start_question_number == total_questions:
-                start_question_number = start_question_number - 1
-                parameters['next_to_start'] = sorted_questions[start_question_number]
-            else:            
-                parameters['next_to_start'] = sorted_questions[0]
+            # try:
+            #     start_question_number = current_q_no['cqn']
+            #     if start_question_number == '':
+            #         start_question_number = 0
+            # except:
+            #     start_question_number = 0 
+
+            # if start_question_number == total_questions:
+            #     start_question_number = start_question_number - 1
+            #     parameters['next_to_start'] = sorted_questions[start_question_number]
+            # else:            
+            #     parameters['next_to_start'] = sorted_questions[0]
         
-            parameters['start_question_number'] = start_question_number
-            parameters['start_question'] = sorted_questions[start_question_number]
+            # parameters['start_question_number'] = start_question_number
+            # parameters['start_question'] = sorted_questions[start_question_number]
             parameters['max_questions_number'] =  total_questions
 
             parameters['exam_code'] = exam_code        
@@ -586,7 +589,7 @@ def results(request, exam_code):
     parameters['result'] = score_dict
     parameters['exam_code'] = exam_code
     parameters['myrankcard'] = {'total':200, 'rank':1}
-    return render_to_response('results.html', parameters, context_instance=RequestContext(request))
+    return render_to_response('pulchowkresult.html', parameters, context_instance=RequestContext(request))
 
 def notifications(request):
     if request.user.is_authenticated():
@@ -699,3 +702,7 @@ def get_list_of_result(request):
         return HttpResponse(json.dumps({'status':'ok', 'result':return_dict}))
     else:
         return HttpResponse(json.dumps({'status':'error','message':'You are not authorized to perform this action.'}))
+
+def demo(request):
+    parameters = {}
+    return render_to_response('demo.html', parameters, context_instance=RequestContext(request))    
