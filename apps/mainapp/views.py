@@ -37,6 +37,7 @@ from apps.mainapp.classes.query_database import AttemptedAnswerDatabase,CurrentQ
 
 def sign_up_sign_in(request, android_user=False):
     social_account = SocialAccount.objects.get(user__id=request.user.id)
+    access_token = SocialToken.objects.get(account__user__id=request.user.id)
     from apps.mainapp.classes.Userprofile import UserProfile        
     user_profile_object = UserProfile()
     user = user_profile_object.get_user_by_username(request.user.username)
@@ -337,11 +338,13 @@ def attend_dps_exam(request,exam_code):
         try:
             profile_image = user_det['profile_image']
         except:
+            social_account = SocialAccount.objects.get(user__id=request.user.id)
+            access_token = SocialToken.objects.get(account__user__id=request.user.id)
             from facepy import GraphAPI
             graph = GraphAPI(access_token)
             det = graph.get(social_account.uid + '/picture/?redirect=0&height=300&type=normal&width=300')
             profile_image = det['data']['url']
-            user_profile_obj.update_profile_image(profile_image, username)
+            user_profile_obj.update_profile_image(profile_image, request.user.username)
 
 
         exam_details = exam_obj.find_one_exammodel({'exam_code':int(exam_code)})

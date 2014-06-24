@@ -3,7 +3,10 @@
 {% block exam_content %}
 <div id="ioe_exam_starter" style="text-align:center;">
 <h1>!!! NOTICE !!!</h1>
-  <p style="margin-top:3%;"> You will now have system exactly similar to pulchowk's system. </p>
+  <p style="margin-top:3%; color:red;"> You will now have system exactly similar to pulchowk's system. </p><br>
+  <p style=""> To give exam in pulchowk's system you will need username and password which will be provided to you by pulchowk but for now your username and pass word are as mentioned below:- </p>
+  <p style="font-size:15px;">Username: <b>{{request.user.username}}</b></p>
+  <p style="font-size:15px;">password: <b>{{request.user.username}}56</b></p>
   <input type="button" id="full_screen_button" class="medium primary btn pretty button-margin" value="Start Exam" onclick="show_fullscreen()" style="margin-top:3%;margin-bottom:3%;">
   <br><br>
 </div>
@@ -55,7 +58,7 @@
     <script src="http://sindresorhus.com/screenfull.js/src/screenfull.js"></script>
 
 <div id="exam_questions" style="display:none">
-    <div  id="timerdiv" style="float: right;margin-bottom: 2%;top: 0px;margin-left: 70%;width: 20%; position:fixed;"> 
+    <div  id="timerdiv" style="float: right;margin-bottom: 2%;top: 0px;margin-left: 70%;width: 20%; position:fixed;margin-top: 2%;"> 
           <img src="{{user.profile_image}}" style="height: 100px;"/>
           <p style="font-weight: 400; font-size: 12px; margin-bottom: 0px;">{{user.name}}</p> 
           <p  id="attempted" style="font-weight: 400; font-size: 12px;margin-bottom: 0px;">Attempted: 0 </p>
@@ -348,10 +351,10 @@ var exam_state = 0;
 
 function render_instructions()
 {
-  /*username = $('#exam_username').val();
-  password = $('#exam_password').val();*/
+  username = $('#exam_username').val();
+  password = $('#exam_password').val();
 
-  /*if (username =='hello' && password =='exam'){*/
+  /*if (username =='{{request.user.username}}' && password =='{{request.user.username}}56' ){*/
       $("#exam_login_container").css('display', 'none');      
       $('#osk-container').css('display', 'none');      
       $('#errorMessage').hide();
@@ -359,7 +362,7 @@ function render_instructions()
       $('#ioe_exam_Warning_ender').css('display', 'none');      
       $('#remainingQuestions').css('display', 'none');      
       $('#instructions').css('display', 'block');      
-  /*}
+/*  }
   else{
     $('#errorMessage').removeClass('hidden');
 
