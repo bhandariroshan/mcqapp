@@ -436,7 +436,7 @@ def attend_dps_exam(request,exam_code):
             user_profile_obj = UserProfile()
             user = user_profile_obj.get_user_by_username(request.user.username)
             parameters['user'] = user
-            return render_to_response('pulchowk_exammain.html', parameters, context_instance=RequestContext(request))
+            return render_to_response('pulchowkexam-main.html', parameters, context_instance=RequestContext(request))
 
     else:
         return HttpResponseRedirect('/')
