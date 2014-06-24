@@ -2,7 +2,10 @@
 {% load staticfiles %} 
 {% block exam_content %}
 <div id="ioe_exam_starter" style="text-align:center;">
-<input type="button" id="full_screen_button" class="medium primary btn pretty button-margin" value="Start Exam" onclick="show_fullscreen()">
+<h1>!!! ALERT !!!</h1>
+  <p style="margin-top:3%;"> You will now have system exactly similar to pulchowk's system. </p>
+  <input type="button" id="full_screen_button" class="medium primary btn pretty button-margin" value="Start Exam" onclick="show_fullscreen()" style="margin-top:3%;margin-bottom:3%;">
+  <br><br>
 </div>
 <div id="ioe_exam_zoomer" style="text-align:right;">
 <img src="/static/images/fullscreen.png" value="Start Exam" onclick="show_fullscreen()">
@@ -32,15 +35,16 @@
       <h5 class="h-text-align ui-widget-header ui-corner-all"><strong>Instructions</strong><br></h5>
       <p style="margin-left:3%; margin-top:2%;">Please read the following instructions carefully before you start the exam.</p>
       <p style="margin-left:4%;margin-top:2%;">
-        1. You will have 1 hours for the exam. <br>
-        2. There will be next at the end of the page to skip and attempt another question. <br>
-        3. There will be previous button at the end of the page to review your questions. <br>
+        1. You will have 1 hour for the exam. <br>
+        2. There will be "next" button at the end of the page to go to next page and attempt another questions. <br>
+        3. There will be "previous" button at the end of the page to go back to previous page and review your questions. <br>
         4. All answers will be radio button click.  <br>
-        5. You can correct or change the answer but you cannot un-attempt  question. so please check make sure before you attempt it. <br>
+        5. You can change the answer but you cannot un-attempt already answered question. So please make sure before you attempt it. <br>
         6. Question can be reattempted by clicking the radio button. <br>
-        7. You can view your remaining questions by clicking the unattempted questions on the top left corner.  <br>
-        8. Time remaining will be shown at the top.  <br>
-        9. If you do not submit your question at the end then your exam will be invalid. So make sure you submit before you submit your answers. <br>
+        7. You can view your remaining questions by clicking the remaining questions on the top left corner. <br>
+        8. Time remaining will be shown at the top. <br>
+        9. If you do not submit at the end of the exam then your exam will be invalid. So make sure you submit before you go out. <br>
+        10. Warning will be shown before 15 minutes remained. 
       </p>
       <div class="medium primary btn pretty button-margin" style="margin-left:35%%;">
         <a href="#" onclick="start_ioe_exam()">Start Exam</a>
@@ -51,8 +55,8 @@
     <script src="http://sindresorhus.com/screenfull.js/src/screenfull.js"></script>
 
 <div id="exam_questions" class="hidden">
-    <div class="twelve columns" style="margin-top:2%; margin-bottom:2%;">          
-          <div class="six columns" id="startTimer">
+    <div class="twelve columns"  id="timerdiv" style="margin-top:2%; margin-bottom:2%;">          
+          <div class="five columns" id="startTimer">
                 <!-- <h5 style="color:rgb(104, 16, 16);"><strong><i class="icon-clock"></i>Started {{exam_details.exam_time}}</strong></h5> -->
           </div>
           <div class="six columns" gumby-fixed="top">
@@ -63,20 +67,15 @@
                     <img src="{{user.profile_image}}" style="height: 100px; "/>
                     <p style="font-weight: 400; font-size: 12px; margin-bottom: 0px;">{{user.name}}</p> 
                     <p  id="attempted" style="font-weight: 400; font-size: 12px;margin-bottom: 0px;">Attempted: 5 </p>
-                    <p id="remaining" style="font-weight: 400; margin-bottom: 0px; font-size: 12px;">Remaining: 25</p>
+                    <p id="remaining" style="font-weight: 400; margin-bottom: 0px; font-size: 12px; color:red"><a href="javascript:void(0)" style="color:red" id="remained"> Remaining:</a> 25</p>
                     <p  style="font-weight: 400; margin-bottom: 0px; font-size: 12px;">Total: 65</p>
                     <h5 id="timeRemained" data-intro="determine the time left" data-position="bottom" style="color:rgb(104, 16, 16);"><strong></strong></h5>
                   </div>
                   <div class="one columns"></div>
                 </div>
-                <div class="twelve columns">
-                  <div class="seven columns">                  
-                  </div>                
-                  <div class="four columns">
-                  </div>
-                  <div class="one columns"></div>
-                </div>
-          </div><br/><br/>
+          </div>
+          <div class="one columns"></div>
+          <br/><br/>
     </div>
     
       <div class="twelve columns" id="showExam">      
@@ -183,6 +182,40 @@
         </div> 
       </div> 
         
+  <div id="ioe_exam_Warning_ender" style="text-align:center;">
+  <h1>!!! ALERT !!!</h1>
+    <p style="margin-top:3%; width:70">You have not attempted following questions. Do you want to submit now? </p>
+    <p id="unAttemptedQuestions"> </p>
+<!--     <input type="button" id="view_my_result" class="medium primary btn pretty button-margin" value="view result" style="margin-top:3%;margin-bottom:3%;"> -->
+    <!-- <br><br> -->
+    <li class="prepend field">
+      <div class="medium primary btn" >
+        <a href="#" id="ioe_exam_Warning_ender_submit">Submit</a>
+      </div>
+      <div class="medium primary btn" style="margin-left: 1%;">
+        <a id="ioe_exam_Warning_ender_cancel" href="#">Cancel</a>
+      </div>
+    </li>
+  </div>
+
+  <div id="remainingQuestions" style="text-align:center;">
+  <h1> Remaining Questions </h1>
+    <p style="margin-top:3%; width:70">You have not attempted following questions.</p>
+    <p id="remainingQuestionsClicked"> </p>
+    <li class="prepend field">
+      <div class="medium primary btn" style="margin-left: 1%;">
+        <a id="showRemainingQuestionsCancel" href="#">Cancel</a>
+      </div>
+    </li>
+  </div>
+
+  <div id="ioe_system_ender" style="text-align:center;">
+  <h1>!!! NOTE !!!</h1>
+    <p style="margin-top:3%;">IOE's system end's here. You cannot view result in ioe's system. But you will have access to results in our system.</p>
+    <input type="button" id="view_my_result" class="medium primary btn pretty button-margin" value="view result" style="margin-top:3%;margin-bottom:3%;">
+    <!-- <br><br> -->
+
+  </div>
 
     <div id="resultsdiv" style="visibility:hidden;" class="pretty medium primary btn switch" gumby-trigger="#modalwarning"></div>
     <div class="modal" id="modalwarning">
@@ -263,10 +296,16 @@ var exm_code = {{exam_code|safe}};
     $('#closegumby').click();
   }
 
-$('#ansSubmit').on('click', function(){
-  $('#resultsdiv').click();
+$('#remained').on('click', function(){
+  $('#showExam').hide();
+  $('#remainingQuestions').show();
 });
 
+
+$('#showRemainingQuestionsCancel').on('click', function(){
+    $('#showExam').show();
+  $('#remainingQuestions').hide();
+});
 var current_pg_num = {{current_pg_num|safe}};
 $('#showExam').on('click', '#loadNext', function(){
   get_next_page(exm_code, current_pg_num, 1);
@@ -277,19 +316,25 @@ $('#showExam').on('click', '#loadPrev', function(){
 });
 
 $('#showExam').on('click', '#ansSubmit', function(){
-  load_result(exm_code);
+  $('#showExam').hide();
+  get_unattempted_questions_number(exm_code);
+  $('#ioe_exam_Warning_ender').show();  
 });
 
+$('#ioe_exam_Warning_ender_submit').on('click', function(){
+    $('#showExam').hide();
+    $('#ioe_exam_Warning_ender').hide();
+    $('#ioe_system_ender').show();
+      
+});
 
 $('#showExam').on('click', '.clickDiv' , function(){
-
   clicked = this.id.substring(4, 4 + this.id.substr(4,this.id.length).indexOf('_'));
   option  = this.id.substring(this.id.indexOf('Option')+6,this.id.length);
   check_id = "#radio_"+clicked + '_' + option;
   $(check_id).trigger('gumby.check');
   q_id = this.parentElement.parentNode.id;
-  ret_value = save_answer(exm_code, q_id, option.toLowerCase(), clicked);
-
+  ret_value = save_answer(exm_code, q_id, option.toLowerCase(), clicked);  
 });
 /*if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 }
@@ -306,19 +351,22 @@ var exam_state = 0;
 
 function render_instructions()
 {
-  username = $('#exam_username').val();
-  password = $('#exam_password').val();
+  /*username = $('#exam_username').val();
+  password = $('#exam_password').val();*/
 
-  if (username =='hello' && password =='exam'){
-      $("#exam_login_container").hide();
+  /*if (username =='hello' && password =='exam'){*/
+      $("#exam_login_container").hide();      
       $('#osk-container').hide();
       $('#errorMessage').hide();
+      $('#ioe_system_ender').hide();
+      $('#ioe_exam_Warning_ender').hide();
+      $('#remainingQuestions').hide();
       $('#instructions').removeClass('hidden');
-  }
+  /*}
   else{
     $('#errorMessage').removeClass('hidden');
 
-  }
+  }*/
 }
 function start_ioe_exam(){
     $("#exam_login_container").hide();
@@ -330,12 +378,18 @@ function start_ioe_exam(){
     $('#exam_questions').removeClass('hidden');
 }
 
+$('#view_my_result').on('click', function(){
+  $('#showExam').hide();
+  $('#ioe_exam_Warning_ender').hide();
+  /*$('#ioe_system_ender').hide();*/
+  load_result(exm_code);
+});
 $("#full_screen_content").hide();
 $("#ioe_exam_zoomer").hide();
 /*$("#exam_questions").hide();*/
   var debug = true;
   $(function () {
-        $('#exam_login_container').children('.osk-trigger').onScreenKeyboard({
+      $('#exam_login_container').children('.osk-trigger').onScreenKeyboard({
           rewireReturn : 'submit',
           draggable:false,
           topPosition:"inherit",
@@ -359,11 +413,8 @@ $("#ioe_exam_zoomer").hide();
       $('#osk-container').show();
 
     $( "#osk-container" ).addClass("keyboard-style");
-  }
-
-  
-  }
-
+  }  
+}
 
 var exam_duration = {{exam_details.exam_duration|safe}};
 var hour_rem = exam_duration/60;
@@ -404,6 +455,10 @@ function clear_login()
   $("#exam_password").val('');
 }
 
+$('#ioe_exam_Warning_ender_cancel').on('click', function(){
+  $('#showExam').show();
+  $('#ioe_exam_Warning_ender').hide();
+});
   $(document).on("keypress keyup keydown", function(e) {
   // screenfull.request(document.getElementById('body'));
     e.preventDefault();

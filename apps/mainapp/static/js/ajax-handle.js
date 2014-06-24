@@ -16,13 +16,28 @@ function get_next_page(exam_code,current, next){
 	ajax_request('get_nexp_page_of_questions', 'get_next_page_success', {'exam_code':exam_code, 'current':current, 'next':next});
 }
 
+
 function get_next_page_success(data){
 	data= jQuery.parseJSON(data);
 	$('#showExam').html('');
 	if (data['status'] == 'ok'){
-		$('#showExam').html(data['html']);	
+		$('#showExam').html(data['html']);
+		Gumby.initialize(['skiplink', 'checkbox', 'radiobtn'], true);
 		MathJax.Hub.Queue(["Typeset",MathJax.Hub]);	
-		current_pg_num = current_pg_num + 1;
+		all_ans = data['all_ans'];
+		var q_no = []
+		for (var i = 0; i < all_ans.length; i++){
+    		q_no.push(all_ans[i]['q_no']);
+		}
+
+		for (var i = 0; i < all_ans.length; i++ ){
+			len = all_ans[i]['attempt_details'].length;
+			slected = all_ans[i]['attempt_details'][len-1]['selected_ans'];
+			check_id = "#radio_" + q_no[i] + '_' + slected.toUpperCase();
+  			$(check_id).trigger('gumby.check');  			
+		}
+		current_pg_num = data['current_pg_num'];
+
 	}
 
 }
@@ -30,11 +45,24 @@ function load_result(exm_code){
 	ajax_request('load_result', 'load_result_success', {'exam_code':exm_code});
 }
 
+function get_unattempted_questions_number(exam_code){
+	ajax_request('get_unattempted_questions_number', 'get_unattempted_questions_number_success', {'exam_code':exam_code});
+}
+
+function get_unattempted_questions_number_success(data){
+	data = jQuery.parseJSON(data);
+	if(data['status'] == 'ok'){
+		$('#unAttemptedQuestions').html(data['questions']);
+	}
+
+}
 function load_result_success(data){
 	data= jQuery.parseJSON(data);
 	$('#showExam').html('');
 	if (data['status'] == 'ok'){
 		$('#showExam').html(data['html']);
+		$('#showExam').show();
+		$('#ioe_system_ender').hide();
 	}
 }
 

@@ -150,7 +150,7 @@ class AjaxHandle():
             h_a_s = HonorCodeAcceptSingal()
             h_a_s.update_honor_code_accept_Signal({'useruid':request.user.id, 
                 'exam_code':int(exam_code), 'ess_time':int(start_time)},{'accept':1})
-            print validate
+
             ess.insert_exam_start_signal({
                 'exam_code':int(exam_code), 
                 'useruid':request.user.id, 
@@ -322,12 +322,12 @@ class AjaxHandle():
                 parameters['user'] = user
                 html =  str(render_to_response('ajax_exammain.html', parameters, context_instance=RequestContext(request)))
                 html = html.replace('Content-Type: text/html; charset=utf-8', '')
-                return HttpResponse(json.dumps({'status':'ok', 'html':html}))            
+                return HttpResponse(json.dumps({'status':'ok', 'html':html, 'all_ans':all_answers, 'current_pg_num':current_pg_num}))
         else:
             return HttpResponse(json.dumps({'status':'error','message':'You are not authorized to perform this action.'}))
 
     def load_result(self, request):
-        set_exam_finished(request)
+        self.set_exam_finished(request)
         parameters ={}
         res={}
         exam_code = int(request.POST['exam_code'])    
@@ -353,8 +353,6 @@ class AjaxHandle():
         answer_list = ''
         anss = []
 
-        print all_ans
-
         for eachAns in all_ans:
             anss.append(eachAns['q_no'])
 
@@ -367,7 +365,6 @@ class AjaxHandle():
             except:
                 answer_list += 'e'
 
-        print len(answer_list), answer_list
         exam_handler = ExamHandler()    
         score_dict = exam_handler.check_answers(exam_code, answer_list)
         parameters['result'] = score_dict
@@ -377,5 +374,25 @@ class AjaxHandle():
         html = html.replace('Content-Type: text/html; charset=utf-8', '')
         return HttpResponse(json.dumps({'status':'ok', 'html':html})) 
 
+    def get_unattempted_questions_number(self, request):
+        exam_code =  int(request.POST.get('exam_code'))
+        ess = ExamStartSignal()
+        validate_start = ess.check_exam_started({'exam_code':int(exam_code), 'useruid':request.user.id, 'start':1,'end':0})                    
+        atte_ans = AttemptedAnswerDatabase()
+        all_answers = atte_ans.find_all_atttempted_answer({
+            'exam_code':int(exam_code), 'user_id':int(request.user.id),
+            'ess_time':int(validate_start['start_time'])})
+
+        questions_list = []
+        for eachAns in all_answers:
+            questions_list.append(eachAns['q_no'])
+
+        not_attempted = ''
+        for i in range(1,66):
+            if i not in questions_list:
+                not_attempted += str(i) +', '
+
+        not_attempted = not_attempted[0:(len(not_attempted)-2)]
+        return HttpResponse(json.dumps({'status':'ok', 'questions':not_attempted}))
 
     
