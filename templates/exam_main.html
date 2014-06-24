@@ -2,7 +2,7 @@
 {% load staticfiles %} 
 {% block exam_content %}
 <div id="ioe_exam_starter" style="text-align:center;">
-<h1>!!! ALERT !!!</h1>
+<h1>!!! NOTICE !!!</h1>
   <p style="margin-top:3%;"> You will now have system exactly similar to pulchowk's system. </p>
   <input type="button" id="full_screen_button" class="medium primary btn pretty button-margin" value="Start Exam" onclick="show_fullscreen()" style="margin-top:3%;margin-bottom:3%;">
   <br><br>
@@ -10,7 +10,7 @@
 <div id="ioe_exam_zoomer" style="text-align:right;">
 <img src="/static/images/fullscreen.png" value="Start Exam" onclick="show_fullscreen()">
 </div>
-<div id="full_screen_content">
+<div id="full_screen_content" style="display:none">
 <div id="full_screen_inner_content">
     <h5 class="h-text-align " style="margin-top:0%; margin-left: 2%; margin-right: -2%;">
     <img src="/static/images/logos/tu-logo.jpg" style="max-height:100px"><br>
@@ -21,7 +21,7 @@
     </h5>
 
 
-    <div id="exam_login_container">
+    <div id="exam_login_container" >
       <!-- <input type="text" id="input1" class="osk-trigger" placeholder="disable return" data-osk-options="disableReturn">< -->
       <!-- <input type="text" id="input2" class="osk-trigger" placeholder="disable symbols" data-osk-options="disableSymbols">  -->
       <div id="errorMessage" class="hidden" style="color:red;">Username or Password Mismatch</div>
@@ -54,31 +54,17 @@
   <script src="/static/js/jquery.onScreenKeyboard.js"></script>
     <script src="http://sindresorhus.com/screenfull.js/src/screenfull.js"></script>
 
-<div id="exam_questions" class="hidden">
-    <div class="twelve columns"  id="timerdiv" style="margin-top:2%; margin-bottom:2%;">          
-          <div class="five columns" id="startTimer">
-                <!-- <h5 style="color:rgb(104, 16, 16);"><strong><i class="icon-clock"></i>Started {{exam_details.exam_time}}</strong></h5> -->
-          </div>
-          <div class="six columns" gumby-fixed="top">
-                <div class="twelve columns">
-                  <div class="seven columns">                  
-                  </div>                
-                  <div class="four columns" style="float: right;">
-                    <img src="{{user.profile_image}}" style="height: 100px; "/>
-                    <p style="font-weight: 400; font-size: 12px; margin-bottom: 0px;">{{user.name}}</p> 
-                    <p  id="attempted" style="font-weight: 400; font-size: 12px;margin-bottom: 0px;">Attempted: 5 </p>
-                    <p id="remaining" style="font-weight: 400; margin-bottom: 0px; font-size: 12px; color:red"><a href="javascript:void(0)" style="color:red" id="remained"> Remaining:</a> 25</p>
-                    <p  style="font-weight: 400; margin-bottom: 0px; font-size: 12px;">Total: 65</p>
-                    <h5 id="timeRemained" data-intro="determine the time left" data-position="bottom" style="color:rgb(104, 16, 16);"><strong></strong></h5>
-                  </div>
-                  <div class="one columns"></div>
-                </div>
-          </div>
-          <div class="one columns"></div>
-          <br/><br/>
+<div id="exam_questions" style="display:none">
+    <div  id="timerdiv" style="float: right;margin-bottom: 2%;top: 0px;margin-left: 70%;width: 20%; position:fixed;"> 
+          <img src="{{user.profile_image}}" style="height: 100px;"/>
+          <p style="font-weight: 400; font-size: 12px; margin-bottom: 0px;">{{user.name}}</p> 
+          <p  id="attempted" style="font-weight: 400; font-size: 12px;margin-bottom: 0px;">Attempted: 5 </p>
+          <p id="remaining" style="font-weight: 400; margin-bottom: 0px; font-size: 12px; color:red"><a href="javascript:void(0)" style="color:red" id="remained"> Remaining:</a> 25</p>
+          <p  style="font-weight: 400; margin-bottom: 0px; font-size: 12px;">Total: 65</p>
+          <h5 id="timeRemained" data-intro="determine the time left" data-position="bottom" style="color:rgb(104, 16, 16);"><strong></strong></h5>
     </div>
     
-      <div class="twelve columns" id="showExam">      
+      <div class="twelve columns" id="showExam" style="display:none">
         {% for each_question in questions %}       
         <div id="questionText_{{each_question.question_number}}" data-intro="Read the question carefully" data-position="top" class="div-margin twelve columns ui-widget-content ui-corner-all question-min-height" style="margin-left:-2%">
           <span  style="font-weight:bold;"><span style="color:blue;">{{each_question.question_number}}. </span> {{ each_question.question.text }} </span><br>
@@ -161,7 +147,7 @@
           </span>
           <span style="float:right">
             <div class="small primary btn pretty loadNext" id="loadNext">
-              <a href="javascript:void(0)" data-intro="Attempt this question later" data-position="top"><i class="icon-arrow-right" ></i>Skip to Next</a>
+              <a href="javascript:void(0)" data-intro="Attempt this question later" data-position="top"><i class="icon-arrow-right" ></i>Next</a>
             </div>
           </span>
 
@@ -182,7 +168,7 @@
         </div> 
       </div> 
         
-  <div id="ioe_exam_Warning_ender" style="text-align:center;">
+  <div id="ioe_exam_Warning_ender" style="text-align:center;" style="display:none">
   <h1>!!! ALERT !!!</h1>
     <p style="margin-top:3%; width:70">You have not attempted following questions. Do you want to submit now? </p>
     <p id="unAttemptedQuestions"> </p>
@@ -198,7 +184,7 @@
     </li>
   </div>
 
-  <div id="remainingQuestions" style="text-align:center;">
+  <div id="remainingQuestions" style="text-align:center; display:none">
   <h1> Remaining Questions </h1>
     <p style="margin-top:3%; width:70">You have not attempted following questions.</p>
     <p id="remainingQuestionsClicked"> </p>
@@ -209,7 +195,7 @@
     </li>
   </div>
 
-  <div id="ioe_system_ender" style="text-align:center;">
+  <div id="ioe_system_ender" style="text-align:center; display:none">
   <h1>!!! NOTE !!!</h1>
     <p style="margin-top:3%;">IOE's system end's here. You cannot view result in ioe's system. But you will have access to results in our system.</p>
     <input type="button" id="view_my_result" class="medium primary btn pretty button-margin" value="view result" style="margin-top:3%;margin-bottom:3%;">
@@ -297,14 +283,21 @@ var exm_code = {{exam_code|safe}};
   }
 
 $('#remained').on('click', function(){
-  $('#showExam').hide();
-  $('#remainingQuestions').show();
+  $('#showExam').css('display', 'none')
+  /*$('#showExam').hide();*/
+  $('#remainingQuestions').css('display', 'block');
+  get_unattempted_questions_number(exm_code);
+  /*$('#remainingQuestions').removeClass('hidden');*/
 });
 
 
 $('#showRemainingQuestionsCancel').on('click', function(){
-    $('#showExam').show();
-  $('#remainingQuestions').hide();
+  $('#showExam').css('display','block');
+
+  /*$('#showExam').removeClass('hidden');*/
+  /*$('#showExam').show();*/
+  $('#remainingQuestions').css('display', 'none');
+  /*$('#remainingQuestions').hide();*/
 });
 var current_pg_num = {{current_pg_num|safe}};
 $('#showExam').on('click', '#loadNext', function(){
@@ -316,15 +309,19 @@ $('#showExam').on('click', '#loadPrev', function(){
 });
 
 $('#showExam').on('click', '#ansSubmit', function(){
-  $('#showExam').hide();
+
+  $('#showExam').css('display','none');  
   get_unattempted_questions_number(exm_code);
-  $('#ioe_exam_Warning_ender').show();  
+
+  $('#ioe_exam_Warning_ender').css('display', 'block');
+  /*$('#ioe_exam_Warning_ender').show();  */
 });
 
 $('#ioe_exam_Warning_ender_submit').on('click', function(){
-    $('#showExam').hide();
-    $('#ioe_exam_Warning_ender').hide();
-    $('#ioe_system_ender').show();
+
+    $('#showExam').css('display', 'none');    
+    $('#ioe_exam_Warning_ender').css('display', 'none');    
+    $('#ioe_system_ender').css('display', 'block');
       
 });
 
@@ -355,13 +352,13 @@ function render_instructions()
   password = $('#exam_password').val();*/
 
   /*if (username =='hello' && password =='exam'){*/
-      $("#exam_login_container").hide();      
-      $('#osk-container').hide();
+      $("#exam_login_container").css('display', 'none');      
+      $('#osk-container').css('display', 'none');      
       $('#errorMessage').hide();
-      $('#ioe_system_ender').hide();
-      $('#ioe_exam_Warning_ender').hide();
-      $('#remainingQuestions').hide();
-      $('#instructions').removeClass('hidden');
+      $('#ioe_system_ender').css('display', 'none');      
+      $('#ioe_exam_Warning_ender').css('display', 'none');      
+      $('#remainingQuestions').css('display', 'none');      
+      $('#instructions').css('display', 'block');      
   /*}
   else{
     $('#errorMessage').removeClass('hidden');
@@ -369,23 +366,24 @@ function render_instructions()
   }*/
 }
 function start_ioe_exam(){
-    $("#exam_login_container").hide();
-    $('#osk-container').hide();
+    $("#exam_login_container").css('display', 'none');      
+    $('#osk-container').css('display', 'none');      
     /*$('#errorMessage').removeClass('hidden');*/
-    $('#errorMessage').hide();
+    $('#errorMessage').css('display', 'none');      
     /*$('#instructions').removeClass('hidden');*/
-    $('#instructions').hide();
-    $('#exam_questions').removeClass('hidden');
+    $('#instructions').css('display', 'none');      
+    $('#exam_questions').css('display', 'block');      
+    $('#showExam').css('display', 'block'); 
 }
 
 $('#view_my_result').on('click', function(){
-  $('#showExam').hide();
-  $('#ioe_exam_Warning_ender').hide();
+  $('#showExam').css('display', 'none');      
+  $('#ioe_exam_Warning_ender').css('display', 'none');      
   /*$('#ioe_system_ender').hide();*/
   load_result(exm_code);
 });
-$("#full_screen_content").hide();
-$("#ioe_exam_zoomer").hide();
+$("#full_screen_content").css('display', 'none');      
+$("#ioe_exam_zoomer").css('display', 'none');      
 /*$("#exam_questions").hide();*/
   var debug = true;
   $(function () {
@@ -402,15 +400,15 @@ $("#ioe_exam_zoomer").hide();
   function show_fullscreen()
   {
     
-    $("#full_screen_content").show();
-    $("#ioe_exam_starter").hide();
+    $("#full_screen_content").css('display', 'block');      
+    $("#ioe_exam_starter").css('display', 'none');      
     screenfull.request(document.getElementById('full_screen_content'));
     if(!$('#osk-container').is(':visible')&& exam_state==0)
     {
 
       exam_state = 1;
-      $("#ioe_exam_zoomer").show();
-      $('#osk-container').show();
+      $("#ioe_exam_zoomer").css('display', 'block');      
+      $('#osk-container').css('display', 'block');      
 
     $( "#osk-container" ).addClass("keyboard-style");
   }  
@@ -433,15 +431,19 @@ var myVar=setInterval(function(){
     else if (toal_time == 0)
     {
       toal_time = toal_time -1;
-      $('#reviewAns').hide();
-      $('#infoText').html('Your time is up. Please submit answers to view result.');
+      /*$('#reviewAns').hide();*/
+      $('#showExam').css('display', 'none');      
+      $('#ioe_system_ender').css('display', 'block');      
+      /*$('#infoText').html('Your time is up. Please submit answers to view result.');*/
       ajax_set_exam_finished(exam_code, false);
-      $('#trigger_gumby_div').click();
+      /*$('#trigger_gumby_div').click();*/
     }
     else{
-      $('#reviewAns').hide();
-      $('#infoText').html('Your time is up. Please submit answers to view result.');
-      $('#trigger_gumby_div').click(); 
+      $('#showExam').css('display', 'none');      
+      $('#ioe_system_ender').css('display', 'block');      
+      /*$('#reviewAns').hide();*/
+      /*$('#infoText').html('Your time is up. Please submit answers to view result.');*/
+      /*$('#trigger_gumby_div').click(); */
     }
 },1000);
 

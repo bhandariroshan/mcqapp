@@ -393,6 +393,8 @@ class AjaxHandle():
                 not_attempted += str(i) +', '
 
         not_attempted = not_attempted[0:(len(not_attempted)-2)]
-        return HttpResponse(json.dumps({'status':'ok', 'questions':not_attempted}))
+        cnt_att = len(all_answers)
+        nt_att = 65 - cnt_att
+        return HttpResponse(json.dumps({'status':'ok', 'questions':not_attempted, 'attempted':cnt_att, 'notattempted':nt_att}))
 
     

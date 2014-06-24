@@ -53,6 +53,9 @@ function get_unattempted_questions_number_success(data){
 	data = jQuery.parseJSON(data);
 	if(data['status'] == 'ok'){
 		$('#unAttemptedQuestions').html(data['questions']);
+		$('#remainingQuestionsClicked').html(data['questions']);
+		$('#remaining').html('<a href="javascript:void(0)" style="color:red" id="remained"> Remaining:</a>' + data['notattempted']);
+		$('#attempted').html('Attempted:: ' + data['attempted']);
 	}
 
 }
@@ -96,6 +99,7 @@ function is_subscribed_success(data){
 function save_answer(exam_code, question_id, selected_ans,current_question_number){
 	ajax_request('save_answer', 'save_answer_success', 
 	{'qid':question_id, 'sans':selected_ans, 'exam_code':exam_code, 'current_question_number':current_question_number});
+
 }
 function save_answer_success(data){
 	data = jQuery.parseJSON(data);
@@ -104,7 +108,7 @@ function save_answer_success(data){
 	}
 	else{
 		toal_time = data['time_remained']*60;
-
+		get_unattempted_questions_number(exm_code);		
 	}
 }
 function ajax_honor_code_accept(exam_code){
