@@ -225,6 +225,9 @@
   .section-signup{
     min-height: 600px;
   }
+  .hidden{
+    visibility:hidden;
+  }
   .over{
     overflow-x: hidden;
     width: 100%;
@@ -310,7 +313,7 @@
   </style>
   <!-- <link rel="stylesheet" href="css/style.css"> -->
   <script src="{% static "js/modernizr-min.js" %}"></script>
-  <script gumby-debug gumby-touch="/bower_components/gumby/js/libs" src="http://gumbyframework.com/js/libs/gumby.min.js?1379449666"></script>
+  
 
 {% block head %}
 {% endblock %}
@@ -432,7 +435,7 @@
 
   <!--Include gumby.js followed by UI modules followed by gumby.init.js
   Or concatenate and minify into a single file -->
-  <!--<script gumby-touch="js/libs" src="{% static "js/gumby.js" %}"></script>-->
+  <script gumby-touch="js/libs" src="{% static "js/gumby.min.js" %}"></script>
   <script src="{% static "js/gumby.retina.js" %}"></script>
   <script src="{% static "js/gumby.fixed.js" %}"></script>
   <script src="{% static "js/gumby.skiplink.js" %}"></script>

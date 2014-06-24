@@ -1,6 +1,6 @@
 {% extends 'exam_base.html' %}
 {% load staticfiles %} 
-{% block timer %}
+{% block exam_content %}
 <div id="ioe_exam_starter" style="text-align:center;">
 <input type="button" id="full_screen_button" class="medium primary btn pretty button-margin" value="Start Exam" onclick="show_fullscreen()">
 </div>
@@ -9,7 +9,8 @@
 </div>
 <div id="full_screen_content">
 <div id="full_screen_inner_content">
-    <h5 class="h-text-align " style="margin-top:0%;margin-left: 2%;margin-right: -2%;">
+    <h5 class="h-text-align " style="margin-top:0%; margin-left: 2%; margin-right: -2%;">
+    <img src="/static/images/logos/tu-logo.jpg" style="max-height:100px"><br>
     <strong>Tribhuvan University</strong><br>
     <strong>Institute of Engineering </strong><br>
     <strong>Pulchowk, Lalitpur, Nepal</strong><br>
@@ -20,23 +21,41 @@
     <div id="exam_login_container">
       <!-- <input type="text" id="input1" class="osk-trigger" placeholder="disable return" data-osk-options="disableReturn">< -->
       <!-- <input type="text" id="input2" class="osk-trigger" placeholder="disable symbols" data-osk-options="disableSymbols">  -->
+      <div id="errorMessage" class="hidden" style="color:red;">Username or Password Mismatch</div>
       <label>Username</label><input type="text" id="exam_username" class="osk-trigger" placeholder="Username">
       <label>Password</label><input type="password" id="exam_password" class="osk-trigger" placeholder="Password">
-      <!-- <textarea id="input4" class="osk-trigger" placeholder="enable everything"></textarea> -->
-      
-      <input type="button" value="Submit" onclick="start_ioe_exam()"> <input onclick="clear_login()" type="button" value="Cancel">
+      <!-- <textarea id="input4" class="osk-trigger" placeholder="enable everything"></textarea> -->  
+      <input type="button" value="Submit" onclick="render_instructions()"> <input onclick="clear_login()" type="button" value="Cancel">
+    </div>
 
+    <div class="twelve columns hidden" id="instructions">
+      <h5 class="h-text-align ui-widget-header ui-corner-all"><strong>Instructions</strong><br></h5>
+      <p style="margin-left:3%; margin-top:2%;">Please read the following instructions carefully before you start the exam.</p>
+      <p style="margin-left:4%;margin-top:2%;">
+        1. You will have 1 hours for the exam. <br>
+        2. There will be next at the end of the page to skip and attempt another question. <br>
+        3. There will be previous button at the end of the page to review your questions. <br>
+        4. All answers will be radio button click.  <br>
+        5. You can correct or change the answer but you cannot un-attempt  question. so please check make sure before you attempt it. <br>
+        6. Question can be reattempted by clicking the radio button. <br>
+        7. You can view your remaining questions by clicking the unattempted questions on the top left corner.  <br>
+        8. Time remaining will be shown at the top.  <br>
+        9. If you do not submit your question at the end then your exam will be invalid. So make sure you submit before you submit your answers. <br>
+      </p>
+      <div class="medium primary btn pretty button-margin" style="margin-left:35%%;">
+        <a href="#" onclick="start_ioe_exam()">Start Exam</a>
+      </div>
     </div>
 
   <script src="/static/js/jquery.onScreenKeyboard.js"></script>
     <script src="http://sindresorhus.com/screenfull.js/src/screenfull.js"></script>
 
-<div id="exam_questions">
+<div id="exam_questions" class="hidden">
     <div class="twelve columns" style="margin-top:2%; margin-bottom:2%;">          
           <div class="six columns" id="startTimer">
                 <!-- <h5 style="color:rgb(104, 16, 16);"><strong><i class="icon-clock"></i>Started {{exam_details.exam_time}}</strong></h5> -->
           </div>
-          <div class="six columns">
+          <div class="six columns" gumby-fixed="top">
                 <div class="twelve columns">
                   <div class="seven columns">                  
                   </div>                
@@ -45,8 +64,8 @@
                     <p style="font-weight: 400; font-size: 12px; margin-bottom: 0px;">{{user.name}}</p> 
                     <p  id="attempted" style="font-weight: 400; font-size: 12px;margin-bottom: 0px;">Attempted: 5 </p>
                     <p id="remaining" style="font-weight: 400; margin-bottom: 0px; font-size: 12px;">Remaining: 25</p>
-                    <p id="remaining" style="font-weight: 400; margin-bottom: 0px; font-size: 12px;color:red;">Time Remained: </p>
                     <p  style="font-weight: 400; margin-bottom: 0px; font-size: 12px;">Total: 65</p>
+                    <h5 id="timeRemained" data-intro="determine the time left" data-position="bottom" style="color:rgb(104, 16, 16);"><strong></strong></h5>
                   </div>
                   <div class="one columns"></div>
                 </div>
@@ -54,14 +73,11 @@
                   <div class="seven columns">                  
                   </div>                
                   <div class="four columns">
-                    <h5 id="timeRemained" data-intro="determine the time left" data-position="bottom" style="float:right; color:rgb(104, 16, 16);"><strong></strong></h5>
                   </div>
                   <div class="one columns"></div>
                 </div>
           </div><br/><br/>
     </div>
-{% endblock %}
-{% block exam_content %}
     
       <div class="twelve columns" id="showExam">      
         {% for each_question in questions %}       
@@ -72,7 +88,7 @@
           <img src="/static/images/{{exam_code}}/{{each_question.question.image}}" style=" height:140px" />
           {% endif %}
 
-        <ul class="row" id="{{each_question.uid.id}}">
+        <ul class="row" id="{{each_question.uid.id}}" style="margin-left:0%">
           <li class="field" style="min-height:30px;">
             <div class="clickDiv" id="div_{{each_question.question_number}}_OptionA" style="vertical-align:middle;"><span></span>            
                 <a href="javascript:void(0)">
@@ -216,12 +232,12 @@ var ans_list=[];
 
 var question_id = '{{start_question.uid.id|safe}}';
 
-var current_question_number = {{start_question_number}};
+/*var current_question_number = {{start_question_number}};*/
 var all_answers = {{all_answers|safe}};
 var max_questions_number = {{max_questions_number}};
 var attempted = [];
 var exam_code = {{exam_code|safe}};
-var questions = {{questions|safe}};
+/*var questions = {{questions|safe}};*/
 var exam_duration = {{exam_details.exam_duration}};
 
 
@@ -267,11 +283,11 @@ $('#showExam').on('click', '#ansSubmit', function(){
 
 $('#showExam').on('click', '.clickDiv' , function(){
 
-  var clicked = this.id.substring(4, 4 + this.id.substr(4,this.id.length).indexOf('_'));
-  var option  = this.id.substring(this.id.indexOf('Option')+6,this.id.length);
-  var check_id = "#radio_"+clicked + '_' + option;
+  clicked = this.id.substring(4, 4 + this.id.substr(4,this.id.length).indexOf('_'));
+  option  = this.id.substring(this.id.indexOf('Option')+6,this.id.length);
+  check_id = "#radio_"+clicked + '_' + option;
   $(check_id).trigger('gumby.check');
-  var q_id = this.parentElement.parentNode.id;
+  q_id = this.parentElement.parentNode.id;
   ret_value = save_answer(exm_code, q_id, option.toLowerCase(), clicked);
 
 });
@@ -288,18 +304,36 @@ else{
 
 var exam_state = 0;
 
-function start_ioe_exam()
+function render_instructions()
 {
-  $("#exam_login_container").hide();
-  $("#exam_questions").show();
-  $('#osk-container').hide();
-}
+  username = $('#exam_username').val();
+  password = $('#exam_password').val();
 
+  if (username =='hello' && password =='exam'){
+      $("#exam_login_container").hide();
+      $('#osk-container').hide();
+      $('#errorMessage').hide();
+      $('#instructions').removeClass('hidden');
+  }
+  else{
+    $('#errorMessage').removeClass('hidden');
+
+  }
+}
+function start_ioe_exam(){
+    $("#exam_login_container").hide();
+    $('#osk-container').hide();
+    /*$('#errorMessage').removeClass('hidden');*/
+    $('#errorMessage').hide();
+    /*$('#instructions').removeClass('hidden');*/
+    $('#instructions').hide();
+    $('#exam_questions').removeClass('hidden');
+}
 
 $("#full_screen_content").hide();
 $("#ioe_exam_zoomer").hide();
-$("#exam_questions").hide();
-  var debug = false;
+/*$("#exam_questions").hide();*/
+  var debug = true;
   $(function () {
         $('#exam_login_container').children('.osk-trigger').onScreenKeyboard({
           rewireReturn : 'submit',
@@ -322,7 +356,8 @@ $("#exam_questions").hide();
 
       exam_state = 1;
       $("#ioe_exam_zoomer").show();
-    $('#osk-container').show();
+      $('#osk-container').show();
+
     $( "#osk-container" ).addClass("keyboard-style");
   }
 
@@ -330,7 +365,38 @@ $("#exam_questions").hide();
   }
 
 
+var exam_duration = {{exam_details.exam_duration|safe}};
+var hour_rem = exam_duration/60;
+var min_rem = parseInt(exam_duration%60);
+var sec_rem = min_rem * 60;
+var toal_time = exam_duration * 60;
 
+var myVar=setInterval(function(){
+    if (toal_time >0 ){
+        toal_time = toal_time-1;  
+        hour_rem  = parseInt(toal_time/3600);
+        min_rem   = parseInt(toal_time/60) - hour_rem *60;
+        sec_rem   = parseInt(toal_time - hour_rem*3600 - min_rem*60);
+        myTimer();        
+    }
+    else if (toal_time == 0)
+    {
+      toal_time = toal_time -1;
+      $('#reviewAns').hide();
+      $('#infoText').html('Your time is up. Please submit answers to view result.');
+      ajax_set_exam_finished(exam_code, false);
+      $('#trigger_gumby_div').click();
+    }
+    else{
+      $('#reviewAns').hide();
+      $('#infoText').html('Your time is up. Please submit answers to view result.');
+      $('#trigger_gumby_div').click(); 
+    }
+},1000);
+
+function myTimer() {    
+    $("#timeRemained").html('<strong>Time: '+ hour_rem + 'h ' + min_rem + 'm ' + sec_rem  +'s</strong>')
+}
   
 function clear_login()
 {

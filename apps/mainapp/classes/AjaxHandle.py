@@ -327,6 +327,7 @@ class AjaxHandle():
             return HttpResponse(json.dumps({'status':'error','message':'You are not authorized to perform this action.'}))
 
     def load_result(self, request):
+        set_exam_finished(request)
         parameters ={}
         res={}
         exam_code = int(request.POST['exam_code'])    
