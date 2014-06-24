@@ -8,7 +8,6 @@ from .MongoConnection import MongoConnection
 
 
 class QuestionApi():
-
     def __init__(self):
         self.db_object = MongoConnection("localhost", 27017, 'mcq')
         self.table_name = 'question'
@@ -33,8 +32,10 @@ class QuestionApi():
     def get_count(self, where):
         return self.db_object.get_count(self.table_name, where)
 
-class ExammodelApi():
+    def get_paginated_questions(self, where, fields= {}, page_num =1):
+        return self.db_object.get_paginated_values(self.table_name, where, fields=fields, sort_index = '_id', pageNumber=page_num)
 
+class ExammodelApi():
     def __init__(self):
         self.db_object = MongoConnection("localhost", 27017, 'mcq')
         self.table_name = 'exammodel'

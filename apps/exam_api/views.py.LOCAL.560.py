@@ -70,11 +70,8 @@ class ExamHandler():
         total_attempted = 0
         total_marks = 0
         score_list = []
-        
+
         for key, value in correct_answers.iteritems():
-            total_question = question_api.find_all_questions(
-                {"exam_code": int(exam_code), "subject": key, 'marks':1}
-            )
             temp = {}
             temp['subject'] = key
             temp['score'] = value['score']

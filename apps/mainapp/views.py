@@ -809,3 +809,4 @@ def attend_dps_exam_old(request,exam_code):
 
     else:
         return HttpResponseRedirect('/')
+

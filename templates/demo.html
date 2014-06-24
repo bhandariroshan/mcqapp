@@ -1,0 +1,146 @@
+
+{% extends 'exam_base.html' %}
+{% load staticfiles %} 
+{% block content %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>On Screen Keyboard demo</title>
+		<link rel="stylesheet" type="text/css" href="/static/css/onScreenKeyboard.css">
+		<style>
+			html {
+				font-family: Calibri, Arial, sans-serif;
+			}
+
+			#input_container {
+				width: 50%;
+				margin: 2% auto;
+				display: block;
+			}
+
+				input[type=text],
+				textarea {
+					font-family: inherit;
+					font-size: 3em;
+					width: 98%;
+					display: block;
+					resize: none;
+					margin-bottom: 1em;
+					border: 1px solid #333;
+					padding: 0.25em;
+					background: #FEFEFE;
+				}
+				.keyboard-style
+				{
+					bottom: 2%;
+				}
+				.exam-hidden
+				{
+					visibility: hidden;
+				}
+		</style>
+	</head>
+
+	<body>
+
+	<h2> This is demo OSK + full screen + (physical keyboard + rt) disabled </h2>
+	<input type="button" id="full_screen_button" value="Enable fullscreen" onclick="show_fullscreen()">
+	<div id ="div_form" class="exam-hidden" style="width:100%; height:100%;">
+<div id="input_container">
+			<!-- <input type="text" id="input1" class="osk-trigger" placeholder="disable return" data-osk-options="disableReturn">< -->
+			<!-- <input type="text" id="input2" class="osk-trigger" placeholder="disable symbols" data-osk-options="disableSymbols">  -->
+			<label>Username</label><input type="text" id="exam_username" class="osk-trigger" placeholder="Username">
+			<label>Password</label><input type="text" class="osk-trigger" placeholder="Password">
+			<!-- <textarea id="input4" class="osk-trigger" placeholder="enable everything"></textarea> -->
+			
+			<input type="button" value="submit"> <input type="button" value="Cancel">
+
+		</div>
+		</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+		
+		<script src="/static/js/jquery.onScreenKeyboard.js"></script>
+		<script src="http://sindresorhus.com/screenfull.js/src/screenfull.js"></script>
+
+<script>
+
+	var debug = true;
+	$(function () {
+				$('#input_container').children('.osk-trigger').onScreenKeyboard({
+					rewireReturn : 'submit',
+					draggable:true,
+					topPosition:"inherit",
+					rewireTab : true,
+					container:'#div_form'
+				});
+			});
+	$( "#osk-container" ).addClass("keyboard-style");
+	
+	function show_fullscreen()
+	{
+		$("#div_form").removeClass('exam-hidden');
+		screenfull.request(document.getElementById('div_form'));
+		$('#osk-container').show();
+	
+	}
+
+
+
+	$(document).on("keypress keyup keydown", function(e) {
+	// screenfull.request(document.getElementById('body'));
+		e.preventDefault();
+		console.log("hello");
+    	return false;
+	});
+
+
+
+	<!--
+
+	//Disable right mouse click Script
+	//By Maximus (maximus@nsimail.com) w/ mods by DynamicDrive
+	//For full source code, visit http://www.dynamicdrive.com
+
+
+
+	// ///////////////////////////////////
+	function clickIE4(){
+	if (event.button==2){
+
+	return false;
+	}
+	}
+
+	function clickNS4(e){
+	if (document.layers||document.getElementById&&!document.all){
+	if (e.which==2||e.which==3){
+
+	return false;
+	}
+	}
+	}
+
+	if(!debug){
+
+	if (document.layers){
+	document.captureEvents(Event.MOUSEDOWN);
+	document.onmousedown=clickNS4;
+	}
+	else if (document.all&&!document.getElementById){
+	document.onmousedown=clickIE4;
+	}
+
+	document.oncontextmenu=new Function("return false;");
+	}
+	// --> 
+
+</script>
+
+	</body>
+
+</html>
+{% endblock %}

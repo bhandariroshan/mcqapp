@@ -21,6 +21,7 @@ class ExamHandler():
             questions, key=lambda k: k['question_number'])
         return sorted_questions
 
+    
     def list_upcoming_exams(self):
         '''
         this function lists the available exam models
@@ -41,12 +42,10 @@ class ExamHandler():
         sorted_questions = sorted(
             questions, key=lambda k: k['question_number'])
         subjects = set([i['subject'] for i in sorted_questions])
-        print answer_list,len(answer_list)
 
         correct_answers = {}
         for subs in subjects:
             temp = {}
-            temp['total_question'] = 0
             temp['attempted_answer'] = 0
             temp['score'] = 0
             correct_answers[subs] = temp
@@ -54,21 +53,11 @@ class ExamHandler():
         for index, choice in enumerate(answer_list):
             correct_answers[
                 sorted_questions[index]['subject']]['attempted_answer'] += 1
-            correct_answers[
-                sorted_questions[index]['subject']]['total_question'] += 1 * \
-                int(sorted_questions[index]['marks'])
             if sorted_questions[index]['answer']['correct'] == choice:
-                try:
-                    correct_answers[
-                        sorted_questions[index]['subject']]['score'] += 1 * \
-                        int(sorted_questions[index]['marks'])
-                except:
-                    correct_answers[
-                        sorted_questions[index]['subject']]['score'] += 1
-
+                correct_answers[
+                    sorted_questions[index]['subject']]['score'] += 1
         total_score = 0
         total_attempted = 0
-        total_marks = 0
         score_list = []
         
         for key, value in correct_answers.iteritems():
@@ -79,17 +68,16 @@ class ExamHandler():
             temp['subject'] = key
             temp['score'] = value['score']
             temp['attempted'] = value['attempted_answer']
-            temp['total_question'] = value['total_question']
+            temp['total_question'] = len(total_question)
             total_score += value['score']
             total_attempted += value['attempted_answer']
-            total_marks += value['total_question']
             score_list.append(temp)
         score_list.append(
             {
                 'subject': 'Total',
                 'score': total_score,
                 'attempted': total_attempted,
-                'total_question': total_marks
+                'total_question': len(sorted_questions)
             }
         )
         return score_list
@@ -99,22 +87,22 @@ def save_user_answers(request, ess_starttimestamp):
     '''
     the function receives the information of answer checked by
     user and saved in the answer database
-    '''
+    '''   
     ans = AttemptedAnswerDatabase()
-    question_number = request.POST.get('qid', '')
-    selected_ans = request.POST.get('sans', '')
-    exam_code = request.POST.get('exam_code', '')
-    current_question_number = int(request.POST.get(
-        'current_question_number', ''))
+    question_number = request.POST.get('qid','')
+    selected_ans = request.POST.get('sans','')
+    exam_code = request.POST.get('exam_code','')     
+    current_question_number = int(request.POST.get('current_question_number',''))
     attempt_time = datetime.datetime.now()
     attempt_time = time.mktime(attempt_time.timetuple())
     ans.update_upsert_push({
-        'user_id': request.user.id,
-        'ess_time': int(ess_starttimestamp),
-        'q_id': question_number,
-        'exam_code': int(exam_code),
-        'q_no': current_question_number}, {
-        'attempt_details': {
-            'selected_ans': selected_ans,
-            'attempt_time': int(attempt_time)
-        }})
+        'user_id':request.user.id,
+        'ess_time':int(ess_starttimestamp),
+        'q_id':question_number,
+        'exam_code':int(exam_code),
+        'q_no':current_question_number},{
+        'attempt_details':{
+            'selected_ans':selected_ans,
+            'attempt_time':int(attempt_time)
+            }})
+    

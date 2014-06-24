@@ -12,12 +12,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  
   <link rel="shortcut icon" href="{% static "images/logos/favicon.ico" %}" type="image/x-icon">
   
-  <meta property="fb:app_id" content="238848396304709" /> 
+  <meta property="fb:app_id" content="238848396304709" />
   <meta property="fb:admins" content="100001185973732" /> 
   <meta property="og:type" content="website" />
   <meta name="keywords" content="MeroAnswer - Sign up and become a part of smart and success study.">
   <meta name="description" content="MeroAnswer - web and android solution to prepare competitive exams.">
-  <meta property="og:site_name" content="MeroAnswer" />      
+  <meta property="og:site_name" content="MeroAnswer" />
   <meta property="og:url" content="http://{{request.META.HTTP_HOST}}{{request.path}}" /> 
   {% if request.user.is_authenticated %} 
     {% ifequal request.path  '/' %}
@@ -200,6 +200,10 @@
   .correct{
     background: rgb(123, 216, 115);
   }
+  
+  .h-text-align{
+    text-align: center;
+  }
   .footer-center{
     position: absolute;
     left: 50%;
@@ -221,6 +225,7 @@
   .section-signup{
     min-height: 600px;
   }
+
   .over{
     overflow-x: hidden;
     width: 100%;
@@ -306,7 +311,7 @@
   </style>
   <!-- <link rel="stylesheet" href="css/style.css"> -->
   <script src="{% static "js/modernizr-min.js" %}"></script>
-  <script gumby-debug gumby-touch="/bower_components/gumby/js/libs" src="http://gumbyframework.com/js/libs/gumby.min.js?1379449666"></script>
+  
 
 {% block head %}
 {% endblock %}
@@ -429,9 +434,14 @@
 
   <!--Include gumby.js followed by UI modules followed by gumby.init.js
   Or concatenate and minify into a single file -->
+<<<<<<< HEAD
   <!--Include gumby.js followed by UI modules followed by gumby.init.js -->
   <script gumby-touch="js/libs" src="{% static "js/gumby.min.js" %}"></script>
    <script src="{% static "js/gumby.retina.min.js" %}"></script>
+=======
+  <script gumby-touch="js/libs" src="{% static "js/gumby.min.js" %}"></script>
+  <script src="{% static "js/gumby.retina.js" %}"></script>
+>>>>>>> ea4dd42ac099ebba1782fd284e83147862863c6a
   <script src="{% static "js/gumby.fixed.js" %}"></script>
   <script src="{% static "js/gumby.skiplink.min.js" %}"></script>
   <script src="{% static "js/gumby.toggleswitch.min.js" %}"></script>
@@ -483,12 +493,15 @@ var myVar=setInterval(function(){
   $('.bx-next').click();
 },2000);
 
+<<<<<<< HEAD
 $(document).keyup(function(e) {
   if (e.keyCode == 27) { 
       $('#closeEnterCoupon').click();
   }   // esc
 });
 $('.modal .switch[gumby-trigger="|#closeEnterCoupon"]:first').trigger(Gumby.click);
+=======
+>>>>>>> ea4dd42ac099ebba1782fd284e83147862863c6a
 </script>
 
 {% endblock %}

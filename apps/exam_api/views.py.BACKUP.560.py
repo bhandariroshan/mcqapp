@@ -72,9 +72,12 @@ class ExamHandler():
         score_list = []
         
         for key, value in correct_answers.iteritems():
+<<<<<<< HEAD
+=======
             total_question = question_api.find_all_questions(
                 {"exam_code": int(exam_code), "subject": key, 'marks':1}
             )
+>>>>>>> ea4dd42ac099ebba1782fd284e83147862863c6a
             temp = {}
             temp['subject'] = key
             temp['score'] = value['score']
@@ -101,11 +104,18 @@ def save_user_answers(request, ess_starttimestamp):
     user and saved in the answer database
     '''
     ans = AttemptedAnswerDatabase()
+<<<<<<< HEAD
     question_number = request.POST.get('qid', '')
     selected_ans = request.POST.get('sans', '')
     exam_code = request.POST.get('exam_code', '')
     current_question_number = int(request.POST.get(
         'current_question_number', ''))
+=======
+    question_number = request.POST.get('qid','')
+    selected_ans = request.POST.get('sans','')
+    exam_code = request.POST.get('exam_code','')     
+    current_question_number = int(request.POST.get('current_question_number',''))
+>>>>>>> ea4dd42ac099ebba1782fd284e83147862863c6a
     attempt_time = datetime.datetime.now()
     attempt_time = time.mktime(attempt_time.timetuple())
     ans.update_upsert_push({
