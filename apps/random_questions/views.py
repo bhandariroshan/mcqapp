@@ -1,9 +1,9 @@
-from django.http import HttpResponse
+from django.http import StreamingHttpResponse
 
 from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi
 
 
-def generate_random_questions():
+def generate_random_questions(request):
     '''
     The function generates generates a random question set by randomly picking
     question from all exam sets
@@ -16,9 +16,20 @@ def generate_random_questions():
         question_api = QuestionApi()
         questions = question_api.find_all_questions(
             {"exam_code": each_set['exam_code'], 'marks': 1},
-            fields={'answer.correct': 0}
+            fields={'question_number': 1, '_id': 0}
         )
-        question_sets.append(
-            sorted(questions, key=lambda k: k['question_number'])
-        )
-    return HttpResponse(question_sets)
+        question_sets.append(sorted(
+            questions, key=lambda k: k['question_number']
+        ))
+    arranged_question = []
+    if len(question_sets) == 0:
+        pass
+    elif len(question_sets) == 1:
+        final_question_set = question_sets[0]
+    else:
+        for i in range(len(question_sets[0])):
+            arranged_question.append(
+                [each_list[i] for each_list in question_sets]
+            )
+    print arranged_question
+    return StreamingHttpResponse(arranged_question)
