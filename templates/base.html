@@ -431,22 +431,27 @@
   Or concatenate and minify into a single file -->
   <!--Include gumby.js followed by UI modules followed by gumby.init.js -->
   <script gumby-touch="js/libs" src="{% static "js/gumby.min.js" %}"></script>
-   <!--<script src="{% static "js/gumby.retina.js" %}"></script>
+   <script src="{% static "js/gumby.retina.min.js" %}"></script>
   <script src="{% static "js/gumby.fixed.js" %}"></script>
-  <script src="{% static "js/gumby.skiplink.js" %}"></script>
-  <script src="{% static "js/gumby.toggleswitch.js" %}"></script>
-  <script src="{% static "js/gumby.radiobtn.js" %}"></script>
-  <script src="{% static "js/gumby.checkbox.js" %}"></script>
-  <script src="{% static "js/gumby.tabs.js" %}"></script>
-  <script src="{% static "js/gumby.fittext.js" %}"></script>
-  <script src="{% static "js/jquery.validation.js" %}"></script>
-  <script src="{% static "js/gumby.navbar.js" %}"></script>
-  <script src="{% static "js/gumby.shuffle.js" %}"></script> 
-  <script src="{% static "js/gumby.init.js" %}"></script>
+  <script src="{% static "js/gumby.skiplink.min.js" %}"></script>
+  <script src="{% static "js/gumby.toggleswitch.min.js" %}"></script>
+  <script src="{% static "js/gumby.radiobtn.min.js" %}"></script>
+  <script src="{% static "js/gumby.checkbox.min.js" %}"></script>
+  <script src="{% static "js/gumby.tabs.min.js" %}"></script>
+  <script src="{% static "js/gumby.fittext.min.js" %}"></script>
+  <script src="{% static "js/gumby.inview.min.js" %}"></script>
+  <script src="{% static "js/gumby.comments.min.js" %}"></script>
+  <script src="{% static "js/gumby.parallax.min.js" %}"></script>
+  <script src="{% static "js/gumby.images.min.js" %}"></script>
+  <script src="{% static "js/jquery.validation.min.js" %}"></script>
+  <script src="{% static "js/gumby.navbar.min.js" %}"></script>
+  <script src="{% static "js/gumby.shuffle.min.js" %}"></script> 
+  <script src="{% static "js/gumby.init.min.js" %}"></script>
   <script src="{% static "js/jquery.bxslider.min.js" %}"></script>
   <script src="{% static "js/waypoints.min.js" %}"></script>
-  <script src="{% static "js/placeholders.js" %}"></script>
-  -->
+  <script src="{% static "js/placeholders.min.js" %}"></script>
+
+
 
   {% if not request.user.is_authenticated %}  
     <script src="{% static "js/scrollIt.min.js" %}"></script>
