@@ -24,4 +24,5 @@ urlpatterns = patterns(
     url(r'^distributors/', 'apps.mainapp.views.distributors'),
     url(r'^request/', 'apps.mainapp.views.request_coupon'),
     url(r'^results/(?P<exam_code>\w{1,15})', 'apps.mainapp.views.results'),
+    url(r'^random/', include('apps.random_questions.urls', app_name='random_questions')),
 )
