@@ -14,6 +14,9 @@ class UserProfile():
     def get_user_by_username(self, user_name=''):
         return self.db_object.get_one(self.table_name,{'username':user_name})
 
+    def update_profile_image(self, profile_image, username):
+        return self.db_object.update(self.table_name,{'username':username}, {'profile_image':profile_image})
+
     def update_upsert(self, where={}, what={}):
         return self.db_object.update_upsert(self.table_name, where, what)
 

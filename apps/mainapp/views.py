@@ -61,6 +61,15 @@ def sign_up_sign_in(request, android_user=False):
         join_time = time.mktime(join_time.timetuple())
 
     try:
+        profile_image = user['profile_image']
+    except:
+        from facepy import GraphAPI
+        graph = GraphAPI(access_token)
+        det = graph.get(social_account.uid + '/picture/?redirect=0&height=300&type=normal&width=300')
+        profile_image = det['data']['url']
+
+
+    try:
         student_category = user['student_category']
     except:
         student_category = 'IDP'
@@ -323,7 +332,17 @@ def attend_dps_exam(request,exam_code):
         parameters['user'] = user_det
         ess = ExamStartSignal()        
         exam_obj = ExammodelApi()
-        ess = ExamStartSignal()            
+        ess = ExamStartSignal()  
+
+        try:
+            profile_image = user_det['profile_image']
+        except:
+            from facepy import GraphAPI
+            graph = GraphAPI(access_token)
+            det = graph.get(social_account.uid + '/picture/?redirect=0&height=300&type=normal&width=300')
+            profile_image = det['data']['url']
+            user_profile_obj.update_profile_image(profile_image, username)
+
 
         exam_details = exam_obj.find_one_exammodel({'exam_code':int(exam_code)})
         current_time = time.mktime(datetime.datetime.now().timetuple())
