@@ -1,3 +1,5 @@
+import random
+
 from django.http import StreamingHttpResponse
 
 from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi
@@ -16,12 +18,13 @@ def generate_random_questions(request):
         question_api = QuestionApi()
         questions = question_api.find_all_questions(
             {"exam_code": each_set['exam_code'], 'marks': 1},
-            fields={'question_number': 1, '_id': 0}
+            fields={'question_number': 1, '_id': 0, 'exam_code': 1}
         )
         question_sets.append(sorted(
             questions, key=lambda k: k['question_number']
         ))
     arranged_question = []
+    final_question_set = []
     if len(question_sets) == 0:
         pass
     elif len(question_sets) == 1:
@@ -31,5 +34,7 @@ def generate_random_questions(request):
             arranged_question.append(
                 [each_list[i] for each_list in question_sets]
             )
-    print arranged_question
-    return StreamingHttpResponse(arranged_question)
+        for each_set in arranged_question:
+            final_question_set.append(
+                each_set[random.randrange(len(each_set))])
+    return StreamingHttpResponse(final_question_set)
