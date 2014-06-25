@@ -404,7 +404,7 @@ $("#ioe_exam_zoomer").css('display', 'none');
       $('#exam_login_container').children('.osk-trigger').onScreenKeyboard({
           rewireReturn : 'submit',
           draggable:false,
-          topPosition:"inherit",
+          topPosition:"50%",
           rewireTab : true,
           container:'#full_screen_content'
         });
@@ -422,9 +422,9 @@ $("#ioe_exam_zoomer").css('display', 'none');
 
       exam_state = 1;
       $("#ioe_exam_zoomer").css('display', 'block');      
-      $('#osk-container').css('display', 'block');      
-
+      $('#osk-container').css('display', 'block'); 
     $( "#osk-container" ).addClass("keyboard-style");
+    $( "#osk-container" ).fadeOut('fast');
   }  
 }
 
