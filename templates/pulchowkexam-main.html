@@ -190,8 +190,8 @@
     </li>
   </div>
 
-  <div id="remainingQuestions" style="text-align:center; display:none">
-  <h1> Remaining Questions </h1>
+  <div id="remainingQuestions" style="text-align:center; display:none"  class="warning-centered">
+  <h2> Remaining Questions </h2>
     <p style="margin-top:3%; width:70">You have not attempted following questions.</p>
     <p id="remainingQuestionsClicked"> </p>
     <li class="prepend field">
@@ -288,10 +288,10 @@ var exm_code = {{exam_code|safe}};
     $('#closegumby').click();
   }
 
-$('#exam_questions').on('click','remained', function(){
+$('#exam_questions').on('click','#remained', function(){
   /*$('#showExam').hide();*/
   get_unattempted_questions_number(exm_code);
-  $('#showExam').css('display', 'none')
+  // $('#showExam').css('display', 'none')
   $('#remainingQuestions').css('display', 'block');
   /*$('#remainingQuestions').removeClass('hidden');*/
 });
@@ -426,19 +426,19 @@ var exam_duration = {{exam_details.exam_duration|safe}};
 var hour_rem = exam_duration/60;
 var min_rem = parseInt(exam_duration%60);
 var sec_rem = min_rem * 60;
-var toal_time = exam_duration * 60;
+var total_time = exam_duration * 60;
 
 var myVar=setInterval(function(){
-    if (toal_time >0 ){
-        toal_time = toal_time-1;  
-        hour_rem  = parseInt(toal_time/3600);
-        min_rem   = parseInt(toal_time/60) - hour_rem *60;
-        sec_rem   = parseInt(toal_time - hour_rem*3600 - min_rem*60);
+    if (total_time >0 ){
+        total_time = total_time-1;  
+        hour_rem  = parseInt(total_time/3600);
+        min_rem   = parseInt(total_time/60) - hour_rem *60;
+        sec_rem   = parseInt(total_time - hour_rem*3600 - min_rem*60);
         myTimer();        
     }
-    else if (toal_time == 0)
+    else if (total_time == 0)
     {
-      toal_time = toal_time -1;
+      total_time = total_time -1;
       /*$('#reviewAns').hide();*/
       $('#showExam').css('display', 'none');      
       $('#ioe_system_ender').css('display', 'block');      
