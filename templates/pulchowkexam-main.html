@@ -287,11 +287,11 @@ var exm_code = {{exam_code|safe}};
     $('#closegumby').click();
   }
 
-$('#remained').on('click', function(){
-  $('#showExam').css('display', 'none')
+$('#exam_questions').on('click','remained', function(){
   /*$('#showExam').hide();*/
-  $('#remainingQuestions').css('display', 'block');
   get_unattempted_questions_number(exm_code);
+  $('#showExam').css('display', 'none')
+  $('#remainingQuestions').css('display', 'block');
   /*$('#remainingQuestions').removeClass('hidden');*/
 });
 
