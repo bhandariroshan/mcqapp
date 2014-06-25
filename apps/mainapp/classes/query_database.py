@@ -22,7 +22,7 @@ class QuestionApi():
 
     def find_all_questions(self, condition1, fields=None):
         return self.db_object.get_all(self.table_name, condition1, fields,
-                                      sort_index='question_number', limit=200)
+                                      sort_index='question_number')
 
     def update_question(self, where, what):
         return self.db_object.update(self.table_name, where, what)
@@ -32,6 +32,7 @@ class QuestionApi():
 
     def get_count(self, where):
         return self.db_object.get_count(self.table_name, where)
+
 
 class ExammodelApi():
 
@@ -46,8 +47,8 @@ class ExammodelApi():
     def find_one_exammodel(self, condition):
         return self.db_object.get_one(self.table_name, condition)
 
-    def find_all_exammodel(self, condition1):
-        return self.db_object.get_all(self.table_name, condition1)
+    def find_all_exammodel(self, condition1, fields=None):
+        return self.db_object.get_all(self.table_name, condition1, fields)
 
     def update_exam_model(self, where, what):
         return self.db_object.update(self.table_name, where, what)
@@ -66,8 +67,10 @@ class AttemptedAnswerDatabase():
     def find_one_atttempted_answer(self, condition):
         return self.db_object.get_one(self.table_name, condition)
 
-    def find_all_atttempted_answer(self, condition, fields=None, sort_index="q_no"):
-        return self.db_object.get_all(self.table_name, condition, fields, sort_index)
+    def find_all_atttempted_answer(self, condition,
+                                   fields=None, sort_index="q_no"):
+        return self.db_object.get_all(self.table_name,
+                                      condition, fields, sort_index)
 
     def update_atttempted_answer(self, where, what):
         return self.db_object.update(self.table_name, where, what)
@@ -77,7 +80,7 @@ class AttemptedAnswerDatabase():
 
     def get_attempted_exams(self, field, where):
         return self.db_object.get_distinct(self.table_name, field, where)
-        
+
 
 class CorrectAnswerDatabase():
     def __init__(self):
@@ -97,6 +100,7 @@ class CorrectAnswerDatabase():
     def update_correct_answer(self, where, what):
         return self.db_object.update(self.table_name, where, what)
 
+
 class ExamStartSignal():
     def __init__(self):
         self.db_object = MongoConnection("localhost", 27017, 'mcq')
@@ -107,10 +111,11 @@ class ExamStartSignal():
         self.db_object.update_upsert(self.table_name, value, value)
 
     def check_exam_started(self, condition):
-        return self.db_object.get_one(self.table_name, condition)     
+        return self.db_object.get_one(self.table_name, condition)
 
     def update_exam_start_signal(self, where, what):
-        return self.db_object.update_upsert(self.table_name, where, what)           
+        return self.db_object.update_upsert(self.table_name, where, what)
+
 
 class HonorCodeAcceptSingal():
     def __init__(self):
@@ -122,10 +127,11 @@ class HonorCodeAcceptSingal():
         self.db_object.update_upsert(self.table_name, value, value)
 
     def check_honor_code_accepted(self, condition):
-        return self.db_object.get_one(self.table_name, condition)     
+        return self.db_object.get_one(self.table_name, condition)
 
     def update_honor_code_accept_Signal(self, where, what):
         return self.db_object.update_upsert(self.table_name, where, what)
+
 
 class CurrentQuestionNumber():
     def __init__(self):
@@ -137,7 +143,7 @@ class CurrentQuestionNumber():
         self.db_object.update_upsert(self.table_name, value, value)
 
     def check_current_question_number(self, condition):
-        return self.db_object.get_one(self.table_name, condition)     
+        return self.db_object.get_one(self.table_name, condition)
 
     def update_current_question_number(self, where, what):
         return self.db_object.update_upsert(self.table_name, where, what)
