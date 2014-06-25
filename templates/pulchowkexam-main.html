@@ -32,7 +32,7 @@
       <label>Username</label><input type="text" id="exam_username" class="osk-trigger" placeholder="Username">
       <label>Password</label><input type="password" id="exam_password" class="osk-trigger" placeholder="Password">
       <!-- <textarea id="input4" class="osk-trigger" placeholder="enable everything"></textarea> -->  
-      <input type="button" value="Submit" onclick="render_instructions()"> <input onclick="clear_login()" type="button" value="Cancel">
+      <input type="button" value="Submit" onclick="render_instructions()"> <input onclick="clear_login()" type="button" value="Clear">
     </div>
 
     <div class="twelve columns hidden" id="instructions">
@@ -172,18 +172,18 @@
         </div> 
       </div> 
         
-  <div id="ioe_exam_Warning_ender" style="text-align:center;" style="display:none">
-  <h1>!!! ALERT !!!</h1>
+  <div id="ioe_exam_Warning_ender" style="display:none;" class="warning-centered">
+  <h1 style="text-align:center;">!!! ALERT !!!</h1>
     <p style="margin-top:3%; width:70">You have not attempted following questions. Do you want to submit now? </p>
     <p id="unAttemptedQuestions"> </p>
 <!--     <input type="button" id="view_my_result" class="medium primary btn pretty button-margin" value="view result" style="margin-top:3%;margin-bottom:3%;"> -->
     <!-- <br><br> -->
     <li class="prepend field">
-      <div class="medium primary btn" >
-        <a href="#" id="ioe_exam_Warning_ender_submit">Submit</a>
-      </div>
-      <div class="medium primary btn" style="margin-left: 1%;">
+      <div class="medium primary btn" style="float:left;">
         <a id="ioe_exam_Warning_ender_cancel" href="#">Cancel</a>
+      </div>
+      <div class="medium primary btn" style="float:right;" >
+        <a href="#" id="ioe_exam_Warning_ender_submit">Submit</a>
       </div>
     </li>
   </div>
@@ -313,8 +313,9 @@ $('#showExam').on('click', '#loadPrev', function(){
 });
 
 $('#showExam').on('click', '#ansSubmit', function(){
+  // $("#full_screen_content").addClass("make-blur");
 
-  $('#showExam').css('display','none');  
+  // $('#showExam').css('display','none');  
   get_unattempted_questions_number(exm_code);
 
   $('#ioe_exam_Warning_ender').css('display', 'block');
@@ -389,7 +390,7 @@ $('#view_my_result').on('click', function(){
 $("#full_screen_content").css('display', 'none');      
 $("#ioe_exam_zoomer").css('display', 'none');      
 /*$("#exam_questions").hide();*/
-  var debug = true;
+  var debug = false;
   $(function () {
       $('#exam_login_container').children('.osk-trigger').onScreenKeyboard({
           rewireReturn : 'submit',
