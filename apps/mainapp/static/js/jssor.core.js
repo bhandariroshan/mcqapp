@@ -44,7 +44,7 @@ var $JssorDebug$ = new function () {
         if (debug && console.log) {
             //console.log(msg);
         } else if (debug && important) {
-            alert(msg);
+            /*alert(msg);*/
         }
     };
 
@@ -55,7 +55,7 @@ var $JssorDebug$ = new function () {
         if (debug && console.error) {
             console.error(msg);
         } else if (debug) {
-            alert(msg);
+            /*alert(msg);*/
         }
 
         if (debug) {

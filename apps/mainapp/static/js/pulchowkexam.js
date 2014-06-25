@@ -11,7 +11,7 @@ var myVar=setInterval(function(){
         min_rem   = parseInt(toal_time/60) - hour_rem *60;
         sec_rem   = parseInt(toal_time - hour_rem*3600 - min_rem*60);
         myTimer();        
-        alert(toal_time);
+        /*alert(toal_time);*/
     }
     else if (toal_time == 0)
     {
