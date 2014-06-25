@@ -1,4 +1,3 @@
-{{resultp}}
 <div class="twelve columns" style="margin-top:0%; margin-bottom:7%;">
     <h3 class="h-text-align ui-corner-all" style="text-align: center;"><strong>{{exam_details.exam_name}}</strong></h3>
     <section class="tabs">
@@ -18,7 +17,7 @@
         <tbody>
         {% for eachSubject in result %}
           <tr>
-            <td>{{eachSubject.subject}}</td>
+            <td>{% if eachSubject.subject != 'Total' %}<a style="color:#58c026;" href="/answers/{{exam_code}}/{{eachSubject.subject}}/?q=0">{% endif %}{{eachSubject.subject}}</a></td>
             <td>{{eachSubject.score}}</td>
             <td>{{eachSubject.total_question}}</td>
           </tr>
