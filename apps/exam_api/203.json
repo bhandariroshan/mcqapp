@@ -722,7 +722,7 @@
         "exam_code": 203,
         "marks": 1,
         "question": {
-            "text": "The coordinates of a moving particle at time t and $ x = ct^{2} $ and $ y = bt^{2} $. The speed of particle is",
+            "text": "The coordinates of a moving particle at time t are $ x = ct^{2} $ and $ y = bt^{2} $. The speed of particle is",
             "image": ""
         },
         "subject": "Physics"
@@ -750,7 +750,7 @@
         "exam_code": 203,
         "marks": 1,
         "question": {
-            "text": "The velocity of projection of a body is increased by 2% other factors remaining unchanged, what will be the percentage gained in maximum height gained?",
+            "text": "The velocity of projection of a body is increased by 2% other factors remaining unchanged, what will be the percentage change in maximum height gained?",
             "image": ""
         },
         "subject": "Physics"
@@ -834,7 +834,7 @@
         "exam_code": 203,
         "marks": 1,
         "question": {
-            "text": "Chromatic abberation in a lens is caused by",
+            "text": "Chromatic aberration in a lens is caused by",
             "image": ""
         },
         "subject": "Physics"
@@ -918,7 +918,7 @@
         "exam_code": 203,
         "marks": 1,
         "question": {
-            "text": "A 5°C rise ub temperature is observed in a conductor by passing the current. When the current is doubled, the rise in temperature will approximately be",
+            "text": "A 5°C rise in temperature is observed in a conductor by passing the current. When the current is doubled, the rise in temperature will approximately be",
             "image": ""
         },
         "subject": "Physics"
@@ -946,7 +946,7 @@
         "exam_code": 203,
         "marks": 1,
         "question": {
-            "text": "If $ n_{r} and n_{b} $, the number of photons emitted by red and blue bulbs of equal power in given time respectively. Then",
+            "text": "If $ n_{r} \\space and \\space n_{b} $, the number of photons emitted by red and blue bulbs of equal power in given time respectively. Then",
             "image": ""
         },
         "subject": "Physics"
@@ -1102,7 +1102,7 @@
                 "image": ""
             },
             "b": {
-                "text": "$ 3.34 \\times10 ^{23} $",
+                "text": "$ 3.34 \\times10 ^{22} $",
                 "image": ""
             },
             "d": {
@@ -1114,7 +1114,7 @@
         "exam_code": 203,
         "marks": 1,
         "question": {
-            "text": "The no of. $ H_{2}O $ molecule present in 1 ml of water is (density of water = 1 gm /ml",
+            "text": "The no of. $ H_{2}O $ molecule present in 1 ml of water is (density of water = 1 gm /ml)",
             "image": ""
         },
         "subject": "Chemistry"
@@ -1394,7 +1394,7 @@
         "exam_code": 203,
         "marks": 1,
         "question": {
-            "text": "Separation of two substances by fractional crystillization depends upon their differences in",
+            "text": "Separation of two substances by fractional crystallization depends upon their differences in",
             "image": ""
         },
         "subject": "Chemistry"
@@ -1478,7 +1478,7 @@
         "exam_code": 203,
         "marks": 1,
         "question": {
-            "text": "About ......... of global final energy consumption comes from reneqals",
+            "text": "About ......... of global final energy consumption comes from renewals",
             "image": ""
         },
         "subject": "Aptitude"
@@ -1954,7 +1954,7 @@
         "exam_code": 203,
         "marks": 2,
         "question": {
-            "text": "If the line lx+my =0 cuts the curve $ a^x{2} + 2hxy + by^{2} + 2gx + sfy + c = 0 $ at two points, then the equation of a pair of lines joining origin to the points of intersection of the curve and the line is",
+            "text": "If the line lx+my =0 cuts the curve $ ax^{2} + 2hxy + by^{2} + 2gx + 2fy + c = 0 $ at two points, then the equation of a pair of lines joining origin to the points of intersection of the curve and the line is",
             "image": ""
         },
         "subject": "Mathematics"
@@ -2162,11 +2162,11 @@
                 "image": ""
             },
             "c": {
-                "text": "R-{1}",
+                "text": "R - {1}",
                 "image": ""
             },
             "b": {
-                "text": "R-{-1}",
+                "text": "R - {-1}",
                 "image": ""
             },
             "d": {
@@ -2206,7 +2206,7 @@
         "exam_code": 203,
         "marks": 2,
         "question": {
-            "text": "The function $ f(x) = \\begin{cases}\\frac{e^{\\frac{1}{x}}-1}{e^{\\frac{1}{x}}+1}, & x \\ne 0\\\\0, & x = 0\\end{cases} $ is",
+            "text": "The function $ f(x) = \\begin{cases}\\frac{e^{\\frac{1}{x}}-1}{e^{\\frac{1}{x}}+1}, & x \\ne 0\\\\0, & x = 0\\end{cases} $   is",
             "image": ""
         },
         "subject": "Mathematics"
@@ -2282,7 +2282,7 @@
                 "image": ""
             },
             "d": {
-                "text": "tanx-cotx",
+                "text": "tanx - cot2x",
                 "image": ""
             },
             "correct": "v"
@@ -2354,15 +2354,15 @@
     {
         "answer": {
             "a": {
-                "text": "$ \\overrightarrow{a} + \\overrightarrow{b} $",
+                "text": "$ \\vec{a} + \\vec{b} $",
                 "image": ""
             },
             "c": {
-                "text": "$ \\overrightarrow{b} - \\overrightarrow{a} $",
+                "text": "$ \\vec{b} - \\vec{a} $",
                 "image": ""
             },
             "b": {
-                "text": "$ \\overrightarrow{a} - \\overrightarrow{b} $",
+                "text": "$ \\vec{a} - \\vec{b} $",
                 "image": ""
             },
             "d": {
@@ -2374,7 +2374,7 @@
         "exam_code": 203,
         "marks": 2,
         "question": {
-            "text": "If $ \\overrightarrow{a} $ and $ \\overrightarrow{b} $ represent the sides $ \\overrightarrow{AB} $ and $ \\overrightarrow{BC} $ of a regular hexagon ABCDEF, then $ \\overrightarrow{FA} = $",
+            "text": "If $ \\vec{a} $ and $ \\vec{b} $ represent the sides $ \\vec{AB} $ and $ \\vec{BC} $ of a regular hexagon ABCDEF, then $ \\vec{FA} = $",
             "image": ""
         },
         "subject": "Mathematics"
@@ -2486,7 +2486,7 @@
         "exam_code": 203,
         "marks": 2,
         "question": {
-            "text": "Water rises to a heright of 5 cm in a glass capillary tube. If the area of cross-section of the tube is reduced to (1/16)th of the former value, the water rises to a height of ",
+            "text": "Water rises to a height of 5 cm in a glass capillary tube. If the area of cross-section of the tube is reduced to (1/16)th of the former value, the water rises to a height of ",
             "image": ""
         },
         "subject": "Physics"
@@ -2570,7 +2570,7 @@
         "exam_code": 203,
         "marks": 2,
         "question": {
-            "text": "If R is universal gas constant the amount of heat needed to raise the temperature of 2 moles of an ideal monoatomic agas from 273K to 373K when no work is done is",
+            "text": "If R is universal gas constant the amount of heat needed to raise the temperature of 2 moles of an ideal monoatomic gas from 273K to 373K when no work is done is",
             "image": ""
         },
         "subject": "Physics"
@@ -2654,7 +2654,7 @@
         "exam_code": 203,
         "marks": 2,
         "question": {
-            "text": "The refractive index of a n equlateral prism is $ \\sqrt{3} $. The angle of incidence at which deviation is minimum is",
+            "text": "The refractive index of an equilateral prism is $ \\sqrt{3} $. The angle of incidence at which deviation is minimum is",
             "image": ""
         },
         "subject": "Physics"
@@ -2738,7 +2738,7 @@
         "exam_code": 203,
         "marks": 2,
         "question": {
-            "text": "A fuse wire with radius 1 mm blows at 1.5A. The radius of fuse wiere of the same material which blows at 3A is",
+            "text": "A fuse wire with radius 1 mm blows at 1.5A. The radius of fuse wire of the same material which blows at 3A is",
             "image": ""
         },
         "subject": "Physics"
@@ -2870,7 +2870,7 @@
                 "image": ""
             },
             "d": {
-                "text": "$ 1.5 x 10 ^ {-2} mA $",
+                "text": "$ 1.5 \\times 10 ^ {-2} mA $",
                 "image": ""
             },
             "correct": "a"
@@ -2878,7 +2878,7 @@
         "exam_code": 203,
         "marks": 2,
         "question": {
-            "text": "The radius of the orbital electron in the hydrogen atom is 0.5Å. The speed of the electron is $ 2 x 10^{6} m/s $. Then the current in the loop due to the motion of election is",
+            "text": "The radius of the orbital of electron in the hydrogen atom is 0.5Å. The speed of the electron is $ 2 x 10^{6} m/s $. Then the current in the loop due to the motion of election is",
             "image": ""
         },
         "subject": "Physics"
