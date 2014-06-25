@@ -12,7 +12,7 @@ def generate_random_questions(request):
     '''
     exammodel_api = ExammodelApi()
     exam_sets = exammodel_api.find_all_exammodel(
-        {'exam_family': 'DPS'})
+        {})
     question_sets = []
     for each_set in exam_sets:
         question_api = QuestionApi()
@@ -20,9 +20,12 @@ def generate_random_questions(request):
             {"exam_code": each_set['exam_code'], 'marks': 1},
             fields={'question_number': 1, '_id': 0, 'exam_code': 1}
         )
-        question_sets.append(sorted(
-            questions, key=lambda k: k['question_number']
-        ))
+        if len(questions) != 0:
+            question_sets.append(
+                sorted(
+                    questions, key=lambda k: k['question_number']
+                )
+            )
     arranged_question = []
     final_question_set = []
     if len(question_sets) == 0:
