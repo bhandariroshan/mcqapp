@@ -37,6 +37,9 @@ function get_next_page_success(data){
   			$(check_id).trigger('gumby.check');  			
 		}
 		current_pg_num = data['current_pg_num'];
+		$('#full_screen_inner_content').animate({
+   scrollTop: 0
+}, 'slow');
 
 	}
 
