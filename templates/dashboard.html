@@ -171,7 +171,7 @@
         {% if not subscribed %}
           <div class="twelve columns">
             <li class="success alert">
-              <p>Do you have a coupon code for subscription plan?  </p> 
+              <p>Do you have a coupon code for subscription plan? </p> 
               <div class="medium primary btn pretty" >
                   <a href="#" id="enterSubsCoupon" style="width: 150px;" onclick="attempt_exam('subs')">Enter here</a>
               </div>              
@@ -268,8 +268,6 @@ var ex_code;
   mixpanel.track_links("#CPSExamsTab", "Viewed CPS Exams on dashboard", {"referrer": document.referrer});
   mixpanel.track_links("#enterSubsCoupon", "Clicked on enter a subscription coupon on dashboard", {"referrer": document.referrer});
   mixpanel.track_links("#giveCPSExamBtn", "Clicked on give CPS Exam btn on dashboard", {"referrer": document.referrer});
-  mixpanel.track_links("#giveDPSExamBtn", "Clicked on give DPS Exam btn on dashboard", {"referrer": document.referrer});
-  
-
+  mixpanel.track_links("#giveDPSExamBtn", "Clicked on give DPS Exam btn on dashboard", {"referrer": document.referrer});  
 </script>
 {% endblock %}

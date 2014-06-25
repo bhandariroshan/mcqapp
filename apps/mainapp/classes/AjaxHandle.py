@@ -21,7 +21,7 @@ ACCESS_TOKEN_SECRET = ''
 
 
 class AjaxHandle():
-    """docstring for AjaxHandle"""
+    """doc string for AjaxHandle"""
     def __init__(self):
         pass
 
@@ -47,8 +47,7 @@ class AjaxHandle():
 
 
             if coupon_obj.validate_coupon(coupon_code, up_exm['exam_category'], up_exm['exam_family']) == True:
-                #save the coupon code in user's couponcode array 
-                coupon_obj.change_used_status_of_coupon(coupon_code, request.user.username) 
+                #save the coupon code in user's coupon code array 
                 user_profile_obj.change_subscription_plan(request.user.username, coupon_code)                
                 user_profile_obj.save_coupon(request.user.username, coupon_code)
 
@@ -57,8 +56,9 @@ class AjaxHandle():
                 subscription_type = user['subscription_type']
                 #if coupon_code != 'IDP' or 'BE-IOE' or 'MBBS-IOM' then save the exam code in the valid exams
                 if   'IDP' not in subscription_type and 'BE-IOE' not in subscription_type and 'MBBS-IOM' not in subscription_type:
-                    user_profile_obj.save_valid_exam(request.user.username, exam_code)                    
+                    user_profile_obj.save_valid_exam(request.user.username, exam_code)     
 
+                coupon_obj.change_used_status_of_coupon(coupon_code, request.user.username) 
                 if 'IDP' in subscription_type:
                     return HttpResponse(json.dumps({'status':'ok','url':'/honorcode/' + exam_code}))
 
