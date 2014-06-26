@@ -26,4 +26,6 @@ urlpatterns = patterns(
     url(r'^request/', 'apps.mainapp.views.request_coupon'),
     url(r'^results/(?P<exam_code>\w{1,15})', 'apps.mainapp.views.results'),
     # url(r'^latestusers/$', LatestUser.as_view()),
+    url(r'^coupon_admin/$', 'apps.exam_api.coupon_admin.coupon_search'),
+
 )

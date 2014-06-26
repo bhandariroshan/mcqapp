@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block head %}
+<style type="text/css">
+</style>
+{% endblock %}
+
+{% block content %}  
+<div class="wrapper " id="simple" style="margin-top:6%;margin-bottom:2%">
+	<section class="row">		
+	<form method="post" action=".">{% csrf_token %}
+		<input type="text" id="id_coupon" maxlength="6" name="coupon" placeholder="Coupon" required="required">
+	</form>
+	</section>
+</div>
+
+<div class="wrapper" id="showcase">
+	<section class="row">
+	{% if coupon %}
+	<table>
+		<th>Code</th>
+		<th>Printed</th>
+		<th>Status</th>
+		<th>Type</th>
+		{% if coupon_user %}
+			<th>Username</th>
+			<th>Name</th>
+			<th>Facebook Link</th>
+		{% endif %}
+		<tr>
+			<td>{{coupon.code}}</td>
+			<td>{{coupon.printed}}</td>
+			<td>{{coupon.used.status}}</td>
+			<td>{{coupon.subscription_type}}</td>
+			{% if coupon_user %}
+				<td>{{coupon_user.name}}</td>
+				<td>{{coupon_user.username}}</td>
+				<td><a href="{{coupon_user.fb_link}}" target="_blank_">Click Here</a></td>
+			{% endif %}
+		</tr>
+	</table>
+	{% endif %}
+	</section>
+
+</div>
+{% endblock %}
+{% block javascript %}
+{% endblock %}
