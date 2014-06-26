@@ -37,7 +37,7 @@ def load_examset_in_database(request):
          "image": "exam.jpg",
          "exam_code": 204,
          "exam_time": "1.00pm",
-         "exam_duration": 180,
+         "exam_duration": 60,
          "exam_category": "BE-IOE",
          "exam_family": 'CPS'
          },
@@ -67,22 +67,23 @@ def load_modelquestion_in_database(request):
     the function is used to load fake data in question collection
     of mcq database in mongodb
     '''
-    for var in range(100,102):
-        f = open('apps/exam_api/' + str(var) +'.json', 'rb')
-        json_obj = json.loads(f.read())
-        for i, x in enumerate(json_obj):
-            x['question_number'] = i + 1
-        question_api = QuestionApi()
-        question_api.insert_new_question(json_obj)
+    # for var in range(100,102):
+    #     f = open('apps/exam_api/' + str(var) +'.json', 'rb')
+    #     json_obj = json.loads(f.read())
+    #     for i, x in enumerate(json_obj):
+    #         x['question_number'] = i + 1
+    #     question_api = QuestionApi()
+    #     question_api.insert_new_question(json_obj)
 
-    for var in range(201,205):
-        f = open('apps/exam_api/' + str(var) +'.json', 'rb')
-        json_obj = json.loads(f.read())
-        for i, x in enumerate(json_obj):
-            x['question_number'] = i + 1
-        question_api = QuestionApi()
-        question_api.insert_new_question(json_obj)        
-        print var, " saved"
+    # for var in range(201,205):
+    var = 204
+    f = open('apps/exam_api/' + str(var) +'.json', 'rb')
+    json_obj = json.loads(f.read())
+    for i, x in enumerate(json_obj):
+        x['question_number'] = i + 1
+    question_api = QuestionApi()
+    question_api.insert_new_question(json_obj)        
+    print var, " saved"
     return HttpResponse("Question saved in the database")
 
 
