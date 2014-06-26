@@ -72,7 +72,8 @@ def _get_latest_source(source_folder):
     
 
     if exists(source_folder + '/.git'): #1
-        run('cd %s && git fetch && git pull && git checkout master' % (source_folder,)) #23
+        # run('cd %s && git fetch && git pull && git checkout master' % (source_folder,)) #23
+        run('cd %s && git fetch && git pull && git checkout tomerge-pulchowkexam' % (source_folder,)) #23
     else:
         run('git clone %s %s' % (REPO_URL, source_folder)) #4
     current_commit = local("git log -n 1 --format=%H", capture=True) #5
