@@ -75,7 +75,7 @@ def load_modelquestion_in_database(request):
         question_api = QuestionApi()
         question_api.insert_new_question(json_obj)
 
-    for var in range(201,204):
+    for var in range(201,205):
         f = open('apps/exam_api/' + str(var) +'.json', 'rb')
         json_obj = json.loads(f.read())
         for i, x in enumerate(json_obj):
