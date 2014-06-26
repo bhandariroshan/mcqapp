@@ -1,7 +1,6 @@
 from django.conf.urls import patterns, include, url
 
 from django.contrib import admin
-# from apps.mainapp.latest_users import LatestUser
 admin.autodiscover()
 
 urlpatterns = patterns(
