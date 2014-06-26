@@ -1,4 +1,3 @@
-# from braces.views import SuperuserRequiredMixin, LoginRequiredMixin
 from django.template import RequestContext
 from django.shortcuts import render_to_response
 from django.contrib.auth.models import User
@@ -6,7 +5,6 @@ from allauth.socialaccount.models import SocialAccount
 from django.views.generic import View
 from django.contrib.auth.decorators import user_passes_test, login_required
 
-# class LatestUser(LoginRequiredMixin, SuperuserRequiredMixin, View):
 @login_required(login_url='/')
 @user_passes_test(lambda u: u.is_superuser)
 def latest_users(request):
