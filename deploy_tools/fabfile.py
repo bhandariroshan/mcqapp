@@ -10,6 +10,8 @@ PROJECT_NAME = 'mcq'
 HOST_FOLDER = "meroanswer"
 DOMAIN_NAME = "meroanswer.com"
 source_folder = '%s/%s/source' % (SITES_FOLDER, HOST_FOLDER)
+test_source_folder = '%s/mcq.phunka.com/application' % (SITES_FOLDER)
+
 STATIC_URL = '/static/'
 push_type = "real"
 
@@ -19,6 +21,9 @@ def prod():
     env.user = 'root'
     env.hosts = ['audeet.com']
 
+def test():
+    env.user = 'root'
+    env.hosts = ['phunka.com']
 
 def deploy():
     # _create_directory_structure_if_necessary(HOST_FOLDER)
@@ -27,13 +32,17 @@ def deploy():
     run('cd /srv/www/meroanswer/source/ && source ../virtualenv/bin/activate && python manage.py collectstatic')
     sudo ('reload %s'%(HOST_FOLDER))
 
-
-  
+def deploy_test():
+    _get_latest_source(test_source_folder)
+    _update_settings(test_source_folder, 'settings_test.py')
+    run('cd /srv/www/mcq.phunka.com/application/ && source ../virtualenv/bin/activate && python manage.py collectstatic')
+    sudo ('reload mcq.phunka.com')
 
 def update_latest_code():
     settings_server_file = 'settings_server.py'
     if push_type == 'staging':
         settings_server_file = 'settings_staging_server.py'
+    # run('cd %s && git reset --hard && git clean -f -d && git checkout master && git pull && git pull origin master' % (source_folder))
     run('cd %s && git reset --hard && git clean -f -d && git checkout master && git pull && git pull origin master' % (source_folder))
     _update_virtualenv(source_folder)
     settings_path = source_folder + '/' + PROJECT_NAME + '/settings.py'
@@ -63,16 +72,17 @@ def _get_latest_source(source_folder):
     
 
     if exists(source_folder + '/.git'): #1
-        run('cd %s && git fetch && git pull && git checkout master' % (source_folder,)) #23
+        # run('cd %s && git fetch && git pull && git checkout master' % (source_folder,)) #23
+        run('cd %s && git fetch && git pull && git checkout tomerge-pulchowkexam' % (source_folder,)) #23
     else:
         run('git clone %s %s' % (REPO_URL, source_folder)) #4
     current_commit = local("git log -n 1 --format=%H", capture=True) #5
     # run('cd %s && git reset --hard %s' % (source_folder, current_commit))
 
 
-def _update_settings(source_folder):
+def _update_settings(source_folder, settings_file = 'settings_remote.py'):
     settings_path = source_folder + '/' + PROJECT_NAME + '/settings.py'
-    settings_server_path = source_folder + '/' + PROJECT_NAME + '/' + 'settings_remote.py'
+    settings_server_path = source_folder + '/' + PROJECT_NAME + '/' + settings_file
     run("touch %s" % (settings_path))
     run("rm %s" % (settings_path))
     run('cp %s %s' % (settings_server_path, settings_path))
