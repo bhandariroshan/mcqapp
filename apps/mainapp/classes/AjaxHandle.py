@@ -354,13 +354,16 @@ class AjaxHandle():
                 }, fields={'q_no':1, 'attempt_details':1})
         except:
             all_ans = ''
+        
+        print all_ans[0]
+
         answer_list = ''
         anss = []
 
         for eachAns in all_ans:
             anss.append(eachAns['q_no'])
 
-        for i in range(1,total_questions):       
+        for i in range(1,total_questions+1):
             try:
                 if i in anss:
                     answer_list += all_ans[anss.index(i)]['attempt_details'][0]['selected_ans']
