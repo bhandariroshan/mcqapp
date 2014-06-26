@@ -10,6 +10,8 @@ PROJECT_NAME = 'mcq'
 HOST_FOLDER = "meroanswer"
 DOMAIN_NAME = "meroanswer.com"
 source_folder = '%s/%s/source' % (SITES_FOLDER, HOST_FOLDER)
+test_source_folder = '%s/mcq.phunka.com/application' % (SITES_FOLDER)
+
 STATIC_URL = '/static/'
 push_type = "real"
 
@@ -31,7 +33,7 @@ def deploy():
     sudo ('reload %s'%(HOST_FOLDER))
 
 def deploy_test():
-    _get_latest_source(source_folder)
+    _get_latest_source(test_source_folder)
     _update_settings(source_folder, 'settings_test.py')
     run('cd /srv/www/mcq.phunka.com/application/ && source ../virtualenv/bin/activate && python manage.py collectstatic')
     sudo ('reload mcq.phunka.com')
@@ -40,6 +42,7 @@ def update_latest_code():
     settings_server_file = 'settings_server.py'
     if push_type == 'staging':
         settings_server_file = 'settings_staging_server.py'
+    # run('cd %s && git reset --hard && git clean -f -d && git checkout master && git pull && git pull origin master' % (source_folder))
     run('cd %s && git reset --hard && git clean -f -d && git checkout master && git pull && git pull origin master' % (source_folder))
     _update_virtualenv(source_folder)
     settings_path = source_folder + '/' + PROJECT_NAME + '/settings.py'
