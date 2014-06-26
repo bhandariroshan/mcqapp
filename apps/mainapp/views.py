@@ -261,6 +261,7 @@ def attend_cps_exam(request, exam_code):
         # questions = question_obj.find_all_questions({"exam_code": int(exam_code)}, fields={'answer.correct':0})
         user = user_profile_obj.get_user_by_username(request.user.username)
         exam_details = exam_obj.find_one_exammodel({'exam_code':int(exam_code)})
+        exm_date_time_linux = exam_details['exam_date']
         exam_duration = exam_details['exam_duration'] * 60
 
  
@@ -327,11 +328,10 @@ def attend_cps_exam(request, exam_code):
         parameters['max_questions_number'] =  total_questions
         parameters['exam_code'] = exam_code        
         parameters['user'] = user
-
-        if exam_details['exam_date'] <= current_time:
-            parameters['render_before_exam'] = True
-        else:
+        if exm_date_time_linux <= time.mktime(datetime.datetime.now().timetuple()):
             parameters['render_before_exam'] = False
+        else:
+            parameters['render_before_exam'] = True
         return render_to_response('pulchowkexam-main.html', parameters, context_instance=RequestContext(request))
 
     else:
