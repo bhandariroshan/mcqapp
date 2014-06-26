@@ -19,6 +19,9 @@ def prod():
     env.user = 'root'
     env.hosts = ['audeet.com']
 
+def test():
+    env.user = 'root'
+    env.hosts = ['phunka.com']
 
 def deploy():
     # _create_directory_structure_if_necessary(HOST_FOLDER)
@@ -27,8 +30,11 @@ def deploy():
     run('cd /srv/www/meroanswer/source/ && source ../virtualenv/bin/activate && python manage.py collectstatic')
     sudo ('reload %s'%(HOST_FOLDER))
 
-
-  
+def deploy_test():
+    _get_latest_source(source_folder)
+    _update_settings(source_folder, 'settings_test.py')
+    run('cd /srv/www/mcq.phunka.com/application/ && source ../virtualenv/bin/activate && python manage.py collectstatic')
+    sudo ('reload mcq.phunka.com')
 
 def update_latest_code():
     settings_server_file = 'settings_server.py'
@@ -70,9 +76,9 @@ def _get_latest_source(source_folder):
     # run('cd %s && git reset --hard %s' % (source_folder, current_commit))
 
 
-def _update_settings(source_folder):
+def _update_settings(source_folder, settings_file = 'settings_remote.py'):
     settings_path = source_folder + '/' + PROJECT_NAME + '/settings.py'
-    settings_server_path = source_folder + '/' + PROJECT_NAME + '/' + 'settings_remote.py'
+    settings_server_path = source_folder + '/' + PROJECT_NAME + '/' + settings_file
     run("touch %s" % (settings_path))
     run("rm %s" % (settings_path))
     run('cp %s %s' % (settings_server_path, settings_path))
