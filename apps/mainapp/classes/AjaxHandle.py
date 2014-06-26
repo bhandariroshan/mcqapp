@@ -55,15 +55,15 @@ class AjaxHandle():
                 user = user_profile_obj.get_user_by_username(request.user.username)
                 subscription_type = user['subscription_type']
                 #if coupon_code != 'IDP' or 'BE-IOE' or 'MBBS-IOM' then save the exam code in the valid exams
-                if   'IDP' not in subscription_type and 'BE-IOE' not in subscription_type and 'MBBS-IOM' not in subscription_type:
+                if  'IDP' not in subscription_type and 'BE-IOE' not in subscription_type and 'MBBS-IOM' not in subscription_type:
                     user_profile_obj.save_valid_exam(request.user.username, exam_code)     
 
                 coupon_obj.change_used_status_of_coupon(coupon_code, request.user.username) 
                 if 'IDP' in subscription_type:
-                    return HttpResponse(json.dumps({'status':'ok','url':'/honorcode/' + exam_code}))
+                    return HttpResponse(json.dumps({'status':'ok','url':'/' + up_exm['exam_family'].lower() + '/' + exam_code}))
 
                 elif up_exm['exam_category']  in subscription_type:
-                    return HttpResponse(json.dumps({'status':'ok','url':'/honorcode/' + exam_code}))
+                    return HttpResponse(json.dumps({'status':'ok','url':'/' + up_exm['exam_family'].lower() + '/' + exam_code}))
                 else:
                     subscribed_exams = user_profile_obj.get_subscribed_exams(request.user.username)
                     if int(exam_code) in subscribed_exams:
