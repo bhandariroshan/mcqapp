@@ -705,7 +705,7 @@ def results(request, exam_code):
     anss = []
     for eachAns in all_ans:
         anss.append(eachAns['q_no'])
-    for i in range(0,total_questions):       
+    for i in range(1,total_questions+1):
         try:
             if i in anss:
                 answer_list += all_ans[anss.index(i)]['attempt_details'][0]['selected_ans']
@@ -713,7 +713,7 @@ def results(request, exam_code):
                 answer_list +='e'
         except:
             answer_list += 'e'
-    print len(answer_list),answer_list
+
     exam_handler = ExamHandler()    
     score_dict = exam_handler.check_answers(exam_code, answer_list)
     user_profile_obj = UserProfile()
