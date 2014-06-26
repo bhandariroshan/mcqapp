@@ -145,6 +145,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'apps.exam_api',
     'apps.mainapp',
+    'django-braces',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',

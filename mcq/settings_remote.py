@@ -141,6 +141,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps.mainapp',
+    'django-braces',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
