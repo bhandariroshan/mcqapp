@@ -1,0 +1,1822 @@
+[
+    {
+        "answer": {
+            "a": {
+                "text": "$ n\\pi \\pm \\pi/2 $",
+                "image": ""
+            },
+            "c": {
+                "text": "$ 2n\\pi + \\pi/2 $",
+                "image": ""
+            },
+            "b": {
+                "text": "$ n\\pi + \\pi/2 $",
+                "image": ""
+            },
+            "d": {
+                "text": "$ n\\pi \\pm \\pi/4 $",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "The general solution of  $ sin^{2}x + cosec^{2}x =2 $ is : ",
+            "image": ""
+        },
+        "subject": "Mathematics"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": " ( $ - \\infty $, 1)",
+                "image": ""
+            },
+            "c": {
+                "text": "(1, $ \\infty $)",
+                "image": ""
+            },
+            "b": {
+                "text": "(0, $ \\infty $)",
+                "image": ""
+            },
+            "d": {
+                "text": "(0, 1)",
+                "image": ""
+            },
+            "correct": "c  "
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "The domain of the function $ y = f(x) = \\frac{1}{\\sqrt{x-1}} $ is : ",
+            "image": ""
+        },
+        "subject": "Mathematics"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "real and rational",
+                "image": ""
+            },
+            "c": {
+                "text": "imaginary and unequal",
+                "image": ""
+            },
+            "b": {
+                "text": "real and equal ",
+                "image": ""
+            },
+            "d": {
+                "text": "irrational and different",
+                "image": ""
+            },
+            "correct": "d"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "The roots of the equation $ x^{2} - \\sqrt{29}x + 1 = 0 $ are : ",
+            "image": ""
+        },
+        "subject": "Mathematics"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "m x p",
+                "image": ""
+            },
+            "c": {
+                "text": "p x n",
+                "image": ""
+            },
+            "b": {
+                "text": "p x m",
+                "image": ""
+            },
+            "d": {
+                "text": "not defined",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "If A is a m x n matrix, B is  n x p matrix, then $ (AB)^{T} $ is a matrix of order ",
+            "image": ""
+        },
+        "subject": "Mathematics"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "$ \\frac {x^{4}} {4} + c $",
+                "image": ""
+            },
+            "c": {
+                "text": "$ - \\frac {|x|^{4}} {4} + c $ ",
+                "image": ""
+            },
+            "b": {
+                "text": "$ \\frac {|x|^{4}} {4} + c $",
+                "image": ""
+            },
+            "d": {
+                "text": "$ 3{|x|^2} + c $",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "$ \\int |x|^{3} dx $ is equal to: (x < 0)",
+            "image": ""
+        },
+        "subject": "Mathematics"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "$ e^{x}cos^{-1}x $",
+                "image": ""
+            },
+            "c": {
+                "text": "$ \\sqrt{1-{x^2}} \\space\\space {e^x} $",
+                "image": ""
+            },
+            "b": {
+                "text": "$ \\frac{e{^x}}{\\sqrt{1-{x^2}}} $",
+                "image": ""
+            },
+            "d": {
+                "text": "$ \\frac{2x}{\\sqrt{1-{x^2}}}e{^x} $",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "The derivative of $ y = {e}^x $  w.r.t $ sin^{-1}x $ is : ",
+            "image": ""
+        },
+        "subject": "Mathematics"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "1",
+                "image": ""
+            },
+            "c": {
+                "text": "0",
+                "image": ""
+            },
+            "b": {
+                "text": "e",
+                "image": ""
+            },
+            "d": {
+                "text": "$ \\frac{1}{e} $",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "The value of $ \\lim_{x \\rightarrow 0} \\frac{e^{sinx} - 1}{x} = $ ",
+            "image": ""
+        },
+        "subject": "Mathematics"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "$ \\vec{|a|} = \\vec{|b|} $",
+                "image": ""
+            },
+            "c": {
+                "text": "$ \\vec{|a|} < \\vec{|b|}  $",
+                "image": ""
+            },
+            "b": {
+                "text": "$ \\vec{|a|} > \\vec{|b|} $",
+                "image": ""
+            },
+            "d": {
+                "text": "$ \\vec{a} = 2\\vec{b} $",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "If $ \\vec{a} $ and  $ \\vec{b} $ are two non-zero vectors such that $ \\vec{a} = k \\vec{b} $ and |k| < 1, then",
+            "image": ""
+        },
+        "subject": "Mathematics"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "3",
+                "image": ""
+            },
+            "c": {
+                "text": "9",
+                "image": ""
+            },
+            "b": {
+                "text": "-2",
+                "image": ""
+            },
+            "d": {
+                "text": "7",
+                "image": ""
+            },
+            "correct": "d"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "If two vectors whose direction ratios are 1,2,3 and -k,2,1 are perpendicular to each other, then k=",
+            "image": ""
+        },
+        "subject": "Mathematics"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "$ a^{2} + b^{2} = 1 $",
+                "image": ""
+            },
+            "c": {
+                "text": "a + b = ab",
+                "image": ""
+            },
+            "b": {
+                "text": "a + b = 1",
+                "image": ""
+            },
+            "d": {
+                "text": "a + b = 0",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "If three points (a, 0), (0, b) and (1, 1) are collinear, then ",
+            "image": ""
+        },
+        "subject": "Mathematics"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "/elekt/",
+                "image": ""
+            },
+            "c": {
+                "text": "/elkt/",
+                "image": ""
+            },
+            "b": {
+                "text": "/ɪlekt/",
+                "image": ""
+            },
+            "d": {
+                "text": "/ɪlkt/",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "The phonemic transcription of the word - 'elect' is _____",
+            "image": ""
+        },
+        "subject": "English"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "$ 1^{st} $",
+                "image": ""
+            },
+            "c": {
+                "text": "$ 3^{rd} $",
+                "image": ""
+            },
+            "b": {
+                "text": "$ 2^{nd} $",
+                "image": ""
+            },
+            "d": {
+                "text": "$ 4^{th} $",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "The - 'elergy' has its primary stress on the ______ syllable.",
+            "image": ""
+        },
+        "subject": "English"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "averse",
+                "image": ""
+            },
+            "c": {
+                "text": "retard",
+                "image": ""
+            },
+            "b": {
+                "text": "convict",
+                "image": ""
+            },
+            "d": {
+                "text": "reject",
+                "image": ""
+            },
+            "correct": "d"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "The antonym of Adopt is: ",
+            "image": ""
+        },
+        "subject": "English"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "pet",
+                "image": ""
+            },
+            "c": {
+                "text": "chief",
+                "image": ""
+            },
+            "b": {
+                "text": "fleshy",
+                "image": ""
+            },
+            "d": {
+                "text": "punish",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "The synonym of Caress is:",
+            "image": ""
+        },
+        "subject": "English"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "of",
+                "image": ""
+            },
+            "c": {
+                "text": "for ",
+                "image": ""
+            },
+            "b": {
+                "text": "through",
+                "image": ""
+            },
+            "d": {
+                "text": "in",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "He died ____ his country.",
+            "image": ""
+        },
+        "subject": "English"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "of",
+                "image": ""
+            },
+            "c": {
+                "text": "at",
+                "image": ""
+            },
+            "b": {
+                "text": "from",
+                "image": ""
+            },
+            "d": {
+                "text": "by",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "He died ______ the loss of blood.",
+            "image": ""
+        },
+        "subject": "English"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "go",
+                "image": ""
+            },
+            "c": {
+                "text": "had gone",
+                "image": ""
+            },
+            "b": {
+                "text": "went",
+                "image": ""
+            },
+            "d": {
+                "text": "has gone",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "It is time you ___ to bed.",
+            "image": ""
+        },
+        "subject": "English"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "thought",
+                "image": ""
+            },
+            "c": {
+                "text": "have thought",
+                "image": ""
+            },
+            "b": {
+                "text": "had thought",
+                "image": ""
+            },
+            "d": {
+                "text": "was thinking",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "I ______ of attending the party, but I could not.",
+            "image": ""
+        },
+        "subject": "English"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "washed",
+                "image": ""
+            },
+            "c": {
+                "text": "have washed",
+                "image": ""
+            },
+            "b": {
+                "text": "wash",
+                "image": ""
+            },
+            "d": {
+                "text": "had washed",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "It is time you _______ your face.",
+            "image": ""
+        },
+        "subject": "English"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "as well as",
+                "image": ""
+            },
+            "c": {
+                "text": "so ",
+                "image": ""
+            },
+            "b": {
+                "text": "and",
+                "image": ""
+            },
+            "d": {
+                "text": "as well",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "Both Ram _______ his brother were present.",
+            "image": ""
+        },
+        "subject": "English"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "me ",
+                "image": ""
+            },
+            "c": {
+                "text": "mine ",
+                "image": ""
+            },
+            "b": {
+                "text": "my",
+                "image": ""
+            },
+            "d": {
+                "text": "myself",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "She disliked _______ coming late.",
+            "image": ""
+        },
+        "subject": "English"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "am",
+                "image": ""
+            },
+            "c": {
+                "text": "were ",
+                "image": ""
+            },
+            "b": {
+                "text": "are",
+                "image": ""
+            },
+            "d": {
+                "text": "all of these",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "You and I ________ working.",
+            "image": ""
+        },
+        "subject": "English"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "win ",
+                "image": ""
+            },
+            "c": {
+                "text": "won ",
+                "image": ""
+            },
+            "b": {
+                "text": "wins",
+                "image": ""
+            },
+            "d": {
+                "text": "had won",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "Slow and steady ________ the race.",
+            "image": ""
+        },
+        "subject": "English"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "has ",
+                "image": ""
+            },
+            "c": {
+                "text": "have  ",
+                "image": ""
+            },
+            "b": {
+                "text": "had ",
+                "image": ""
+            },
+            "d": {
+                "text": "is",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "The British ______ a long history.",
+            "image": ""
+        },
+        "subject": "English"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "has ",
+                "image": ""
+            },
+            "c": {
+                "text": "is ",
+                "image": ""
+            },
+            "b": {
+                "text": "have ",
+                "image": ""
+            },
+            "d": {
+                "text": "all of these",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "More books than one ________ been burst.",
+            "image": ""
+        },
+        "subject": "English"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "Its velocity is constant",
+                "image": ""
+            },
+            "c": {
+                "text": "Its acceleration is constant",
+                "image": ""
+            },
+            "b": {
+                "text": "Its KE is constant",
+                "image": ""
+            },
+            "d": {
+                "text": "It moves in a straight line.",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "A particle is acted upon by a force of constant magnitude which is always perpendicular to the velocity of the particle. The motion of the particle takes place in a plane. It follows",
+            "image": ""
+        },
+        "subject": "Physics"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "w",
+                "image": ""
+            },
+            "c": {
+                "text": "$ \\frac{w}{4} $",
+                "image": ""
+            },
+            "b": {
+                "text": "$ \\frac{w}{2} $",
+                "image": ""
+            },
+            "d": {
+                "text": "$ \\frac{w}{8} $",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "The weight of a body at earth's surface is w. At a depth half way to the center of the earth, it will be",
+            "image": ""
+        },
+        "subject": "Physics"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "T1 and T2 should be high.",
+                "image": ""
+            },
+            "c": {
+                "text": "T1 should be low and T2 should be high.",
+                "image": ""
+            },
+            "b": {
+                "text": "T1 and T2 should be low.",
+                "image": ""
+            },
+            "d": {
+                "text": "T1 should be high and T2 should be low.",
+                "image": ""
+            },
+            "correct": "d"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "A Carnot engine works between a source and sink maintained at constant temperatures T1 and T2. For efficiency to be the greatest",
+            "image": ""
+        },
+        "subject": "Physics"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "He and $ O_{2} $",
+                "image": ""
+            },
+            "c": {
+                "text": "He and Ar",
+                "image": ""
+            },
+            "b": {
+                "text": "$ O_{2} $ and He",
+                "image": ""
+            },
+            "d": {
+                "text": "$ O_{2} $ and $ N_{2} $",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "When graph is plotted between P and V for adiabatic process then the plot 1 and plot 2 should be corresponding to ",
+            "image": "29.jpg"
+        },
+        "subject": "Physics"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "20%",
+                "image": ""
+            },
+            "c": {
+                "text": "5%",
+                "image": ""
+            },
+            "b": {
+                "text": "19%",
+                "image": ""
+            },
+            "d": {
+                "text": "50%",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "The intensity of sound gets reduced by 10% on passing through slab. The reduction in intensity on passing through two consecutive slabs will be ",
+            "image": ""
+        },
+        "subject": "Physics"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "Increases by 10%",
+                "image": ""
+            },
+            "c": {
+                "text": "Decreases by 17%",
+                "image": ""
+            },
+            "b": {
+                "text": "Decreases by 10%",
+                "image": ""
+            },
+            "d": {
+                "text": "Decreases by 21%",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "The distance between two point charges is increased by 10% the force of interaction",
+            "image": ""
+        },
+        "subject": "Physics"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "Increasing the emf of the cell",
+                "image": ""
+            },
+            "c": {
+                "text": "Decreasing the length of potentiometer wire",
+                "image": ""
+            },
+            "b": {
+                "text": "Increasing length of potentiometer",
+                "image": ""
+            },
+            "d": {
+                "text": "None of the above",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "Sensitivity of potentiometer can be increased by ",
+            "image": ""
+        },
+        "subject": "Physics"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "(n-1)f",
+                "image": ""
+            },
+            "c": {
+                "text": "(n+1)f",
+                "image": ""
+            },
+            "b": {
+                "text": "$ \\frac{f}{n} $",
+                "image": ""
+            },
+            "d": {
+                "text": "nf",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "A convex mirror of focal length f produces an image $ (\\frac{1}{n})^{th} $ of the size of the object. The distance of the object from mirror is ",
+            "image": ""
+        },
+        "subject": "Physics"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "neutron into a proton",
+                "image": ""
+            },
+            "c": {
+                "text": "nucleon into energy",
+                "image": ""
+            },
+            "b": {
+                "text": "proton into a neutron",
+                "image": ""
+            },
+            "d": {
+                "text": "position into energy",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "A $ \\beta^{-} $ particle is emitted by a radioactive nucleus at the time of conversion of ",
+            "image": ""
+        },
+        "subject": "Physics"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "20 k$ \\Omega  $",
+                "image": ""
+            },
+            "c": {
+                "text": "10 k$ \\Omega  $",
+                "image": ""
+            },
+            "b": {
+                "text": "15 k$ \\Omega  $",
+                "image": ""
+            },
+            "d": {
+                "text": "1.5 k$ \\Omega  $",
+                "image": ""
+            },
+            "correct": "d"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "A zener diode $ V_{Z} $ = 5V and $ I_{Z} $ = 10 mA is connected in series with a resistance and 20V is applied across the combination. The maximum resistance one can use without spoiling zener action is",
+            "image": ""
+        },
+        "subject": "Physics"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "2",
+                "image": ""
+            },
+            "c": {
+                "text": "3",
+                "image": ""
+            },
+            "b": {
+                "text": "0",
+                "image": ""
+            },
+            "d": {
+                "text": "1",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "The O.N. of metal in a carbonyl complex is ",
+            "image": ""
+        },
+        "subject": "Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "2",
+                "image": ""
+            },
+            "c": {
+                "text": "10",
+                "image": ""
+            },
+            "b": {
+                "text": "6",
+                "image": ""
+            },
+            "d": {
+                "text": "14",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "Maximum no. of electrons that can be accommodated in a 3d-orbital is",
+            "image": ""
+        },
+        "subject": "Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "Vanderwaal and covalent",
+                "image": ""
+            },
+            "c": {
+                "text": "Metallic and ionic",
+                "image": ""
+            },
+            "b": {
+                "text": "Covalent and ionic",
+                "image": ""
+            },
+            "d": {
+                "text": "Metallic and covalent",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "The strength of H. bond is intermediate between",
+            "image": ""
+        },
+        "subject": "Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "$ 6 \\times 10^{-11} $",
+                "image": ""
+            },
+            "c": {
+                "text": "$ 6 \\times 10^{5} $",
+                "image": ""
+            },
+            "b": {
+                "text": "$ 6 \\times 10^{23} $",
+                "image": ""
+            },
+            "d": {
+                "text": "$ 3.4 \\times 10^{2} $",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "The no. of atoms in 4.25 gm of $ NH_{3} $ is approximately",
+            "image": ""
+        },
+        "subject": "Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "pressure is decreased",
+                "image": ""
+            },
+            "c": {
+                "text": "temperature is increased",
+                "image": ""
+            },
+            "b": {
+                "text": "$ H^{+} $ are added",
+                "image": ""
+            },
+            "d": {
+                "text": "$ OH^{-} $ are added",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "The ionic product of water will increase if ",
+            "image": ""
+        },
+        "subject": "Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "200 $ cm^{3} $",
+                "image": ""
+            },
+            "c": {
+                "text": "315 $ cm^{3} $",
+                "image": ""
+            },
+            "b": {
+                "text": "250 $ cm^{3} $",
+                "image": ""
+            },
+            "d": {
+                "text": "400 $ cm^{3} $",
+                "image": ""
+            },
+            "correct": "d"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "Volume of water to be added to 0.5N HCl to prepare 500 $ cm^{3} $ of 0.1N HCl solution is ",
+            "image": ""
+        },
+        "subject": "Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "$ Na^{+} $",
+                "image": ""
+            },
+            "c": {
+                "text": "$ N^{3-} $",
+                "image": ""
+            },
+            "b": {
+                "text": "$ O^{2-} $",
+                "image": ""
+            },
+            "d": {
+                "text": "$ F^{-} $",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "Which of the following isoelectronic species has the largest size",
+            "image": ""
+        },
+        "subject": "Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "zeolite",
+                "image": ""
+            },
+            "c": {
+                "text": "cation exchanger",
+                "image": ""
+            },
+            "b": {
+                "text": "anion exchanger",
+                "image": ""
+            },
+            "d": {
+                "text": "both cation and anion exchanger one after other",
+                "image": ""
+            },
+            "correct": "d"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "Deionised water is obtained by passing hard water through",
+            "image": ""
+        },
+        "subject": "Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "$ CaC_{2} $",
+                "image": ""
+            },
+            "c": {
+                "text": "$ CaCN_{2} $ + C",
+                "image": ""
+            },
+            "b": {
+                "text": "$ CaCN_{2} $",
+                "image": ""
+            },
+            "d": {
+                "text": "$ Ca(NO_3)_2 $",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "Nitrolim is ",
+            "image": ""
+        },
+        "subject": "Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "HCl",
+                "image": ""
+            },
+            "c": {
+                "text": "$ HClO_3 $",
+                "image": ""
+            },
+            "b": {
+                "text": "HClO",
+                "image": ""
+            },
+            "d": {
+                "text": "$ HClO_4 $",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "Bleaching action of moist chlorine is due to formation of ",
+            "image": ""
+        },
+        "subject": "Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "Fe",
+                "image": ""
+            },
+            "c": {
+                "text": "Cu",
+                "image": ""
+            },
+            "b": {
+                "text": "Ca",
+                "image": ""
+            },
+            "d": {
+                "text": "Al",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "Metal extracted by carbon reduction process is ",
+            "image": ""
+        },
+        "subject": "Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "$ Na_2CO_3 $",
+                "image": ""
+            },
+            "c": {
+                "text": "$ NaHCO_3 + Na_2CO_3 $",
+                "image": ""
+            },
+            "b": {
+                "text": "$ NaHCO_3 $",
+                "image": ""
+            },
+            "d": {
+                "text": "$ CO + Na_2CO_3 $",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "Fire extinguisher contains $ H_2SO_4 $ and ________",
+            "image": ""
+        },
+        "subject": "Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "6",
+                "image": ""
+            },
+            "c": {
+                "text": "18",
+                "image": ""
+            },
+            "b": {
+                "text": "12",
+                "image": ""
+            },
+            "d": {
+                "text": "3",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "Total no. of $ \\sigma $ bonds in benzene is ",
+            "image": ""
+        },
+        "subject": "Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "Correyhouse reaction",
+                "image": ""
+            },
+            "c": {
+                "text": "Hel-volhard reaction",
+                "image": ""
+            },
+            "b": {
+                "text": "Finkelstein reaction",
+                "image": ""
+            },
+            "d": {
+                "text": "Wolf-kissher reaction",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "The reaction R - Br + NaI $ \\xrightarrow{acetone} $ R - I + NaBr is ",
+            "image": ""
+        },
+        "subject": "Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "O",
+                "image": ""
+            },
+            "c": {
+                "text": "S",
+                "image": ""
+            },
+            "b": {
+                "text": "N",
+                "image": ""
+            },
+            "d": {
+                "text": "P",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "The hetero atom present in piperidine is",
+            "image": ""
+        },
+        "subject": "Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "external",
+                "image": ""
+            },
+            "c": {
+                "text": "both a and b",
+                "image": ""
+            },
+            "b": {
+                "text": "internal",
+                "image": ""
+            },
+            "d": {
+                "text": "None of all",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "Two strokes engines are ....................... combustion engine.",
+            "image": ""
+        },
+        "subject": "Aptitude"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "heavier",
+                "image": ""
+            },
+            "c": {
+                "text": "equal",
+                "image": ""
+            },
+            "b": {
+                "text": "lighter",
+                "image": ""
+            },
+            "d": {
+                "text": "double",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "Petrol engine are .................. in weight than diesel engine",
+            "image": ""
+        },
+        "subject": "Aptitude"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "renewable",
+                "image": ""
+            },
+            "c": {
+                "text": "both",
+                "image": ""
+            },
+            "b": {
+                "text": "non-renewable",
+                "image": ""
+            },
+            "d": {
+                "text": "none of all",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "Energy from fossil fuels are ............. types of energy",
+            "image": ""
+        },
+        "subject": "Aptitude"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "place to cross road for the pedestrian",
+                "image": ""
+            },
+            "c": {
+                "text": "bus stop",
+                "image": ""
+            },
+            "b": {
+                "text": "parking area",
+                "image": ""
+            },
+            "d": {
+                "text": "None of the above",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "White parallel strips across the road (zebra crossing), indicates ...........",
+            "image": ""
+        },
+        "subject": "Aptitude"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "sand",
+                "image": ""
+            },
+            "c": {
+                "text": "cement",
+                "image": ""
+            },
+            "b": {
+                "text": "water",
+                "image": ""
+            },
+            "d": {
+                "text": "all of the above",
+                "image": ""
+            },
+            "correct": "d"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "Sand mortar is the mixture of which of the following/s?",
+            "image": ""
+        },
+        "subject": "Aptitude"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "gypsum",
+                "image": ""
+            },
+            "c": {
+                "text": "both a and b",
+                "image": ""
+            },
+            "b": {
+                "text": "lime stone",
+                "image": ""
+            },
+            "d": {
+                "text": "None of the all",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "Which of the following is/are ingredients of cement? ",
+            "image": ""
+        },
+        "subject": "Aptitude"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "horizontally",
+                "image": ""
+            },
+            "c": {
+                "text": "inclined",
+                "image": ""
+            },
+            "b": {
+                "text": "vertically",
+                "image": ""
+            },
+            "d": {
+                "text": "none of the all",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "Bricks are laid ........... in construction of brick walls.",
+            "image": ""
+        },
+        "subject": "Aptitude"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "lesser",
+                "image": ""
+            },
+            "c": {
+                "text": "half",
+                "image": ""
+            },
+            "b": {
+                "text": "exactly equal",
+                "image": ""
+            },
+            "d": {
+                "text": "higher",
+                "image": ""
+            },
+            "correct": "d"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "Resistors in series have ........... resistance than in parallel",
+            "image": ""
+        },
+        "subject": "Aptitude"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "water current",
+                "image": ""
+            },
+            "c": {
+                "text": "pencil",
+                "image": ""
+            },
+            "b": {
+                "text": "scanner",
+                "image": ""
+            },
+            "d": {
+                "text": "compass",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "Which of the following may be a source of energy?",
+            "image": ""
+        },
+        "subject": "Aptitude"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "mechanical",
+                "image": ""
+            },
+            "c": {
+                "text": "electrical",
+                "image": ""
+            },
+            "b": {
+                "text": "civil",
+                "image": ""
+            },
+            "d": {
+                "text": "computer",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "Transformer is a ............ engineering device ",
+            "image": ""
+        },
+        "subject": "Aptitude"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "currentmeter",
+                "image": ""
+            },
+            "c": {
+                "text": "watt-hour meter",
+                "image": ""
+            },
+            "b": {
+                "text": "voltmeter",
+                "image": ""
+            },
+            "d": {
+                "text": "ammeter",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "The instrument used to measure energy is:",
+            "image": ""
+        },
+        "subject": "Aptitude"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "Integrated Circuit",
+                "image": ""
+            },
+            "c": {
+                "text": "drawing board",
+                "image": ""
+            },
+            "b": {
+                "text": "Pencil",
+                "image": ""
+            },
+            "d": {
+                "text": "paper",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "Transistors are used in .........",
+            "image": ""
+        },
+        "subject": "Aptitude"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "PUT",
+                "image": ""
+            },
+            "c": {
+                "text": "NOR",
+                "image": ""
+            },
+            "b": {
+                "text": "THEN",
+                "image": ""
+            },
+            "d": {
+                "text": "WHEN",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "Which of the following is a logic gates?",
+            "image": ""
+        },
+        "subject": "Aptitude"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "1000",
+                "image": ""
+            },
+            "c": {
+                "text": "1024 x 1024",
+                "image": ""
+            },
+            "b": {
+                "text": "1024",
+                "image": ""
+            },
+            "d": {
+                "text": "8",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "How many Giga Bytes are there in 1 Tera Bytes?",
+            "image": ""
+        },
+        "subject": "Aptitude"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "Piston",
+                "image": ""
+            },
+            "c": {
+                "text": "RAM",
+                "image": ""
+            },
+            "b": {
+                "text": "Cylinder",
+                "image": ""
+            },
+            "d": {
+                "text": "Keyboard",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 205,
+        "marks": 1,
+        "question": {
+            "text": "Which of the following is about memory of computer?",
+            "image": ""
+        },
+        "subject": "Aptitude"
+    }
+]

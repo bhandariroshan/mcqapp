@@ -1,7 +1,18 @@
 {% extends 'exam_base.html' %}
 {% load staticfiles %} 
 {% block exam_content %}
+
 <div id="ioe_exam_starter" style="text-align:center;">
+  {% if render_before_exam %}
+    <h5 class="h-text-align ui-widget-header ui-corner-all"><strong>{{exam_details.exam_name}}</strong><br><strong>Please check Back Later !!</strong></h5>
+    <p></p><p></p>
+    <p style="margin-left:3%; margin-top:2%;">The exam is not open yet, it will open on {{exam_details.exam_date}} For now you can try practice sets from dashboard. </p>
+    </p>
+    <div class="medium primary btn pretty button-margin" style="margin-left:40%;margin-top:5%">
+      <a href="/">Practice other</a>
+    </div>
+  {% else %}
+
 <h1>!!! NOTICE !!!</h1>
   <p style="margin-top:3%; color:red;"> You will now have system exactly similar to pulchowk's system. </p><br>
   <p style="color:red;"> Please "allow" full screen mode to run after you click "Start Exam" </p><br>
@@ -12,7 +23,9 @@
   <p style="font-size:15px;color:red;">password: <b>{{request.user.username}}56</b></p>
   <input type="button" id="full_screen_button" class="medium primary btn pretty button-margin" value="Start Exam" onclick="show_fullscreen()" style="margin-top:3%;margin-bottom:3%;">
   <br><br>
+  {% endif %}
 </div>
+{% if not render_before_exam %}
 <div id="ioe_exam_zoomer" style="text-align:right;">
 <img src="/static/images/fullscreen.png" value="Start Exam" onclick="show_fullscreen()">
 </div>
@@ -231,6 +244,7 @@
     </div> 
     </div>
     </div> 
+  {% endif %}
   </div>  
 {% endblock %}
 {% block javascript %}
@@ -254,7 +268,7 @@ var click_count = 1;
 var div_count = 0;
 var ans_list=[];
 /*var ans_na = [];*/
-
+{% if not render_before_exam %}
 var question_id = '{{start_question.uid.id|safe}}';
 
 /*var current_question_number = {{start_question_number}};*/
@@ -262,9 +276,10 @@ var all_answers = {{all_answers|safe}};
 var max_questions_number = {{max_questions_number}};
 var attempted = [];
 var exam_code = {{exam_code|safe}};
+
 /*var questions = {{questions|safe}};*/
 var exam_duration = {{exam_details.exam_duration}};
-
+{% endif %}
 
 
 /*(function() {
@@ -307,11 +322,20 @@ $('#showRemainingQuestionsCancel').on('click', function(){
 });
 var current_pg_num = {{current_pg_num|safe}};
 $('#showExam').on('click', '#loadNext', function(){
-  get_next_page(exm_code, current_pg_num, 1);
+  {% if exam_details.exam_family == 'DPS' %}
+    get_next_page(exm_code, current_pg_num, 1);
+  {% else %}
+    get_next_page_of_cps_exam(exm_code, current_pg_num, 1);
+  {% endif %}
+  
 });
 
 $('#showExam').on('click', '#loadPrev', function(){
-  get_next_page(exm_code, current_pg_num, -1);
+  {% if exam_details.exam_family == 'DPS' %}
+    get_next_page(exm_code, current_pg_num, -1);
+  {% else %}
+    get_next_page_of_cps_exam(exm_code, current_pg_num, -1);
+  {% endif %}
 });
 
 $('#showExam').on('click', '#ansSubmit', function(){

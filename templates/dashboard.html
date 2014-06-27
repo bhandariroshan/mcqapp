@@ -117,7 +117,7 @@
                     <p><strong>Cost: </strong>Rs. 30 (<a href="/coupon/">coupon code</a> entry required)</p>
                     {% endif %}
                      <div class="medium primary btn pretty button-margin" >
-                          <a id="giveCPSExamBtn" href="{% if eachExam.subscribed %}/honorcode/{{eachExam.code}}/{% else %}#{% endif %}" {% if not eachExam.subscribed %} onclick="attempt_exam('{{eachExam.code}}')" {% endif %}>Give Exam</a>
+                          <a id="giveCPSExamBtn" href="{% if eachExam.subscribed %}/cps/{{eachExam.code}}/{% else %}#{% endif %}" {% if not eachExam.subscribed %} onclick="attempt_exam('{{eachExam.code}}')" {% endif %}>Give Exam</a>
                       </div>
                   </div>
                 </article>
