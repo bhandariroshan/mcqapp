@@ -50,6 +50,7 @@ class ExamHandler():
         for subs in subjects:
             temp = {}
             temp['subject_total_marks'] = 0
+            temp['correct_subject_answer'] = 0
             temp['attempted'] = 0
             temp['subject_score'] = 0
             correct_answers[subs] = temp
@@ -63,6 +64,9 @@ class ExamHandler():
                     sorted_questions[index]['subject']]['attempted'] += 1
                 if sorted_questions[index]['answer']['correct'] == choice:
                     try:
+                        correct_answers[sorted_questions[index]['subject']][
+                            'correct_subject_answer'
+                        ] += 1
                         correct_answers[sorted_questions[index]['subject']][
                             'subject_score'
                         ] += 1 * int(sorted_questions[index]['marks'])
@@ -83,6 +87,7 @@ class ExamHandler():
         total_score = 0
         total_attempted = 0
         total_marks = 0
+        total_correct_answers = 0
         score_list = []
 
         for key, value in correct_answers.iteritems():
@@ -91,15 +96,18 @@ class ExamHandler():
             temp['subject_score'] = value['subject_score']
             temp['attempted'] = value['attempted']
             temp['subject_total_marks'] = value['subject_total_marks']
+            temp['correct_subject_answer'] = value['correct_subject_answer']
             total_score += value['subject_score']
             total_attempted += value['attempted']
             total_marks += value['subject_total_marks']
+            total_correct_answers += value['correct_subject_answer']
             score_list.append(temp)
         score_list.append(
             {
                 'subject': 'Total',
                 'subject_score': total_score,
                 'attempted': total_attempted,
+                'correct_subject_answer': total_correct_answers,
                 'subject_total_marks': total_marks
             }
         )
