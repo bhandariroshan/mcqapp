@@ -12,6 +12,7 @@ from django.template import RequestContext
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import user_passes_test
 
+from apps.mainapp.classes.notifications import Notifications
 from apps.mainapp.classes.MailChimp import MailChimp
 from apps.mainapp.classes.Exams import RankCard, ScoreCard
 from apps.mainapp.classes.Coupon import Coupon
@@ -269,7 +270,6 @@ def attend_cps_exam(request, exam_code):
         user_profile_obj = UserProfile()
         question_obj = QuestionApi()
         ess = ExamStartSignal()
-        cqn = CurrentQuestionNumber()
         atte_ans = AttemptedAnswerDatabase()
         # questions = question_obj.find_all_questions(
             # {"exam_code": int(exam_code)}, fields={'answer.correct':0})
@@ -278,7 +278,6 @@ def attend_cps_exam(request, exam_code):
             {'exam_code': int(exam_code)}
         )
         exm_date_time_linux = exam_details['exam_date']
-        exam_duration = exam_details['exam_duration'] * 60
 
         if_cps_ended = ess.check_exam_started(
             {'exam_code': int(exam_code),
@@ -441,8 +440,6 @@ def attend_dps_exam(request, exam_code):
             )
             check = validate_start['start_time']
 
-        dps_exam_start = exam_details['exam_family'] == 'DPS' and current_time\
-            - check > exam_details['exam_duration'] * 60
         if current_time - check > exam_details['exam_duration'] * 60:
             ess.update_exam_start_signal({
                 'exam_code': int(exam_code),
@@ -523,14 +520,6 @@ def attend_dps_exam(request, exam_code):
             parameters['questions'] = sorted_questions
             parameters['exam_details'] = exam_details
 
-            start_question_number = 0
-            cqn = CurrentQuestionNumber()
-            current_q_no = cqn.check_current_question_number({
-                'exam_code': int(exam_code),
-                'useruid': request.user.id,
-                'ess_time': validate_start['start_time']
-            })
-
             parameters['max_questions_number'] = total_questions
 
             parameters['exam_code'] = exam_code
@@ -589,8 +578,6 @@ def attend_dps_exam_old(request, exam_code):
             )
             check = validate_start['start_time']
 
-        dps_exam_start = exam_details['exam_family'] == 'DPS' and \
-            current_time - check > exam_details['exam_duration'] * 60
         if current_time - check > exam_details['exam_duration'] * 60:
             ess.update_exam_start_signal({
                 'exam_code': int(exam_code),
@@ -887,145 +874,208 @@ def results(request, exam_code):
     for i in range(1, total_questions + 1):
         try:
             if i in anss:
-                answer_list += all_ans[anss.index(i)]['attempt_details'][0]['selected_ans']
+                answer_list += all_ans[anss.index(i)][
+                    'attempt_details'][0]['selected_ans']
             else:
-                answer_list +='e'
+                answer_list += 'e'
         except:
             answer_list += 'e'
 
-    exam_handler = ExamHandler()    
+    exam_handler = ExamHandler()
     score_list = exam_handler.check_answers(exam_code, answer_list)
     user_profile_obj = UserProfile()
     user = user_profile_obj.get_user_by_username(request.user.username)
-    parameters['user'] = user            
+    parameters['user'] = user
     parameters['result'] = score_list
     parameters['exam_code'] = exam_code
-    parameters['myrankcard'] = {'total':200, 'rank':1}
-    return render_to_response('results.html', parameters, context_instance=RequestContext(request))
+    parameters['myrankcard'] = {'total': 200, 'rank': 1}
+    return render_to_response(
+        'results.html',
+        parameters,
+        context_instance=RequestContext(request)
+    )
+
 
 def notifications(request):
     if request.user.is_authenticated():
-        from apps.mainapp.classes.notifications import Notifications
         notices = Notifications()
-        return HttpResponse(json.dumps({'status':'ok', 'result':notices.get_notifications(request.user.id)}))
+        return HttpResponse(
+            json.dumps(
+                {'status': 'ok',
+                 'result': notices.get_notifications(request.user.id)}
+            )
+        )
     else:
-        return HttpResponse(json.dumps({'status':'error', 'message':'You are not authorized to perform this action.'}))
+        return HttpResponse(json.dumps(
+            {'status': 'error',
+             'message': 'You are not authorized to perform this action.'})
+        )
+
 
 def show_result(request, exam_code, subject_name):
     user_profile_obj = UserProfile()
     exam_obj = ExammodelApi()
-    subscribed = user_profile_obj.check_subscribed(request.user.username, exam_code)
-    exam_details = exam_obj.find_one_exammodel({'exam_code':int(exam_code)})
+    subscribed = user_profile_obj.check_subscribed(
+        request.user.username, exam_code
+    )
+    exam_details = exam_obj.find_one_exammodel(
+        {'exam_code': int(exam_code)}
+    )
     parameters = {}
-    if request.user.is_authenticated() and subscribed:        
+    if request.user.is_authenticated() and subscribed:
         current_time = time.mktime(datetime.datetime.now().timetuple())
-        if exam_details['exam_family'] == 'CPS' and current_time - exam_details['exam_date'] < exam_details['exam_duration']*60:
-            return HttpResponseRedirect('/')            
+        if exam_details['exam_family'] == 'CPS' and current_time - \
+                exam_details['exam_date'] < exam_details['exam_duration'] * 60:
+            return HttpResponseRedirect('/')
         parameters['exam_details'] = exam_details
-        question_obj = QuestionApi()    
-        questions = question_obj.find_all_questions({"exam_code": int(exam_code),
-            'subject':str(subject_name), 'marks':1})
-        total_questions = question_obj.get_count({"exam_code": int(exam_code), 
-            'subject':subject_name, 'marks':1})
+        question_obj = QuestionApi()
+        questions = question_obj.find_all_questions(
+            {"exam_code": int(exam_code),
+             'subject': str(subject_name),
+             'marks': 1}
+        )
+        total_questions = question_obj.get_count(
+            {"exam_code": int(exam_code),
+             'subject': subject_name, 'marks': 1}
+        )
 
-        sorted_questions = sorted(questions, key=lambda k: k['question_number'])
-        try:            
-            current_q_no = int(request.GET.get('q',''))
+        try:
+            current_q_no = int(request.GET.get('q', ''))
             if current_q_no >= total_questions:
-                next_q_no = total_questions-1
+                next_q_no = total_questions - 1
             else:
                 next_q_no = current_q_no + 1
             if current_q_no <= 0:
                 previous_q_no = 0
             else:
-                previous_q_no = current_q_no -1
+                previous_q_no = current_q_no - 1
         except:
             current_q_no = 0
             previous_q_no = 0
             next_q_no = 1
 
-        if current_q_no >=total_questions:
-            current_q_no = total_questions -1
-        if current_q_no <=0:
+        if current_q_no >= total_questions:
+            current_q_no = total_questions - 1
+        if current_q_no <= 0:
             current_q_no = 0
         parameters['current_q_no'] = current_q_no
-        parameters['question_number'] = questions[current_q_no]['question_number']
-        parameters['question'] =  questions[current_q_no]
+        parameters['question_number'] = questions[
+            current_q_no]['question_number']
+        parameters['question'] = questions[current_q_no]
         parameters['subject'] = subject_name
         parameters['exam_code'] = exam_code
         parameters['next_q_no'] = next_q_no
         parameters['previous_q_no'] = previous_q_no
 
-        ess = ExamStartSignal()            
+        ess = ExamStartSignal()
         ans = AttemptedAnswerDatabase()
-        ess_check = ess.check_exam_started({'exam_code':int(exam_code), 'useruid':request.user.id})
+        ess_check = ess.check_exam_started(
+            {'exam_code': int(exam_code),
+             'useruid': request.user.id}
+        )
         total_questions = question_obj.get_count({"exam_code": int(exam_code)})
 
         try:
-            query = {'exam_code':int(exam_code), 'user_id':int(request.user.id),
-                'ess_time':ess_check['start_time'],'q_no':questions[current_q_no]['question_number']}
+            query = {'exam_code': int(exam_code),
+                     'user_id': int(request.user.id),
+                     'ess_time': ess_check['start_time'],
+                     'q_no': questions[current_q_no]['question_number']}
             att_ans = ans.find_all_atttempted_answer(query)
-            parameters['attempted'] = att_ans[0]['attempt_details'][len(att_ans[0]['attempt_details'])-1]['selected_ans']
+            parameters['attempted'] = att_ans[0]['attempt_details'][
+                len(att_ans[0]['attempt_details']) - 1]['selected_ans']
         except:
             att_ans = ''
             parameters['attempted'] = ''
 
         user_profile_obj = UserProfile()
         user = user_profile_obj.get_user_by_username(request.user.username)
-        parameters['user'] = user        
-        return render_to_response('single-result.html', parameters, context_instance=RequestContext(request))
+        parameters['user'] = user
+        return render_to_response(
+            'single-result.html',
+            parameters,
+            context_instance=RequestContext(request)
+        )
     else:
-        return HttpResponseRedirect('/')        
+        return HttpResponseRedirect('/')
+
 
 def get_list_of_result(request):
     if request.user.is_authenticated():
-        user_id = request.user.id 
+        user_id = request.user.id
         ans = AttemptedAnswerDatabase()
-        exam_attempts = ans.get_attempted_exams('exam_code', {'user_id':request.user.id})
+        exam_attempts = ans.get_attempted_exams(
+            'exam_code', {'user_id': request.user.id}
+        )
         return_dict = []
         for exam_code in exam_attempts['results']:
             exam_obj = ExammodelApi()
-            exam_details = exam_obj.find_one_exammodel({'exam_code':int(exam_code)})
-            if exam_details['exam_family'] =='DPS':
+            exam_details = exam_obj.find_one_exammodel(
+                {'exam_code': int(exam_code)}
+            )
+            if exam_details['exam_family'] == 'DPS':
                 continue
-            attempt_timestamps = ans.get_attempted_exams('ess_time', 
-                {'user_id':request.user.id, 'exam_code':int(exam_code)})
+            attempt_timestamps = ans.get_attempted_exams(
+                'ess_time',
+                {'user_id': request.user.id,
+                 'exam_code': int(exam_code)}
+            )
             for eachAttempt in attempt_timestamps['results']:
                 all_ans = ans.find_all_atttempted_answer({
-                    'exam_code':int(exam_code), 
-                    'user_id':user_id,
-                    'ess_time':eachAttempt
-                    })
+                    'exam_code': int(exam_code),
+                    'user_id': user_id,
+                    'ess_time': eachAttempt
+                })
                 answer_list = ''
                 anss = []
                 for eachAns in all_ans:
                     anss.append(eachAns['q_no'])
                 question_obj = QuestionApi()
-                total_questions = question_obj.get_count({"exam_code": int(exam_code)})                    
-                for i in range(0,total_questions):       
+                total_questions = question_obj.get_count(
+                    {"exam_code": int(exam_code)}
+                )
+                for i in range(0, total_questions):
                     try:
                         if i in anss:
-                            answer_list += all_ans[anss.index(i)]['attempt_details'][0]['selected_ans']
+                            answer_list += all_ans[anss.index(i)][
+                                'attempt_details'][0]['selected_ans']
                         else:
-                            answer_list +='e'
+                            answer_list += 'e'
                     except:
                         answer_list += 'e'
 
-                exam_handler = ExamHandler()    
+                exam_handler = ExamHandler()
                 score_list = exam_handler.check_answers(exam_code, answer_list)
                 rank = 0
-                return_dict.append({'exam_code':exam_code, 'ess_time':eachAttempt, 'result':score_list, 'exam_details':exam_details, 'rank':'0'})
-        return HttpResponse(json.dumps({'status':'ok', 'result':return_dict}))
+                return_dict.append(
+                    {'exam_code': exam_code,
+                     'ess_time': eachAttempt,
+                     'result': score_list,
+                     'exam_details': exam_details,
+                     'rank': rank}
+                )
+        return HttpResponse(json.dumps(
+            {'status': 'ok', 'result': return_dict})
+        )
     else:
-        return HttpResponse(json.dumps({'status':'error','message':'You are not authorized to perform this action.'}))
+        return HttpResponse(
+            json.dumps(
+                {'status': 'error',
+                 'message': 'You are not authorized to perform this action.'}
+            )
+        )
+
 
 def androidurl(request):
-    # return HttpResponseRedirect('https://play.google.com/store/apps/details?id=com.meroanswer')
     return HttpResponseRedirect('http://bit.ly/meroanswer')
+
 
 def couponpage(request):
     parameters = {}
     user_profile_obj = UserProfile()
-    user = user_profile_obj.get_user_by_username(request.user.username)   
+    user = user_profile_obj.get_user_by_username(request.user.username)
     parameters['user'] = user
-    return render_to_response('coupon.html', parameters, context_instance=RequestContext(request))
+    return render_to_response(
+        'coupon.html',
+        parameters,
+        context_instance=RequestContext(request)
+    )
