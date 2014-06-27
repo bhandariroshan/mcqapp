@@ -22,14 +22,6 @@ def load_examset_in_database(request):
          "exam_duration": 60,
          "exam_family": 'DPS'
          },
-        {"exam_name": "IOE Practice Exam 4",
-         "exam_date": 1403612147,
-         "image": "exam.jpg",
-         "exam_code": 205,
-         "exam_category": "BE-IOE",
-         "exam_duration": 60,
-         "exam_family": 'DPS'
-         },
         {"exam_name": "IOM Model Exam 1",
          "exam_date": 1403916646,
          "exam_time": "1.00pm",
@@ -64,7 +56,16 @@ def load_examset_in_database(request):
          "exam_category": "BE-IOE",
          "exam_duration": 60,
          "exam_family": 'DPS'
+         },
+        {"exam_name": "IOE Practice Exam 4",
+         "exam_date": 1403612147,
+         "image": "exam.jpg",
+         "exam_code": 205,
+         "exam_category": "BE-IOE",
+         "exam_duration": 60,
+         "exam_family": 'DPS'
          }
+
     ]
     exam_model.insert_new_model(exam_dict)
     return HttpResponse("Exam model saved in the database")
