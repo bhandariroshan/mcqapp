@@ -35,28 +35,33 @@ class ExamHandler():
         and return the dictionary with correct answers of each subject
         and sum of correct answers
         '''
+        exammodel_api = ExammodelApi()
+        exam_model = exammodel_api.find_one_exammodel(
+            {'exam_code': int(exam_code)}
+        )
         question_api = QuestionApi()
         questions = question_api.find_all_questions(
-            {"exam_code": int(exam_code), 'marks':1})
+            {"exam_code": int(exam_code)})
         sorted_questions = sorted(
             questions, key=lambda k: k['question_number'])
         subjects = set([i['subject'] for i in sorted_questions])
-        print answer_list,len(answer_list)
+        print answer_list, len(answer_list)
 
         correct_answers = {}
         for subs in subjects:
             temp = {}
-            temp['total_question'] = 0
-            temp['attempted_answer'] = 0
+            temp['total_marks'] = 0
+            temp['attempted'] = 0
             temp['score'] = 0
             correct_answers[subs] = temp
 
         for index, choice in enumerate(answer_list):
             correct_answers[
-                sorted_questions[index]['subject']]['attempted_answer'] += 1
-            correct_answers[
-                sorted_questions[index]['subject']]['total_question'] += 1 * \
+                sorted_questions[index]['subject']]['total_marks'] += 1 * \
                 int(sorted_questions[index]['marks'])
+            if choice in ['a', 'b', 'c', 'd']:
+                correct_answers[
+                    sorted_questions[index]['subject']]['attempted'] += 1
             if sorted_questions[index]['answer']['correct'] == choice:
                 try:
                     correct_answers[
@@ -65,24 +70,29 @@ class ExamHandler():
                 except:
                     correct_answers[
                         sorted_questions[index]['subject']]['score'] += 1
+            else:
+                if exam_model['exam_category'] in ["BE-IOE", "MBBS-MOE"]:
+                    try:
+                        correct_answers[
+                            sorted_questions[index]['subject']]['score'] -= \
+                            0.25 * int(sorted_questions[index]['marks'])
+                    except:
+                        pass
 
         total_score = 0
         total_attempted = 0
         total_marks = 0
         score_list = []
-        
+
         for key, value in correct_answers.iteritems():
-            total_question = question_api.find_all_questions(
-                {"exam_code": int(exam_code), "subject": key, 'marks':1}
-            )
             temp = {}
             temp['subject'] = key
             temp['score'] = value['score']
-            temp['attempted'] = value['attempted_answer']
-            temp['total_question'] = value['total_question']
+            temp['attempted'] = value['attempted']
+            temp['marks'] = value['total_marks']
             total_score += value['score']
-            total_attempted += value['attempted_answer']
-            total_marks += value['total_question']
+            total_attempted += value['attempted']
+            total_marks += value['total_marks']
             score_list.append(temp)
         score_list.append(
             {
