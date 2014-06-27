@@ -14,10 +14,18 @@ def load_examset_in_database(request):
     '''
     exam_model = ExammodelApi()
     exam_dict = [
-        {"exam_name": "IOE Practice Exam 1",
-         "exam_date": 1401359880,
+        # {"exam_name": "IOE Practice Exam 1",
+        #  "exam_date": 1401359880,
+        #  "image": "exam.jpg",
+        #  "exam_code": 201,
+        #  "exam_category": "BE-IOE",
+        #  "exam_duration": 60,
+        #  "exam_family": 'DPS'
+        #  },
+        {"exam_name": "IOE Practice Exam 4",
+         "exam_date": 1403612147,
          "image": "exam.jpg",
-         "exam_code": 201,
+         "exam_code": 204,
          "exam_category": "BE-IOE",
          "exam_duration": 60,
          "exam_family": 'DPS'
@@ -31,32 +39,32 @@ def load_examset_in_database(request):
         #  "exam_duration": 180,
         #  "exam_family": 'CPS'
         #  },
-        {"exam_name": "IOE Model Exam 1",
-         # "exam_date": 1401258859,
-         "exam_date": 1403612147,
-         "image": "exam.jpg",
-         "exam_code": 204,
-         "exam_time": "1.00pm",
-         "exam_duration": 60,
-         "exam_category": "BE-IOE",
-         "exam_family": 'CPS'
-         },
-         {"exam_name": "IOE Practice Exam 2",
-         "exam_date": 1399978500,
-         "image": "exam.jpg",
-         "exam_code": 202,
-         "exam_category": "BE-IOE",
-         "exam_duration": 60,
-         "exam_family": 'DPS'
-         },         
-         {"exam_name": "IOE Practice Exam 3",
-         "exam_date": 1399978500,
-         "image": "exam.jpg",
-         "exam_code": 203,
-         "exam_category": "BE-IOE",
-         "exam_duration": 60,
-         "exam_family": 'DPS'
-         }
+        # {"exam_name": "IOE Model Exam 1",
+        #  # "exam_date": 1401258859,
+        #  "exam_date": 1403612147,
+        #  "image": "exam.jpg",
+        #  "exam_code": 204,
+        #  "exam_time": "1.00pm",
+        #  "exam_duration": 60,
+        #  "exam_category": "BE-IOE",
+        #  "exam_family": 'CPS'
+        #  },
+        #  {"exam_name": "IOE Practice Exam 2",
+        #  "exam_date": 1399978500,
+        #  "image": "exam.jpg",
+        #  "exam_code": 202,
+        #  "exam_category": "BE-IOE",
+        #  "exam_duration": 60,
+        #  "exam_family": 'DPS'
+        #  },         
+        #  {"exam_name": "IOE Practice Exam 3",
+        #  "exam_date": 1399978500,
+        #  "image": "exam.jpg",
+        #  "exam_code": 203,
+        #  "exam_category": "BE-IOE",
+        #  "exam_duration": 60,
+        #  "exam_family": 'DPS'
+        #  }
     ]
     exam_model.insert_new_model(exam_dict)
     return HttpResponse("Exam model saved in the database")

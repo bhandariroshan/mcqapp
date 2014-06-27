@@ -162,16 +162,20 @@ def dashboard(request):
 def landing(request):
     if request.user.is_authenticated():
         from apps.exam_api.views import ExamHandler
-        exam_handler = ExamHandler()
-        upcoming_exams = exam_handler.list_upcoming_exams()
         parameters = {}        
         up_exams = []
 
         user_profile_obj = UserProfile()
-        subscribed_exams = user_profile_obj.get_subscribed_exams(request.user.username)
+        subscribed_exams = user_profile_obj.get_subscribed_exams(request.user.username)        
         user = user_profile_obj.get_user_by_username(request.user.username)
-        parameters['user'] = user
+        exam_handler = ExamHandler()
+        
+        if user['android_user'] == True:
+            upcoming_exams = exam_handler.list_upcoming_exams()
+        else:
+            upcoming_exams = exam_handler.list_upcoming_exams({'exam_category':'BE-IOE'})
 
+        parameters['user'] = user
         subscription_type = user['subscription_type']
 
         if len(subscription_type) !=0:
