@@ -75,7 +75,7 @@ class ExamHandler():
                     try:
                         correct_answers[
                             sorted_questions[index]['subject']]['score'] -= \
-                            0.25 * int(sorted_questions[index]['marks'])
+                            0.25
                     except:
                         pass
 
