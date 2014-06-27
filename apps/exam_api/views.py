@@ -107,7 +107,7 @@ class ExamHandler():
                 'subject': 'Total',
                 'subject_score': total_score,
                 'attempted': total_attempted,
-                'correct_answers': total_correct_answers,
+                'correct_subject_answer': total_correct_answers,
                 'subject_total_marks': total_marks
             }
         )
