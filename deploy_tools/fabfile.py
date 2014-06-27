@@ -35,7 +35,7 @@ def deploy():
 def deploy_test():
     _get_latest_source(test_source_folder)
     _update_settings(test_source_folder, 'settings_test.py')
-    run('cd /srv/www/mcq.phunka.com/application/ && source ../virtualenv/bin/activate && python manage.py collectstatic')
+    run('cd /srv/www/mcq.phunka.com/virtualenv/bin/activate && python manage.py collectstatic')
     sudo ('reload mcq.phunka.com')
 
 def update_latest_code():

@@ -2,8 +2,10 @@ from apps.mainapp.classes.Coupon import Coupon
 from apps.mainapp.classes.Userprofile import UserProfile
 from django.shortcuts import render_to_response
 from django.template import RequestContext
+from django.contrib.auth.decorators import user_passes_test, login_required
 
-
+@login_required(login_url='/')
+@user_passes_test(lambda u: u.is_superuser)
 def coupon_search(request):
     mycoupon = Coupon()
     parameters = {}
