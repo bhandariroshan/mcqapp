@@ -55,15 +55,15 @@ class AjaxHandle():
                 user = user_profile_obj.get_user_by_username(request.user.username)
                 subscription_type = user['subscription_type']
                 #if coupon_code != 'IDP' or 'BE-IOE' or 'MBBS-IOM' then save the exam code in the valid exams
-                if   'IDP' not in subscription_type and 'BE-IOE' not in subscription_type and 'MBBS-IOM' not in subscription_type:
+                if  'IDP' not in subscription_type and 'BE-IOE' not in subscription_type and 'MBBS-IOM' not in subscription_type:
                     user_profile_obj.save_valid_exam(request.user.username, exam_code)     
 
                 coupon_obj.change_used_status_of_coupon(coupon_code, request.user.username) 
                 if 'IDP' in subscription_type:
-                    return HttpResponse(json.dumps({'status':'ok','url':'/honorcode/' + exam_code}))
+                    return HttpResponse(json.dumps({'status':'ok','url':'/' + up_exm['exam_family'].lower() + '/' + exam_code}))
 
                 elif up_exm['exam_category']  in subscription_type:
-                    return HttpResponse(json.dumps({'status':'ok','url':'/honorcode/' + exam_code}))
+                    return HttpResponse(json.dumps({'status':'ok','url':'/' + up_exm['exam_family'].lower() + '/' + exam_code}))
                 else:
                     subscribed_exams = user_profile_obj.get_subscribed_exams(request.user.username)
                     if int(exam_code) in subscribed_exams:
@@ -330,6 +330,87 @@ class AjaxHandle():
         else:
             return HttpResponse(json.dumps({'status':'error','message':'You are not authorized to perform this action.'}))
 
+    def get_next_page_of_cps_exam(self, request):
+        user_profile_obj = UserProfile()
+        exam_code = int(request.POST['exam_code'])
+        subscribed = user_profile_obj.check_subscribed(request.user.username, exam_code)
+        if request.user.is_authenticated() and subscribed:
+            parameters = {}
+            ess = ExamStartSignal()        
+            exam_obj = ExammodelApi()
+            user_profile_obj = UserProfile()
+            question_obj = QuestionApi()    
+            ess = ExamStartSignal()            
+            cqn = CurrentQuestionNumber()
+            atte_ans = AttemptedAnswerDatabase()
+            # questions = question_obj.find_all_questions({"exam_code": int(exam_code)}, fields={'answer.correct':0})
+            user = user_profile_obj.get_user_by_username(request.user.username)
+            exam_details = exam_obj.find_one_exammodel({'exam_code':int(exam_code)})
+            exam_duration = exam_details['exam_duration'] * 60
+
+            validate = ess.check_exam_started({'exam_code':int(exam_code), 'useruid':request.user.id, 'start':1, 'end':0})
+            if validate == None:
+                start_time = time.mktime(datetime.datetime.now().timetuple())
+                ess.insert_exam_start_signal({
+                    'exam_code':int(exam_code), 
+                    'useruid':request.user.id, 
+                    'start':1, 
+                    'start_time':int(start_time),
+                    'end':0
+                })        
+
+            current_time = time.mktime(datetime.datetime.now().timetuple())        
+            if current_time - exam_details['exam_date'] <= exam_details['exam_duration']*60:
+
+                validate_start = ess.check_exam_started({'exam_code':int(exam_code), 'useruid':request.user.id, 'start':1,'end':0})
+                all_answers = atte_ans.find_all_atttempted_answer({
+                    'exam_code':int(exam_code), 'user_id':int(request.user.id),
+                    'ess_time':int(validate_start['start_time'])})
+                time_elapsed = time.mktime(datetime.datetime.now().timetuple()) - int(exam_details['exam_date'])
+                total_questions = question_obj.get_count({"exam_code": int(exam_code)})
+
+                current_pg_num = 1
+                next_page = 0
+
+                if request.POST.get('current','') !='':
+                    current_pg_num = int(request.POST.get('current',''))
+
+                if request.POST.get('next','') !='':
+                    next_page = int(request.POST.get('next',''))            
+
+                if next_page == 1:
+                    current_pg_num = current_pg_num + 1
+                if next_page == -1:
+                    current_pg_num = current_pg_num - 1
+
+                if current_pg_num < 1:
+                    current_pg_num = 1
+
+                parameters['page_end'] = False
+                if current_pg_num > 4:
+                    current_pg_num = 5
+                    parameters['page_end'] = True
+
+                parameters['current_pg_num'] = current_pg_num
+                    
+                questions = question_obj.get_paginated_questions({"exam_code": int(exam_code), 'marks':1}, fields={'answer.correct':0}, page_num = current_pg_num)
+                sorted_questions = sorted(questions, key=lambda k: k['question_number'])  
+            
+                parameters['all_answers'] = all_answers
+                parameters['questions'] = sorted_questions
+                exam_details['exam_duration'] = (exam_details['exam_duration']*60 - time_elapsed)/60
+                exam_details['exam_date'] = datetime.datetime.fromtimestamp(int(exam_details['exam_date'])).strftime('%Y-%m-%d')
+                parameters['exam_details'] = exam_details
+                parameters['max_questions_number'] =  total_questions
+                parameters['exam_code'] = exam_code        
+                parameters['user'] = user
+                html =  str(render_to_response('ajax_exammain.html', parameters, context_instance=RequestContext(request)))
+                html = html.replace('Content-Type: text/html; charset=utf-8', '')
+                return HttpResponse(json.dumps({'status':'ok', 'html':html, 'all_ans':all_answers, 'current_pg_num':current_pg_num}))
+
+            else:
+                return HttpResponse(json.dumps({'status':'error','message':'You are not authorized to perform this action.'}))                
+
     def load_result(self, request):
         self.set_exam_finished(request)
         parameters ={}
@@ -355,8 +436,6 @@ class AjaxHandle():
         except:
             all_ans = ''
         
-        print all_ans[0]
-
         answer_list = ''
         anss = []
 

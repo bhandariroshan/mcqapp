@@ -162,16 +162,20 @@ def dashboard(request):
 def landing(request):
     if request.user.is_authenticated():
         from apps.exam_api.views import ExamHandler
-        exam_handler = ExamHandler()
-        upcoming_exams = exam_handler.list_upcoming_exams()
         parameters = {}        
         up_exams = []
 
         user_profile_obj = UserProfile()
-        subscribed_exams = user_profile_obj.get_subscribed_exams(request.user.username)
+        subscribed_exams = user_profile_obj.get_subscribed_exams(request.user.username)        
         user = user_profile_obj.get_user_by_username(request.user.username)
-        parameters['user'] = user
+        exam_handler = ExamHandler()
+        
+        if user['android_user'] == True:
+            upcoming_exams = exam_handler.list_upcoming_exams()
+        else:
+            upcoming_exams = exam_handler.list_upcoming_exams({'exam_category':'BE-IOE'})
 
+        parameters['user'] = user
         subscription_type = user['subscription_type']
 
         if len(subscription_type) !=0:
@@ -255,71 +259,84 @@ def attend_cps_exam(request, exam_code):
         exam_obj = ExammodelApi()
         user_profile_obj = UserProfile()
         question_obj = QuestionApi()    
-        h_a_s = HonorCodeAcceptSingal()
         ess = ExamStartSignal()            
         cqn = CurrentQuestionNumber()
         atte_ans = AttemptedAnswerDatabase()
-        questions = question_obj.find_all_questions({"exam_code": int(exam_code)}, fields={'answer.correct':0})
+        # questions = question_obj.find_all_questions({"exam_code": int(exam_code)}, fields={'answer.correct':0})
         user = user_profile_obj.get_user_by_username(request.user.username)
         exam_details = exam_obj.find_one_exammodel({'exam_code':int(exam_code)})
+        exm_date_time_linux = exam_details['exam_date']
+        exam_duration = exam_details['exam_duration'] * 60
 
+ 
         if_cps_ended = ess.check_exam_started({'exam_code':int(exam_code), 'useruid':request.user.id, 'start':0,'end':1}) 
         if if_cps_ended != None:
             return HttpResponseRedirect('/results/' + str(exam_code) + '/')
 
-        current_time = time.mktime(datetime.datetime.now().timetuple())
+        validate = ess.check_exam_started({'exam_code':int(exam_code), 'useruid':request.user.id, 'start':1, 'end':0})
+
+        if validate == None:
+            start_time = time.mktime(datetime.datetime.now().timetuple())
+            ess.insert_exam_start_signal({
+                'exam_code':int(exam_code), 
+                'useruid':request.user.id, 
+                'start':1, 
+                'start_time':int(start_time),
+                'end':0
+            })        
+
+        current_time = time.mktime(datetime.datetime.now().timetuple())        
         if current_time - exam_details['exam_date'] > exam_details['exam_duration']*60:
+            print "Redirected to results"
             return HttpResponseRedirect('/results/' + str(exam_code))
 
         validate_start = ess.check_exam_started({'exam_code':int(exam_code), 'useruid':request.user.id, 'start':1,'end':0})
-        if validate_start != None:
-            h_a_s_accepted = h_a_s.check_honor_code_accepted({
-                'exam_code':int(exam_code), 
-                'useruid':request.user.id,
-                'accept':1,
-                'ess_time':validate_start['start_time']})
-        else:
-            h_a_s_accepted = None
-
-        if h_a_s_accepted == None:
-            return HttpResponseRedirect('/honorcode/'+str(exam_code) +'/')
-
         all_answers = atte_ans.find_all_atttempted_answer({
             'exam_code':int(exam_code), 'user_id':int(request.user.id),
             'ess_time':int(validate_start['start_time'])})
         time_elapsed = time.mktime(datetime.datetime.now().timetuple()) - int(exam_details['exam_date'])
-        total_questions = question_obj.get_count({"exam_code": int(exam_code)})
-        sorted_questions = sorted(questions, key=lambda k: k['question_number'])
+        total_questions = question_obj.get_count({"exam_code": int(exam_code), 'marks':1})
+        current_pg_num = 1
+        next_page = 0
 
-        start_question_number = 0 
-        current_q_no = cqn.check_current_question_number({
-            'exam_code':int(exam_code), 
-            'useruid':request.user.id, 
-            'ess_time':validate_start['start_time']})
-        try:
-            start_question_number = current_q_no['cqn']
-            if start_question_number == '':
-                start_question_number = 0
-        except:
-            start_question_number = 0 
+        if request.GET.get('current','') !='':
+            current_pg_num = int(request.POST.get('current',''))
 
-        if start_question_number == total_questions:
-            start_question_number = start_question_number - 1
-            parameters['next_to_start'] = sorted_questions[start_question_number]
-        else:           
-            parameters['next_to_start'] = sorted_questions[0]
+        if request.GET.get('next','') !='':
+            next_page = int(request.GET.get('next',''))            
+
+        if next_page == 1:
+            current_pg_num = current_pg_num + 1
+        
+        if next_page == -1:
+            current_pg_num = current_pg_num - 1
+
+        if current_pg_num < 1:
+            current_pg_num = 1
+
+        parameters['page_end'] = False
+        if current_pg_num > 4:
+            current_pg_num = 5
+            parameters['page_end'] = True
+
+        parameters['current_pg_num'] = current_pg_num
+            
+        questions = question_obj.get_paginated_questions({"exam_code": int(exam_code), 'marks':1}, fields={'answer.correct':0}, page_num = current_pg_num)
+        sorted_questions = sorted(questions, key=lambda k: k['question_number'])  
     
-        parameters['all_answers'] = json.dumps(all_answers)                        
-        parameters['questions'] = json.dumps(sorted_questions)
+        parameters['all_answers'] = json.dumps(all_answers)
+        parameters['questions'] = sorted_questions
         exam_details['exam_duration'] = (exam_details['exam_duration']*60 - time_elapsed)/60
         exam_details['exam_date'] = datetime.datetime.fromtimestamp(int(exam_details['exam_date'])).strftime('%Y-%m-%d')
         parameters['exam_details'] = exam_details
-        parameters['start_question_number'] = start_question_number
-        parameters['start_question'] = sorted_questions[start_question_number]
         parameters['max_questions_number'] =  total_questions
         parameters['exam_code'] = exam_code        
         parameters['user'] = user
-        return render_to_response('exam_main.html', parameters, context_instance=RequestContext(request))
+        if exm_date_time_linux <= time.mktime(datetime.datetime.now().timetuple()):
+            parameters['render_before_exam'] = False
+        else:
+            parameters['render_before_exam'] = True
+        return render_to_response('pulchowkexam-main.html', parameters, context_instance=RequestContext(request))
 
     else:
         return HttpResponseRedirect('/')

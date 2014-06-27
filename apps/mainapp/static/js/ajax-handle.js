@@ -16,6 +16,9 @@ function get_next_page(exam_code,current, next){
 	ajax_request('get_nexp_page_of_questions', 'get_next_page_success', {'exam_code':exam_code, 'current':current, 'next':next});
 }
 
+function get_next_page_of_cps_exam(exam_code,current, next){
+	ajax_request('get_next_page_of_cps_exam', 'get_next_page_success', {'exam_code':exam_code, 'current':current, 'next':next});
+}
 
 function get_next_page_success(data){
 	data= jQuery.parseJSON(data);
