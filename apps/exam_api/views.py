@@ -45,39 +45,40 @@ class ExamHandler():
         sorted_questions = sorted(
             questions, key=lambda k: k['question_number'])
         subjects = set([i['subject'] for i in sorted_questions])
-        print answer_list, len(answer_list)
 
         correct_answers = {}
         for subs in subjects:
             temp = {}
-            temp['total_marks'] = 0
+            temp['subject_marks'] = 0
             temp['attempted'] = 0
-            temp['score'] = 0
+            temp['subject_score'] = 0
             correct_answers[subs] = temp
 
         for index, choice in enumerate(answer_list):
             correct_answers[
-                sorted_questions[index]['subject']]['total_marks'] += 1 * \
+                sorted_questions[index]['subject']]['subject_marks'] += 1 * \
                 int(sorted_questions[index]['marks'])
             if choice in ['a', 'b', 'c', 'd']:
                 correct_answers[
                     sorted_questions[index]['subject']]['attempted'] += 1
-            if sorted_questions[index]['answer']['correct'] == choice:
-                try:
-                    correct_answers[
-                        sorted_questions[index]['subject']]['score'] += 1 * \
-                        int(sorted_questions[index]['marks'])
-                except:
-                    correct_answers[
-                        sorted_questions[index]['subject']]['score'] += 1
-            else:
-                if exam_model['exam_category'] in ["BE-IOE", "MBBS-MOE"]:
+                if sorted_questions[index]['answer']['correct'] == choice:
                     try:
-                        correct_answers[
-                            sorted_questions[index]['subject']]['score'] -= \
-                            0.25
+                        correct_answers[sorted_questions[index]['subject']][
+                            'subject_score'
+                        ] += 1 * int(sorted_questions[index]['marks'])
                     except:
-                        pass
+                        correct_answers[
+                            sorted_questions[index]['subject']][
+                            'subject_score'
+                        ] += 1
+                else:
+                    if exam_model['exam_category'] in ["BE-IOE", "MBBS-MOE"]:
+                        try:
+                            correct_answers[
+                                sorted_questions[index]['subject']
+                            ]['subject_score'] -= 0.25
+                        except:
+                            pass
 
         total_score = 0
         total_attempted = 0
@@ -87,12 +88,12 @@ class ExamHandler():
         for key, value in correct_answers.iteritems():
             temp = {}
             temp['subject'] = key
-            temp['score'] = value['score']
+            temp['subject_score'] = value['subject_score']
             temp['attempted'] = value['attempted']
-            temp['marks'] = value['total_marks']
-            total_score += value['score']
+            temp['subject_marks'] = value['subject_marks']
+            total_score += value['subject_score']
             total_attempted += value['attempted']
-            total_marks += value['total_marks']
+            total_marks += value['subject_marks']
             score_list.append(temp)
         score_list.append(
             {

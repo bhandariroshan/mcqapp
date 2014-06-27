@@ -35,7 +35,7 @@ class Coupon():
                 num = num/62    
                 coupon = coupon + number_system[rem]
             coupon = coupon + number_system[num]
-            print self.db_object.get_one(self.table_name, {'code':str(coupon)})
+            # print self.db_object.get_one(self.table_name, {'code':str(coupon)})
             if self.db_object.get_one(self.table_name,{'code':str(coupon)}) is None:
                 data = {
                     'code':coupon,
@@ -62,7 +62,7 @@ class Coupon():
 
     def has_susbcription_plan_in_coupon(self, coupon_code):
         coupon = self.db_object.get_one(self.table_name, {'code':coupon_code, 'used.status':0})
-        print coupon
+        # print coupon
         # print exam_family, coupon, coupon_code, exam_category
         if coupon != None and coupon['subscription_type']=='IDP':
             return True
