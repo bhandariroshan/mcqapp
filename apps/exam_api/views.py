@@ -49,15 +49,15 @@ class ExamHandler():
         correct_answers = {}
         for subs in subjects:
             temp = {}
-            temp['subject_marks'] = 0
+            temp['subject_total_marks'] = 0
             temp['attempted'] = 0
             temp['subject_score'] = 0
             correct_answers[subs] = temp
 
         for index, choice in enumerate(answer_list):
             correct_answers[
-                sorted_questions[index]['subject']]['subject_marks'] += 1 * \
-                int(sorted_questions[index]['marks'])
+                sorted_questions[index]['subject']]['subject_total_marks'] += \
+                1 * int(sorted_questions[index]['marks'])
             if choice in ['a', 'b', 'c', 'd']:
                 correct_answers[
                     sorted_questions[index]['subject']]['attempted'] += 1
@@ -90,17 +90,17 @@ class ExamHandler():
             temp['subject'] = key
             temp['subject_score'] = value['subject_score']
             temp['attempted'] = value['attempted']
-            temp['subject_marks'] = value['subject_marks']
+            temp['subject_total_marks'] = value['subject_total_marks']
             total_score += value['subject_score']
             total_attempted += value['attempted']
-            total_marks += value['subject_marks']
+            total_marks += value['subject_total_marks']
             score_list.append(temp)
         score_list.append(
             {
                 'subject': 'Total',
-                'score': total_score,
+                'subject_score': total_score,
                 'attempted': total_attempted,
-                'total_question': total_marks
+                'subject_total_marks': total_marks
             }
         )
         return score_list
