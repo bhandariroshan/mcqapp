@@ -287,7 +287,7 @@ def attend_cps_exam(request, exam_code):
 
         current_time = time.mktime(datetime.datetime.now().timetuple())        
         if current_time - exam_details['exam_date'] > exam_details['exam_duration']*60:
-            print "Redirected to results"
+            # print "Redirected to results"
             return HttpResponseRedirect('/results/' + str(exam_code))
 
         validate_start = ess.check_exam_started({'exam_code':int(exam_code), 'useruid':request.user.id, 'start':1,'end':0})
