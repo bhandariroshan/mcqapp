@@ -19,7 +19,7 @@
             },
             "correct": "a"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "The general solution of  $ sin^{2}x + cosec^{2}x =2 $ is : ",
@@ -47,7 +47,7 @@
             },
             "correct": "c  "
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "The domain of the function $ y = f(x) = \\frac{1}{\\sqrt{x-1}} $ is : ",
@@ -75,7 +75,7 @@
             },
             "correct": "d"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "The roots of the equation $ x^{2} - \\sqrt{29}x + 1 = 0 $ are : ",
@@ -103,7 +103,7 @@
             },
             "correct": "b"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "If A is a m x n matrix, B is  n x p matrix, then $ (AB)^{T} $ is a matrix of order ",
@@ -131,7 +131,7 @@
             },
             "correct": "c"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "$ \\int |x|^{3} dx $ is equal to: (x < 0)",
@@ -159,7 +159,7 @@
             },
             "correct": "c"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "The derivative of $ y = {e}^x $  w.r.t $ sin^{-1}x $ is : ",
@@ -187,7 +187,7 @@
             },
             "correct": "a"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "The value of $ \\lim_{x \\rightarrow 0} \\frac{e^{sinx} - 1}{x} = $ ",
@@ -215,7 +215,7 @@
             },
             "correct": "c"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "If $ \\vec{a} $ and  $ \\vec{b} $ are two non-zero vectors such that $ \\vec{a} = k \\vec{b} $ and |k| < 1, then",
@@ -243,7 +243,7 @@
             },
             "correct": "d"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "If two vectors whose direction ratios are 1,2,3 and -k,2,1 are perpendicular to each other, then k=",
@@ -271,7 +271,7 @@
             },
             "correct": "c"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "If three points (a, 0), (0, b) and (1, 1) are collinear, then ",
@@ -299,7 +299,7 @@
             },
             "correct": "b"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "The phonemic transcription of the word - 'elect' is _____",
@@ -327,7 +327,7 @@
             },
             "correct": "a"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "The - 'elergy' has its primary stress on the ______ syllable.",
@@ -355,7 +355,7 @@
             },
             "correct": "d"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "The antonym of Adopt is: ",
@@ -383,7 +383,7 @@
             },
             "correct": "a"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "The synonym of Caress is:",
@@ -411,7 +411,7 @@
             },
             "correct": "c"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "He died ____ his country.",
@@ -439,7 +439,7 @@
             },
             "correct": "b"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "He died ______ the loss of blood.",
@@ -467,7 +467,7 @@
             },
             "correct": "b"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "It is time you ___ to bed.",
@@ -495,7 +495,7 @@
             },
             "correct": "b"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "I ______ of attending the party, but I could not.",
@@ -523,7 +523,7 @@
             },
             "correct": "a"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "It is time you _______ your face.",
@@ -551,7 +551,7 @@
             },
             "correct": "b"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "Both Ram _______ his brother were present.",
@@ -579,7 +579,7 @@
             },
             "correct": "b"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "She disliked _______ coming late.",
@@ -607,7 +607,7 @@
             },
             "correct": "b"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "You and I ________ working.",
@@ -635,7 +635,7 @@
             },
             "correct": "b"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "Slow and steady ________ the race.",
@@ -663,7 +663,7 @@
             },
             "correct": "c"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "The British ______ a long history.",
@@ -691,7 +691,7 @@
             },
             "correct": "b"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "More books than one ________ been burst.",
@@ -719,7 +719,7 @@
             },
             "correct": "b"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "A particle is acted upon by a force of constant magnitude which is always perpendicular to the velocity of the particle. The motion of the particle takes place in a plane. It follows",
@@ -747,7 +747,7 @@
             },
             "correct": "b"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "The weight of a body at earth's surface is w. At a depth half way to the center of the earth, it will be",
@@ -775,7 +775,7 @@
             },
             "correct": "d"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "A Carnot engine works between a source and sink maintained at constant temperatures T1 and T2. For efficiency to be the greatest",
@@ -803,7 +803,7 @@
             },
             "correct": "b"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "When graph is plotted between P and V for adiabatic process then the plot 1 and plot 2 should be corresponding to ",
@@ -831,7 +831,7 @@
             },
             "correct": "b"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "The intensity of sound gets reduced by 10% on passing through slab. The reduction in intensity on passing through two consecutive slabs will be ",
@@ -859,7 +859,7 @@
             },
             "correct": "c"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "The distance between two point charges is increased by 10% the force of interaction",
@@ -887,7 +887,7 @@
             },
             "correct": "b"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "Sensitivity of potentiometer can be increased by ",
@@ -915,7 +915,7 @@
             },
             "correct": "a"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "A convex mirror of focal length f produces an image $ (\\frac{1}{n})^{th} $ of the size of the object. The distance of the object from mirror is ",
@@ -943,7 +943,7 @@
             },
             "correct": "a"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "A $ \\beta^{-} $ particle is emitted by a radioactive nucleus at the time of conversion of ",
@@ -971,7 +971,7 @@
             },
             "correct": "d"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "A zener diode $ V_{Z} $ = 5V and $ I_{Z} $ = 10 mA is connected in series with a resistance and 20V is applied across the combination. The maximum resistance one can use without spoiling zener action is",
@@ -999,7 +999,7 @@
             },
             "correct": "b"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "The O.N. of metal in a carbonyl complex is ",
@@ -1027,7 +1027,7 @@
             },
             "correct": "a"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "Maximum no. of electrons that can be accommodated in a 3d-orbital is",
@@ -1055,7 +1055,7 @@
             },
             "correct": "a"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "The strength of H. bond is intermediate between",
@@ -1083,7 +1083,7 @@
             },
             "correct": "b"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "The no. of atoms in 4.25 gm of $ NH_{3} $ is approximately",
@@ -1111,7 +1111,7 @@
             },
             "correct": "c"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "The ionic product of water will increase if ",
@@ -1139,7 +1139,7 @@
             },
             "correct": "d"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "Volume of water to be added to 0.5N HCl to prepare 500 $ cm^{3} $ of 0.1N HCl solution is ",
@@ -1167,7 +1167,7 @@
             },
             "correct": "c"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "Which of the following isoelectronic species has the largest size",
@@ -1195,7 +1195,7 @@
             },
             "correct": "d"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "Deionised water is obtained by passing hard water through",
@@ -1223,7 +1223,7 @@
             },
             "correct": "c"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "Nitrolim is ",
@@ -1251,7 +1251,7 @@
             },
             "correct": "b"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "Bleaching action of moist chlorine is due to formation of ",
@@ -1279,7 +1279,7 @@
             },
             "correct": "a"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "Metal extracted by carbon reduction process is ",
@@ -1307,7 +1307,7 @@
             },
             "correct": "c"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "Fire extinguisher contains $ H_2SO_4 $ and ________",
@@ -1335,7 +1335,7 @@
             },
             "correct": "b"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "Total no. of $ \\sigma $ bonds in benzene is ",
@@ -1363,7 +1363,7 @@
             },
             "correct": "b"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "The reaction R - Br + NaI $ \\xrightarrow{acetone} $ R - I + NaBr is ",
@@ -1391,7 +1391,7 @@
             },
             "correct": "b"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "The hetero atom present in piperidine is",
@@ -1419,7 +1419,7 @@
             },
             "correct": "b"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "Two strokes engines are ....................... combustion engine.",
@@ -1447,7 +1447,7 @@
             },
             "correct": "a"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "Petrol engine are .................. in weight than diesel engine",
@@ -1475,7 +1475,7 @@
             },
             "correct": "b"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "Energy from fossil fuels are ............. types of energy",
@@ -1503,7 +1503,7 @@
             },
             "correct": "a"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "White parallel strips across the road (zebra crossing), indicates ...........",
@@ -1531,7 +1531,7 @@
             },
             "correct": "d"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "Sand mortar is the mixture of which of the following/s?",
@@ -1559,7 +1559,7 @@
             },
             "correct": "c"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "Which of the following is/are ingredients of cement? ",
@@ -1587,7 +1587,7 @@
             },
             "correct": "a"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "Bricks are laid ........... in construction of brick walls.",
@@ -1615,7 +1615,7 @@
             },
             "correct": "d"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "Resistors in series have ........... resistance than in parallel",
@@ -1643,7 +1643,7 @@
             },
             "correct": "a"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "Which of the following may be a source of energy?",
@@ -1671,7 +1671,7 @@
             },
             "correct": "c"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "Transformer is a ............ engineering device ",
@@ -1699,7 +1699,7 @@
             },
             "correct": "c"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "The instrument used to measure energy is:",
@@ -1727,7 +1727,7 @@
             },
             "correct": "a"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "Transistors are used in .........",
@@ -1755,7 +1755,7 @@
             },
             "correct": "c"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "Which of the following is a logic gates?",
@@ -1783,7 +1783,7 @@
             },
             "correct": "b"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "How many Giga Bytes are there in 1 Tera Bytes?",
@@ -1811,7 +1811,7 @@
             },
             "correct": "c"
         },
-        "exam_code": 204,
+        "exam_code": 205,
         "marks": 1,
         "question": {
             "text": "Which of the following is about memory of computer?",
