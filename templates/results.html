@@ -26,7 +26,7 @@
 						<td>{% if eachSubject.subject != 'Total' %}<a style="color:#58c026;" href="/answers/{{exam_code}}/{{eachSubject.subject}}/?q=0">{% endif %}{{eachSubject.subject}}</a></td>
 						<td>{{eachSubject.attempted}}</td>	
 						<td>{{eachSubject.correct_subject_answer}}</td>
-						<td>{{eachSubject.subject_score}}</td>
+						<td>{{eachSubject.score}}</td>
 						<td>{{eachSubject.subject_total_marks}}</td>
 					</tr>
 				{% endfor %}
