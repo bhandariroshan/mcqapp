@@ -11,7 +11,7 @@ def latest_users(request):
     parameters = {}
     count = request.GET.get('count', '100')
     all_users = User.objects.all().order_by('-date_joined')[:int(count)]
-    parameters['count'] = len(all_users)
+    parameters['count'] = len(User.objects.all())
     latest_users = []
     for each in all_users:
         try:
