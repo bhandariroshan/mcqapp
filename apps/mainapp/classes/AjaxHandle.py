@@ -63,7 +63,10 @@ class AjaxHandle():
                     return HttpResponse(json.dumps({'status':'ok','url':'/' + up_exm['exam_family'].lower() + '/' + exam_code}))
 
                 elif up_exm['exam_category']  in subscription_type:
-                    return HttpResponse(json.dumps({'status':'ok','url':'/' + up_exm['exam_family'].lower() + '/' + exam_code}))
+                    if up_exm['exam_category'] != 'MBBS-IOM':
+                        return HttpResponse(json.dumps({'status':'ok','url':'/' + up_exm['exam_family'].lower() + '/' + exam_code}))
+                    else:
+                        return HttpResponse(json.dumps({'status':'ok','url':'/' + 'iom' + '/' + exam_code}))
                 else:
                     subscribed_exams = user_profile_obj.get_subscribed_exams(request.user.username)
                     if int(exam_code) in subscribed_exams:
@@ -71,7 +74,10 @@ class AjaxHandle():
                         #if exam is cps then return url '/cps/exam_code'
                         #else return  url '/dps/exam_code/'
                         exm_dtls = exam_obj.get_exam_detail(int(exam_code))
-                        return HttpResponse(json.dumps({'status':'ok','url':'/' + exm_dtls['exam_family'].lower() + '/' + exam_code}))
+                        if exm_dtls['exam_category'] !='MBBS-IOM':
+                            return HttpResponse(json.dumps({'status':'ok','url':'/' + exm_dtls['exam_family'].lower() + '/' + exam_code}))
+                        else:
+                            return HttpResponse(json.dumps({'status':'ok','url':'/' + 'iom' + '/' + exam_code}))
                     else:
                         return HttpResponse(json.dumps({'status':'error','message':'Invalid Coupon code.'}))
             else:
