@@ -28,45 +28,19 @@ def sign_up_sign_in(request, android_user=False):
     access_token = SocialToken.objects.get(account__user__id=request.user.id)
     user_profile_object = UserProfile()
     user = user_profile_object.get_user_by_username(request.user.username)
-    try:
-        valid_exams = user['valid_exam']
-    except:
-        # valid_exams=[100, 101]
-        valid_exams = []
+    if user != None:
+        return None
 
-    try:
-        coupons = user['coupons']
-    except:
-        coupons = []
-    try:
-        subscription_type = user['subscription_type']
-    except:
-        subscription_type = []
-    try:
-        join_time = user['join_time']
-    except:
-        join_time = datetime.datetime.now()
-        join_time = time.mktime(join_time.timetuple())
-
-    try:
-        profile_image = user['profile_image']
-    except:
-        graph = GraphAPI(access_token)
-        det = graph.get(
-            social_account.uid +
-            '/picture/?redirect=0&height=300&type=normal&width=300'
-        )
-        profile_image = det['data']['url']
-
-    try:
-        student_category = user['student_category']
-    except:
-        student_category = 'IDP'
-    try:
-        student_category_set = user['student_category_set']
-    except:
-        student_category_set = 0
-
+    valid_exams = []
+    coupons = []    
+    subscription_type = []
+    join_time = datetime.datetime.now()
+    join_time = time.mktime(join_time.timetuple())
+    graph = GraphAPI(access_token)
+    det = graph.get(social_account.uid + '/picture/?redirect=0&height=300&type=normal&width=300')
+    profile_image = det['data']['url']
+    student_category = 'IDP'
+    student_category_set = 0
     data = {
         'useruid': int(request.user.id),
         'first_name': social_account.extra_data.get('first_name'),
@@ -94,19 +68,13 @@ def sign_up_sign_in(request, android_user=False):
         data['android_user'] = False
         data['registration_id'] = ''
 
+    mc = MailChimp()
     try:
-        mc_subscribed = user['subscribed_to_mailchimp']
+        mc.subscribe(data)
     except:
-        mc = MailChimp()
-        try:
-            mc.subscribe(data)
-        except:
-            pass
-        mc_subscribed = True
-    data['mc_subscribed'] = mc_subscribed
-    return user_profile_object.update_upsert(
-        {'username': request.user.username}, data
-    )
+        pass
+    data['mc_subscribed'] = True
+    return user_profile_object.update_upsert({'username': request.user.username}, data)
 
 
 def latex_html(request):
