@@ -167,16 +167,6 @@
         <div class="twelve columns">
         {% if not 'iom' in request.path %}
           <li class="warning alert">
-            <h2 style="text-align: center; font-size: 40px; text-decoration:underline;">  Notice </h2>
-            <p>Our system is similar to Institute of Engineering's system. Get coupons from PROGRESS BOOKSHOP and start taking practice tests and competitive test. 
-            </p><!-- 
-            <div class="medium primary btn pretty" >
-                <a href="#" id="enterSubsCoupon" style="width: 150px;" onclick="attempt_exam('subs')">Enter here</a>
-            </div> -->              
-          </li>
-        {% endif %}
-        {% if not 'iom' in request.path %}
-          <li class="warning alert">
             <h2 style="text-align: center; font-size: 40px; text-decoration:underline;">  Practice IOM  </h2>
             <div class="medium primary btn pretty" >
                 <a href="/iom/" id="" style="width: 150px;"> Practice IOM </a>
@@ -190,6 +180,17 @@
             </div>              
             </li>
         </div>      
+        {% endif %}
+
+        {% if not 'iom' in request.path %}
+          <li class="warning alert">
+            <h2 style="text-align: center; font-size: 40px; text-decoration:underline;">  Notice </h2>
+            <p>Our system is similar to Institute of Engineering's computerized system. You can get coupons from <a href="/distributors/"><distributors</a> and start practicing questions.
+            </p><!-- 
+            <div class="medium primary btn pretty" >
+                <a href="#" id="enterSubsCoupon" style="width: 150px;" onclick="attempt_exam('subs')">Enter here</a>
+            </div> -->              
+          </li>
         {% endif %}
         {% if not subscribed %}
           <div class="twelve columns">
