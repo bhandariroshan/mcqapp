@@ -16,7 +16,7 @@ class ExamHandler():
         '''
         question_api = QuestionApi()
         questions = question_api.find_all_questions(
-            {"exam_code": int(exam_code)})
+            {"exam_code": int(exam_code), 'marks':1})
         sorted_questions = sorted(
             questions, key=lambda k: k['question_number'])
         return sorted_questions
