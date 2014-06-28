@@ -10,7 +10,7 @@ from django.contrib.auth.decorators import user_passes_test, login_required
 def latest_users(request):
     parameters = {}
     count = request.GET.get('count', '100')
-    all_users = User.objects.all().order_by('-date_joined')
+    all_users = User.objects.all().order_by('-date_joined')[:int(count)]
     parameters['count'] = len(all_users)
     latest_users = []
     for each in all_users:
@@ -46,7 +46,7 @@ def latest_users(request):
             latest_users.append(each_user)
         except:
             pass
-    parameters['latest_users'] = latest_users[:int(count)]
+    parameters['latest_users'] = latest_users
     return render_to_response(
         'latest_users.html',
         parameters, context_instance=RequestContext(request)

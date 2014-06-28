@@ -2,27 +2,27 @@
     {
         "answer": {
             "a": {
-                "text": "linear momentum",
+                "text": "$ M^{-1}L^{3}T^{4}A^{2} $",
                 "image": ""
             },
             "c": {
-                "text": "energy",
+                "text": "$ M^{-1}L^{-3}T^{-4}A^{2} $",
                 "image": ""
             },
             "b": {
-                "text": "angular momentum",
+                "text": "$ M^{-1}L^{-3}T^{4}A^{2} $",
                 "image": ""
             },
             "d": {
-                "text": "power",
+                "text": "$ M^{-1}L^{-3}T^{4}A $",
                 "image": ""
             },
             "correct": "b"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "Planck's constant has the dimension similar to",
+            "text": "The dimension of permittivity of free space $ \\epsilon_\\circ $ is",
             "image": ""
         },
         "subject": "Physics"
@@ -30,27 +30,167 @@
     {
         "answer": {
             "a": {
-                "text": "$ 2F_1 $",
+                "text": "Their heights will be same",
                 "image": ""
             },
             "c": {
-                "text": "$ F_1 $",
+                "text": "Their time of flight will be same",
                 "image": ""
             },
             "b": {
-                "text": "0",
+                "text": "Their range will be same",
                 "image": ""
             },
             "d": {
-                "text": "$ \\sqrt{2}F_1 $",
+                "text": "Their range will be different",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "Two particles are projected with same initial velocities at angle $ 30^{\\circ} $ and $ 60^{\\circ} $ with horizontal then",
+            "image": ""
+        },
+        "subject": "Physics"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "50.00%",
+                "image": ""
+            },
+            "c": {
+                "text": "125.00%",
+                "image": ""
+            },
+            "b": {
+                "text": "100.00%",
+                "image": ""
+            },
+            "d": {
+                "text": "150.00%",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "If the momentum of the body increases by 50% then its KE increases by",
+            "image": ""
+        },
+        "subject": "Physics"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "$ 30^{\\circ} $",
+                "image": ""
+            },
+            "c": {
+                "text": "$ tan^{-1}(0.5) $",
+                "image": ""
+            },
+            "b": {
+                "text": "$ 45^{\\circ} $",
+                "image": ""
+            },
+            "d": {
+                "text": "$ cos^{-1}(\\frac{1}{2}) $",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "A cyclist riding at a speed of 10 m/s takes a turn around a circular road of 10m. What is his inclination to the vertical?",
+            "image": ""
+        },
+        "subject": "Physics"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "11.2 km/s",
+                "image": ""
+            },
+            "c": {
+                "text": "5.6 km/s",
+                "image": ""
+            },
+            "b": {
+                "text": "44.8 km/s",
+                "image": ""
+            },
+            "d": {
+                "text": "22.4 km/s",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "Escape velocity from earth is 11.2 km/s. Another planet of same mass has radius $ \\frac{1}{4} $ times of Earth. What is the escape velocity from another planet?",
+            "image": ""
+        },
+        "subject": "Physics"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "water rises to a height 2 cm upward",
+                "image": ""
+            },
+            "c": {
+                "text": "water rises to full length of capillary but not overflow",
+                "image": ""
+            },
+            "b": {
+                "text": "water rises to a height 4 cm upward",
+                "image": ""
+            },
+            "d": {
+                "text": "water rises to whole length of capillary and overflow",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "A capillary tube of length 5cm and interior radius 0.1mm open on both sides is lower vertically into water in a vessel. If surface tension of water is 25 dyne/cm then",
+            "image": ""
+        },
+        "subject": "Physics"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "$ 40^{\\circ}c $",
+                "image": ""
+            },
+            "c": {
+                "text": "$ 80^{\\circ}c $",
+                "image": ""
+            },
+            "b": {
+                "text": "$ 50^{\\circ}c $",
+                "image": ""
+            },
+            "d": {
+                "text": "$ 0^{\\circ}c $",
                 "image": ""
             },
             "correct": "d"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "Resultant of the two forces $ F_1 $ and $ F_2 $ is $ F_1 $ and the resultant is at right angle to the force $ F_1 $, Then the force $ F_2 $ is equal to",
+            "text": "50 gm of ice at $ 0^{\\circ} $ c mixed with 50gm of water at $ 80^{\\circ}c $. The final temperature of the mixture will be",
             "image": ""
         },
         "subject": "Physics"
@@ -58,55 +198,27 @@
     {
         "answer": {
             "a": {
-                "text": "$ \\alpha g $",
+                "text": "25.00%",
                 "image": ""
             },
             "c": {
-                "text": "$ (\\alpha – 1)g $",
+                "text": "100.00%",
                 "image": ""
             },
             "b": {
-                "text": "$ g/\\alpha $",
+                "text": "50.00%",
                 "image": ""
             },
             "d": {
-                "text": "$ (1 - \\alpha)g $",
-                "image": ""
-            },
-            "correct": "d"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "What is the minimum acceleration of the fireman sliding down a fixed vertical rope for which breaking strength is $ \\alpha $ times his weight",
-            "image": ""
-        },
-        "subject": "Physics"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "decreases",
-                "image": ""
-            },
-            "c": {
-                "text": "remains constant",
-                "image": ""
-            },
-            "b": {
-                "text": "increases",
-                "image": ""
-            },
-            "d": {
-                "text": "variable",
+                "text": "150.00%",
                 "image": ""
             },
             "correct": "a"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "When air bubble rises to the surface of water from below, then P.E. of the bubble",
+            "text": "A carnot's engine works between $ 27^{\\circ}c $ and $ 127^{\\circ}c $. It's efficiency is",
             "image": ""
         },
         "subject": "Physics"
@@ -114,111 +226,27 @@
     {
         "answer": {
             "a": {
-                "text": "A",
+                "text": "$ \\frac{\\pi}{2} $",
                 "image": ""
             },
             "c": {
-                "text": "4A",
+                "text": "$ \\pi $",
                 "image": ""
             },
             "b": {
-                "text": "2A",
+                "text": "$ \\frac{\\pi}{4} $",
                 "image": ""
             },
             "d": {
-                "text": "zero",
-                "image": ""
-            },
-            "correct": "c"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "The distance moved by a particle in SHM in one time period is",
-            "image": ""
-        },
-        "subject": "Physics"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "$ \\frac{YS}{2} $",
-                "image": ""
-            },
-            "c": {
-                "text": "$ \\frac{2S^2}{Y} $",
-                "image": ""
-            },
-            "b": {
-                "text": "$ \\frac{S^2}{2Y} $",
-                "image": ""
-            },
-            "d": {
-                "text": "$ \\frac{S}{2Y} $",
-                "image": ""
-            },
-            "correct": "b"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "When an elastic material with Young's modulus 'Y' is subjected to stretching stress 'S', the elastic energy stored per unit volume of the material is",
-            "image": ""
-        },
-        "subject": "Physics"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "3/2 R",
-                "image": ""
-            },
-            "c": {
-                "text": "2R",
-                "image": ""
-            },
-            "b": {
-                "text": "5/2 R",
-                "image": ""
-            },
-            "d": {
-                "text": "4R",
-                "image": ""
-            },
-            "correct": "c"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "1 mole of Helium gas is mixed with 1 mole of Hydrogen gas. The molar specific heat of the mixture at constant volume is",
-            "image": ""
-        },
-        "subject": "Physics"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "proportional to $ '\\sqrt{T} $",
-                "image": ""
-            },
-            "c": {
-                "text": "proportional to $ T^2 $",
-                "image": ""
-            },
-            "b": {
-                "text": "proportional to T",
-                "image": ""
-            },
-            "d": {
-                "text": "zero",
+                "text": "$ \\frac{3\\pi}{4} $",
                 "image": ""
             },
             "correct": "a"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "The average speed of gas molecules in equilibrium at temperature T is",
+            "text": "Two sound waves are given by y = a sin(wt \u0013  kx) and y' = b cos(wt \u0013  kx). The phase difference is",
             "image": ""
         },
         "subject": "Physics"
@@ -226,27 +254,139 @@
     {
         "answer": {
             "a": {
-                "text": "I",
+                "text": "$ n_1 = n_2 $",
                 "image": ""
             },
             "c": {
-                "text": "$ 2\\sqrt{2} I $",
+                "text": "$ n_1 = \\frac{n_2}{2} $",
                 "image": ""
             },
             "b": {
-                "text": "2A",
+                "text": "$ n_1 = 2n_2 $",
                 "image": ""
             },
             "d": {
-                "text": "4I",
+                "text": "$ n_1 = 4n_2 $",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "If $ n_1 $ and $ n_2 $ be the resonant frequencies of pipe open at both ends and open at one end only vibrating in fundamental mode then",
+            "image": ""
+        },
+        "subject": "Physics"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "4",
+                "image": ""
+            },
+            "c": {
+                "text": "5",
+                "image": ""
+            },
+            "b": {
+                "text": "2",
+                "image": ""
+            },
+            "d": {
+                "text": "Infinity",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "If an object is placed symmetrically between 2 plane mirrors inclined at an angle of $ 72^{\\circ} $. Then the number of images will be",
+            "image": ""
+        },
+        "subject": "Physics"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "material of prism only",
+                "image": ""
+            },
+            "c": {
+                "text": "depends both on material and A",
+                "image": ""
+            },
+            "b": {
+                "text": "depends on A only",
+                "image": ""
+            },
+            "d": {
+                "text": "Neither on material or A",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "The power produced by a prism of small angle A depends on",
+            "image": ""
+        },
+        "subject": "Physics"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "$ - \\frac{Q}{2} $",
+                "image": ""
+            },
+            "c": {
+                "text": "-4Q",
+                "image": ""
+            },
+            "b": {
+                "text": "$ - \\frac{Q}{4} $",
+                "image": ""
+            },
+            "d": {
+                "text": "$  \\frac{Q}{2} $",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "A charge q is placed at the centre of the line joining two equal charges Q. The system of three charges will be in equilibrium if q is equal to",
+            "image": ""
+        },
+        "subject": "Physics"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "less than V",
+                "image": ""
+            },
+            "c": {
+                "text": "Between V and 2V",
+                "image": ""
+            },
+            "b": {
+                "text": "less than 2V",
+                "image": ""
+            },
+            "d": {
+                "text": "equal to V",
                 "image": ""
             },
             "correct": "d"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "Two sound waves of equal intensity I produce beats. The maximum intensity of sound produced in beats will be",
+            "text": "Two capacitors of charges $ Q_1 $ and $ Q_2 $ with different capacitances are charged to the same potential V. They are then connected by a wire. The resulting potential will be",
             "image": ""
         },
         "subject": "Physics"
@@ -254,83 +394,27 @@
     {
         "answer": {
             "a": {
-                "text": "409",
+                "text": "resistance",
                 "image": ""
             },
             "c": {
-                "text": "429",
+                "text": "charge",
                 "image": ""
             },
             "b": {
-                "text": "517",
+                "text": "potential",
                 "image": ""
             },
             "d": {
-                "text": "500",
-                "image": ""
-            },
-            "correct": "d "
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "A whistle giving out 450 Hz approaches a stationary observer at a speed of 33 m/s. The frequency heard by the observer in Hz is",
-            "image": ""
-        },
-        "subject": "Physics"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "½",
-                "image": ""
-            },
-            "c": {
-                "text": "$ 3/2 $",
-                "image": ""
-            },
-            "b": {
-                "text": "$ \\sqrt{3}/2 $",
-                "image": ""
-            },
-            "d": {
-                "text": "$ \\sqrt{3}",
-                "image": ""
-            },
-            "correct": "d"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "A ray of light strikes a glass plate at an angle of $ 60^o $. If the reflected and refracted rays are perpendicular to each other, the index of refraction of glass is",
-            "image": ""
-        },
-        "subject": "Physics"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "if the screen is far",
-                "image": ""
-            },
-            "c": {
-                "text": "wavelength of light is greater than slit",
-                "image": ""
-            },
-            "b": {
-                "text": "wavelength of light is smaller than slit",
-                "image": ""
-            },
-            "d": {
-                "text": "wavelength is very large",
+                "text": "self inductance",
                 "image": ""
             },
             "correct": "b"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "Diffraction is not seen in case",
+            "text": "The quantity of electricity analogous to temperature is",
             "image": ""
         },
         "subject": "Physics"
@@ -338,895 +422,167 @@
     {
         "answer": {
             "a": {
-                "text": "$ V= n^{1/3}V_o $",
+                "text": "$ 1:1 $",
                 "image": ""
             },
             "c": {
-                "text": "$ V= V_o $",
-                "image": ""
-            },
-            "b": {
-                "text": "$ V= n^{2/3}V_o $",
-                "image": ""
-            },
-            "d": {
-                "text": "$ V= n^{5/3}V_o $",
-                "image": ""
-            },
-            "correct": "b"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "If potential of one small drop is $ V_o $ and n each identical drops coalesce together then potential of large drop is",
-            "image": ""
-        },
-        "subject": "Physics"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "R = r/2",
-                "image": ""
-            },
-            "c": {
-                "text": "R = 2r",
-                "image": ""
-            },
-            "b": {
-                "text": "R = r",
-                "image": ""
-            },
-            "d": {
-                "text": "R = 4r",
-                "image": ""
-            },
-            "correct": "b"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "A battery of emf 'E' and internal resistance 'r' are used in a circuit with variable external resistance 'R', then the value of R for which power consumed is maximum is",
-            "image": ""
-        },
-        "subject": "Physics"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "$ 8 \\Omega $",
-                "image": ""
-            },
-            "c": {
-                "text": "$ 2 \\Omega $",
-                "image": ""
-            },
-            "b": {
-                "text": "$ 1 \\Omega $",
-                "image": ""
-            },
-            "d": {
-                "text": "$ 5 \\Omega $",
-                "image": ""
-            },
-            "correct": "b"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "A piece of wire of resistance $ 4 \\Omega $ is bent through $ 180^o $ at midpoint and two halves are twisted together, then their resistance is",
-            "image": ""
-        },
-        "subject": "Physics"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "0",
-                "image": ""
-            },
-            "c": {
-                "text": "$ \\pi/6 $",
-                "image": ""
-            },
-            "b": {
-                "text": "$ \\pi/3 $",
-                "image": ""
-            },
-            "d": {
-                "text": "$ \\pi/2 $",
-                "image": ""
-            },
-            "correct": "c"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "At a certain place, horizontal component is $ \\sqrt{3} $ times the vertical component. The angle of dip at this place is",
-            "image": ""
-        },
-        "subject": "Physics"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "0.1 eV",
-                "image": ""
-            },
-            "c": {
-                "text": "10 eV",
-                "image": ""
-            },
-            "b": {
-                "text": "1 eV",
-                "image": ""
-            },
-            "d": {
-                "text": "100 eV",
-                "image": ""
-            },
-            "correct": "c"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "Work done in carrying an electron across a potential difference of 10 V is",
-            "image": ""
-        },
-        "subject": "Physics"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "always move in the direction of B",
-                "image": ""
-            },
-            "c": {
-                "text": "always undergo circular motion",
-                "image": ""
-            },
-            "b": {
-                "text": "always move in the direction of E",
-                "image": ""
-            },
-            "d": {
-                "text": "passes undeflected",
-                "image": ""
-            },
-            "correct": "d"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "An electron enters a region where magnetic field (B) and electric field (E) are mutually perpendicular, then it will",
-            "image": ""
-        },
-        "subject": "Physics"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "$ 1: 1 $",
-                "image": ""
-            },
-            "c": {
-                "text": "$ 1: 2 $",
-                "image": ""
-            },
-            "b": {
-                "text": "$ 2\\sqrt{2}: 1 $",
-                "image": ""
-            },
-            "d": {
                 "text": "$ 2:1 $",
                 "image": ""
             },
-            "correct": "b"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "A proton and $ \\alpha $ particle are accelerated through same potential difference, The ratio of their de Broglie wavelength will be",
-            "image": ""
-        },
-        "subject": "Physics"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "conductivity of silicon increases",
-                "image": ""
-            },
-            "c": {
-                "text": "both a and b",
-                "image": ""
-            },
             "b": {
-                "text": "conductivity of silver decreases",
-                "image": ""
-            },
-            "d": {
-                "text": "conductivity of silicon decreases and that of silver increases",
-                "image": ""
-            },
-            "correct": "d"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "Silicon and silver both are cooled from $ 100^oC \\space to \\space 0^oC $, their conductivity changes as",
-            "image": ""
-        },
-        "subject": "Physics"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "number of protons",
-                "image": ""
-            },
-            "c": {
-                "text": "nature of spins of protons",
-                "image": ""
-            },
-            "b": {
-                "text": "molecular weight",
-                "image": ""
-            },
-            "d": {
-                "text": "nature of spin of electrons",
-                "image": ""
-            },
-            "correct": "c"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "Ortho and para hydrogen differ in the",
-            "image": ""
-        },
-        "subject": "Chemistry"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "$ CaCO_3 $",
-                "image": ""
-            },
-            "c": {
-                "text": "$ Al_2O_3 $",
-                "image": ""
-            },
-            "b": {
-                "text": "$ MgCO_3 $",
-                "image": ""
-            },
-            "d": {
-                "text": "$ Al(OH)_3 $",
-                "image": ""
-            },
-            "correct": "c"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "Which of the following is a component of Ruby?",
-            "image": ""
-        },
-        "subject": "Chemistry"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "Iodine",
-                "image": ""
-            },
-            "c": {
-                "text": "Magnesium",
-                "image": ""
-            },
-            "b": {
-                "text": "Bromine",
-                "image": ""
-            },
-            "d": {
-                "text": "Sodium",
-                "image": ""
-            },
-            "correct": "d"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "Chile saltpetre is an ore of",
-            "image": ""
-        },
-        "subject": "Chemistry"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "Iodine solution",
-                "image": ""
-            },
-            "c": {
-                "text": "Sodium Chloride",
-                "image": ""
-            },
-            "b": {
-                "text": "Chlorine water",
-                "image": ""
-            },
-            "d": {
-                "text": "Potassium iodide",
-                "image": ""
-            },
-            "correct": "b"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "Bromine can be liberated from KBr solution by",
-            "image": ""
-        },
-        "subject": "Chemistry"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "$ CO_2 $",
-                "image": ""
-            },
-            "c": {
-                "text": "$ SO_2 $",
-                "image": ""
-            },
-            "b": {
-                "text": "$ CO $",
-                "image": ""
-            },
-            "d": {
-                "text": "$ HCl $",
-                "image": ""
-            },
-            "correct": "c"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "Acidified $ K_2Cr_2O_7 $ turns green by",
-            "image": ""
-        },
-        "subject": "Chemistry"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "PbO",
-                "image": ""
-            },
-            "c": {
-                "text": "MgO",
-                "image": ""
-            },
-            "b": {
-                "text": "ZnO",
-                "image": ""
-            },
-            "d": {
-                "text": "$ Al_2O_3 $",
-                "image": ""
-            },
-            "correct": "c "
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "Which of the following oxide is not an amphoteric oxide?",
-            "image": ""
-        },
-        "subject": "Chemistry"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "6",
-                "image": ""
-            },
-            "c": {
-                "text": "10",
-                "image": ""
-            },
-            "b": {
-                "text": "8",
-                "image": ""
-            },
-            "d": {
-                "text": "12",
-                "image": ""
-            },
-            "correct": "b"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "How many electrons in Ca have $ l=0 $?",
-            "image": ""
-        },
-        "subject": "Chemistry"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "Isotopes",
-                "image": ""
-            },
-            "c": {
-                "text": "Isotones",
-                "image": ""
-            },
-            "b": {
-                "text": "Isobars",
-                "image": ""
-            },
-            "d": {
-                "text": "Isomers",
-                "image": ""
-            },
-            "correct": "c"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "$ ^{13}_6C \\space and \\space ^{14}_7N $ are",
-            "image": ""
-        },
-        "subject": "Chemistry"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "sublimation of dry ice",
-                "image": ""
-            },
-            "c": {
-                "text": "dissociation of $ H_2 $ molecules",
-                "image": ""
-            },
-            "b": {
-                "text": "melting of ice",
-                "image": ""
-            },
-            "d": {
-                "text": "condensation of $ NH_3 $",
-                "image": ""
-            },
-            "correct": "b"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "Which of the following process involves cleavage of H – bonds?",
-            "image": ""
-        },
-        "subject": "Chemistry"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "$ K^+F^- \\space and \\space H^+ $",
-                "image": ""
-            },
-            "c": {
-                "text": "$ K^+ \\space and \\space [HF_2]^- $",
-                "image": ""
-            },
-            "b": {
-                "text": "$ K^+F^- \\space and \\space HF $",
-                "image": ""
-            },
-            "d": {
-                "text": "$ [KHF]^+ \\space and \\space F^- $",
-                "image": ""
-            },
-            "correct": "c"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "KF combines with HF to form $ KHF_2 $. The compound contains species:",
-            "image": ""
-        },
-        "subject": "Chemistry"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "small cation and large anion",
-                "image": ""
-            },
-            "c": {
-                "text": "large cation and large anion",
-                "image": ""
-            },
-            "b": {
-                "text": "large cation and small anion",
-                "image": ""
-            },
-            "d": {
-                "text": "small cation and small anion",
-                "image": ""
-            },
-            "correct": "a"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "According to Fajan's rule, covalent bond is favoured by",
-            "image": ""
-        },
-        "subject": "Chemistry"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "Pauli's exclusion principle",
-                "image": ""
-            },
-            "c": {
-                "text": "Hund's rule of maximum multiplicity",
-                "image": ""
-            },
-            "b": {
-                "text": "Aufbau's principle",
-                "image": ""
-            },
-            "d": {
-                "text": "Heisenberg's uncertainty principle",
-                "image": ""
-            },
-            "correct": "c"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "“In a set of degenerate orbitals, the electrons distribute themselves to retain like spins as far as possible.” This statement is attributed to:",
-            "image": ""
-        },
-        "subject": "Chemistry"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "$ 12 \\times 10^{23} $",
-                "image": ""
-            },
-            "c": {
-                "text": "$ 12.04 \\times 10^{20} $",
-                "image": ""
-            },
-            "b": {
-                "text": "$ 6.023 \\times 10^{23} $",
-                "image": ""
-            },
-            "d": {
-                "text": "$ 12 \\times 10^{21} $",
-                "image": ""
-            },
-            "correct": "c"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "The no. of molecules in 36 mg of water is",
-            "image": ""
-        },
-        "subject": "Chemistry"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "$ 1:4 $",
-                "image": ""
-            },
-            "c": {
-                "text": "$ 1:16 $",
-                "image": ""
-            },
-            "b": {
-                "text": "$ 1:8 $",
+                "text": "$ 1:2 $",
                 "image": ""
             },
             "d": {
                 "text": "$ 4:1 $",
                 "image": ""
             },
-            "correct": "a"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "The rates of diffusion of $ O_2 $ and $ H_2 $ at same P and T are in the ratio",
-            "image": ""
-        },
-        "subject": "Chemistry"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "$ H_2O_2 $",
-                "image": ""
-            },
-            "c": {
-                "text": "$ OF_2 $",
-                "image": ""
-            },
-            "b": {
-                "text": "$ H_2O $",
-                "image": ""
-            },
-            "d": {
-                "text": "CO",
-                "image": ""
-            },
             "correct": "c"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "In which of the compound, oxygen has an oxidation state of +2?",
+            "text": "The magnetic field strength at a distance d from a short bar magnet in longitudional and transverse portion are in the ratio of",
             "image": ""
         },
-        "subject": "Chemistry"
+        "subject": "Physics"
     },
     {
         "answer": {
             "a": {
-                "text": "0.9 N",
+                "text": "$ 9300 A^{\\circ} $",
                 "image": ""
             },
             "c": {
-                "text": "0.5 N",
+                "text": "$ 4900 A^{\\circ} $",
                 "image": ""
             },
             "b": {
-                "text": "0.6 N",
+                "text": "$ 6200 A^{\\circ} $",
                 "image": ""
             },
             "d": {
-                "text": "0.4 N",
-                "image": ""
-            },
-            "correct": "c"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "100 mL of 0.3N HCL solution were mixed with 200 mL of 0.6N $ H_2SO_4 $ solution. The final acidic normality is",
-            "image": ""
-        },
-        "subject": "Chemistry"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "cathode to anode in solution",
-                "image": ""
-            },
-            "c": {
-                "text": "cathode to anode through internal supply",
-                "image": ""
-            },
-            "b": {
-                "text": "cathode to anode through external supply",
-                "image": ""
-            },
-            "d": {
-                "text": "anode to cathode through internal supply",
-                "image": ""
-            },
-            "correct": "b"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "In electrolytic cell, flow of electrons is from",
-            "image": ""
-        },
-        "subject": "Chemistry"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "-0.35 V",
-                "image": ""
-            },
-            "c": {
-                "text": "+1.17 V",
-                "image": ""
-            },
-            "b": {
-                "text": "-1.17 V",
-                "image": ""
-            },
-            "d": {
-                "text": "+0.35 V",
+                "text": "$ 3100 A^{\\circ} $",
                 "image": ""
             },
             "correct": "d"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "The values of $ E^{0}_{Zn/Zn^{2+}} $ = 0.76 V and that of $ E^{0}_{Fe^{2+}/Fe} $ = -0.41 V. The $ E^{0}_{cell} $ of the cell with net cell reaction is",
+            "text": "The UV photon is incident on a metal of photoelectric work function 2 eV and produces a photoelectron of enervy 2 eV. The wavelength associated with photon is",
             "image": ""
         },
-        "subject": "Chemistry"
+        "subject": "Physics"
     },
     {
         "answer": {
             "a": {
-                "text": "first",
+                "text": "$ \\frac{eV}{he} $",
                 "image": ""
             },
             "c": {
-                "text": "third",
+                "text": "$ \\frac{h}{eV} $",
                 "image": ""
             },
             "b": {
-                "text": "second",
+                "text": "$ \\frac{hc}{eV} $",
                 "image": ""
             },
             "d": {
-                "text": "zero",
+                "text": "$ \\frac{h}{Vc} $",
                 "image": ""
             },
             "correct": "b"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "The order of reaction which obeys $ t_{\\frac{1}{2}} $ = 1/$ K_a $ is",
+            "text": "The maximum wavelength of emitted X-ray photon is given by ( h, c and e have their usual meanings and V is the accelerating potential)",
             "image": ""
         },
-        "subject": "Chemistry"
+        "subject": "Physics"
     },
     {
         "answer": {
             "a": {
-                "text": "$ \\triangle $ E = 0",
+                "text": "$ \\lambda = \\frac{36}{5R} $",
                 "image": ""
             },
             "c": {
-                "text": "$ \\triangle $ W =- $ \\triangle $ E",
+                "text": "$ \\lambda = \\frac{5}{R} $",
                 "image": ""
             },
             "b": {
-                "text": "$ \\triangle $ W =$ \\triangle $ E",
+                "text": "$ \\lambda = \\frac{5R}{36} $",
                 "image": ""
             },
             "d": {
-                "text": "$ \\triangle $ W = 0",
-                "image": ""
-            },
-            "correct": "c"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "In an adiabatic expansion of ideal gas",
-            "image": ""
-        },
-        "subject": "Chemistry"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "Electro negativity",
-                "image": ""
-            },
-            "c": {
-                "text": "Ionization potential",
-                "image": ""
-            },
-            "b": {
-                "text": "Electron affinity",
-                "image": ""
-            },
-            "d": {
-                "text": "Reducing power",
+                "text": "$ \\lambda = \\frac{R}{6} $",
                 "image": ""
             },
             "correct": "a"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "The ability of an atom to attract shared electron pair towards itself is called",
+            "text": "If the electron hydrogen atom jumps from third orbit to the second orbit then wavelength of emitted radiation is given by",
             "image": ""
         },
-        "subject": "Chemistry"
+        "subject": "Physics"
     },
     {
         "answer": {
             "a": {
-                "text": "Chain isomerism",
+                "text": "positively charged",
                 "image": ""
             },
             "c": {
-                "text": "Metamerism",
+                "text": "negatively charged",
                 "image": ""
             },
             "b": {
-                "text": "Geometrical isomerism",
+                "text": "uncharged",
                 "image": ""
             },
             "d": {
-                "text": "Position isomerism",
-                "image": ""
-            },
-            "correct": "c"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "Which one of the following is not found in alkenes?",
-            "image": ""
-        },
-        "subject": "Chemistry"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "alc. KOH",
-                "image": ""
-            },
-            "c": {
-                "text": "Na",
-                "image": ""
-            },
-            "b": {
-                "text": "Zn dust + alc",
-                "image": ""
-            },
-            "d": {
-                "text": "KOH (aq)",
+                "text": "may be +ve or -ve",
                 "image": ""
             },
             "correct": "b"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "The reagent used in dehalogenation process is ",
+            "text": "A p-type semi-conductor is",
             "image": ""
         },
-        "subject": "Chemistry"
+        "subject": "Physics"
     },
     {
         "answer": {
             "a": {
-                "text": "Alkaline permanganate solution",
+                "text": "Schweitzer reagent",
                 "image": ""
             },
             "c": {
-                "text": "Neutral permanganate solution",
+                "text": "Barfoed's reagent",
                 "image": ""
             },
             "b": {
-                "text": "Acidified permanganate solution",
+                "text": "Etard's reagent",
                 "image": ""
             },
             "d": {
-                "text": "Aqueous bromine solution",
+                "text": "Milon's reagent",
                 "image": ""
             },
             "correct": "a"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "Baeyer's reagent is",
+            "text": "$ [Cu(NH_3)_4]SO_4 $ is called",
             "image": ""
         },
         "subject": "Chemistry"
@@ -1234,167 +590,27 @@
     {
         "answer": {
             "a": {
-                "text": "Ethanol",
+                "text": "quick lime",
                 "image": ""
             },
             "c": {
-                "text": "Ethanal",
+                "text": "caustic potash sticks",
                 "image": ""
             },
             "b": {
-                "text": "Benzophenone",
+                "text": "soda lime",
                 "image": ""
             },
             "d": {
-                "text": "Acetophenone",
-                "image": ""
-            },
-            "correct": "b"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "Iodoform test is not given by",
-            "image": ""
-        },
-        "subject": "Chemistry"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "Vic-dihalide",
-                "image": ""
-            },
-            "c": {
-                "text": "Propane",
-                "image": ""
-            },
-            "b": {
-                "text": "Gem-dihalide",
-                "image": ""
-            },
-            "d": {
-                "text": "Propene",
-                "image": ""
-            },
-            "correct": "a"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "Which is formed by the addition of halogen to alkenes?",
-            "image": ""
-        },
-        "subject": "Chemistry"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "zinc and alkyl halide",
-                "image": ""
-            },
-            "c": {
-                "text": "magnesium and alkane",
-                "image": ""
-            },
-            "b": {
-                "text": "magnesium and alkyl halide",
-                "image": ""
-            },
-            "d": {
-                "text": "magnesium and aromatic hydrocarbon",
-                "image": ""
-            },
-            "correct": "b"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "Grignard reagent is prepared by the reaction between",
-            "image": ""
-        },
-        "subject": "Chemistry"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "$ CH_3CHO $",
-                "image": ""
-            },
-            "c": {
-                "text": "$ CH_3COOH $",
-                "image": ""
-            },
-            "b": {
-                "text": "$ CH_3CH_2CONH_2 $",
-                "image": ""
-            },
-            "d": {
-                "text": "$ CH_3CH_2NHOH $",
-                "image": ""
-            },
-            "correct": "c"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "Identify the product z in the series $ CH_3CN \\space \\space \\underrightarrow{Na/C_2H_5OH} \\space \\space X \\space \\space \\underrightarrow{HNO_2} \\space \\space Y \\space \\space \\underrightarrow{[O]} \\space \\space Z $",
-            "image": ""
-        },
-        "subject": "Chemistry"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "$ CH_3CHO $",
-                "image": ""
-            },
-            "c": {
-                "text": "$ CH_3CH_2CHO $",
-                "image": ""
-            },
-            "b": {
-                "text": "HCHO",
-                "image": ""
-            },
-            "d": {
-                "text": "All",
-                "image": ""
-            },
-            "correct": "b"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "Which aldehyde cannot be obtained by Rosenmund's reaction",
-            "image": ""
-        },
-        "subject": "Chemistry"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "Carbohydrates",
-                "image": ""
-            },
-            "c": {
-                "text": "Nucleic acids",
-                "image": ""
-            },
-            "b": {
-                "text": "Lipids",
-                "image": ""
-            },
-            "d": {
-                "text": "Proteins",
+                "text": "concentrated sulphuric acid",
                 "image": ""
             },
             "correct": "d"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "Presence of peptide bond is the characteristic feature of",
+            "text": "Chlorine gas can be dried by passing over",
             "image": ""
         },
         "subject": "Chemistry"
@@ -1402,394 +618,30 @@
     {
         "answer": {
             "a": {
-                "text": "squamous",
+                "text": "Ca and $ CO_2 $",
                 "image": ""
             },
             "c": {
-                "text": "columnar",
+                "text": "CaO",
                 "image": ""
             },
             "b": {
-                "text": "ciliateo",
+                "text": "$ CaCO_3 $",
                 "image": ""
             },
             "d": {
-                "text": "cuboidal",
-                "image": ""
-            },
-            "correct": "c"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "Stratum germinativum is an epithelial of the type",
-            "image": ""
-        },
-        "subject": "Biology"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "Pericardium",
-                "image": ""
-            },
-            "c": {
-                "text": "Eudocardium",
-                "image": ""
-            },
-            "b": {
-                "text": "Myocardium",
-                "image": ""
-            },
-            "d": {
-                "text": "Stomach",
+                "text": "$ CaC_2 $",
                 "image": ""
             },
             "correct": "d"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "Cardiac glands are present in",
+            "text": "On heating quick lime with coke in an electric furnace we get",
             "image": ""
         },
-        "subject": "Biology"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "Residual volume",
-                "image": ""
-            },
-            "c": {
-                "text": "Vital capacity",
-                "image": ""
-            },
-            "b": {
-                "text": "Tidal volume",
-                "image": ""
-            },
-            "d": {
-                "text": "Lung volume",
-                "image": ""
-            },
-            "correct": "c"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "The greatest quantity of air that can be expired after a maximum inspiratory effort is its",
-            "image": ""
-        },
-        "subject": "Biology"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "ER",
-                "image": ""
-            },
-            "c": {
-                "text": "Nucleus",
-                "image": ""
-            },
-            "b": {
-                "text": "Mitochondria",
-                "image": ""
-            },
-            "d": {
-                "text": "Golgi comples",
-                "image": ""
-            },
-            "correct": "c"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "Mammalian erythrocytes have short life span due to absence of",
-            "image": ""
-        },
-        "subject": "Biology"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "adrenaline",
-                "image": ""
-            },
-            "c": {
-                "text": "norepinephrine",
-                "image": ""
-            },
-            "b": {
-                "text": "Acetylcholine",
-                "image": ""
-            },
-            "d": {
-                "text": "Dopamine",
-                "image": ""
-            },
-            "correct": "b"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "Vagus nerve slows down heart beat due to secretion of ",
-            "image": ""
-        },
-        "subject": "Biology"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "Aldosterone",
-                "image": ""
-            },
-            "c": {
-                "text": "Aldosterone, ADH and testosterone",
-                "image": ""
-            },
-            "b": {
-                "text": "Aldosterone and ADH",
-                "image": ""
-            },
-            "d": {
-                "text": "ADH",
-                "image": ""
-            },
-            "correct": "b"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "Volume of urine is regulated by",
-            "image": ""
-        },
-        "subject": "Biology"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "smell",
-                "image": ""
-            },
-            "c": {
-                "text": "hearing",
-                "image": ""
-            },
-            "b": {
-                "text": "vision",
-                "image": ""
-            },
-            "d": {
-                "text": "speech",
-                "image": ""
-            },
-            "correct": "b"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "Occipital lobe is connected with ",
-            "image": ""
-        },
-        "subject": "Biology"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "Conjunctiva",
-                "image": ""
-            },
-            "c": {
-                "text": "Blind Spot",
-                "image": ""
-            },
-            "b": {
-                "text": "Iris",
-                "image": ""
-            },
-            "d": {
-                "text": "Forex centralis",
-                "image": ""
-            },
-            "correct": "d"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "Area of retina having maximum no of cones is",
-            "image": ""
-        },
-        "subject": "Biology"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "addison's disease",
-                "image": ""
-            },
-            "c": {
-                "text": "Cushing's disease",
-                "image": ""
-            },
-            "b": {
-                "text": "Aeromegaly",
-                "image": ""
-            },
-            "d": {
-                "text": "Simmond's disease",
-                "image": ""
-            },
-            "correct": "d"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "Complete failure of anterior lobe of pituitary causes",
-            "image": ""
-        },
-        "subject": "Biology"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "innominate vein",
-                "image": ""
-            },
-            "c": {
-                "text": "subclavian vein",
-                "image": ""
-            },
-            "b": {
-                "text": "Ext. jugular vein",
-                "image": ""
-            },
-            "d": {
-                "text": "post caval vein",
-                "image": ""
-            },
-            "correct": "c"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "Brachial and musculo-cutaneous veins in frog unite to form",
-            "image": ""
-        },
-        "subject": "Biology"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "Hepatic portal system",
-                "image": ""
-            },
-            "c": {
-                "text": "Three renacava",
-                "image": ""
-            },
-            "b": {
-                "text": "Renal portal system",
-                "image": ""
-            },
-            "d": {
-                "text": "Hepatic vein",
-                "image": ""
-            },
-            "correct": "b"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "Venous system of frog differs from that of mammal in presence of",
-            "image": ""
-        },
-        "subject": "Biology"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "8-12",
-                "image": ""
-            },
-            "c": {
-                "text": "1-4",
-                "image": ""
-            },
-            "b": {
-                "text": "17-21",
-                "image": ""
-            },
-            "d": {
-                "text": "14-26",
-                "image": ""
-            },
-            "correct": "c"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "In earthworm, septa are abent in segments",
-            "image": ""
-        },
-        "subject": "Biology"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "RBCs",
-                "image": ""
-            },
-            "c": {
-                "text": "Signet-ring bophozoites",
-                "image": ""
-            },
-            "b": {
-                "text": "Liver cells",
-                "image": ""
-            },
-            "d": {
-                "text": "Gametocytes of plasmodium",
-                "image": ""
-            },
-            "correct": "a"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "Schuffner's dots, in patient of malaria, are found in ",
-            "image": ""
-        },
-        "subject": "Biology"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "1.5",
-                "image": ""
-            },
-            "c": {
-                "text": "6.8",
-                "image": ""
-            },
-            "b": {
-                "text": "3.5",
-                "image": ""
-            },
-            "d": {
-                "text": "7.4",
-                "image": ""
-            },
-            "correct": "c"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "pH of saliva is about",
-            "image": ""
-        },
-        "subject": "Biology"
+        "subject": "Chemistry"
     },
     {
         "answer": {
@@ -1798,263 +650,739 @@
                 "image": ""
             },
             "c": {
-                "text": "$ O_2 $",
+                "text": "$ N_2H_2 $",
                 "image": ""
             },
             "b": {
-                "text": "$ H_2 $",
+                "text": "$ N_2H_4 $",
                 "image": ""
             },
             "d": {
-                "text": "$ CH_4 $",
+                "text": "$ N_3H $",
+                "image": ""
+            },
+            "correct": "d"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "An acidic hydride of nitrogen is",
+            "image": ""
+        },
+        "subject": "Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "$ Ca^{2+} $ and $ Na^{+} $",
+                "image": ""
+            },
+            "c": {
+                "text": "$ Ca^{2+} $ and $ Mg^{2+} $",
+                "image": ""
+            },
+            "b": {
+                "text": "$ Mg^{2+} $ and $ K^{+} $",
+                "image": ""
+            },
+            "d": {
+                "text": "$ Zn^{2+} $ and $ Ba^{+} $",
                 "image": ""
             },
             "correct": "c"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "Which was absent in atmosphere at the time of origin of life",
+            "text": "The hardness of water is due to ------------------ metal ions.",
             "image": ""
         },
-        "subject": "Biology"
+        "subject": "Chemistry"
     },
     {
         "answer": {
             "a": {
-                "text": "Homo erectus",
+                "text": "HF",
                 "image": ""
             },
             "c": {
-                "text": "Ramapitheeus",
+                "text": "Hbr",
                 "image": ""
             },
             "b": {
-                "text": "H. Sapiens neanderthalensis",
+                "text": "Hcl",
                 "image": ""
             },
             "d": {
-                "text": "Australopitheeus",
-                "image": ""
-            },
-            "correct": "a"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "Which is direct ancestor of Homo Sapiens?",
-            "image": ""
-        },
-        "subject": "Biology"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "ciliated epithelium",
-                "image": ""
-            },
-            "c": {
-                "text": "cuboidal epithelium",
-                "image": ""
-            },
-            "b": {
-                "text": "columnar epithelium",
-                "image": ""
-            },
-            "d": {
-                "text": "simple squamous epithelium",
+                "text": "HI",
                 "image": ""
             },
             "correct": "d"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "Endothelium lining of blood vessel is formed of",
+            "text": "5 g each of the following gases at $ 87^{\\circ}c $ and 750mm pressure are taken. Which of them will have the least volume?",
             "image": ""
         },
-        "subject": "Biology"
+        "subject": "Chemistry"
     },
     {
         "answer": {
             "a": {
-                "text": "B-cell",
+                "text": "H",
                 "image": ""
             },
             "c": {
-                "text": "Antigen presenting cells",
+                "text": "$ He^{+} $",
                 "image": ""
             },
             "b": {
-                "text": "T-cells",
+                "text": "Be",
                 "image": ""
             },
             "d": {
-                "text": "T-helper cells",
-                "image": ""
-            },
-            "correct": "d"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "HIV attacks",
-            "image": ""
-        },
-        "subject": "Biology"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "Rauwolfia",
-                "image": ""
-            },
-            "c": {
-                "text": "Papaver",
-                "image": ""
-            },
-            "b": {
-                "text": "Erythroxylon",
-                "image": ""
-            },
-            "d": {
-                "text": "Encalyptus",
+                "text": "$ Li^{2+} $",
                 "image": ""
             },
             "correct": "b"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "Cocaine is obtained from",
+            "text": "For which species,  Bohr's theory does not apply?",
             "image": ""
         },
-        "subject": "Biology"
+        "subject": "Chemistry"
     },
     {
         "answer": {
             "a": {
-                "text": "Cleavage stage",
+                "text": "single electron",
                 "image": ""
             },
             "c": {
-                "text": "Blartula",
+                "text": "single electron with parallel spin",
                 "image": ""
             },
             "b": {
-                "text": "Morula",
+                "text": "paired electron",
                 "image": ""
             },
             "d": {
-                "text": "Gastrula",
+                "text": "single electron with opposite spin",
                 "image": ""
             },
             "correct": "d"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "Morphogenetic movements occur in",
+            "text": "A covalent bond is formed between the atoms by the overlapping of orbitals containing",
             "image": ""
         },
-        "subject": "Biology"
+        "subject": "Chemistry"
     },
     {
         "answer": {
             "a": {
-                "text": "Pectoral gridle",
+                "text": " $ 3.01 \\times 10^{24} $",
                 "image": ""
             },
             "c": {
-                "text": "skull",
+                "text": " $ 2.01 \\times 10^{24} $",
                 "image": ""
             },
             "b": {
-                "text": "pelvic gridle",
+                "text": " $ 4.06 \\times 10^{24} $",
                 "image": ""
             },
             "d": {
-                "text": "limb",
+                "text": " $ 6.02 \\times 10^{24} $",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "The total number of protons in 10 g of calcium carbonate is",
+            "image": ""
+        },
+        "subject": "Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "1.52",
+                "image": ""
+            },
+            "c": {
+                "text": "19",
+                "image": ""
+            },
+            "b": {
+                "text": "0.095",
+                "image": ""
+            },
+            "d": {
+                "text": "9",
+                "image": ""
+            },
+            "correct": "d"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "1.52 g of hydroxide of a metal on ignition give 0.995 g of oxide. The equivalent weight of metal is",
+            "image": ""
+        },
+        "subject": "Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "oxidizing agent",
+                "image": ""
+            },
+            "c": {
+                "text": "bleaching agent",
+                "image": ""
+            },
+            "b": {
+                "text": "reducing agent",
+                "image": ""
+            },
+            "d": {
+                "text": "both oxidizing and bleaching agent",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "In the reaction of $ O_3 $ and $ H_2O_2 $, the later acts as ",
+            "image": ""
+        },
+        "subject": "Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "> 1",
+                "image": ""
+            },
+            "c": {
+                "text": "$ = 1 $",
+                "image": ""
+            },
+            "b": {
+                "text": "< 1",
+                "image": ""
+            },
+            "d": {
+                "text": "1836",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "The ratio of the masses of proton and neutron are",
+            "image": ""
+        },
+        "subject": "Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "$ 10^{-5} $",
+                "image": ""
+            },
+            "c": {
+                "text": "$ 10^{-3} $",
+                "image": ""
+            },
+            "b": {
+                "text": "$ 10^{-4} $",
+                "image": ""
+            },
+            "d": {
+                "text": "$ 10^{-2} $",
+                "image": ""
+            },
+            "correct": "d"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "Degree of dissociation of 0.1N $ CH_3COOH $ ($ K_{acid} = 10^{-5} $ ) is",
+            "image": ""
+        },
+        "subject": "Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "1",
+                "image": ""
+            },
+            "c": {
+                "text": "$ \\frac{1}{2} $",
+                "image": ""
+            },
+            "b": {
+                "text": "0",
+                "image": ""
+            },
+            "d": {
+                "text": "infinity",
+                "image": ""
+            },
+            "correct": "d"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "If uncertainity in position of electron is zero, uncertainty in its movement would be",
+            "image": ""
+        },
+        "subject": "Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "$ Ohm^{-1}.cm^{-1} $",
+                "image": ""
+            },
+            "c": {
+                "text": "$ Ohm^{-1}.cm $",
+                "image": ""
+            },
+            "b": {
+                "text": "Ohm. Cm",
+                "image": ""
+            },
+            "d": {
+                "text": "$ Ohm.cm^{-1} $",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "Unit of specific conductance is",
+            "image": ""
+        },
+        "subject": "Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "< 1",
+                "image": ""
+            },
+            "c": {
+                "text": "> 1",
+                "image": ""
+            },
+            "b": {
+                "text": "0",
+                "image": ""
+            },
+            "d": {
+                "text": "1",
+                "image": ""
+            },
+            "correct": "d"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "Compressibility factor for ideal gas is",
+            "image": ""
+        },
+        "subject": "Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "$ 10^{4} $",
+                "image": ""
+            },
+            "c": {
+                "text": "$ 10^{2} $",
+                "image": ""
+            },
+            "b": {
+                "text": "$ 10^{-4} $",
+                "image": ""
+            },
+            "d": {
+                "text": "$ 10^{-2} $",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "The pH value of a solution of NaOH is 10. Assuming complete dissociation, the value of the concentration of $ OH^{-} $ is",
+            "image": ""
+        },
+        "subject": "Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "$ H_2 \\space + \\space I_2 \\space \\rightleftharpoons \\space 2HI $",
+                "image": ""
+            },
+            "c": {
+                "text": "$ N_3 \\space + \\space 3H_2 \\space \\rightleftharpoons \\space 2NH_3 $",
+                "image": ""
+            },
+            "b": {
+                "text": "$ PCl_5 \\space \\rightleftharpoons \\space PCl_3 \\space + \\space Cl_2 $",
+                "image": ""
+            },
+            "d": {
+                "text": "$ N_2 \\space + \\space O_2 \\space \\rightleftharpoons \\space 2NO $",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "Reaction favoured by low pressure is",
+            "image": ""
+        },
+        "subject": "Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "zero",
+                "image": ""
+            },
+            "c": {
+                "text": "2",
+                "image": ""
+            },
+            "b": {
+                "text": "1",
+                "image": ""
+            },
+            "d": {
+                "text": "3",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "If a reaction with $ t_{\\frac{1}{2}} $ = 69.3 second, has a rate constant $ 10^{-2} $ per second, the order is ",
+            "image": ""
+        },
+        "subject": "Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "state of reactants and products",
+                "image": ""
+            },
+            "c": {
+                "text": "different intermediate reaction",
+                "image": ""
+            },
+            "b": {
+                "text": "nature of reactants and products",
+                "image": ""
+            },
+            "d": {
+                "text": "initial and final enthalpy change of reaction",
                 "image": ""
             },
             "correct": "c"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "Parietal bone is found in",
+            "text": "The enthalpy change of a reaction does not depend on",
             "image": ""
         },
-        "subject": "Biology"
+        "subject": "Chemistry"
     },
     {
         "answer": {
             "a": {
-                "text": "Xerodes",
+                "text": "$ \\triangle $ H = 0",
                 "image": ""
             },
             "c": {
-                "text": "Terrestrial mammals",
+                "text": "$ \\triangle $ V = 0",
                 "image": ""
             },
             "b": {
-                "text": "Aquatia mammals",
+                "text": "$ \\triangle $ S = 0",
                 "image": ""
             },
             "d": {
-                "text": "Scansorials",
+                "text": "$ \\triangle $ G = 0",
+                "image": ""
+            },
+            "correct": "d"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "During a solid $ \\rightleftharpoons $ liquid, transition at the melting point",
+            "image": ""
+        },
+        "subject": "Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "HCL gas + anhydrous $ ZnCl_{2} $",
+                "image": ""
+            },
+            "c": {
+                "text": "$ PX_5 $",
+                "image": ""
+            },
+            "b": {
+                "text": "HBR( 48%) + conc. $ H_2SO_4 $",
+                "image": ""
+            },
+            "d": {
+                "text": "$ SOCl_2 $ /Pyridine",
+                "image": ""
+            },
+            "correct": "d"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "In Darzen's process for preparation of alkyl halide from alcohol, the reagent used is",
+            "image": ""
+        },
+        "subject": "Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "phenyl nitrile",
+                "image": ""
+            },
+            "c": {
+                "text": "benzyl nitrile",
+                "image": ""
+            },
+            "b": {
+                "text": "benzene nitrile",
+                "image": ""
+            },
+            "d": {
+                "text": "phenyl cyanide",
                 "image": ""
             },
             "correct": "b"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "Integument without hair and oil glands is related to",
+            "text": "IUPAC name of $ C_6H_5CN $ is",
             "image": ""
         },
-        "subject": "Biology"
+        "subject": "Chemistry"
     },
     {
         "answer": {
             "a": {
-                "text": "sponges",
+                "text": "raney Ni",
                 "image": ""
             },
             "c": {
-                "text": "Sea-urchin",
+                "text": "Pd",
                 "image": ""
             },
             "b": {
-                "text": "Sea-anemone",
+                "text": "Anhy. $ AlCl_3 $",
                 "image": ""
             },
             "d": {
-                "text": "hydra",
+                "text": "Lindlar's catalyst",
+                "image": ""
+            },
+            "correct": "d"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "Alkynes can be reduced to alkenes by hydrogen in presence of",
+            "image": ""
+        },
+        "subject": "Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "alkanal",
+                "image": ""
+            },
+            "c": {
+                "text": "alkanes",
+                "image": ""
+            },
+            "b": {
+                "text": "alkanol",
+                "image": ""
+            },
+            "d": {
+                "text": "alkoxy alkane",
+                "image": ""
+            },
+            "correct": "d"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "Alkyl halide on treatment with a suspension of $ Ag_2O $ (moist in ether), gives",
+            "image": ""
+        },
+        "subject": "Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "acetaldehyde",
+                "image": ""
+            },
+            "c": {
+                "text": "ether",
+                "image": ""
+            },
+            "b": {
+                "text": "ketone",
+                "image": ""
+            },
+            "d": {
+                "text": "carboxylic acid",
                 "image": ""
             },
             "correct": "a"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "Canal system is characteristic of",
+            "text": "Acetal is produced by reacting alcohol in the presence of dry HCL with",
             "image": ""
         },
-        "subject": "Biology"
+        "subject": "Chemistry"
     },
     {
         "answer": {
             "a": {
-                "text": "Hydrowa",
+                "text": "acetamide",
                 "image": ""
             },
             "c": {
-                "text": "Anthowa",
+                "text": "ethylamine",
                 "image": ""
             },
             "b": {
-                "text": "Scyphowa",
+                "text": "acetic acid",
+                "image": ""
+            },
+            "d": {
+                "text": "$ C_2H_5OH $",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "When acetamide is hydrolysed by boiling with acid, the product formed is",
+            "image": ""
+        },
+        "subject": "Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "aniline sulphate",
+                "image": ""
+            },
+            "c": {
+                "text": "sulphanilic acid",
+                "image": ""
+            },
+            "b": {
+                "text": "benzene sulphonic acid",
+                "image": ""
+            },
+            "d": {
+                "text": "none",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "Aniline on heating with conc. $ H_2SO_4 $ at 460 K gives",
+            "image": ""
+        },
+        "subject": "Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "chemically inactive form of sugar",
+                "image": ""
+            },
+            "c": {
+                "text": "mixture of glucose and sucrose",
+                "image": ""
+            },
+            "b": {
+                "text": "equimolar mixture of glucose and fructose",
+                "image": ""
+            },
+            "d": {
+                "text": "a variety of cane sugar",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "Invert sugar is",
+            "image": ""
+        },
+        "subject": "Chemistry"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "Xylenol + Terpineol",
+                "image": ""
+            },
+            "c": {
+                "text": "Cresol + Ethanol",
+                "image": ""
+            },
+            "b": {
+                "text": "Chloroxylenol + Terpineol",
                 "image": ""
             },
             "d": {
@@ -2063,122 +1391,38 @@
             },
             "correct": "b"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "Telly fishes belong to class",
+            "text": "Dettol consists of",
             "image": ""
         },
-        "subject": "Biology"
+        "subject": "Chemistry"
     },
     {
         "answer": {
             "a": {
-                "text": "Porifera",
+                "text": "Ascaris",
                 "image": ""
             },
             "c": {
-                "text": "Coelentrata",
+                "text": "Taenia",
                 "image": ""
             },
             "b": {
-                "text": "Protozoa",
+                "text": "Fasciola",
                 "image": ""
             },
             "d": {
-                "text": "Platyhelminthesis",
-                "image": ""
-            },
-            "correct": "c"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "Both extracellular and intracellular digestion is found in",
-            "image": ""
-        },
-        "subject": "Biology"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "Phallic gland",
-                "image": ""
-            },
-            "c": {
-                "text": "Utricular gland",
-                "image": ""
-            },
-            "b": {
-                "text": "Mushroom gland",
-                "image": ""
-            },
-            "d": {
-                "text": "Collarated gland",
-                "image": ""
-            },
-            "correct": "d"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "Which is not found in male cockroach?",
-            "image": ""
-        },
-        "subject": "Biology"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "White ants",
-                "image": ""
-            },
-            "c": {
-                "text": "Bed bug",
-                "image": ""
-            },
-            "b": {
-                "text": "Locusts",
-                "image": ""
-            },
-            "d": {
-                "text": "Mosquitoes",
-                "image": ""
-            },
-            "correct": "a"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "Which is social inseet?",
-            "image": ""
-        },
-        "subject": "Biology"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "Aves",
-                "image": ""
-            },
-            "c": {
-                "text": "Reptile",
-                "image": ""
-            },
-            "b": {
-                "text": "Amphibia",
-                "image": ""
-            },
-            "d": {
-                "text": "Pisces",
+                "text": "Wuchereria",
                 "image": ""
             },
             "correct": "b"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "Salamander is member of ",
+            "text": "Which of the following parasite shows alternation of generation and alteration of host in its life cycle?",
             "image": ""
         },
         "subject": "Biology"
@@ -2186,27 +1430,251 @@
     {
         "answer": {
             "a": {
-                "text": "Cephalochordata",
+                "text": "Kidneys",
                 "image": ""
             },
             "c": {
+                "text": "Tracheae",
+                "image": ""
+            },
+            "b": {
+                "text": "Malphigian tubules",
+                "image": ""
+            },
+            "d": {
+                "text": "Malphigian corpuscles",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "Respiratory organs of cockroach and other insects are",
+            "image": ""
+        },
+        "subject": "Biology"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "Ectoderm and endoderm",
+                "image": ""
+            },
+            "c": {
+                "text": "only endoderm",
+                "image": ""
+            },
+            "b": {
+                "text": "only ectoderm",
+                "image": ""
+            },
+            "d": {
+                "text": "ectoderm, endoderm and mesoderm",
+                "image": ""
+            },
+            "correct": "d"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "During gastrula, frog's embryo is differentiated into",
+            "image": ""
+        },
+        "subject": "Biology"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "ovary",
+                "image": ""
+            },
+            "c": {
+                "text": "fallopian tube",
+                "image": ""
+            },
+            "b": {
+                "text": "uterus",
+                "image": ""
+            },
+            "d": {
+                "text": "vagina",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "Fertilization of ovum takes place in rabbit, man and other placental mammals in",
+            "image": ""
+        },
+        "subject": "Biology"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "Dorsal vessel to ventral vessel",
+                "image": ""
+            },
+            "c": {
+                "text": "Dorsal vessel to sub-neural vessel",
+                "image": ""
+            },
+            "b": {
+                "text": "Dorsal vessel to sub-oesophageal vessel",
+                "image": ""
+            },
+            "d": {
+                "text": "Lateral oesophageal vessel to sub-neural vessel",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "Lateral oesophageal heart in earthworm connect",
+            "image": ""
+        },
+        "subject": "Biology"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "skin",
+                "image": ""
+            },
+            "c": {
+                "text": "nail",
+                "image": ""
+            },
+            "b": {
+                "text": "teeth",
+                "image": ""
+            },
+            "d": {
+                "text": "hair",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "Meissner's corpuscles are located in",
+            "image": ""
+        },
+        "subject": "Biology"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "balance only",
+                "image": ""
+            },
+            "c": {
+                "text": "both balance and hearing",
+                "image": ""
+            },
+            "b": {
+                "text": "hearing only",
+                "image": ""
+            },
+            "d": {
+                "text": "perception of color",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "Cochlea is mainly responsible for",
+            "image": ""
+        },
+        "subject": "Biology"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "silver fish",
+                "image": ""
+            },
+            "c": {
+                "text": "Dog fish",
+                "image": ""
+            },
+            "b": {
+                "text": "Jelly fish",
+                "image": ""
+            },
+            "d": {
+                "text": "Devil fish",
+                "image": ""
+            },
+            "correct": "d"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "Which one is included in cephalopoda?",
+            "image": ""
+        },
+        "subject": "Biology"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "spicules",
+                "image": ""
+            },
+            "c": {
+                "text": "canal system",
+                "image": ""
+            },
+            "b": {
+                "text": "shape of choanocytes",
+                "image": ""
+            },
+            "d": {
+                "text": "Ascocytes",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "Classification of phylum porifera is primarily based on",
+            "image": ""
+        },
+        "subject": "Biology"
+    },
+    {
+        "answer": {
+            "a": {
                 "text": "Fishes",
                 "image": ""
             },
+            "c": {
+                "text": "Amphibians",
+                "image": ""
+            },
             "b": {
-                "text": "Urochrondata",
+                "text": "Birds",
                 "image": ""
             },
             "d": {
-                "text": "Amphibia",
+                "text": "Mammals",
                 "image": ""
             },
             "correct": "b"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "Retrogressive metamorphosis is found in",
+            "text": "Uric acid is the main nitrogenous products in",
             "image": ""
         },
         "subject": "Biology"
@@ -2214,27 +1682,111 @@
     {
         "answer": {
             "a": {
-                "text": "Diaphragm",
+                "text": "Evolutionary convergence",
                 "image": ""
             },
             "c": {
-                "text": "vivipary",
+                "text": "Progressive evolution",
                 "image": ""
             },
             "b": {
-                "text": "Protuted Serotum",
+                "text": "Evolutionary divergence",
                 "image": ""
             },
             "d": {
-                "text": "Mammary glands",
+                "text": "Retrogressive evolution",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "Unrelated animals have become adopted to similar environment; This is called",
+            "image": ""
+        },
+        "subject": "Biology"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "Analogous",
+                "image": ""
+            },
+            "c": {
+                "text": "vestigal",
+                "image": ""
+            },
+            "b": {
+                "text": "Homologous",
+                "image": ""
+            },
+            "d": {
+                "text": "Atavistic",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "Wings of bats and insects are",
+            "image": ""
+        },
+        "subject": "Biology"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "Herbivorous",
+                "image": ""
+            },
+            "c": {
+                "text": "Carnivorous",
+                "image": ""
+            },
+            "b": {
+                "text": "Omnivorous",
+                "image": ""
+            },
+            "d": {
+                "text": "Fungivorous",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "Cro-magnon man was",
+            "image": ""
+        },
+        "subject": "Biology"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "P. virax",
+                "image": ""
+            },
+            "c": {
+                "text": "P. malariae",
+                "image": ""
+            },
+            "b": {
+                "text": "P. orale",
+                "image": ""
+            },
+            "d": {
+                "text": "P. falciparum",
                 "image": ""
             },
             "correct": "d"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "Whate is mammal because it has",
+            "text": "\u001c Maurer's dots\u001d  are found in",
             "image": ""
         },
         "subject": "Biology"
@@ -2242,27 +1794,55 @@
     {
         "answer": {
             "a": {
-                "text": "DNA",
+                "text": "Progesterone",
                 "image": ""
             },
             "c": {
-                "text": "Cell membrane",
+                "text": "FSH",
                 "image": ""
             },
             "b": {
-                "text": "Ribosome",
+                "text": "LH",
                 "image": ""
             },
             "d": {
-                "text": "Cell wall",
+                "text": "Estradiol",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "The name of the harmone which facilitates growth of ovarian follicle is",
+            "image": ""
+        },
+        "subject": "Biology"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "Incisor and Molar",
+                "image": ""
+            },
+            "c": {
+                "text": "Premolar and molar",
+                "image": ""
+            },
+            "b": {
+                "text": "Canine and molar",
+                "image": ""
+            },
+            "d": {
+                "text": "Incisor and premolar",
                 "image": ""
             },
             "correct": "d"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "Mycoplasma differs from bacteria in the absence of",
+            "text": "Diastema is present between",
             "image": ""
         },
         "subject": "Biology"
@@ -2270,27 +1850,55 @@
     {
         "answer": {
             "a": {
-                "text": "Mucor",
+                "text": "Rt. and Lt. Pelvic veins",
                 "image": ""
             },
             "c": {
-                "text": "Spitogyra",
+                "text": "Rt. and Lt. Femoral veins",
                 "image": ""
             },
             "b": {
-                "text": "Saccharomyces",
+                "text": "Rt. and Lt. Sciatic veins",
                 "image": ""
             },
             "d": {
-                "text": "Chlamydomonas",
+                "text": "Rt. and Lt. Dorsolumbar veins",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "Anterior abdominal vein in frog is formed by the union of",
+            "image": ""
+        },
+        "subject": "Biology"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "Pila",
+                "image": ""
+            },
+            "c": {
+                "text": "Unio",
+                "image": ""
+            },
+            "b": {
+                "text": "Paramecium",
+                "image": ""
+            },
+            "d": {
+                "text": "Hirudinaria",
                 "image": ""
             },
             "correct": "b"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "The organism which has the property of changing sugar m to alcohol ",
+            "text": "Fiter feeding is found in",
             "image": ""
         },
         "subject": "Biology"
@@ -2298,27 +1906,27 @@
     {
         "answer": {
             "a": {
-                "text": "Branched unclullar",
+                "text": "Olfacto-receptor",
                 "image": ""
             },
             "c": {
-                "text": "Unbranched multicellular",
+                "text": "Gustato-receptor",
                 "image": ""
             },
             "b": {
-                "text": "Branched mutillation",
+                "text": "Photo-receptor",
                 "image": ""
             },
             "d": {
-                "text": "Unbranched uniicellular",
+                "text": "Thigmo-receptor",
                 "image": ""
             },
-            "correct": ""
+            "correct": "b"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "Rhizoid in Marchendra are",
+            "text": "\u001c Phoasome\u001d  in earthworm is in connection with",
             "image": ""
         },
         "subject": "Biology"
@@ -2326,27 +1934,391 @@
     {
         "answer": {
             "a": {
-                "text": "swimming archegonia",
+                "text": "large spline",
                 "image": ""
             },
             "c": {
-                "text": "independent gametophytes",
+                "text": "Large centrum",
                 "image": ""
             },
             "b": {
-                "text": "Swimming antherozorth",
+                "text": "odontoid process",
                 "image": ""
             },
             "d": {
-                "text": "independent sporophytes",
+                "text": "Vertebra-arterial canals",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "The peculiarity of second cervical vertebrae is",
+            "image": ""
+        },
+        "subject": "Biology"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "+ve geotaxis",
+                "image": ""
+            },
+            "c": {
+                "text": "mentotaxis",
+                "image": ""
+            },
+            "b": {
+                "text": "-ve geotaxis",
+                "image": ""
+            },
+            "d": {
+                "text": "Mnemotaxis",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "Ephyra larva of some coelenterates swims away from sea-bed is",
+            "image": ""
+        },
+        "subject": "Biology"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "Fossorial",
+                "image": ""
+            },
+            "c": {
+                "text": "Arboreal",
+                "image": ""
+            },
+            "b": {
+                "text": "Aquatic",
+                "image": ""
+            },
+            "d": {
+                "text": "Cursorial",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "Chameleons have the adaption type called",
+            "image": ""
+        },
+        "subject": "Biology"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "sSecretes more bile",
+                "image": ""
+            },
+            "c": {
+                "text": "Accumulates excess of fat",
+                "image": ""
+            },
+            "b": {
+                "text": "Stores excess of glycogen",
+                "image": ""
+            },
+            "d": {
+                "text": "forms more plasma protein",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "In alcoholies liver gets damaged as it",
+            "image": ""
+        },
+        "subject": "Biology"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "Dies",
+                "image": ""
+            },
+            "c": {
+                "text": "Encysts",
+                "image": ""
+            },
+            "b": {
+                "text": "Moves toward cathode",
+                "image": ""
+            },
+            "d": {
+                "text": "moves towards anode",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "In weak electrical field paramecium",
+            "image": ""
+        },
+        "subject": "Biology"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "increase in size",
+                "image": ""
+            },
+            "c": {
+                "text": "decrease in size",
+                "image": ""
+            },
+            "b": {
+                "text": "increase in number",
+                "image": ""
+            },
+            "d": {
+                "text": "decrease in number",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "At high altitude RBC of human blood will",
+            "image": ""
+        },
+        "subject": "Biology"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "Ascorbic acid",
+                "image": ""
+            },
+            "c": {
+                "text": "Aspartic acid",
+                "image": ""
+            },
+            "b": {
+                "text": "Glutamic acid",
+                "image": ""
+            },
+            "d": {
+                "text": "Enolic acid",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "Vitamin C is chemically",
+            "image": ""
+        },
+        "subject": "Biology"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "Gestational period",
+                "image": ""
+            },
+            "c": {
+                "text": "Labour period",
+                "image": ""
+            },
+            "b": {
+                "text": "Menstrual period",
+                "image": ""
+            },
+            "d": {
+                "text": "none of above",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "The time period between fertilization and parturition is",
+            "image": ""
+        },
+        "subject": "Biology"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "Cuboidal epithelium",
+                "image": ""
+            },
+            "c": {
+                "text": "Squamous epithelium",
+                "image": ""
+            },
+            "b": {
+                "text": "Ciliated epithelium",
+                "image": ""
+            },
+            "d": {
+                "text": "Columnar epithelium",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "Inner layer of heart and blood vessels is composed of",
+            "image": ""
+        },
+        "subject": "Biology"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "Heterodont",
+                "image": ""
+            },
+            "c": {
+                "text": "Thecodont",
+                "image": ""
+            },
+            "b": {
+                "text": "Aerodont",
+                "image": ""
+            },
+            "d": {
+                "text": "Pleurodont",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "Teeth in frog are",
+            "image": ""
+        },
+        "subject": "Biology"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "Secretin",
+                "image": ""
+            },
+            "c": {
+                "text": "Gastrin",
+                "image": ""
+            },
+            "b": {
+                "text": "secretin and cholecystokinin",
+                "image": ""
+            },
+            "d": {
+                "text": "Enterogastrone",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "Harmone involved in discharge of pancreatic juice and contraction of gall bladder in mammal is",
+            "image": ""
+        },
+        "subject": "Biology"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "Compositae",
+                "image": ""
+            },
+            "c": {
+                "text": "Malvaceae",
+                "image": ""
+            },
+            "b": {
+                "text": "Mimosaceae",
+                "image": ""
+            },
+            "d": {
+                "text": "Solanaceae",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "Inferior ovary is present in",
+            "image": ""
+        },
+        "subject": "Biology"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "Chloroplast",
+                "image": ""
+            },
+            "c": {
+                "text": "Chloroplast and Mitochondria",
+                "image": ""
+            },
+            "b": {
+                "text": "Mitochondria",
+                "image": ""
+            },
+            "d": {
+                "text": "Chloroplast, mitochondria and nucleus",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "ATP synthesis occurs in",
+            "image": ""
+        },
+        "subject": "Biology"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "There are 4 neck canal cells",
+                "image": ""
+            },
+            "c": {
+                "text": "There is 1 neck canal cell with 1 nucleus",
+                "image": ""
+            },
+            "b": {
+                "text": "There are 3 neck canal cells",
+                "image": ""
+            },
+            "d": {
+                "text": "There is 1 neck canal cell with 2 nucleus",
                 "image": ""
             },
             "correct": "d"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "A term differs from moss in having",
+            "text": "Which is true regarding archegonium of fern?",
             "image": ""
         },
         "subject": "Biology"
@@ -2354,27 +2326,27 @@
     {
         "answer": {
             "a": {
-                "text": "neck and all",
+                "text": "Unilocular",
                 "image": ""
             },
             "c": {
-                "text": "both a and b",
+                "text": "Trilocular",
                 "image": ""
             },
             "b": {
-                "text": "Venter end call",
+                "text": "Bilocular",
                 "image": ""
             },
             "d": {
-                "text": "venter cell",
+                "text": "Pentalocular",
                 "image": ""
             },
             "correct": "c"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "Archegonia of gymnosperm lack",
+            "text": "An ovary with ovules on three parietal placenta is called",
             "image": ""
         },
         "subject": "Biology"
@@ -2382,55 +2354,55 @@
     {
         "answer": {
             "a": {
-                "text": "phellogen",
+                "text": "Gracilaria",
                 "image": ""
             },
             "c": {
-                "text": "peridum",
+                "text": "Batrachospermum",
                 "image": ""
             },
             "b": {
-                "text": "phellem",
-                "image": ""
-            },
-            "d": {
-                "text": "phellodem",
-                "image": ""
-            },
-            "correct": "c"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "The corc cambium corc and secondary cortex are collectively called",
-            "image": ""
-        },
-        "subject": "Biology"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "osmosis in cytoplasm",
-                "image": ""
-            },
-            "c": {
-                "text": "osmotic tissue",
-                "image": ""
-            },
-            "b": {
-                "text": "transpiration pull",
+                "text": "Gelidium",
                 "image": ""
             },
             "d": {
                 "text": "None",
                 "image": ""
             },
+            "correct": "c"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "A red algae which is not red in color",
+            "image": ""
+        },
+        "subject": "Biology"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "simpler walls",
+                "image": ""
+            },
+            "c": {
+                "text": "thicker walls",
+                "image": ""
+            },
+            "b": {
+                "text": "complex walls",
+                "image": ""
+            },
+            "d": {
+                "text": "wall without lipid",
+                "image": ""
+            },
             "correct": "b"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "Active absorption of water is affective by",
+            "text": "Gram negative bacteria differs from gram positive bacteria in having ",
             "image": ""
         },
         "subject": "Biology"
@@ -2438,27 +2410,27 @@
     {
         "answer": {
             "a": {
-                "text": "oxysomes",
+                "text": "leptotene",
                 "image": ""
             },
             "c": {
-                "text": "chlorophyll",
+                "text": "pachytene",
                 "image": ""
             },
             "b": {
-                "text": "quantasomes",
+                "text": "zygotene",
                 "image": ""
             },
             "d": {
-                "text": "grana",
+                "text": "diplotene",
                 "image": ""
             },
             "correct": "b"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "The functional unit of chloroplast is ",
+            "text": "Synapsis occurs in which stage?",
             "image": ""
         },
         "subject": "Biology"
@@ -2466,27 +2438,27 @@
     {
         "answer": {
             "a": {
-                "text": "Tatum ",
+                "text": "activate chloroplast",
                 "image": ""
             },
             "c": {
-                "text": "Kollicker",
+                "text": "Reduce $ CO_2 $",
                 "image": ""
             },
             "b": {
-                "text": "Palade",
+                "text": "splitting of water",
                 "image": ""
             },
             "d": {
-                "text": "de Dude",
+                "text": "absorption of light",
                 "image": ""
             },
-            "correct": ""
+            "correct": "c"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "Lysosome was discovered by",
+            "text": "Which is not occuring in light reaction?",
             "image": ""
         },
         "subject": "Biology"
@@ -2494,27 +2466,27 @@
     {
         "answer": {
             "a": {
-                "text": "Integument",
+                "text": "negative water potential",
                 "image": ""
             },
             "c": {
-                "text": "chalaza ",
+                "text": "positive water potential",
                 "image": ""
             },
             "b": {
-                "text": "micropyle",
+                "text": "more negative water potential",
                 "image": ""
             },
             "d": {
-                "text": "mesocards",
+                "text": "more positive water potential",
                 "image": ""
             },
             "correct": "a"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "Mesogamy is the entry of pollen through",
+            "text": "Addition of water to pure water causes",
             "image": ""
         },
         "subject": "Biology"
@@ -2522,27 +2494,111 @@
     {
         "answer": {
             "a": {
-                "text": "Andropous",
+                "text": "Kolliker",
                 "image": ""
             },
             "c": {
-                "text": "orthotropous",
+                "text": "Benda",
                 "image": ""
             },
             "b": {
-                "text": "amphitropous",
+                "text": "Moran and Fernandys",
                 "image": ""
             },
             "d": {
-                "text": "campylotropous",
+                "text": "Altman",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "$ F_0 \\space - \\space F_1 $ are discovered by",
+            "image": ""
+        },
+        "subject": "Biology"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "Gongrosira",
+                "image": ""
+            },
+            "c": {
+                "text": "Chantransia",
+                "image": ""
+            },
+            "b": {
+                "text": "Torula",
+                "image": ""
+            },
+            "d": {
+                "text": "Palmella",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "Yeast like budding of oidia in Mucer is called",
+            "image": ""
+        },
+        "subject": "Biology"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "Bacteria, fungi and green manure",
+                "image": ""
+            },
+            "c": {
+                "text": "Bacteria, fungi and composite manure",
+                "image": ""
+            },
+            "b": {
+                "text": "Bacteria, fungi and cyanobacteria",
+                "image": ""
+            },
+            "d": {
+                "text": "Bacteria, fungi and phosphorus",
+                "image": ""
+            },
+            "correct": "b"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "Which of the following are mostly used bio-fertilizers?",
+            "image": ""
+        },
+        "subject": "Biology"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "$ 3:1 $",
+                "image": ""
+            },
+            "c": {
+                "text": "9:3:3:1",
+                "image": ""
+            },
+            "b": {
+                "text": "1:3:3:1",
+                "image": ""
+            },
+            "d": {
+                "text": "$ 9:3:4 $",
                 "image": ""
             },
             "correct": "c"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "Ovules symmetrized and straight with chdara at the base and micropyle at the tip are called",
+            "text": "In Mendel's dihybrid cross, the ratio obtained in $ F_2 $ generation is",
             "image": ""
         },
         "subject": "Biology"
@@ -2550,27 +2606,27 @@
     {
         "answer": {
             "a": {
-                "text": "fertilization of two eggs in embryo sac",
+                "text": "ssDNA",
                 "image": ""
             },
             "c": {
-                "text": "fusion of two male gamets with polar nucleus",
+                "text": "ssRNA",
                 "image": ""
             },
             "b": {
-                "text": "fusion of one male gamete with egg and other with secondary nuclei",
+                "text": "dsDNA",
                 "image": ""
             },
             "d": {
-                "text": "fusion of one male gamete with secondary nucleus.",
+                "text": "dsRNA",
                 "image": ""
             },
             "correct": "b"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "Double fertilisation is the",
+            "text": "Small pox virus is",
             "image": ""
         },
         "subject": "Biology"
@@ -2578,27 +2634,27 @@
     {
         "answer": {
             "a": {
-                "text": "mesophytes",
+                "text": "clone",
                 "image": ""
             },
             "c": {
-                "text": "xerophytes",
+                "text": "inbreed",
                 "image": ""
             },
             "b": {
-                "text": "halophytes",
+                "text": "outbreed",
                 "image": ""
             },
             "d": {
-                "text": "hydrophytes",
+                "text": "pureline",
                 "image": ""
             },
-            "correct": "b"
+            "correct": "d"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "Respiratory roots ( pneumato phores) are present in ",
+            "text": "Progeny of self fertilized homozygous plant is",
             "image": ""
         },
         "subject": "Biology"
@@ -2606,27 +2662,27 @@
     {
         "answer": {
             "a": {
-                "text": "syconus",
+                "text": "secondary productivity",
                 "image": ""
             },
             "c": {
-                "text": "balausta",
+                "text": "both of these",
                 "image": ""
             },
             "b": {
-                "text": "sorosis",
+                "text": "Tertiary productivity",
                 "image": ""
             },
             "d": {
-                "text": "pepo",
+                "text": "net productivity",
                 "image": ""
             },
             "correct": "a"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "Fruit developing from spike inflorencence is ",
+            "text": "The rate of storage at consumer level is",
             "image": ""
         },
         "subject": "Biology"
@@ -2634,27 +2690,55 @@
     {
         "answer": {
             "a": {
-                "text": "potato",
+                "text": "Patau's syndrome",
                 "image": ""
             },
             "c": {
-                "text": "soyabean",
+                "text": "Turner's syndrome",
                 "image": ""
             },
             "b": {
-                "text": "suggarcane",
+                "text": "Klinefelter's syndrome",
                 "image": ""
             },
             "d": {
-                "text": "cotton plant",
+                "text": "Down's syndrome",
+                "image": ""
+            },
+            "correct": "c"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "Which one disease differs from others?",
+            "image": ""
+        },
+        "subject": "Biology"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "Nucellus and antipodal cells",
+                "image": ""
+            },
+            "c": {
+                "text": "Endosperm and embryo",
+                "image": ""
+            },
+            "b": {
+                "text": "Antipodal cells and egg cell",
+                "image": ""
+            },
+            "d": {
+                "text": "Nucellus and integument",
                 "image": ""
             },
             "correct": "d"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "Gossypium hirsutum is the botanked name of ",
+            "text": "Which of the following represent female sporophyte structures?",
             "image": ""
         },
         "subject": "Biology"
@@ -2662,139 +2746,55 @@
     {
         "answer": {
             "a": {
-                "text": "A + C = G + T",
+                "text": "cashew nut",
                 "image": ""
             },
             "c": {
-                "text": "A + G = C + T",
+                "text": "ground nut",
                 "image": ""
             },
             "b": {
-                "text": "A + T = G + C",
+                "text": "coconut",
                 "image": ""
             },
             "d": {
-                "text": "None",
+                "text": "betelnut",
+                "image": ""
+            },
+            "correct": "a"
+        },
+        "exam_code": 302,
+        "marks": 1,
+        "question": {
+            "text": "Which of the following is true nut?",
+            "image": ""
+        },
+        "subject": "Biology"
+    },
+    {
+        "answer": {
+            "a": {
+                "text": "dust",
+                "image": ""
+            },
+            "c": {
+                "text": "sulphur dioxide and nitrogen dioxide",
+                "image": ""
+            },
+            "b": {
+                "text": "pesticides",
+                "image": ""
+            },
+            "d": {
+                "text": "carbon particle",
                 "image": ""
             },
             "correct": "c"
         },
-        "exam_code": 301,
+        "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "What is Chargaff's law?",
-            "image": ""
-        },
-        "subject": "Biology"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "gene mutation",
-                "image": ""
-            },
-            "c": {
-                "text": "Linkage",
-                "image": ""
-            },
-            "b": {
-                "text": "Crossing over",
-                "image": ""
-            },
-            "d": {
-                "text": "Dihybrid cross",
-                "image": ""
-            },
-            "correct": "b"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "Interchange of parts of chromatids of a pair of chromosome is known as",
-            "image": ""
-        },
-        "subject": "Biology"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "callus",
-                "image": ""
-            },
-            "c": {
-                "text": "Embryoid",
-                "image": ""
-            },
-            "b": {
-                "text": "callose",
-                "image": ""
-            },
-            "d": {
-                "text": "Embryon",
-                "image": ""
-            },
-            "correct": "c"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "The embryos produced from somatic cells in tissue culture are known as.",
-            "image": ""
-        },
-        "subject": "Biology"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "gene theory",
-                "image": ""
-            },
-            "c": {
-                "text": "genetic engineering",
-                "image": ""
-            },
-            "b": {
-                "text": "Gene mutation",
-                "image": ""
-            },
-            "d": {
-                "text": "DNA finger prints",
-                "image": ""
-            },
-            "correct": "c"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "DNA recombiant technology is also called",
-            "image": ""
-        },
-        "subject": "Biology"
-    },
-    {
-        "answer": {
-            "a": {
-                "text": "pneumatophores",
-                "image": ""
-            },
-            "c": {
-                "text": "floating roots",
-                "image": ""
-            },
-            "b": {
-                "text": "assimilatory roots",
-                "image": ""
-            },
-            "d": {
-                "text": "mycorrhizal roots",
-                "image": ""
-            },
-            "correct": "d"
-        },
-        "exam_code": 301,
-        "marks": 1,
-        "question": {
-            "text": "The association of fungus and roots of higher plants are called",
+            "text": "Acid rain is due to pollution of",
             "image": ""
         },
         "subject": "Biology"
