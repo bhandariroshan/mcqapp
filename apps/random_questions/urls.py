@@ -5,7 +5,7 @@ urlpatterns = patterns(
 
     '',
 
-    url(r'^questions',
-        'apps.random_questions.views.generate_random_questions',
-        name='generate_random_questions'),
+    url(r'^ioe-questions',
+        'apps.random_questions.views.generate_random_ioe_questions',
+        name='generate_random_ioe_questions'),
 )

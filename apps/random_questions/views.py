@@ -5,14 +5,14 @@ from django.http import HttpResponse
 from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi
 
 
-def generate_random_questions(request):
+def generate_random_ioe_questions(request):
     '''
     The function generates generates a random question set by randomly picking
     question from all exam sets
     '''
     exammodel_api = ExammodelApi()
     exam_sets = exammodel_api.find_all_exammodel(
-        {'exam_family': 'DPS'})
+        {'exam_family': 'DPS', "exam_category": "BE-IOE"})
     question_sets = []
     for each_set in exam_sets:
         question_api = QuestionApi()
