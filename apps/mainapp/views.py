@@ -128,10 +128,6 @@ def androidapk(request):
 
 
 def dashboard(request):
-    try:
-        a = 1/0
-    except:
-        raise Http404
     if request.user.is_authenticated():
         sign_up_sign_in(request, android_user=False)
         return HttpResponseRedirect('/')
