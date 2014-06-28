@@ -81,10 +81,18 @@
                     <p><strong>Date: </strong>When ever you like in a single sitting</p>
                     <p><strong>Time: </strong>Anytime</p>
                     {% if not eachExam.subscribed %}
-                    <p><strong>Cost: </strong>Rs. 30 (<a href="/coupon/">coupon code</a> entry required)</p>
+                      {% if eachExam.exam_category == 'BE-IOE' %}
+                        <p><strong>Cost: </strong>Rs. 30 (<a href="/coupon/">coupon code</a> entry required)</p>
+                        {% else %}
+                          <p><strong>Cost: </strong>Rs. 20 (<a href="/coupon/">coupon code</a> entry required)</p>
+                      {% endif %}
                     {% endif %}
                      <div class="medium primary btn pretty button-margin" >
+                        {% if eachExam.exam_category == 'BE-IOE' %}
                           <a id="giveDPSExamBtn" href="{% if eachExam.subscribed %}/dps/{{eachExam.code}}/{% else %}#{% endif %}" {% if not eachExam.subscribed %} onclick="attempt_exam('{{eachExam.code}}')" {% endif %}>Give Exam</a>
+                          {% else %}
+                            <a id="giveDPSExamBtn" href="{% if eachExam.subscribed %}/iom/{{eachExam.code}}/{% else %}#{% endif %}" {% if not eachExam.subscribed %} onclick="attempt_exam('{{eachExam.code}}')" {% endif %}>Give Exam</a>
+                        {% endif %}
                       </div>
                   </div>
                 </article>
@@ -157,17 +165,33 @@
     <div class="four columns" style="margin-top: 8%;">
       <section class="twelve columns">
         <div class="twelve columns">
+        {% if not 'iom' in request.path %}
+          <li class="warning alert">
+            <h2 style="text-align: center; font-size: 40px; text-decoration:underline;">  Practice IOM  </h2>
+            <div class="medium primary btn pretty" style="margin-left: 21%;margin-top: 3%;">
+                <a href="/iom/" id="" style="width: 150px;"> Practice IOM </a>
+            </div>              
+          </li>
+          {% else %}
+            <li class="warning alert">
+              <h2 style="text-align: center; font-size: 40px;text-decoration:underline;" >  Practice IOE  </h2>          
+            <div class="medium primary btn pretty" style="margin-left: 21%;margin-top: 3%; ">
+                <a href="/" id="" style="width: 150px;"> Practice IOE </a>
+            </div>              
+            </li>
+        </div>      
+        {% endif %}
+
+        {% if not 'iom' in request.path %}
           <li class="warning alert">
             <h2 style="text-align: center; font-size: 40px; text-decoration:underline;">  Notice </h2>
-            <p>Our system is similar to Institute of Engineering's system. You can now take practice tests and competitive test from our system. 
-            </p>
-            <p>Rush now and get coupons from PROGRESS BOOKSHOP outside  PEA building and  start practicing in system similar to pulchowk.
-            </p> <!-- 
+            <p>Our system is similar to Institute of Engineering's computerized system. You can get coupons from <a href="/distributors/"><distributors</a> and start practicing questions.
+            </p><!-- 
             <div class="medium primary btn pretty" >
                 <a href="#" id="enterSubsCoupon" style="width: 150px;" onclick="attempt_exam('subs')">Enter here</a>
             </div> -->              
           </li>
-        </div>      
+        {% endif %}
         {% if not subscribed %}
           <div class="twelve columns">
             <li class="success alert">
@@ -180,7 +204,7 @@
         {% endif %}
 
           <div class="twelve columns ui-corner-all">
-            <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fmeroanswer&amp;width&amp;height=190&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true&amp;appId=238848396304709" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:290px;" allowTransparency="true"></iframe>
+              <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fmeroanswer&amp;width&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true&amp;appId=238848396304709" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:290px;" allowTransparency="true"></iframe>
           </div>
 
         <!--         {% if not student_category %}
