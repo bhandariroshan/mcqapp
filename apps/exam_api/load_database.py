@@ -48,7 +48,7 @@ def load_examset_in_database(request):
         #  "exam_category": "BE-IOE",
         #  "exam_duration": 60,
         #  "exam_family": 'DPS'
-        #  },         
+        #  },
         #  {"exam_name": "IOE Practice Exam 3",
         #  "exam_date": 1399978500,
         #  "image": "exam.jpg",
@@ -72,8 +72,8 @@ def load_examset_in_database(request):
          "exam_category": "MBBS-IOM",
          "exam_duration": 120,
          "exam_family": 'DPS'
-         },        
-         {"exam_name": "IOM Practice Exam 2",
+         },
+        {"exam_name": "IOM Practice Exam 2",
          "exam_date": 1403912850,
          "image": "exam.jpg",
          "exam_code": 302,
@@ -84,6 +84,7 @@ def load_examset_in_database(request):
     ]
     exam_model.insert_new_model(exam_dict)
     return HttpResponse("Exam model saved in the database")
+
 
 @user_passes_test(lambda u: u.is_superuser)
 def load_modelquestion_in_database(request):
@@ -99,13 +100,13 @@ def load_modelquestion_in_database(request):
     #     question_api = QuestionApi()
     #     question_api.insert_new_question(json_obj)
 
-    for var in range(301,303):
-        f = open('apps/exam_api/' + str(var) +'.json', 'rb')
+    for var in range(301, 302):
+        f = open('apps/exam_api/' + str(var) + '.json', 'rb')
         json_obj = json.loads(f.read())
         for i, x in enumerate(json_obj):
             x['question_number'] = i + 1
         question_api = QuestionApi()
-        question_api.insert_new_question(json_obj)        
+        question_api.insert_new_question(json_obj)
         print var, " saved"
         return HttpResponse("Question saved in the database")
 
