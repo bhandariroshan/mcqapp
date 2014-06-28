@@ -246,7 +246,7 @@
         "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "Two sound waves are given by y = a sin(wt \u0013  kx) and y' = b cos(wt \u0013  kx). The phase difference is",
+            "text": "Two sound waves are given by y = a sin(wt - kx) and y' = b cos(wt -  kx). The phase difference is",
             "image": ""
         },
         "subject": "Physics"
@@ -470,7 +470,7 @@
         "exam_code": 302,
         "marks": 1,
         "question": {
-            "text": "The UV photon is incident on a metal of photoelectric work function 2 eV and produces a photoelectron of enervy 2 eV. The wavelength associated with photon is",
+            "text": "The UV photon is incident on a metal of photoelectric work function 2 eV and produces a photoelectron of energy 2 eV. The wavelength associated with photon is",
             "image": ""
         },
         "subject": "Physics"
@@ -478,7 +478,7 @@
     {
         "answer": {
             "a": {
-                "text": "$ \\frac{eV}{he} $",
+                "text": "$ \\frac{eV}{hc} $",
                 "image": ""
             },
             "c": {
@@ -706,11 +706,11 @@
                 "image": ""
             },
             "c": {
-                "text": "Hbr",
+                "text": "HBr",
                 "image": ""
             },
             "b": {
-                "text": "Hcl",
+                "text": "HCl",
                 "image": ""
             },
             "d": {
@@ -2018,7 +2018,7 @@
     {
         "answer": {
             "a": {
-                "text": "sSecretes more bile",
+                "text": "Secretes more bile",
                 "image": ""
             },
             "c": {
