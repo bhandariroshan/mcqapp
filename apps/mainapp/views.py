@@ -41,43 +41,31 @@ def sign_up_sign_in(request, android_user=False):
     from apps.mainapp.classes.Userprofile import UserProfile        
     user_profile_object = UserProfile()
     user = user_profile_object.get_user_by_username(request.user.username)
-    try:
-        valid_exams = user['valid_exam']
-    except:
-        # valid_exams=[100, 101]
-        valid_exams=[]
 
-    try:
-        coupons = user['coupons']
-    except:
-        coupons = []
-    try:
-        subscription_type = user['subscription_type']
-    except:
-        subscription_type = []
-    try:
-        join_time = user['join_time']
-    except:
-        join_time = datetime.datetime.now()
-        join_time = time.mktime(join_time.timetuple())
+    if user != None:
+        return None
 
+    # valid_exams=[100, 101]
+    valid_exams=[]
+
+    
+    coupons = []
+    
+    subscription_type = []
+    join_time = datetime.datetime.now()
+    join_time = time.mktime(join_time.timetuple())
+
+    from facepy import GraphAPI
     try:
-        profile_image = user['profile_image']
-    except:
-        from facepy import GraphAPI
         graph = GraphAPI(access_token)
         det = graph.get(social_account.uid + '/picture/?redirect=0&height=300&type=normal&width=300')
         profile_image = det['data']['url']
+    except:
+        profile_image = ""
 
 
-    try:
-        student_category = user['student_category']
-    except:
-        student_category = 'IDP'
-    try:
-        student_category_set = user['student_category_set']
-    except:
-        student_category_set = 0
+    student_category = 'IDP'
+    student_category_set = 0
 
     data = {
             'useruid': int(request.user.id), 
@@ -85,11 +73,6 @@ def sign_up_sign_in(request, android_user=False):
             'last_name': social_account.extra_data.get('last_name'),
             'name':social_account.extra_data.get('name'),
             'username' : request.user.username,
-            "link": social_account.extra_data.get('link'),
-            "id": social_account.extra_data.get('id'),
-            "timezone": social_account.extra_data.get('timezone'),
-            "email": social_account.extra_data.get('email'),
-            "locale": social_account.extra_data.get('locale'),
             'coupons':coupons,
             'valid_exam':valid_exams,
             'subscription_type':subscription_type,
@@ -106,17 +89,17 @@ def sign_up_sign_in(request, android_user=False):
         data['android_user'] = False
         data['registration_id'] = ''
         
-    try:
-        mc_subscribed = user['subscribed_to_mailchimp']            
-    except:
-        from apps.mainapp.classes.MailChimp import MailChimp
-        mc = MailChimp()
-        try:
-            mc.subscribe(data)
-        except:
-            pass
-        mc_subscribed = True
-    data['mc_subscribed'] = mc_subscribed 
+    # try:
+    #     mc_subscribed = user['subscribed_to_mailchimp']            
+    # except:
+    #     from apps.mainapp.classes.MailChimp import MailChimp
+    #     mc = MailChimp()
+    #     try:
+    #         mc.subscribe(data)
+    #     except:
+    #         pass
+    #     mc_subscribed = True
+    # data['mc_subscribed'] = mc_subscribed 
     return user_profile_object.update_upsert({'username':request.user.username}, data)
 
 def latex_html(request): 
