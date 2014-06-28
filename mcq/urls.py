@@ -1,7 +1,6 @@
 from django.conf.urls import patterns, include, url
 
 from django.contrib import admin
-from apps.mainapp.latest_users import LatestUser
 admin.autodiscover()
 
 urlpatterns = patterns(
@@ -25,5 +24,8 @@ urlpatterns = patterns(
     url(r'^distributors/', 'apps.mainapp.views.distributors'),
     url(r'^request/', 'apps.mainapp.views.request_coupon'),
     url(r'^results/(?P<exam_code>\w{1,15})', 'apps.mainapp.views.results'),
-    url(r'^latestusers/$', LatestUser.as_view()),
+    url(r'^latestusers/$','apps.mainapp.latest_users.latest_users'),
+    url(r'^coupon_admin/$', 'apps.exam_api.coupon_admin.coupon_search'),    
+    url(r'^iom/$', 'apps.mainapp.views.iomdashboard'),
+    url(r'^iom/(?P<exam_code>\w{1,15})/$', 'apps.mainapp.views.attend_IOM_dps_exam'),
 )

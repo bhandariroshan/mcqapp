@@ -93,3 +93,6 @@ class UserProfile():
         if exam_code not in valid_exam:
             valid_exam.append(int(exam_code))
         return self.db_object.update_upsert(self.table_name,{'username':username},{'valid_exam':valid_exam})
+
+    def get_user_by_coupon(self, coupon_code):
+        return self.db_object.get_one(self.table_name, {'coupons':coupon_code})
