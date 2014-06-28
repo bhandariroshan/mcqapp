@@ -93,11 +93,11 @@ class ExamHandler():
         for key, value in correct_answers.iteritems():
             temp = {}
             temp['subject'] = key
-            temp['subject_score'] = value['subject_score']
+            temp['score'] = value['score']
             temp['attempted'] = value['attempted']
             temp['subject_total_marks'] = value['subject_total_marks']
             temp['correct_subject_answer'] = value['correct_subject_answer']
-            total_score += value['subject_score']
+            total_score += value['score']
             total_attempted += value['attempted']
             total_marks += value['subject_total_marks']
             total_correct_answers += value['correct_subject_answer']
@@ -105,7 +105,7 @@ class ExamHandler():
         score_list.append(
             {
                 'subject': 'Total',
-                'subject_score': total_score,
+                'score': total_score,
                 'attempted': total_attempted,
                 'correct_subject_answer': total_correct_answers,
                 'subject_total_marks': total_marks
