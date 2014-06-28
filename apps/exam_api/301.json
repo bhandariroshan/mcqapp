@@ -198,7 +198,7 @@
     {
         "answer": {
             "a": {
-                "text": "proportional to $ '\\sqrt{T} $",
+                "text": "proportional to $ \\sqrt{T} $",
                 "image": ""
             },
             "c": {
@@ -234,7 +234,7 @@
                 "image": ""
             },
             "b": {
-                "text": "2A",
+                "text": "2I",
                 "image": ""
             },
             "d": {
@@ -294,7 +294,7 @@
                 "image": ""
             },
             "d": {
-                "text": "$ \\sqrt{3}",
+                "text": "$ \\sqrt{3} $",
                 "image": ""
             },
             "correct": "d"
@@ -490,7 +490,7 @@
                 "image": ""
             },
             "d": {
-                "text": "passes undeflected",
+                "text": "pass undeflected",
                 "image": ""
             },
             "correct": "d"
@@ -778,7 +778,7 @@
         "exam_code": 301,
         "marks": 1,
         "question": {
-            "text": "$ ^{13}_6C \\space and \\space ^{14}_7N $ are",
+            "text": "$ ^{13}C_6 \\space and \\space ^{14}N_7 $ are",
             "image": ""
         },
         "subject": "Chemistry"
@@ -1338,7 +1338,7 @@
         "exam_code": 301,
         "marks": 1,
         "question": {
-            "text": "Identify the product z in the series $ CH_3CN \\space \\space \\underrightarrow{Na/C_2H_5OH} \\space \\space X \\space \\space \\underrightarrow{HNO_2} \\space \\space Y \\space \\space \\underrightarrow{[O]} \\space \\space Z $",
+            "text": "Identify the product z in the series $ CH_3CN \\space \\space \\xrightarrow{Na/C_2H_5OH} \\space \\space X \\space \\space \\xrightarrow{HNO_2} \\space \\space Y \\space \\space \\xrightarrow{[O]} \\space \\space Z $",
             "image": ""
         },
         "subject": "Chemistry"
@@ -1434,7 +1434,7 @@
                 "image": ""
             },
             "c": {
-                "text": "Eudocardium",
+                "text": "Endocardium",
                 "image": ""
             },
             "b": {
@@ -1498,7 +1498,7 @@
                 "image": ""
             },
             "d": {
-                "text": "Golgi comples",
+                "text": "Golgi complex",
                 "image": ""
             },
             "correct": "c"
@@ -1634,7 +1634,7 @@
                 "image": ""
             },
             "b": {
-                "text": "Aeromegaly",
+                "text": "Acromegaly",
                 "image": ""
             },
             "d": {
@@ -1742,7 +1742,7 @@
                 "image": ""
             },
             "c": {
-                "text": "Signet-ring bophozoites",
+                "text": "Signet-ring trophozoites",
                 "image": ""
             },
             "b": {
@@ -1826,7 +1826,7 @@
                 "image": ""
             },
             "c": {
-                "text": "Ramapitheeus",
+                "text": "Ramapithecus",
                 "image": ""
             },
             "b": {
@@ -1834,7 +1834,7 @@
                 "image": ""
             },
             "d": {
-                "text": "Australopitheeus",
+                "text": "Australopithecus",
                 "image": ""
             },
             "correct": "a"
@@ -1918,7 +1918,7 @@
                 "image": ""
             },
             "d": {
-                "text": "Encalyptus",
+                "text": "Eucalyptus",
                 "image": ""
             },
             "correct": "b"
@@ -1998,7 +1998,7 @@
                 "image": ""
             },
             "b": {
-                "text": "Aquatia mammals",
+                "text": "Aquatic mammals",
                 "image": ""
             },
             "d": {
@@ -2046,15 +2046,15 @@
     {
         "answer": {
             "a": {
-                "text": "Hydrowa",
+                "text": "Hydrozoa",
                 "image": ""
             },
             "c": {
-                "text": "Anthowa",
+                "text": "Anthozoa",
                 "image": ""
             },
             "b": {
-                "text": "Scyphowa",
+                "text": "Scyphozoa",
                 "image": ""
             },
             "d": {
@@ -2114,7 +2114,7 @@
                 "image": ""
             },
             "d": {
-                "text": "Collarated gland",
+                "text": "Collateral gland",
                 "image": ""
             },
             "correct": "d"
@@ -2150,7 +2150,7 @@
         "exam_code": 301,
         "marks": 1,
         "question": {
-            "text": "Which is social inseet?",
+            "text": "Which is social insect?",
             "image": ""
         },
         "subject": "Biology"
@@ -2194,7 +2194,7 @@
                 "image": ""
             },
             "b": {
-                "text": "Urochrondata",
+                "text": "Urochordata",
                 "image": ""
             },
             "d": {
@@ -2222,7 +2222,7 @@
                 "image": ""
             },
             "b": {
-                "text": "Protuted Serotum",
+                "text": "Protruted Scrotum",
                 "image": ""
             },
             "d": {
@@ -2234,7 +2234,7 @@
         "exam_code": 301,
         "marks": 1,
         "question": {
-            "text": "Whate is mammal because it has",
+            "text": "Whale is mammal because it has",
             "image": ""
         },
         "subject": "Biology"
@@ -2274,7 +2274,7 @@
                 "image": ""
             },
             "c": {
-                "text": "Spitogyra",
+                "text": "Spirogyra",
                 "image": ""
             },
             "b": {
@@ -2290,7 +2290,7 @@
         "exam_code": 301,
         "marks": 1,
         "question": {
-            "text": "The organism which has the property of changing sugar m to alcohol ",
+            "text": "The organism which has the property of changing sugar into alcohol ",
             "image": ""
         },
         "subject": "Biology"
@@ -2298,7 +2298,7 @@
     {
         "answer": {
             "a": {
-                "text": "Branched unclullar",
+                "text": "Branched unicellular",
                 "image": ""
             },
             "c": {
@@ -2306,11 +2306,11 @@
                 "image": ""
             },
             "b": {
-                "text": "Branched mutillation",
+                "text": "Branched multicellular",
                 "image": ""
             },
             "d": {
-                "text": "Unbranched uniicellular",
+                "text": "Unbranched unicellular",
                 "image": ""
             },
             "correct": ""
@@ -2318,7 +2318,7 @@
         "exam_code": 301,
         "marks": 1,
         "question": {
-            "text": "Rhizoid in Marchendra are",
+            "text": "Rhizoid in Marchantia are",
             "image": ""
         },
         "subject": "Biology"
@@ -2334,7 +2334,7 @@
                 "image": ""
             },
             "b": {
-                "text": "Swimming antherozorth",
+                "text": "Swimming antherozoids",
                 "image": ""
             },
             "d": {
@@ -2346,7 +2346,7 @@
         "exam_code": 301,
         "marks": 1,
         "question": {
-            "text": "A term differs from moss in having",
+            "text": "A fern differs from moss in having",
             "image": ""
         },
         "subject": "Biology"
@@ -2354,7 +2354,7 @@
     {
         "answer": {
             "a": {
-                "text": "neck and all",
+                "text": "neck canal cell",
                 "image": ""
             },
             "c": {
@@ -2362,7 +2362,7 @@
                 "image": ""
             },
             "b": {
-                "text": "Venter end call",
+                "text": "Venter canal cell",
                 "image": ""
             },
             "d": {
@@ -2386,7 +2386,7 @@
                 "image": ""
             },
             "c": {
-                "text": "peridum",
+                "text": "periderm",
                 "image": ""
             },
             "b": {
@@ -2394,7 +2394,7 @@
                 "image": ""
             },
             "d": {
-                "text": "phellodem",
+                "text": "phelloderm",
                 "image": ""
             },
             "correct": "c"
@@ -2402,7 +2402,7 @@
         "exam_code": 301,
         "marks": 1,
         "question": {
-            "text": "The corc cambium corc and secondary cortex are collectively called",
+            "text": "The cork cambium, cork and secondary cortex are collectively called",
             "image": ""
         },
         "subject": "Biology"
@@ -2430,7 +2430,7 @@
         "exam_code": 301,
         "marks": 1,
         "question": {
-            "text": "Active absorption of water is affective by",
+            "text": "Active absorption of water is affected by",
             "image": ""
         },
         "subject": "Biology"
@@ -2481,7 +2481,7 @@
                 "text": "de Dude",
                 "image": ""
             },
-            "correct": ""
+            "correct": "d"
         },
         "exam_code": 301,
         "marks": 1,
@@ -2522,7 +2522,7 @@
     {
         "answer": {
             "a": {
-                "text": "Andropous",
+                "text": "Anatropous",
                 "image": ""
             },
             "c": {
@@ -2542,7 +2542,7 @@
         "exam_code": 301,
         "marks": 1,
         "question": {
-            "text": "Ovules symmetrized and straight with chdara at the base and micropyle at the tip are called",
+            "text": "Ovules symmetrical and straight with chalaza at the base and micropyle at the tip are called",
             "image": ""
         },
         "subject": "Biology"
@@ -2554,7 +2554,7 @@
                 "image": ""
             },
             "c": {
-                "text": "fusion of two male gamets with polar nucleus",
+                "text": "fusion of two male gametes with polar nuclei",
                 "image": ""
             },
             "b": {
@@ -2570,7 +2570,7 @@
         "exam_code": 301,
         "marks": 1,
         "question": {
-            "text": "Double fertilisation is the",
+            "text": "Double fertilization is the",
             "image": ""
         },
         "subject": "Biology"
@@ -2598,7 +2598,7 @@
         "exam_code": 301,
         "marks": 1,
         "question": {
-            "text": "Respiratory roots ( pneumato phores) are present in ",
+            "text": "Respiratory roots (pneumato phores) are present in ",
             "image": ""
         },
         "subject": "Biology"
@@ -2626,7 +2626,7 @@
         "exam_code": 301,
         "marks": 1,
         "question": {
-            "text": "Fruit developing from spike inflorencence is ",
+            "text": "Fruit developing from spike inflorecence is ",
             "image": ""
         },
         "subject": "Biology"
@@ -2654,7 +2654,7 @@
         "exam_code": 301,
         "marks": 1,
         "question": {
-            "text": "Gossypium hirsutum is the botanked name of ",
+            "text": "Gossypium hirsutum is the botanical name of ",
             "image": ""
         },
         "subject": "Biology"

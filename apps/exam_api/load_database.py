@@ -108,7 +108,7 @@ def load_modelquestion_in_database(request):
         question_api = QuestionApi()
         question_api.insert_new_question(json_obj)
         print var, " saved"
-        return HttpResponse("Question saved in the database")
+    return HttpResponse("Question saved in the database")
 
 
 def load_correctanswer_in_database(request):
