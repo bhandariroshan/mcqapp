@@ -1,19 +1,22 @@
-from MongoConnection import MongoConnection
+# from MongoConnection import MongoConnection
 import mandrill 
         
 class Email():
-    def __init__ (self):        
-        self.db_object = MongoConnection("localhost",27017,'mcq')
-        self.table_name = 'emailbacklogs'
-        self.db_object.create_table(self.table_name,'_id')
+    # def __init__ (self):        
+        # self.db_object = MongoConnection("localhost",27017,'mcq')
+        # self.table_name = 'emailbacklogs'
+        # self.db_object.create_table(self.table_name,'_id')
 
     def save_backlogs(self,doc):
         self.db_object.insert_one(self.table_name, doc)        
 
-    def send_mail(self, subject, template_content=[{}], to = [{}]):
-        md = mandrill.Mandrill('DS3yEW4HdOzqHGXOiXGPkg')
-        # md = mandrill.Mandrill('NwotnhPk1Nprc6OX0Wq6vA')
-        mes = mandrill.Messages(md)
+    # def send_mail(self, subject, template_content=[{}], to = [{}]):
+    def send_mail(self, subject, text='', to = [{}]):
+        # md = mandrill.Mandrill('DS3yEW4HdOzqHGXOiXGPkg')      #roshan
+        # md = mandrill.Mandrill('NwotnhPk1Nprc6OX0Wq6vA')      #foodtrade
+        md = mandrill.Mandrill('IMFVH20W5FQYW5oO-DOHSQ')      #santosh@phunka
+
+        # mes = mandrill.Messages(md)
 
         message = {
             'auto_html': False,
@@ -23,9 +26,14 @@ class Email():
             'from_name':'Meroanswer', 
             'important':'true',
             'track_click':'true',
-            'subject':subject
+            'subject':subject,
+            'text': text
         }
         
-        template_content = template_content
-        self.save_backlogs({'message':message, 'template_content':template_content})
-        mes.send_template('foodtrade-master', template_content, message)
+        result = md.messages.send(message=message, async=False, ip_pool='Main Pool', send_at='example send_at')
+        # self.save_backlogs({'message':message, 'template_content':template_content})
+        # mes.send_template('meroanswer', template_content, message)
+
+email = Email()
+# email.send_mail('Test email', 'Just testing an email code', ['santosh.ghimire33@gmail.com'])
+email.send_mail(to=['santosh.ghimire33@gmail.com'], subject='test subject' , text = 'test msg')

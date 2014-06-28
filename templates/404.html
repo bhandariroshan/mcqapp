@@ -1,4 +1,4 @@
-{% extends 'tbase.html' %}
+{% extends 'base.html' %}
 {% load staticfiles %}
 {% load mail_errors %}
 {% block titlemain %}Ooops there's an  error{% endblock %}
@@ -21,7 +21,7 @@
 		<p class="lead">
 			{{request.build_absolute_uri|error:'404'}}
 			Sorry, we can't find what you're looking for. Check it's not a typo in the address?
-		We've been notified of the error and will fix the problem if we can. If you have time, <a href="https://foodtrade.uservoice.com/" target="_blank">please get in touch to tell us more</a>. 
+		We've been notified of the error and will fix the problem if we can. If you have time, <a href="http://foodtrade.uservoice.com/" target="_blank">please get in touch to tell us more</a>. 
 </p>
 		</div>
 

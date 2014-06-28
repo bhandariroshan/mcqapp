@@ -6,6 +6,8 @@ from facepy import GraphAPI
 from allauth.socialaccount.models import SocialToken, SocialAccount
 from allauth.socialaccount.providers.facebook.views import login_by_token
 
+from django.http import Http404
+
 from django.shortcuts import render_to_response
 from django.http import HttpResponseRedirect, HttpResponse
 from django.template import RequestContext
@@ -111,7 +113,8 @@ def sign_up_sign_in(request, android_user=False):
 
 def latex_html(request):
     return render_to_response(
-        "sample-tex.html", {'exam': request.GET.get('exam')}
+        "sample-tex.html", {'exam': request.GET.get('exam')},
+        context_instance=RequestContext(request)
     )
 
 
@@ -132,7 +135,7 @@ def add_html(request):
              "answer.d.html": question['answer']['d']['text']
              }
         )
-    return render_to_response("sample-tex.html")
+    return render_to_response("sample-tex.html", context_instance=RequestContext(request))
 
 
 @csrf_exempt
@@ -157,6 +160,10 @@ def androidapk(request):
 
 
 def dashboard(request):
+    try:
+        a = 1/0
+    except:
+        raise Http404
     if request.user.is_authenticated():
         sign_up_sign_in(request, android_user=False)
         return HttpResponseRedirect('/')
