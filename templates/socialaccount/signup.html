@@ -7,10 +7,11 @@
 {% block content %}
 <style type="text/css">
 .main-box{
-  width: 400px;
-  height: 480px;
+  width: 600px;
+  height: 300px;
   background: #eee;
   border-radius: 10px;
+  margin-left: 30%;
 }
 .content{
   margin: 20px;
@@ -34,17 +35,10 @@
 <div width='100%' height='100%'>
 <div class="center-block">
 	<div class="content text-center">
-		<h1>Welcome {{form.sociallogin.account.extra_data.name}} !</h3>
+		<h1 style="margin-top: 4%;">Welcome {{form.sociallogin.account.extra_data.name}} !</h3>
 		<p class="lead"> You are a few seconds away from using Meroanswer.</p>
 	</div>
 	<div class="main-box center-block">
-		<div class="user-icon-main text-center">
-		<!-- <span class="glyphicon glyphicon-user user-icon"></span> -->
-		<img class="img-circle" src="
-		{{form.sociallogin.account.extra_data.profile_image_url}}"/>
-		
-		</div>
-
 	<div class="row">
 		<div class="col-sm-offset-1 col-sm-11 col-xs-offset-1 col-xs-11">
 <form class="signup" id="signup_form" role="form" method="post" action="{% url 'socialaccount_signup' %}">{% csrf_token %}
@@ -52,9 +46,8 @@
       	{% if form.username.errors.as_text %} 
 	      <label class="error">{{ form.username.errors.as_text }}</label>
       {% endif %}
-      <div class="input-group col-sm-10">
-      	<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-		  <input type="text" class="form-control" id="id_username" maxlength="30" name="username" placeholder="Username" value="{{form.sociallogin.account.extra_data.first_name}}{{form.sociallogin.account.extra_data.last_name}}" required="required">
+      <div class="field">
+		          <input type="text" style="margin-top: 10%;" class="input" id="id_username" maxlength="30" name="username" placeholder="Username" value="{{form.sociallogin.account.extra_data.first_name}}{{form.sociallogin.account.extra_data.last_name}}" required="required">
     </div>
   </div>
   <div class="form-group">
@@ -62,10 +55,8 @@
     {% if form.email.errors.as_text %} 
 	      <label class="error">{{ form.email.errors.as_text }}</label>
       {% endif %}
-    <div class="input-group col-sm-10">
-      	<span class="input-group-addon">@</span>
-		  <input type="email" class="form-control" id="id_email" name="email" placeholder="E-mail address" required="required">
-
+    <div class="field">
+		  <input type="email" class="input" id="id_email" name="email" placeholder="E-mail address" required="required">
     </div>
     <p class="help-block small">We respect your privacy. Your email will be safe with us.
     </p>
@@ -75,9 +66,9 @@
 	  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
 
-  <div class="form-group">
-    <div class="col-sm-offset-1 col-sm-8">
-      <button type="submit" class="btn btn-primary btn-lg btn-block">Sign Up</button>
+  <div class="">
+    <div class="">
+      <button type="submit" class="medium primary btn" style="margin-left:35%">Sign Up</button>
     </div>
   </div>
 </form>
