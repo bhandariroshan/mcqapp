@@ -1,6 +1,5 @@
 {% extends 'exam_base.html' %}
 {% load staticfiles %} 
-<<<<<<< HEAD
 {% block timer %}
     <h5 class="h-text-align ui-widget-header ui-corner-all" style="margin-top:0%;margin-left:2%;margin-right:-2%;"><strong>{{exam_details.exam_name}}</strong></h5>
     <div class="twelve columns" style="margin-top:2%; margin-bottom:2%;">          
@@ -12,234 +11,109 @@
           </div><br/><br/>
     </div>
 {% endblock %}
-=======
->>>>>>> ea4dd42ac099ebba1782fd284e83147862863c6a
 {% block exam_content %}
-<div id="ioe_exam_starter" style="text-align:center;">
-<h1>!!! NOTICE !!!</h1>
-  <p style="margin-top:3%;"> You will now have system exactly similar to pulchowk's system. </p>
-  <input type="button" id="full_screen_button" class="medium primary btn pretty button-margin" value="Start Exam" onclick="show_fullscreen()" style="margin-top:3%;margin-bottom:3%;">
-  <br><br>
-</div>
-<div id="ioe_exam_zoomer" style="text-align:right;">
-<img src="/static/images/fullscreen.png" value="Start Exam" onclick="show_fullscreen()">
-</div>
-<div id="full_screen_content" style="display:none">
-<div id="full_screen_inner_content">
-    <h5 class="h-text-align " style="margin-top:0%; margin-left: 2%; margin-right: -2%;">
-    <img src="/static/images/logos/tu-logo.jpg" style="max-height:100px"><br>
-    <strong>Tribhuvan University</strong><br>
-    <strong>Institute of Engineering </strong><br>
-    <strong>Pulchowk, Lalitpur, Nepal</strong><br>
-    <strong>{{exam_details.exam_name}}</strong>
-    </h5>
+    <div class="twelve columns">
 
-
-    <div id="exam_login_container" >
-      <!-- <input type="text" id="input1" class="osk-trigger" placeholder="disable return" data-osk-options="disableReturn">< -->
-      <!-- <input type="text" id="input2" class="osk-trigger" placeholder="disable symbols" data-osk-options="disableSymbols">  -->
-      <div id="errorMessage" class="hidden" style="color:red;">Username or Password Mismatch</div>
-      <label>Username</label><input type="text" id="exam_username" class="osk-trigger" placeholder="Username">
-      <label>Password</label><input type="password" id="exam_password" class="osk-trigger" placeholder="Password">
-      <!-- <textarea id="input4" class="osk-trigger" placeholder="enable everything"></textarea> -->  
-      <input type="button" value="Submit" onclick="render_instructions()"> <input onclick="clear_login()" type="button" value="Cancel">
-    </div>
-
-    <div class="twelve columns hidden" id="instructions">
-      <h5 class="h-text-align ui-widget-header ui-corner-all"><strong>Instructions</strong><br></h5>
-      <p style="margin-left:3%; margin-top:2%;">Please read the following instructions carefully before you start the exam.</p>
-      <p style="margin-left:4%;margin-top:2%;">
-        1. You will have 1 hour for the exam. <br>
-        2. There will be "next" button at the end of the page to go to next page and attempt another questions. <br>
-        3. There will be "previous" button at the end of the page to go back to previous page and review your questions. <br>
-        4. All answers will be radio button click.  <br>
-        5. You can change the answer but you cannot un-attempt already answered question. So please make sure before you attempt it. <br>
-        6. Question can be reattempted by clicking the radio button. <br>
-        7. You can view your remaining questions by clicking the remaining questions on the top left corner. <br>
-        8. Time remaining will be shown at the top. <br>
-        9. If you do not submit at the end of the exam then your exam will be invalid. So make sure you submit before you go out. <br>
-        10. Warning will be shown before 15 minutes remained. 
-      </p>
-      <div class="medium primary btn pretty button-margin" style="margin-left:35%%;">
-        <a href="#" onclick="start_ioe_exam()">Start Exam</a>
-      </div>
-    </div>
-
-  <script src="/static/js/jquery.onScreenKeyboard.js"></script>
-    <script src="http://sindresorhus.com/screenfull.js/src/screenfull.js"></script>
-
-<div id="exam_questions" style="display:none">
-    <div  id="timerdiv" style="float: right;margin-bottom: 2%;top: 0px;margin-left: 70%;width: 20%; position:fixed;"> 
-          <img src="{{user.profile_image}}" style="height: 100px;"/>
-          <p style="font-weight: 400; font-size: 12px; margin-bottom: 0px;">{{user.name}}</p> 
-          <p  id="attempted" style="font-weight: 400; font-size: 12px;margin-bottom: 0px;">Attempted: 5 </p>
-          <p id="remaining" style="font-weight: 400; margin-bottom: 0px; font-size: 12px; color:red"><a href="javascript:void(0)" style="color:red" id="remained"> Remaining:</a> 25</p>
-          <p  style="font-weight: 400; margin-bottom: 0px; font-size: 12px;">Total: 65</p>
-          <h5 id="timeRemained" data-intro="determine the time left" data-position="bottom" style="color:rgb(104, 16, 16);"><strong></strong></h5>
-    </div>
-    
-      <div class="twelve columns" id="showExam" style="display:none">
-        {% for each_question in questions %}       
-        <div id="questionText_{{each_question.question_number}}" data-intro="Read the question carefully" data-position="top" class="div-margin twelve columns ui-widget-content ui-corner-all question-min-height" style="margin-left:-2%">
-          <span  style="font-weight:bold;"><span style="color:blue;">{{each_question.question_number}}. </span> {{ each_question.question.text }} </span><br>
-          {% if each_question.question.image != '' %}
-
-          <img src="/static/images/{{exam_code}}/{{each_question.question.image}}" style=" height:140px" />
-          {% endif %}
-
-        <ul class="row" id="{{each_question.uid.id}}" style="margin-left:0%">
-          <li class="field" style="min-height:30px;">
-            <div class="clickDiv" id="div_{{each_question.question_number}}_OptionA" style="vertical-align:middle;"><span></span>            
-                <a href="javascript:void(0)">
-                <label class="radio" for="radio_{{each_question.question_number}}_A">
-                  <input name="radio_{{each_question.question_number}}" id="radio_{{each_question.question_number}}_A" value="A" type="radio">
-                  <span></span> 
-                </label>
-                
-                {{ each_question.answer.a.text }}<br>
-                {% if each_question.answer.a.image != '' %}
-                  <img src="/static/images/{{exam_code}}/{{each_question.answer.a.image}}" style="height:140px;" />
-                {% endif %}
-                </a>
-            </div>
-          </li>
-
-          <li class="field" style="min-height:30px;">
-            <div class="clickDiv " id="div_{{each_question.question_number}}_OptionB" style="vertical-align:middle;"><span></span>
-                <a href="javascript:void(0)">
-                    <label class="radio" for="radio_{{each_question.question_number}}">
-                        <input name="radio_{{each_question.question_number}}" id="radio_{{each_question.question_number}}_B" value="B" type="radio">
-                        <span></span> 
-                    </label>                  
-                    {{ each_question.answer.b.text }}<br>
-                    {% if each_question.answer.b.image != '' %}
-                      <img src="/static/images/{{exam_code}}/{{each_question.answer.b.image}}" style="height:140px;" />
-                    {% endif %}
-                    </a>
-            </div>
-          </li>
-
-          <li class="field" style="min-height:30px;">
-            <div class="clickDiv " id="div_{{each_question.question_number}}_OptionC" style="vertical-align:middle;"><span></span>
-                  <a href="javascript:void(0)">
-                  <label class="radio" for="radio_{{each_question.question_number}}_C">
-                    <input name="radio_{{each_question.question_number}}" id="radio_{{each_question.question_number}}_C" value="C" type="radio">
-                    <span></span> 
-                  </label>                    
-                    {{ each_question.answer.c.text }}<br>
-                    {% if each_question.answer.c.image != '' %}
-                      <img src="/static/images/{{exam_code}}/{{each_question.answer.c.image}}" style=" height:140px;" />
-                    {% endif %}
-                    </a>
-            </div>
-          </li>
-
-          <li class="field" style="min-height:30px;">
-            <div class="clickDiv " id="div_{{each_question.question_number}}_OptionD" style="vertical-align:middle;"><span></span>
-                  <a href="javascript:void(0)">
-                  <label class="radio" for="radio_{{each_question.question_number}}_D">
-                    <input name="radio_{{each_question.question_number}}" id="radio_{{each_question.question_number}}_D" value="D" type="radio">
-                    <span></span> 
-                  </label>                                
-                    {{ each_question.answer.d.text }}<br>
-                    {% if each_question.answer.d.image != '' %}
-                      <img src="/static/images/{{exam_code}}/{{each_question.answer.d.image}}" style="height:140px;" />
-                    {% endif %}
-                    </a>
-            </div>            
-          </li>       
-        </ul>          
-        </div>
-    {% endfor %}                  
-        <div style=" height: 40px; margin-left: -2%;" class="twelve columns">
-        
-        {% if not page_end %}
+      <div class="seven columns">      
+        <div style=" height: 40px; " class="twelve columns">
           <span>
-            <div class="small primary btn pretty loadPrev" id="loadPrev">
-              <a href="javascript:void(0)"  data-intro="Attempt previous question" data-position="top"><i class="icon-arrow-left"></i>Previous</a>
+            <div class="small primary btn pretty" id="loadPrev">
+              <a href="#"  data-intro="Attempt previous question" data-position="top"><i class="icon-arrow-left"></i>Previous</a>
             </div>
           </span>
           <span style="float:right">
-            <div class="small primary btn pretty loadNext" id="loadNext">
-              <a href="javascript:void(0)" data-intro="Attempt this question later" data-position="top"><i class="icon-arrow-right" ></i>Next</a>
+            <div class="small primary btn pretty loadNext" id="loadNext{{next_to_start.uid.id}}">
+              <a href="#" data-intro="Attempt this question later" data-position="top"><i class="icon-arrow-right" ></i>Skip to Next</a>
             </div>
           </span>
+        </div>        
+        <div id="questionText" data-intro="Read the question carefully" data-position="top" class="div-margin twelve columns ui-widget-content ui-corner-all question-min-height">
+          <span  style="font-weight:bold;"><span style="color:blue;">{{start_question.question_number}}. </span> {{ start_question.question.text }} </span>
+          {% if start_question.question.image != '' %}
 
-          {% else %}              
-            <span>
-              <div class="small primary btn pretty oadPrev" id="loadPrev">
-                <a href="javascript:void(0)"  data-intro="Attempt previous question" data-position="top"><i class="icon-arrow-left"></i>Previous</a>
-              </div>
-            </span>
+          <img src="/static/images/{{exam_code}}/{{start_question.question.image}}" style=" height:140px" />
+          {% endif %}
+        </div>
+        <div class="twelve columns" id="optionsDiv" style="margin-left: 0%;">           
+          <ul class="two_up tiles" id="{{start_question.uid.id}}">
+            
+              <li class="field ui-widget-content ui-corner-all li-height" data-intro="Click on correct answer to submit" data-position="bottom" id="a">
+                <p class="h-text-align ui-widget-header ui-corner-all">A</p>
+                <div class="clickDiv " id="divOptionA" ><span></span>
+                    <a href="javascript:void(0)">
+                    {{ start_question.answer.a.text }}<br>
+                    {% if start_question.answer.a.image != '' %}
+                      <img src="/static/images/{{exam_code}}/{{start_question.answer.a.image}}" style="height:140px;" />
+                    {% endif %}
+                    </a>
+                </div>
+              </li>
+            
+                                    
+              <li class="field ui-widget-content ui-corner-all li-height" data-intro="Click on correct answer to submit" data-position="bottom" id="b">              
+                <p class="h-text-align ui-widget-header ui-corner-all">B</p>
+                <div class="clickDiv " id="divOptionB" ><span></span>
+                    <a href="javascript:void(0)">
+                    {{ start_question.answer.b.text }}<br>
+                    {% if start_question.answer.b.image != '' %}
+                      <img src="/static/images/{{exam_code}}/{{start_question.answer.b.image}}" style="height:140px;" />
+                    {% endif %}
+                    </a>
+                </div>
+              </li>
+            
 
-            <span style="float:right">
-              <div class="small primary btn pretty" id="ansSubmit">
-                <a href="javascript:void(0)" data-intro="" data-position="top"><i class="icon-arrow-right"></i>Submit</a>
-              </div>
-            </span>
-          {%  endif %}
-
-        </div> 
-      </div> 
-        
-  <div id="ioe_exam_Warning_ender" style="text-align:center;" style="display:none">
-  <h1>!!! ALERT !!!</h1>
-    <p style="margin-top:3%; width:70">You have not attempted following questions. Do you want to submit now? </p>
-    <p id="unAttemptedQuestions"> </p>
-<!--     <input type="button" id="view_my_result" class="medium primary btn pretty button-margin" value="view result" style="margin-top:3%;margin-bottom:3%;"> -->
-    <!-- <br><br> -->
-    <li class="prepend field">
-      <div class="medium primary btn" >
-        <a href="#" id="ioe_exam_Warning_ender_submit">Submit</a>
+              <li class="field ui-widget-content ui-corner-all li-height forum_hover" id="c">
+                <p class="h-text-align ui-widget-header ui-corner-all">C</p>
+                <div class="clickDiv " id="divOptionC" ><span></span>
+                    <a href="javascript:void(0)">
+                    {{ start_question.answer.c.text }}<br>
+                    {% if start_question.answer.c.image != '' %}
+                      <img src="/static/images/{{exam_code}}/{{start_question.answer.c.image}}" style=" height:140px;" />
+                    {% endif %}
+                    </a>
+                </div>
+              </li>
+            
+              <li class="field ui-widget-content ui-corner-all li-height forum_hover" id="d">              
+                <p class="h-text-align ui-widget-header ui-corner-all">D</p>
+                <div class="clickDiv " id="divOptionD" ><span></span>
+                    <a href="javascript:void(0)">
+                    {{ start_question.answer.d.text }}<br>
+                    {% if start_question.answer.d.image != '' %}
+                      <img src="/static/images/{{exam_code}}/{{start_question.answer.d.image}}" style="height:140px;" />
+                    {% endif %}
+                    </a>
+                </div>
+          </ul>
+        </div>              
+        <div style="clear:both"></div>
       </div>
-      <div class="medium primary btn" style="margin-left: 1%;">
-        <a id="ioe_exam_Warning_ender_cancel" href="#">Cancel</a>
+      
+      <div data-intro="Resubmit your answers by clicking on question number on answersheet. NA = Not Attempted, so make sure you answer all the questions." data-position="top" class="five columns ui-widget-content ui-corner-all" id="myAnswerSheet" style="height:350px; overflow-y:scroll; overflow-x:hidden">
+        <h5 class="h-text-align ui-widget-header ui-corner-all"><strong>Answer sheet</strong></h5>
+        <div id="myAnswers" style="margin-left:4%;">
+        </div>
       </div>
-    </li>
-  </div>
-
-  <div id="remainingQuestions" style="text-align:center; display:none">
-  <h1> Remaining Questions </h1>
-    <p style="margin-top:3%; width:70">You have not attempted following questions.</p>
-    <p id="remainingQuestionsClicked"> </p>
-    <li class="prepend field">
-      <div class="medium primary btn" style="margin-left: 1%;">
-        <a id="showRemainingQuestionsCancel" href="#">Cancel</a>
-      </div>
-    </li>
-  </div>
-
-  <div id="ioe_system_ender" style="text-align:center; display:none">
-  <h1>!!! NOTE !!!</h1>
-    <p style="margin-top:3%;">IOE's system end's here. You cannot view result in ioe's system. But you will have access to results in our system.</p>
-    <input type="button" id="view_my_result" class="medium primary btn pretty button-margin" value="view result" style="margin-top:3%;margin-bottom:3%;">
-    <!-- <br><br> -->
-
-  </div>
-
-    <div id="resultsdiv" style="visibility:hidden;" class="pretty medium primary btn switch" gumby-trigger="#modalwarning"></div>
+    </div>    
+    <div id="trigger_gumby_div" style="visibility:hidden;" class="pretty medium primary btn switch" gumby-trigger="#modalwarning"></div>
     <div class="modal" id="modalwarning">
       <div class="content">
         <a id= "closegumby" class="close switch" gumby-trigger="|#modalwarning"><i class="icon-cancel" /></i></a>
         <div class="row">
           <div id="dangerMessage"></div>
           <div class="ten columns centered text-center" style="margin-top:6%;">
-            <p id="infoText">When you submit you cannot return back and reattempt or change answers. Are you sure you want to submit? </p>
+            <p id="infoText">You have successfully reached the end of this exam. What would you like to do?</p>
               <li class="prepend field">
                 <div class="medium primary btn" >
                   <a href="#" onclick="set_exam_finished()">Submit</a>
-                </div>
-                <div class="medium primary btn" style="margin-left: 1%;">
-                    <a id="reviewAns" href="#" onclick="review()">Cancel</a>
+                  <a id="reviewAns" href="#" onclick="review()">Review</a>
                 </div>
               </li>
           </div>
         </div>
       </div>
-    </div> 
-    </div>
-    </div> 
-  </div>  
+    </div>    
 {% endblock %}
 {% block javascript %}
 <script type="text/x-mathjax-config">
@@ -255,7 +129,8 @@
     "HTML-CSS": { availableFonts: ["TeX"] }
   });
 </script>
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script src="/static/js/chardinjs.min.js"></script> 
 <script type="text/javascript">
 var click_count = 1;
@@ -265,17 +140,15 @@ var ans_list=[];
 
 var question_id = '{{start_question.uid.id|safe}}';
 
-/*var current_question_number = {{start_question_number}};*/
+var current_question_number = {{start_question_number}};
 var all_answers = {{all_answers|safe}};
 var max_questions_number = {{max_questions_number}};
 var attempted = [];
 var exam_code = {{exam_code|safe}};
-/*var questions = {{questions|safe}};*/
+var questions = {{questions|safe}};
 var exam_duration = {{exam_details.exam_duration}};
 
-
-
-/*(function() {
+(function() {
   $(function() {
     $('body').chardinJs();
     $('a[data-toggle="chardinjs"]').on('click', function(e) {
@@ -283,71 +156,19 @@ var exam_duration = {{exam_details.exam_duration}};
         return ($('body').data('chardinJs')).toggle();
         });
       });    
-}).call(this);*/
+}).call(this);
 </script>
 <script src="/static/js/ajax-handle.js"></script>
-<!-- <script src="/static/js/exam.js"></script> -->
+<script src="/static/js/exam.js"></script>
 <script type="text/javascript">
-var exm_code = {{exam_code|safe}};
   function set_exam_finished(){
-    ajax_set_exam_finished(exm_code, true);
+    ajax_set_exam_finished(exam_code, true);
   }
   function review(){
     $('#closegumby').click();
   }
 
-$('#remained').on('click', function(){
-  $('#showExam').css('display', 'none')
-  /*$('#showExam').hide();*/
-  $('#remainingQuestions').css('display', 'block');
-  get_unattempted_questions_number(exm_code);
-  /*$('#remainingQuestions').removeClass('hidden');*/
-});
-
-
-$('#showRemainingQuestionsCancel').on('click', function(){
-  $('#showExam').css('display','block');
-
-  /*$('#showExam').removeClass('hidden');*/
-  /*$('#showExam').show();*/
-  $('#remainingQuestions').css('display', 'none');
-  /*$('#remainingQuestions').hide();*/
-});
-var current_pg_num = {{current_pg_num|safe}};
-$('#showExam').on('click', '#loadNext', function(){
-  get_next_page(exm_code, current_pg_num, 1);
-});
-
-$('#showExam').on('click', '#loadPrev', function(){
-  get_next_page(exm_code, current_pg_num, -1);
-});
-
-$('#showExam').on('click', '#ansSubmit', function(){
-
-  $('#showExam').css('display','none');  
-  get_unattempted_questions_number(exm_code);
-
-  $('#ioe_exam_Warning_ender').css('display', 'block');
-  /*$('#ioe_exam_Warning_ender').show();  */
-});
-
-$('#ioe_exam_Warning_ender_submit').on('click', function(){
-
-    $('#showExam').css('display', 'none');    
-    $('#ioe_exam_Warning_ender').css('display', 'none');    
-    $('#ioe_system_ender').css('display', 'block');
-      
-});
-
-$('#showExam').on('click', '.clickDiv' , function(){
-  clicked = this.id.substring(4, 4 + this.id.substr(4,this.id.length).indexOf('_'));
-  option  = this.id.substring(this.id.indexOf('Option')+6,this.id.length);
-  check_id = "#radio_"+clicked + '_' + option;
-  $(check_id).trigger('gumby.check');
-  q_id = this.parentElement.parentNode.id;
-  ret_value = save_answer(exm_code, q_id, option.toLowerCase(), clicked);  
-});
-/*if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 }
 else{
   $("#optionsDiv > ul > li").hover(function(){
@@ -356,172 +177,7 @@ else{
   },function(){
   $("#"+id).css("background","none");
 });
-}*/
-
-var exam_state = 0;
-
-function render_instructions()
-{
-  /*username = $('#exam_username').val();
-  password = $('#exam_password').val();*/
-
-  /*if (username =='hello' && password =='exam'){*/
-      $("#exam_login_container").css('display', 'none');      
-      $('#osk-container').css('display', 'none');      
-      $('#errorMessage').hide();
-      $('#ioe_system_ender').css('display', 'none');      
-      $('#ioe_exam_Warning_ender').css('display', 'none');      
-      $('#remainingQuestions').css('display', 'none');      
-      $('#instructions').css('display', 'block');      
-  /*}
-  else{
-    $('#errorMessage').removeClass('hidden');
-
-  }*/
 }
-function start_ioe_exam(){
-    $("#exam_login_container").css('display', 'none');      
-    $('#osk-container').css('display', 'none');      
-    /*$('#errorMessage').removeClass('hidden');*/
-    $('#errorMessage').css('display', 'none');      
-    /*$('#instructions').removeClass('hidden');*/
-    $('#instructions').css('display', 'none');      
-    $('#exam_questions').css('display', 'block');      
-    $('#showExam').css('display', 'block'); 
-}
-
-$('#view_my_result').on('click', function(){
-  $('#showExam').css('display', 'none');      
-  $('#ioe_exam_Warning_ender').css('display', 'none');      
-  /*$('#ioe_system_ender').hide();*/
-  load_result(exm_code);
-});
-$("#full_screen_content").css('display', 'none');      
-$("#ioe_exam_zoomer").css('display', 'none');      
-/*$("#exam_questions").hide();*/
-  var debug = true;
-  $(function () {
-      $('#exam_login_container').children('.osk-trigger').onScreenKeyboard({
-          rewireReturn : 'submit',
-          draggable:false,
-          topPosition:"50%",
-          rewireTab : true,
-          container:'#full_screen_content'
-        });
-      });
-  
-
-  function show_fullscreen()
-  {
-    
-    $("#full_screen_content").css('display', 'block');      
-    $("#ioe_exam_starter").css('display', 'none');      
-    screenfull.request(document.getElementById('full_screen_content'));
-    if(!$('#osk-container').is(':visible')&& exam_state==0)
-    {
-
-      exam_state = 1;
-      $("#ioe_exam_zoomer").css('display', 'block');      
-      $('#osk-container').css('display', 'block'); 
-    $( "#osk-container" ).addClass("keyboard-style");
-    $( "#osk-container" ).fadeOut('fast');
-  }  
-}
-
-var exam_duration = {{exam_details.exam_duration|safe}};
-var hour_rem = exam_duration/60;
-var min_rem = parseInt(exam_duration%60);
-var sec_rem = min_rem * 60;
-var toal_time = exam_duration * 60;
-
-var myVar=setInterval(function(){
-    if (toal_time >0 ){
-        toal_time = toal_time-1;  
-        hour_rem  = parseInt(toal_time/3600);
-        min_rem   = parseInt(toal_time/60) - hour_rem *60;
-        sec_rem   = parseInt(toal_time - hour_rem*3600 - min_rem*60);
-        myTimer();        
-    }
-    else if (toal_time == 0)
-    {
-      toal_time = toal_time -1;
-      /*$('#reviewAns').hide();*/
-      $('#showExam').css('display', 'none');      
-      $('#ioe_system_ender').css('display', 'block');      
-      /*$('#infoText').html('Your time is up. Please submit answers to view result.');*/
-      ajax_set_exam_finished(exam_code, false);
-      /*$('#trigger_gumby_div').click();*/
-    }
-    else{
-      $('#showExam').css('display', 'none');      
-      $('#ioe_system_ender').css('display', 'block');      
-      /*$('#reviewAns').hide();*/
-      /*$('#infoText').html('Your time is up. Please submit answers to view result.');*/
-      /*$('#trigger_gumby_div').click(); */
-    }
-},1000);
-
-function myTimer() {    
-    $("#timeRemained").html('<strong>Time: '+ hour_rem + 'h ' + min_rem + 'm ' + sec_rem  +'s</strong>')
-}
-  
-function clear_login()
-{
-  $("#exam_username").val('');
-  $("#exam_password").val('');
-}
-
-$('#ioe_exam_Warning_ender_cancel').on('click', function(){
-  $('#showExam').show();
-  $('#ioe_exam_Warning_ender').hide();
-});
-  $(document).on("keypress keyup keydown", function(e) {
-  // screenfull.request(document.getElementById('body'));
-    e.preventDefault();
-      return false;
-  });
-
-
-
-  <!--
-
-  //Disable right mouse click Script
-  //By Maximus (maximus@nsimail.com) w/ mods by DynamicDrive
-  //For full source code, visit http://www.dynamicdrive.com
-
-
-
-  // ///////////////////////////////////
-  function clickIE4(){
-  if (event.button==2){
-
-  return false;
-  }
-  }
-
-  function clickNS4(e){
-  if (document.layers||document.getElementById&&!document.all){
-  if (e.which==2||e.which==3){
-
-  return false;
-  }
-  }
-  }
-
-  if(!debug){
-
-  if (document.layers){
-  document.captureEvents(Event.MOUSEDOWN);
-  document.onmousedown=clickNS4;
-  }
-  else if (document.all&&!document.getElementById){
-  document.onmousedown=clickIE4;
-  }
-
-  document.oncontextmenu=new Function("return false;");
-  }
-  // --> 
-
 
 </script>
 {% endblock %}

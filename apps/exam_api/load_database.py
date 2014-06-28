@@ -14,58 +14,73 @@ def load_examset_in_database(request):
     '''
     exam_model = ExammodelApi()
     exam_dict = [
-        {"exam_name": "IOE Practice Exam 1",
-         "exam_date": 1401359880,
+        # {"exam_name": "IOE Practice Exam 1",
+        #  "exam_date": 1401359880,
+        #  "image": "exam.jpg",
+        #  "exam_code": 201,
+        #  "exam_category": "BE-IOE",
+        #  "exam_duration": 60,
+        #  "exam_family": 'DPS'
+        #  },
+        # {"exam_name": "IOM Model Exam 1",
+        #  "exam_date": 1403916646,
+        #  "exam_time": "1.00pm",
+        #  "image": "exam.jpg",
+        #  "exam_code": 101,
+        #  "exam_category": "MBBS-IOM",
+        #  "exam_duration": 180,
+        #  "exam_family": 'CPS'
+        #  },
+        # {"exam_name": "IOE Model Exam 1",
+        #  # "exam_date": 1401258859,
+        #  "exam_date": 1403612147,
+        #  "image": "exam.jpg",
+        #  "exam_code": 204,
+        #  "exam_time": "1.00pm",
+        #  "exam_duration": 60,
+        #  "exam_category": "BE-IOE",
+        #  "exam_family": 'CPS'
+        #  },
+        #  {"exam_name": "IOE Practice Exam 2",
+        #  "exam_date": 1399978500,
+        #  "image": "exam.jpg",
+        #  "exam_code": 202,
+        #  "exam_category": "BE-IOE",
+        #  "exam_duration": 60,
+        #  "exam_family": 'DPS'
+        #  },         
+        #  {"exam_name": "IOE Practice Exam 3",
+        #  "exam_date": 1399978500,
+        #  "image": "exam.jpg",
+        #  "exam_code": 203,
+        #  "exam_category": "BE-IOE",
+        #  "exam_duration": 60,
+        #  "exam_family": 'DPS'
+        #  },
+        # {"exam_name": "IOE Practice Exam 4",
+        #  "exam_date": 1403612147,
+        #  "image": "exam.jpg",
+        #  "exam_code": 205,
+        #  "exam_category": "BE-IOE",
+        #  "exam_duration": 60,
+        #  "exam_family": 'DPS'
+        #  },
+        {"exam_name": "IOM Practice Exam 1",
+         "exam_date": 1403912850,
          "image": "exam.jpg",
-         "exam_code": 201,
-         "exam_category": "BE-IOE",
-         "exam_duration": 60,
-         "exam_family": 'DPS'
-         },
-        {"exam_name": "IOM Model Exam 1",
-         "exam_date": 1403916646,
-         "exam_time": "1.00pm",
-         "image": "exam.jpg",
-         "exam_code": 101,
+         "exam_code": 301,
          "exam_category": "MBBS-IOM",
-         "exam_duration": 180,
-         "exam_family": 'CPS'
-         },
-        {"exam_name": "IOE Model Exam 1",
-         # "exam_date": 1401258859,
-         "exam_date": 1403612147,
-         "image": "exam.jpg",
-         "exam_code": 204,
-         "exam_time": "1.00pm",
-         "exam_duration": 60,
-         "exam_category": "BE-IOE",
-         "exam_family": 'CPS'
-         },
-         {"exam_name": "IOE Practice Exam 2",
-         "exam_date": 1399978500,
-         "image": "exam.jpg",
-         "exam_code": 202,
-         "exam_category": "BE-IOE",
-         "exam_duration": 60,
+         "exam_duration": 120,
          "exam_family": 'DPS'
-         },         
-         {"exam_name": "IOE Practice Exam 3",
-         "exam_date": 1399978500,
+         },        
+         {"exam_name": "IOM Practice Exam 2",
+         "exam_date": 1403912850,
          "image": "exam.jpg",
-         "exam_code": 203,
-         "exam_category": "BE-IOE",
-         "exam_duration": 60,
-         "exam_family": 'DPS'
-         },
-        {"exam_name": "IOE Practice Exam 4",
-         "exam_date": 1403612147,
-         "image": "exam.jpg",
-         "exam_code": 205,
-         "exam_category": "BE-IOE",
-         "exam_duration": 60,
+         "exam_code": 302,
+         "exam_category": "MBBS-IOM",
+         "exam_duration": 120,
          "exam_family": 'DPS'
          }
-
     ]
     exam_model.insert_new_model(exam_dict)
     return HttpResponse("Exam model saved in the database")
@@ -84,16 +99,15 @@ def load_modelquestion_in_database(request):
     #     question_api = QuestionApi()
     #     question_api.insert_new_question(json_obj)
 
-    # for var in range(201,205):
-    var = 205
-    f = open('apps/exam_api/' + str(var) +'.json', 'rb')
-    json_obj = json.loads(f.read())
-    for i, x in enumerate(json_obj):
-        x['question_number'] = i + 1
-    question_api = QuestionApi()
-    question_api.insert_new_question(json_obj)        
-    print var, " saved"
-    return HttpResponse("Question saved in the database")
+    for var in range(301,303):
+        f = open('apps/exam_api/' + str(var) +'.json', 'rb')
+        json_obj = json.loads(f.read())
+        for i, x in enumerate(json_obj):
+            x['question_number'] = i + 1
+        question_api = QuestionApi()
+        question_api.insert_new_question(json_obj)        
+        print var, " saved"
+        return HttpResponse("Question saved in the database")
 
 
 def load_correctanswer_in_database(request):

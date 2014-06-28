@@ -81,10 +81,18 @@
                     <p><strong>Date: </strong>When ever you like in a single sitting</p>
                     <p><strong>Time: </strong>Anytime</p>
                     {% if not eachExam.subscribed %}
-                    <p><strong>Cost: </strong>Rs. 30 (<a href="/coupon/">coupon code</a> entry required)</p>
+                      {% if eachExam.exam_category == 'BE-IOE' %}
+                        <p><strong>Cost: </strong>Rs. 30 (<a href="/coupon/">coupon code</a> entry required)</p>
+                        {% else %}
+                          <p><strong>Cost: </strong>Rs. 20 (<a href="/coupon/">coupon code</a> entry required)</p>
+                      {% endif %}
                     {% endif %}
                      <div class="medium primary btn pretty button-margin" >
+                        {% if eachExam.exam_category == 'BE-IOE' %}
                           <a id="giveDPSExamBtn" href="{% if eachExam.subscribed %}/dps/{{eachExam.code}}/{% else %}#{% endif %}" {% if not eachExam.subscribed %} onclick="attempt_exam('{{eachExam.code}}')" {% endif %}>Give Exam</a>
+                          {% else %}
+                            <a id="giveDPSExamBtn" href="{% if eachExam.subscribed %}/iom/{{eachExam.code}}/{% else %}#{% endif %}" {% if not eachExam.subscribed %} onclick="attempt_exam('{{eachExam.code}}')" {% endif %}>Give Exam</a>
+                        {% endif %}
                       </div>
                   </div>
                 </article>
