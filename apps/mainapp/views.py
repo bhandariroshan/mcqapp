@@ -813,10 +813,10 @@ def generate_coupon(request):
     # 5. IDP (Inter Disciplinary Plan)
     coupon = Coupon()
     # # coupon.generate_coupons('IDP')
-    # coupon.generate_coupons('DPS')
+    coupon.generate_coupons('DPS')
     # coupon.generate_coupons('CPS')
     # coupon.generate_coupons('BE-IOE')
-    coupon.generate_coupons('MBBS-IOM')
+    # coupon.generate_coupons('MBBS-IOM')
     return HttpResponse(json.dumps({'status': 'success'}))
 
 
