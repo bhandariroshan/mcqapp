@@ -32,11 +32,13 @@ def latest_users(request):
                 last_name = social_obj.extra_data.get('last_name')
             else:
                 last_name = ''
+            gender = social_obj.extra_data.get('gender')
             
             each_user = {
                 'username': each.username,
                 'first_name': first_name,
                 'last_name': last_name,
+                'gender': gender,
                 'email': each.email,
                 'fb_url': social_obj.extra_data.get('link') if social_obj.extra_data.get('link') is not None else '',
                 'date_joined': each.date_joined,

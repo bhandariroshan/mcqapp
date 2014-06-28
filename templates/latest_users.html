@@ -7,6 +7,7 @@
 	<th>S.N</th>
 	<th>Username</th>
 	<th>Name</th>
+	<th>Gender</th>
 	<th>Email</th>
 	<th>Facebook Url</th>
 	<th>Date Joined</th>
@@ -16,6 +17,7 @@
 		<td>{{forloop.counter}}</td>
 		<td>{{each.username}}</td>
 		<td>{{each.first_name}} {{each.last_name}}</td>
+		<td>{{each.gender}}</td>
 		<td>{{each.email}}</td>
 		<td><a href="{{each.fb_url}}" target="_blank" > Facebook Link</a></td>
 		<td>{{each.date_joined}}</td>
