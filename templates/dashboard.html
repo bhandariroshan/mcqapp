@@ -165,25 +165,32 @@
     <div class="four columns" style="margin-top: 8%;">
       <section class="twelve columns">
         <div class="twelve columns">
+        {% if not 'iom' in request.path %}
           <li class="warning alert">
             <h2 style="text-align: center; font-size: 40px; text-decoration:underline;">  Notice </h2>
-            <p>Our system is similar to Institute of Engineering's system. You can now take practice tests and competitive test from our system. 
-            </p>
-            <p>Rush now and get coupons from PROGRESS BOOKSHOP outside  PEA building and  start practicing in system similar to pulchowk.
-            </p> <!-- 
+            <p>Our system is similar to Institute of Engineering's system. Get coupons from PROGRESS BOOKSHOP and start taking practice tests and competitive test. 
+            </p><!-- 
             <div class="medium primary btn pretty" >
                 <a href="#" id="enterSubsCoupon" style="width: 150px;" onclick="attempt_exam('subs')">Enter here</a>
             </div> -->              
           </li>
+        {% endif %}
+        {% if not 'iom' in request.path %}
           <li class="warning alert">
-            <h2 style="text-align: center; font-size: 40px; text-decoration:underline;">  Practice IOM  </h2>          
-            </p>
-            </p> 
+            <h2 style="text-align: center; font-size: 40px; text-decoration:underline;">  Practice IOM  </h2>
             <div class="medium primary btn pretty" >
                 <a href="/iom/" id="" style="width: 150px;"> Practice IOM </a>
             </div>              
           </li>
+          {% else %}
+            <li class="warning alert">
+              <h2 style="text-align: center; font-size: 40px; text-decoration:underline;">  Practice IOE  </h2>          
+            <div class="medium primary btn pretty" >
+                <a href="/" id="" style="width: 150px;"> Practice IOE </a>
+            </div>              
+            </li>
         </div>      
+        {% endif %}
         {% if not subscribed %}
           <div class="twelve columns">
             <li class="success alert">
