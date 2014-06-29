@@ -855,6 +855,14 @@ def results(request, exam_code):
     user = user_profile_obj.get_user_by_username(request.user.username)
     parameters['user'] = user
     parameters['result'] = score_list
+    from apps.mainapp.classes.result import Result
+    result_obj = Result()
+    result_obj.save_result({
+            'useruid':request.user.id, 
+            'exam_code':int(exam_code), 
+            'ess_time':ess_check['start_time'], 
+            'result':score_list
+            })
     parameters['exam_code'] = exam_code
     parameters['myrankcard'] = {'total': 200, 'rank': 1}
     return render_to_response(
