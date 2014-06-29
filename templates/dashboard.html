@@ -75,7 +75,8 @@
                             <a id="giveDPSExamBtn" href="javascript:void(0)" onclick="">Start New Exam</a>
                         </div>
                     </div>
-              </article>              
+              </article>
+             <div id="userExams">
               {% for eachExam in upcoming_exams %}
                 {% ifequal eachExam.exam_family  'DPS' %}
                 {% if user.student_category == 'IDP' or user.student_category == eachExam.exam_category %}
@@ -109,6 +110,7 @@
                         {% endif %}
                       </div>
                   </div>
+                </div>
                 </article>
                 {% endif %}
                 {% endifequal %}

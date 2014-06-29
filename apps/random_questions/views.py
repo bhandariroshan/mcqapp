@@ -55,7 +55,6 @@ def generate_random_ioe_questions(request):
         "question_list": final_question_set
     }
     exammodel_api.insert_new_model(new_exam_model)
-    print new_exam_model['exam_code']
     return final_question_set
 
 
