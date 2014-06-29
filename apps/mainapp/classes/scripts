@@ -1,0 +1,2 @@
+db.userprofile.update({'subscription_type':"BE-IOE"}, {'$set':{'valid_exam':[201, 202, 203, 205]}})
+db.userprofile.update({'subscription_type':"MBBS-IOM"}, {'$set':{'valid_exam':[301, 302]}})

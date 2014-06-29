@@ -51,7 +51,7 @@
         </li>
       </div> 
     {% endifequal %}-->
-    <div class="twelve columns">
+    <div class="twelve columns" style="margin-top: -4%;">
       <div class="eight columns">      
         <section class="twelve columns tabs" style="margin-top: 5%;">
             <ul class="tab-nav">
@@ -61,13 +61,13 @@
                 <!-- <li class="ttip" data-tooltip="Subscription required."><a href="#">Progress Card</a></li> -->
             </ul>
 
-            <div id="upcomingPracticeExams" class="tab-content active">
+            <div id="upcomingPracticeExams" class="tab-content active" style="height: 836px; overflow-y: scroll;">
               <article class="valign row text-color-white ui-widget-content ui-corner-all my-margin">
                   <div style="width:25%">
                       <img src="/static/images/exam.jpg" width="145px" />
                   </div>
                   <div style="width:65%">
-                      <h4><a href="#" id=""><strong>IOE Practice Exam (Start New)</strong></a></h4>
+                      <h4><a href="#" id=""><strong>Start New IOE Practice Exam</strong></a></h4>
                       <p><strong>Date: </strong>When ever you like in a single sitting</p>
                       <p><strong>Time: </strong>Anytime</p>
                           <p><strong>Cost: </strong>Rs. 30 (<a href="/coupon/">coupon code</a> entry required)</p>
@@ -76,7 +76,6 @@
                         </div>
                     </div>
               </article>
-             <div id="userExams">
               {% for eachExam in upcoming_exams %}
                 {% ifequal eachExam.exam_family  'DPS' %}
                 {% if user.student_category == 'IDP' or user.student_category == eachExam.exam_category %}
@@ -110,7 +109,6 @@
                         {% endif %}
                       </div>
                   </div>
-                </div>
                 </article>
                 {% endif %}
                 {% endifequal %}
