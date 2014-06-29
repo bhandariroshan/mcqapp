@@ -50,7 +50,8 @@ class ExammodelApi():
     def find_all_exammodel(self, condition1):
         all_exam = self.db_object.get_all(self.table_name, condition1)
         for eachExam in all_exam:
-            all_exam['exam_date'] = int(all_exam['exam_date'])
+            eachExam['exam_date'] = int(eachExam['exam_date'])
+
         return all_exam
 
     def update_exam_model(self, where, what):
