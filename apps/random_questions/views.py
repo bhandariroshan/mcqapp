@@ -14,7 +14,7 @@ def generate_random_ioe_questions(request):
     '''
     exammodel_api = ExammodelApi()
     exam_sets = exammodel_api.find_all_exammodel(
-        {'exam_family': 'DPS', "exam_category": "BE-IOE"})
+        {"exam_category": "BE-IOE"})
     question_sets = []
     for each_set in exam_sets:
         question_api = QuestionApi()
@@ -56,3 +56,21 @@ def generate_random_ioe_questions(request):
     exammodel_api.insert_new_model(new_exam_model)
     print new_exam_model['exam_code']
     return final_question_set
+
+
+def add_questions_in_exam_model(request):
+    '''
+    This function extracts all questions for each exam code and loads
+    the list of question id in the exam model
+    '''
+    exammodel_api = ExammodelApi()
+    exam_models = exammodel_api.find_all_exammodel(
+        {"exam_category": "BE-IOE",
+         "question_list": {"$exists": 0}}
+    )
+    for exams in exam_models:
+        # question_api = QuestionApi()
+        # question_api.find_all_questions(
+        #     {"exam_code": exams['exam_code']}
+        # )
+        print exams['exam_code']
