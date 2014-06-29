@@ -798,7 +798,6 @@ def generate_coupon(request):
 
 @user_passes_test(lambda u: u.is_superuser)
 def get_coupons(request, subscription_type):
-    # page_no = request.GET.get('page', 1)
     coupon_obj = Coupon()
     if subscription_type == 'beioe':
         subscription_type = 'BE-IOE'
@@ -807,13 +806,7 @@ def get_coupons(request, subscription_type):
     subscription_type = subscription_type.upper()
     coupons = coupon_obj.get_coupons(subscription_type)
     page_obj = Paginator(coupons, 12)
-    # if int(page_no) < int(page_obj.num_pages) + 1:
-    #     pg_no = page_no
-    # else:
-    #     pg_no = 1
-    # coupons = page_obj.page(int(pg_no))
-    # coupon_obj.update_coupons(subscription_type)
-    # return HttpResponse(json.dumps({'status': 'ok', 'coupons': coupons}))
+    # return render_to_response('coupons-cover.html', {'coupons': range(1,13), 'count': "1000"})
     for i in range(1,page_obj.num_pages+1):
         abc = render_to_response(
             'coupons-print.html',
@@ -822,9 +815,14 @@ def get_coupons(request, subscription_type):
         Html_file= open(settings.APP_ROOT+"/../meroanswer-coupons/" + "coupon-" + str(i) + ".html","w")
         Html_file.write(str(abc))
         Html_file.close()
-    
+        count = 1000 + (i-1)*12
+        cover = render_to_response('coupons-cover.html', {'coupons': range(1,13), 'count': count})
+        Html_file= open(settings.APP_ROOT+"/../meroanswer-coupons/cover/" + "cover-" + str(i) + ".html","w")
+        Html_file.write(str(cover))
+        Html_file.close()
+
     subprocess.call(['../meroanswer-coupons/coupon-gen.sh'])
-    return HttpResponse(json.dumps({'status': 'ok', 'message': str(page_obj.num_pages) + ' Page coupons generated'}))
+    return HttpResponse(json.dumps({'status': 'ok', 'message': str(page_obj.num_pages) + ' Page '+ subscription_type + 'coupons generated'}))
 
 def results(request, exam_code):
     parameters = {}
