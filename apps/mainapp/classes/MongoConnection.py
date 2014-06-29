@@ -33,6 +33,15 @@ class MongoConnection():
         json_doc = json_doc.replace("_id", "uid")
         return json.loads(str(json_doc))
 
+    def get_all_descending(self, table_name, conditions={}, fields=None,
+                           sort_index='_id', limit=200):
+        all_doc = self.db[table_name].find(conditions, fields).sort(
+            sort_index, pymongo.DESCENDING).limit(limit)
+        json_doc = json.dumps(list(all_doc), default=json_util.default)
+        json_doc = json_doc.replace("$oid", "id")
+        json_doc = json_doc.replace("_id", "uid")
+        return json.loads(str(json_doc))
+
     def insert_one(self, table_name, value):
         self.db[table_name].insert(value)
 
@@ -114,7 +123,8 @@ class MongoConnection():
         json_doc = json_doc.replace("_id", "uid")
         return json.loads(json_doc)
 
-    def get_paginated_values(self, table_name, conditions={}, fields={}, sort_index='_id', pageNumber=1):
+    def get_paginated_values(self, table_name, conditions={}, fields={},
+                             sort_index='_id', pageNumber=1):
         all_doc = self.db[table_name].find(conditions).sort(
             sort_index, pymongo.ASCENDING).skip(
             (pageNumber - 1) * 13).limit(13)
@@ -123,5 +133,6 @@ class MongoConnection():
         json_doc = json_doc.replace("_id", "uid")
         return json.loads(json_doc)
 
-    def get_count(self, table_name, conditions={},fields={}, sort_index='_id'):
+    def get_count(self, table_name, conditions={},
+                  fields={}, sort_index='_id'):
         return self.db[table_name].find(conditions, fields).count()
