@@ -1,12 +1,14 @@
 import time
 import datetime
 import json
+import subprocess
 from facepy import GraphAPI
 
 from allauth.socialaccount.models import SocialToken, SocialAccount
 from allauth.socialaccount.providers.facebook.views import login_by_token
 
 from django.http import Http404
+from django.core.paginator import Paginator
 
 from django.shortcuts import render_to_response
 from django.http import HttpResponseRedirect, HttpResponse
@@ -23,6 +25,7 @@ from apps.exam_api.views import ExamHandler
 from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi,\
     ExamStartSignal, HonorCodeAcceptSingal, AttemptedAnswerDatabase,\
     CurrentQuestionNumber
+from django.conf import settings
 
 
 def sign_up_sign_in(request, android_user=False):
@@ -795,6 +798,7 @@ def generate_coupon(request):
 
 @user_passes_test(lambda u: u.is_superuser)
 def get_coupons(request, subscription_type):
+    # page_no = request.GET.get('page', 1)
     coupon_obj = Coupon()
     if subscription_type == 'beioe':
         subscription_type = 'BE-IOE'
@@ -802,9 +806,25 @@ def get_coupons(request, subscription_type):
         subscription_type = 'MBBS-IOM'
     subscription_type = subscription_type.upper()
     coupons = coupon_obj.get_coupons(subscription_type)
+    page_obj = Paginator(coupons, 12)
+    # if int(page_no) < int(page_obj.num_pages) + 1:
+    #     pg_no = page_no
+    # else:
+    #     pg_no = 1
+    # coupons = page_obj.page(int(pg_no))
     # coupon_obj.update_coupons(subscription_type)
-    return HttpResponse(json.dumps({'status': 'ok', 'coupons': coupons}))
-
+    # return HttpResponse(json.dumps({'status': 'ok', 'coupons': coupons}))
+    for i in range(1,page_obj.num_pages+1):
+        abc = render_to_response(
+            'coupons-print.html',
+            {'coupons': page_obj.page(i)}
+        )
+        Html_file= open(settings.APP_ROOT+"/../meroanswer-coupons/" + "coupon-" + str(i) + ".html","w")
+        Html_file.write(str(abc))
+        Html_file.close()
+    
+    subprocess.call(['../meroanswer-coupons/coupon-gen.sh'])
+    return HttpResponse(json.dumps({'status': 'ok', 'message': str(page_obj.num_pages) + ' Page coupons generated'}))
 
 def results(request, exam_code):
     parameters = {}
