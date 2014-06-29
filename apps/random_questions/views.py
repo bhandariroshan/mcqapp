@@ -40,23 +40,30 @@ def generate_random_ioe_questions(request):
                         random.randrange(len(question_sets))][i]['uid']['id']
                 )
             )
+    user_exam_code = exammodel_api.find_all_exammodel(
+        {"user": request.user.username},
+        fields={"exam_code: 1"}
+    )
+    if len(user_exam_code) == 0:
+        new_exam_code = 500
+    else:
+        new_exam_code = int(user_exam_code[0]['exam_code']) + 1
     new_exam_model = {
         "exam_name": "IOE Practice set",
         "exam_date": time.mktime(
             datetime.datetime.now().timetuple()
         ),
         "image": "exam.jpg",
-        "exam_code": time.mktime(
-            datetime.datetime.now().timetuple()
-        ),
+        "exam_code": new_exam_code,
         "exam_category": "BE-IOE",
         "exam_duration": 60,
         "exam_family": 'DPS',
+        "user": request.user.username,
         "question_list": final_question_set
     }
-    exammodel_api.insert_new_model(new_exam_model)
+    # exammodel_api.insert_new_model(new_exam_model)
     print new_exam_model['exam_code']
-    return final_question_set
+    return HttpResponse(new_exam_model)
 
 
 def add_questions_in_exam_model(request):
