@@ -48,7 +48,10 @@ class ExammodelApi():
         return self.db_object.get_one(self.table_name, condition)
 
     def find_all_exammodel(self, condition1):
-        return self.db_object.get_all(self.table_name, condition1)
+        all_exam = self.db_object.get_all(self.table_name, condition1)
+        for eachExam in all_exam:
+            all_exam['exam_date'] = int(all_exam['exam_date'])
+        return all_exam
 
     def update_exam_model(self, where, what):
         return self.db_object.update(self.table_name, where, what)
