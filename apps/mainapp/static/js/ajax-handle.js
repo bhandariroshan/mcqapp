@@ -49,6 +49,13 @@ function get_next_page_success(data){
 function load_result(exm_code){
 	ajax_request('load_result', 'load_result_success', {'exam_code':exm_code});
 }
+function get_new_ioe_exam(){
+	ajax_request('get_new_ioe_exam', 'get_new_exam_success',{});
+}
+
+function get_new_ioe_exam_success(data){
+	data = jQuery.parseJSON(data);
+}
 
 function get_unattempted_questions_number(exam_code){
 	ajax_request('get_unattempted_questions_number', 'get_unattempted_questions_number_success', {'exam_code':exam_code});

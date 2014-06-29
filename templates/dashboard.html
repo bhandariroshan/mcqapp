@@ -300,6 +300,17 @@ var ex_code;
     iomCheck = $('#ioeCheck').prop('checked');
     ajax_save_category(ioeCheck, iomCheck);
   }
+
+  $('#generateNewExam').on('click', function(){
+    {% if 'BE-IOE' not in subscription_type %}
+      var html_str = 'Coupon code are necessary to ensure the regular operation of exam. Coupon codes are available at various <a href="/#/" style="color:red;"><strong>distributors</strong></a>. Please enter code your below'
+        $('#infoText').html(html_str); 
+        $('#trigger_gumby_div').click();
+      
+      {% else %}
+        get_new_ioe_exam();
+    {% endif %}
+  });
 </script>
 <script type="text/javascript">
   mixpanel.track_links("#DPSExamsTab", "Viewed DPS Exams on dashboard", {"referrer": document.referrer});

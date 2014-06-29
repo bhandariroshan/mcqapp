@@ -158,6 +158,9 @@ def landing(request):
             parameters['subscribed'] = True
         else:
             parameters['subscribed'] = False
+
+        parameters['subscription_type'] = user['subscription_type']
+        
         try:
             if user['student_category_set'] == 1:
                 parameters['student_category_set'] = True

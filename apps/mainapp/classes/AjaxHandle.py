@@ -489,4 +489,9 @@ class AjaxHandle():
         nt_att = 65 - cnt_att
         return HttpResponse(json.dumps({'status':'ok', 'questions':not_attempted, 'attempted':cnt_att, 'notattempted':nt_att}))
 
-    
+    def get_new_ioe_exam(self, request):
+        user_profile_obj = UserProfile()
+        if request.user.is_authenticated():
+            subscription_type = user_profile_obj.get_user_by_username(request.user.username)['subscription_type']
+            if 'BE-IOE' in subscription_type:
+                from apps.random_questions import 
