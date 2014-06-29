@@ -28,4 +28,5 @@ urlpatterns = patterns(
     url(r'^coupon_admin/$', 'apps.exam_api.coupon_admin.coupon_search'),    
     url(r'^iom/$', 'apps.mainapp.views.iomdashboard'),
     url(r'^iom/(?P<exam_code>\w{1,15})/$', 'apps.mainapp.views.attend_IOM_dps_exam'),
+    url(r'^random/', include('apps.random_questions.urls', app_name='random_questions')),
 )
