@@ -14,12 +14,26 @@ class ExamHandler():
         This function returns the questions of a model
         by checking the exam_code
         '''
-        question_api = QuestionApi()
-        questions = question_api.find_all_questions(
-            {"exam_code": int(exam_code), 'marks':1})
-        sorted_questions = sorted(
-            questions, key=lambda k: k['question_number'])
-        return sorted_questions
+        exammodel_api = ExammodelApi()
+        try:
+            exam_model = exammodel_api.find_one_exammodel(
+                {"exam_code": int(exam_code)}
+            )
+            questions = [i['id'] for i in exam_model['question_list']]
+            question_api = QuestionApi()
+            question_list = question_api.find_all_questions(
+                {'_id': {"$in": questions}}
+            )
+            print question_list
+        except:
+            pass
+        # question_api = QuestionApi()
+        # questions = question_api.find_all_questions(
+        #     {"exam_code": int(exam_code), 'marks':1}
+        # )
+        # sorted_questions = sorted(
+        #     questions, key=lambda k: k['question_number'])
+        # return sorted_questions
 
     def list_upcoming_exams(self, condition={}):
         '''
@@ -41,7 +55,7 @@ class ExamHandler():
         )
         question_api = QuestionApi()
         questions = question_api.find_all_questions(
-            {"exam_code": int(exam_code), 'marks':1})
+            {"exam_code": int(exam_code), 'marks': 1})
         sorted_questions = sorted(
             questions, key=lambda k: k['question_number'])
         subjects = set([i['subject'] for i in sorted_questions])
