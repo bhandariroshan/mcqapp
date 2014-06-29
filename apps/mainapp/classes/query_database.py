@@ -58,6 +58,11 @@ class ExammodelApi():
         return self.db_object.get_all(self.table_name, condition1,
                                       fields, sort_index, limit)
 
+    def find_all_exammodel_descending(self, condition1, fields=None,
+                                      sort_index='_id', limit=200):
+        return self.db_object.get_all_descending(self.table_name, condition1,
+                                                 fields, sort_index, limit)
+
     def update_exam_model(self, where, what):
         return self.db_object.update(self.table_name, where, what)
 
