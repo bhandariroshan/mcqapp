@@ -3,6 +3,7 @@ import datetime
 import time
 
 from bson.objectid import ObjectId
+from django.http import HttpResponse
 
 from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi
 
@@ -65,12 +66,18 @@ def add_questions_in_exam_model(request):
     '''
     exammodel_api = ExammodelApi()
     exam_models = exammodel_api.find_all_exammodel(
-        {"exam_category": "BE-IOE",
-         "question_list": {"$exists": 0}}
+        {"question_list": {"$exists": 0}}
     )
     for exams in exam_models:
-        # question_api = QuestionApi()
-        # question_api.find_all_questions(
-        #     {"exam_code": exams['exam_code']}
-        # )
-        print exams['exam_code']
+        question_api = QuestionApi()
+        questions = question_api.find_all_questions(
+            {"exam_code": exams['exam_code']},
+            fields={"_id": 1}
+        )
+        if len(questions) != 0:
+            question_id_list = [ObjectId(i['uid']['id']) for i in questions]
+            exammodel_api.update_exam_model(
+                {"exam_code": exams['exam_code']},
+                {"question_list": question_id_list}
+            )
+    return HttpResponse('Question list saved in Exam model')
