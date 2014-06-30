@@ -818,11 +818,7 @@ def results(request, exam_code):
          'useruid': request.user.id}
     )
 
-    question_obj = QuestionApi()
-    total_questions = question_obj.get_count(
-        {"exam_code": int(exam_code), 'marks': 1}
-    )
-
+    total_questions = 65
     ans = AttemptedAnswerDatabase()
     try:
         all_ans = ans.find_all_atttempted_answer({

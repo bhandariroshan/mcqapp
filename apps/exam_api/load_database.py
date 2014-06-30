@@ -100,14 +100,13 @@ def load_modelquestion_in_database(request):
     #     question_api = QuestionApi()
     #     question_api.insert_new_question(json_obj)
 
-    for var in range(301, 303):
-        f = open('apps/exam_api/' + str(var) + '.json', 'rb')
+    for var in range(1, 10):        
+        f = open('C:/Users/Roshan Bhandari/Desktop/extraction/v4s' + str(var) + '/text.docx-json.json-new_json.json', 'rb')
         json_obj = json.loads(f.read())
         for i, x in enumerate(json_obj):
             x['question_number'] = i + 1
         question_api = QuestionApi()
         question_api.insert_new_question(json_obj)
-        print var, " saved"
     return HttpResponse("Question saved in the database")
 
 

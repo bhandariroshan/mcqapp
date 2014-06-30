@@ -14,7 +14,6 @@ def coupon_search(request):
         coupon_obj = mycoupon.get_coupon_by_coupon_code(code)
         userprofile = UserProfile()
         coupon_user = userprofile.get_user_by_coupon(code)
-        print coupon_user
         if coupon_user is not None:
             user_details = {
                 'name': coupon_user.get('name'),

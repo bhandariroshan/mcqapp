@@ -431,9 +431,8 @@ class AjaxHandle():
         ess = ExamStartSignal()            
         ess_check = ess.check_exam_started({'exam_code':int(exam_code), 'useruid':request.user.id})
 
-        question_obj = QuestionApi()    
-        total_questions = question_obj.get_count({"exam_code": int(exam_code), 'marks':1})
-
+       
+        total_questions = 65
         ans = AttemptedAnswerDatabase()
         try:
             all_ans = ans.find_all_atttempted_answer({
@@ -447,6 +446,7 @@ class AjaxHandle():
         answer_list = ''
         anss = []
 
+
         for eachAns in all_ans:
             anss.append(eachAns['q_no'])
 
@@ -458,7 +458,7 @@ class AjaxHandle():
                     answer_list +='e'
             except:
                 answer_list += 'e'
-
+        print answer_list
         exam_handler = ExamHandler()    
         score_dict = exam_handler.check_answers(exam_code, answer_list)
         parameters['result'] = score_dict
