@@ -782,19 +782,20 @@ def distributors(request):
 
 
 @user_passes_test(lambda u: u.is_superuser)
-def generate_coupon(request):
+def generate_coupon(request, subscription_type):
     # 1. DPS (Daily Practice Set)
     # 2. CPS (Competitive Pracice Set)
     # 3. MBBS-IOM
     # 4. BE-IOE
     # 5. IDP (Inter Disciplinary Plan)
     coupon = Coupon()
-    # # coupon.generate_coupons('IDP')
-    coupon.generate_coupons('DPS')
-    # coupon.generate_coupons('CPS')
-    # coupon.generate_coupons('BE-IOE')
-    # coupon.generate_coupons('MBBS-IOM')
-    return HttpResponse(json.dumps({'status': 'success'}))
+    if subscription_type == 'beioe':
+        subscription_type = 'BE-IOE'
+    elif subscription_type == 'mbbsiom':
+        subscription_type = 'MBBS-IOM'
+    coupon.update_coupons(subscription_type.upper())
+    coupon.generate_coupons(subscription_type.upper())
+    return HttpResponse(json.dumps({'status': 'success', 'message': subscription_type + ' coupons generated'}))
 
 
 @user_passes_test(lambda u: u.is_superuser)
@@ -812,6 +813,7 @@ def get_coupons(request, subscription_type):
         subscription_type = 'MBBS-IOM'
     subscription_type = subscription_type.upper()
     coupons = coupon_obj.get_coupons(subscription_type)
+    print ('Total coupons available: {0}').format(len(coupons))
     page_obj = Paginator(coupons, 12)
     for i in range(1,page_obj.num_pages+1):
         count = base_count + (i-1)*12
