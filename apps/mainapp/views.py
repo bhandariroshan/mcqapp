@@ -799,11 +799,9 @@ def generate_coupon(request):
 
 @user_passes_test(lambda u: u.is_superuser)
 def get_coupons(request, subscription_type):
-    query_type = request.GET.get('type', 'IOE')
     coupon_obj = Coupon()
     coupon_count = CouponCount()
     base_count = coupon_count.get_coupon_count()
-    print ('base count from mongo: {0}').format(base_count)
     if base_count is not None:
         base_count = base_count['count']
     else:
@@ -816,22 +814,17 @@ def get_coupons(request, subscription_type):
     coupons = coupon_obj.get_coupons(subscription_type)
     page_obj = Paginator(coupons, 12)
     for i in range(1,page_obj.num_pages+1):
+        count = base_count + (i-1)*12
+        for cc, each_coup in enumerate(page_obj.page(i)):
+            coupon_obj.update_serial_no(serial_no= int(count+cc+1), coupon_code=each_coup['code'])
         abc = render_to_response(
             'coupons-print.html',
-            {'coupons': page_obj.page(i)}
+            {'coupons': page_obj.page(i), 'count': count}
         )
         Html_file= open(settings.APP_ROOT+"/../meroanswer-coupons/htmls/" + "coupon-" + str(i) + ".html","w")
-        
         Html_file.write(str(abc))
         Html_file.close()
 
-        count = base_count + (i-1)*12
-        img = query_type.upper() + "-" + subscription_type + ".png"
-        cover = render_to_response('coupons-cover.html', {'coupons': range(1,13), 'count': count, 'img': img})
-        Html_file= open(settings.APP_ROOT+"/../meroanswer-coupons/cover/" + "cover-" + str(i) + ".html","w")
-        Html_file.write(str(cover))
-        Html_file.close()
-    print ('final coupon count: {0}').format(count)
     coupon_count.update_coupon_count(count)
     subprocess.call(['../meroanswer-coupons/coupon-gen.sh'])
     return HttpResponse(json.dumps({'status': 'ok', 'message': str(page_obj.num_pages) + ' Page '+ subscription_type + ' coupons generated'}))
