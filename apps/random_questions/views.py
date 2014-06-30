@@ -36,6 +36,7 @@ def generate_random_ioe_questions(request):
                         random.randrange(len(question_sets))][i]['uid']['id']
                 )
             )
+    print final_question_set
     exammodel_api = ExammodelApi()
     last_exam_code = exammodel_api.find_all_exammodel_descending(
         {},
