@@ -2,10 +2,11 @@ import time
 import datetime
 import json
 from facepy import GraphAPI
-import re
 
 from allauth.socialaccount.models import SocialToken, SocialAccount
 from allauth.socialaccount.providers.facebook.views import login_by_token
+
+from django.http import Http404
 
 from django.shortcuts import render_to_response
 from django.http import HttpResponseRedirect, HttpResponse
@@ -19,7 +20,7 @@ from apps.mainapp.classes.Exams import RankCard, ScoreCard
 from apps.mainapp.classes.Coupon import Coupon
 from apps.mainapp.classes.Userprofile import UserProfile
 from apps.exam_api.views import ExamHandler
-
+from bson.objectid import ObjectId
 from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi,\
     ExamStartSignal, HonorCodeAcceptSingal, AttemptedAnswerDatabase,\
     CurrentQuestionNumber
@@ -27,16 +28,20 @@ from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi,\
 
 def sign_up_sign_in(request, android_user=False):
     social_account = SocialAccount.objects.get(user__id=request.user.id)
+    access_token = SocialToken.objects.get(account__user__id=request.user.id)
     user_profile_object = UserProfile()
     user = user_profile_object.get_user_by_username(request.user.username)
-    if user is not None:
+    if user != None:
         return None
 
     valid_exams = []
-    coupons = []
+    coupons = []    
     subscription_type = []
     join_time = datetime.datetime.now()
     join_time = time.mktime(join_time.timetuple())
+    graph = GraphAPI(access_token)
+    det = graph.get(social_account.uid + '/picture/?redirect=0&height=300&type=normal&width=300')
+    profile_image = det['data']['url']
     student_category = 'IDP'
     student_category_set = 0
     data = {
@@ -72,9 +77,7 @@ def sign_up_sign_in(request, android_user=False):
     except:
         pass
     data['mc_subscribed'] = True
-    return user_profile_object.update_upsert(
-        {'username': request.user.username}, data
-    )
+    return user_profile_object.update_upsert({'username': request.user.username}, data)
 
 
 def latex_html(request):
@@ -101,9 +104,7 @@ def add_html(request):
              "answer.d.html": question['answer']['d']['text']
              }
         )
-    return render_to_response(
-        "sample-tex.html", context_instance=RequestContext(request)
-    )
+    return render_to_response("sample-tex.html", context_instance=RequestContext(request))
 
 
 @csrf_exempt
@@ -145,6 +146,7 @@ def landing(request):
             request.user.username
         )
         user = user_profile_obj.get_user_by_username(request.user.username)
+        exam_handler = ExamHandler()
         exam_model_api = ExammodelApi()
         user_exams = user['valid_exam']
 
@@ -157,7 +159,7 @@ def landing(request):
             parameters['subscribed'] = False
 
         parameters['subscription_type'] = user['subscription_type']
-
+        
         try:
             if user['student_category_set'] == 1:
                 parameters['student_category_set'] = True
@@ -168,9 +170,7 @@ def landing(request):
 
         for eachExam in user_exams:
             up_exm = {}
-            eaxhExamDetails = exam_model_api.find_one_exammodel(
-                {'exam_code': eachExam}
-            )
+            eaxhExamDetails = exam_model_api.find_one_exammodel({'exam_code':eachExam})
             up_exm['name'] = eaxhExamDetails['exam_name']
 
             if 'IDP' in subscription_type:
@@ -454,6 +454,7 @@ def attend_dps_exam(request, exam_code):
 
             parameters['all_answers'] = json.dumps(all_answers)
 
+
             current_pg_num = 1
             next_page = 0
 
@@ -480,7 +481,7 @@ def attend_dps_exam(request, exam_code):
             questions = exam_handler_obj.get_paginated_question_set(
                 int(exam_code), current_pg_num
             )
-            # print questions
+
             sorted_questions = sorted(
                 questions, key=lambda k: k['question_number']
             )
@@ -856,14 +857,12 @@ def results(request, exam_code):
     parameters['result'] = score_list
     from apps.mainapp.classes.result import Result
     result_obj = Result()
-    result_obj.save_result(
-        {
-            'useruid': request.user.id,
-            'exam_code': int(exam_code),
-            'ess_time': ess_check['start_time'],
-            'result': score_list
-        }
-    )
+    result_obj.save_result({
+            'useruid':request.user.id, 
+            'exam_code':int(exam_code), 
+            'ess_time':ess_check['start_time'], 
+            'result':score_list
+            })
     parameters['exam_code'] = exam_code
     parameters['myrankcard'] = {'total': 200, 'rank': 1}
     return render_to_response(
@@ -908,17 +907,12 @@ def show_result(request, exam_code, subject_name):
         question_obj = QuestionApi()
         questions = question_obj.find_all_questions(
             {"exam_code": int(exam_code),
-             'subject': {"$regex": re.compile(
-                         "^" + str(subject_name) + "$",
-                         re.IGNORECASE), "$options": "-i"},
+             'subject': str(subject_name),
              'marks': 1}
         )
         total_questions = question_obj.get_count(
             {"exam_code": int(exam_code),
-             'subject': {"$regex": re.compile(
-                         "^" + str(subject_name) + "$",
-                         re.IGNORECASE), "$options": "-i"},
-             'marks': 1}
+             'subject': subject_name, 'marks': 1}
         )
 
         try:
@@ -1216,6 +1210,8 @@ def attend_IOM_dps_exam(request, exam_code):
             )
             check = validate_start['start_time']
 
+        dps_exam_start = exam_details['exam_family'] == 'DPS' and current_time\
+            - check > exam_details['exam_duration'] * 60
         if current_time - check > exam_details['exam_duration'] * 60:
             ess.update_exam_start_signal({
                 'exam_code': int(exam_code),

@@ -34,14 +34,13 @@ class QuestionApi():
         return self.db_object.get_count(self.table_name, where)
 
     def get_paginated_questions(self, where, fields={}, page_num=1):
-        question_list = self.db_object.get_paginated_values(self.table_name,
-                where, fields=fields, sort_index ='question_number', pageNumber = page_num
-            )
+        question_list = self.db_object.get_paginated_values(
+            self.table_name,
+            where, fields=fields,
+            sort_index='question_number',
+            pageNumber=page_num
+        )
         return question_list
-        # return self.db_object.get_paginated_values(
-        #     self.table_name, where, fields=fields,
-        #     sort_index='_id', pageNumber=page_num
-        # )
 
 
 class ExammodelApi():

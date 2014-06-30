@@ -480,7 +480,11 @@ def attend_dps_exam(request, exam_code):
             questions = exam_handler_obj.get_paginated_question_set(
                 int(exam_code), current_pg_num
             )
+<<<<<<< HEAD
+
+=======
             # print questions
+>>>>>>> 946351d51d9287ae58ebfb5a825f9e59e3f56ecf
             sorted_questions = sorted(
                 questions, key=lambda k: k['question_number']
             )
