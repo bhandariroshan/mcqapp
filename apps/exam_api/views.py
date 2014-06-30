@@ -38,15 +38,15 @@ class ExamHandler():
         exammodel_api = ExammodelApi()
         exam_model = exammodel_api.find_one_exammodel(
             {"exam_code": int(exam_code)}
-        )        
+        )
         questions_list = exam_model['question_list']
         question_id_list = [
             ObjectId(i['id']) for i in questions_list
         ]
         question_api = QuestionApi()
         return_question_list = question_api.get_paginated_questions(
-            {'_id': {"$in": question_id_list},  "marks": 1},
-            fields={'answer.correct': 0}, 
+            {'_id': {"$in": question_id_list}, "marks": 1},
+            fields={'answer.correct': 0},
             page_num=current_pg_num
         )
         return return_question_list

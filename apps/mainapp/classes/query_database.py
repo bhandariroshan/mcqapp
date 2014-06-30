@@ -35,8 +35,9 @@ class QuestionApi():
 
     def get_paginated_questions(self, where, fields={}, page_num=1):
         question_list = self.db_object.get_paginated_values(
-                where, fields=fields, sort_index ='question_number', pageNumber = page_num
-            )
+            where, fields=fields,
+            sort_index='question_number', pageNumber=page_num
+        )
         return question_list
         # return self.db_object.get_paginated_values(
         #     self.table_name, where, fields=fields,
