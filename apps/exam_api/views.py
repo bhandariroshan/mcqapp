@@ -25,7 +25,7 @@ class ExamHandler():
             ]
             question_api = QuestionApi()
             question_list = question_api.find_all_questions(
-                {'_id': {"$in": question_id_list}}
+                {'_id': {"$in": question_id_list}, "marks": 1}
             )
             sorted_questions = sorted(
                 question_list, key=lambda k: k['question_number'])
@@ -33,6 +33,23 @@ class ExamHandler():
 
         except:
             pass
+
+    def get_paginated_question_set(self, exam_code, current_pg_num):
+        exammodel_api = ExammodelApi()
+        exam_model = exammodel_api.find_one_exammodel(
+            {"exam_code": int(exam_code)}
+        )        
+        questions_list = exam_model['question_list']
+        question_id_list = [
+            ObjectId(i['id']) for i in questions_list
+        ]
+        question_api = QuestionApi()
+        return_question_list = question_api.get_paginated_questions(
+            {'_id': {"$in": question_id_list},  "marks": 1},
+            fields={'answer.correct': 0}, 
+            page_num=current_pg_num
+        )
+        return return_question_list
 
     def list_upcoming_exams(self, condition={}):
         '''

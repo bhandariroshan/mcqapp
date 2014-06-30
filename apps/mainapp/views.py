@@ -20,6 +20,7 @@ from apps.mainapp.classes.Exams import RankCard, ScoreCard
 from apps.mainapp.classes.Coupon import Coupon
 from apps.mainapp.classes.Userprofile import UserProfile
 from apps.exam_api.views import ExamHandler
+from bson.objectid import ObjectId
 from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi,\
     ExamStartSignal, HonorCodeAcceptSingal, AttemptedAnswerDatabase,\
     CurrentQuestionNumber
@@ -358,6 +359,7 @@ def attend_dps_exam(request, exam_code):
         parameters['user'] = user_det
         ess = ExamStartSignal()
         exam_obj = ExammodelApi()
+        exam_handler_obj = ExamHandler()
         ess = ExamStartSignal()
 
         try:
@@ -451,7 +453,7 @@ def attend_dps_exam(request, exam_code):
                 exam_details['exam_duration'] * 60 - time_elapsed) / 60
 
             parameters['all_answers'] = json.dumps(all_answers)
-            question_obj = QuestionApi()
+
 
             current_pg_num = 1
             next_page = 0
@@ -476,20 +478,17 @@ def attend_dps_exam(request, exam_code):
                 parameters['page_end'] = True
 
             parameters['current_pg_num'] = current_pg_num
-
-            questions = question_obj.get_paginated_questions(
-                {"exam_code": int(exam_code), 'marks': 1},
-                fields={'answer.correct': 0}, page_num=current_pg_num)
-            total_questions = question_obj.get_count(
-                {"exam_code": int(exam_code), 'marks': 1}
+            questions = exam_handler_obj.get_paginated_question_set(
+                int(exam_code), current_pg_num
             )
+            print questions
             sorted_questions = sorted(
                 questions, key=lambda k: k['question_number']
             )
             parameters['questions'] = sorted_questions
             parameters['exam_details'] = exam_details
 
-            parameters['max_questions_number'] = total_questions
+            parameters['max_questions_number'] = 65
 
             parameters['exam_code'] = exam_code
             user_profile_obj = UserProfile()
