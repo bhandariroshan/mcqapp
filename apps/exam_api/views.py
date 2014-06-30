@@ -3,6 +3,7 @@ from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi,\
 
 import datetime
 import time
+from bson.objectid import ObjectId
 
 
 class ExamHandler():
@@ -19,21 +20,19 @@ class ExamHandler():
             exam_model = exammodel_api.find_one_exammodel(
                 {"exam_code": int(exam_code)}
             )
-            questions = [i['id'] for i in exam_model['question_list']]
+            question_id_list = [
+                ObjectId(i['id']) for i in exam_model['question_list']
+            ]
             question_api = QuestionApi()
             question_list = question_api.find_all_questions(
-                {'_id': {"$in": questions}}
+                {'_id': {"$in": question_id_list}}
             )
-            print question_list
+            sorted_questions = sorted(
+                question_list, key=lambda k: k['question_number'])
+            return sorted_questions
+
         except:
             pass
-        # question_api = QuestionApi()
-        # questions = question_api.find_all_questions(
-        #     {"exam_code": int(exam_code), 'marks':1}
-        # )
-        # sorted_questions = sorted(
-        #     questions, key=lambda k: k['question_number'])
-        # return sorted_questions
 
     def list_upcoming_exams(self, condition={}):
         '''
@@ -53,11 +52,7 @@ class ExamHandler():
         exam_model = exammodel_api.find_one_exammodel(
             {'exam_code': int(exam_code)}
         )
-        question_api = QuestionApi()
-        questions = question_api.find_all_questions(
-            {"exam_code": int(exam_code), 'marks': 1})
-        sorted_questions = sorted(
-            questions, key=lambda k: k['question_number'])
+        sorted_questions = self.get_questionset_from_database(exam_code)
         subjects = set([i['subject'] for i in sorted_questions])
 
         correct_answers = {}
