@@ -70,7 +70,8 @@ class ExamHandler():
             {'exam_code': int(exam_code)}
         )
         sorted_questions = self.get_questionset_from_database(exam_code)
-        subjects = set([i['subject'] for i in sorted_questions])
+        print sorted_questions
+        subjects = set([i['subject'].lower() for i in sorted_questions])
 
         correct_answers = {}
         for subs in subjects:
@@ -83,30 +84,31 @@ class ExamHandler():
 
         for index, choice in enumerate(answer_list):
             correct_answers[
-                sorted_questions[index]['subject']]['subject_total_marks'] += \
-                1 * int(sorted_questions[index]['marks'])
+                sorted_questions[index]['subject'].lower()][
+                'subject_total_marks'] += 1 * \
+                int(sorted_questions[index]['marks'])
             if choice in ['a', 'b', 'c', 'd']:
                 correct_answers[
-                    sorted_questions[index]['subject']]['attempted'] += 1
+                    sorted_questions[index][
+                        'subject'].lower()]['attempted'] += 1
                 if sorted_questions[index]['answer']['correct'] == choice:
                     try:
-                        correct_answers[sorted_questions[index]['subject']][
-                            'correct_subject_answer'
-                        ] += 1
-                        correct_answers[sorted_questions[index]['subject']][
-                            'score'
-                        ] += 1 * int(sorted_questions[index]['marks'])
+                        correct_answers[sorted_questions[index][
+                            'subject'].lower()]['correct_subject_answer'] += 1
+                        correct_answers[sorted_questions[index][
+                            'subject'].lower()]['score'] += 1 * \
+                            int(sorted_questions[index]['marks'])
                     except:
                         correct_answers[
-                            sorted_questions[index]['subject']][
+                            sorted_questions[index]['subject'].lower()][
                             'score'
                         ] += 1
                 else:
                     if exam_model['exam_category'] in ["BE-IOE", "MBBS-MOE"]:
                         try:
                             correct_answers[
-                                sorted_questions[index]['subject']
-                            ]['score'] -= 0.25
+                                sorted_questions[index][
+                                    'subject'].lower()]['score'] -= 0.25
                         except:
                             pass
 
