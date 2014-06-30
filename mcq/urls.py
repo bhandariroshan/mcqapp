@@ -1,4 +1,6 @@
 from django.conf.urls import patterns, include, url
+from django.views.generic import TemplateView, RedirectView
+from django.conf import settings
 
 from django.contrib import admin
 admin.autodiscover()
@@ -25,7 +27,9 @@ urlpatterns = patterns(
     url(r'^request/', 'apps.mainapp.views.request_coupon'),
     url(r'^results/(?P<exam_code>\w{1,15})', 'apps.mainapp.views.results'),
     url(r'^latestusers/$','apps.mainapp.latest_users.latest_users'),
-    url(r'^coupon_admin/$', 'apps.exam_api.coupon_admin.coupon_search'),    
+    url(r'^coupon_admin/$', 'apps.exam_api.coupon_admin.coupon_search'),
+    url(r'^subscribe_exam/$', 'apps.exam_api.coupon_admin.subscribe_user_to_exam'),
     url(r'^iom/$', 'apps.mainapp.views.iomdashboard'),
     url(r'^iom/(?P<exam_code>\w{1,15})/$', 'apps.mainapp.views.attend_IOM_dps_exam'),
+    url(r'^favicon\.ico$', RedirectView.as_view(url=settings.STATIC_URL + 'images/logos/favicon.ico')),
 )
