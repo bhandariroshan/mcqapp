@@ -42,6 +42,12 @@ class QuestionApi():
         )
         return question_list
 
+    def find_distinct_question(self, distinct_val, query={}):
+        return self.db_object.get_distinct(
+            self.table_name,
+            distinct_val=distinct_val,
+            query=query)
+
 
 class ExammodelApi():
 
