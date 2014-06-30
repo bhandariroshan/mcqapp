@@ -4,18 +4,18 @@
 {% block titlemain %}Ooops there's an  error{% endblock %}
 {% block content %} 
 
-<div class="col-sm-10  {% if not user.is_authenticated %} col-md-offset-1 {% endif %}">
+<div class="col-sm-10  {% if not user.is_authenticated %} col-md-offset-1 {% endif %}" style="margin-top: 50px;min-height: 450px;">
 
-<div class="container-responsive block-center  ">
+<div class="container-responsive block-center  " style>
 
 
     <div class="row">
         <div class="col-sm-6 col-sm-offset-3">
 
-		<h1 style="font-size: 100px;" class="text-center">Oops !!. </h1>
-		<p class="lead">
+		<h1 style="font-size: 100px;" class="text-center">Oops !! </h1>
+		<p class="lead" style="margin: 75px;">
 			{{request.build_absolute_uri|error:'404'}}
-			Sorry, we can't find what you're looking for. Check it's not a typo in the address?
+			Sorry, we can't find what you're looking for. Check it's not a typo in the address?</br>
 		The link you followed may be broken. If you have time, ping us on <a href="https://twitter.com/meroanswer" target="_blank">twitter </a> to tell us more.
 </p>
 		</div>
