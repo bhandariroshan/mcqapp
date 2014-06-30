@@ -146,10 +146,8 @@ def landing(request):
         )
         user = user_profile_obj.get_user_by_username(request.user.username)
         exam_handler = ExamHandler()
-
-        upcoming_exams = exam_handler.list_upcoming_exams(
-            {'exam_category': 'BE-IOE'}
-        )
+        exam_model_api = ExammodelApi()
+        user_exams = user['valid_exam']
 
         parameters['user'] = user
         subscription_type = user['subscription_type']
@@ -169,34 +167,34 @@ def landing(request):
         except:
             parameters['student_category_set'] = False
 
-        for eachExam in upcoming_exams:
+        for eachExam in user_exams:
             up_exm = {}
-
-            up_exm['name'] = eachExam['exam_name']
+            eaxhExamDetails = exam_model_api.find_one_exammodel({'exam_code':eachExam})
+            up_exm['name'] = eaxhExamDetails['exam_name']
 
             if 'IDP' in subscription_type:
                 up_exm['subscribed'] = True
 
-            elif eachExam['exam_category'] in subscription_type:
+            elif eaxhExamDetails['exam_category'] in subscription_type:
                 up_exm['subscribed'] = True
 
             else:
-                up_exm['subscribed'] = eachExam['exam_code'] in \
+                up_exm['subscribed'] = eaxhExamDetails['exam_code'] in \
                     subscribed_exams
 
-            up_exm['code'] = eachExam['exam_code']
-            if eachExam['exam_family'] != 'DPS':
+            up_exm['code'] = eaxhExamDetails['exam_code']
+            if eaxhExamDetails['exam_family'] != 'DPS':
                 exam_start_time = datetime.datetime.strptime(
                     str(datetime.datetime.fromtimestamp(
-                        int(eachExam['exam_date']))),
+                        int(eaxhExamDetails['exam_date']))),
                     "%Y-%m-%d %H:%M:%S").time()
                 up_exm['exam_time'] = exam_start_time
                 up_exm['exam_date'] = datetime.datetime.fromtimestamp(
-                    int(eachExam['exam_date'])
+                    int(eaxhExamDetails['exam_date'])
                 ).strftime("%A, %d. %B %Y")
-            up_exm['exam_category'] = eachExam['exam_category']
-            up_exm['exam_family'] = eachExam['exam_family']
-            up_exm['image'] = eachExam['image']
+            up_exm['exam_category'] = eaxhExamDetails['exam_category']
+            up_exm['exam_family'] = eaxhExamDetails['exam_family']
+            up_exm['image'] = eaxhExamDetails['image']
             up_exams.append(up_exm)
 
         parameters['upcoming_exams'] = up_exams

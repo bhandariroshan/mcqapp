@@ -62,6 +62,7 @@
             </ul>
 
             <div id="upcomingPracticeExams" class="tab-content active" style="height: 836px; overflow-y: scroll;">
+              {% if '/iom/' not in request.path %}
               <article class="valign row text-color-white ui-widget-content ui-corner-all my-margin">
                   <div style="width:25%">
                       <img src="/static/images/exam.jpg" width="145px" />
@@ -76,6 +77,7 @@
                         </div>
                     </div>
               </article>
+              {% endif %}
               {% for eachExam in upcoming_exams %}
                 {% ifequal eachExam.exam_family  'DPS' %}
                 {% if user.student_category == 'IDP' or user.student_category == eachExam.exam_category %}
@@ -91,7 +93,12 @@
                     <img src="/static/images/{{eachExam.image}}" width="145px" />
                 </div>
                 <div style="width:65%">
-                    <h4><a href="#" id="{{eachExam.code}}/"><strong>{{eachExam.name}}</strong></a></h4>
+                    <!-- <h4><a href="#" id="{{eachExam.code}}/"><strong>{{eachExam.name}}</strong></a></h4> -->
+                    {% if eachExam.exam_category == 'BE-IOE' and eachExam.exam_family == 'DPS' %}
+                    <h4><a href="#" id="{{eachExam.code}}/"><strong>IOE Practice Model {{forloop.counter}}</strong></a></h4>
+                    {% else %}
+                      <h4><a href="#" id="{{eachExam.code}}/"><strong>IOM Practice Model {{forloop.counter}}</strong></a></h4>                    
+                    {% endif %}
                     <p><strong>Date: </strong>When ever you like in a single sitting</p>
                     <p><strong>Time: </strong>Anytime</p>
                     {% if not eachExam.subscribed %}
@@ -268,6 +275,28 @@
     </div>
 </div> 
 </div>
+
+<div id="validateCouponforNewExam" style="visibility:hidden;" class="pretty medium primary btn switch" gumby-trigger="#enterCouponforNewExam"></div>
+<div class="modal" id="enterCouponforNewExam">
+  <div class="content">
+    <a class="close switch" gumby-trigger="|#enterCouponforNewExam" id="closeEnterCoupon"><i class="icon-cancel" /></i></a>
+    <div class="row">
+      <div id="dangerMessageNewExam" style="color: red;margin-left: 15%;"></div>
+      <div class="ten columns centered text-center" style="margin-top:6%;">
+        <p id="infoText">Coupon code are necessary to ensure smooth conducting of examination. Every time you give exam, you need to enter coupon code available at various <a href="/distributors/" style="color:red;"><strong>distributors</strong></a>. Please enter <strong>your</strong> coupon code</p>
+          <li class="prepend field">
+            <span class="adjoined">Coupon: </span>
+            <input id="enterCouponforNewExamCode" class="xwide text input" type="text" placeholder="Please enter the coupon code" />
+          </li>
+          <li class="prepend field">
+            <button class="medium primary btn" type="submit">
+              <a id="enterCouponforNewExamCodeBtn" href="#">Start Exam</a>
+            </button>
+          </li>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
 {% block javascript %}
 <script src="{% static "js/ajax-handle.js" %}"></script>
@@ -305,11 +334,16 @@ var ex_code;
     {% if 'BE-IOE' not in subscription_type %}
       var html_str = 'Coupon code are necessary to ensure the regular operation of exam. Coupon codes are available at various <a href="/#/" style="color:red;"><strong>distributors</strong></a>. Please enter code your below'
         $('#infoText').html(html_str); 
-        $('#trigger_gumby_div').click();
+        $('#validateCouponforNewExam').click();
       
       {% else %}
         get_new_ioe_exam();
     {% endif %}
+  });
+
+  $('#enterCouponforNewExamCodeBtn').on('click', function(){
+    var code = $('#enterCouponforNewExamCode').val();
+    chek_valid_dps_code(code);
   });
 </script>
 <script type="text/javascript">

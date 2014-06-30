@@ -74,13 +74,17 @@ class Coupon():
     def get_coupon_by_coupon_code(self, coupon_code):
         return self.db_object.get_one(self.table_name, {'code':coupon_code})
 
+    def get_unused_coupon_by_coupon_code(self, coupon_code):
+        return self.db_object.get_one(self.table_name, {'code':coupon_code, 'used.status':0})
+
     def change_used_status_of_coupon(self, coupon_code, user_name):
     	'''
     		For sample code for which one to many relationship exists. 
     	'''
         request_time  = datetime.datetime.now()
         request_time  = time.mktime(request_time.timetuple())    
-        return self.db_object.update_upsert(self.table_name, {'code':coupon_code},{'used':{'status':1}})
+        print "change used status"
+        return self.db_object.update_upsert(self.table_name, {'code':coupon_code},{'used':{'status':1}})        
 
     def get_coupons(self, subscription_type):
         return self.db_object.get_all_vals(self.table_name,{'subscription_type':subscription_type, 'used.status':0, 'printed':False})

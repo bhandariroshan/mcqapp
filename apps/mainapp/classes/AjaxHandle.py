@@ -492,6 +492,34 @@ class AjaxHandle():
     def get_new_ioe_exam(self, request):
         user_profile_obj = UserProfile()
         if request.user.is_authenticated():
-            subscription_type = user_profile_obj.get_user_by_username(request.user.username)['subscription_type']
-            if 'BE-IOE' in subscription_type:
-                from apps.random_questions import 
+            from apps.random_questions.views import generate_random_ioe_questions
+            exam_code = generate_random_ioe_questions(request)
+            user_profile_obj.save_valid_exam(request.user.username, int(exam_code))
+            return HttpResponse(json.dumps({'exam_code':int(exam_code), 'status':'ok'})) 
+        else:
+            return HttpResponse(json.dumps({'status':'error', 'message':'You are not authorized to perform this action'}))
+
+    def chek_valid_dps_code(self, request):
+        if request.user.is_authenticated():
+            user_profile_obj = UserProfile()
+            coupon_obj = Coupon()
+            code = request.POST.get('code')
+            coupon_code = coupon_obj.get_unused_coupon_by_coupon_code(code)
+
+            if coupon_code == None:
+                return HttpResponse(json.dumps({'message':'Invalid Coupon Code.', 'status':'error'}))
+
+            if 'BE-IOE' in coupon_code['subscription_type']:
+                user_profile_obj.change_subscription_plan(request.user.username, code)
+                coupon_obj.change_used_status_of_coupon(code, request.user.username)
+                return HttpResponse(json.dumps({'message':'valid', 'status':'ok'}))
+
+            elif 'DPS' in coupon_code['subscription_type']:
+                coupon_obj.change_used_status_of_coupon(code, request.user.username)
+                return HttpResponse(json.dumps({'message':'valid', 'status':'ok'}))
+
+            else:
+                return HttpResponse(json.dumps({'message':'Invalid Coupon Code.', 'status':'error'}))
+
+        else:
+            return HttpResponse(json.dumps({'status':'error', 'message':'You are not authorized to perform this action'}))
