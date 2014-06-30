@@ -21,6 +21,7 @@ from apps.mainapp.classes.MailChimp import MailChimp
 from apps.mainapp.classes.Exams import RankCard, ScoreCard
 from apps.mainapp.classes.Coupon import Coupon
 from apps.mainapp.classes.Userprofile import UserProfile
+from apps.mainapp.classes.CouponCount import CouponCount
 from apps.exam_api.views import ExamHandler
 from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi,\
     ExamStartSignal, HonorCodeAcceptSingal, AttemptedAnswerDatabase,\
@@ -798,7 +799,15 @@ def generate_coupon(request):
 
 @user_passes_test(lambda u: u.is_superuser)
 def get_coupons(request, subscription_type):
+    query_type = request.GET.get('type', 'IOE')
     coupon_obj = Coupon()
+    coupon_count = CouponCount()
+    base_count = coupon_count.get_coupon_count()
+    print ('base count from mongo: {0}').format(base_count)
+    if base_count is not None:
+        base_count = base_count['count']
+    else:
+        base_count = 1000
     if subscription_type == 'beioe':
         subscription_type = 'BE-IOE'
     elif subscription_type == 'mbbsiom':
@@ -806,23 +815,26 @@ def get_coupons(request, subscription_type):
     subscription_type = subscription_type.upper()
     coupons = coupon_obj.get_coupons(subscription_type)
     page_obj = Paginator(coupons, 12)
-    # return render_to_response('coupons-cover.html', {'coupons': range(1,13), 'count': "1000"})
     for i in range(1,page_obj.num_pages+1):
         abc = render_to_response(
             'coupons-print.html',
             {'coupons': page_obj.page(i)}
         )
-        Html_file= open(settings.APP_ROOT+"/../meroanswer-coupons/" + "coupon-" + str(i) + ".html","w")
+        Html_file= open(settings.APP_ROOT+"/../meroanswer-coupons/htmls/" + "coupon-" + str(i) + ".html","w")
+        
         Html_file.write(str(abc))
         Html_file.close()
-        count = 1000 + (i-1)*12
-        cover = render_to_response('coupons-cover.html', {'coupons': range(1,13), 'count': count})
+
+        count = base_count + (i-1)*12
+        img = query_type.upper() + "-" + subscription_type + ".png"
+        cover = render_to_response('coupons-cover.html', {'coupons': range(1,13), 'count': count, 'img': img})
         Html_file= open(settings.APP_ROOT+"/../meroanswer-coupons/cover/" + "cover-" + str(i) + ".html","w")
         Html_file.write(str(cover))
         Html_file.close()
-
+    print ('final coupon count: {0}').format(count)
+    coupon_count.update_coupon_count(count)
     subprocess.call(['../meroanswer-coupons/coupon-gen.sh'])
-    return HttpResponse(json.dumps({'status': 'ok', 'message': str(page_obj.num_pages) + ' Page '+ subscription_type + 'coupons generated'}))
+    return HttpResponse(json.dumps({'status': 'ok', 'message': str(page_obj.num_pages) + ' Page '+ subscription_type + ' coupons generated'}))
 
 def results(request, exam_code):
     parameters = {}
