@@ -46,8 +46,7 @@ class ExamHandler():
         question_api = QuestionApi()
         return_question_list = question_api.get_paginated_questions(
             {'_id': {"$in": question_id_list},  "marks": 1},
-            fields={'answer.correct': 0}, 
-            page_num=current_pg_num
+            fields={'answer.correct': 0}
         )
         return return_question_list
 

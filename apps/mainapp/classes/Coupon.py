@@ -83,7 +83,6 @@ class Coupon():
     	'''
         request_time  = datetime.datetime.now()
         request_time  = time.mktime(request_time.timetuple())    
-        print "change used status"
         return self.db_object.update_upsert(self.table_name, {'code':coupon_code},{'used':{'status':1}})        
 
     def get_coupons(self, subscription_type):
