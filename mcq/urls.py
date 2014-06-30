@@ -32,4 +32,5 @@ urlpatterns = patterns(
     url(r'^iom/$', 'apps.mainapp.views.iomdashboard'),
     url(r'^iom/(?P<exam_code>\w{1,15})/$', 'apps.mainapp.views.attend_IOM_dps_exam'),
     url(r'^favicon\.ico$', RedirectView.as_view(url=settings.STATIC_URL + 'images/logos/favicon.ico')),
+    url(r'^robots\.txt$', TemplateView.as_view(template_name='robots.txt',content_type='text/plain'), name='robots'),
 )
