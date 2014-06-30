@@ -309,8 +309,10 @@ class AjaxHandle():
                     parameters['page_end'] = True
 
                 parameters['current_pg_num'] = current_pg_num
-                questions = question_obj.get_paginated_questions({"exam_code": int(exam_code), 'marks':1}, fields={'answer.correct':0}, page_num = current_pg_num)
-                total_questions = question_obj.get_count({"exam_code": int(exam_code), 'marks':1})
+                exam_handler_obj = ExamHandler()
+                questions = exam_handler_obj.get_paginated_question_set(int(exam_code), current_pg_num)
+
+                total_questions = 65
                 sorted_questions = sorted(questions, key=lambda k: k['question_number'])  
 
 
