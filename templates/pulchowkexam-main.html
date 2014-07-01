@@ -89,7 +89,7 @@
           <span  style="font-weight:bold;"><span style="color:blue;">{{each_question.question_number}}. </span> {{ each_question.question.text }} </span><br>
           {% if each_question.question.image != '' %}
 
-          <img src="/static/images/{{exam_code}}/{{each_question.question.image}}" style=" height:140px" />
+          <img src="/static/images/{{each_question.exam_code}}/{{each_question.question.image}}" style=" height:140px" />
           {% endif %}
 
         <ul class="row" id="{{each_question.uid.id}}" style="margin-left:0%">
@@ -103,7 +103,7 @@
                 
                 {{ each_question.answer.a.text }}<br>
                 {% if each_question.answer.a.image != '' %}
-                  <img src="/static/images/{{exam_code}}/{{each_question.answer.a.image}}" style="height:140px;" />
+                  <img src="/static/images/{{each_question.exam_code}}/{{each_question.answer.a.image}}" style="height:140px;" />
                 {% endif %}
                 </a>
             </div>
@@ -118,7 +118,7 @@
                     </label>                  
                     {{ each_question.answer.b.text }}<br>
                     {% if each_question.answer.b.image != '' %}
-                      <img src="/static/images/{{exam_code}}/{{each_question.answer.b.image}}" style="height:140px;" />
+                      <img src="/static/images/{{each_question.exam_code}}/{{each_question.answer.b.image}}" style="height:140px;" />
                     {% endif %}
                     </a>
             </div>
@@ -133,7 +133,7 @@
                   </label>                    
                     {{ each_question.answer.c.text }}<br>
                     {% if each_question.answer.c.image != '' %}
-                      <img src="/static/images/{{exam_code}}/{{each_question.answer.c.image}}" style=" height:140px;" />
+                      <img src="/static/images/{{each_question.exam_code}}/{{each_question.answer.c.image}}" style=" height:140px;" />
                     {% endif %}
                     </a>
             </div>
@@ -148,7 +148,7 @@
                   </label>                                
                     {{ each_question.answer.d.text }}<br>
                     {% if each_question.answer.d.image != '' %}
-                      <img src="/static/images/{{exam_code}}/{{each_question.answer.d.image}}" style="height:140px;" />
+                      <img src="/static/images/{{each_question.exam_code}}/{{each_question.answer.d.image}}" style="height:140px;" />
                     {% endif %}
                     </a>
             </div>            
