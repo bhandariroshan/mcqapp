@@ -19,7 +19,7 @@
         <tbody>
         {% for eachSubject in result %}
           <tr>
-            <td>{% if eachSubject.subject != 'Total' %}<a style="color:#58c026;" href="/answers/{{exam_code}}/{{eachSubject.subject}}/?q=0">{% endif %}{{eachSubject.subject}}</a></td>
+            <td>{% if eachSubject.subject != 'Total' %}<a style="color:#58c026;" href="/answers/{{exam_code}}/{{eachSubject.subject}}/?q=0">{% endif %}{{eachSubject.subject}} {% if eachSubject.subject != 'Total' %} <small><i>(view answers)</i></small>{% endif %}</a></td>
             <td>{{eachSubject.attempted}}</td>
             <td>{{eachSubject.correct_subject_answer}}</td>
             <td>{{eachSubject.score}}</td>
