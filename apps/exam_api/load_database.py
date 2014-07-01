@@ -35,7 +35,7 @@ def load_examset_in_database(request):
          # "exam_date": 1401258859,
          "exam_date": 1408450637,
          "image": "exam.jpg",
-         "exam_code": 204,
+         "exam_code": 205,
          "exam_time": "1.00pm",
          "exam_duration": 60,
          "exam_category": "BE-IOE",
