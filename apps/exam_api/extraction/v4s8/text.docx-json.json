@@ -1,0 +1,1236 @@
+[{
+    "answer": {
+        "a": {
+            "text": "(0, ∞)"
+        },
+        "b": {
+            "text": "(–∞, 0)"
+        },
+        "correct": "c",
+        "d": {
+            "text": "[–∞, + ∞]"
+        },
+        "c": {
+            "text": "(–∞, ∞)"
+        }
+    },
+    "question": {
+        "text": "The domain of the function f(x) = yx $ ^{2} $ + 2x + 3 is"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "0"
+        },
+        "b": {
+            "text": "1"
+        },
+        "correct": "b",
+        "d": {
+            "text": "none"
+        },
+        "c": {
+            "text": "log $ _{10} $ 34"
+        }
+    },
+    "question": {
+        "text": "$ \\frac {1}{2} $ log $ _{10} $ $ ^{25} $ – log $ _{10} $ $ ^{9} $ + log $ _{10} $ $ ^{18} $ equals"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "0"
+        },
+        "b": {
+            "text": "1!"
+        },
+        "correct": "c",
+        "d": {
+            "text": "5!"
+        },
+        "c": {
+            "text": "4!"
+        }
+    },
+    "question": {
+        "text": "The value of the determinant $ \\begin{vmatrix}1! & 2! & 3! \\\\2! & 3! &4! \\\\ 3! & 4! & 5! \\end{vmatrix} $ is"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "$ \\frac {1}{10x-7} $"
+        },
+        "b": {
+            "text": "$ \\frac {1}{10x+7} $"
+        },
+        "correct": "a",
+        "d": {
+            "text": "$ \\frac {x-7}{10} $"
+        },
+        "c": {
+            "text": "$ \\frac {x+7}{x+10} $"
+        }
+    },
+    "question": {
+        "text": "If f:R → R is a function defined by f(x) = 10x – 7. If g = f $ ^{–1} $ then g(x) equals"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "–2"
+        },
+        "b": {
+            "text": "–1"
+        },
+        "correct": "c",
+        "d": {
+            "text": "2"
+        },
+        "c": {
+            "text": "1"
+        }
+    },
+    "question": {
+        "text": "The value of the parameter a, for which the function f(x) = 1 + ax , (a is not equal to 0) is the inverse of itself is"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "|z $ ^{2} $ | = |z| $ ^{2} $"
+        },
+        "b": {
+            "text": "|z $ ^{2} $ | = |z| $ ^{2} $"
+        },
+        "correct": "c",
+        "d": {
+            "text": "$ z^{2} $ = $|z| ^{2} $"
+        },
+        "c": {
+            "text": "z = $ \\overline{z} $"
+        }
+    },
+    "question": {
+        "text": "If z is a complex number then which one of the following is not true"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "0"
+        },
+        "b": {
+            "text": "∞"
+        },
+        "correct": "d",
+        "d": {
+            "text": "36"
+        },
+        "c": {
+            "text": "6"
+        }
+    },
+    "question": {
+        "text": "6 $ ^{1} $ . 6 $ ^{1/2} $ .6 $ ^{1/4} $ .6 $ ^{1/8} $ ............. to ∞ equals"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "x $ ^{2} $ – x – 6 = 0"
+        },
+        "b": {
+            "text": "x $ ^{2} $ + x + 6 = 0"
+        },
+        "correct": "a",
+        "d": {
+            "text": "x $ ^{2} $ – x – 13"
+        },
+        "c": {
+            "text": "x $ ^{2} $ – x + 6 = 0"
+        }
+    },
+    "question": {
+        "text": "If the sum of roots of a quadratic equation is 1 and the sum of their square is 13 then the quadratic equation is"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "47C $ _{5} $"
+        },
+        "b": {
+            "text": "52C $ _{5} $"
+        },
+        "correct": "c",
+        "d": {
+            "text": "51C $ _{4} $"
+        },
+        "c": {
+            "text": "52C $ _{4} $"
+        }
+    },
+    "question": {
+        "text": "the value of 47C $ _{4} $ + (52 – J) C $ _{3} $ is equal to"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "0"
+        },
+        "b": {
+            "text": "2 $ ^{49} $"
+        },
+        "correct": "c",
+        "d": {
+            "text": "2 $ ^{51} $"
+        },
+        "c": {
+            "text": "2 $ ^{50} $"
+        }
+    },
+    "question": {
+        "text": "In the expansion of (1 + x) $ ^{50} $ , the sum of coefficients of odd powers of x is"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "/ku:rIəsItI/"
+        },
+        "b": {
+            "text": "/kju:rIɔsətI/"
+        },
+        "correct": "b",
+        "d": {
+            "text": "/kju:rIosətI/"
+        },
+        "c": {
+            "text": "/kju:rIsi:tI/"
+        }
+    },
+    "question": {
+        "text": "The phonemic transcription of 'curiosity' is ...."
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "1st syllable"
+        },
+        "b": {
+            "text": "2nd syllable"
+        },
+        "correct": "d",
+        "d": {
+            "text": "4th syllable"
+        },
+        "c": {
+            "text": "3rd syllable"
+        }
+    },
+    "question": {
+        "text": "There is an increase in the price there in the word “increase” the stress falls on the"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "caprice"
+        },
+        "b": {
+            "text": "genuinness"
+        },
+        "correct": "b",
+        "d": {
+            "text": "importance"
+        },
+        "c": {
+            "text": "ostentation"
+        }
+    },
+    "question": {
+        "text": "The synonym of “Impetuousity” is-."
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "innocent ."
+        },
+        "b": {
+            "text": "guilty"
+        },
+        "correct": "b",
+        "d": {
+            "text": "genuine"
+        },
+        "c": {
+            "text": "spurious"
+        }
+    },
+    "question": {
+        "text": "The antonym of “culpable” is"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "to"
+        },
+        "b": {
+            "text": "with"
+        },
+        "correct": "a",
+        "d": {
+            "text": "by"
+        },
+        "c": {
+            "text": "for"
+        }
+    },
+    "question": {
+        "text": "A new bride blushes almost all the members of groom’s family."
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "we"
+        },
+        "b": {
+            "text": "they"
+        },
+        "correct": "d",
+        "d": {
+            "text": "them"
+        },
+        "c": {
+            "text": "us"
+        }
+    },
+    "question": {
+        "text": "I brought these pens for you and"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "will be"
+        },
+        "b": {
+            "text": "would be"
+        },
+        "correct": "a",
+        "d": {
+            "text": "were to be"
+        },
+        "c": {
+            "text": "am"
+        }
+    },
+    "question": {
+        "text": "When I in the USA I will be mailing you."
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "He asked me that could I sing and refused."
+        },
+        "b": {
+            "text": "He asked me if I could sing and I said that I couldn’t."
+        },
+        "correct": "a",
+        "d": {
+            "text": "He asked me if I could sing and I said no."
+        },
+        "c": {
+            "text": "I denied, when he asked me if I could sing."
+        }
+    },
+    "question": {
+        "text": "He said, “can you sing?” and I said, “No”"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "She let herself be scolded"
+        },
+        "b": {
+            "text": "She let herself to be scolded"
+        },
+        "correct": "a",
+        "d": {
+            "text": "They were let to scold to her."
+        },
+        "c": {
+            "text": "She let herself to be scolded by them"
+        }
+    },
+    "question": {
+        "text": "She let them scold her."
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "us buying"
+        },
+        "b": {
+            "text": "to buy"
+        },
+        "correct": "b",
+        "d": {
+            "text": "buying"
+        },
+        "c": {
+            "text": "to buying"
+        }
+    },
+    "question": {
+        "text": "The advisor recommended that book as reference."
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "that"
+        },
+        "b": {
+            "text": "which"
+        },
+        "correct": "d",
+        "d": {
+            "text": "whose"
+        },
+        "c": {
+            "text": "what"
+        }
+    },
+    "question": {
+        "text": "Did you have the book the teacher recommended."
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "has been"
+        },
+        "b": {
+            "text": "have been"
+        },
+        "correct": "c",
+        "d": {
+            "text": "is"
+        },
+        "c": {
+            "text": "was"
+        }
+    },
+    "question": {
+        "text": "More students than one enrolled this year."
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "despite of"
+        },
+        "b": {
+            "text": "in spite"
+        },
+        "correct": "b",
+        "d": {
+            "text": "despite"
+        },
+        "c": {
+            "text": "although"
+        }
+    },
+    "question": {
+        "text": "his parents’ objection, he went on picnic."
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "tell me"
+        },
+        "b": {
+            "text": "you would tell me"
+        },
+        "correct": "a",
+        "d": {
+            "text": "none of these"
+        },
+        "c": {
+            "text": "you had told me"
+        }
+    },
+    "question": {
+        "text": "If you should decide to go to campus,"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "S + V + 0+ Preposition"
+        },
+        "b": {
+            "text": "S + V + 0 + Adverbial particle"
+        },
+        "correct": "d",
+        "d": {
+            "text": "S + V + 10 + Adverbial"
+        },
+        "c": {
+            "text": "S + Transitive verb + DO + Preposition"
+        }
+    },
+    "question": {
+        "text": "Tick on the correct pattern for the sentence --- ‘John has a blue shirt on.’ is"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "higher than target"
+        },
+        "b": {
+            "text": "lower than the largest"
+        },
+        "correct": "a",
+        "d": {
+            "text": "any of above"
+        },
+        "c": {
+            "text": "straight to target"
+        }
+    },
+    "question": {
+        "text": "16. If a man want to hit a target, he should point his rifle in a direction"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "perfectly elastic collision"
+        },
+        "b": {
+            "text": "perfectly inelastic collision •"
+        },
+        "correct": "b",
+        "d": {
+            "text": "may be elastic or inelastic"
+        },
+        "c": {
+            "text": "semi elastic collision"
+        }
+    },
+    "question": {
+        "text": "The collision in which the relative velocity after collision is zero is"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "lower"
+        },
+        "b": {
+            "text": "higher"
+        },
+        "correct": "a",
+        "d": {
+            "text": "lower or higher"
+        },
+        "c": {
+            "text": "at same level"
+        }
+    },
+    "question": {
+        "text": "An iron cube floats in a vessel of mercury at 20°C the temperature increased to 100°C, the cube will float"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "pitch of their organ pipe is more"
+        },
+        "b": {
+            "text": "have more energy"
+        },
+        "correct": "a",
+        "d": {
+            "text": "can control their tongue"
+        },
+        "c": {
+            "text": "amplitude of vibration is more"
+        }
+    },
+    "question": {
+        "text": "Voice of women is shriller because"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "red light"
+        },
+        "b": {
+            "text": "violet light"
+        },
+        "correct": "b",
+        "d": {
+            "text": "yellow light"
+        },
+        "c": {
+            "text": "green light"
+        }
+    },
+    "question": {
+        "text": "Refractive index of a medium is greatest for"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "spherical aberration"
+        },
+        "b": {
+            "text": "chromatic aberration"
+        },
+        "correct": "c",
+        "d": {
+            "text": "no aberration"
+        },
+        "c": {
+            "text": "spherical & chromatic aberration"
+        }
+    },
+    "question": {
+        "text": "In a reflecting astronomical telescope parabolic mirrors are use because they are free from"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "one half"
+        },
+        "b": {
+            "text": "one fourth"
+        },
+        "correct": "d",
+        "d": {
+            "text": "four times"
+        },
+        "c": {
+            "text": "double"
+        }
+    },
+    "question": {
+        "text": "When distance between two charged particles is halved, the coulomb force between them become"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "E"
+        },
+        "b": {
+            "text": "E/3"
+        },
+        "correct": "d",
+        "d": {
+            "text": "0"
+        },
+        "c": {
+            "text": "E/2"
+        }
+    },
+    "question": {
+        "text": "The terminal potential difference of a cell when short circuited is"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "number of turns in coil"
+        },
+        "b": {
+            "text": "area of coil"
+        },
+        "correct": "d",
+        "d": {
+            "text": "couple per unit twist of suspension"
+        },
+        "c": {
+            "text": "magnetic field"
+        }
+    },
+    "question": {
+        "text": "Sensitivity of a moving coil galvanometer can be increased by decreasing"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "short range"
+        },
+        "b": {
+            "text": "always attractive"
+        },
+        "correct": "d",
+        "d": {
+            "text": "all of above"
+        },
+        "c": {
+            "text": "charge independent"
+        }
+    },
+    "question": {
+        "text": "Nuclear forces are"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "6.23x10 $ ^{22} $"
+        },
+        "b": {
+            "text": "6.023x10 $ ^{23} $"
+        },
+        "correct": "b",
+        "d": {
+            "text": "l.2x10 $ ^{23} $"
+        },
+        "c": {
+            "text": "l.2x10 $ ^{22} $"
+        }
+    },
+    "question": {
+        "text": "The total number of electrons present in l.6grams of methane is"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "2"
+        },
+        "b": {
+            "text": "6"
+        },
+        "correct": "a",
+        "d": {
+            "text": "14"
+        },
+        "c": {
+            "text": "l0"
+        }
+    },
+    "question": {
+        "text": "The maximum number of electrons present in a 4f-orbital is"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "CH $ _{4} $ <CO $ _{2} $ < CO $ _{3} $"
+        },
+        "b": {
+            "text": "CO $ _{3} $ <CH $ _{4} $ <CO $ _{2} $"
+        },
+        "correct": "d",
+        "d": {
+            "text": "CH $ _{4} $ <CO $ _{3} $ .<CO $ _{2} $"
+        },
+        "c": {
+            "text": "CO $ _{3} $ < CO $ _{2} $ <CF $ _{4} $"
+        }
+    },
+    "question": {
+        "text": "Which of this is correct order of bond angle?"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "N"
+        },
+        "b": {
+            "text": "O"
+        },
+        "correct": "b",
+        "d": {
+            "text": "Ne"
+        },
+        "c": {
+            "text": "F"
+        }
+    },
+    "question": {
+        "text": "Which of this have least ionization potential value?"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "SO $ _{4} $"
+        },
+        "b": {
+            "text": "S $ _{2} $ O $ _{3} $"
+        },
+        "correct": "d",
+        "d": {
+            "text": "S $ _{2} $ O $ _{8} $"
+        },
+        "c": {
+            "text": "S $ _{2} $ O $ _{7} $ $ ^{–} $"
+        }
+    },
+    "question": {
+        "text": "Which of this have --O — O — linkage?"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "9"
+        },
+        "b": {
+            "text": "12"
+        },
+        "correct": "b",
+        "d": {
+            "text": "23"
+        },
+        "c": {
+            "text": "20"
+        }
+    },
+    "question": {
+        "text": "0.214gm of a metal an reaction with dilute H2S04 displaced 200cc of dryH2 gas at STP. The equivalent weight of metal is"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "1"
+        },
+        "b": {
+            "text": "1.88"
+        },
+        "correct": "d",
+        "d": {
+            "text": "2.88"
+        },
+        "c": {
+            "text": "2"
+        }
+    },
+    "question": {
+        "text": "The pH of decimolar acetic acid solution which 1.3% ionised is"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "CO — neutral"
+        },
+        "b": {
+            "text": "Na $ _{2} $ O $ _{2} $ — peroxide"
+        },
+        "correct": "b",
+        "d": {
+            "text": "Zno — amphoteric"
+        },
+        "c": {
+            "text": "Pbo — acidic"
+        }
+    },
+    "question": {
+        "text": "Which of this is incorrect match of oxide and its type?"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "Zn"
+        },
+        "b": {
+            "text": "Fe"
+        },
+        "correct": "c",
+        "d": {
+            "text": "Al"
+        },
+        "c": {
+            "text": "Mg."
+        }
+    },
+    "question": {
+        "text": "The metal that gives H $ _{2} $ gas with dilute HNO $ _{3} $ is"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "HF"
+        },
+        "b": {
+            "text": "HCI"
+        },
+        "correct": "a",
+        "d": {
+            "text": "HI"
+        },
+        "c": {
+            "text": "HBr"
+        }
+    },
+    "question": {
+        "text": "Which of this can dissolve glass?"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "Steel"
+        },
+        "b": {
+            "text": "Invar"
+        },
+        "correct": "c",
+        "d": {
+            "text": "none of this"
+        },
+        "c": {
+            "text": "Solder"
+        }
+    },
+    "question": {
+        "text": "Which of this is a non-ferrous alloy?"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "ethane glycol"
+        },
+        "b": {
+            "text": "ethylene glycol"
+        },
+        "correct": "c",
+        "d": {
+            "text": "ethane diol"
+        },
+        "c": {
+            "text": "ethane -1,2— diol"
+        }
+    },
+    "question": {
+        "text": "The IUPAC name of the compound (CH2OH)2 is"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "Aliphatic compounds"
+        },
+        "b": {
+            "text": "Aromatic compounds"
+        },
+        "correct": "b",
+        "d": {
+            "text": "Terpene"
+        },
+        "c": {
+            "text": "Alicyclic compounds"
+        }
+    },
+    "question": {
+        "text": "Coal —tar is a source of"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "ethane"
+        },
+        "b": {
+            "text": "ethylene"
+        },
+        "correct": "c",
+        "d": {
+            "text": "propylene"
+        },
+        "c": {
+            "text": "acetylene"
+        }
+    },
+    "question": {
+        "text": "A hydrocarbon that polymerise into benzene is"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "Pt"
+        },
+        "b": {
+            "text": "Hg"
+        },
+        "correct": "b",
+        "d": {
+            "text": "graphite"
+        },
+        "c": {
+            "text": "Fe"
+        }
+    },
+    "question": {
+        "text": "The cathode used during manufacture of caustic soda by castner — kellener's process is"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "petrol and air only"
+        },
+        "b": {
+            "text": "diesel and air only"
+        },
+        "correct": "d",
+        "d": {
+            "text": "both (a) &(b)"
+        },
+        "c": {
+            "text": "steam only"
+        }
+    },
+    "question": {
+        "text": "Two stroke cycle engine use the fuel............"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "higher"
+        },
+        "b": {
+            "text": "lower"
+        },
+        "correct": "b",
+        "d": {
+            "text": "none"
+        },
+        "c": {
+            "text": "same"
+        }
+    },
+    "question": {
+        "text": "The pressure at the end of compression in petrol engine compared to that of diesel engine would be."
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "IND-P"
+        },
+        "b": {
+            "text": "IHP"
+        },
+        "correct": "b",
+        "d": {
+            "text": "none"
+        },
+        "c": {
+            "text": "both"
+        }
+    },
+    "question": {
+        "text": "The indicated horse power is termed as .........."
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "lime"
+        },
+        "b": {
+            "text": "iron oxide"
+        },
+        "correct": "d",
+        "d": {
+            "text": "magnesia"
+        },
+        "c": {
+            "text": "alumina"
+        }
+    },
+    "question": {
+        "text": "The minimum percentage of ingredients in cements is ................"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "after burning"
+        },
+        "b": {
+            "text": "before burning"
+        },
+        "correct": "b",
+        "d": {
+            "text": "at the time of mixing raw materal"
+        },
+        "c": {
+            "text": "after grinding"
+        }
+    },
+    "question": {
+        "text": "Gypsum is added in cement .................."
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "find aggregate"
+        },
+        "b": {
+            "text": "coarse aggregate"
+        },
+        "correct": "b",
+        "d": {
+            "text": "none"
+        },
+        "c": {
+            "text": "both  a and b"
+        }
+    },
+    "question": {
+        "text": "Gravel is ............"
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "15%"
+        },
+        "b": {
+            "text": "20%"
+        },
+        "correct": "a",
+        "d": {
+            "text": "30%"
+        },
+        "c": {
+            "text": "25%"
+        }
+    },
+    "question": {
+        "text": "A stone is rejected if water absorption is more than ............."
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "Electricity"
+        },
+        "b": {
+            "text": "Potential difference"
+        },
+        "correct": "d",
+        "d": {
+            "text": "density"
+        },
+        "c": {
+            "text": "temperature"
+        }
+    },
+    "question": {
+        "text": "Electricity constituted by electric charges at rest on the surface of a conductor is called......."
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "Increases"
+        },
+        "b": {
+            "text": "Decreases"
+        },
+        "correct": "b",
+        "d": {
+            "text": "Does not change"
+        },
+        "c": {
+            "text": "My increases or decreases"
+        }
+    },
+    "question": {
+        "text": "In series combination of electrical appliances, total electrical power.......... "
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "Loss of kinetic energy by atoms"
+        },
+        "b": {
+            "text": "Loss of kinetic energy by electrons"
+        },
+        "correct": "b",
+        "d": {
+            "text": "Repulsion between electrons & protons"
+        },
+        "c": {
+            "text": "Attraction between electrons"
+        }
+    },
+    "question": {
+        "text": "Heating of a current carrying conductor is due to ..........."
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "50 –60%"
+        },
+        "b": {
+            "text": "65–75%"
+        },
+        "correct": "d",
+        "d": {
+            "text": "90–98%"
+        },
+        "c": {
+            "text": "70–90%"
+        }
+    },
+    "question": {
+        "text": "The efficiency of a transformer is usually in the range of ..........."
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "upshielded power supply"
+        },
+        "b": {
+            "text": "uniterruptible power supply"
+        },
+        "correct": "b",
+        "d": {
+            "text": "Unicode programming system"
+        },
+        "c": {
+            "text": "uniterruptible power system"
+        }
+    },
+    "question": {
+        "text": "UPS stands for ........."
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "input device"
+        },
+        "b": {
+            "text": "output device"
+        },
+        "correct": "a",
+        "d": {
+            "text": "all of above"
+        },
+        "c": {
+            "text": "light pen"
+        }
+    },
+    "question": {
+        "text": "Printers are ..........."
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "aluminium"
+        },
+        "b": {
+            "text": "boron"
+        },
+        "correct": "c",
+        "d": {
+            "text": "germanium"
+        },
+        "c": {
+            "text": "phosphorus"
+        }
+    },
+    "question": {
+        "text": "Which of the following is donor impurity element? ......."
+    }
+}, {
+    "answer": {
+        "a": {
+            "text": "1 nibble"
+        },
+        "b": {
+            "text": "2 nibble"
+        },
+        "correct": "b",
+        "d": {
+            "text": "4 nibble"
+        },
+        "c": {
+            "text": "3 nibble"
+        }
+    },
+    "question": {
+        "text": "A byte is equal to ............."
+    }
+}]

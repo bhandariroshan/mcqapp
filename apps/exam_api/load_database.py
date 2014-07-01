@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from django.contrib.auth.decorators import user_passes_test
 from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi,\
     CorrectAnswerDatabase
-
+from django.conf import settings
 
 @user_passes_test(lambda u: u.is_superuser)
 def load_examset_in_database(request):
@@ -100,10 +100,12 @@ def load_modelquestion_in_database(request):
     #     question_api = QuestionApi()
     #     question_api.insert_new_question(json_obj)
 
-    for var in range(1, 10):        
-        f = open('C:/Users/Roshan Bhandari/Desktop/extraction/v4s' + str(var) + '/text.docx-json.json-new_json.json', 'rb')
+    for var in range(1, 10):
+        if var == 5 or var ==6:
+            continue
+        f = open( settings.APP_ROOT + '/apps/exam_api/extraction/v4s' + str(var) + '/text.docx-json.json-new_json.json', 'rb')
         json_obj = json.loads(f.read())
-        for i, x in enumerate(json_obj):
+        for i, x in enumerate(json_obj):            
             x['question_number'] = i + 1
         question_api = QuestionApi()
         question_api.insert_new_question(json_obj)

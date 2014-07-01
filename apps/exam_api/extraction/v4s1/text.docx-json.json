@@ -1,0 +1,1236 @@
+[{
+    "question": {
+        "text": "The general values of $ \\theta $ in the equation $ tan5\\theta $ = $ cot2\\theta $"
+    },
+    "answer": {
+        "correct": "d",
+        "d": {
+            "text": "(2n + 1)$ \\frac{\\pi}{14} $"
+        },
+        "c": {
+            "text": "$ n\\pi + \\frac{\\pi}{4} $"
+        },
+        "b": {
+            "text": "$ 2n\\pi $"
+        },
+        "a": {
+            "text": "(2n + 1)$ \\frac{\\pi}{2} $"
+        }
+    }
+}, {
+    "question": {
+        "text": "The equation having both the roots common to x $ ^{2} $ – 5x + 6 = 0 is"
+    },
+    "answer": {
+        "correct": "a",
+        "d": {
+            "text": "2(x –1) (x – 4) = 0"
+        },
+        "c": {
+            "text": "x $ ^{2} $ – 7x + 10 = 0"
+        },
+        "b": {
+            "text": "(x + 2) (2x – 6) = 0"
+        },
+        "a": {
+            "text": "(x –3) (2x – 4) = 0"
+        }
+    }
+}, {
+    "question": {
+        "text": "If f and g are two functions which are inverse of each other then fog (x) is"
+    },
+    "answer": {
+        "correct": "b",
+        "d": {
+            "text": "x $ ^{–2} $"
+        },
+        "c": {
+            "text": "$ \\frac{1}{x} $"
+        },
+        "b": {
+            "text": "x"
+        },
+        "a": {
+            "text": "1"
+        }
+    }
+}, {
+    "question": {
+        "text": "If $ y = \\frac{1-tanx}{secx} $ then the value of $ \\frac{dy}{dx} $ ="
+    },
+    "answer": {
+        "correct": "a",
+        "d": {
+            "text": "2secx (1 + tan $ ^{2} $ x)"
+        },
+        "c": {
+            "text": "sinx + cosx"
+        },
+        "b": {
+            "text": "$  \\frac{2secx}{1-tanx} $"
+        },
+        "a": {
+            "text": "–sinx– cosx"
+        }
+    }
+}, {
+    "question": {
+        "text": "Value of  $ \\int_{}^{} \\frac{ e^{ax}}{e^{ax}+1}dx = $"
+    },
+    "answer": {
+        "correct": "b",
+        "d": {
+            "text": "$ a \\frac{log(e^{ax})}{2} + c $"
+        },
+        "c": {
+            "text": "$ 2a(e^{ax}+1)+c $"
+        },
+        "b": {
+            "text": "$ \\frac{1}{a} log(e^{ax+1}) $"
+        },
+        "a": {
+            "text": "$ \\frac{2( e^{ax} + 1 )}{a} + c $"
+        }
+    }
+}, {
+    "question": {
+        "text": "The value of $ \\lim_{n \\rightarrow \\infty}( \\frac{1}{n^{2}} + \\frac{2}{n^{2}} + \\frac{3}{n^{2}}+ .......+ \\frac{n}{n^{2}}  ) = $"
+    },
+    "answer": {
+        "correct": "c",
+        "d": {
+            "text": "1"
+        },
+        "c": {
+            "text": "$ \\frac{1}{2} $"
+        },
+        "b": {
+            "text": "$ \\frac{1}{4} $"
+        },
+        "a": {
+            "text": "$ \\frac{1}{3} $"
+        }
+    }
+}, {
+    "question": {
+        "text": "If $ \\overrightarrow{a} $ and $ \\overrightarrow{b} $  are two unit vectors such that $ (\\overrightarrow{a} + 2\\overrightarrow{b}) $ and $ (5\\overrightarrow{a} - 4\\overrightarrow{b}) $ are perpendicular to each other then the angle between \\overrightarrow{a} and \\overrightarrow{b} is"
+    },
+    "answer": {
+        "correct": "b",
+        "d": {
+            "text": "$ \\frac{\\pi}{6} $"
+        },
+        "c": {
+            "text": "$ \\frac{\\pi}{4} $"
+        },
+        "b": {
+            "text": "$ \\frac{\\pi}{3} $"
+        },
+        "a": {
+            "text": "$ \\frac{\\pi}{2} $"
+        }
+    }
+}, {
+    "question": {
+        "text": "The direction ratios of the line are –1, 2,2 then its direction cosines are"
+    },
+    "answer": {
+        "correct": "a",
+        "d": {
+            "text": "none"
+        },
+        "c": {
+            "text": "$ \\frac{1}{3},-\\frac{2}{3} ,-\\frac{2}{3} $"
+        },
+        "b": {
+            "text": "$ \\frac{2}{3},\\frac{1}{3} ,-\\frac{2}{3} $"
+        },
+        "a": {
+            "text": "$ -\\frac{1}{3},\\frac{2}{3} ,\\frac{2}{3} $"
+        }
+    }
+}, {
+    "question": {
+        "text": "If A = $ \\begin{bmatrix}2 & 0 &0 \\\\0 & 2 & 0 \\\\0 & 0 & 2 \\end{bmatrix} $  then A $ ^{5} $ ="
+    },
+    "answer": {
+        "correct": "c",
+        "d": {
+            "text": "32A"
+        },
+        "c": {
+            "text": "16A"
+        },
+        "b": {
+            "text": "10A"
+        },
+        "a": {
+            "text": "5A"
+        }
+    }
+}, {
+    "question": {
+        "text": "If the three points (a, 0), (0,b) and (1,1) are collinear then"
+    },
+    "answer": {
+        "correct": "c",
+        "d": {
+            "text": "a + b = 0"
+        },
+        "c": {
+            "text": "a + b = ab"
+        },
+        "b": {
+            "text": "a + b = 1"
+        },
+        "a": {
+            "text": "a $ ^{2} $ + b $ ^{2} $ = 1"
+        }
+    }
+}, {
+    "question": {
+        "text": "The phonemic transcription of the word 'piety' is _________"
+    },
+    "answer": {
+        "correct": "d",
+        "d": {
+            "text": "/peətI/"
+        },
+        "c": {
+            "text": "/pItI/"
+        },
+        "b": {
+            "text": "/paIətI/"
+        },
+        "a": {
+            "text": "/paItI/"
+        }
+    }
+}, {
+    "question": {
+        "text": "The word ' Influential' has its stress on the ________ syllable."
+    },
+    "answer": {
+        "correct": "c",
+        "d": {
+            "text": "4 $ ^{th} $"
+        },
+        "c": {
+            "text": "3 $ ^{rd} $"
+        },
+        "b": {
+            "text": "2 $ ^{nd} $"
+        },
+        "a": {
+            "text": "1 $ ^{st} $"
+        }
+    }
+}, {
+    "question": {
+        "text": "The synonym of the word 'brevity' is _______"
+    },
+    "answer": {
+        "correct": "c",
+        "d": {
+            "text": "confidence"
+        },
+        "c": {
+            "text": "quickness"
+        },
+        "b": {
+            "text": "sharpness"
+        },
+        "a": {
+            "text": "conciseness"
+        }
+    }
+}, {
+    "question": {
+        "text": "The antonym of the word 'serene' is ________."
+    },
+    "answer": {
+        "correct": "d",
+        "d": {
+            "text": "agitated"
+        },
+        "c": {
+            "text": "impure"
+        },
+        "b": {
+            "text": "showy"
+        },
+        "a": {
+            "text": "complicated"
+        }
+    }
+}, {
+    "question": {
+        "text": "Which is the wrong sentences?"
+    },
+    "answer": {
+        "correct": "a",
+        "d": {
+            "text": "If he had left home early, he would be with us now."
+        },
+        "c": {
+            "text": "Will she come to PEA supposing it rains heavily?"
+        },
+        "b": {
+            "text": "Black as she is, she is beautiful."
+        },
+        "a": {
+            "text": "Never does she arrive in time"
+        }
+    }
+}, {
+    "question": {
+        "text": "I am considering ______ home tomorrow."
+    },
+    "answer": {
+        "correct": "b",
+        "d": {
+            "text": "going"
+        },
+        "c": {
+            "text": "to going"
+        },
+        "b": {
+            "text": "to have gone"
+        },
+        "a": {
+            "text": "to go"
+        }
+    }
+}, {
+    "question": {
+        "text": "Like humans, zoo animals must have dentists______ their teeth."
+    },
+    "answer": {
+        "correct": "c",
+        "d": {
+            "text": "to be filled"
+        },
+        "c": {
+            "text": "filling"
+        },
+        "b": {
+            "text": "filled"
+        },
+        "a": {
+            "text": "fill"
+        }
+    }
+}, {
+    "question": {
+        "text": "Were you disappointed _______ your examination result?"
+    },
+    "answer": {
+        "correct": "a",
+        "d": {
+            "text": "at"
+        },
+        "c": {
+            "text": "with"
+        },
+        "b": {
+            "text": "from"
+        },
+        "a": {
+            "text": "by"
+        }
+    }
+}, {
+    "question": {
+        "text": "The correct passive of \" He let them scold him\" is _______ ."
+    },
+    "answer": {
+        "correct": "d",
+        "d": {
+            "text": "He let himself to have been scolded."
+        },
+        "c": {
+            "text": "They were let to scold him."
+        },
+        "b": {
+            "text": "He let himself be scolded."
+        },
+        "a": {
+            "text": "He let himself to be scolded."
+        }
+    }
+}, {
+    "question": {
+        "text": "'Having got up early, Kareena along with her parents went to Bandra because of the film shooting' is a ______sentences."
+    },
+    "answer": {
+        "correct": "d",
+        "d": {
+            "text": "mixed"
+        },
+        "c": {
+            "text": "compound"
+        },
+        "b": {
+            "text": "complex"
+        },
+        "a": {
+            "text": "simple"
+        }
+    }
+}, {
+    "question": {
+        "text": "' We congratulated him on his success' is based on the pattern_________."
+    },
+    "answer": {
+        "correct": "d",
+        "d": {
+            "text": "S + V $ _{i} $ + O $ _{1} $ + prep. + O $ _{D} $"
+        },
+        "c": {
+            "text": "S + V $ _{i} $ + O D + Prepositional phrase"
+        },
+        "b": {
+            "text": "S + V $ _{t} $ + O $ _{I} $ + prepositional phrase"
+        },
+        "a": {
+            "text": "S + V $ _{t} $ + O $ _{I} $ + prep. +  O $ _{D} $"
+        }
+    }
+}, {
+    "question": {
+        "text": "He did nothing but _________."
+    },
+    "answer": {
+        "correct": "a",
+        "d": {
+            "text": "playing"
+        },
+        "c": {
+            "text": "played"
+        },
+        "b": {
+            "text": "to play"
+        },
+        "a": {
+            "text": "play"
+        }
+    }
+}, {
+    "question": {
+        "text": "We must die someday, ____ man is mortal."
+    },
+    "answer": {
+        "correct": "c",
+        "d": {
+            "text": "for"
+        },
+        "c": {
+            "text": "since"
+        },
+        "b": {
+            "text": "as"
+        },
+        "a": {
+            "text": "because"
+        }
+    }
+}, {
+    "question": {
+        "text": "Nothing but houses can be seen from here, ___ ?"
+    },
+    "answer": {
+        "correct": "b",
+        "d": {
+            "text": "can they"
+        },
+        "c": {
+            "text": "aren't they"
+        },
+        "b": {
+            "text": "can it"
+        },
+        "a": {
+            "text": "can't they"
+        }
+    }
+}, {
+    "question": {
+        "text": "I like ____ people I work with."
+    },
+    "answer": {
+        "correct": "a",
+        "d": {
+            "text": "both a & b"
+        },
+        "c": {
+            "text": "none"
+        },
+        "b": {
+            "text": "some"
+        },
+        "a": {
+            "text": "the"
+        }
+    }
+}, {
+    "question": {
+        "text": "A passenger in a moving bus tosses a coin. If the coin falls behind him the bus must be moving with"
+    },
+    "answer": {
+        "correct": "a",
+        "d": {
+            "text": "None"
+        },
+        "c": {
+            "text": "a uniform speed"
+        },
+        "b": {
+            "text": "a deceleration"
+        },
+        "a": {
+            "text": "an acceleration"
+        }
+    }
+}, {
+    "question": {
+        "text": "When a drop splits up into number of drops"
+    },
+    "answer": {
+        "correct": "c",
+        "d": {
+            "text": "energy is liberated"
+        },
+        "c": {
+            "text": "energy absorbed"
+        },
+        "b": {
+            "text": "volume increases"
+        },
+        "a": {
+            "text": "area decreases"
+        }
+    }
+}, {
+    "question": {
+        "text": "In an adiabatic change, the pressure P and temperature T of diatomic gas are related by the relation     P $ \\propto $ T $ ^{X} $ where value of x is"
+    },
+    "answer": {
+        "correct": "d",
+        "d": {
+            "text": "7/2"
+        },
+        "c": {
+            "text": "3/5"
+        },
+        "b": {
+            "text": "2/5"
+        },
+        "a": {
+            "text": "5/3"
+        }
+    }
+}, {
+    "question": {
+        "text": "The ratio of specific heat capacity to molar heat capacity of a body is"
+    },
+    "answer": {
+        "correct": "b",
+        "d": {
+            "text": "universal constant"
+        },
+        "c": {
+            "text": "depends on mass of the body"
+        },
+        "b": {
+            "text": "depends on molecular weight of body"
+        },
+        "a": {
+            "text": "dimensionless"
+        }
+    }
+}, {
+    "question": {
+        "text": "The function which represent SHM is"
+    },
+    "answer": {
+        "correct": "a",
+        "d": {
+            "text": "sin2 $ \\omega $ t+ cos 2 $ \\omega $ t"
+        },
+        "c": {
+            "text": "sin $ \\omega $ t + cos $ \\omega $ t"
+        },
+        "b": {
+            "text": "sin2 $ \\omega $ t"
+        },
+        "a": {
+            "text": "sin2 $ \\omega $ t"
+        }
+    }
+}, {
+    "question": {
+        "text": "The inverse square law of intensity is valid for a"
+    },
+    "answer": {
+        "correct": "c",
+        "d": {
+            "text": "conical wave front"
+        },
+        "c": {
+            "text": "spherical wave front"
+        },
+        "b": {
+            "text": "cylindrical wave front"
+        },
+        "a": {
+            "text": "plane wave front"
+        }
+    }
+}, {
+    "question": {
+        "text": "A current I is flowing through a resistance connected to a source of small internal resistance. The resistance is reduced to half, The current through resistance will be"
+    },
+    "answer": {
+        "correct": "d",
+        "d": {
+            "text": ">2I"
+        },
+        "c": {
+            "text": "<2I"
+        },
+        "b": {
+            "text": "2I"
+        },
+        "a": {
+            "text": "I"
+        }
+    }
+}, {
+    "question": {
+        "text": "A hollow metal sphere of radius 10cm is charged such that the potential on its surface is 80V. The potential at centre of sphere is"
+    },
+    "answer": {
+        "correct": "b",
+        "d": {
+            "text": "8V"
+        },
+        "c": {
+            "text": "800V"
+        },
+        "b": {
+            "text": "80V"
+        },
+        "a": {
+            "text": "0"
+        }
+    }
+}, {
+    "question": {
+        "text": "The largest wavelength of particle moving with same velocity will be for"
+    },
+    "answer": {
+        "correct": "c",
+        "d": {
+            "text": "neutron"
+        },
+        "c": {
+            "text": "$ \\beta $-particle"
+        },
+        "b": {
+            "text": "proton"
+        },
+        "a": {
+            "text": "$ \\alpha $-particle"
+        }
+    }
+}, {
+    "question": {
+        "text": "The impurity atom which should be doped in pure silicon to make p type of semiconductor is"
+    },
+    "answer": {
+        "correct": "c",
+        "d": {
+            "text": "arsenic"
+        },
+        "c": {
+            "text": "boron"
+        },
+        "b": {
+            "text": "antimony"
+        },
+        "a": {
+            "text": "phosphorus"
+        }
+    }
+}, {
+    "question": {
+        "text": "The weight of one atom of Uranium is 238 amu, its actual weight is"
+    },
+    "answer": {
+        "correct": "b",
+        "d": {
+            "text": "2.48×10 $ ^{2} $ gm"
+        },
+        "c": {
+            "text": "6.990×10 $ ^{24} $ gm"
+        },
+        "b": {
+            "text": "3.95×10 $ ^{22} $ gm"
+        },
+        "a": {
+            "text": "1.43×10 $ ^{6} $ gm"
+        }
+    }
+}, {
+    "question": {
+        "text": "The equivalent weight of an element is 4. Its chloride has a vapour density 59.25. Then the valency of the element is"
+    },
+    "answer": {
+        "correct": "b",
+        "d": {
+            "text": "l"
+        },
+        "c": {
+            "text": "2"
+        },
+        "b": {
+            "text": "3"
+        },
+        "a": {
+            "text": "4"
+        }
+    }
+}, {
+    "question": {
+        "text": "The mole fraction of NaOH in 4m aqueous NaOH solution is"
+    },
+    "answer": {
+        "correct": "c",
+        "d": {
+            "text": "2.6×$ 10^{3} $"
+        },
+        "c": {
+            "text": "1.8×l0"
+        },
+        "b": {
+            "text": "2.6×$ 10^{4} $"
+        },
+        "a": {
+            "text": "l.8×$ 10^{2} $"
+        }
+    }
+}, {
+    "question": {
+        "text": "The maximum number of electrons present in a 3d orbital is"
+    },
+    "answer": {
+        "correct": "a",
+        "d": {
+            "text": "14"
+        },
+        "c": {
+            "text": "10"
+        },
+        "b": {
+            "text": "6"
+        },
+        "a": {
+            "text": "2"
+        }
+    }
+}, {
+    "question": {
+        "text": "Which of this is non-polar molecule with polar covalent bond?"
+    },
+    "answer": {
+        "correct": "d",
+        "d": {
+            "text": "$ BeCl_{2} $"
+        },
+        "c": {
+            "text": "CO"
+        },
+        "b": {
+            "text": "$ NH_{3} $"
+        },
+        "a": {
+            "text": "$ SO_{2} $"
+        }
+    }
+}, {
+    "question": {
+        "text": "In which of these compounds iron has least oxidation number"
+    },
+    "answer": {
+        "correct": "c",
+        "d": {
+            "text": "Fe $ _{3} $ O $ _{4} $"
+        },
+        "c": {
+            "text": "Fe(CO) $ _{5} $"
+        },
+        "b": {
+            "text": "[Fe(CN) $ _{6} $ ] $ ^{-3} $"
+        },
+        "a": {
+            "text": "Fe $ _{2} $ (SO $ _{4} $ ) $ _{3} $"
+        }
+    }
+}, {
+    "question": {
+        "text": "Which of this salt have cationic hydrolysis?"
+    },
+    "answer": {
+        "correct": "c",
+        "d": {
+            "text": "CH $ _{3} $ COONa"
+        },
+        "c": {
+            "text": "NH $ _{4} $ CI"
+        },
+        "b": {
+            "text": "K $ _{2} $ SO $ _{4} $"
+        },
+        "a": {
+            "text": "Na $ _{2} $ CO $ _{3} $"
+        }
+    }
+}, {
+    "question": {
+        "text": "HNO $ _{3} $ can be stored in vessels made up of"
+    },
+    "answer": {
+        "correct": "b",
+        "d": {
+            "text": "Mg"
+        },
+        "c": {
+            "text": "Zn"
+        },
+        "b": {
+            "text": "Al"
+        },
+        "a": {
+            "text": "Fe"
+        }
+    }
+}, {
+    "question": {
+        "text": "Bromine is manufactured from?"
+    },
+    "answer": {
+        "correct": "c",
+        "d": {
+            "text": "Petroleum"
+        },
+        "c": {
+            "text": "Carnallite"
+        },
+        "b": {
+            "text": "Caliche"
+        },
+        "a": {
+            "text": "Sea-weeds"
+        }
+    }
+}, {
+    "question": {
+        "text": "Which of this is incorrect match of ore and metal?"
+    },
+    "answer": {
+        "correct": "d",
+        "d": {
+            "text": "Bauxite - Cu"
+        },
+        "c": {
+            "text": "Siderite - Fe"
+        },
+        "b": {
+            "text": "Cinnabar- Hg"
+        },
+        "a": {
+            "text": "Calamine -Zn"
+        }
+    }
+}, {
+    "question": {
+        "text": "The reducing agent in Bessemer converter during extraction of Copper pyrite is"
+    },
+    "answer": {
+        "correct": "a",
+        "d": {
+            "text": "H $ _{2} $"
+        },
+        "c": {
+            "text": "C"
+        },
+        "b": {
+            "text": "CO"
+        },
+        "a": {
+            "text": "Cu $ _{2} $ O"
+        }
+    }
+}, {
+    "question": {
+        "text": "In open hearth process impurities are removed by oxidation with"
+    },
+    "answer": {
+        "correct": "d",
+        "d": {
+            "text": "Haematite"
+        },
+        "c": {
+            "text": "Air"
+        },
+        "b": {
+            "text": "CaO"
+        },
+        "a": {
+            "text": "SiO $ _{2} $"
+        }
+    }
+}, {
+    "question": {
+        "text": "Who synthesized the first organic compound starting from elements"
+    },
+    "answer": {
+        "correct": "b",
+        "d": {
+            "text": "Huckel"
+        },
+        "c": {
+            "text": "Berzelius"
+        },
+        "b": {
+            "text": "Kolbe"
+        },
+        "a": {
+            "text": "Wohler"
+        }
+    }
+}, {
+    "question": {
+        "text": "In carbocation, the hybridization of carbon atom is"
+    },
+    "answer": {
+        "correct": "b",
+        "d": {
+            "text": "$ dsp^{2} $"
+        },
+        "c": {
+            "text": "$ sp^{3} $"
+        },
+        "b": {
+            "text": "$ sp^{2} $"
+        },
+        "a": {
+            "text": "Sp"
+        }
+    }
+}, {
+    "question": {
+        "text": "The product of electrolysis of potassium acetate is"
+    },
+    "answer": {
+        "correct": "c",
+        "d": {
+            "text": "Methane"
+        },
+        "c": {
+            "text": "Ethane"
+        },
+        "b": {
+            "text": "Ethene"
+        },
+        "a": {
+            "text": "Ethyne"
+        }
+    }
+}, {
+    "question": {
+        "text": "Which of the following statement is correct?"
+    },
+    "answer": {
+        "correct": "b",
+        "d": {
+            "text": "None of the above"
+        },
+        "c": {
+            "text": "Four stroke engine requires lighter flywheel."
+        },
+        "b": {
+            "text": "Two stroke engine develops twice as much the power developed by four stroke engine at same speed."
+        },
+        "a": {
+            "text": "Two stroke provide two power stroke in two stroke engines."
+        }
+    }
+}, {
+    "question": {
+        "text": "In diesel engine, ignition is due to"
+    },
+    "answer": {
+        "correct": "d",
+        "d": {
+            "text": "high compression ratio"
+        },
+        "c": {
+            "text": "dry air"
+        },
+        "b": {
+            "text": "water"
+        },
+        "a": {
+            "text": "spark from spark plug"
+        }
+    }
+}, {
+    "question": {
+        "text": "Which of the following is not the type of renewable energy?"
+    },
+    "answer": {
+        "correct": "b",
+        "d": {
+            "text": "Geothermal energy"
+        },
+        "c": {
+            "text": "Tidal energy"
+        },
+        "b": {
+            "text": "Nuclear energy"
+        },
+        "a": {
+            "text": "Hydro potential energy"
+        }
+    }
+}, {
+    "question": {
+        "text": "Which form of energy is directly obtained from biomass?"
+    },
+    "answer": {
+        "correct": "a",
+        "d": {
+            "text": "All"
+        },
+        "c": {
+            "text": "Electrical energy"
+        },
+        "b": {
+            "text": "Light energy"
+        },
+        "a": {
+            "text": "Thermal energy"
+        }
+    }
+}, {
+    "question": {
+        "text": "Bricks are generally prepared by burning......."
+    },
+    "answer": {
+        "correct": "b",
+        "d": {
+            "text": "All"
+        },
+        "c": {
+            "text": "stone"
+        },
+        "b": {
+            "text": "clay"
+        },
+        "a": {
+            "text": "cement"
+        }
+    }
+}, {
+    "question": {
+        "text": "Fine aggregate is also known as"
+    },
+    "answer": {
+        "correct": "c",
+        "d": {
+            "text": "gravel"
+        },
+        "c": {
+            "text": "sand"
+        },
+        "b": {
+            "text": "silt"
+        },
+        "a": {
+            "text": "clay"
+        }
+    }
+}, {
+    "question": {
+        "text": "Generally, design strength of concrete is achieved after 28.......... of wring."
+    },
+    "answer": {
+        "correct": "b",
+        "d": {
+            "text": "years"
+        },
+        "c": {
+            "text": "months"
+        },
+        "b": {
+            "text": "days"
+        },
+        "a": {
+            "text": "hours"
+        }
+    }
+}, {
+    "question": {
+        "text": "Red colour of brick is due to"
+    },
+    "answer": {
+        "correct": "d",
+        "d": {
+            "text": "iron oxide"
+        },
+        "c": {
+            "text": "sillicon"
+        },
+        "b": {
+            "text": "clay"
+        },
+        "a": {
+            "text": "sand"
+        }
+    }
+}, {
+    "question": {
+        "text": "A name or number used to identify a storage location is"
+    },
+    "answer": {
+        "correct": "c",
+        "d": {
+            "text": "all"
+        },
+        "c": {
+            "text": "address"
+        },
+        "b": {
+            "text": "record"
+        },
+        "a": {
+            "text": "storage"
+        }
+    }
+}, {
+    "question": {
+        "text": "1 KB corresponds to"
+    },
+    "answer": {
+        "correct": "b",
+        "d": {
+            "text": "1000 bits"
+        },
+        "c": {
+            "text": "1000 bytes"
+        },
+        "b": {
+            "text": "1024 bytes"
+        },
+        "a": {
+            "text": "1024 bits"
+        }
+    }
+}, {
+    "question": {
+        "text": "Binary system uses"
+    },
+    "answer": {
+        "correct": "a",
+        "d": {
+            "text": "4 symbols"
+        },
+        "c": {
+            "text": "1 symbol"
+        },
+        "b": {
+            "text": "3 symbols"
+        },
+        "a": {
+            "text": "2 symbols"
+        }
+    }
+}, {
+    "question": {
+        "text": "Which is not a logic gate?"
+    },
+    "answer": {
+        "correct": "d",
+        "d": {
+            "text": "BUT"
+        },
+        "c": {
+            "text": "NOR"
+        },
+        "b": {
+            "text": "AND"
+        },
+        "a": {
+            "text": "OR"
+        }
+    }
+}, {
+    "question": {
+        "text": "The instrument used to measure current is"
+    },
+    "answer": {
+        "correct": "d",
+        "d": {
+            "text": "Ammeter"
+        },
+        "c": {
+            "text": "Wattmeter"
+        },
+        "b": {
+            "text": "Voltmeter"
+        },
+        "a": {
+            "text": "Currentmeter"
+        }
+    }
+}, {
+    "question": {
+        "text": "Which type of transformer is used to transmit electricity for long distance before connecting to main grid?"
+    },
+    "answer": {
+        "correct": "a",
+        "d": {
+            "text": "none"
+        },
+        "c": {
+            "text": "both a and b"
+        },
+        "b": {
+            "text": "step down"
+        },
+        "a": {
+            "text": "step up"
+        }
+    }
+}, {
+    "question": {
+        "text": "Which of the following is one of the most common use of transistors?"
+    },
+    "answer": {
+        "correct": "a",
+        "d": {
+            "text": "Displaying outputs"
+        },
+        "c": {
+            "text": "Printing documents"
+        },
+        "b": {
+            "text": "Generating electricity"
+        },
+        "a": {
+            "text": "Amplifying signals"
+        }
+    }
+}]
