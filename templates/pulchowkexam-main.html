@@ -87,9 +87,10 @@
         {% for each_question in questions %}       
         <div id="questionText_{{each_question.question_number}}" data-intro="Read the question carefully" data-position="top" class="div-margin twelve columns ui-widget-content ui-corner-all question-min-height" style="margin-left:-2%">
           <span  style="font-weight:bold;"><span style="color:blue;">{{each_question.question_number}}. </span> {{ each_question.question.text }} </span><br>
-          {% if each_question.question.image != '' %}
-
-          <img src="/static/images/{{each_question.exam_code}}/{{each_question.question.image}}" style=" height:140px" />
+          {% if each_question.question.image %}
+            {% if each_question.question.image != '' %}
+              <img src="/static/images/{{each_question.exam_code}}/{{each_question.question.image}}" style=" height:140px" />
+            {% endif %}
           {% endif %}
 
         <ul class="row" id="{{each_question.uid.id}}" style="margin-left:0%">
@@ -102,8 +103,10 @@
                 </label>
                 
                 {{ each_question.answer.a.text }}<br>
-                {% if each_question.answer.a.image != '' %}
-                  <img src="/static/images/{{each_question.exam_code}}/{{each_question.answer.a.image}}" style="height:140px;" />
+                  {% if each_question.answer.a.image %}
+                    {% if each_question.answer.a.image != ''  %}
+                      <img src="/static/images/{{each_question.exam_code}}/{{each_question.answer.a.image}}" style="height:140px;" />
+                    {% endif %}
                 {% endif %}
                 </a>
             </div>
@@ -117,8 +120,10 @@
                         <span></span> 
                     </label>                  
                     {{ each_question.answer.b.text }}<br>
-                    {% if each_question.answer.b.image != '' %}
+                    {% if each_question.answer.b.image %}
+                      {% if each_question.answer.b.image != '' %}
                       <img src="/static/images/{{each_question.exam_code}}/{{each_question.answer.b.image}}" style="height:140px;" />
+                      {% endif %}
                     {% endif %}
                     </a>
             </div>
@@ -132,9 +137,11 @@
                     <span></span> 
                   </label>                    
                     {{ each_question.answer.c.text }}<br>
-                    {% if each_question.answer.c.image != '' %}
-                      <img src="/static/images/{{each_question.exam_code}}/{{each_question.answer.c.image}}" style=" height:140px;" />
-                    {% endif %}
+                    {% if each_question.answer.c.image  %}
+                      {% if each_question.answer.c.image != '' %}
+                        <img src="/static/images/{{each_question.exam_code}}/{{each_question.answer.c.image}}" style=" height:140px;" />
+                      {% endif %} 
+                    {% endif %} 
                     </a>
             </div>
           </li>
@@ -147,8 +154,10 @@
                     <span></span> 
                   </label>                                
                     {{ each_question.answer.d.text }}<br>
-                    {% if each_question.answer.d.image != '' %}
-                      <img src="/static/images/{{each_question.exam_code}}/{{each_question.answer.d.image}}" style="height:140px;" />
+                    {% if each_question.answer.d.image %}
+                      {% if each_question.answer.d.image != '' %}
+                        <img src="/static/images/{{each_question.exam_code}}/{{each_question.answer.d.image}}" style="height:140px;" />
+                      {% endif %}
                     {% endif %}
                     </a>
             </div>            

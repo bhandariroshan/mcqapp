@@ -900,22 +900,14 @@ def show_result(request, exam_code, subject_name):
         if exam_details['exam_family'] == 'CPS' and current_time - \
                 exam_details['exam_date'] < exam_details['exam_duration'] * 60:
             return HttpResponseRedirect('/')
+            
         parameters['exam_details'] = exam_details
         question_obj = QuestionApi()
-        questions = question_obj.find_all_questions(
-            {"exam_code": int(exam_code),
-             'subject': {"$regex": re.compile(
-                         "^" + str(subject_name) + "$",
-                         re.IGNORECASE), "$options": "-i"},
-             'marks': 1}
-        )
-        total_questions = question_obj.get_count(
-            {"exam_code": int(exam_code),
-             'subject': {"$regex": re.compile(
-                         "^" + str(subject_name) + "$",
-                         re.IGNORECASE), "$options": "-i"},
-             'marks': 1}
-        )
+
+        question_id_list = exam_details['question_list']
+
+        questions = question_obj.get_filtered_question_from_database(int(exam_code), q_no)
+        total_questions = question_obj.get_count()
 
         try:
             current_q_no = int(request.GET.get('q', ''))

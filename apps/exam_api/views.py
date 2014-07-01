@@ -34,6 +34,33 @@ class ExamHandler():
         except:
             pass
 
+    def get_filtered_question_from_database(self, query, q_no):
+        '''
+        This function returns the questions of a model
+        by checking the exam_code
+        '''
+        exammodel_api = ExammodelApi()
+        try:
+            exam_model = exammodel_api.find_one_exammodel(
+                {"exam_code": int(exam_code)}
+            )
+            question_id_list = [
+                ObjectId(i['id']) for i in exam_model['question_list']
+            ]
+            question_api = QuestionApi()
+            question_list = question_api.find_all_questions({
+                    '_id': {"$in": question_id_list}, "marks": 1, 
+                    'subject': {"$regex": re.compile(
+                         "^" + str(subject_name) + "$",
+                         re.IGNORECASE), "$options": "-i"},
+                })
+            sorted_questions = sorted(
+                question_list, key=lambda k: k['question_number'])
+            return sorted_questions[q_no]
+
+        except:
+            pass        
+
     def get_paginated_question_set(self, exam_code, current_pg_num):
         exammodel_api = ExammodelApi()
         exam_model = exammodel_api.find_one_exammodel(
@@ -70,7 +97,6 @@ class ExamHandler():
             {'exam_code': int(exam_code)}
         )
         sorted_questions = self.get_questionset_from_database(exam_code)
-        print sorted_questions
         subjects = set([i['subject'].lower() for i in sorted_questions])
 
         correct_answers = {}

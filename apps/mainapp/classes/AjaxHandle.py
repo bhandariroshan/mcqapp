@@ -506,15 +506,16 @@ class AjaxHandle():
                     parameters['page_end'] = True
 
                 parameters['current_pg_num'] = current_pg_num
-                questions = question_obj.get_paginated_questions(
-                    {"exam_code": int(exam_code),
-                     'marks': 1},
-                    fields={'answer.correct': 0},
-                    page_num=current_pg_num
+                exam_handler_obj = ExamHandler()
+                questions = exam_handler_obj.get_paginated_question_set(
+                    int(exam_code), current_pg_num
                 )
+
                 total_questions = question_obj.get_count(
                     {"exam_code": int(exam_code), 'marks': 1}
                 )
+
+                print questions
                 sorted_questions = sorted(
                     questions, key=lambda k: k['question_number']
                 )
@@ -689,12 +690,10 @@ class AjaxHandle():
         self.set_exam_finished(request)
         parameters = {}
         res = {}
-        exam_code = int(request.POST['exam_code'])
-        res['exam_code'] = exam_code
+        exam_code = request.POST.get('exam_code')
+        res['exam_code'] = int(exam_code)
         exam_obj = ExammodelApi()
-        exam_details = exam_obj.find_one_exammodel(
-            {'exam_code': int(exam_code)}
-        )
+        exam_details = exam_obj.find_one_exammodel({'exam_code': int(exam_code)})
         res['exam_details'] = exam_details
         ess = ExamStartSignal()
         ess_check = ess.check_exam_started(
@@ -702,11 +701,7 @@ class AjaxHandle():
              'useruid': request.user.id}
         )
 
-        question_obj = QuestionApi()
-        total_questions = question_obj.get_count(
-            {"exam_code": int(exam_code), 'marks': 1}
-        )
-
+        total_questions = 65
         ans = AttemptedAnswerDatabase()
         try:
             all_ans = ans.find_all_atttempted_answer({
@@ -714,17 +709,14 @@ class AjaxHandle():
                 'user_id': request.user.id,
                 'ess_time': ess_check['start_time']
             },
-                fields={'q_no': 1,
-                        'attempt_details': 1})
+                fields={'q_no': 1, 'attempt_details': 1}
+            )
         except:
             all_ans = ''
-
         answer_list = ''
         anss = []
-
         for eachAns in all_ans:
             anss.append(eachAns['q_no'])
-
         for i in range(1, total_questions + 1):
             try:
                 if i in anss:
@@ -736,8 +728,21 @@ class AjaxHandle():
                 answer_list += 'e'
 
         exam_handler = ExamHandler()
-        score_dict = exam_handler.check_answers(exam_code, answer_list)
-        parameters['result'] = score_dict
+        score_list = exam_handler.check_answers(exam_code, answer_list)
+        user_profile_obj = UserProfile()
+        user = user_profile_obj.get_user_by_username(request.user.username)
+        parameters['user'] = user
+        parameters['result'] = score_list
+        from apps.mainapp.classes.result import Result
+        result_obj = Result()
+        result_obj.save_result(
+            {
+                'useruid': request.user.id,
+                'exam_code': int(exam_code),
+                'ess_time': ess_check['start_time'],
+                'result': score_list
+            }
+        )
         parameters['exam_code'] = exam_code
         parameters['myrankcard'] = {'total': 200, 'rank': 1}
         html = str(render_to_response(
