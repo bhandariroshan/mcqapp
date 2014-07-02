@@ -92,7 +92,7 @@
     "marks": 1,
     "exam_category": "BE-IOE",
     "question": {
-      "text": "How should one choose the value of f(0) so that the function f(x) = 3–x  sin 1/x is continuous at x = 0 ?"
+      "text": "How should one choose the value of f(0) so that the function f(x) = 3–x    sin 1/x is continuous at x = 0 ?"
     }
   },
   {
@@ -140,7 +140,7 @@
     "marks": 1,
     "exam_category": "BE-IOE",
     "question": {
-      "text": "When the function f(x) = x $ ^{3} $ + 3x $ ^{2} $ – lx + 4 is divided by x–2, then remainder is l. The value of l is"
+      "text": "When the function f(x) = x $ ^{3} $ + 3x $ ^{2} $ – $ \\lambda $x + 4 is divided by x–2, then remainder is $ \\lambda $. The value of $ \\lambda $ is"
     }
   },
   {
@@ -164,7 +164,7 @@
     "marks": 1,
     "exam_category": "BE-IOE",
     "question": {
-      "text": "The principal value of q which satisfied Sinq = $ \\frac{\\sqrt{3}}{2} $  and cosq =$ \\frac{1}{2} $  is"
+      "text": "The principal value of $ \\theta $ which satisfied $ Sin\\theta = \\frac{\\sqrt{3}}{2} $  and $ cos\\theta = \\frac{1}{2} $  is"
     }
   },
   {
@@ -212,7 +212,7 @@
     "marks": 1,
     "exam_category": "BE-IOE",
     "question": {
-      "text": "Distance between the planes parallel to each other 2x + y + 2z + 8 = 0 and 4x + 2y + 4z + 5 = 0"
+      "text": "Distance between the planes 2x + y + 2z + 8 = 0 and 4x + 2y + 4z + 5 = 0 parallel to each other is"
     }
   },
   {
@@ -236,7 +236,7 @@
     "marks": 1,
     "exam_category": "BE-IOE",
     "question": {
-      "text": "If the vector a = i – 2j + 4k and b = 2i + 7j + lk are normal to each other , then l  = ?"
+      "text": "If the vector a = i – 2j + 4k and b = 2i + 7j + $ \\lambda $k are normal to each other , then $ \\lambda $  = ?"
     }
   },
   {
@@ -300,7 +300,7 @@
       },
       "correct": "c",
       "c": {
-        "text": "explict"
+        "text": "explicit"
       }
     },
     "exam_code": 1404130207,
@@ -368,7 +368,7 @@
         "text": "Calvin"
       },
       "b": {
-        "text": "alumini"
+        "text": "alumni"
       },
       "correct": "b",
       "c": {
@@ -584,7 +584,7 @@
         "text": "none"
       },
       "b": {
-        "text": "and either did I"
+        "text": "and neither did I"
       },
       "correct": "b",
       "c": {
@@ -596,7 +596,7 @@
     "marks": 1,
     "exam_category": "BE-IOE",
     "question": {
-      "text": "He did not know the answer and I did not neither"
+      "text": "He did not know the answer and ......"
     }
   },
   {
@@ -605,7 +605,7 @@
         "text": "remains the same"
       },
       "d": {
-        "text": "no vibration Is possible"
+        "text": "no vibration is possible"
       },
       "b": {
         "text": "decreases"
@@ -620,7 +620,7 @@
     "marks": 1,
     "exam_category": "BE-IOE",
     "question": {
-      "text": "A simple pendulum has a bob which is given negative charge. It is then allowed to oscillate just above a uniformly positively charge plate, its period is"
+      "text": "A simple pendulum has a bob which is given negative charge. It is then allowed to oscillate just above a uniformly positively charge plate, its period"
     }
   },
   {
@@ -764,7 +764,7 @@
     "marks": 1,
     "exam_category": "BE-IOE",
     "question": {
-      "text": "An electron is related from rest and accelerated through a potential difference of by. The final speed of electron is"
+      "text": "An electron is released from rest and accelerated through a potential difference of 10 V. The final speed of electron is"
     }
   },
   {
@@ -852,7 +852,7 @@
       },
       "correct": "c",
       "c": {
-        "text": "C $ _{12} $"
+        "text": "CO $ _{2} $"
       }
     },
     "exam_code": 1404130207,
@@ -860,7 +860,7 @@
     "marks": 1,
     "exam_category": "BE-IOE",
     "question": {
-      "text": "Which of an oxidizing agent?"
+      "text": "Which is an oxidizing agent?"
     }
   },
   {
@@ -893,14 +893,14 @@
         "text": "6.02 x 10 $ ^{23} $"
       },
       "d": {
-        "text": "6.02x10 $ ^{24} $"
+        "text": "6.02 x 10 $ ^{24} $"
       },
       "b": {
-        "text": "6.02x10 $ ^{22} $"
+        "text": "6.02 x 10 $ ^{22} $"
       },
       "correct": "c",
       "c": {
-        "text": "6.02x10 $ ^{21} $"
+        "text": "6.02 x 10 $ ^{21} $"
       }
     },
     "exam_code": 1404130207,
@@ -968,7 +968,7 @@
         "text": "s and f-block"
       },
       "b": {
-        "text": "s and d-b bock"
+        "text": "s and d-block"
       },
       "correct": "c",
       "c": {
@@ -986,7 +986,7 @@
   {
     "answer": {
       "a": {
-        "text": "Cu25"
+        "text": "$ Cu_S $"
       },
       "d": {
         "text": "SiO $ _{2} $"
@@ -1268,7 +1268,7 @@
     "marks": 1,
     "exam_category": "BE-IOE",
     "question": {
-      "text": "For the diesel engine, governing is used........."
+      "text": "For the diesel engine, governing is used for........."
     }
   },
   {
@@ -1373,7 +1373,7 @@
         "text": "Temperature"
       },
       "d": {
-        "text": "Area of cross section."
+        "text": "Pressure."
       },
       "b": {
         "text": "Humidity"
