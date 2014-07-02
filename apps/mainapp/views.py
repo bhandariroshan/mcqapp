@@ -818,22 +818,26 @@ def results(request, exam_code):
          'useruid': request.user.id}
     )
 
-    total_questions = 65
+    if exam_details['exam_category'] == 'BE-IOE':
+        total_questions = 65
+    else:
+        total_questions = 100
+
     ans = AttemptedAnswerDatabase()
     try:
         all_ans = ans.find_all_atttempted_answer({
             'exam_code': int(exam_code),
             'user_id': request.user.id,
             'ess_time': ess_check['start_time']
-        },
-            fields={'q_no': 1, 'attempt_details': 1}
-        )
+            },fields={'q_no': 1, 'attempt_details': 1
+        })
     except:
         all_ans = ''
     answer_list = ''
     anss = []
     for eachAns in all_ans:
         anss.append(eachAns['q_no'])
+    print answer_list
     for i in range(1, total_questions + 1):
         try:
             if i in anss:
@@ -852,14 +856,12 @@ def results(request, exam_code):
     parameters['result'] = score_list
     from apps.mainapp.classes.result import Result
     result_obj = Result()
-    result_obj.save_result(
-        {
+    result_obj.save_result({
             'useruid': request.user.id,
             'exam_code': int(exam_code),
             'ess_time': ess_check['start_time'],
             'result': score_list
-        }
-    )
+        })
     parameters['exam_code'] = exam_code
     parameters['myrankcard'] = {'total': 200, 'rank': 1}
     return render_to_response(
