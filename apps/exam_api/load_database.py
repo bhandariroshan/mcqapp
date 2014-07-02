@@ -115,7 +115,7 @@ def load_modelquestion_in_database(request):
     '''
     for var in range(201, 206):
         f = open(
-            settings.APP_ROOT + 'apps/exam_api/' + str(var) + '.json', 'rb'
+            settings.APP_ROOT + '/apps/exam_api/' + str(var) + '.json', 'rb'
         )
         json_obj = json.loads(f.read())
         for i, x in enumerate(json_obj):
@@ -125,7 +125,7 @@ def load_modelquestion_in_database(request):
 
     for var in range(301, 303):
         f = open(
-            settings.APP_ROOT + 'apps/exam_api/' + str(var) + '.json', 'rb'
+            settings.APP_ROOT + '/apps/exam_api/' + str(var) + '.json', 'rb'
         )
         json_obj = json.loads(f.read())
         for i, x in enumerate(json_obj):
