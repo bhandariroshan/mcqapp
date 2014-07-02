@@ -906,8 +906,9 @@ def show_result(request, exam_code, subject_name):
             
         parameters['exam_details'] = exam_details
         question_obj = QuestionApi()
-
-        question_id_list = exam_details['question_list']
+        if exam_details['exam_category'] == 'BE-IOE':
+            question_id_list = exam_details['question_list']
+            
         questions = exam_handler_obj.get_filtered_question_from_database(int(exam_code), subject_name)
         total_questions = len(questions)       
         try:
