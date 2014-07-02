@@ -1,0 +1,1236 @@
+[{
+    "question": {
+        "text": "If n (A) = 5, then the number of non empty proper subsets of set A is"
+    },
+    "answer": {
+        "b": {
+            "text": "31"
+        },
+        "c": {
+            "text": "30"
+        },
+        "d": {
+            "text": "29"
+        },
+        "a": {
+            "text": "32"
+        },
+        "correct": "c"
+    }
+}, {
+    "question": {
+        "text": "The inverse function f(x) = sin $ ^{–1} $ (1 – 2x) is defined for (where x is real number):"
+    },
+    "answer": {
+        "b": {
+            "text": "–1/2 ≤ x ≤  1/2"
+        },
+        "c": {
+            "text": "–2 ≤  x ≤  2"
+        },
+        "d": {
+            "text": "0 ≤  x ≤  1"
+        },
+        "a": {
+            "text": "–1 ≤  x ≤  1"
+        },
+        "correct": "d"
+    }
+}, {
+    "question": {
+        "text": "For a quadratic equation having rational coefficients whose one root is $ \\sqrt 5 -3 $, then other root is"
+    },
+    "answer": {
+        "b": {
+            "text": "$ - \\sqrt 5 -3 $"
+        },
+        "c": {
+            "text": "$ \\frac {1}{\\sqrt 5 -3} $"
+        },
+        "d": {
+            "text": "$ \\frac {1}{\\sqrt 5 +3} $"
+        },
+        "a": {
+            "text": "$ \\sqrt 5 + 3 $"
+        },
+        "correct": "b"
+    }
+}, {
+    "question": {
+        "text": "The value of $ \\lim_{x \\rightarrow 0} \\frac{ \\tan x ^{o}}{x} $ is"
+    },
+    "answer": {
+        "b": {
+            "text": "$ \\frac {180}{\\pi} $"
+        },
+        "c": {
+            "text": "$ \\frac {180}{\\pi} $"
+        },
+        "d": {
+            "text": "$ \\infty $"
+        },
+        "a": {
+            "text": "1"
+        },
+        "correct": "a"
+    }
+}, {
+    "question": {
+        "text": "$ \\frac {d}{dx} (sech x) $ is equal to"
+    },
+    "answer": {
+        "b": {
+            "text": "tanh $ ^{2} $ x"
+        },
+        "c": {
+            "text": "tanh $ ^{2} $ x"
+        },
+        "d": {
+            "text": "– sech x tanhx"
+        },
+        "a": {
+            "text": "sech x tanhx"
+        },
+        "correct": "d"
+    }
+}, {
+    "question": {
+        "text": "The integral $ \\int \\frac{dx}{\\sqrt {x^{2} + a ^2}} $ is equal to"
+    },
+    "answer": {
+        "b": {
+            "text": "$ \\frac {1}{2a} \\log(\\frac{a+x}{a-x}) $"
+        },
+        "c": {
+            "text": "sin $ ^{–1} \\frac {x}{a} $"
+        },
+        "d": {
+            "text": "tanh $ ^{–1} \\frac {x}{a} $"
+        },
+        "a": {
+            "text": "$ \\log \\{ x - \\sqrt {x^2 + a^2} \\} $"
+        },
+        "correct": "c"
+    }
+}, {
+    "question": {
+        "text": "If B be any square matrix, B $ ^{T} $ is the transpose matrix of B, then $ \\frac {B^T + B}{20} $ is"
+    },
+    "answer": {
+        "b": {
+            "text": "skew symmetric matrix"
+        },
+        "c": {
+            "text": "scalar matrix"
+        },
+        "d": {
+            "text": "symmetric matrix"
+        },
+        "a": {
+            "text": "diagonal matrix"
+        },
+        "correct": "d"
+    }
+}, {
+    "question": {
+        "text": "If K, – K, 2K are direction ratios of a vector in space then"
+    },
+    "answer": {
+        "b": {
+            "text": "K = $± \\sqrt 6 $"
+        },
+        "c": {
+            "text": "K = ± $ \\frac {1}{\\sqrt 3} $"
+        },
+        "d": {
+            "text": "K = ± $ \\frac {2}{\\sqrt 3} $"
+        },
+        "a": {
+            "text": "K = $ ± \\frac {1} {\\sqrt 6}%"
+        },
+        "correct": "a"
+    }
+}, {
+    "question": {
+        "text": "The vector equation of st. line passing through a given point whose position vector is $ \\overrightarrow{a} $ and parallel to vector $ \\overrightarrow{a}$ is (where $ \\overrightarrow{r}$ is the position vector of points on st. line and t is scalar.)"
+    },
+    "answer": {
+        "b": {
+            "text": "$ \\overrightarrow{r} = \\overrightarrow{a} + t\\overrightarrow{b} $"
+        },
+        "c": {
+            "text": "$ \\overrightarrow{r} = \\overrightarrow{b} + t\\overrightarrow{a} $"
+        },
+        "d": {
+            "text": "$ \\overrightarrow{r} = t\\overrightarrow{a} + \\overrightarrow{b} $"
+        },
+        "a": {
+            "text": "$ \\overrightarrow{r} = (1-t)\\overrightarrow{a} + t\\overrightarrow{b} $"
+        },
+        "correct": "b"
+    }
+}, {
+    "question": {
+        "text": "The polar equation r sinq = 5 represents"
+    },
+    "answer": {
+        "b": {
+            "text": "a circle"
+        },
+        "c": {
+            "text": "a st. line"
+        },
+        "d": {
+            "text": "a hyperbola"
+        },
+        "a": {
+            "text": "a parabola"
+        },
+        "correct": "c"
+    }
+}, {
+    "question": {
+        "text": "The phonemic transcription of the word ‘montage’ is ________"
+    },
+    "answer": {
+        "b": {
+            "text": "/mεntə3/"
+        },
+        "c": {
+            "text": "/montε3/"
+        },
+        "d": {
+            "text": "/montad3/"
+        },
+        "a": {
+            "text": "/monta3/"
+        },
+        "correct": "d"
+    }
+}, {
+    "question": {
+        "text": "The word ‘moresque’ has its primary stress on the syllable."
+    },
+    "answer": {
+        "b": {
+            "text": "2nd"
+        },
+        "c": {
+            "text": "3rd"
+        },
+        "d": {
+            "text": "none of these"
+        },
+        "a": {
+            "text": "1st"
+        },
+        "correct": "c"
+    }
+}, {
+    "question": {
+        "text": "Exacerbate is _____________________"
+    },
+    "answer": {
+        "b": {
+            "text": "embitter"
+        },
+        "c": {
+            "text": "exasperate"
+        },
+        "d": {
+            "text": "all of these"
+        },
+        "a": {
+            "text": "vex"
+        },
+        "correct": "c"
+    }
+}, {
+    "question": {
+        "text": "The antonym of ‘boisterous’ is ______"
+    },
+    "answer": {
+        "b": {
+            "text": "placid"
+        },
+        "c": {
+            "text": "descend"
+        },
+        "d": {
+            "text": "deny"
+        },
+        "a": {
+            "text": "justify"
+        },
+        "correct": "b"
+    }
+}, {
+    "question": {
+        "text": "Try to make _________ the meaning of this word."
+    },
+    "answer": {
+        "b": {
+            "text": "at"
+        },
+        "c": {
+            "text": "in"
+        },
+        "d": {
+            "text": "on"
+        },
+        "a": {
+            "text": "out"
+        },
+        "correct": "a"
+    }
+}, {
+    "question": {
+        "text": "She pined ____________ the lost child."
+    },
+    "answer": {
+        "b": {
+            "text": "for"
+        },
+        "c": {
+            "text": "at"
+        },
+        "d": {
+            "text": "in"
+        },
+        "a": {
+            "text": "on"
+        },
+        "correct": "a"
+    }
+}, {
+    "question": {
+        "text": "A wise man profits ____________ the mistakes of others."
+    },
+    "answer": {
+        "b": {
+            "text": "on"
+        },
+        "c": {
+            "text": "by"
+        },
+        "d": {
+            "text": "at"
+        },
+        "a": {
+            "text": "with"
+        },
+        "correct": "b"
+    }
+}, {
+    "question": {
+        "text": "My ___________ overlooks the garden."
+    },
+    "answer": {
+        "b": {
+            "text": "cabin"
+        },
+        "c": {
+            "text": "quarter"
+        },
+        "d": {
+            "text": "apartment"
+        },
+        "a": {
+            "text": "room"
+        },
+        "correct": "d"
+    }
+}, {
+    "question": {
+        "text": "She wants someone to help her. The correct passive voice is ______"
+    },
+    "answer": {
+        "b": {
+            "text": "she wants to be helped by someone"
+        },
+        "c": {
+            "text": "she wants being helped by someone"
+        },
+        "d": {
+            "text": "she wants to be helped"
+        },
+        "a": {
+            "text": "she wants herself to be helped"
+        },
+        "correct": "b"
+    }
+}, {
+    "question": {
+        "text": "I still recall ________________ her in those days."
+    },
+    "answer": {
+        "b": {
+            "text": "meeting"
+        },
+        "c": {
+            "text": "to meeting"
+        },
+        "d": {
+            "text": "met"
+        },
+        "a": {
+            "text": "to meet"
+        },
+        "correct": "a"
+    }
+}, {
+    "question": {
+        "text": "When he was class-10, he _______ football."
+    },
+    "answer": {
+        "b": {
+            "text": "played"
+        },
+        "c": {
+            "text": "had played"
+        },
+        "d": {
+            "text": "had been playing"
+        },
+        "a": {
+            "text": "was playing"
+        },
+        "correct": "b"
+    }
+}, {
+    "question": {
+        "text": "The became obliged _________ our favour."
+    },
+    "answer": {
+        "b": {
+            "text": "to take"
+        },
+        "c": {
+            "text": "to taking"
+        },
+        "d": {
+            "text": "taking"
+        },
+        "a": {
+            "text": "take"
+        },
+        "correct": "c"
+    }
+}, {
+    "question": {
+        "text": "Which of the following sentence is correct?"
+    },
+    "answer": {
+        "b": {
+            "text": "She is almost quite well."
+        },
+        "c": {
+            "text": "The teacher was busy in teaching the students."
+        },
+        "d": {
+            "text": "He became shocked at me jokes."
+        },
+        "a": {
+            "text": "You look comparatively good today."
+        },
+        "correct": "a"
+    }
+}, {
+    "question": {
+        "text": "Dick, together with his friends, _____ in the river."
+    },
+    "answer": {
+        "b": {
+            "text": "was drowned"
+        },
+        "c": {
+            "text": "were sunk"
+        },
+        "d": {
+            "text": "were drowned"
+        },
+        "a": {
+            "text": "was sunk"
+        },
+        "correct": "d"
+    }
+}, {
+    "question": {
+        "text": "He said to me, “Who will be elected President?”"
+    },
+    "answer": {
+        "b": {
+            "text": "He asked me who the President will be elected."
+        },
+        "c": {
+            "text": "He asked me who would be elected President."
+        },
+        "d": {
+            "text": "He asked me who President would be elected."
+        },
+        "a": {
+            "text": "He asked me who will be elected President."
+        },
+        "correct": "b"
+    }
+}, {
+    "question": {
+        "text": "The height from surface of earth at which value of ‘g’ becomes one-sixth of that on earth’s surface will be"
+    },
+    "answer": {
+        "b": {
+            "text": "1.45R"
+        },
+        "c": {
+            "text": "5/12R"
+        },
+        "d": {
+            "text": "5/6 R"
+        },
+        "a": {
+            "text": "2.45 R"
+        },
+        "correct": "b"
+    }
+}, {
+    "question": {
+        "text": "If $ \\overrightarrow{A}.\\overrightarrow{B} = \\frac {\\sqrt 3}{2}AB $,  the angle between vectors A and B must be"
+    },
+    "answer": {
+        "b": {
+            "text": "60°"
+        },
+        "c": {
+            "text": "30°"
+        },
+        "d": {
+            "text": "90°"
+        },
+        "a": {
+            "text": "0 $ ^{0} $"
+        },
+        "correct": "c"
+    }
+}, {
+    "question": {
+        "text": "A cricket ball is hit for a sixer. The number of degrees of freedom associated with the ball is"
+    },
+    "answer": {
+        "b": {
+            "text": "2"
+        },
+        "c": {
+            "text": "3"
+        },
+        "d": {
+            "text": "6"
+        },
+        "a": {
+            "text": "l"
+        },
+        "correct": "c"
+    }
+}, {
+    "question": {
+        "text": "For which of the following dependences of drift velocity V $ _{d} $ on electric field E is the Ohm’s law obeyed?"
+    },
+    "answer": {
+        "b": {
+            "text": "V α $ _{d} $  E $ ^{1/2} $"
+        },
+        "c": {
+            "text": "V α $ _{d} $  E $ ^{o} $"
+        },
+        "d": {
+            "text": "V α $ _{d} $  E"
+        },
+        "a": {
+            "text": "V α $ _{d} $  E $ ^{2} $"
+        },
+        "correct": "d"
+    }
+}, {
+    "question": {
+        "text": "The colours of thin films result due to"
+    },
+    "answer": {
+        "b": {
+            "text": "dispersion of light"
+        },
+        "c": {
+            "text": "scattering of light"
+        },
+        "d": {
+            "text": "selective absorption of light"
+        },
+        "a": {
+            "text": "interference of light"
+        },
+        "correct": "a"
+    }
+}, {
+    "question": {
+        "text": "Two parallel beams of protons are movingin the same direction, then they"
+    },
+    "answer": {
+        "b": {
+            "text": "repel each other"
+        },
+        "c": {
+            "text": "first attract and then repel"
+        },
+        "d": {
+            "text": "neither attract nor repel"
+        },
+        "a": {
+            "text": "attract each other"
+        },
+        "correct": "b"
+    }
+}, {
+    "question": {
+        "text": "In an X-ray tube, the penetrating power of emitted X – ray beam may be increased by"
+    },
+    "answer": {
+        "b": {
+            "text": "decreasing filamnet current"
+        },
+        "c": {
+            "text": "decreasing target potential"
+        },
+        "d": {
+            "text": "increasing the target potential"
+        },
+        "a": {
+            "text": "increasing filament current"
+        },
+        "correct": "d"
+    }
+}, {
+    "question": {
+        "text": "The ratio de-Broglie wave-lengths associated  with a proton and an alpha particle accelerated through the same potential difference is"
+    },
+    "answer": {
+        "b": {
+            "text": "$ \\sqrt 8  $: 1"
+        },
+        "c": {
+            "text": "1:2"
+        },
+        "d": {
+            "text": "1:1"
+        },
+        "a": {
+            "text": "1: 8"
+        },
+        "correct": "b"
+    }
+}, {
+    "question": {
+        "text": "The maximum wavelength for photoelectrons from a metal is 4000 A. The work function of metal is"
+    },
+    "answer": {
+        "b": {
+            "text": "3.leV"
+        },
+        "c": {
+            "text": "2.5eV"
+        },
+        "d": {
+            "text": "6eV"
+        },
+        "a": {
+            "text": "4eV"
+        },
+        "correct": "b"
+    }
+}, {
+    "question": {
+        "text": "How does the speed “V” of sound in air depends on atmospheric pressure at constant temperature?"
+    },
+    "answer": {
+        "b": {
+            "text": "V α P $ ^{2} $"
+        },
+        "c": {
+            "text": "V α $  \\sqrt {P}$"
+        },
+        "d": {
+            "text": "V is independent of 'P'"
+        },
+        "a": {
+            "text": "V α P"
+        },
+        "correct": "d"
+    }
+}, {
+    "question": {
+        "text": "Canal rays is the name for the beam of"
+    },
+    "answer": {
+        "b": {
+            "text": "protons"
+        },
+        "c": {
+            "text": "neutrons"
+        },
+        "d": {
+            "text": "positively charged ions"
+        },
+        "a": {
+            "text": "electrons"
+        },
+        "correct": "d"
+    }
+}, {
+    "question": {
+        "text": "Which of the following pair can act as oxidizing as well as reducing  agent?"
+    },
+    "answer": {
+        "b": {
+            "text": "Cl $ _{2} $ and HNO $ _{3} $"
+        },
+        "c": {
+            "text": "H $ _{2} $ O $ _{2} $ and HNO $ _{3} $"
+        },
+        "d": {
+            "text": "Br $ _{2} $ and HIO $ _{3} $"
+        },
+        "a": {
+            "text": "H $ _{2} $ O $ _{2} $ and  SO $ _{2} $"
+        },
+        "correct": "a"
+    }
+}, {
+    "question": {
+        "text": "Maximum ionic character is found in"
+    },
+    "answer": {
+        "b": {
+            "text": "HBr"
+        },
+        "c": {
+            "text": "HC1"
+        },
+        "d": {
+            "text": "HF"
+        },
+        "a": {
+            "text": "HI"
+        },
+        "correct": "d"
+    }
+}, {
+    "question": {
+        "text": "Which of the following isoelectronic species has largest size?"
+    },
+    "answer": {
+        "b": {
+            "text": "O $ ^{2–} $"
+        },
+        "c": {
+            "text": "F $ ^{–} $"
+        },
+        "d": {
+            "text": "Na $ ^{+} $"
+        },
+        "a": {
+            "text": "N $ ^{3–} $"
+        },
+        "correct": "a"
+    }
+}, {
+    "question": {
+        "text": "Volume of 4.4 gm of CO $ _{2} $ at STP is"
+    },
+    "answer": {
+        "b": {
+            "text": "22.4L"
+        },
+        "c": {
+            "text": "4.48L"
+        },
+        "d": {
+            "text": "44.8 L"
+        },
+        "a": {
+            "text": "2.24L"
+        },
+        "correct": "a"
+    }
+}, {
+    "question": {
+        "text": "The salt which is least likely to be found in mineral is"
+    },
+    "answer": {
+        "b": {
+            "text": "sulphide"
+        },
+        "c": {
+            "text": "nitrate"
+        },
+        "d": {
+            "text": "sulphate"
+        },
+        "a": {
+            "text": "chloride"
+        },
+        "correct": "c"
+    }
+}, {
+    "question": {
+        "text": "Brass contains"
+    },
+    "answer": {
+        "b": {
+            "text": "Cu + Mn"
+        },
+        "c": {
+            "text": "Cu + Zn"
+        },
+        "d": {
+            "text": "Cu + Ni"
+        },
+        "a": {
+            "text": "Cu + Sn"
+        },
+        "correct": "c"
+    }
+}, {
+    "question": {
+        "text": "In Nessler’s reagent, the ion present is"
+    },
+    "answer": {
+        "b": {
+            "text": "Hg $ ^{++} $"
+        },
+        "c": {
+            "text": "HgI $ ^{2–} $"
+        },
+        "d": {
+            "text": "HgI $ _{4} $ $ ^{2–} $"
+        },
+        "a": {
+            "text": "Hg $ ^{+} $"
+        },
+        "correct": "d"
+    }
+}, {
+    "question": {
+        "text": "Conc. HNO $ _{3} $ reacts with I $ _{2} $ to give"
+    },
+    "answer": {
+        "b": {
+            "text": "HOI"
+        },
+        "c": {
+            "text": "HOIO $ _{2} $"
+        },
+        "d": {
+            "text": "HOIO $ _{3} $"
+        },
+        "a": {
+            "text": "HI"
+        },
+        "correct": "c"
+    }
+}, {
+    "question": {
+        "text": "Which of the following turns lead acetate paper black?"
+    },
+    "answer": {
+        "b": {
+            "text": "H $ _{2} $ S"
+        },
+        "c": {
+            "text": "SO $ _{3} $"
+        },
+        "d": {
+            "text": "H $ _{2} $ SO $ _{4} $"
+        },
+        "a": {
+            "text": "SO $ _{2} $"
+        },
+        "correct": "b"
+    }
+}, {
+    "question": {
+        "text": "On heating a mixture of NH $ _{4} $ Cl and KNO $ _{2} $ , we get"
+    },
+    "answer": {
+        "b": {
+            "text": "N $ _{2} $"
+        },
+        "c": {
+            "text": "k[NH $ _{4} $ (NO $ _{3} $ ) $ _{2} $ ]"
+        },
+        "d": {
+            "text": "NO"
+        },
+        "a": {
+            "text": "NH $ _{4} $ NO $ _{3} $"
+        },
+        "correct": "b"
+    }
+}, {
+    "question": {
+        "text": "Electrometallurgy is employed for the extraction of"
+    },
+    "answer": {
+        "b": {
+            "text": "Fe"
+        },
+        "c": {
+            "text": "Na"
+        },
+        "d": {
+            "text": "Ag"
+        },
+        "a": {
+            "text": "Cu"
+        },
+        "correct": "c"
+    }
+}, {
+    "question": {
+        "text": "Kerosene is the mixture of"
+    },
+    "answer": {
+        "b": {
+            "text": "alkanes"
+        },
+        "c": {
+            "text": "aliphatic acids"
+        },
+        "d": {
+            "text": "alcohols"
+        },
+        "a": {
+            "text": "aromatic compound"
+        },
+        "correct": "b"
+    }
+}, {
+    "question": {
+        "text": "Cyclohexane is"
+    },
+    "answer": {
+        "b": {
+            "text": "alicyclic compound"
+        },
+        "c": {
+            "text": "aromatic compound"
+        },
+        "d": {
+            "text": "heterocyclic compound"
+        },
+        "a": {
+            "text": "aliphatic compound"
+        },
+        "correct": "b"
+    }
+}, {
+    "question": {
+        "text": "Silver acetylide when heated with HC l gives"
+    },
+    "answer": {
+        "b": {
+            "text": "H $ _{2} $"
+        },
+        "c": {
+            "text": "C $ _{2} $ H $ _{4} $"
+        },
+        "d": {
+            "text": "C $ _{6} $ H $ _{6} $"
+        },
+        "a": {
+            "text": "C $ _{2} $ H $ _{2} $"
+        },
+        "correct": "a"
+    }
+}, {
+    "question": {
+        "text": "The four operation that is suction, compression, expansion and exhaust in four stroke engine is completed in the number of revolution of the crankshaft equal to........"
+    },
+    "answer": {
+        "b": {
+            "text": "2"
+        },
+        "c": {
+            "text": "3"
+        },
+        "d": {
+            "text": "4"
+        },
+        "a": {
+            "text": "1"
+        },
+        "correct": "b"
+    }
+}, {
+    "question": {
+        "text": "The process of removing the burnt gases in IC engines from the combustion chamber of engine cylinder is known as"
+    },
+    "answer": {
+        "b": {
+            "text": "scavenging"
+        },
+        "c": {
+            "text": "polymerization"
+        },
+        "d": {
+            "text": "detonation"
+        },
+        "a": {
+            "text": "super charging"
+        },
+        "correct": "b"
+    }
+}, {
+    "question": {
+        "text": "The pressure at the end of compression in petrol engine compared to that of diesel engine is"
+    },
+    "answer": {
+        "b": {
+            "text": "lower"
+        },
+        "c": {
+            "text": "same"
+        },
+        "d": {
+            "text": "none"
+        },
+        "a": {
+            "text": "higher"
+        },
+        "correct": "b"
+    }
+}, {
+    "question": {
+        "text": "Biodiesel is made from"
+    },
+    "answer": {
+        "b": {
+            "text": "Animal fats"
+        },
+        "c": {
+            "text": "Recycled grease s"
+        },
+        "d": {
+            "text": "All"
+        },
+        "a": {
+            "text": "Vegetable oil"
+        },
+        "correct": "d"
+    }
+}, {
+    "question": {
+        "text": "If iron oxide present in brick earth is more than the requirement then colour of brick after burning will be"
+    },
+    "answer": {
+        "b": {
+            "text": "yellowish"
+        },
+        "c": {
+            "text": "dark black"
+        },
+        "d": {
+            "text": "dark blue"
+        },
+        "a": {
+            "text": "dark red"
+        },
+        "correct": "d"
+    }
+}, {
+    "question": {
+        "text": "Which of the following stone is better to use as building construction material?"
+    },
+    "answer": {
+        "b": {
+            "text": "Gneiss"
+        },
+        "c": {
+            "text": "mudstore"
+        },
+        "d": {
+            "text": "chalk"
+        },
+        "a": {
+            "text": "Mica"
+        },
+        "correct": "b"
+    }
+}, {
+    "question": {
+        "text": "Bulking is more in"
+    },
+    "answer": {
+        "b": {
+            "text": "coarse aggregate"
+        },
+        "c": {
+            "text": "both"
+        },
+        "d": {
+            "text": "none"
+        },
+        "a": {
+            "text": "finer sands"
+        },
+        "correct": "a"
+    }
+}, {
+    "question": {
+        "text": "Volume of 1 bag cement is"
+    },
+    "answer": {
+        "b": {
+            "text": "0.0345 m $ ^{3} $"
+        },
+        "c": {
+            "text": "0.025 m $ ^{3} $"
+        },
+        "d": {
+            "text": "0.04 m $ ^{3} $"
+        },
+        "a": {
+            "text": "0.05 m $ ^{3} $"
+        },
+        "correct": "b"
+    }
+}, {
+    "question": {
+        "text": "Transformer cores are laminated in order to"
+    },
+    "answer": {
+        "b": {
+            "text": "minimize eddy current loss"
+        },
+        "c": {
+            "text": "reduce cost"
+        },
+        "d": {
+            "text": "reduce hysteresis loss"
+        },
+        "a": {
+            "text": "simplify construction"
+        },
+        "correct": "b"
+    }
+}, {
+    "question": {
+        "text": "Which of the following is true about voltmeter?"
+    },
+    "answer": {
+        "b": {
+            "text": "Low resistance instrument connected in series"
+        },
+        "c": {
+            "text": "High resistance instrument connected in parallel"
+        },
+        "d": {
+            "text": "Low resistance instrument connected in series"
+        },
+        "a": {
+            "text": "High resistance instrument connected in series"
+        },
+        "correct": "c"
+    }
+}, {
+    "question": {
+        "text": "Two bulbs in a house one glow brighter than the other the bulb with large resistance is"
+    },
+    "answer": {
+        "b": {
+            "text": "The brighter bulb"
+        },
+        "c": {
+            "text": "Both has same resistance"
+        },
+        "d": {
+            "text": "None"
+        },
+        "a": {
+            "text": "Dim bulb"
+        },
+        "correct": "a"
+    }
+}, {
+    "question": {
+        "text": "When memory is cut off which memory loses its data........."
+    },
+    "answer": {
+        "b": {
+            "text": "magnetic tape"
+        },
+        "c": {
+            "text": "RAM"
+        },
+        "d": {
+            "text": "optical disc"
+        },
+        "a": {
+            "text": "ROM"
+        },
+        "correct": "c"
+    }
+}, {
+    "question": {
+        "text": "Cache memory is faster than"
+    },
+    "answer": {
+        "b": {
+            "text": "ROM"
+        },
+        "c": {
+            "text": "magnetic disc"
+        },
+        "d": {
+            "text": "all of above"
+        },
+        "a": {
+            "text": "RAM"
+        },
+        "correct": "d"
+    }
+}, {
+    "question": {
+        "text": "Semiconductors have"
+    },
+    "answer": {
+        "b": {
+            "text": "Positive temperature coefficient of resistance"
+        },
+        "c": {
+            "text": "negative temperature coeff. of resistance"
+        },
+        "d": {
+            "text": "none of the above"
+        },
+        "a": {
+            "text": "Zero temperature of resistance"
+        },
+        "correct": "c"
+    }
+}, {
+    "question": {
+        "text": "(1110100011) $ _{2} $ = ( ?_) $ _{16} $ ....."
+    },
+    "answer": {
+        "b": {
+            "text": "3A3"
+        },
+        "c": {
+            "text": "3C3"
+        },
+        "d": {
+            "text": "3D3"
+        },
+        "a": {
+            "text": "3B3"
+        },
+        "correct": "b"
+    }
+}]
