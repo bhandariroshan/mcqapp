@@ -162,7 +162,7 @@
     },
     "marks": 1,
     "question": {
-      "text": "If $ \\overrightarrow{a} $ and $ \\overrightarrow{b} $  are two unit vectors such that $ (\\overrightarrow{a} + 2\\overrightarrow{b}) $ and $ (5\\overrightarrow{a} - 4\\overrightarrow{b}) $ are perpendicular to each other then the angle between \\overrightarrow{a} and \\overrightarrow{b} is"
+      "text": "If $ \\vec{a} $ and $ \\vec{b} $  are two unit vectors such that $ (\\vec{a} + 2\\vec{b}) $ and $ (5\\vec{a} - 4\\vec{b}) $ are perpendicular to each other then the angle between $ \\vec{a} $ and $ \\vec{b} $ is"
     },
     "exam_category": "BE-IOE",
     "exam_code": 1404130198
@@ -243,17 +243,17 @@
     "subject": "English",
     "answer": {
       "c": {
-        "text": "/pItI/"
+        "text": "/pɪtɪ/"
       },
       "b": {
-        "text": "/paIətI/"
+        "text": "/paɪətɪ/"
       },
       "d": {
-        "text": "/peətI/"
+        "text": "/peətɪ/"
       },
       "correct": "d",
       "a": {
-        "text": "/paItI/"
+        "text": "/paɪtɪ/"
       }
     },
     "marks": 1,
@@ -483,7 +483,7 @@
     "subject": "English",
     "answer": {
       "c": {
-        "text": "S + V $ _{i} $ + O D + Prepositional phrase"
+        "text": "S + V $ _{i} $ + O $ _{D} $ + Prepositional phrase"
       },
       "b": {
         "text": "S + V $ _{t} $ + O $ _{I} $ + prepositional phrase"
@@ -627,7 +627,7 @@
     "subject": "Physics",
     "answer": {
       "c": {
-        "text": "energy absorbed"
+        "text": "energy is absorbed"
       },
       "b": {
         "text": "volume increases"
@@ -702,7 +702,7 @@
         "text": "sin $ \\omega $ t + cos $ \\omega $ t"
       },
       "b": {
-        "text": "sin2 $ \\omega $ t"
+        "text": "cos2 $ \\omega $ t"
       },
       "d": {
         "text": "sin2 $ \\omega $ t+ cos 2 $ \\omega $ t"
@@ -891,7 +891,7 @@
     "subject": "Chemistry",
     "answer": {
       "c": {
-        "text": "1.8×l0"
+        "text": "1.8×10"
       },
       "b": {
         "text": "2.6×$ 10^{4} $"
