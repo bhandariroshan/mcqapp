@@ -2,10 +2,11 @@ import time
 import datetime
 import json
 from facepy import GraphAPI
-import re
 
 from allauth.socialaccount.models import SocialToken, SocialAccount
 from allauth.socialaccount.providers.facebook.views import login_by_token
+
+from django.http import Http404
 
 from django.shortcuts import render_to_response
 from django.http import HttpResponseRedirect, HttpResponse
@@ -19,7 +20,7 @@ from apps.mainapp.classes.Exams import RankCard, ScoreCard
 from apps.mainapp.classes.Coupon import Coupon
 from apps.mainapp.classes.Userprofile import UserProfile
 from apps.exam_api.views import ExamHandler
-
+from bson.objectid import ObjectId
 from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi,\
     ExamStartSignal, HonorCodeAcceptSingal, AttemptedAnswerDatabase,\
     CurrentQuestionNumber
@@ -27,16 +28,20 @@ from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi,\
 
 def sign_up_sign_in(request, android_user=False):
     social_account = SocialAccount.objects.get(user__id=request.user.id)
+    access_token = SocialToken.objects.get(account__user__id=request.user.id)
     user_profile_object = UserProfile()
     user = user_profile_object.get_user_by_username(request.user.username)
-    if user is not None:
+    if user != None:
         return None
 
     valid_exams = []
-    coupons = []
+    coupons = []    
     subscription_type = []
     join_time = datetime.datetime.now()
     join_time = time.mktime(join_time.timetuple())
+    graph = GraphAPI(access_token)
+    det = graph.get(social_account.uid + '/picture/?redirect=0&height=300&type=normal&width=300')
+    profile_image = det['data']['url']
     student_category = 'IDP'
     student_category_set = 0
     data = {
@@ -72,9 +77,7 @@ def sign_up_sign_in(request, android_user=False):
     except:
         pass
     data['mc_subscribed'] = True
-    return user_profile_object.update_upsert(
-        {'username': request.user.username}, data
-    )
+    return user_profile_object.update_upsert({'username': request.user.username}, data)
 
 
 def latex_html(request):
@@ -101,9 +104,7 @@ def add_html(request):
              "answer.d.html": question['answer']['d']['text']
              }
         )
-    return render_to_response(
-        "sample-tex.html", context_instance=RequestContext(request)
-    )
+    return render_to_response("sample-tex.html", context_instance=RequestContext(request))
 
 
 @csrf_exempt
@@ -145,6 +146,7 @@ def landing(request):
             request.user.username
         )
         user = user_profile_obj.get_user_by_username(request.user.username)
+        exam_handler = ExamHandler()
         exam_model_api = ExammodelApi()
         user_exams = user['valid_exam']
 
@@ -157,7 +159,7 @@ def landing(request):
             parameters['subscribed'] = False
 
         parameters['subscription_type'] = user['subscription_type']
-
+        
         try:
             if user['student_category_set'] == 1:
                 parameters['student_category_set'] = True
@@ -168,38 +170,32 @@ def landing(request):
 
         for eachExam in user_exams:
             up_exm = {}
-            eachExamDetails = exam_model_api.find_one_exammodel(
-                {'exam_code': eachExam}
-            )
-            
-            if eachExamDetails == None:
-                continue
-
-            up_exm['name'] = eachExamDetails.get('exam_name')
+            eaxhExamDetails = exam_model_api.find_one_exammodel({'exam_code':eachExam})
+            up_exm['name'] = eaxhExamDetails['exam_name']
 
             if 'IDP' in subscription_type:
                 up_exm['subscribed'] = True
 
-            elif eachExamDetails['exam_category'] in subscription_type:
+            elif eaxhExamDetails['exam_category'] in subscription_type:
                 up_exm['subscribed'] = True
 
             else:
-                up_exm['subscribed'] = eachExamDetails.get('exam_code') in \
+                up_exm['subscribed'] = eaxhExamDetails['exam_code'] in \
                     subscribed_exams
 
-            up_exm['code'] = eachExamDetails['exam_code']
-            if eachExamDetails['exam_family'] != 'DPS':
+            up_exm['code'] = eaxhExamDetails['exam_code']
+            if eaxhExamDetails['exam_family'] != 'DPS':
                 exam_start_time = datetime.datetime.strptime(
                     str(datetime.datetime.fromtimestamp(
-                        int(eachExamDetails.get('exam_date')))),
+                        int(eaxhExamDetails['exam_date']))),
                     "%Y-%m-%d %H:%M:%S").time()
                 up_exm['exam_time'] = exam_start_time
                 up_exm['exam_date'] = datetime.datetime.fromtimestamp(
-                    int(eachExamDetails.get('exam_date'))
+                    int(eaxhExamDetails['exam_date'])
                 ).strftime("%A, %d. %B %Y")
-            up_exm['exam_category'] = eachExamDetails.get('exam_category')
-            up_exm['exam_family'] = eachExamDetails.get('exam_family')
-            up_exm['image'] = eachExamDetails.get('image')
+            up_exm['exam_category'] = eaxhExamDetails['exam_category']
+            up_exm['exam_family'] = eaxhExamDetails['exam_family']
+            up_exm['image'] = eaxhExamDetails['image']
             up_exams.append(up_exm)
 
         parameters['upcoming_exams'] = up_exams
@@ -458,6 +454,7 @@ def attend_dps_exam(request, exam_code):
 
             parameters['all_answers'] = json.dumps(all_answers)
 
+
             current_pg_num = 1
             next_page = 0
 
@@ -484,7 +481,7 @@ def attend_dps_exam(request, exam_code):
             questions = exam_handler_obj.get_paginated_question_set(
                 int(exam_code), current_pg_num
             )
-            # print questions
+            print questions
             sorted_questions = sorted(
                 questions, key=lambda k: k['question_number']
             )
@@ -822,10 +819,10 @@ def results(request, exam_code):
          'useruid': request.user.id}
     )
 
-    if exam_details['exam_category'] == 'BE-IOE':
-        total_questions = 65
-    else:
-        total_questions = 100
+    question_obj = QuestionApi()
+    total_questions = question_obj.get_count(
+        {"exam_code": int(exam_code), 'marks': 1}
+    )
 
     ans = AttemptedAnswerDatabase()
     try:
@@ -833,15 +830,15 @@ def results(request, exam_code):
             'exam_code': int(exam_code),
             'user_id': request.user.id,
             'ess_time': ess_check['start_time']
-            },fields={'q_no': 1, 'attempt_details': 1
-        })
+        },
+            fields={'q_no': 1, 'attempt_details': 1}
+        )
     except:
         all_ans = ''
     answer_list = ''
     anss = []
     for eachAns in all_ans:
         anss.append(eachAns['q_no'])
-    print answer_list
     for i in range(1, total_questions + 1):
         try:
             if i in anss:
@@ -861,11 +858,11 @@ def results(request, exam_code):
     from apps.mainapp.classes.result import Result
     result_obj = Result()
     result_obj.save_result({
-            'useruid': request.user.id,
-            'exam_code': int(exam_code),
-            'ess_time': ess_check['start_time'],
-            'result': score_list
-        })
+            'useruid':request.user.id, 
+            'exam_code':int(exam_code), 
+            'ess_time':ess_check['start_time'], 
+            'result':score_list
+            })
     parameters['exam_code'] = exam_code
     parameters['myrankcard'] = {'total': 200, 'rank': 1}
     return render_to_response(
@@ -897,7 +894,6 @@ def show_result(request, exam_code, subject_name):
     subscribed = user_profile_obj.check_subscribed(
         request.user.username, exam_code
     )
-    exam_handler_obj = ExamHandler()
     exam_details = exam_obj.find_one_exammodel(
         {'exam_code': int(exam_code)}
     )
@@ -907,14 +903,18 @@ def show_result(request, exam_code, subject_name):
         if exam_details['exam_family'] == 'CPS' and current_time - \
                 exam_details['exam_date'] < exam_details['exam_duration'] * 60:
             return HttpResponseRedirect('/')
-            
         parameters['exam_details'] = exam_details
         question_obj = QuestionApi()
-        if exam_details['exam_category'] == 'BE-IOE':
-            question_id_list = exam_details['question_list']
+        questions = question_obj.find_all_questions(
+            {"exam_code": int(exam_code),
+             'subject': str(subject_name),
+             'marks': 1}
+        )
+        total_questions = question_obj.get_count(
+            {"exam_code": int(exam_code),
+             'subject': subject_name, 'marks': 1}
+        )
 
-        questions = exam_handler_obj.get_filtered_question_from_database(int(exam_code), subject_name)
-        total_questions = len(questions)       
         try:
             current_q_no = int(request.GET.get('q', ''))
             if current_q_no >= total_questions:
@@ -934,9 +934,7 @@ def show_result(request, exam_code, subject_name):
             current_q_no = total_questions - 1
         if current_q_no <= 0:
             current_q_no = 0
-
         parameters['current_q_no'] = current_q_no
-
         parameters['question_number'] = questions[
             current_q_no]['question_number']
         parameters['question'] = questions[current_q_no]
@@ -951,6 +949,7 @@ def show_result(request, exam_code, subject_name):
             {'exam_code': int(exam_code),
              'useruid': request.user.id}
         )
+        total_questions = question_obj.get_count({"exam_code": int(exam_code)})
 
         try:
             query = {'exam_code': int(exam_code),
@@ -1211,6 +1210,8 @@ def attend_IOM_dps_exam(request, exam_code):
             )
             check = validate_start['start_time']
 
+        dps_exam_start = exam_details['exam_family'] == 'DPS' and current_time\
+            - check > exam_details['exam_duration'] * 60
         if current_time - check > exam_details['exam_duration'] * 60:
             ess.update_exam_start_signal({
                 'exam_code': int(exam_code),

@@ -20,8 +20,10 @@
         </div>        
         <div id="questionText" data-intro="Read the question carefully" data-position="top" class="div-margin twelve columns ui-widget-content ui-corner-all question-min-height">          
           <span><p><strong style="color:blue;">{{question_number}}. </strong><strong> {{question.question.text}} </strong></p> </span>
+          {% if question.question.image  %}
           {% if question.question.image != '' %}
           <img src="/static/images/{{exam_code}}/{{question.question.image}}" style="margin-left:15%; height:140px" />
+          {% endif %}
           {% endif %}
         </div>
         <div>           
@@ -32,8 +34,10 @@
                 {% if question.answer.correct|lower == 'a' and attempted|lower != 'a' %} <i class="icon-check"></i>{% endif %}{% if question.answer.correct|lower != 'a' and attempted|lower == 'a' %} <i class="icon-cancel"></i>{% endif %}A</p>
               <div class="clickDiv " id="divOptionA" ><span></span>
                 {{question.answer.a.text}}<br></div>
+                {% if question.answer.a.image %}
                {% if question.answer.a.image != '' %}
                 <img src="/static/images/{{exam_code}}/{{question.answer.a.image}}" style="margin-left:15%; height:140px;" />
+               {% endif %}
                {% endif %}
             </li>
                         
@@ -43,8 +47,10 @@
               {% if question.answer.correct|lower == 'b' and attempted|lower != 'b' %} <i class="icon-check"></i>{% endif %}{% if question.answer.correct|lower != 'b' and attempted|lower == 'b' %} <i class="icon-cancel"></i>{% endif %}B</p>
               <div class="clickDiv" id="divOptionB"><span></span>
                 {{question.answer.b.text}}<br></div>
+               {% if question.answer.b.image %}
                {% if question.answer.b.image != '' %}
                 <img src="/static/images/{{exam_code}}/{{question.answer.b.image}}" style="margin-left:15%; height:140px;" />
+               {% endif %}
                {% endif %}
             </li>
 
@@ -54,9 +60,11 @@
                 {% if question.answer.correct|lower == 'c' and attempted|lower != 'c' %} <i class="icon-check"></i>{% endif %}{% if question.answer.correct|lower != 'c' and attempted|lower == 'c' %} <i class="icon-cancel"></i>{% endif %}C</p>
               <div class="clickDiv " id="divOptionC"><span></span>
                 {{question.answer.c.text}}<br></div>
+              {% if question.answer.c.image  %}
                {% if question.answer.c.image != '' %}
                 <img src="/static/images/{{exam_code}}/{{question.answer.c.image}}" style="margin-left:15%; height:140px;" />
                {% endif %}
+              {% endif %}
             </li>
 
             <li class="field ui-widget-content ui-corner-all li-height forum_hover {% if question.answer.correct|lower == 'd' and attempted|lower == 'd' %} attempt-and-correct {% endif %}{% if question.answer.correct|lower == 'd' and attempted|lower != 'd' %} correct {% endif %} {% if question.answer.correct|lower != 'd' and attempted|lower == 'd' %} attempted {% endif %}" id="d">              
@@ -64,10 +72,12 @@
                 {% if question.answer.correct|lower == 'd' and attempted|lower == 'd' %}<i class="icon-check"></i>{% endif %}
                 {% if question.answer.correct|lower == 'd' and attempted|lower != 'd' %} <i class="icon-check"></i>{% endif %}{% if question.answer.correct|lower != 'd' and attempted|lower == 'd' %} <i class="icon-cancel"></i>{% endif %}D</p>
               <div class="clickDiv " id="divOptionD"><span></span>
-                {{question.answer.d.text}}<br></div>
-               {% if question.answer.d.image != '' %}
-                <img src="/static/images/{{exam_code}}/{{question.answer.d.image}}" style="margin-left:15%; height:140px;" />
-               {% endif %}
+              {{question.answer.d.text}}<br></div>
+              {% if question.answer.d.image %}
+                 {% if question.answer.d.image != '' %}
+                  <img src="/static/images/{{exam_code}}/{{question.answer.d.image}}" style="margin-left:15%; height:140px;" />
+                 {% endif %}
+              {% endif %}
               </li>
           </ul>
         </div>

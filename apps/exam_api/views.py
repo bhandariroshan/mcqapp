@@ -4,6 +4,7 @@ from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi,\
 import datetime
 import time
 from bson.objectid import ObjectId
+import re
 
 
 class ExamHandler():
@@ -20,19 +21,66 @@ class ExamHandler():
             exam_model = exammodel_api.find_one_exammodel(
                 {"exam_code": int(exam_code)}
             )
-            question_id_list = [
-                ObjectId(i['id']) for i in exam_model['question_list']
-            ]
-            question_api = QuestionApi()
-            question_list = question_api.find_all_questions(
-                {'_id': {"$in": question_id_list}, "marks": 1}
-            )
-            sorted_questions = sorted(
-                question_list, key=lambda k: k['question_number'])
-            return sorted_questions
+            if exam_model['exam_category'] == 'BE-IOE':
+                question_id_list = [
+                    ObjectId(i['id']) for i in exam_model['question_list']
+                ]
+                question_api = QuestionApi()
+                question_list = question_api.find_all_questions(
+                    {'_id': {"$in": question_id_list}, "marks": 1}
+                )
+                sorted_questions = sorted(
+                    question_list, key=lambda k: k['question_number'])
+                return sorted_questions
+            else:
+                question_api = QuestionApi()
+                question_list = question_api.find_all_questions(
+                    {'exam_code':int(exam_code), "marks": 1}
+                )
+
+                sorted_questions = sorted(
+                    question_list, key=lambda k: k['question_number'])
+                return sorted_questions
 
         except:
             pass
+
+    def get_filtered_question_from_database(self, exam_code, subject_name):
+        '''
+        This function returns the questions of a model
+        by checking the exam_code
+        '''
+        exammodel_api = ExammodelApi()
+        try:
+            exam_model = exammodel_api.find_one_exammodel(
+                {"exam_code": int(exam_code)}
+            )
+            if exam_model['exam_category'] == 'BE-IOE':
+                question_id_list = [ObjectId(i['id']) for i in exam_model['question_list']]
+
+                question_api = QuestionApi()
+                question_list = question_api.find_all_questions({
+                        '_id': {"$in": question_id_list},
+                        'subject': {"$regex": re.compile("^" + str(subject_name) + "$", re.IGNORECASE), "$options": "-i"},
+                    })
+                sorted_questions = sorted(
+                    question_list, key=lambda k: k['question_number'])
+                return sorted_questions
+            else:                
+                question_api = QuestionApi()
+                question_list = question_api.find_all_questions({
+                    'exam_code':int(exam_code), 
+                    "marks": 1,
+                    'subject': {"$regex": re.compile("^" + str(subject_name) + "$", re.IGNORECASE), "$options": "-i"},
+                    }
+                )
+
+                sorted_questions = sorted(
+                    question_list, key=lambda k: k['question_number'])
+                return sorted_questions
+
+        except:
+            pass        
 
     def get_paginated_question_set(self, exam_code, current_pg_num):
         exammodel_api = ExammodelApi()
@@ -70,7 +118,6 @@ class ExamHandler():
             {'exam_code': int(exam_code)}
         )
         sorted_questions = self.get_questionset_from_database(exam_code)
-        print sorted_questions
         subjects = set([i['subject'].lower() for i in sorted_questions])
 
         correct_answers = {}

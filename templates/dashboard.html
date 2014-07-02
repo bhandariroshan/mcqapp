@@ -297,6 +297,29 @@
     </div>
   </div>
 </div>
+
+<div id="validateCPSCoupon" style="visibility:hidden;" class="pretty medium primary btn switch" gumby-trigger="#validateCPSCouponModal"></div>
+<div class="modal" id="validateCPSCouponModal">
+  <div class="content">
+    <a class="close switch" gumby-trigger="|#validateCPSCouponModal" id="closeEnterCoupon"><i class="icon-cancel" /></i></a>
+    <div class="row">
+      <div id="dangerMessageCPSExam" style="color: red;margin-left: 15%;"></div>
+      <div class="ten columns centered text-center" style="margin-top:6%;">
+        <p id="infoText">Coupon code are necessary to ensure smooth conducting of examination. Every time you give exam, you need to enter coupon code available at various <a href="/distributors/" style="color:red;"><strong>distributors</strong></a>. Please enter <strong>your</strong> coupon code</p>
+          <li class="prepend field">
+            <span class="adjoined">Coupon: </span>
+            <input id="enterCPSCoupon" class="xwide text input" type="text" placeholder="Please enter the coupon code" />
+          </li>
+          <li class="prepend field">
+            <button class="medium primary btn" type="submit">
+              <a id="enterCPSCouponBtn" href="#">Start Exam</a>
+            </button>
+          </li>
+      </div>
+    </div>
+  </div>
+</div>
+
 {% endblock %}
 {% block javascript %}
 <script src="{% static "js/ajax-handle.js" %}"></script>

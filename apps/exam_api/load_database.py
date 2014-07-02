@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from django.contrib.auth.decorators import user_passes_test
 from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi,\
     CorrectAnswerDatabase
-
+from django.conf import settings
 
 @user_passes_test(lambda u: u.is_superuser)
 def load_examset_in_database(request):
@@ -92,23 +92,25 @@ def load_modelquestion_in_database(request):
     the function is used to load fake data in question collection
     of mcq database in mongodb
     '''
-    # for var in range(100,102):
-    #     f = open('apps/exam_api/' + str(var) +'.json', 'rb')
-    #     json_obj = json.loads(f.read())
-    #     for i, x in enumerate(json_obj):
-    #         x['question_number'] = i + 1
-    #     question_api = QuestionApi()
-    #     question_api.insert_new_question(json_obj)
-
-    for var in range(301, 303):
-        f = open('apps/exam_api/' + str(var) + '.json', 'rb')
+    for var in range(301,303):
+        f = open('apps/exam_api/' + str(var) +'.json', 'rb')
         json_obj = json.loads(f.read())
         for i, x in enumerate(json_obj):
             x['question_number'] = i + 1
         question_api = QuestionApi()
         question_api.insert_new_question(json_obj)
-        print var, " saved"
+
+    # for var in range(1, 10):
+    #     if var == 5 or var ==6:
+    #         continue
+    #     f = open( settings.APP_ROOT + '/apps/exam_api/extraction/v4s' + str(var) + '/text.docx-json.json-new_json.json', 'rb')
+    #     json_obj = json.loads(f.read())
+    #     for i, x in enumerate(json_obj):            
+    #         x['question_number'] = i + 1
+    #     question_api = QuestionApi()
+    #     question_api.insert_new_question(json_obj)
     return HttpResponse("Question saved in the database")
+
 
 
 def load_correctanswer_in_database(request):

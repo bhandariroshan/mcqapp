@@ -168,38 +168,34 @@ def landing(request):
 
         for eachExam in user_exams:
             up_exm = {}
-            eachExamDetails = exam_model_api.find_one_exammodel(
+            eaxhExamDetails = exam_model_api.find_one_exammodel(
                 {'exam_code': eachExam}
             )
-            
-            if eachExamDetails == None:
-                continue
-
-            up_exm['name'] = eachExamDetails.get('exam_name')
+            up_exm['name'] = eaxhExamDetails['exam_name']
 
             if 'IDP' in subscription_type:
                 up_exm['subscribed'] = True
 
-            elif eachExamDetails['exam_category'] in subscription_type:
+            elif eaxhExamDetails['exam_category'] in subscription_type:
                 up_exm['subscribed'] = True
 
             else:
-                up_exm['subscribed'] = eachExamDetails.get('exam_code') in \
+                up_exm['subscribed'] = eaxhExamDetails['exam_code'] in \
                     subscribed_exams
 
-            up_exm['code'] = eachExamDetails['exam_code']
-            if eachExamDetails['exam_family'] != 'DPS':
+            up_exm['code'] = eaxhExamDetails['exam_code']
+            if eaxhExamDetails['exam_family'] != 'DPS':
                 exam_start_time = datetime.datetime.strptime(
                     str(datetime.datetime.fromtimestamp(
-                        int(eachExamDetails.get('exam_date')))),
+                        int(eaxhExamDetails['exam_date']))),
                     "%Y-%m-%d %H:%M:%S").time()
                 up_exm['exam_time'] = exam_start_time
                 up_exm['exam_date'] = datetime.datetime.fromtimestamp(
-                    int(eachExamDetails.get('exam_date'))
+                    int(eaxhExamDetails['exam_date'])
                 ).strftime("%A, %d. %B %Y")
-            up_exm['exam_category'] = eachExamDetails.get('exam_category')
-            up_exm['exam_family'] = eachExamDetails.get('exam_family')
-            up_exm['image'] = eachExamDetails.get('image')
+            up_exm['exam_category'] = eaxhExamDetails['exam_category']
+            up_exm['exam_family'] = eaxhExamDetails['exam_family']
+            up_exm['image'] = eaxhExamDetails['image']
             up_exams.append(up_exm)
 
         parameters['upcoming_exams'] = up_exams
@@ -484,7 +480,11 @@ def attend_dps_exam(request, exam_code):
             questions = exam_handler_obj.get_paginated_question_set(
                 int(exam_code), current_pg_num
             )
+<<<<<<< HEAD
+
+=======
             # print questions
+>>>>>>> 946351d51d9287ae58ebfb5a825f9e59e3f56ecf
             sorted_questions = sorted(
                 questions, key=lambda k: k['question_number']
             )
@@ -822,10 +822,10 @@ def results(request, exam_code):
          'useruid': request.user.id}
     )
 
-    if exam_details['exam_category'] == 'BE-IOE':
-        total_questions = 65
-    else:
-        total_questions = 100
+    question_obj = QuestionApi()
+    total_questions = question_obj.get_count(
+        {"exam_code": int(exam_code), 'marks': 1}
+    )
 
     ans = AttemptedAnswerDatabase()
     try:
@@ -833,15 +833,15 @@ def results(request, exam_code):
             'exam_code': int(exam_code),
             'user_id': request.user.id,
             'ess_time': ess_check['start_time']
-            },fields={'q_no': 1, 'attempt_details': 1
-        })
+        },
+            fields={'q_no': 1, 'attempt_details': 1}
+        )
     except:
         all_ans = ''
     answer_list = ''
     anss = []
     for eachAns in all_ans:
         anss.append(eachAns['q_no'])
-    print answer_list
     for i in range(1, total_questions + 1):
         try:
             if i in anss:
@@ -860,12 +860,14 @@ def results(request, exam_code):
     parameters['result'] = score_list
     from apps.mainapp.classes.result import Result
     result_obj = Result()
-    result_obj.save_result({
+    result_obj.save_result(
+        {
             'useruid': request.user.id,
             'exam_code': int(exam_code),
             'ess_time': ess_check['start_time'],
             'result': score_list
-        })
+        }
+    )
     parameters['exam_code'] = exam_code
     parameters['myrankcard'] = {'total': 200, 'rank': 1}
     return render_to_response(
@@ -897,7 +899,6 @@ def show_result(request, exam_code, subject_name):
     subscribed = user_profile_obj.check_subscribed(
         request.user.username, exam_code
     )
-    exam_handler_obj = ExamHandler()
     exam_details = exam_obj.find_one_exammodel(
         {'exam_code': int(exam_code)}
     )
@@ -907,14 +908,23 @@ def show_result(request, exam_code, subject_name):
         if exam_details['exam_family'] == 'CPS' and current_time - \
                 exam_details['exam_date'] < exam_details['exam_duration'] * 60:
             return HttpResponseRedirect('/')
-            
         parameters['exam_details'] = exam_details
         question_obj = QuestionApi()
-        if exam_details['exam_category'] == 'BE-IOE':
-            question_id_list = exam_details['question_list']
+        questions = question_obj.find_all_questions(
+            {"exam_code": int(exam_code),
+             'subject': {"$regex": re.compile(
+                         "^" + str(subject_name) + "$",
+                         re.IGNORECASE), "$options": "-i"},
+             'marks': 1}
+        )
+        total_questions = question_obj.get_count(
+            {"exam_code": int(exam_code),
+             'subject': {"$regex": re.compile(
+                         "^" + str(subject_name) + "$",
+                         re.IGNORECASE), "$options": "-i"},
+             'marks': 1}
+        )
 
-        questions = exam_handler_obj.get_filtered_question_from_database(int(exam_code), subject_name)
-        total_questions = len(questions)       
         try:
             current_q_no = int(request.GET.get('q', ''))
             if current_q_no >= total_questions:
@@ -934,9 +944,7 @@ def show_result(request, exam_code, subject_name):
             current_q_no = total_questions - 1
         if current_q_no <= 0:
             current_q_no = 0
-
         parameters['current_q_no'] = current_q_no
-
         parameters['question_number'] = questions[
             current_q_no]['question_number']
         parameters['question'] = questions[current_q_no]
@@ -951,6 +959,7 @@ def show_result(request, exam_code, subject_name):
             {'exam_code': int(exam_code),
              'useruid': request.user.id}
         )
+        total_questions = question_obj.get_count({"exam_code": int(exam_code)})
 
         try:
             query = {'exam_code': int(exam_code),
