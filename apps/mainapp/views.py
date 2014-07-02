@@ -168,34 +168,38 @@ def landing(request):
 
         for eachExam in user_exams:
             up_exm = {}
-            eaxhExamDetails = exam_model_api.find_one_exammodel(
+            eachExamDetails = exam_model_api.find_one_exammodel(
                 {'exam_code': eachExam}
             )
-            up_exm['name'] = eaxhExamDetails.get('exam_name')
+            
+            if eachExamDetails == None:
+                continue
+
+            up_exm['name'] = eachExamDetails.get('exam_name')
 
             if 'IDP' in subscription_type:
                 up_exm['subscribed'] = True
 
-            elif eaxhExamDetails['exam_category'] in subscription_type:
+            elif eachExamDetails['exam_category'] in subscription_type:
                 up_exm['subscribed'] = True
 
             else:
-                up_exm['subscribed'] = eaxhExamDetails.get('exam_code') in \
+                up_exm['subscribed'] = eachExamDetails.get('exam_code') in \
                     subscribed_exams
 
-            up_exm['code'] = eaxhExamDetails['exam_code']
-            if eaxhExamDetails['exam_family'] != 'DPS':
+            up_exm['code'] = eachExamDetails['exam_code']
+            if eachExamDetails['exam_family'] != 'DPS':
                 exam_start_time = datetime.datetime.strptime(
                     str(datetime.datetime.fromtimestamp(
-                        int(eaxhExamDetails.get('exam_date')))),
+                        int(eachExamDetails.get('exam_date')))),
                     "%Y-%m-%d %H:%M:%S").time()
                 up_exm['exam_time'] = exam_start_time
                 up_exm['exam_date'] = datetime.datetime.fromtimestamp(
-                    int(eaxhExamDetails.get('exam_date'))
+                    int(eachExamDetails.get('exam_date'))
                 ).strftime("%A, %d. %B %Y")
-            up_exm['exam_category'] = eaxhExamDetails.get('exam_category')
-            up_exm['exam_family'] = eaxhExamDetails.get('exam_family')
-            up_exm['image'] = eaxhExamDetails.get('image')
+            up_exm['exam_category'] = eachExamDetails.get('exam_category')
+            up_exm['exam_family'] = eachExamDetails.get('exam_family')
+            up_exm['image'] = eachExamDetails.get('image')
             up_exams.append(up_exm)
 
         parameters['upcoming_exams'] = up_exams
