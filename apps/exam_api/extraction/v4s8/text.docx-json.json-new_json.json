@@ -82,7 +82,7 @@
         "text": "$ \\frac {1}{10x-7} $"
       },
       "c": {
-        "text": "$ \\frac {x+7}{x+10} $"
+        "text": "$ \\frac {x+7}{10} $"
       },
       "d": {
         "text": "$ \\frac {x-7}{10} $"
@@ -133,7 +133,7 @@
         "text": "z = $ \\overline{z} $"
       },
       "d": {
-        "text": "$ z^{2} $ = $|z| ^{2} $"
+        "text": "$ \\overline{z^{2}} $ = $ \\overline{z} ^{2} $"
       },
       "correct": "c"
     },
@@ -181,7 +181,7 @@
         "text": "x $ ^{2} $ – x + 6 = 0"
       },
       "d": {
-        "text": "x $ ^{2} $ – x – 13"
+        "text": "x $ ^{2} $ – x – 13 = 0"
       },
       "correct": "a"
     },
@@ -850,17 +850,17 @@
         "text": "6.23x10 $ ^{22} $"
       },
       "c": {
-        "text": "l.2x10 $ ^{22} $"
+        "text": "1.2x10 $ ^{22} $"
       },
       "d": {
-        "text": "l.2x10 $ ^{23} $"
+        "text": "1.2x10 $ ^{23} $"
       },
       "correct": "b"
     },
     "subject": "Chemistry",
     "marks": 1,
     "question": {
-      "text": "The total number of electrons present in l.6grams of methane is"
+      "text": "The total number of electrons present in 1.6grams of methane is"
     }
   },
   {
@@ -874,7 +874,7 @@
         "text": "2"
       },
       "c": {
-        "text": "l0"
+        "text": "10"
       },
       "d": {
         "text": "14"
@@ -980,7 +980,7 @@
     "subject": "Chemistry",
     "marks": 1,
     "question": {
-      "text": "0.214gm of a metal an reaction with dilute H2S04 displaced 200cc of dryH2 gas at STP. The equivalent weight of metal is"
+      "text": "0.214gm of a metal an reaction with dilute $ H_2S0_4 $ displaced 200cc of dry $ H_2 $ gas at STP. The equivalent weight of metal is"
     }
   },
   {
@@ -1124,7 +1124,7 @@
     "subject": "Chemistry",
     "marks": 1,
     "question": {
-      "text": "The IUPAC name of the compound (CH2OH)2 is"
+      "text": "The IUPAC name of the compound $ (CH_2OH)_2 $ is"
     }
   },
   {
@@ -1327,7 +1327,7 @@
         "text": "coarse aggregate"
       },
       "a": {
-        "text": "find aggregate"
+        "text": "fine aggregate"
       },
       "c": {
         "text": "both  a and b"
@@ -1402,7 +1402,7 @@
         "text": "Increases"
       },
       "c": {
-        "text": "My increases or decreases"
+        "text": "May increases or decreases"
       },
       "d": {
         "text": "Does not change"
@@ -1532,7 +1532,7 @@
     "subject": "Aptitude",
     "marks": 1,
     "question": {
-      "text": "Which of the following is donor impurity element? ......."
+      "text": "Which of the following is donor impurity element?"
     }
   },
   {

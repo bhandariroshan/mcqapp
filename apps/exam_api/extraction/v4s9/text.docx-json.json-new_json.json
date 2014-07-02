@@ -19,7 +19,7 @@
         "text": "[2,4]"
       },
       "d": {
-        "text": "(– inf ,–3) \\bigcup [4, inf ]"
+        "text": "(– $ \\infty $ ,–3) $ \\bigcup $ [4, $ \\infty $ ]"
       }
     }
   },
@@ -98,7 +98,7 @@
   {
     "exam_category": "BE-IOE",
     "question": {
-      "text": "If f(x) = log(\\frac{1-\\alpha}{1+\\alpha})  then f(\\frac{2\\alpha}{1+x^2})  equals"
+      "text": "If f(x) = log( $ \\frac{1-\\alpha}{1+\\alpha} $ )  then f( $ \\frac{2\\alpha}{1+x^2} $ )  equals"
     },
     "marks": 1,
     "exam_code": 1404130227,
@@ -146,7 +146,7 @@
   {
     "exam_category": "BE-IOE",
     "question": {
-      "text": "If A = \\begin{vmatrix}2 & 0 & 0 \\\\0 & 2 &0 \\\\0 &0 &2 \\end{vmatrix} then A5 = "
+      "text": "If A = \\begin{vmatrix}2 & 0 & 0 \\\\0 & 2 &0 \\\\0 &0 &2 \\end{vmatrix} then $ A^5 $ = "
     },
     "marks": 1,
     "exam_code": 1404130227,
@@ -554,7 +554,7 @@
   {
     "exam_category": "BE-IOE",
     "question": {
-      "text": "If you were eating breakfast in the country, ."
+      "text": "If you were eating breakfast in the country, "
     },
     "marks": 1,
     "exam_code": 1404130227,
@@ -626,14 +626,14 @@
   {
     "exam_category": "BE-IOE",
     "question": {
-      "text": "Two bodies of masses m $ _{1} $ & m $ _{2} $ have equal KE Their momenta shall in the ratio of"
+      "text": "Two bodies of masses m $ _{1} $ & m $ _{2} $ have equal KE Their momenta shall be in the ratio of"
     },
     "marks": 1,
     "exam_code": 1404130227,
     "subject": "Physics",
     "answer": {
       "c": {
-        "text": "$ \\sqrt{m1}:\\sqrt{m2} $"
+        "text": "$ \\sqrt{m_1}:\\sqrt{m_2} $"
       },
       "b": {
         "text": "m $ _{2} $ :m $ _{1} $"
@@ -643,7 +643,7 @@
         "text": "m $ _{1} $ :m $ _{2} $"
       },
       "d": {
-        "text": "$ \\sqrt{m2}:\\sqrt{m1} $"
+        "text": "$ \\sqrt{m_2}:\\sqrt{m_1} $"
       }
     }
   },
@@ -770,7 +770,7 @@
   {
     "exam_category": "BE-IOE",
     "question": {
-      "text": "When light waves interfere then the quantity that conserved is"
+      "text": "When light waves interfere then the quantity that is conserved is"
     },
     "marks": 1,
     "exam_code": 1404130227,
@@ -832,7 +832,7 @@
       },
       "correct": "b",
       "a": {
-        "text": "lower the potential barrier"
+        "text": "lowers the potential barrier"
       },
       "d": {
         "text": "increases the minority carrier current"
@@ -1154,7 +1154,7 @@
   {
     "exam_category": "BE-IOE",
     "question": {
-      "text": "The compound formed by heating iodo form with silver powder is"
+      "text": "The compound formed by heating iodoform with silver powder is"
     },
     "marks": 1,
     "exam_code": 1404130227,
