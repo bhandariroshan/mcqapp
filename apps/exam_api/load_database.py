@@ -134,7 +134,7 @@ def load_modelquestion_in_database(request):
         question_api.insert_new_question(json_obj)
 
     for var in range(1, 11):
-        if var == 6:
+        if var == 5 or var == 6:
             continue
         f = open(settings.APP_ROOT + '/apps/exam_api/extraction/v4s' +
                  str(var) + '/text.docx-json.json-new_json.json', 'rb')
