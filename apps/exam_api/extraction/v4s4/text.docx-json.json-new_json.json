@@ -81,7 +81,7 @@
     "exam_code": 1404130263,
     "answer": {
       "c": {
-        "text": "$ \\frac {\\pi}{180} $"
+        "text": "$ \\frac {180}{\\pi} $"
       },
       "correct": "a",
       "d": {
@@ -105,7 +105,7 @@
     "exam_code": 1404130263,
     "answer": {
       "c": {
-        "text": "– tanh $ ^{2} $ x"
+        "text": "tanh $ ^{2} $ x"
       },
       "correct": "d",
       "d": {
@@ -187,7 +187,7 @@
         "text": "K = $± \\sqrt 6 $"
       },
       "a": {
-        "text": "K = $ ± \\frac {1} {\\sqrt 6} $%"
+        "text": "K = $ ± \\frac {1} {\\sqrt 6}%"
       }
     }
   },
@@ -196,22 +196,22 @@
     "exam_category": "BE-IOE",
     "marks": 1,
     "question": {
-      "text": "The vector equation of st. line passing through a given point whose position vector is $ \\vec{a} $ and parallel to vector $ \\vec{b}$ is (where $ \\vec{r}$ is the position vector of points on st. line and t is scalar.)"
+      "text": "The vector equation of st. line passing through a given point whose position vector is $ \\overrightarrow{a} $ and parallel to vector $ \\overrightarrow{a}$ is (where $ \\overrightarrow{r}$ is the position vector of points on st. line and t is scalar.)"
     },
     "exam_code": 1404130263,
     "answer": {
       "c": {
-        "text": "$ \\vec{r} = \\vec{b} + t\\vec{a} $"
+        "text": "$ \\overrightarrow{r} = \\overrightarrow{b} + t\\overrightarrow{a} $"
       },
       "correct": "b",
       "d": {
-        "text": "$ \\vec{r} = t\\vec{a} + \\vec{b} $"
+        "text": "$ \\overrightarrow{r} = t\\overrightarrow{a} + \\overrightarrow{b} $"
       },
       "b": {
-        "text": "$ \\vec{r} = \\vec{a} + t\\vec{b} $"
+        "text": "$ \\overrightarrow{r} = \\overrightarrow{a} + t\\overrightarrow{b} $"
       },
       "a": {
-        "text": "$ \\vec{r} = (1-t)\\vec{a} + t\\vec{b} $"
+        "text": "$ \\overrightarrow{r} = (1-t)\\overrightarrow{a} + t\\overrightarrow{b} $"
       }
     }
   },
@@ -220,7 +220,7 @@
     "exam_category": "BE-IOE",
     "marks": 1,
     "question": {
-      "text": "The polar equation r $ sin\\theta = 5 $ represents"
+      "text": "The polar equation r sinq = 5 represents"
     },
     "exam_code": 1404130263,
     "answer": {
@@ -609,14 +609,14 @@
     "exam_code": 1404130263,
     "answer": {
       "c": {
-        "text": "5/12 R"
+        "text": "5/12R"
       },
       "correct": "b",
       "d": {
         "text": "5/6 R"
       },
       "b": {
-        "text": "1.45 R"
+        "text": "1.45R"
       },
       "a": {
         "text": "2.45 R"
@@ -628,7 +628,7 @@
     "exam_category": "BE-IOE",
     "marks": 1,
     "question": {
-      "text": "If $ \\vec{A}.\\vec{B} = \\frac {\\sqrt 3}{2}AB $,  the angle between vectors A and B must be"
+      "text": "If $ \\overrightarrow{A}.\\overrightarrow{B} = \\frac {\\sqrt 3}{2}AB $,  the angle between vectors A and B must be"
     },
     "exam_code": 1404130263,
     "answer": {
@@ -681,17 +681,17 @@
     "exam_code": 1404130263,
     "answer": {
       "c": {
-        "text": "V $ _{d} $ α E $ ^{o} $"
+        "text": "V α $ _{d} $  E $ ^{o} $"
       },
       "correct": "d",
       "d": {
-        "text": "V $ _{d} $ α  E"
+        "text": "V α $ _{d} $  E"
       },
       "b": {
-        "text": "V $ _{d} $ α E $ ^{1/2} $"
+        "text": "V α $ _{d} $  E $ ^{1/2} $"
       },
       "a": {
-        "text": "V $ _{d} $ α E $ ^{2} $"
+        "text": "V α $ _{d} $  E $ ^{2} $"
       }
     }
   },
@@ -724,7 +724,7 @@
     "exam_category": "BE-IOE",
     "marks": 1,
     "question": {
-      "text": "Two parallel beams of protons are moving in the same direction, then they"
+      "text": "Two parallel beams of protons are movingin the same direction, then they"
     },
     "exam_code": 1404130263,
     "answer": {
@@ -760,7 +760,7 @@
         "text": "increasing the target potential"
       },
       "b": {
-        "text": "decreasing filament current"
+        "text": "decreasing filamnet current"
       },
       "a": {
         "text": "increasing filament current"
@@ -772,7 +772,7 @@
     "exam_category": "BE-IOE",
     "marks": 1,
     "question": {
-      "text": "The ratio of de-Broglie wave-lengths associated  with a proton and an alpha particle accelerated through the same potential difference is"
+      "text": "The ratio de-Broglie wave-lengths associated  with a proton and an alpha particle accelerated through the same potential difference is"
     },
     "exam_code": 1404130263,
     "answer": {
@@ -801,17 +801,17 @@
     "exam_code": 1404130263,
     "answer": {
       "c": {
-        "text": "2.5 eV"
+        "text": "2.5eV"
       },
       "correct": "b",
       "d": {
-        "text": "6 eV"
+        "text": "6eV"
       },
       "b": {
-        "text": "3.1 eV"
+        "text": "3.leV"
       },
       "a": {
-        "text": "4 eV"
+        "text": "4eV"
       }
     }
   },
@@ -897,7 +897,7 @@
     "exam_code": 1404130263,
     "answer": {
       "c": {
-        "text": "HCl"
+        "text": "HC1"
       },
       "correct": "d",
       "d": {
@@ -1180,7 +1180,7 @@
     "exam_category": "BE-IOE",
     "marks": 1,
     "question": {
-      "text": "Silver acetylide when heated with HCl gives"
+      "text": "Silver acetylide when heated with HC l gives"
     },
     "exam_code": 1404130263,
     "answer": {
@@ -1281,7 +1281,7 @@
     "exam_code": 1404130263,
     "answer": {
       "c": {
-        "text": "Recycled greases"
+        "text": "Recycled grease s"
       },
       "correct": "d",
       "d": {

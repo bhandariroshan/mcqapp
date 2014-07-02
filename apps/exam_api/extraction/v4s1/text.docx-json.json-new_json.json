@@ -162,7 +162,7 @@
     },
     "marks": 1,
     "question": {
-      "text": "If $ \\vec{a} $ and $ \\vec{b} $  are two unit vectors such that $ (\\vec{a} + 2\\vec{b}) $ and $ (5\\vec{a} - 4\\vec{b}) $ are perpendicular to each other then the angle between $ \\vec{a} $ and $ \\vec{b} $ is"
+      "text": "If $ \\overrightarrow{a} $ and $ \\overrightarrow{b} $  are two unit vectors such that $ (\\overrightarrow{a} + 2\\overrightarrow{b}) $ and $ (5\\overrightarrow{a} - 4\\overrightarrow{b}) $ are perpendicular to each other then the angle between \\overrightarrow{a} and \\overrightarrow{b} is"
     },
     "exam_category": "BE-IOE",
     "exam_code": 1404130198
@@ -483,7 +483,7 @@
     "subject": "English",
     "answer": {
       "c": {
-        "text": "S + V $ _{i} $ + O $ _{D} $ + Prepositional phrase"
+        "text": "S + V $ _{i} $ + O D + Prepositional phrase"
       },
       "b": {
         "text": "S + V $ _{t} $ + O $ _{I} $ + prepositional phrase"
@@ -702,7 +702,7 @@
         "text": "sin $ \\omega $ t + cos $ \\omega $ t"
       },
       "b": {
-        "text": "cos2 $ \\omega $ t"
+        "text": "sin2 $ \\omega $ t"
       },
       "d": {
         "text": "sin2 $ \\omega $ t+ cos 2 $ \\omega $ t"
@@ -873,7 +873,7 @@
         "text": "3"
       },
       "d": {
-        "text": "1"
+        "text": "l"
       },
       "correct": "b",
       "a": {
@@ -891,7 +891,7 @@
     "subject": "Chemistry",
     "answer": {
       "c": {
-        "text": "1.8×10"
+        "text": "1.8×l0"
       },
       "b": {
         "text": "2.6×$ 10^{4} $"
@@ -901,7 +901,7 @@
       },
       "correct": "c",
       "a": {
-        "text": "1.8×$ 10^{2} $"
+        "text": "l.8×$ 10^{2} $"
       }
     },
     "marks": 1,

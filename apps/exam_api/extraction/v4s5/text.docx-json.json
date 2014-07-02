@@ -1,0 +1,1496 @@
+[{
+    "answer": {
+        "c": {
+            "text": "A = 0  or B = 0"
+        },
+        "b": {
+            "text": "A = 0, B $ \\neq $ 0"
+        },
+        "a": {
+            "text": "A$ \\neq $0, B = 0"
+        },
+        "correct": "d",
+        "d": {
+            "text": "none"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Mathematics",
+    "question": {
+        "text": "For the matrices A and B, AB = 0 if and only if"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "3"
+        },
+        "b": {
+            "text": "–1"
+        },
+        "a": {
+            "text": "0"
+        },
+        "correct": "a",
+        "d": {
+            "text": "2"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Mathematics",
+    "question": {
+        "text": "For what value of 'a' the lines x = 3, y = 4 and 4x – 3y + a = 0 are concurrent"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "–2"
+        },
+        "b": {
+            "text": "2"
+        },
+        "a": {
+            "text": "4"
+        },
+        "correct": "a",
+        "d": {
+            "text": "none"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Mathematics",
+    "question": {
+        "text": "Solution of the equation $ x^{log}{x^{(1-x)}}^{2} $ = 9 are"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "0"
+        },
+        "b": {
+            "text": "1"
+        },
+        "a": {
+            "text": "¥"
+        },
+        "correct": "b",
+        "d": {
+            "text": "1/2"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Mathematics",
+    "question": {
+        "text": "If y = log$ \\sqrt{tanx} $, then the value of $ \\frac{dy}{dx} $ at x = $ \\frac{\\pi}{4} $  is"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "infinite number of solution"
+        },
+        "b": {
+            "text": "two solution"
+        },
+        "a": {
+            "text": "one solution"
+        },
+        "correct": "d",
+        "d": {
+            "text": "no solution"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Mathematics",
+    "question": {
+        "text": "The equation sinx + cosx = 2 has"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "sinx + cosx"
+        },
+        "b": {
+            "text": "$ \\frac{2secx}{1-tanx} $"
+        },
+        "a": {
+            "text": "-sinx-cosx"
+        },
+        "correct": "a",
+        "d": {
+            "text": "2 secx(1 + $tan^{2} x$"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Mathematics",
+    "question": {
+        "text": "If y = $ \\frac{1-tanx}{secx} $ then the value of $ \\frac{dy}{dx} $ ="
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "plane"
+        },
+        "b": {
+            "text": "circle"
+        },
+        "a": {
+            "text": "(0,0,0)"
+        },
+        "correct": "a",
+        "d": {
+            "text": "none"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Mathematics",
+    "question": {
+        "text": "The equation x $ ^{2} $ + y $ ^{2} $ + z $ ^{2} $ = 0 represents"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "f(x) f'(x) + c"
+        },
+        "b": {
+            "text": "f'(x) + c"
+        },
+        "a": {
+            "text": "f(x) + c"
+        },
+        "correct": "d",
+        "d": {
+            "text": "xf(x) + c"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Mathematics",
+    "question": {
+        "text": "$ \\int $[f(x) + xf'(x)] dx ="
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "e $ ^{6} $"
+        },
+        "b": {
+            "text": "e $ ^{9} $"
+        },
+        "a": {
+            "text": "e $ ^{4} $"
+        },
+        "correct": "a",
+        "d": {
+            "text": "e $ ^{3} $"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Mathematics",
+    "question": {
+        "text": "$ \\lim_{x \\rightarrow \\infty}(\\frac{x+5}{x+1})^{x+1} $  ="
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "$ \\frac{a_1}{a_2} = \\frac{b_1}{b_2} = \\frac{c_1}{c_2} $"
+        },
+        "b": {
+            "text": "$ \\frac{b_1}{b_2} = \\frac{c_1}{a_2} = \\frac{a_1}{c_2} $"
+        },
+        "a": {
+            "text": "$ \\frac{a_1}{b_2} = \\frac{b_1}{a_2} = \\frac{c_1}{c_2} $"
+        },
+        "correct": "c",
+        "d": {
+            "text": "none"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Mathematics",
+    "question": {
+        "text": "The condition for the quadratic equation a $ _{1} $ x $ ^{2} $ + b $ _{1} $ x + c $ _{1} $ = 0 and a $ _{2} $ x $ ^{2} $ + b $ _{2} $ x + c $ _{2} $ = 0 have both roots common is"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "/de|fn/"
+        },
+        "b": {
+            "text": "/difn/"
+        },
+        "a": {
+            "text": "/defn/"
+        },
+        "correct": "a",
+        "d": {
+            "text": "/defən/"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "English",
+    "question": {
+        "text": "The phonemic transcription of the word 'deafen' is ........"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "3 $ ^{rd} $"
+        },
+        "b": {
+            "text": "2 $ ^{nd} $"
+        },
+        "a": {
+            "text": "1 $ ^{st} $"
+        },
+        "correct": "a",
+        "d": {
+            "text": "none of these"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "English",
+    "question": {
+        "text": "The word 'deadlock' has its primary stress on .... syllable."
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "improve"
+        },
+        "b": {
+            "text": "acquaint"
+        },
+        "a": {
+            "text": "equivocal"
+        },
+        "correct": "c",
+        "d": {
+            "text": "quash"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "English",
+    "question": {
+        "text": "Ameliorate is ........."
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "obscure"
+        },
+        "b": {
+            "text": "engrave"
+        },
+        "a": {
+            "text": "altruist"
+        },
+        "correct": "a",
+        "d": {
+            "text": "rigid"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "English",
+    "question": {
+        "text": "The opposite of egocentric is ......"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "at"
+        },
+        "b": {
+            "text": "in"
+        },
+        "a": {
+            "text": "out"
+        },
+        "correct": "a",
+        "d": {
+            "text": "with"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "English",
+    "question": {
+        "text": "Try to make -the meaning of this word."
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "on"
+        },
+        "b": {
+            "text": "at"
+        },
+        "a": {
+            "text": "of"
+        },
+        "correct": "b",
+        "d": {
+            "text": "for"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "English",
+    "question": {
+        "text": "He is quick ........ inventing excuses."
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "and I tell you"
+        },
+        "b": {
+            "text": "if I tell you"
+        },
+        "a": {
+            "text": "and it will cost you a fortune"
+        },
+        "correct": "a",
+        "d": {
+            "text": "and it would be better"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "English",
+    "question": {
+        "text": "Buy a car ................"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "done"
+        },
+        "b": {
+            "text": "to do"
+        },
+        "a": {
+            "text": "do"
+        },
+        "correct": "b",
+        "d": {
+            "text": "doing"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "English",
+    "question": {
+        "text": "I get John ...... that work."
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "landed"
+        },
+        "b": {
+            "text": "to land"
+        },
+        "a": {
+            "text": "land"
+        },
+        "correct": "a",
+        "d": {
+            "text": "being landed"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "English",
+    "question": {
+        "text": "We saw the plane..............."
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "will make"
+        },
+        "b": {
+            "text": "make"
+        },
+        "a": {
+            "text": "have made"
+        },
+        "correct": "b",
+        "d": {
+            "text": "all of these"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "English",
+    "question": {
+        "text": "They.......... progress every day in the world of science."
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "were"
+        },
+        "b": {
+            "text": "are"
+        },
+        "a": {
+            "text": "is"
+        },
+        "correct": "a",
+        "d": {
+            "text": "none of these"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "English",
+    "question": {
+        "text": "Nothing but trees ---- seen."
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "Some, some"
+        },
+        "b": {
+            "text": "Some, the"
+        },
+        "a": {
+            "text": "The, the"
+        },
+        "correct": "b",
+        "d": {
+            "text": "None of these"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "English",
+    "question": {
+        "text": "..........donkeys are........ stupid animals."
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "I insist you not to go."
+        },
+        "b": {
+            "text": "It was so dark that we lost our way."
+        },
+        "a": {
+            "text": "He ran as fast as he could."
+        },
+        "correct": "d",
+        "d": {
+            "text": "First deserve, then desire."
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "English",
+    "question": {
+        "text": "Tick on the compound sentence."
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "have drunk"
+        },
+        "b": {
+            "text": "drinking"
+        },
+        "a": {
+            "text": "drink"
+        },
+        "correct": "b",
+        "d": {
+            "text": "being drunk ."
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "English",
+    "question": {
+        "text": "He is addicted to ................"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "S+V+ Non-finite clause"
+        },
+        "b": {
+            "text": "S + V + Prepositional clause"
+        },
+        "a": {
+            "text": "S + V + Adverbial"
+        },
+        "correct": "d",
+        "d": {
+            "text": "S+V+ Finite clause"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "English",
+    "question": {
+        "text": "The pattern for the sentence—‘We haven’t decided what we ought to do next.’ is............"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "S $ _{2} $ =3S $ _{1} $"
+        },
+        "b": {
+            "text": "S $ _{2} $ =2S $ _{1} $"
+        },
+        "a": {
+            "text": "S $ _{1} $ = S $ _{2} $"
+        },
+        "correct": "c",
+        "d": {
+            "text": "S $ _{2} $ =4S $ _{1} $"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Physics",
+    "question": {
+        "text": "A particle experiences constant acceleration for 20 seconds after starting form rest. It travels a distance of S $ _{1} $ in first 10 seconds and a distance s $ _{2} $ in next 10 seconds then"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "Acceleration due to gravity"
+        },
+        "b": {
+            "text": "Gravitational potential"
+        },
+        "a": {
+            "text": "Gravitational field strength"
+        },
+        "correct": "d",
+        "d": {
+            "text": "Universal gravitational constant"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Physics",
+    "question": {
+        "text": "The force of attraction between two unit point masses separated by unit distance is called"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "remain unchanged"
+        },
+        "b": {
+            "text": "increases"
+        },
+        "a": {
+            "text": "decreases"
+        },
+        "correct": "b",
+        "d": {
+            "text": "changes erratically"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Physics",
+    "question": {
+        "text": "A metallic piece is being weighed in a liquid whose temperature is being raised continuously. Then the apparent weight of metallic piece"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "pressure will remain same"
+        },
+        "b": {
+            "text": "volume will increase"
+        },
+        "a": {
+            "text": "temperature will decreases"
+        },
+        "correct": "a",
+        "d": {
+            "text": "temperature will increase"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Physics",
+    "question": {
+        "text": "In a given process on an ideal gas dw = 0 and dQ < 0 then for the gas"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "semiconductor"
+        },
+        "b": {
+            "text": "a conductor"
+        },
+        "a": {
+            "text": "an insulator"
+        },
+        "correct": "a",
+        "d": {
+            "text": "semimetal"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Physics",
+    "question": {
+        "text": "The energy gap between the conduction band and the valance band of certain material is 0.7 eV. The material is"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "does not change"
+        },
+        "b": {
+            "text": "decreases"
+        },
+        "a": {
+            "text": "increases"
+        },
+        "correct": "b",
+        "d": {
+            "text": "may increase or decrease depending on rate of heating"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Physics",
+    "question": {
+        "text": "On heating a liquid ,refractive index generally"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "remain unchanged"
+        },
+        "b": {
+            "text": "decreases"
+        },
+        "a": {
+            "text": "increases"
+        },
+        "correct": "b",
+        "d": {
+            "text": "first increases then decreases to original value"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Physics",
+    "question": {
+        "text": "A parallel plate air capacitor is connected to a battery. The battery is removed from charged capacitor and a dielectric slab is introduced then energy stored in capacitor"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "electric force between them"
+        },
+        "b": {
+            "text": "mutual inductance between them"
+        },
+        "a": {
+            "text": "potential difference between them"
+        },
+        "correct": "d",
+        "d": {
+            "text": "magnetic forces between them"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Physics",
+    "question": {
+        "text": "Two parallel wires carrying current in the same direction attract each other because of"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "1:16"
+        },
+        "b": {
+            "text": "4:l"
+        },
+        "a": {
+            "text": "l :4"
+        },
+        "correct": "d",
+        "d": {
+            "text": "16:l"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Physics",
+    "question": {
+        "text": "The ratio of kinetic energy of an electron in hydrogen atom in first energy level to 4th energy level is"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "boron"
+        },
+        "b": {
+            "text": "antimony"
+        },
+        "a": {
+            "text": "phosphorus"
+        },
+        "correct": "c",
+        "d": {
+            "text": "silver"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Physics",
+    "question": {
+        "text": "The impurity atom with which pure silicon should be doped to make a p- type semiconductor is"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "Cl $ _{2} $ ."
+        },
+        "b": {
+            "text": "SO $ _{2} $"
+        },
+        "a": {
+            "text": "C $ _{4} $ H $ _{10} $"
+        },
+        "correct": "b",
+        "d": {
+            "text": "SO $ _{3} $"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Chemistry",
+    "question": {
+        "text": "The density of a gas at STP is 2.86 g/ l . The gas may be"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "36x $ ^{5} $"
+        },
+        "b": {
+            "text": "27x $ ^{4} $"
+        },
+        "a": {
+            "text": "4x $ ^{3} $"
+        },
+        "correct": "d",
+        "d": {
+            "text": "108x $ ^{5} $"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Chemistry",
+    "question": {
+        "text": "The solubility of plumbous phosphate is x mole/litre. The ksp of the electrolyte is"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "HNO $ _{2} $ and HCl"
+        },
+        "b": {
+            "text": "H $ _{2} $ SO $ _{4} $ and HCl"
+        },
+        "a": {
+            "text": "HNO $ _{3} $ and HCl"
+        },
+        "correct": "a",
+        "d": {
+            "text": "HNO $ _{3} $ , HCl and H $ _{2} $ SO $ _{4} $"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Chemistry",
+    "question": {
+        "text": "Aqua regia is a mixture of"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "H $ _{2} $ O and OH $ ^{-} $"
+        },
+        "b": {
+            "text": "NH $ _{4} $ $ ^{+} $ and OH $ ^{-} $"
+        },
+        "a": {
+            "text": "NH $ _{3} $ and H $ _{2} $ O"
+        },
+        "correct": "c",
+        "d": {
+            "text": "NH $ _{3} $ and OH $ ^{-} $"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Chemistry",
+    "question": {
+        "text": "In the reaction NH $ _{3} $ + H $ _{2} $ O  $ \\leftrightharpoons $   NH $ _{4} $ $ ^{+} $ + OH $ ^{-} $ ,which of the following constitutes conjugate acid base pair?"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "Cu and Ag"
+        },
+        "b": {
+            "text": "Mg and Ca"
+        },
+        "a": {
+            "text": "Na and K"
+        },
+        "correct": "b",
+        "d": {
+            "text": "Al and Fe"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Chemistry",
+    "question": {
+        "text": "Alkaline earth metals are"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "HNO $ _{2} $"
+        },
+        "b": {
+            "text": "N $ _{2} $ O"
+        },
+        "a": {
+            "text": "NO $ _{2} $"
+        },
+        "correct": "d",
+        "d": {
+            "text": "N $ _{2} $"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Chemistry",
+    "question": {
+        "text": "When ammonia gas is passed over heated CuO, ammonia is oxidized to"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "flux"
+        },
+        "b": {
+            "text": "a reducing agent"
+        },
+        "a": {
+            "text": "an oxidizing agent"
+        },
+        "correct": "c",
+        "d": {
+            "text": "slag"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Chemistry",
+    "question": {
+        "text": "The function of lime stone in the extraction of iron in blast furnace is to act as"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "[Ag(NH $ _{3} $ ) $ _{2} $ ] Cl"
+        },
+        "b": {
+            "text": "[Ag(NH $ _{4} $ ) $ _{3} $ ] Cl"
+        },
+        "a": {
+            "text": "[Ag(NH $ _{3} $ ) $ _{4} $ ].Cl"
+        },
+        "correct": "c",
+        "d": {
+            "text": "[Ag(NH $ _{3} $ ) $ _{4} $ ] OH"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Chemistry",
+    "question": {
+        "text": "A white ppt. formed by adding AgNO $ _{3} $ to NaCl solution dissolves on passing excess ammonia forming"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "complex formation"
+        },
+        "b": {
+            "text": "ion-exchange"
+        },
+        "a": {
+            "text": "precipitation"
+        },
+        "correct": "b",
+        "d": {
+            "text": "none of this"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Chemistry",
+    "question": {
+        "text": "Permutit removes hardness by"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "Br $ _{2} $"
+        },
+        "b": {
+            "text": "Cl $ _{2} $"
+        },
+        "a": {
+            "text": "F $ _{2} $"
+        },
+        "correct": "a",
+        "d": {
+            "text": "I $ _{2} $"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Chemistry",
+    "question": {
+        "text": "Which of this can't be obtained by chemical oxidation method?"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "Law of constant proportion"
+        },
+        "b": {
+            "text": "Avogadro’s law"
+        },
+        "a": {
+            "text": "Change in atomic weight"
+        },
+        "correct": "d",
+        "d": {
+            "text": "Law of conservation of mass"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Chemistry",
+    "question": {
+        "text": "A balance equation is in accordance with"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "CO"
+        },
+        "b": {
+            "text": "C"
+        },
+        "a": {
+            "text": "Cu $ _{2} $ O"
+        },
+        "correct": "a",
+        "d": {
+            "text": "Cu $ _{2} $ S"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Chemistry",
+    "question": {
+        "text": "The reducing agent in Bessemer converter during extraction of copper is"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "Decreasing the activation energy"
+        },
+        "b": {
+            "text": "Decreasing the heat of reaction"
+        },
+        "a": {
+            "text": "Decreasing the free energy"
+        },
+        "correct": "c",
+        "d": {
+            "text": "Increasing the average speed of the reacting molecules"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Chemistry",
+    "question": {
+        "text": "A catalyst increases the rate of a chemical reaction by"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "A $ _{2} $ B $ _{3} $"
+        },
+        "b": {
+            "text": "AB $ _{2} $"
+        },
+        "a": {
+            "text": "A $ _{2} $ B"
+        },
+        "correct": "b",
+        "d": {
+            "text": "AB"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Chemistry",
+    "question": {
+        "text": "Two elements A and B of electronic configuration 2,8,2 and 2,8,7 react with each other to form an ionic compound of formula"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "888"
+        },
+        "b": {
+            "text": "750"
+        },
+        "a": {
+            "text": "18"
+        },
+        "correct": "b",
+        "d": {
+            "text": "999"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Chemistry",
+    "question": {
+        "text": "The fineness of gold in 18 carats gold is"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "by means of a spark"
+        },
+        "b": {
+            "text": "automatically due to high temperature of compressed fuel"
+        },
+        "a": {
+            "text": "automatically due to high temperature of compressed air"
+        },
+        "correct": "c",
+        "d": {
+            "text": "none"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Aptitude",
+    "question": {
+        "text": "In petrol engine ignition takes place"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "by means of a spark"
+        },
+        "b": {
+            "text": "automatically due to high temperature of compressed fuel"
+        },
+        "a": {
+            "text": "automatically due to high temperature of compressed air"
+        },
+        "correct": "a",
+        "d": {
+            "text": "none"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Aptitude",
+    "question": {
+        "text": "In diesel engine the ignition takes place"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "stream engine"
+        },
+        "b": {
+            "text": "diesel engine"
+        },
+        "a": {
+            "text": "petrol engine"
+        },
+        "correct": "a",
+        "d": {
+            "text": "none"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Aptitude",
+    "question": {
+        "text": "Which one is the spark ignition engine?"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "10%"
+        },
+        "b": {
+            "text": "5%"
+        },
+        "a": {
+            "text": "3%"
+        },
+        "correct": "b",
+        "d": {
+            "text": "15%"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Aptitude",
+    "question": {
+        "text": "The porosity of good building stone should be less than"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "ornamental work"
+        },
+        "b": {
+            "text": "dams"
+        },
+        "a": {
+            "text": "roads"
+        },
+        "correct": "a",
+        "d": {
+            "text": "monumental work"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Aptitude",
+    "question": {
+        "text": "Basalt and Trap are used in"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "carving of stone"
+        },
+        "b": {
+            "text": "quarrying of stone"
+        },
+        "a": {
+            "text": "rough dressing of stone"
+        },
+        "correct": "a",
+        "d": {
+            "text": "all of above"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Aptitude",
+    "question": {
+        "text": "Spalling hammer is used for"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "jumper"
+        },
+        "b": {
+            "text": "spalling hammer"
+        },
+        "a": {
+            "text": "dipper"
+        },
+        "correct": "c",
+        "d": {
+            "text": "priming needle"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Aptitude",
+    "question": {
+        "text": "The tool used for quarrying of stone is"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "The rheostat can only increase the resistance in electric circuit"
+        },
+        "b": {
+            "text": "The ammeter is connected in series circuit"
+        },
+        "a": {
+            "text": "The voltmeter is connected in parallel with the known resistance"
+        },
+        "correct": "c",
+        "d": {
+            "text": "The single key is used to switch on/off the electric circuit"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Aptitude",
+    "question": {
+        "text": "Which of the following statement is not true, regarding the electrical set-up for the verification of Ohm’s law:"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "0.4W"
+        },
+        "b": {
+            "text": "400 W"
+        },
+        "a": {
+            "text": "2500 W"
+        },
+        "correct": "b",
+        "d": {
+            "text": "none of these"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Aptitude",
+    "question": {
+        "text": "When a 20V battery is connected across an unknown resistor there is a current of 50 mA in the circuit. Find the value of the resistance of the resister:"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "0.5A"
+        },
+        "b": {
+            "text": "1.11 A"
+        },
+        "a": {
+            "text": "0.895A"
+        },
+        "correct": "a",
+        "d": {
+            "text": "none of these"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Aptitude",
+    "question": {
+        "text": "A battery of 12V is connected in series with resisters of 0.2 ohm , 0.3 ohm,0.4 ohm,0.5 ohm and 12 ohm. How much current would flow through the 0.3 ohm resister :"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "temperature"
+        },
+        "b": {
+            "text": "area of cross-section"
+        },
+        "a": {
+            "text": "length of conductor"
+        },
+        "correct": "d",
+        "d": {
+            "text": "density"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Aptitude",
+    "question": {
+        "text": "Among which of the following resistance does not depend"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "digital video disk"
+        },
+        "b": {
+            "text": "digital versatile disk"
+        },
+        "a": {
+            "text": "direct video download"
+        },
+        "correct": "b",
+        "d": {
+            "text": "dual visual data"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Aptitude",
+    "question": {
+        "text": "DVD stands for"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "magnetic tape"
+        },
+        "b": {
+            "text": "magnetic disk"
+        },
+        "a": {
+            "text": "RAM"
+        },
+        "correct": "a",
+        "d": {
+            "text": "pendrive"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Aptitude",
+    "question": {
+        "text": "Which of the following is primary storage"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "110011"
+        },
+        "b": {
+            "text": "101101"
+        },
+        "a": {
+            "text": "101100"
+        },
+        "correct": "b",
+        "d": {
+            "text": "001001"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Aptitude",
+    "question": {
+        "text": "(45) $ _{10} $ is equal to (?) $ _{2} $"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}, {
+    "answer": {
+        "c": {
+            "text": "116"
+        },
+        "b": {
+            "text": "165"
+        },
+        "a": {
+            "text": "156"
+        },
+        "correct": "d",
+        "d": {
+            "text": "155"
+        }
+    },
+    "exam_category": "BE-IOE",
+    "subject": "Aptitude",
+    "question": {
+        "text": "(109) $ _{10} $ (?) $ _{8} $"
+    },
+    "exam_code": 1404198779,
+    "marks": 1
+}]

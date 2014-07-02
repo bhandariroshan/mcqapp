@@ -1,1 +1,1562 @@
-[{"question": {"text": "Set A has 3 elements and set B has 4 elements. The number of injections that can be defined from A into B is"}, "marks": 1, "subject": "Mathematics", "exam_code": 1404125091, "answer": {"b": {"text": "4!"}, "a": {"text": "3!"}, "correct": "b", "d": {"text": "3! + 4!"}, "c": {"text": "3!4!"}}}, {"question": {"text": "$ –log  _{2}  log  _{2} \\sqrt{\\sqrt{\\sqrt{2}}} $ is equal to"}, "marks": 1, "subject": "Mathematics", "exam_code": 1404125091, "answer": {"b": {"text": "–3"}, "a": {"text": "3"}, "correct": "a", "d": {"text": "–2"}, "c": {"text": "2"}}}, {"question": {"text": "If $ \\begin{vmatrix}6i &-3i &1 \\\\4 & 3i &-1 \\\\20 & 3 &i \\end{vmatrix} $ = x + iy then"}, "marks": 1, "subject": "Mathematics", "exam_code": 1404125091, "answer": {"b": {"text": "x = 1, y = 1"}, "a": {"text": "x = 3, y = 1"}, "correct": "d", "d": {"text": "x = 0, y = 0"}, "c": {"text": "x = 0, y = 3"}}}, {"question": {"text": "Two mappings f:A $ \\rightarrow $  B and g:A $ \\rightarrow $ B are equal if"}, "marks": 1, "subject": "Mathematics", "exam_code": 1404125091, "answer": {"b": {"text": "{f(x) : x $ \\epsilon $ A $ \\subset $ {g(x) : x $ \\epsilon $ A}"}, "a": {"text": "{f(x) : x $ \\epsilon $ A} = {g(x) : x $ \\epsilon $ A}"}, "correct": "c", "d": {"text": "none of these"}, "c": {"text": "{f(x) = g(x) for every x $ \\epsilon $ A"}}}, {"question": {"text": "Let X = R – {1} & Y = R – {–1}. If f : X $ \\rightarrow $ Y is defined by f(x) = $ \\frac{x}{1-x} $ then $ f^{-1}(x) $ equals"}, "marks": 1, "subject": "Mathematics", "exam_code": 1404125091, "answer": {"b": {"text": "$ \\frac{x}{1-x} $"}, "a": {"text": "$ \\frac{1-x}{x} $"}, "correct": "d", "d": {"text": "$ \\frac{x}{1+x} $"}, "c": {"text": "$ \\frac{1+x}{x} $"}}}, {"question": {"text": "The value of $ ( sin\\frac{2\\pi k}{7} - icos\\frac{2 \\pi k}{7} ) $ is"}, "marks": 1, "subject": "Mathematics", "exam_code": 1404125091, "answer": {"b": {"text": "0"}, "a": {"text": "–1"}, "correct": "d", "d": {"text": "i"}, "c": {"text": "–i"}}}, {"question": {"text": "the greatest number that can be formed with 3 hours is"}, "marks": 1, "subject": "Mathematics", "exam_code": 1404125091, "answer": {"b": {"text": "4 $ ^{44} $"}, "a": {"text": "$ {4^{4}}^4 $"}, "correct": "a", "d": {"text": "444"}, "c": {"text": "44 $ ^{4} $"}}}, {"question": {"text": "If the equations x $ ^{2} $ + bx + ca = 0 & x $ ^{2} $ + cx + ab = 0 have a common root than the remaining roots satisfy the euqation"}, "marks": 1, "subject": "Mathematics", "exam_code": 1404125091, "answer": {"b": {"text": "x $ ^{2} $ + cx + b = 0"}, "a": {"text": "x $ ^{2} $ + bx + a = 0"}, "correct": "c", "d": {"text": "x $ ^{2} $ + ax + b = 0"}, "c": {"text": "x $ ^{2} $ + ax + bc = 0"}}}, {"question": {"text": "(51 C $ _{3} $ + 50C $ _{3} $ + 49C $ _{3} $ + 48C $ _{3} $ + 47C $ _{3} $ + 48C $ _{4} $ ) equals"}, "marks": 1, "subject": "Mathematics", "exam_code": 1404125091, "answer": {"b": {"text": "52C $ _{4} $"}, "a": {"text": "51C $ _{4} $"}, "correct": "b", "d": {"text": "50C $ _{4} $"}, "c": {"text": "53C $ _{4} $"}}}, {"question": {"text": "'m' men and 'n' women are to seated in a row so that no two women sit together. If m>n, then the number of ways in which they can be seated is"}, "marks": 1, "subject": "Mathematics", "exam_code": 1404125091, "answer": {"b": {"text": "$ \\frac{m! (m-1)!}{(m-n+1)!} $"}, "a": {"text": "$ \\frac{m! (m+1)!}{(m-n+1)!} $"}, "correct": "a", "d": {"text": "$ \\frac{m! (m+1)!}{(m+n+1)!} $"}, "c": {"text": "$ \\frac{m! (m-1)!}{(m+n+1)!} $"}}}, {"question": {"text": "The phonemic transcription of the word 'encourage' is"}, "marks": 1, "subject": "English", "exam_code": 1404125091, "answer": {"b": {"text": "/enkldZ/"}, "a": {"text": "/enkəreldZ/"}, "correct": "c", "d": {"text": "/enkəreldZ/"}, "c": {"text": "/InkərIZ/"}}}, {"question": {"text": "In the word 'engineer' the primary stress falls on the"}, "marks": 1, "subject": "English", "exam_code": 1404125091, "answer": {"b": {"text": "2nd syllable"}, "a": {"text": "1st syllable"}, "correct": "d", "d": {"text": "4th syllable"}, "c": {"text": "3rd syllable"}}}, {"question": {"text": "The synonym of 'dolour' is"}, "marks": 1, "subject": "English", "exam_code": 1404125091, "answer": {"b": {"text": "disaster"}, "a": {"text": "distress"}, "correct": "a", "d": {"text": "grin"}, "c": {"text": "puke"}}}, {"question": {"text": "The antonym of 'conform' is"}, "marks": 1, "subject": "English", "exam_code": 1404125091, "answer": {"b": {"text": "breach"}, "a": {"text": "reject"}, "correct": "d", "d": {"text": "assert"}, "c": {"text": "conform"}}}, {"question": {"text": "In the accident, there was no damage .....the car."}, "marks": 1, "subject": "English", "exam_code": 1404125091, "answer": {"b": {"text": "to"}, "a": {"text": "on"}, "correct": "b", "d": {"text": "in"}, "c": {"text": "at"}}}, {"question": {"text": "The programme was conducted by ...... teachers."}, "marks": 1, "subject": "English", "exam_code": 1404125091, "answer": {"b": {"text": "us"}, "a": {"text": "we"}, "correct": "b", "d": {"text": "ours"}, "c": {"text": "our's"}}}, {"question": {"text": "Do you think you ..... me somewhere before?"}, "marks": 1, "subject": "English", "exam_code": 1404125091, "answer": {"b": {"text": "had seen"}, "a": {"text": "have seen"}, "correct": "c", "d": {"text": "were seeing"}, "c": {"text": "saw"}}}, {"question": {"text": "He said to his teacher, “Need I read this chapter?”"}, "marks": 1, "subject": "English", "exam_code": 1404125091, "answer": {"b": {"text": "He asked his teacher whether he needed to this chapter."}, "a": {"text": "He asked his teacher whether there was a need to read that chapter."}, "correct": "a", "d": {"text": "He asked his teacher if he had to read that chapter."}, "c": {"text": "He asked his teacher if it was necessary to read this chapter."}}}, {"question": {"text": "They saw us work on the farm"}, "marks": 1, "subject": "English", "exam_code": 1404125091, "answer": {"b": {"text": "We were seen working on the farm."}, "a": {"text": "We were seen work the farm."}, "correct": "b", "d": {"text": "We were seen to work on the farm."}, "c": {"text": "We were seen to working on the farm."}}}, {"question": {"text": "I bitterly regret told her the secret."}, "marks": 1, "subject": "English", "exam_code": 1404125091, "answer": {"b": {"text": "have"}, "a": {"text": "to have"}, "correct": "b", "d": {"text": "to having"}, "c": {"text": "having"}}}, {"question": {"text": "Do you know the man I met yesterday?"}, "marks": 1, "subject": "English", "exam_code": 1404125091, "answer": {"b": {"text": "with whom"}, "a": {"text": "to whom"}, "correct": "b", "d": {"text": "who"}, "c": {"text": "that whom"}}}, {"question": {"text": "We have had by our seniors."}, "marks": 1, "subject": "English", "exam_code": 1404125091, "answer": {"b": {"text": "many suggestions"}, "a": {"text": "many advices"}, "correct": "a", "d": {"text": "both b/c"}, "c": {"text": "much advice"}}}, {"question": {"text": "They got me"}, "marks": 1, "subject": "English", "exam_code": 1404125091, "answer": {"b": {"text": "scolded"}, "a": {"text": "to scold"}, "correct": "d", "d": {"text": "to scolding"}, "c": {"text": "scold"}}}, {"question": {"text": "Buy that book"}, "marks": 1, "subject": "English", "exam_code": 1404125091, "answer": {"b": {"text": "and I tell you"}, "a": {"text": "if I tell you"}, "correct": "d", "d": {"text": "and I will tell you"}, "c": {"text": "if I will tell you"}}}, {"question": {"text": "Tick on the correct pattern for the sentence— ‘The moon rose early.’ is"}, "marks": 1, "subject": "English", "exam_code": 1404125091, "answer": {"b": {"text": "S+V+preposition"}, "a": {"text": "S+V+O ."}, "correct": "c", "d": {"text": "S + V"}, "c": {"text": "S + V + Adverbial"}}}, {"question": {"text": "If the radius of earth were to shrink by one percent, its mass remaining the same, the acceleration due to gravity on the surface of earth would"}, "marks": 1, "subject": "Physics", "exam_code": 1404125091, "answer": {"b": {"text": "remain unchanged"}, "a": {"text": "decrease"}, "correct": "c", "d": {"text": "depends on initial size"}, "c": {"text": "increases"}}}, {"question": {"text": "A cable that can support a load W is cut into two equal parts. The maximum load that can be supported by either part is"}, "marks": 1, "subject": "Physics", "exam_code": 1404125091, "answer": {"b": {"text": "$ \\frac{W}{2} $"}, "a": {"text": "$ \\frac{W}{4} $"}, "correct": "c", "d": {"text": "2W"}, "c": {"text": "W"}}}, {"question": {"text": "In a stationary wave"}, "marks": 1, "subject": "Physics", "exam_code": 1404125091, "answer": {"b": {"text": "energy is maximum at nodes and minimum at antinodes"}, "a": {"text": "energy is uniformly distributed"}, "correct": "b", "d": {"text": "energy is distributed non uniformly"}, "c": {"text": "energy is minimum at nodes & maximum at antinodes"}}}, {"question": {"text": "Two metal strips that constitude a thermostat must necessarily differ in their"}, "marks": 1, "subject": "Physics", "exam_code": 1404125091, "answer": {"b": {"text": "length"}, "a": {"text": "mass"}, "correct": "d", "d": {"text": "coefficient of linear expansion"}, "c": {"text": "resistivity"}}}, {"question": {"text": "A sphere, a cube and a thin circular plate all made of same material and having the same mass are initially heated to 200°C. They are left in air at room temp then the body will cool fastest is"}, "marks": 1, "subject": "Physics", "exam_code": 1404125091, "answer": {"b": {"text": "cube"}, "a": {"text": "sphere"}, "correct": "c", "d": {"text": "all at same rate"}, "c": {"text": "circular plate"}}}, {"question": {"text": "A dielectric is introduced between the elements of the condenser kept at a constant potential difference. The charge on condenser"}, "marks": 1, "subject": "Physics", "exam_code": 1404125091, "answer": {"b": {"text": "increases"}, "a": {"text": "decreases"}, "correct": "b", "d": {"text": "none"}, "c": {"text": "remain same"}}}, {"question": {"text": "A current is passed through a straight wire. The magnetic field established around it has its lines of forces"}, "marks": 1, "subject": "Physics", "exam_code": 1404125091, "answer": {"b": {"text": "oval and endless"}, "a": {"text": "circular and endless"}, "correct": "a", "d": {"text": "all are true"}, "c": {"text": "straight"}}}, {"question": {"text": "If the angular speed of rotation of an armature of alternating current in generation is doubled, then the induced emf will be"}, "marks": 1, "subject": "Physics", "exam_code": 1404125091, "answer": {"b": {"text": "four times"}, "a": {"text": "twice"}, "correct": "a", "d": {"text": "half"}, "c": {"text": "same"}}}, {"question": {"text": "A plane glass slab is placed over various coloured  letters. The letter which appears to be raised the least is"}, "marks": 1, "subject": "Physics", "exam_code": 1404125091, "answer": {"b": {"text": "yellow"}, "a": {"text": "violet"}, "correct": "c", "d": {"text": "green"}, "c": {"text": "red"}}}, {"question": {"text": "The frequency of incident light falling on a photosensitive metal plate is doubled, the kinetic energy of emitted photo electron is"}, "marks": 1, "subject": "Physics", "exam_code": 1404125091, "answer": {"b": {"text": "unchanged"}, "a": {"text": "double the earlier value"}, "correct": "c", "d": {"text": "less than doubled"}, "c": {"text": "more than doubled"}}}, {"question": {"text": "The number of H $ ^{+} $ -ion present in 500m1 of 0.2M H $ _{2} $ SO $ _{4} $ solution is"}, "marks": 1, "subject": "Chemistry", "exam_code": 1404125091, "answer": {"b": {"text": "6.023x10 $ ^{22} $"}, "a": {"text": "1.2x10 $ ^{23} $"}, "correct": "a", "d": {"text": "6.023x10 $ ^{23} $"}, "c": {"text": "1.2x10 $ ^{22} $"}}}, {"question": {"text": "Which of this set of quantum number is not pemitted?"}, "marks": 1, "subject": "Chemistry", "exam_code": 1404125091, "answer": {"b": {"text": "n=2,1=0,m=-1"}, "a": {"text": "n=2,l=1,m=0"}, "correct": "b", "d": {"text": "n=3,l=2,m=0"}, "c": {"text": "n=3,l=0,m=0"}}}, {"question": {"text": "Which of this has an unpaired electron?"}, "marks": 1, "subject": "Chemistry", "exam_code": 1404125091, "answer": {"b": {"text": "CO"}, "a": {"text": "SO $ _{2} $"}, "correct": "c", "d": {"text": "H $ _{2} $ O $ _{2} $"}, "c": {"text": "NO"}}}, {"question": {"text": "Which of this have highest electron affinity value?"}, "marks": 1, "subject": "Chemistry", "exam_code": 1404125091, "answer": {"b": {"text": "S"}, "a": {"text": "O"}, "correct": "b", "d": {"text": "Te"}, "c": {"text": "Se"}}}, {"question": {"text": "In the redox  rxn, Cr $ _{2} $ O $ _{7} $ + 14H $ ^{+} $ + ne 2Cr $ ^{+3} $ +7H $ _{2} $ O, the value of n is"}, "marks": 1, "subject": "Chemistry", "exam_code": 1404125091, "answer": {"b": {"text": "4"}, "a": {"text": "3"}, "correct": "d", "d": {"text": "6"}, "c": {"text": "5"}}}, {"question": {"text": "1.7 gram of a silver salt of an acid on heating gave 1.08 gram of silver. The equivalent weight of acid is"}, "marks": 1, "subject": "Chemistry", "exam_code": 1404125091, "answer": {"b": {"text": "49"}, "a": {"text": "46"}, "correct": "d", "d": {"text": "63"}, "c": {"text": "60"}}}, {"question": {"text": "The solubility of arsenic sulphide is x mole/litre. The ksp of arsenic sulphide is"}, "marks": 1, "subject": "Chemistry", "exam_code": 1404125091, "answer": {"b": {"text": "27x $ ^{4} $"}, "a": {"text": "4x $ ^{3} $"}, "correct": "d", "d": {"text": "108x $ ^{5} $"}, "c": {"text": "36x $ ^{5} $"}}}, {"question": {"text": "Caigon is a/an"}, "marks": 1, "subject": "Chemistry", "exam_code": 1404125091, "answer": {"b": {"text": "reductant"}, "a": {"text": "oxidant"}, "correct": "c", "d": {"text": "ion-exchanger"}, "c": {"text": "complexant"}}}, {"question": {"text": "FeSO $ _{4} $ solution is an absorbent for"}, "marks": 1, "subject": "Chemistry", "exam_code": 1404125091, "answer": {"b": {"text": "NO"}, "a": {"text": "CO"}, "correct": "b", "d": {"text": "O $ _{2} $"}, "c": {"text": "SO $ _{2} $"}}}, {"question": {"text": "Which of this forms precipitate on passing H2S gas?"}, "marks": 1, "subject": "Chemistry", "exam_code": 1404125091, "answer": {"b": {"text": "acidified CuSO $ _{4} $"}, "a": {"text": "acidified A1 $ _{2} $ (SO $ _{4} $ ),"}, "correct": "d", "d": {"text": "acidified MgSO $ _{4} $"}, "c": {"text": "acidified ZnSO $ _{4} $"}}}, {"question": {"text": "The flux used during extraction of copper from copper pyrite is"}, "marks": 1, "subject": "Chemistry", "exam_code": 1404125091, "answer": {"b": {"text": "MgO"}, "a": {"text": "CaO"}, "correct": "c", "d": {"text": "P $ _{2} $ O $ _{5} $"}, "c": {"text": "SiO $ _{2} $"}}}, {"question": {"text": "Which of this is an ore of iron?"}, "marks": 1, "subject": "Chemistry", "exam_code": 1404125091, "answer": {"b": {"text": "siderite"}, "a": {"text": "cryolite"}, "correct": "b", "d": {"text": "Galena"}, "c": {"text": "argentite"}}}, {"question": {"text": "The IUPAC name of CH $ _{3} $ — C C — CH(CH $ _{3} $ ) $ _{2} $ is"}, "marks": 1, "subject": "Chemistry", "exam_code": 1404125091, "answer": {"b": {"text": "methyl isopropylacetylene"}, "a": {"text": "4-methyl — 2- pentyne"}, "correct": "a", "d": {"text": "2-methyl —4 - pentyne"}, "c": {"text": "4, 4-dimethyl -2-butyne"}}}, {"question": {"text": "Which of this is an electrophile?"}, "marks": 1, "subject": "Chemistry", "exam_code": 1404125091, "answer": {"b": {"text": "CN"}, "a": {"text": "SO $ _{3} $"}, "correct": "a", "d": {"text": "HSO $ _{4} $"}, "c": {"text": "NH $ _{3} $"}}}, {"question": {"text": "The distillation of phenol with zinc dust gives."}, "marks": 1, "subject": "Chemistry", "exam_code": 1404125091, "answer": {"b": {"text": "Toluene"}, "a": {"text": "Benzene"}, "correct": "a", "d": {"text": "Benzaldehyde"}, "c": {"text": "Aniline"}}}, {"question": {"text": "The thermal efficiency of a two stroke cycle engine as compound to four stroke cycle engine is ...."}, "marks": 1, "subject": "Aptitude", "exam_code": 1404125091, "answer": {"b": {"text": "equal"}, "a": {"text": "more"}, "correct": "c", "d": {"text": "none"}, "c": {"text": "less"}}}, {"question": {"text": "The power available at the shaft of an IC engine is known  as....."}, "marks": 1, "subject": "Aptitude", "exam_code": 1404125091, "answer": {"b": {"text": "indicated horse power"}, "a": {"text": "break horse power"}, "correct": "a", "d": {"text": "none"}, "c": {"text": "frictional horse power"}}}, {"question": {"text": "The diesel engines are also known as ..................... Engine ..............."}, "marks": 1, "subject": "Aptitude", "exam_code": 1404125091, "answer": {"b": {"text": "spark ignition"}, "a": {"text": "compression ignition"}, "correct": "a", "d": {"text": "otto ignition"}, "c": {"text": "dual ignition"}}}, {"question": {"text": "The maximum percentage of igredients in cement is that of ..........."}, "marks": 1, "subject": "Aptitude", "exam_code": 1404125091, "answer": {"b": {"text": "magnesia"}, "a": {"text": "lime"}, "correct": "a", "d": {"text": "silica"}, "c": {"text": "alumina"}}}, {"question": {"text": "Volume of 1 bag cement is ........"}, "marks": 1, "subject": "Aptitude", "exam_code": 1404125091, "answer": {"b": {"text": "0.0345 m $ ^{3} $"}, "a": {"text": "0.05m $ ^{3} $"}, "correct": "a", "d": {"text": "0.04m $ ^{3} $"}, "c": {"text": "0.025m $ ^{3} $"}}}, {"question": {"text": "The building stone be dressed easily..........."}, "marks": 1, "subject": "Aptitude", "exam_code": 1404125091, "answer": {"b": {"text": "after seasoning"}, "a": {"text": "just after quarrying"}, "correct": "a", "d": {"text": "any time"}, "c": {"text": "after some months of quarrying"}}}, {"question": {"text": "The shape of crusher aggregate is ........."}, "marks": 1, "subject": "Aptitude", "exam_code": 1404125091, "answer": {"b": {"text": "irregular"}, "a": {"text": "rounded"}, "correct": "b", "d": {"text": "flaky"}, "c": {"text": "flat"}}}, {"question": {"text": "Among which of the following resistance does not depend.........."}, "marks": 1, "subject": "Aptitude", "exam_code": 1404125091, "answer": {"b": {"text": "area of cross-section"}, "a": {"text": "length of conductor"}, "correct": "d", "d": {"text": "density"}, "c": {"text": "temperature"}}}, {"question": {"text": "In parallel combination of electrical appliances, total electrical power......."}, "marks": 1, "subject": "Aptitude", "exam_code": 1404125091, "answer": {"b": {"text": "Decrease"}, "a": {"text": "Increases"}, "correct": "a", "d": {"text": "Remain same"}, "c": {"text": "Does not change"}}}, {"question": {"text": "The correct relation between heat produced and electric current flowing........."}, "marks": 1, "subject": "Aptitude", "exam_code": 1404125091, "answer": {"b": {"text": "H I $ ^{2} $"}, "a": {"text": "H I"}, "correct": "b", "d": {"text": "H 1/I $ ^{2} $"}, "c": {"text": "H 1/I"}}}, {"question": {"text": "The unit of specific resistance is .........."}, "marks": 1, "subject": "Aptitude", "exam_code": 1404125091, "answer": {"b": {"text": "Ohm-m"}, "a": {"text": "Ohm/m $ ^{2} $"}, "correct": "b", "d": {"text": "Ohm/m $ ^{3} $"}, "c": {"text": "Ohm m $ ^{3} $"}}}, {"question": {"text": "WWW stands for ..........."}, "marks": 1, "subject": "Aptitude", "exam_code": 1404125091, "answer": {"b": {"text": "web worldwide"}, "a": {"text": "wider wrestling world"}, "correct": "d", "d": {"text": "world wide web"}, "c": {"text": "water wildlife world"}}}, {"question": {"text": "Semiconductors have ............."}, "marks": 1, "subject": "Aptitude", "exam_code": 1404125091, "answer": {"b": {"text": "positive temperature coefficient of resistance"}, "a": {"text": "zero temperature coefficient of resistance"}, "correct": "c", "d": {"text": "none of the above"}, "c": {"text": "negative temperature coefficient of resistance"}}}, {"question": {"text": "FTP stands for .............(Ans B)"}, "marks": 1, "subject": "Aptitude", "exam_code": 1404125091, "answer": {"b": {"text": "file transfer protocol"}, "a": {"text": "file to protect"}, "correct": "b", "d": {"text": "none"}, "c": {"text": "file trap protocol"}}}, {"question": {"text": "NAND and NOR gate are called universal gate because they ..........(Ans B)"}, "marks": 1, "subject": "Aptitude", "exam_code": 1404125091, "answer": {"b": {"text": "can be combined to produced OR, and and Not"}, "a": {"text": "are universally availlabe"}, "correct": "b", "d": {"text": "can be easily manufactured. SECTION —II Select the all alternatives [55 x 2=110]"}, "c": {"text": "are widely used in integrated circuit"}}}]
+[
+  {
+    "subject": "Mathematics",
+    "question": {
+      "text": "Set A has 3 elements and set B has 4 elements. The number of injections that can be defined from A into B is"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "3!4!"
+      },
+      "b": {
+        "text": "4!"
+      },
+      "a": {
+        "text": "3!"
+      },
+      "correct": "b",
+      "d": {
+        "text": "3! + 4!"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Mathematics",
+    "question": {
+      "text": "$ –log  _{2}  log  _{2} \\sqrt{\\sqrt{\\sqrt{2}}} $ is equal to"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "2"
+      },
+      "b": {
+        "text": "–3"
+      },
+      "a": {
+        "text": "3"
+      },
+      "correct": "a",
+      "d": {
+        "text": "–2"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Mathematics",
+    "question": {
+      "text": "If $ \\begin{vmatrix}6i &-3i &1 \\\\4 & 3i &-1 \\\\20 & 3 &i \\end{vmatrix} $ = x + iy then"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "x = 0, y = 3"
+      },
+      "b": {
+        "text": "x = 1, y = 1"
+      },
+      "a": {
+        "text": "x = 3, y = 1"
+      },
+      "correct": "d",
+      "d": {
+        "text": "x = 0, y = 0"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Mathematics",
+    "question": {
+      "text": "Two mappings f:A $ \\rightarrow $  B and g:A $ \\rightarrow $ B are equal if"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "{f(x) = g(x) for every x $ \\epsilon $ A"
+      },
+      "b": {
+        "text": "{f(x) : x $ \\epsilon $ A $ \\subset $ {g(x) : x $ \\epsilon $ A}"
+      },
+      "a": {
+        "text": "{f(x) : x $ \\epsilon $ A} = {g(x) : x $ \\epsilon $ A}"
+      },
+      "correct": "c",
+      "d": {
+        "text": "none of these"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Mathematics",
+    "question": {
+      "text": "Let X = R – {1} & Y = R – {–1}. If f : X $ \\rightarrow $ Y is defined by f(x) = $ \\frac{x}{1-x} $ then $ f^{-1}(x) $ equals"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "$ \\frac{1+x}{x} $"
+      },
+      "b": {
+        "text": "$ \\frac{x}{1-x} $"
+      },
+      "a": {
+        "text": "$ \\frac{1-x}{x} $"
+      },
+      "correct": "d",
+      "d": {
+        "text": "$ \\frac{x}{1+x} $"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Mathematics",
+    "question": {
+      "text": "The value of $ ( sin\\frac{2\\pi k}{7} - icos\\frac{2 \\pi k}{7} ) $ is"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "–i"
+      },
+      "b": {
+        "text": "0"
+      },
+      "a": {
+        "text": "–1"
+      },
+      "correct": "d",
+      "d": {
+        "text": "i"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Mathematics",
+    "question": {
+      "text": "the greatest number that can be formed with 3 hours is"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "44 $ ^{4} $"
+      },
+      "b": {
+        "text": "4 $ ^{44} $"
+      },
+      "a": {
+        "text": "$ {4^{4}}^4 $"
+      },
+      "correct": "a",
+      "d": {
+        "text": "444"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Mathematics",
+    "question": {
+      "text": "If the equations x $ ^{2} $ + bx + ca = 0 & x $ ^{2} $ + cx + ab = 0 have a common root than the remaining roots satisfy the euqation"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "x $ ^{2} $ + ax + bc = 0"
+      },
+      "b": {
+        "text": "x $ ^{2} $ + cx + b = 0"
+      },
+      "a": {
+        "text": "x $ ^{2} $ + bx + a = 0"
+      },
+      "correct": "c",
+      "d": {
+        "text": "x $ ^{2} $ + ax + b = 0"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Mathematics",
+    "question": {
+      "text": "(51 C $ _{3} $ + 50C $ _{3} $ + 49C $ _{3} $ + 48C $ _{3} $ + 47C $ _{3} $ + 48C $ _{4} $ ) equals"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "53C $ _{4} $"
+      },
+      "b": {
+        "text": "52C $ _{4} $"
+      },
+      "a": {
+        "text": "51C $ _{4} $"
+      },
+      "correct": "b",
+      "d": {
+        "text": "50C $ _{4} $"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Mathematics",
+    "question": {
+      "text": "'m' men and 'n' women are to seated in a row so that no two women sit together. If m>n, then the number of ways in which they can be seated is"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "$ \\frac{m! (m-1)!}{(m+n+1)!} $"
+      },
+      "b": {
+        "text": "$ \\frac{m! (m-1)!}{(m-n+1)!} $"
+      },
+      "a": {
+        "text": "$ \\frac{m! (m+1)!}{(m-n+1)!} $"
+      },
+      "correct": "a",
+      "d": {
+        "text": "$ \\frac{m! (m+1)!}{(m+n+1)!} $"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "English",
+    "question": {
+      "text": "The phonemic transcription of the word 'encourage' is"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "/InkərIZ/"
+      },
+      "b": {
+        "text": "/enkldZ/"
+      },
+      "a": {
+        "text": "/enkəreldZ/"
+      },
+      "correct": "c",
+      "d": {
+        "text": "/enkəreldZ/"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "English",
+    "question": {
+      "text": "In the word 'engineer' the primary stress falls on the"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "3rd syllable"
+      },
+      "b": {
+        "text": "2nd syllable"
+      },
+      "a": {
+        "text": "1st syllable"
+      },
+      "correct": "d",
+      "d": {
+        "text": "4th syllable"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "English",
+    "question": {
+      "text": "The synonym of 'dolour' is"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "puke"
+      },
+      "b": {
+        "text": "disaster"
+      },
+      "a": {
+        "text": "distress"
+      },
+      "correct": "a",
+      "d": {
+        "text": "grin"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "English",
+    "question": {
+      "text": "The antonym of 'conform' is"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "conform"
+      },
+      "b": {
+        "text": "breach"
+      },
+      "a": {
+        "text": "reject"
+      },
+      "correct": "d",
+      "d": {
+        "text": "assert"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "English",
+    "question": {
+      "text": "In the accident, there was no damage .....the car."
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "at"
+      },
+      "b": {
+        "text": "to"
+      },
+      "a": {
+        "text": "on"
+      },
+      "correct": "b",
+      "d": {
+        "text": "in"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "English",
+    "question": {
+      "text": "The programme was conducted by ...... teachers."
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "our's"
+      },
+      "b": {
+        "text": "us"
+      },
+      "a": {
+        "text": "we"
+      },
+      "correct": "b",
+      "d": {
+        "text": "ours"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "English",
+    "question": {
+      "text": "Do you think you ..... me somewhere before?"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "saw"
+      },
+      "b": {
+        "text": "had seen"
+      },
+      "a": {
+        "text": "have seen"
+      },
+      "correct": "c",
+      "d": {
+        "text": "were seeing"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "English",
+    "question": {
+      "text": "He said to his teacher, “Need I read this chapter?”"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "He asked his teacher if it was necessary to read this chapter."
+      },
+      "b": {
+        "text": "He asked his teacher whether he needed to this chapter."
+      },
+      "a": {
+        "text": "He asked his teacher whether there was a need to read that chapter."
+      },
+      "correct": "a",
+      "d": {
+        "text": "He asked his teacher if he had to read that chapter."
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "English",
+    "question": {
+      "text": "They saw us work on the farm"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "We were seen to working on the farm."
+      },
+      "b": {
+        "text": "We were seen working on the farm."
+      },
+      "a": {
+        "text": "We were seen work the farm."
+      },
+      "correct": "b",
+      "d": {
+        "text": "We were seen to work on the farm."
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "English",
+    "question": {
+      "text": "I bitterly regret told her the secret."
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "having"
+      },
+      "b": {
+        "text": "have"
+      },
+      "a": {
+        "text": "to have"
+      },
+      "correct": "b",
+      "d": {
+        "text": "to having"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "English",
+    "question": {
+      "text": "Do you know the man I met yesterday?"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "that whom"
+      },
+      "b": {
+        "text": "with whom"
+      },
+      "a": {
+        "text": "to whom"
+      },
+      "correct": "b",
+      "d": {
+        "text": "who"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "English",
+    "question": {
+      "text": "We have had by our seniors."
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "much advice"
+      },
+      "b": {
+        "text": "many suggestions"
+      },
+      "a": {
+        "text": "many advices"
+      },
+      "correct": "a",
+      "d": {
+        "text": "both b/c"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "English",
+    "question": {
+      "text": "They got me"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "scold"
+      },
+      "b": {
+        "text": "scolded"
+      },
+      "a": {
+        "text": "to scold"
+      },
+      "correct": "d",
+      "d": {
+        "text": "to scolding"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "English",
+    "question": {
+      "text": "Buy that book"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "if I will tell you"
+      },
+      "b": {
+        "text": "and I tell you"
+      },
+      "a": {
+        "text": "if I tell you"
+      },
+      "correct": "d",
+      "d": {
+        "text": "and I will tell you"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "English",
+    "question": {
+      "text": "Tick on the correct pattern for the sentence— ‘The moon rose early.’ is"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "S + V + Adverbial"
+      },
+      "b": {
+        "text": "S+V+preposition"
+      },
+      "a": {
+        "text": "S+V+O ."
+      },
+      "correct": "c",
+      "d": {
+        "text": "S + V"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Physics",
+    "question": {
+      "text": "If the radius of earth were to shrink by one percent, its mass remaining the same, the acceleration due to gravity on the surface of earth would"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "increases"
+      },
+      "b": {
+        "text": "remain unchanged"
+      },
+      "a": {
+        "text": "decrease"
+      },
+      "correct": "c",
+      "d": {
+        "text": "depends on initial size"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Physics",
+    "question": {
+      "text": "A cable that can support a load W is cut into two equal parts. The maximum load that can be supported by either part is"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "W"
+      },
+      "b": {
+        "text": "$ \\frac{W}{2} $"
+      },
+      "a": {
+        "text": "$ \\frac{W}{4} $"
+      },
+      "correct": "c",
+      "d": {
+        "text": "2W"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Physics",
+    "question": {
+      "text": "In a stationary wave"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "energy is minimum at nodes & maximum at antinodes"
+      },
+      "b": {
+        "text": "energy is maximum at nodes and minimum at antinodes"
+      },
+      "a": {
+        "text": "energy is uniformly distributed"
+      },
+      "correct": "b",
+      "d": {
+        "text": "energy is distributed non uniformly"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Physics",
+    "question": {
+      "text": "Two metal strips that constitude a thermostat must necessarily differ in their"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "resistivity"
+      },
+      "b": {
+        "text": "length"
+      },
+      "a": {
+        "text": "mass"
+      },
+      "correct": "d",
+      "d": {
+        "text": "coefficient of linear expansion"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Physics",
+    "question": {
+      "text": "A sphere, a cube and a thin circular plate all made of same material and having the same mass are initially heated to 200°C. They are left in air at room temp then the body will cool fastest is"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "circular plate"
+      },
+      "b": {
+        "text": "cube"
+      },
+      "a": {
+        "text": "sphere"
+      },
+      "correct": "c",
+      "d": {
+        "text": "all at same rate"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Physics",
+    "question": {
+      "text": "A dielectric is introduced between the elements of the condenser kept at a constant potential difference. The charge on condenser"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "remain same"
+      },
+      "b": {
+        "text": "increases"
+      },
+      "a": {
+        "text": "decreases"
+      },
+      "correct": "b",
+      "d": {
+        "text": "none"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Physics",
+    "question": {
+      "text": "A current is passed through a straight wire. The magnetic field established around it has its lines of forces"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "straight"
+      },
+      "b": {
+        "text": "oval and endless"
+      },
+      "a": {
+        "text": "circular and endless"
+      },
+      "correct": "a",
+      "d": {
+        "text": "all are true"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Physics",
+    "question": {
+      "text": "If the angular speed of rotation of an armature of alternating current in generation is doubled, then the induced emf will be"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "same"
+      },
+      "b": {
+        "text": "four times"
+      },
+      "a": {
+        "text": "twice"
+      },
+      "correct": "a",
+      "d": {
+        "text": "half"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Physics",
+    "question": {
+      "text": "A plane glass slab is placed over various coloured  letters. The letter which appears to be raised the least is"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "red"
+      },
+      "b": {
+        "text": "yellow"
+      },
+      "a": {
+        "text": "violet"
+      },
+      "correct": "c",
+      "d": {
+        "text": "green"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Physics",
+    "question": {
+      "text": "The frequency of incident light falling on a photosensitive metal plate is doubled, the kinetic energy of emitted photo electron is"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "more than doubled"
+      },
+      "b": {
+        "text": "unchanged"
+      },
+      "a": {
+        "text": "double the earlier value"
+      },
+      "correct": "c",
+      "d": {
+        "text": "less than doubled"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Chemistry",
+    "question": {
+      "text": "The number of H $ ^{+} $ -ion present in 500m1 of 0.2M H $ _{2} $ SO $ _{4} $ solution is"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "1.2x10 $ ^{22} $"
+      },
+      "b": {
+        "text": "6.023x10 $ ^{22} $"
+      },
+      "a": {
+        "text": "1.2x10 $ ^{23} $"
+      },
+      "correct": "a",
+      "d": {
+        "text": "6.023x10 $ ^{23} $"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Chemistry",
+    "question": {
+      "text": "Which of this set of quantum number is not pemitted?"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "n=3,l=0,m=0"
+      },
+      "b": {
+        "text": "n=2,1=0,m=-1"
+      },
+      "a": {
+        "text": "n=2,l=1,m=0"
+      },
+      "correct": "b",
+      "d": {
+        "text": "n=3,l=2,m=0"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Chemistry",
+    "question": {
+      "text": "Which of this has an unpaired electron?"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "NO"
+      },
+      "b": {
+        "text": "CO"
+      },
+      "a": {
+        "text": "SO $ _{2} $"
+      },
+      "correct": "c",
+      "d": {
+        "text": "H $ _{2} $ O $ _{2} $"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Chemistry",
+    "question": {
+      "text": "Which of this have highest electron affinity value?"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "Se"
+      },
+      "b": {
+        "text": "S"
+      },
+      "a": {
+        "text": "O"
+      },
+      "correct": "b",
+      "d": {
+        "text": "Te"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Chemistry",
+    "question": {
+      "text": "In the redox  rxn, Cr $ _{2} $ O $ _{7} $ + 14H $ ^{+} $ + ne 2Cr $ ^{+3} $ +7H $ _{2} $ O, the value of n is"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "5"
+      },
+      "b": {
+        "text": "4"
+      },
+      "a": {
+        "text": "3"
+      },
+      "correct": "d",
+      "d": {
+        "text": "6"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Chemistry",
+    "question": {
+      "text": "1.7 gram of a silver salt of an acid on heating gave 1.08 gram of silver. The equivalent weight of acid is"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "60"
+      },
+      "b": {
+        "text": "49"
+      },
+      "a": {
+        "text": "46"
+      },
+      "correct": "d",
+      "d": {
+        "text": "63"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Chemistry",
+    "question": {
+      "text": "The solubility of arsenic sulphide is x mole/litre. The ksp of arsenic sulphide is"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "36x $ ^{5} $"
+      },
+      "b": {
+        "text": "27x $ ^{4} $"
+      },
+      "a": {
+        "text": "4x $ ^{3} $"
+      },
+      "correct": "d",
+      "d": {
+        "text": "108x $ ^{5} $"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Chemistry",
+    "question": {
+      "text": "Caigon is a/an"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "complexant"
+      },
+      "b": {
+        "text": "reductant"
+      },
+      "a": {
+        "text": "oxidant"
+      },
+      "correct": "c",
+      "d": {
+        "text": "ion-exchanger"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Chemistry",
+    "question": {
+      "text": "FeSO $ _{4} $ solution is an absorbent for"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "SO $ _{2} $"
+      },
+      "b": {
+        "text": "NO"
+      },
+      "a": {
+        "text": "CO"
+      },
+      "correct": "b",
+      "d": {
+        "text": "O $ _{2} $"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Chemistry",
+    "question": {
+      "text": "Which of this forms precipitate on passing H2S gas?"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "acidified ZnSO $ _{4} $"
+      },
+      "b": {
+        "text": "acidified CuSO $ _{4} $"
+      },
+      "a": {
+        "text": "acidified A1 $ _{2} $ (SO $ _{4} $ ),"
+      },
+      "correct": "d",
+      "d": {
+        "text": "acidified MgSO $ _{4} $"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Chemistry",
+    "question": {
+      "text": "The flux used during extraction of copper from copper pyrite is"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "SiO $ _{2} $"
+      },
+      "b": {
+        "text": "MgO"
+      },
+      "a": {
+        "text": "CaO"
+      },
+      "correct": "c",
+      "d": {
+        "text": "P $ _{2} $ O $ _{5} $"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Chemistry",
+    "question": {
+      "text": "Which of this is an ore of iron?"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "argentite"
+      },
+      "b": {
+        "text": "siderite"
+      },
+      "a": {
+        "text": "cryolite"
+      },
+      "correct": "b",
+      "d": {
+        "text": "Galena"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Chemistry",
+    "question": {
+      "text": "The IUPAC name of CH $ _{3} $ — C C — CH(CH $ _{3} $ ) $ _{2} $ is"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "4, 4-dimethyl -2-butyne"
+      },
+      "b": {
+        "text": "methyl isopropylacetylene"
+      },
+      "a": {
+        "text": "4-methyl — 2- pentyne"
+      },
+      "correct": "a",
+      "d": {
+        "text": "2-methyl —4 - pentyne"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Chemistry",
+    "question": {
+      "text": "Which of this is an electrophile?"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "NH $ _{3} $"
+      },
+      "b": {
+        "text": "CN"
+      },
+      "a": {
+        "text": "SO $ _{3} $"
+      },
+      "correct": "a",
+      "d": {
+        "text": "HSO $ _{4} $"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Chemistry",
+    "question": {
+      "text": "The distillation of phenol with zinc dust gives."
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "Aniline"
+      },
+      "b": {
+        "text": "Toluene"
+      },
+      "a": {
+        "text": "Benzene"
+      },
+      "correct": "a",
+      "d": {
+        "text": "Benzaldehyde"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Aptitude",
+    "question": {
+      "text": "The thermal efficiency of a two stroke cycle engine as compound to four stroke cycle engine is ...."
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "less"
+      },
+      "b": {
+        "text": "equal"
+      },
+      "a": {
+        "text": "more"
+      },
+      "correct": "c",
+      "d": {
+        "text": "none"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Aptitude",
+    "question": {
+      "text": "The power available at the shaft of an IC engine is known  as....."
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "frictional horse power"
+      },
+      "b": {
+        "text": "indicated horse power"
+      },
+      "a": {
+        "text": "break horse power"
+      },
+      "correct": "a",
+      "d": {
+        "text": "none"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Aptitude",
+    "question": {
+      "text": "The diesel engines are also known as ..................... Engine ..............."
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "dual ignition"
+      },
+      "b": {
+        "text": "spark ignition"
+      },
+      "a": {
+        "text": "compression ignition"
+      },
+      "correct": "a",
+      "d": {
+        "text": "otto ignition"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Aptitude",
+    "question": {
+      "text": "The maximum percentage of igredients in cement is that of ..........."
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "alumina"
+      },
+      "b": {
+        "text": "magnesia"
+      },
+      "a": {
+        "text": "lime"
+      },
+      "correct": "a",
+      "d": {
+        "text": "silica"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Aptitude",
+    "question": {
+      "text": "Volume of 1 bag cement is ........"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "0.025m $ ^{3} $"
+      },
+      "b": {
+        "text": "0.0345 m $ ^{3} $"
+      },
+      "a": {
+        "text": "0.05m $ ^{3} $"
+      },
+      "correct": "a",
+      "d": {
+        "text": "0.04m $ ^{3} $"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Aptitude",
+    "question": {
+      "text": "The building stone be dressed easily..........."
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "after some months of quarrying"
+      },
+      "b": {
+        "text": "after seasoning"
+      },
+      "a": {
+        "text": "just after quarrying"
+      },
+      "correct": "a",
+      "d": {
+        "text": "any time"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Aptitude",
+    "question": {
+      "text": "The shape of crusher aggregate is ........."
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "flat"
+      },
+      "b": {
+        "text": "irregular"
+      },
+      "a": {
+        "text": "rounded"
+      },
+      "correct": "b",
+      "d": {
+        "text": "flaky"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Aptitude",
+    "question": {
+      "text": "Among which of the following resistance does not depend.........."
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "temperature"
+      },
+      "b": {
+        "text": "area of cross-section"
+      },
+      "a": {
+        "text": "length of conductor"
+      },
+      "correct": "d",
+      "d": {
+        "text": "density"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Aptitude",
+    "question": {
+      "text": "In parallel combination of electrical appliances, total electrical power......."
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "Does not change"
+      },
+      "b": {
+        "text": "Decrease"
+      },
+      "a": {
+        "text": "Increases"
+      },
+      "correct": "a",
+      "d": {
+        "text": "Remain same"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Aptitude",
+    "question": {
+      "text": "The correct relation between heat produced and electric current flowing........."
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "H 1/I"
+      },
+      "b": {
+        "text": "H I $ ^{2} $"
+      },
+      "a": {
+        "text": "H I"
+      },
+      "correct": "b",
+      "d": {
+        "text": "H 1/I $ ^{2} $"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Aptitude",
+    "question": {
+      "text": "The unit of specific resistance is .........."
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "Ohm m $ ^{3} $"
+      },
+      "b": {
+        "text": "Ohm-m"
+      },
+      "a": {
+        "text": "Ohm/m $ ^{2} $"
+      },
+      "correct": "b",
+      "d": {
+        "text": "Ohm/m $ ^{3} $"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Aptitude",
+    "question": {
+      "text": "WWW stands for ..........."
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "water wildlife world"
+      },
+      "b": {
+        "text": "web worldwide"
+      },
+      "a": {
+        "text": "wider wrestling world"
+      },
+      "correct": "d",
+      "d": {
+        "text": "world wide web"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Aptitude",
+    "question": {
+      "text": "Semiconductors have ............."
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "negative temperature coefficient of resistance"
+      },
+      "b": {
+        "text": "positive temperature coefficient of resistance"
+      },
+      "a": {
+        "text": "zero temperature coefficient of resistance"
+      },
+      "correct": "c",
+      "d": {
+        "text": "none of the above"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Aptitude",
+    "question": {
+      "text": "FTP stands for .............(Ans B)"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "file trap protocol"
+      },
+      "b": {
+        "text": "file transfer protocol"
+      },
+      "a": {
+        "text": "file to protect"
+      },
+      "correct": "b",
+      "d": {
+        "text": "none"
+      }
+    },
+    "exam_code": 1404130216
+  },
+  {
+    "subject": "Aptitude",
+    "question": {
+      "text": "NAND and NOR gate are called universal gate because they ..........(Ans B)"
+    },
+    "marks": 1,
+    "exam_category": "BE-IOE",
+    "answer": {
+      "c": {
+        "text": "are widely used in integrated circuit"
+      },
+      "b": {
+        "text": "can be combined to produced OR, and and Not"
+      },
+      "a": {
+        "text": "are universally availlabe"
+      },
+      "correct": "b",
+      "d": {
+        "text": "can be easily manufactured. SECTION —II Select the all alternatives [55 x 2=110]"
+      }
+    },
+    "exam_code": 1404130216
+  }
+]
