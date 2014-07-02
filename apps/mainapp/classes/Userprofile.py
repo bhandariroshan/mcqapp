@@ -6,7 +6,7 @@ class UserProfile():
     def __init__ (self):        
         self.db_object = MongoConnection("localhost",27017,'mcq')
         self.table_name = 'userprofile'
-        self.db_object.create_table(self.table_name,'_id')
+        self.db_object.create_table(self.table_name,'username')
 
     def save_user(self, user={}):
         self.db_object.insert_one(self.table_name, user)
