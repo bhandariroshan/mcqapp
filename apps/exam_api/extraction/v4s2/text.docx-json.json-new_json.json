@@ -4,7 +4,7 @@
     "exam_code": 1404125083,
     "subject": "Mathematics",
     "question": {
-      "text": "The general values of x in the equation 2sin2x = sinx is"
+      "text": "The general value of x in the equation 2sin2x = sinx is"
     },
     "answer": {
       "correct": "d",
@@ -774,7 +774,7 @@
         "text": "$ \\frac{0.287}{\\sqrt{v}} A^o $"
       },
       "d": {
-        "text": "$ $ \\frac{0.202}{\\sqrt{v}} A^o $ $"
+        "text": "$ \\frac{0.202}{\\sqrt{v}} A^o $"
       },
       "b": {
         "text": "$ \\frac{12.27}{\\sqrt{v}} A^o $"
@@ -860,13 +860,13 @@
     "answer": {
       "correct": "c",
       "c": {
-        "text": "40m1"
+        "text": "40ml"
       },
       "a": {
-        "text": "30m1"
+        "text": "30ml"
       },
       "d": {
-        "text": "45m1"
+        "text": "45ml"
       },
       "b": {
         "text": "35ml"
@@ -970,7 +970,7 @@
     "exam_code": 1404125083,
     "subject": "Chemistry",
     "question": {
-      "text": "Which of this Cannot give N $ _{2} $ gas on heating?"
+      "text": "Which of this Cannot give N $ _{2} $  gas on heating?"
     },
     "answer": {
       "correct": "a",
