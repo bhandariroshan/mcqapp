@@ -113,16 +113,24 @@ def load_modelquestion_in_database(request):
     the function is used to load fake data in question collection
     of mcq database in mongodb
     '''
-    # for var in range(301,303):
-    #     f = open('apps/exam_api/' + str(var) +'.json', 'rb')
-    #     json_obj = json.loads(f.read())
-    #     for i, x in enumerate(json_obj):
-    #         x['question_number'] = i + 1
-    #     question_api = QuestionApi()
-    #     question_api.insert_new_question(json_obj)
+    for var in range(201, 206):
+        f = open('apps/exam_api/' + str(var) + '.json', 'rb')
+        json_obj = json.loads(f.read())
+        for i, x in enumerate(json_obj):
+            x['question_number'] = i + 1
+        question_api = QuestionApi()
+        question_api.insert_new_question(json_obj)
+
+    for var in range(301, 303):
+        f = open('apps/exam_api/' + str(var) + '.json', 'rb')
+        json_obj = json.loads(f.read())
+        for i, x in enumerate(json_obj):
+            x['question_number'] = i + 1
+        question_api = QuestionApi()
+        question_api.insert_new_question(json_obj)
 
     for var in range(1, 11):
-        if var == 5 or var == 6:
+        if var == 6:
             continue
         f = open(settings.APP_ROOT + '/apps/exam_api/extraction/v4s' +
                  str(var) + '/text.docx-json.json-new_json.json', 'rb')
