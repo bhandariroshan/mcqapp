@@ -114,7 +114,9 @@ def load_modelquestion_in_database(request):
     of mcq database in mongodb
     '''
     for var in range(201, 206):
-        f = open('apps/exam_api/' + str(var) + '.json', 'rb')
+        f = open(
+            settings.APP_ROOT + 'apps/exam_api/' + str(var) + '.json', 'rb'
+        )
         json_obj = json.loads(f.read())
         for i, x in enumerate(json_obj):
             x['question_number'] = i + 1
@@ -122,7 +124,9 @@ def load_modelquestion_in_database(request):
         question_api.insert_new_question(json_obj)
 
     for var in range(301, 303):
-        f = open('apps/exam_api/' + str(var) + '.json', 'rb')
+        f = open(
+            settings.APP_ROOT + 'apps/exam_api/' + str(var) + '.json', 'rb'
+        )
         json_obj = json.loads(f.read())
         for i, x in enumerate(json_obj):
             x['question_number'] = i + 1
