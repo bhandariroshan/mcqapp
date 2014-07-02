@@ -81,7 +81,7 @@
     "exam_code": 1404130263,
     "answer": {
       "c": {
-        "text": "$ \\frac {180}{\\pi} $"
+        "text": "$ \\frac {\\pi}{180} $"
       },
       "correct": "a",
       "d": {
@@ -112,7 +112,7 @@
         "text": "– sech x tanhx"
       },
       "b": {
-        "text": "tanh $ ^{2} $ x"
+        "text": "sech $ ^{2} $ x"
       },
       "a": {
         "text": "sech x tanhx"
@@ -187,7 +187,7 @@
         "text": "K = $± \\sqrt 6 $"
       },
       "a": {
-        "text": "K = $ ± \\frac {1} {\\sqrt 6}%"
+        "text": "K = $ ± \\frac {1} {\\sqrt 6} $"
       }
     }
   },
@@ -196,22 +196,22 @@
     "exam_category": "BE-IOE",
     "marks": 1,
     "question": {
-      "text": "The vector equation of st. line passing through a given point whose position vector is $ \\overrightarrow{a} $ and parallel to vector $ \\overrightarrow{a}$ is (where $ \\overrightarrow{r}$ is the position vector of points on st. line and t is scalar.)"
+      "text": "The vector equation of st. line passing through a given point whose position vector is $ \\vec{a} $ and parallel to vector $ \\vec{a}$ is (where $ \\vec{r}$ is the position vector of points on st. line and t is scalar.)"
     },
     "exam_code": 1404130263,
     "answer": {
       "c": {
-        "text": "$ \\overrightarrow{r} = \\overrightarrow{b} + t\\overrightarrow{a} $"
+        "text": "$ \\vec{r} = \\vec{b} + t\\vec{a} $"
       },
       "correct": "b",
       "d": {
-        "text": "$ \\overrightarrow{r} = t\\overrightarrow{a} + \\overrightarrow{b} $"
+        "text": "$ \\vec{r} = t\\vec{a} + \\vec{b} $"
       },
       "b": {
-        "text": "$ \\overrightarrow{r} = \\overrightarrow{a} + t\\overrightarrow{b} $"
+        "text": "$ \\vec{r} = \\vec{a} + t\\vec{b} $"
       },
       "a": {
-        "text": "$ \\overrightarrow{r} = (1-t)\\overrightarrow{a} + t\\overrightarrow{b} $"
+        "text": "$ \\vec{r} = (1-t)\\vec{a} + t\\vec{b} $"
       }
     }
   },
@@ -220,7 +220,7 @@
     "exam_category": "BE-IOE",
     "marks": 1,
     "question": {
-      "text": "The polar equation r sinq = 5 represents"
+      "text": "The polar equation r sin $ \\theta $ = 5 represents"
     },
     "exam_code": 1404130263,
     "answer": {
@@ -508,7 +508,7 @@
     "exam_category": "BE-IOE",
     "marks": 1,
     "question": {
-      "text": "The became obliged _________ our favour."
+      "text": "They became obliged _________ our favour."
     },
     "exam_code": 1404130263,
     "answer": {
@@ -609,14 +609,14 @@
     "exam_code": 1404130263,
     "answer": {
       "c": {
-        "text": "5/12R"
+        "text": "5/12 R"
       },
       "correct": "b",
       "d": {
         "text": "5/6 R"
       },
       "b": {
-        "text": "1.45R"
+        "text": "1.45 R"
       },
       "a": {
         "text": "2.45 R"
@@ -628,7 +628,7 @@
     "exam_category": "BE-IOE",
     "marks": 1,
     "question": {
-      "text": "If $ \\overrightarrow{A}.\\overrightarrow{B} = \\frac {\\sqrt 3}{2}AB $,  the angle between vectors A and B must be"
+      "text": "If $ \\vec{A}.\\vec{B} = \\frac {\\sqrt 3}{2}AB $,  the angle between vectors A and B must be"
     },
     "exam_code": 1404130263,
     "answer": {
@@ -667,7 +667,7 @@
         "text": "2"
       },
       "a": {
-        "text": "l"
+        "text": "1"
       }
     }
   },
@@ -681,17 +681,17 @@
     "exam_code": 1404130263,
     "answer": {
       "c": {
-        "text": "V α $ _{d} $  E $ ^{o} $"
+        "text": "V $ _{d} $ E $ ^{o} $"
       },
       "correct": "d",
       "d": {
-        "text": "V α $ _{d} $  E"
+        "text": "V $ _{d} $ α E"
       },
       "b": {
-        "text": "V α $ _{d} $  E $ ^{1/2} $"
+        "text": "V $ _{d} $ E $ ^{1/2} $"
       },
       "a": {
-        "text": "V α $ _{d} $  E $ ^{2} $"
+        "text": "V $ _{d} $ α E $ ^{2} $"
       }
     }
   },
@@ -700,7 +700,7 @@
     "exam_category": "BE-IOE",
     "marks": 1,
     "question": {
-      "text": "The colours of thin films result due to"
+      "text": "The colors of thin films result due to"
     },
     "exam_code": 1404130263,
     "answer": {
@@ -724,7 +724,7 @@
     "exam_category": "BE-IOE",
     "marks": 1,
     "question": {
-      "text": "Two parallel beams of protons are movingin the same direction, then they"
+      "text": "Two parallel beams of protons are moving in the same direction, then they"
     },
     "exam_code": 1404130263,
     "answer": {
@@ -760,7 +760,7 @@
         "text": "increasing the target potential"
       },
       "b": {
-        "text": "decreasing filamnet current"
+        "text": "decreasing filament current"
       },
       "a": {
         "text": "increasing filament current"
@@ -801,17 +801,17 @@
     "exam_code": 1404130263,
     "answer": {
       "c": {
-        "text": "2.5eV"
+        "text": "2.5 eV"
       },
       "correct": "b",
       "d": {
-        "text": "6eV"
+        "text": "6 eV"
       },
       "b": {
-        "text": "3.leV"
+        "text": "3.1 eV"
       },
       "a": {
-        "text": "4eV"
+        "text": "4 eV"
       }
     }
   },
@@ -897,7 +897,7 @@
     "exam_code": 1404130263,
     "answer": {
       "c": {
-        "text": "HC1"
+        "text": "HCl"
       },
       "correct": "d",
       "d": {
@@ -945,17 +945,17 @@
     "exam_code": 1404130263,
     "answer": {
       "c": {
-        "text": "4.48L"
+        "text": "4.48 L"
       },
       "correct": "a",
       "d": {
         "text": "44.8 L"
       },
       "b": {
-        "text": "22.4L"
+        "text": "22.4 L"
       },
       "a": {
-        "text": "2.24L"
+        "text": "2.24 L"
       }
     }
   },
@@ -1089,7 +1089,7 @@
     "exam_code": 1404130263,
     "answer": {
       "c": {
-        "text": "k[NH $ _{4} $ (NO $ _{3} $ ) $ _{2} $ ]"
+        "text": "K[NH $ _{4} $ (NO $ _{3} $ ) $ _{2} $ ]"
       },
       "correct": "b",
       "d": {
@@ -1180,7 +1180,7 @@
     "exam_category": "BE-IOE",
     "marks": 1,
     "question": {
-      "text": "Silver acetylide when heated with HC l gives"
+      "text": "Silver acetylide when heated with HCl gives"
     },
     "exam_code": 1404130263,
     "answer": {
@@ -1281,7 +1281,7 @@
     "exam_code": 1404130263,
     "answer": {
       "c": {
-        "text": "Recycled grease s"
+        "text": "Recycled greases"
       },
       "correct": "d",
       "d": {
@@ -1329,7 +1329,7 @@
     "exam_code": 1404130263,
     "answer": {
       "c": {
-        "text": "mudstore"
+        "text": "mud stone"
       },
       "correct": "b",
       "d": {
