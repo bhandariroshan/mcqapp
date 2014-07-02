@@ -4,6 +4,7 @@ from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi,\
 import datetime
 import time
 from bson.objectid import ObjectId
+import re
 
 
 class ExamHandler():
@@ -34,7 +35,7 @@ class ExamHandler():
         except:
             pass
 
-    def get_filtered_question_from_database(self, query, q_no):
+    def get_filtered_question_from_database(self, exam_code, subject_name):
         '''
         This function returns the questions of a model
         by checking the exam_code
@@ -44,19 +45,16 @@ class ExamHandler():
             exam_model = exammodel_api.find_one_exammodel(
                 {"exam_code": int(exam_code)}
             )
-            question_id_list = [
-                ObjectId(i['id']) for i in exam_model['question_list']
-            ]
+            question_id_list = [ObjectId(i['id']) for i in exam_model['question_list']]
+
             question_api = QuestionApi()
             question_list = question_api.find_all_questions({
-                    '_id': {"$in": question_id_list}, "marks": 1, 
-                    'subject': {"$regex": re.compile(
-                         "^" + str(subject_name) + "$",
-                         re.IGNORECASE), "$options": "-i"},
+                    '_id': {"$in": question_id_list},
+                    'subject': {"$regex": re.compile("^" + str(subject_name) + "$", re.IGNORECASE), "$options": "-i"},
                 })
             sorted_questions = sorted(
                 question_list, key=lambda k: k['question_number'])
-            return sorted_questions[q_no]
+            return sorted_questions
 
         except:
             pass        

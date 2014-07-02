@@ -891,6 +891,7 @@ def show_result(request, exam_code, subject_name):
     subscribed = user_profile_obj.check_subscribed(
         request.user.username, exam_code
     )
+    exam_handler_obj = ExamHandler()
     exam_details = exam_obj.find_one_exammodel(
         {'exam_code': int(exam_code)}
     )
@@ -905,10 +906,8 @@ def show_result(request, exam_code, subject_name):
         question_obj = QuestionApi()
 
         question_id_list = exam_details['question_list']
-
-        questions = question_obj.get_filtered_question_from_database(int(exam_code), q_no)
-        total_questions = question_obj.get_count()
-
+        questions = exam_handler_obj.get_filtered_question_from_database(int(exam_code), subject_name)
+        total_questions = len(questions)       
         try:
             current_q_no = int(request.GET.get('q', ''))
             if current_q_no >= total_questions:
@@ -928,7 +927,9 @@ def show_result(request, exam_code, subject_name):
             current_q_no = total_questions - 1
         if current_q_no <= 0:
             current_q_no = 0
+
         parameters['current_q_no'] = current_q_no
+
         parameters['question_number'] = questions[
             current_q_no]['question_number']
         parameters['question'] = questions[current_q_no]
@@ -943,7 +944,6 @@ def show_result(request, exam_code, subject_name):
             {'exam_code': int(exam_code),
              'useruid': request.user.id}
         )
-        total_questions = question_obj.get_count({"exam_code": int(exam_code)})
 
         try:
             query = {'exam_code': int(exam_code),
