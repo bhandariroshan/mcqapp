@@ -168,16 +168,17 @@ def landing(request):
         except:
             parameters['student_category_set'] = False
 
-        for eachExam in user_exams:
-            up_exm = {}
-            eachExamDetails = exam_model_api.find_one_exammodel(
-                {'exam_code': eachExam}
+        all_valid_exams = exam_model_api.find_all_exammodel_descending(
+                {'exam_code': {'$in': user_exams}}, sort_index='exam_date'
             )
+        for count, eachExamDetails in enumerate(all_valid_exams):
+            up_exm = {}
 
             if eachExamDetails is None:
                 continue
 
-            up_exm['name'] = eachExamDetails.get('exam_name')
+            if eachExamDetails['exam_category'] == 'BE-IOE' and eachExamDetails['exam_family'] == 'DPS':
+                up_exm['name'] = "IOE Practice Exam " + str(len(all_valid_exams) - count)
 
             if 'IDP' in subscription_type:
                 up_exm['subscribed'] = True
