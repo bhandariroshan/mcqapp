@@ -15,7 +15,8 @@ class MongoConnection():
         self.db[table_name].ensure_index([(index, pymongo.GEOSPHERE)])
 
     def create_table(self, table_name, index=None):
-        self.db[table_name].create_index([(index, pymongo.DESCENDING)])
+        pass
+        # self.db[table_name].create_index([(index, pymongo.DESCENDING)])
 
     def get_one(self, table_name, conditions={}):
         single_doc = self.db[table_name].find_one(conditions)
