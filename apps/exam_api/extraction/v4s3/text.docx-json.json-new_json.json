@@ -1,1 +1,1496 @@
-[{"answer": {"a": {"text": "2nπ"}, "d": {"text": "$ \\frac{n\\pi}{2}+(-1)^{n}\\frac{\\pi}{4} $"}, "b": {"text": "$ n\\pi+\\frac{\\pi}{2} $"}, "c": {"text": "$ \\frac{n\\pi}{4} $"}, "correct": "d"}, "exam_code": 1404125125, "question": {"text": "The general values x for the equation sin2x = 1 is"}, "subject": "Mathematics", "marks": 1}, {"answer": {"a": {"text": "–1"}, "d": {"text": "2"}, "b": {"text": "0"}, "c": {"text": "1"}, "correct": "a"}, "exam_code": 1404125125, "question": {"text": "If a and b be the roots of the euqation x $ ^{2} $ + x + 1 = 0 then the value of $ \\frac{1}{\\alpha}+\\frac{1}{\\beta} $  ="}, "subject": "Mathematics", "marks": 1}, {"answer": {"a": {"text": "R = (A ∩ B)"}, "d": {"text": "R ⊂ (A × B)"}, "b": {"text": "R = (A ∪ B)"}, "c": {"text": "R = (A × B)"}, "correct": "d"}, "exam_code": 1404125125, "question": {"text": "If R is a relation from a non empty set A to a non empty set B, then"}, "subject": "Mathematics", "marks": 1}, {"answer": {"a": {"text": "xlog_{5}e"}, "d": {"text": "$ log_5a\\frac{1}{x} $"}, "b": {"text": "$ log_{5}x\\frac{1}{x} $"}, "c": {"text": "$ \\frac{log_{5}e}{x} $"}, "correct": "c"}, "exam_code": 1404125125, "question": {"text": "If Y = log $ _{5} $ x then the value of $ \\frac{dy}{dx} $ ="}, "subject": "Mathematics", "marks": 1}, {"answer": {"a": {"text": "$ \\frac {1}{2} log(2x  ^{2}  + 3) + c $"}, "d": {"text": "$ \\frac {1}{4} log(2x  ^{2}  + 3) + c $"}, "b": {"text": "\\frac {e^{2x^{2}+3}}{2} +c"}, "c": {"text": "2log(2x $ ^{2} $ + 3) + c"}, "correct": "d"}, "exam_code": 1404125125, "question": {"text": "The value of $ \\int \\frac{xdx}{2x^{2}+3} = $"}, "subject": "Mathematics", "marks": 1}, {"answer": {"a": {"text": "1/2"}, "d": {"text": "1"}, "b": {"text": "2"}, "c": {"text": "2/3"}, "correct": "b"}, "exam_code": 1404125125, "question": {"text": "The value of $ \\lim_{x \\rightarrow 1} \\frac{\\tan3x - x}{2x-\\sin x} $ ="}, "subject": "Mathematics", "marks": 1}, {"answer": {"a": {"text": "π/2"}, "d": {"text": "d/π"}, "b": {"text": "π/3"}, "c": {"text": "π"}, "correct": "c"}, "exam_code": 1404125125, "question": {"text": "If $ if \\space  |\\overrightarrow{a}| =1,\\space |\\overrightarrow{b}| =1, \\space |\\overrightarrow{c}| =3 \\space and \\space (\\overrightarrow{a} + \\overrightarrow{b} + \\overrightarrow{c}) = 0  $, then what is the angle between $ \\overrightarrow{b} \\space and \\space  \\overrightarrow{c} $?"}, "subject": "Mathematics", "marks": 1}, {"answer": {"a": {"text": "1"}, "d": {"text": "0"}, "b": {"text": "–1"}, "c": {"text": "2"}, "correct": "d"}, "exam_code": 1404125125, "question": {"text": "If a, b, g are the direction angles of a line then the value of cos2a + cos2b + cos2g ="}, "subject": "Mathematics", "marks": 1}, {"answer": {"a": {"text": "5A"}, "d": {"text": "32A"}, "b": {"text": "10A"}, "c": {"text": "16A"}, "correct": "c"}, "exam_code": 1404125125, "question": {"text": "If A = $ \\begin{bmatrix}2 & 0 & 0 \\\\0 & 2 & 0 \\\\0 &0 & 2 \\end{bmatrix} $ then A $ ^{5} $ ="}, "subject": "Mathematics", "marks": 1}, {"answer": {"a": {"text": "2(area of triangle )"}, "d": {"text": "(area of triangle )"}, "b": {"text": "4(area of triangle )"}, "c": {"text": "3(area of triangle )"}, "correct": "d"}, "exam_code": 1404125125, "question": {"text": "The area of triangle formed by joining the mid points of its sides is"}, "subject": "Mathematics", "marks": 1}, {"answer": {"a": {"text": "to"}, "d": {"text": "do"}, "b": {"text": "sew"}, "c": {"text": "shoe"}, "correct": "d"}, "exam_code": 1404125125, "question": {"text": "The word ‘no’ has the same vowel sound as in ____________"}, "subject": "English", "marks": 1}, {"answer": {"a": {"text": "1 $ ^{st} $"}, "d": {"text": "4 $ ^{th} $"}, "b": {"text": "2 $ ^{nd} $"}, "c": {"text": "3 $ ^{rd} $"}, "correct": "c"}, "exam_code": 1404125125, "question": {"text": "The word ‘disafforest’ has its primary stress on the ____________syllable."}, "subject": "English", "marks": 1}, {"answer": {"a": {"text": "thrashed"}, "d": {"text": "compressed"}, "b": {"text": "forced"}, "c": {"text": "throttled"}, "correct": "b"}, "exam_code": 1404125125, "question": {"text": "The synonym of the word ‘strangled’ is"}, "subject": "English", "marks": 1}, {"answer": {"a": {"text": "uncertain"}, "d": {"text": "divergent"}, "b": {"text": "partial"}, "c": {"text": "discordant"}, "correct": "b"}, "exam_code": 1404125125, "question": {"text": "The antonym of the word ‘unanimous’ is _______"}, "subject": "English", "marks": 1}, {"answer": {"a": {"text": "who"}, "d": {"text": "both a & b"}, "b": {"text": "as"}, "c": {"text": "that"}, "correct": "c"}, "exam_code": 1404125125, "question": {"text": "This is the same beggar_________ came yesterday."}, "subject": "English", "marks": 1}, {"answer": {"a": {"text": "had hoped"}, "d": {"text": "both a & b."}, "b": {"text": "hoped"}, "c": {"text": "thought"}, "correct": "a"}, "exam_code": 1404125125, "question": {"text": "We __________ that you would this problem."}, "subject": "English", "marks": 1}, {"answer": {"a": {"text": "as"}, "d": {"text": "none of these"}, "b": {"text": "to be"}, "c": {"text": "to have been"}, "correct": "b"}, "exam_code": 1404125125, "question": {"text": "He was appointed______________ principal."}, "subject": "English", "marks": 1}, {"answer": {"a": {"text": "S+V $ _{t} $ +O $ _{1} $ +O $ _{D} $"}, "d": {"text": "S + aux. V. + V $ _{i} $ + O $ _{1} $ + O $ _{D} $"}, "b": {"text": "S+V $ _{t} $ +O $ _{1} $ +C"}, "c": {"text": "S + V $ _{t} $ + O $ _{D} $ + noun phrase"}, "correct": "a"}, "exam_code": 1404125125, "question": {"text": "The pattern for the sentence ‘Sandhya has made Mike an excellent wife’ is"}, "subject": "English", "marks": 1}, {"answer": {"a": {"text": "realize"}, "d": {"text": "will realize"}, "b": {"text": "realized"}, "c": {"text": "have realized"}, "correct": "b"}, "exam_code": 1404125125, "question": {"text": "It’s high time you ________________ that you’re not the most important person in the world."}, "subject": "English", "marks": 1}, {"answer": {"a": {"text": "were"}, "d": {"text": "had"}, "b": {"text": "was"}, "c": {"text": "have been"}, "correct": "d"}, "exam_code": 1404125125, "question": {"text": "More than one example ________________ given."}, "subject": "English", "marks": 1}, {"answer": {"a": {"text": "to"}, "d": {"text": "of"}, "b": {"text": "with"}, "c": {"text": "for"}, "correct": "a"}, "exam_code": 1404125125, "question": {"text": "We are answerable ________________ our parents for our conduct."}, "subject": "English", "marks": 1}, {"answer": {"a": {"text": "We get interested in these stories."}, "d": {"text": "We have been interested by these stories"}, "b": {"text": "We are interested by these stories"}, "c": {"text": "We are interested in those stories."}, "correct": "d"}, "exam_code": 1404125125, "question": {"text": "‘These stories interest us.’ Its passive is __________"}, "subject": "English", "marks": 1}, {"answer": {"a": {"text": "lot of"}, "d": {"text": "a few"}, "b": {"text": "a lot of"}, "c": {"text": "few"}, "correct": "b"}, "exam_code": 1404125125, "question": {"text": "He is so bad-tempered that he has ____________"}, "subject": "English", "marks": 1}, {"answer": {"a": {"text": "I tell you the secret."}, "d": {"text": "You would be told the secret."}, "b": {"text": "I would tell you the secret"}, "c": {"text": "I will tell you the secret"}, "correct": "b"}, "exam_code": 1404125125, "question": {"text": "See me tomorrow and......................"}, "subject": "English", "marks": 1}, {"answer": {"a": {"text": "No sooner ___then"}, "d": {"text": "both b & c"}, "b": {"text": "Hardly __when"}, "c": {"text": "Scarcely ___when"}, "correct": "b"}, "exam_code": 1404125125, "question": {"text": "__________ had she reached home ___________it started raining heavily."}, "subject": "English", "marks": 1}, {"answer": {"a": {"text": "d"}, "d": {"text": "d/4"}, "b": {"text": "2d"}, "c": {"text": "d/2"}, "correct": "d"}, "exam_code": 1404125125, "question": {"text": "A baseball player can thrown a ball a maximum distance ‘d’ over the ground. Tha maximum vertical height to which he can throw is:"}, "subject": "Physics", "marks": 1}, {"answer": {"a": {"text": "$ \\frac {v^{2}}{2 \\mu_sg} $"}, "d": {"text": "$ \\frac {v}{2 \\mu_s} $"}, "b": {"text": "$ \\frac {v}{2 \\mu_sg} $"}, "c": {"text": "$ (\\frac {v}{2 \\mu_sg})^2 $"}, "correct": "c"}, "exam_code": 1404125125, "question": {"text": "A car is moving along a level road with a speed ‘v’. If the coefficient of static friction between the tyres and the road is the shortest distance in which the car can be stopped is:"}, "subject": "Physics", "marks": 1}, {"answer": {"a": {"text": "decreases slightly"}, "d": {"text": "increases considerably"}, "b": {"text": "increases slightly"}, "c": {"text": "remain same"}, "correct": "a"}, "exam_code": 1404125125, "question": {"text": "Some quantity of tap water is placed in an open pan and allowed to evaporate. After some time the temperature of water."}, "subject": "Physics", "marks": 1}, {"answer": {"a": {"text": "both cool at same rate"}, "d": {"text": "cube cool faster than sphere"}, "b": {"text": "cube cool faster than sphere"}, "c": {"text": "sphere cools down slower than cube"}, "correct": "c"}, "exam_code": 1404125125, "question": {"text": "A cube and sphere of same material have equal surface areas, both are at the same temperature 120°C, then:"}, "subject": "Physics", "marks": 1}, {"answer": {"a": {"text": "v"}, "d": {"text": "may be greater or less depending on humidity"}, "b": {"text": "greater than v"}, "c": {"text": "less than v"}, "correct": "b"}, "exam_code": 1404125125, "question": {"text": "The speed of sound in helium is 'v'. The speed of sound in humid helium in the same temperature is:"}, "subject": "Physics", "marks": 1}, {"answer": {"a": {"text": "maximum for red colour"}, "d": {"text": "same for all colours"}, "b": {"text": "maximum for violet colour"}, "c": {"text": "maximum for yellow colour"}, "correct": "d"}, "exam_code": 1404125125, "question": {"text": "The focal length of the concave mirror is:"}, "subject": "Physics", "marks": 1}, {"answer": {"a": {"text": "n $ ^{2} $ : 1"}, "d": {"text": "$ \\frac {1}{n^2} $"}, "b": {"text": "1:n"}, "c": {"text": "n"}, "correct": "a"}, "exam_code": 1404125125, "question": {"text": "n equal capacitor are first connected in series and then in parallel. The ratio of maximum and minimum capacitance is:"}, "subject": "Physics", "marks": 1}, {"answer": {"a": {"text": "increasing emf of cell"}, "d": {"text": "decreasing emf"}, "b": {"text": "increasing length of potentiometer wire"}, "c": {"text": "decreasing length of wire"}, "correct": "b"}, "exam_code": 1404125125, "question": {"text": "The sensitivity of potentiometer can be increased by:"}, "subject": "Physics", "marks": 1}, {"answer": {"a": {"text": "atomic state"}, "d": {"text": "bulk state"}, "b": {"text": "molecular state"}, "c": {"text": "nuclear state"}, "correct": "a"}, "exam_code": 1404125125, "question": {"text": "The line of spectrum is obtained whenever the incandescent vapours at low pressure of the excited substance are in their:"}, "subject": "Physics", "marks": 1}, {"answer": {"a": {"text": "electrons"}, "d": {"text": "positive & negative ions"}, "b": {"text": "holes"}, "c": {"text": "electrons & holes"}, "correct": "b"}, "exam_code": 1404125125, "question": {"text": "In a P type of semi-conductor, the electrical conduction is due to:"}, "subject": "Physics", "marks": 1}, {"answer": {"a": {"text": "0.25 N $ _{A} $"}, "d": {"text": "N $ _{A} $"}, "b": {"text": "0.5N $ _{A} $"}, "c": {"text": "0.75N $ _{A} $"}, "correct": "b"}, "exam_code": 1404125125, "question": {"text": "The number of electrons present in 1 gram of Helium is"}, "subject": "Chemistry", "marks": 1}, {"answer": {"a": {"text": "MCl"}, "d": {"text": "MCl $ _{4} $"}, "b": {"text": "MCl $ _{2} $"}, "c": {"text": "MCl $ _{3} $"}, "correct": "c"}, "exam_code": 1404125125, "question": {"text": "The equivalent weight of a metal is 25. The vapour density of its chloride is 91. The formula of the metal chlori chloride is"}, "subject": "Chemistry", "marks": 1}, {"answer": {"a": {"text": "0.40gm"}, "d": {"text": "0.28gm"}, "b": {"text": "0.36 gm"}, "c": {"text": "0.32 gm"}, "correct": "c"}, "exam_code": 1404125125, "question": {"text": "The mass of NaOH required to reduce the strength of 100 cc of HCl to HCl is :"}, "subject": "Chemistry", "marks": 1}, {"answer": {"a": {"text": "3"}, "d": {"text": "6"}, "b": {"text": "4"}, "c": {"text": "5"}, "correct": "b"}, "exam_code": 1404125125, "question": {"text": "The number of unpaired electrons in Fe $ ^{++} $ ions is"}, "subject": "Chemistry", "marks": 1}, {"answer": {"a": {"text": "SiO $ _{2} $"}, "d": {"text": "Cl $ _{2} $ O $ _{7} $"}, "b": {"text": "P $ _{2} $ O $ _{5} $"}, "c": {"text": "SO $ _{3} $"}, "correct": "d"}, "exam_code": 1404125125, "question": {"text": "Which of this is most acidic oxide?"}, "subject": "Chemistry", "marks": 1}, {"answer": {"a": {"text": "CH $ _{4} $ , CH $ _{3} $"}, "d": {"text": "H $ _{2} $ , H $ ^{+} $"}, "b": {"text": "H $ _{3} $ O $ ^{+} $ , OH $ ^{–} $"}, "c": {"text": "CH $ _{3} $ OH, CH $ _{3} $ O $ ^{+} $"}, "correct": "c"}, "exam_code": 1404125125, "question": {"text": "Which of these pair represents conjugate acid and base?"}, "subject": "Chemistry", "marks": 1}, {"answer": {"a": {"text": "sp"}, "d": {"text": "dsp $ ^{2} $"}, "b": {"text": "sp $ ^{2} $"}, "c": {"text": "sp $ ^{3} $"}, "correct": "c"}, "exam_code": 1404125125, "question": {"text": "The type of hybridization on sulphur atom of sulphite ion is"}, "subject": "Chemistry", "marks": 1}, {"answer": {"a": {"text": "N $ _{2} $"}, "d": {"text": "NO"}, "b": {"text": "H $ _{2} $"}, "c": {"text": "N $ _{2} $ O"}, "correct": "b"}, "exam_code": 1404125125, "question": {"text": "A gas formed by passing ammonia over heated sodium metal is"}, "subject": "Chemistry", "marks": 1}, {"answer": {"a": {"text": "HF"}, "d": {"text": "HI"}, "b": {"text": "Rd"}, "c": {"text": "HBr"}, "correct": "d"}, "exam_code": 1404125125, "question": {"text": "Which of this is most reducing?"}, "subject": "Chemistry", "marks": 1}, {"answer": {"a": {"text": "German silver"}, "d": {"text": "Invar"}, "b": {"text": "Rold gold"}, "c": {"text": "Constantan"}, "correct": "d"}, "exam_code": 1404125125, "question": {"text": "Which of this is not an alloy of copper?"}, "subject": "Chemistry", "marks": 1}, {"answer": {"a": {"text": "Fe"}, "d": {"text": "graphite"}, "b": {"text": "Pt"}, "c": {"text": "Hg"}, "correct": "c"}, "exam_code": 1404125125, "question": {"text": "The cathode used during manufacture of NaOH by Castner - Kellener’s process is"}, "subject": "Chemistry", "marks": 1}, {"answer": {"a": {"text": "pig iron"}, "d": {"text": "wrought iron"}, "b": {"text": "cast iron"}, "c": {"text": "steel"}, "correct": "d"}, "exam_code": 1404125125, "question": {"text": "The purest form of iron is"}, "subject": "Chemistry", "marks": 1}, {"answer": {"a": {"text": "H $ _{3} $ O"}, "d": {"text": "NH $ _{3} $"}, "b": {"text": "SO $ _{2} $"}, "c": {"text": "CO $ _{2} $"}, "correct": "d"}, "exam_code": 1404125125, "question": {"text": "Which of this is a nucleophile?"}, "subject": "Chemistry", "marks": 1}, {"answer": {"a": {"text": "3"}, "d": {"text": "9"}, "b": {"text": "5"}, "c": {"text": "7"}, "correct": "d"}, "exam_code": 1404125125, "question": {"text": "The total number of chain isomers of the formula C $ _{7} $ H $ _{16} $ is"}, "subject": "Chemistry", "marks": 1}, {"answer": {"a": {"text": "oxalic acid"}, "d": {"text": "acetaldehyde"}, "b": {"text": "acetone"}, "c": {"text": "glyoxal"}, "correct": "c"}, "exam_code": 1404125125, "question": {"text": "The product formed by ozonolysis of benzene is"}, "subject": "Chemistry", "marks": 1}, {"answer": {"a": {"text": "injector"}, "d": {"text": "none"}, "b": {"text": "governor"}, "c": {"text": "carburetor"}, "correct": "c"}, "exam_code": 1404125125, "question": {"text": "The component used for controlling airfuel ratio in petrol engine is known as"}, "subject": "Aptitude", "marks": 1}, {"answer": {"a": {"text": "spark plug"}, "d": {"text": "battery"}, "b": {"text": "fuel injector"}, "c": {"text": "carburetor"}, "correct": "a"}, "exam_code": 1404125125, "question": {"text": "With the help of a .......... the charge is ignited in a petrol engine."}, "subject": "Aptitude", "marks": 1}, {"answer": {"a": {"text": "break horse power"}, "d": {"text": "none"}, "b": {"text": "indicated horse power"}, "c": {"text": "frictional horse power"}, "correct": "a"}, "exam_code": 1404125125, "question": {"text": "The power available at the shaft of an IC engine is known as"}, "subject": "Aptitude", "marks": 1}, {"answer": {"a": {"text": "Kinetic"}, "d": {"text": "Electrical"}, "b": {"text": "Mechanical"}, "c": {"text": "Potential"}, "correct": "a"}, "exam_code": 1404125125, "question": {"text": "During hydropower generation, the intermediate energy formed is"}, "subject": "Aptitude", "marks": 1}, {"answer": {"a": {"text": "ornamental design"}, "d": {"text": "earth quake resisting building"}, "b": {"text": "thermal insulation"}, "c": {"text": "reduction in cost"}, "correct": "b"}, "exam_code": 1404125125, "question": {"text": "Hollow bricks are used for"}, "subject": "Aptitude", "marks": 1}, {"answer": {"a": {"text": "10 min"}, "d": {"text": "10 hour"}, "b": {"text": "30 min"}, "c": {"text": "1 hours"}, "correct": "b"}, "exam_code": 1404125125, "question": {"text": "The initial setting time for Ordinary Portland cement is"}, "subject": "Aptitude", "marks": 1}, {"answer": {"a": {"text": "increase initial setting time"}, "d": {"text": "increase compressive strength"}, "b": {"text": "increase bond strength"}, "c": {"text": "decrease initial setting time"}, "correct": "a"}, "exam_code": 1404125125, "question": {"text": "Gypsum is added in cement to"}, "subject": "Aptitude", "marks": 1}, {"answer": {"a": {"text": "increase"}, "d": {"text": "does not change"}, "b": {"text": "decreases"}, "c": {"text": "may increase or decrease"}, "correct": "b"}, "exam_code": 1404125125, "question": {"text": "In series combination of electrical appliances, total electrical power........"}, "subject": "Aptitude", "marks": 1}, {"answer": {"a": {"text": "Live wire"}, "d": {"text": "None"}, "b": {"text": "Neutral wire"}, "c": {"text": "Earth wire"}, "correct": "a"}, "exam_code": 1404125125, "question": {"text": "A fuse wire is always inserted in the"}, "subject": "Aptitude", "marks": 1}, {"answer": {"a": {"text": "Transfer electrical energy"}, "d": {"text": "None of the above"}, "b": {"text": "Insulate windings"}, "c": {"text": "Cool the windings"}, "correct": "c"}, "exam_code": 1404125125, "question": {"text": "Oil in transformer is used to"}, "subject": "Aptitude", "marks": 1}, {"answer": {"a": {"text": "Ohm/m $ ^{2} $"}, "d": {"text": "Ohm/m $ ^{3} $"}, "b": {"text": "Ohm-m"}, "c": {"text": "Ohm m $ ^{3} $"}, "correct": "b"}, "exam_code": 1404125125, "question": {"text": "The unit of specific resistance is"}, "subject": "Aptitude", "marks": 1}, {"answer": {"a": {"text": "same"}, "d": {"text": "I don't know"}, "b": {"text": "distinct"}, "c": {"text": "similar"}, "correct": "b"}, "exam_code": 1404125125, "question": {"text": "IP of each computer in any network is............"}, "subject": "Aptitude", "marks": 1}, {"answer": {"a": {"text": "dissipate maximum power"}, "d": {"text": "should have law resistance"}, "b": {"text": "supplier of charge carriers"}, "c": {"text": "receives the input"}, "correct": "b"}, "exam_code": 1404125125, "question": {"text": "The emitter of transistor is doped the heaviest because it........."}, "subject": "Aptitude", "marks": 1}, {"answer": {"a": {"text": "NAND and NOR"}, "d": {"text": "NOT and OR"}, "b": {"text": "NAND and AND"}, "c": {"text": "XOR and OR"}, "correct": "a"}, "exam_code": 1404125125, "question": {"text": "Which of the following can act as building block of other gates?"}, "subject": "Aptitude", "marks": 1}, {"answer": {"a": {"text": "8 bit"}, "d": {"text": "16 bit"}, "b": {"text": "10 bit"}, "c": {"text": "12 bit"}, "correct": "d"}, "exam_code": 1404125125, "question": {"text": "For a sixteen bit system, one word is equal to"}, "subject": "Aptitude", "marks": 1}]
+[{
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "$ \\frac{n\\pi}{2}+(-1)^{n}\\frac{\\pi}{4} $"
+        },
+        "correct": "d",
+        "a": {
+            "text": "2nπ"
+        },
+        "c": {
+            "text": "$ \\frac{n\\pi}{4} $"
+        },
+        "b": {
+            "text": "$ n\\pi+\\frac{\\pi}{2} $"
+        }
+    },
+    "marks": 1,
+    "subject": "Mathematics",
+    "question": {
+        "text": "The general values x for the equation sin2x = 1 is"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "2"
+        },
+        "correct": "a",
+        "a": {
+            "text": "–1"
+        },
+        "c": {
+            "text": "1"
+        },
+        "b": {
+            "text": "0"
+        }
+    },
+    "marks": 1,
+    "subject": "Mathematics",
+    "question": {
+        "text": "If $ \\alpha $ and $ \\beta $ be the roots of the euqation x $ ^{2} $ + x + 1 = 0 then the value of $ \\frac{1}{\\alpha}+\\frac{1}{\\beta} $  ="
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "R ⊂ (A × B)"
+        },
+        "correct": "d",
+        "a": {
+            "text": "R = (A ∩ B)"
+        },
+        "c": {
+            "text": "R = (A × B)"
+        },
+        "b": {
+            "text": "R = (A ∪ B)"
+        }
+    },
+    "marks": 1,
+    "subject": "Mathematics",
+    "question": {
+        "text": "If R is a relation from a non empty set A to a non empty set B, then"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "$ log_5a\\frac{1}{x} $"
+        },
+        "correct": "c",
+        "a": {
+            "text": "$xlog_{5}e$"
+        },
+        "c": {
+            "text": "$ \\frac{log_{5}e}{x} $"
+        },
+        "b": {
+            "text": "$ log_{5}x\\frac{1}{x} $"
+        }
+    },
+    "marks": 1,
+    "subject": "Mathematics",
+    "question": {
+        "text": "If Y = log $ _{5} $ x then the value of $ \\frac{dy}{dx} $ ="
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "$ \\frac {1}{4} log(2x  ^{2}  + 3) + c $"
+        },
+        "correct": "d",
+        "a": {
+            "text": "$ \\frac {1}{2} log(2x  ^{2}  + 3) + c $"
+        },
+        "c": {
+            "text": "2log(2x $ ^{2} $ + 3) + c"
+        },
+        "b": {
+            "text": "$ \\frac {e^{2x^{2}+3}}{2} $ +c"
+        }
+    },
+    "marks": 1,
+    "subject": "Mathematics",
+    "question": {
+        "text": "The value of $ \\int \\frac{xdx}{2x^{2}+3} = $"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "1"
+        },
+        "correct": "b",
+        "a": {
+            "text": "1/2"
+        },
+        "c": {
+            "text": "2/3"
+        },
+        "b": {
+            "text": "2"
+        }
+    },
+    "marks": 1,
+    "subject": "Mathematics",
+    "question": {
+        "text": "The value of $ \\lim_{x \\rightarrow 1} \\frac{\\tan3x - x}{2x-\\sin x} $ ="
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "2/π"
+        },
+        "correct": "c",
+        "a": {
+            "text": "π/2"
+        },
+        "c": {
+            "text": "π"
+        },
+        "b": {
+            "text": "π/3"
+        }
+    },
+    "marks": 1,
+    "subject": "Mathematics",
+    "question": {
+        "text": "If $ if \\space  |\\overrightarrow{a}| =1,\\space |\\overrightarrow{b}| =1, \\space |\\overrightarrow{c}| =3 \\space and \\space (\\overrightarrow{a} + \\overrightarrow{b} + \\overrightarrow{c}) = 0  $, then what is the angle between $ \\overrightarrow{b} \\space and \\space  \\overrightarrow{c} $?"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "0"
+        },
+        "correct": "d",
+        "a": {
+            "text": "1"
+        },
+        "c": {
+            "text": "2"
+        },
+        "b": {
+            "text": "–1"
+        }
+    },
+    "marks": 1,
+    "subject": "Mathematics",
+    "question": {
+        "text": "If a, b, g are the direction angles of a line then the value of cos2a + cos2b + cos2g ="
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "32A"
+        },
+        "correct": "c",
+        "a": {
+            "text": "5A"
+        },
+        "c": {
+            "text": "16A"
+        },
+        "b": {
+            "text": "10A"
+        }
+    },
+    "marks": 1,
+    "subject": "Mathematics",
+    "question": {
+        "text": "If A = $ \\begin{bmatrix}2 & 0 & 0 \\\\0 & 2 & 0 \\\\0 &0 & 2 \\end{bmatrix} $ then A $ ^{5} $ ="
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "1/4(area of triangle )"
+        },
+        "correct": "d",
+        "a": {
+            "text": "2(area of triangle )"
+        },
+        "c": {
+            "text": "3(area of triangle )"
+        },
+        "b": {
+            "text": "4(area of triangle )"
+        }
+    },
+    "marks": 1,
+    "subject": "Mathematics",
+    "question": {
+        "text": "The area of triangle formed by joining the mid points of its sides is"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "do"
+        },
+        "correct": "d",
+        "a": {
+            "text": "to"
+        },
+        "c": {
+            "text": "shoe"
+        },
+        "b": {
+            "text": "sew"
+        }
+    },
+    "marks": 1,
+    "subject": "English",
+    "question": {
+        "text": "The word ‘no’ has the same vowel sound as in ____________"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "4 $ ^{th} $"
+        },
+        "correct": "c",
+        "a": {
+            "text": "1 $ ^{st} $"
+        },
+        "c": {
+            "text": "3 $ ^{rd} $"
+        },
+        "b": {
+            "text": "2 $ ^{nd} $"
+        }
+    },
+    "marks": 1,
+    "subject": "English",
+    "question": {
+        "text": "The word ‘disafforest’ has its primary stress on the ____________syllable."
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "compressed"
+        },
+        "correct": "b",
+        "a": {
+            "text": "thrashed"
+        },
+        "c": {
+            "text": "throttled"
+        },
+        "b": {
+            "text": "forced"
+        }
+    },
+    "marks": 1,
+    "subject": "English",
+    "question": {
+        "text": "The synonym of the word ‘strangled’ is"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "divergent"
+        },
+        "correct": "b",
+        "a": {
+            "text": "uncertain"
+        },
+        "c": {
+            "text": "discordant"
+        },
+        "b": {
+            "text": "partial"
+        }
+    },
+    "marks": 1,
+    "subject": "English",
+    "question": {
+        "text": "The antonym of the word ‘unanimous’ is _______"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "both a & b"
+        },
+        "correct": "c",
+        "a": {
+            "text": "who"
+        },
+        "c": {
+            "text": "that"
+        },
+        "b": {
+            "text": "as"
+        }
+    },
+    "marks": 1,
+    "subject": "English",
+    "question": {
+        "text": "This is the same beggar_________ came yesterday."
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "both a & b."
+        },
+        "correct": "a",
+        "a": {
+            "text": "had hoped"
+        },
+        "c": {
+            "text": "thought"
+        },
+        "b": {
+            "text": "hoped"
+        }
+    },
+    "marks": 1,
+    "subject": "English",
+    "question": {
+        "text": "We __________ that you would this problem."
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "none of these"
+        },
+        "correct": "b",
+        "a": {
+            "text": "as"
+        },
+        "c": {
+            "text": "to have been"
+        },
+        "b": {
+            "text": "to be"
+        }
+    },
+    "marks": 1,
+    "subject": "English",
+    "question": {
+        "text": "He was appointed______________ principal."
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "S + aux. V. + V $ _{i} $ + O $ _{1} $ + O $ _{D} $"
+        },
+        "correct": "a",
+        "a": {
+            "text": "S+V $ _{t} $ +O $ _{1} $ +O $ _{D} $"
+        },
+        "c": {
+            "text": "S + V $ _{t} $ + O $ _{D} $ + noun phrase"
+        },
+        "b": {
+            "text": "S+V $ _{t} $ +O $ _{1} $ +C"
+        }
+    },
+    "marks": 1,
+    "subject": "English",
+    "question": {
+        "text": "The pattern for the sentence ‘Sandhya has made Mike an excellent wife’ is"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "will realize"
+        },
+        "correct": "b",
+        "a": {
+            "text": "realize"
+        },
+        "c": {
+            "text": "have realized"
+        },
+        "b": {
+            "text": "realized"
+        }
+    },
+    "marks": 1,
+    "subject": "English",
+    "question": {
+        "text": "It’s high time you ________________ that you’re not the most important person in the world."
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "had"
+        },
+        "correct": "d",
+        "a": {
+            "text": "were"
+        },
+        "c": {
+            "text": "have been"
+        },
+        "b": {
+            "text": "was"
+        }
+    },
+    "marks": 1,
+    "subject": "English",
+    "question": {
+        "text": "More than one example ________________ given."
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "of"
+        },
+        "correct": "a",
+        "a": {
+            "text": "to"
+        },
+        "c": {
+            "text": "for"
+        },
+        "b": {
+            "text": "with"
+        }
+    },
+    "marks": 1,
+    "subject": "English",
+    "question": {
+        "text": "We are answerable ________________ our parents for our conduct."
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "We have been interested by these stories"
+        },
+        "correct": "d",
+        "a": {
+            "text": "We get interested in these stories."
+        },
+        "c": {
+            "text": "We are interested in those stories."
+        },
+        "b": {
+            "text": "We are interested by these stories"
+        }
+    },
+    "marks": 1,
+    "subject": "English",
+    "question": {
+        "text": "‘These stories interest us.’ Its passive is __________"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "a few"
+        },
+        "correct": "b",
+        "a": {
+            "text": "lot of"
+        },
+        "c": {
+            "text": "few"
+        },
+        "b": {
+            "text": "a lot of"
+        }
+    },
+    "marks": 1,
+    "subject": "English",
+    "question": {
+        "text": "He is so bad-tempered that he has ____________"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "You would be told the secret."
+        },
+        "correct": "b",
+        "a": {
+            "text": "I tell you the secret."
+        },
+        "c": {
+            "text": "I will tell you the secret"
+        },
+        "b": {
+            "text": "I would tell you the secret"
+        }
+    },
+    "marks": 1,
+    "subject": "English",
+    "question": {
+        "text": "See me tomorrow and......................"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "both b & c"
+        },
+        "correct": "b",
+        "a": {
+            "text": "No sooner ___then"
+        },
+        "c": {
+            "text": "Scarcely ___when"
+        },
+        "b": {
+            "text": "Hardly __when"
+        }
+    },
+    "marks": 1,
+    "subject": "English",
+    "question": {
+        "text": "__________ had she reached home ___________it started raining heavily."
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "d/4"
+        },
+        "correct": "d",
+        "a": {
+            "text": "d"
+        },
+        "c": {
+            "text": "d/2"
+        },
+        "b": {
+            "text": "2d"
+        }
+    },
+    "marks": 1,
+    "subject": "Physics",
+    "question": {
+        "text": "A baseball player can thrown a ball a maximum distance ‘d’ over the ground. Tha maximum vertical height to which he can throw is:"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "$ \\frac {v^2}{ \\mu_s} $"
+        },
+        "correct": "c",
+        "a": {
+            "text": "$ \\frac {v^{2}}{2 \\mu_sg} $"
+        },
+        "c": {
+            "text": "$ (\\frac {v}{2 \\mu_sg})^2 $"
+        },
+        "b": {
+            "text": "$ \\frac {v}{2 \\mu_sg} $"
+        }
+    },
+    "marks": 1,
+    "subject": "Physics",
+    "question": {
+        "text": "A car is moving along a level road with a speed ‘v’. If the coefficient of static friction between the tyres and the road is the shortest distance in which the car can be stopped is:"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "increases considerably"
+        },
+        "correct": "a",
+        "a": {
+            "text": "decreases slightly"
+        },
+        "c": {
+            "text": "remain same"
+        },
+        "b": {
+            "text": "increases slightly"
+        }
+    },
+    "marks": 1,
+    "subject": "Physics",
+    "question": {
+        "text": "Some quantity of tap water is placed in an open pan and allowed to evaporate. After some time the temperature of water."
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "cube cool faster than sphere"
+        },
+        "correct": "c",
+        "a": {
+            "text": "both cool at same rate"
+        },
+        "c": {
+            "text": "sphere cools down slower than cube"
+        },
+        "b": {
+            "text": "cube cool faster than sphere"
+        }
+    },
+    "marks": 1,
+    "subject": "Physics",
+    "question": {
+        "text": "A cube and sphere of same material have equal surface areas, both are at the same temperature 120°C, then:"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "may be greater or less depending on humidity"
+        },
+        "correct": "b",
+        "a": {
+            "text": "v"
+        },
+        "c": {
+            "text": "less than v"
+        },
+        "b": {
+            "text": "greater than v"
+        }
+    },
+    "marks": 1,
+    "subject": "Physics",
+    "question": {
+        "text": "The speed of sound in helium is 'v'. The speed of sound in humid helium in the same temperature is:"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "same for all colours"
+        },
+        "correct": "d",
+        "a": {
+            "text": "maximum for red colour"
+        },
+        "c": {
+            "text": "maximum for yellow colour"
+        },
+        "b": {
+            "text": "maximum for violet colour"
+        }
+    },
+    "marks": 1,
+    "subject": "Physics",
+    "question": {
+        "text": "The focal length of the concave mirror is:"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "$ \\frac {1}{n^2} $"
+        },
+        "correct": "a",
+        "a": {
+            "text": "n $ ^{2} $ : 1"
+        },
+        "c": {
+            "text": "n"
+        },
+        "b": {
+            "text": "1:n"
+        }
+    },
+    "marks": 1,
+    "subject": "Physics",
+    "question": {
+        "text": "n equal capacitor are first connected in series and then in parallel. The ratio of maximum and minimum capacitance is:"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "decreasing emf"
+        },
+        "correct": "b",
+        "a": {
+            "text": "increasing emf of cell"
+        },
+        "c": {
+            "text": "decreasing length of wire"
+        },
+        "b": {
+            "text": "increasing length of potentiometer wire"
+        }
+    },
+    "marks": 1,
+    "subject": "Physics",
+    "question": {
+        "text": "The sensitivity of potentiometer can be increased by:"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "bulk state"
+        },
+        "correct": "a",
+        "a": {
+            "text": "atomic state"
+        },
+        "c": {
+            "text": "nuclear state"
+        },
+        "b": {
+            "text": "molecular state"
+        }
+    },
+    "marks": 1,
+    "subject": "Physics",
+    "question": {
+        "text": "The line of spectrum is obtained whenever the incandescent vapours at low pressure of the excited substance are in their:"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "positive & negative ions"
+        },
+        "correct": "b",
+        "a": {
+            "text": "electrons"
+        },
+        "c": {
+            "text": "electrons & holes"
+        },
+        "b": {
+            "text": "holes"
+        }
+    },
+    "marks": 1,
+    "subject": "Physics",
+    "question": {
+        "text": "In a P type of semi-conductor, the electrical conduction is due to:"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "N $ _{A} $"
+        },
+        "correct": "b",
+        "a": {
+            "text": "0.25 N $ _{A} $"
+        },
+        "c": {
+            "text": "0.75N $ _{A} $"
+        },
+        "b": {
+            "text": "0.5N $ _{A} $"
+        }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "question": {
+        "text": "The number of electrons present in 1 gram of Helium is"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "MCl $ _{4} $"
+        },
+        "correct": "c",
+        "a": {
+            "text": "MCl"
+        },
+        "c": {
+            "text": "MCl $ _{3} $"
+        },
+        "b": {
+            "text": "MCl $ _{2} $"
+        }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "question": {
+        "text": "The equivalent weight of a metal is 25. The vapour density of its chloride is 91. The formula of the metal chlori chloride is"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "0.28gm"
+        },
+        "correct": "c",
+        "a": {
+            "text": "0.40gm"
+        },
+        "c": {
+            "text": "0.32 gm"
+        },
+        "b": {
+            "text": "0.36 gm"
+        }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "question": {
+        "text": "The mass of NaOH required to reduce the strength of 100 cc of N/10 HCl to N/50 HCl is :"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "6"
+        },
+        "correct": "b",
+        "a": {
+            "text": "3"
+        },
+        "c": {
+            "text": "5"
+        },
+        "b": {
+            "text": "4"
+        }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "question": {
+        "text": "The number of unpaired electrons in Fe $ ^{++} $ ions is"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "Cl $ _{2} $ O $ _{7} $"
+        },
+        "correct": "d",
+        "a": {
+            "text": "SiO $ _{2} $"
+        },
+        "c": {
+            "text": "SO $ _{3} $"
+        },
+        "b": {
+            "text": "P $ _{2} $ O $ _{5} $"
+        }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "question": {
+        "text": "Which of this is most acidic oxide?"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "H $ _{2} $ , H $ ^{+} $"
+        },
+        "correct": "c",
+        "a": {
+            "text": "CH $ _{4} $ , CH $ _{3} $"
+        },
+        "c": {
+            "text": "CH $ _{3} $ OH, CH $ _{3} $ O $ ^{+} $"
+        },
+        "b": {
+            "text": "H $ _{3} $ O $ ^{+} $ , OH $ ^{–} $"
+        }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "question": {
+        "text": "Which of these pair represents conjugate acid and base?"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "dsp $ ^{2} $"
+        },
+        "correct": "c",
+        "a": {
+            "text": "sp"
+        },
+        "c": {
+            "text": "sp $ ^{3} $"
+        },
+        "b": {
+            "text": "sp $ ^{2} $"
+        }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "question": {
+        "text": "The type of hybridization on sulphur atom of sulphite ion is"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "NO"
+        },
+        "correct": "b",
+        "a": {
+            "text": "N $ _{2} $"
+        },
+        "c": {
+            "text": "N $ _{2} $ O"
+        },
+        "b": {
+            "text": "H $ _{2} $"
+        }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "question": {
+        "text": "A gas formed by passing ammonia over heated sodium metal is"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "HI"
+        },
+        "correct": "d",
+        "a": {
+            "text": "HF"
+        },
+        "c": {
+            "text": "HBr"
+        },
+        "b": {
+            "text": "Rd"
+        }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "question": {
+        "text": "Which of this is most reducing?"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "Invar"
+        },
+        "correct": "d",
+        "a": {
+            "text": "German silver"
+        },
+        "c": {
+            "text": "Constantan"
+        },
+        "b": {
+            "text": "Rold gold"
+        }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "question": {
+        "text": "Which of this is not an alloy of copper?"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "graphite"
+        },
+        "correct": "c",
+        "a": {
+            "text": "Fe"
+        },
+        "c": {
+            "text": "Hg"
+        },
+        "b": {
+            "text": "Pt"
+        }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "question": {
+        "text": "The cathode used during manufacture of NaOH by Castner - Kellener’s process is"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "wrought iron"
+        },
+        "correct": "d",
+        "a": {
+            "text": "pig iron"
+        },
+        "c": {
+            "text": "steel"
+        },
+        "b": {
+            "text": "cast iron"
+        }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "question": {
+        "text": "The purest form of iron is"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "NH $ _{3} $"
+        },
+        "correct": "d",
+        "a": {
+            "text": "H $ _{3} $ O"
+        },
+        "c": {
+            "text": "CO $ _{2} $"
+        },
+        "b": {
+            "text": "SO $ _{2} $"
+        }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "question": {
+        "text": "Which of this is a nucleophile?"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "9"
+        },
+        "correct": "d",
+        "a": {
+            "text": "3"
+        },
+        "c": {
+            "text": "7"
+        },
+        "b": {
+            "text": "5"
+        }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "question": {
+        "text": "The total number of chain isomers of the formula C $ _{7} $ H $ _{16} $ is"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "acetaldehyde"
+        },
+        "correct": "c",
+        "a": {
+            "text": "oxalic acid"
+        },
+        "c": {
+            "text": "glyoxal"
+        },
+        "b": {
+            "text": "acetone"
+        }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "question": {
+        "text": "The product formed by ozonolysis of benzene is"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "none"
+        },
+        "correct": "c",
+        "a": {
+            "text": "injector"
+        },
+        "c": {
+            "text": "carburetor"
+        },
+        "b": {
+            "text": "governor"
+        }
+    },
+    "marks": 1,
+    "subject": "Aptitude",
+    "question": {
+        "text": "The component used for controlling airfuel ratio in petrol engine is known as"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "battery"
+        },
+        "correct": "a",
+        "a": {
+            "text": "spark plug"
+        },
+        "c": {
+            "text": "carburetor"
+        },
+        "b": {
+            "text": "fuel injector"
+        }
+    },
+    "marks": 1,
+    "subject": "Aptitude",
+    "question": {
+        "text": "With the help of a .......... the charge is ignited in a petrol engine."
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "none"
+        },
+        "correct": "a",
+        "a": {
+            "text": "break horse power"
+        },
+        "c": {
+            "text": "frictional horse power"
+        },
+        "b": {
+            "text": "indicated horse power"
+        }
+    },
+    "marks": 1,
+    "subject": "Aptitude",
+    "question": {
+        "text": "The power available at the shaft of an IC engine is known as"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "Electrical"
+        },
+        "correct": "a",
+        "a": {
+            "text": "Kinetic"
+        },
+        "c": {
+            "text": "Potential"
+        },
+        "b": {
+            "text": "Mechanical"
+        }
+    },
+    "marks": 1,
+    "subject": "Aptitude",
+    "question": {
+        "text": "During hydropower generation, the intermediate energy formed is"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "earth quake resisting building"
+        },
+        "correct": "b",
+        "a": {
+            "text": "ornamental design"
+        },
+        "c": {
+            "text": "reduction in cost"
+        },
+        "b": {
+            "text": "thermal insulation"
+        }
+    },
+    "marks": 1,
+    "subject": "Aptitude",
+    "question": {
+        "text": "Hollow bricks are used for"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "10 hour"
+        },
+        "correct": "b",
+        "a": {
+            "text": "10 min"
+        },
+        "c": {
+            "text": "1 hours"
+        },
+        "b": {
+            "text": "30 min"
+        }
+    },
+    "marks": 1,
+    "subject": "Aptitude",
+    "question": {
+        "text": "The initial setting time for Ordinary Portland cement is"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "increase compressive strength"
+        },
+        "correct": "a",
+        "a": {
+            "text": "increase initial setting time"
+        },
+        "c": {
+            "text": "decrease initial setting time"
+        },
+        "b": {
+            "text": "increase bond strength"
+        }
+    },
+    "marks": 1,
+    "subject": "Aptitude",
+    "question": {
+        "text": "Gypsum is added in cement to"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "does not change"
+        },
+        "correct": "b",
+        "a": {
+            "text": "increase"
+        },
+        "c": {
+            "text": "may increase or decrease"
+        },
+        "b": {
+            "text": "decreases"
+        }
+    },
+    "marks": 1,
+    "subject": "Aptitude",
+    "question": {
+        "text": "In series combination of electrical appliances, total electrical power........"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "None"
+        },
+        "correct": "a",
+        "a": {
+            "text": "Live wire"
+        },
+        "c": {
+            "text": "Earth wire"
+        },
+        "b": {
+            "text": "Neutral wire"
+        }
+    },
+    "marks": 1,
+    "subject": "Aptitude",
+    "question": {
+        "text": "A fuse wire is always inserted in the"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "None of the above"
+        },
+        "correct": "c",
+        "a": {
+            "text": "Transfer electrical energy"
+        },
+        "c": {
+            "text": "Cool the windings"
+        },
+        "b": {
+            "text": "Insulate windings"
+        }
+    },
+    "marks": 1,
+    "subject": "Aptitude",
+    "question": {
+        "text": "Oil in transformer is used to"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "Ohm/m $ ^{3} $"
+        },
+        "correct": "b",
+        "a": {
+            "text": "Ohm/m $ ^{2} $"
+        },
+        "c": {
+            "text": "Ohm m $ ^{3} $"
+        },
+        "b": {
+            "text": "Ohm-m"
+        }
+    },
+    "marks": 1,
+    "subject": "Aptitude",
+    "question": {
+        "text": "The unit of specific resistance is"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "I don't know"
+        },
+        "correct": "b",
+        "a": {
+            "text": "same"
+        },
+        "c": {
+            "text": "similar"
+        },
+        "b": {
+            "text": "distinct"
+        }
+    },
+    "marks": 1,
+    "subject": "Aptitude",
+    "question": {
+        "text": "IP of each computer in any network is............"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "should have law resistance"
+        },
+        "correct": "b",
+        "a": {
+            "text": "dissipate maximum power"
+        },
+        "c": {
+            "text": "receives the input"
+        },
+        "b": {
+            "text": "supplier of charge carriers"
+        }
+    },
+    "marks": 1,
+    "subject": "Aptitude",
+    "question": {
+        "text": "The emitter of transistor is doped the heaviest because it........."
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "NOT and OR"
+        },
+        "correct": "a",
+        "a": {
+            "text": "NAND and NOR"
+        },
+        "c": {
+            "text": "XOR and OR"
+        },
+        "b": {
+            "text": "NAND and AND"
+        }
+    },
+    "marks": 1,
+    "subject": "Aptitude",
+    "question": {
+        "text": "Which of the following can act as building block of other gates?"
+    }
+}, {
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130255,
+    "answer": {
+        "d": {
+            "text": "16 bit"
+        },
+        "correct": "d",
+        "a": {
+            "text": "8 bit"
+        },
+        "c": {
+            "text": "12 bit"
+        },
+        "b": {
+            "text": "10 bit"
+        }
+    },
+    "marks": 1,
+    "subject": "Aptitude",
+    "question": {
+        "text": "For a sixteen bit system, one word is equal to"
+    }
+}]

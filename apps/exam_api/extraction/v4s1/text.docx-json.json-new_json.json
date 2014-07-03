@@ -1,1431 +1,1562 @@
-[{
-    "marks": 1,
-    "question": {
-        "text": "The general values of $ \\theta $ in the equation $ tan5\\theta $ = $ cot2\\theta $"
-    },
-    "answer": {
-        "d": {
-            "text": "(2n + 1)$ \\frac{\\pi}{14} $"
-        },
-        "c": {
-            "text": "$ n\\pi + \\frac{\\pi}{4} $"
-        },
-        "correct": "d",
-        "b": {
-            "text": "$ 2n\\pi $"
-        },
-        "a": {
-            "text": "(2n + 1)$ \\frac{\\pi}{2} $"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Mathematics"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "The equation having both the roots common to x $ ^{2} $ – 5x + 6 = 0 is"
-    },
-    "answer": {
-        "d": {
-            "text": "2(x –1) (x – 4) = 0"
-        },
-        "c": {
-            "text": "x $ ^{2} $ – 7x + 10 = 0"
-        },
-        "correct": "a",
-        "b": {
-            "text": "(x + 2) (2x – 6) = 0"
-        },
-        "a": {
-            "text": "(x –3) (2x – 4) = 0"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Mathematics"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "If f and g are two functions which are inverse of each other then fog (x) is"
-    },
-    "answer": {
-        "d": {
-            "text": "x $ ^{–2} $"
-        },
-        "c": {
-            "text": "$ \\frac{1}{x} $"
-        },
-        "correct": "b",
-        "b": {
-            "text": "x"
-        },
-        "a": {
-            "text": "1"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Mathematics"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "If $ y = \\frac{1-tanx}{secx} $ then the value of $ \\frac{dy}{dx} $ ="
-    },
-    "answer": {
-        "d": {
-            "text": "2secx (1 + tan $ ^{2} $ x)"
-        },
-        "c": {
-            "text": "sinx + cosx"
-        },
-        "correct": "a",
-        "b": {
-            "text": "$  \\frac{2secx}{1-tanx} $"
-        },
-        "a": {
-            "text": "–sinx– cosx"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Mathematics"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "Value of  $ \\int_{}^{} \\frac{ e^{ax}}{e^{ax}+1}dx = $"
-    },
-    "answer": {
-        "d": {
-            "text": "$ a \\frac{log(e^{ax})}{2} + c $"
-        },
-        "c": {
-            "text": "$ 2a(e^{ax}+1)+c $"
-        },
-        "correct": "b",
-        "b": {
-            "text": "$ \\frac{1}{a} log(e^{ax+1}) $"
-        },
-        "a": {
-            "text": "$ \\frac{2( e^{ax} + 1 )}{a} + c $"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Mathematics"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "The value of $ \\lim_{n \\rightarrow \\infty}( \\frac{1}{n^{2}} + \\frac{2}{n^{2}} + \\frac{3}{n^{2}}+ .......+ \\frac{n}{n^{2}}  ) = $"
-    },
-    "answer": {
-        "d": {
-            "text": "1"
-        },
-        "c": {
-            "text": "$ \\frac{1}{2} $"
-        },
-        "correct": "c",
-        "b": {
-            "text": "$ \\frac{1}{4} $"
-        },
-        "a": {
-            "text": "$ \\frac{1}{3} $"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Mathematics"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "If $ \\overrightarrow{a} $ and $ \\overrightarrow{b} $  are two unit vectors such that $ (\\overrightarrow{a} + 2\\overrightarrow{b}) $ and $ (5\\overrightarrow{a} - 4\\overrightarrow{b}) $ are perpendicular to each other then the angle between \\overrightarrow{a} and \\overrightarrow{b} is"
-    },
-    "answer": {
-        "d": {
-            "text": "$ \\frac{\\pi}{6} $"
-        },
-        "c": {
-            "text": "$ \\frac{\\pi}{4} $"
-        },
-        "correct": "b",
-        "b": {
-            "text": "$ \\frac{\\pi}{3} $"
-        },
-        "a": {
-            "text": "$ \\frac{\\pi}{2} $"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Mathematics"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "The direction ratios of the line are –1, 2,2 then its direction cosines are"
-    },
-    "answer": {
-        "d": {
-            "text": "none"
-        },
-        "c": {
-            "text": "$ \\frac{1}{3},-\\frac{2}{3} ,-\\frac{2}{3} $"
-        },
-        "correct": "a",
-        "b": {
-            "text": "$ \\frac{2}{3},\\frac{1}{3} ,-\\frac{2}{3} $"
-        },
-        "a": {
-            "text": "$ -\\frac{1}{3},\\frac{2}{3} ,\\frac{2}{3} $"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Mathematics"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "If A = $ \\begin{bmatrix}2 & 0 &0 \\\\0 & 2 & 0 \\\\0 & 0 & 2 \\end{bmatrix} $  then A $ ^{5} $ ="
-    },
-    "answer": {
-        "d": {
-            "text": "32A"
-        },
-        "c": {
-            "text": "16A"
-        },
-        "correct": "c",
-        "b": {
-            "text": "10A"
-        },
-        "a": {
-            "text": "5A"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Mathematics"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "If the three points (a, 0), (0,b) and (1,1) are collinear then"
-    },
-    "answer": {
-        "d": {
-            "text": "a + b = 0"
-        },
-        "c": {
-            "text": "a + b = ab"
-        },
-        "correct": "c",
-        "b": {
-            "text": "a + b = 1"
-        },
-        "a": {
-            "text": "a $ ^{2} $ + b $ ^{2} $ = 1"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Mathematics"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "The phonemic transcription of the word 'piety' is _________"
-    },
-    "answer": {
-        "d": {
-            "text": "/peətI/"
-        },
-        "c": {
-            "text": "/pItI/"
-        },
-        "correct": "d",
-        "b": {
-            "text": "/paIətI/"
-        },
-        "a": {
-            "text": "/paItI/"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "English"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "The word ' Influential' has its stress on the ________ syllable."
-    },
-    "answer": {
-        "d": {
-            "text": "4 $ ^{th} $"
-        },
-        "c": {
-            "text": "3 $ ^{rd} $"
-        },
-        "correct": "c",
-        "b": {
-            "text": "2 $ ^{nd} $"
-        },
-        "a": {
-            "text": "1 $ ^{st} $"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "English"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "The synonym of the word 'brevity' is _______"
-    },
-    "answer": {
-        "d": {
-            "text": "confidence"
-        },
-        "c": {
-            "text": "quickness"
-        },
-        "correct": "c",
-        "b": {
-            "text": "sharpness"
-        },
-        "a": {
-            "text": "conciseness"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "English"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "The antonym of the word 'serene' is ________."
-    },
-    "answer": {
-        "d": {
-            "text": "agitated"
-        },
-        "c": {
-            "text": "impure"
-        },
-        "correct": "d",
-        "b": {
-            "text": "showy"
-        },
-        "a": {
-            "text": "complicated"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "English"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "Which is the wrong sentences?"
-    },
-    "answer": {
-        "d": {
-            "text": "If he had left home early, he would be with us now."
-        },
-        "c": {
-            "text": "Will she come to PEA supposing it rains heavily?"
-        },
-        "correct": "a",
-        "b": {
-            "text": "Black as she is, she is beautiful."
-        },
-        "a": {
-            "text": "Never does she arrive in time"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "English"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "I am considering ______ home tomorrow."
-    },
-    "answer": {
-        "d": {
-            "text": "going"
-        },
-        "c": {
-            "text": "to going"
-        },
-        "correct": "b",
-        "b": {
-            "text": "to have gone"
-        },
-        "a": {
-            "text": "to go"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "English"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "Like humans, zoo animals must have dentists______ their teeth."
-    },
-    "answer": {
-        "d": {
-            "text": "to be filled"
-        },
-        "c": {
-            "text": "filling"
-        },
-        "correct": "c",
-        "b": {
-            "text": "filled"
-        },
-        "a": {
-            "text": "fill"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "English"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "Were you disappointed _______ your examination result?"
-    },
-    "answer": {
-        "d": {
-            "text": "at"
-        },
-        "c": {
-            "text": "with"
-        },
-        "correct": "a",
-        "b": {
-            "text": "from"
-        },
-        "a": {
-            "text": "by"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "English"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "The correct passive of \" He let them scold him\" is _______ ."
-    },
-    "answer": {
-        "d": {
-            "text": "He let himself to have been scolded."
-        },
-        "c": {
-            "text": "They were let to scold him."
-        },
-        "correct": "d",
-        "b": {
-            "text": "He let himself be scolded."
-        },
-        "a": {
-            "text": "He let himself to be scolded."
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "English"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "'Having got up early, Kareena along with her parents went to Bandra because of the film shooting' is a ______sentences."
-    },
-    "answer": {
-        "d": {
-            "text": "mixed"
-        },
-        "c": {
-            "text": "compound"
-        },
-        "correct": "d",
-        "b": {
-            "text": "complex"
-        },
-        "a": {
-            "text": "simple"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "English"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "' We congratulated him on his success' is based on the pattern_________."
-    },
-    "answer": {
-        "d": {
-            "text": "S + V $ _{i} $ + O $ _{1} $ + prep. + O $ _{D} $"
-        },
-        "c": {
-            "text": "S + V $ _{i} $ + O D + Prepositional phrase"
-        },
-        "correct": "d",
-        "b": {
-            "text": "S + V $ _{t} $ + O $ _{I} $ + prepositional phrase"
-        },
-        "a": {
-            "text": "S + V $ _{t} $ + O $ _{I} $ + prep. +  O $ _{D} $"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "English"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "He did nothing but _________."
-    },
-    "answer": {
-        "d": {
-            "text": "playing"
-        },
-        "c": {
-            "text": "played"
-        },
-        "correct": "a",
-        "b": {
-            "text": "to play"
-        },
-        "a": {
-            "text": "play"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "English"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "We must die someday, ____ man is mortal."
-    },
-    "answer": {
-        "d": {
-            "text": "for"
-        },
-        "c": {
-            "text": "since"
-        },
-        "correct": "c",
-        "b": {
-            "text": "as"
-        },
-        "a": {
-            "text": "because"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "English"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "Nothing but houses can be seen from here, ___ ?"
-    },
-    "answer": {
-        "d": {
-            "text": "can they"
-        },
-        "c": {
-            "text": "aren't they"
-        },
-        "correct": "b",
-        "b": {
-            "text": "can it"
-        },
-        "a": {
-            "text": "can't they"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "English"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "I like ____ people I work with."
-    },
-    "answer": {
-        "d": {
-            "text": "both a & b"
-        },
-        "c": {
-            "text": "none"
-        },
-        "correct": "a",
-        "b": {
-            "text": "some"
-        },
-        "a": {
-            "text": "the"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "English"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "A passenger in a moving bus tosses a coin. If the coin falls behind him the bus must be moving with"
-    },
-    "answer": {
-        "d": {
-            "text": "None"
-        },
-        "c": {
-            "text": "a uniform speed"
-        },
-        "correct": "a",
-        "b": {
-            "text": "a deceleration"
-        },
-        "a": {
-            "text": "an acceleration"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Physics"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "When a drop splits up into number of drops"
-    },
-    "answer": {
-        "d": {
-            "text": "energy is liberated"
-        },
-        "c": {
-            "text": "energy absorbed"
-        },
-        "correct": "c",
-        "b": {
-            "text": "volume increases"
-        },
-        "a": {
-            "text": "area decreases"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Physics"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "In an adiabatic change, the pressure P and temperature T of diatomic gas are related by the relation     P $ \\propto $ T $ ^{X} $ where value of x is"
-    },
-    "answer": {
-        "d": {
-            "text": "7/2"
-        },
-        "c": {
-            "text": "3/5"
-        },
-        "correct": "d",
-        "b": {
-            "text": "2/5"
-        },
-        "a": {
-            "text": "5/3"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Physics"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "The ratio of specific heat capacity to molar heat capacity of a body is"
-    },
-    "answer": {
-        "d": {
-            "text": "universal constant"
-        },
-        "c": {
-            "text": "depends on mass of the body"
-        },
-        "correct": "b",
-        "b": {
-            "text": "depends on molecular weight of body"
-        },
-        "a": {
-            "text": "dimensionless"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Physics"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "The function which represent SHM is"
-    },
-    "answer": {
-        "d": {
-            "text": "sin2 $ \\omega $ t+ cos 2 $ \\omega $ t"
-        },
-        "c": {
-            "text": "sin $ \\omega $ t + cos $ \\omega $ t"
-        },
-        "correct": "a",
-        "b": {
-            "text": "sin2 $ \\omega $ t"
-        },
-        "a": {
-            "text": "sin2 $ \\omega $ t"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Physics"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "The inverse square law of intensity is valid for a"
-    },
-    "answer": {
-        "d": {
-            "text": "conical wave front"
-        },
-        "c": {
-            "text": "spherical wave front"
-        },
-        "correct": "c",
-        "b": {
-            "text": "cylindrical wave front"
-        },
-        "a": {
-            "text": "plane wave front"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Physics"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "A current I is flowing through a resistance connected to a source of small internal resistance. The resistance is reduced to half, The current through resistance will be"
-    },
-    "answer": {
-        "d": {
-            "text": ">2I"
-        },
-        "c": {
-            "text": "<2I"
-        },
-        "correct": "d",
-        "b": {
-            "text": "2I"
-        },
-        "a": {
-            "text": "I"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Physics"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "A hollow metal sphere of radius 10cm is charged such that the potential on its surface is 80V. The potential at centre of sphere is"
-    },
-    "answer": {
-        "d": {
-            "text": "8V"
-        },
-        "c": {
-            "text": "800V"
-        },
-        "correct": "b",
-        "b": {
-            "text": "80V"
-        },
-        "a": {
-            "text": "0"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Physics"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "The largest wavelength of particle moving with same velocity will be for"
-    },
-    "answer": {
-        "d": {
-            "text": "neutron"
-        },
-        "c": {
-            "text": "$ \\beta $-particle"
-        },
-        "correct": "c",
-        "b": {
-            "text": "proton"
-        },
-        "a": {
-            "text": "$ \\alpha $-particle"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Physics"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "The impurity atom which should be doped in pure silicon to make p type of semiconductor is"
-    },
-    "answer": {
-        "d": {
-            "text": "arsenic"
-        },
-        "c": {
-            "text": "boron"
-        },
-        "correct": "c",
-        "b": {
-            "text": "antimony"
-        },
-        "a": {
-            "text": "phosphorus"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Physics"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "The weight of one atom of Uranium is 238 amu, its actual weight is"
-    },
-    "answer": {
-        "d": {
-            "text": "2.48×10 $ ^{2} $ gm"
-        },
-        "c": {
-            "text": "6.990×10 $ ^{24} $ gm"
-        },
-        "correct": "b",
-        "b": {
-            "text": "3.95×10 $ ^{22} $ gm"
-        },
-        "a": {
-            "text": "1.43×10 $ ^{6} $ gm"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Chemistry"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "The equivalent weight of an element is 4. Its chloride has a vapour density 59.25. Then the valency of the element is"
-    },
-    "answer": {
-        "d": {
-            "text": "l"
-        },
-        "c": {
-            "text": "2"
-        },
-        "correct": "b",
-        "b": {
-            "text": "3"
-        },
-        "a": {
-            "text": "4"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Chemistry"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "The mole fraction of NaOH in 4m aqueous NaOH solution is"
-    },
-    "answer": {
-        "d": {
-            "text": "2.6×$ 10^{3} $"
-        },
-        "c": {
-            "text": "1.8×l0"
-        },
-        "correct": "c",
-        "b": {
-            "text": "2.6×$ 10^{4} $"
-        },
-        "a": {
-            "text": "l.8×$ 10^{2} $"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Chemistry"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "The maximum number of electrons present in a 3d orbital is"
-    },
-    "answer": {
-        "d": {
-            "text": "14"
-        },
-        "c": {
-            "text": "10"
-        },
-        "correct": "a",
-        "b": {
-            "text": "6"
-        },
-        "a": {
-            "text": "2"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Chemistry"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "Which of this is non-polar molecule with polar covalent bond?"
-    },
-    "answer": {
-        "d": {
-            "text": "$ BeCl_{2} $"
-        },
-        "c": {
-            "text": "CO"
-        },
-        "correct": "d",
-        "b": {
-            "text": "$ NH_{3} $"
-        },
-        "a": {
-            "text": "$ SO_{2} $"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Chemistry"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "In which of these compounds iron has least oxidation number"
-    },
-    "answer": {
-        "d": {
-            "text": "Fe $ _{3} $ O $ _{4} $"
-        },
-        "c": {
-            "text": "Fe(CO) $ _{5} $"
-        },
-        "correct": "c",
-        "b": {
-            "text": "[Fe(CN) $ _{6} $ ] $ ^{-3} $"
-        },
-        "a": {
-            "text": "Fe $ _{2} $ (SO $ _{4} $ ) $ _{3} $"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Chemistry"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "Which of this salt have cationic hydrolysis?"
-    },
-    "answer": {
-        "d": {
-            "text": "CH $ _{3} $ COONa"
-        },
-        "c": {
-            "text": "NH $ _{4} $ CI"
-        },
-        "correct": "c",
-        "b": {
-            "text": "K $ _{2} $ SO $ _{4} $"
-        },
-        "a": {
-            "text": "Na $ _{2} $ CO $ _{3} $"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Chemistry"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "HNO $ _{3} $ can be stored in vessels made up of"
-    },
-    "answer": {
-        "d": {
-            "text": "Mg"
-        },
-        "c": {
-            "text": "Zn"
-        },
-        "correct": "b",
-        "b": {
-            "text": "Al"
-        },
-        "a": {
-            "text": "Fe"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Chemistry"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "Bromine is manufactured from?"
-    },
-    "answer": {
-        "d": {
-            "text": "Petroleum"
-        },
-        "c": {
-            "text": "Carnallite"
-        },
-        "correct": "c",
-        "b": {
-            "text": "Caliche"
-        },
-        "a": {
-            "text": "Sea-weeds"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Chemistry"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "Which of this is incorrect match of ore and metal?"
-    },
-    "answer": {
-        "d": {
-            "text": "Bauxite - Cu"
-        },
-        "c": {
-            "text": "Siderite - Fe"
-        },
-        "correct": "d",
-        "b": {
-            "text": "Cinnabar- Hg"
-        },
-        "a": {
-            "text": "Calamine -Zn"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Chemistry"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "The reducing agent in Bessemer converter during extraction of Copper pyrite is"
-    },
-    "answer": {
-        "d": {
-            "text": "H $ _{2} $"
-        },
-        "c": {
-            "text": "C"
-        },
-        "correct": "a",
-        "b": {
-            "text": "CO"
-        },
-        "a": {
-            "text": "Cu $ _{2} $ O"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Chemistry"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "In open hearth process impurities are removed by oxidation with"
-    },
-    "answer": {
-        "d": {
-            "text": "Haematite"
-        },
-        "c": {
-            "text": "Air"
-        },
-        "correct": "d",
-        "b": {
-            "text": "CaO"
-        },
-        "a": {
-            "text": "SiO $ _{2} $"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Chemistry"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "Who synthesized the first organic compound starting from elements"
-    },
-    "answer": {
-        "d": {
-            "text": "Huckel"
-        },
-        "c": {
-            "text": "Berzelius"
-        },
-        "correct": "b",
-        "b": {
-            "text": "Kolbe"
-        },
-        "a": {
-            "text": "Wohler"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Chemistry"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "In carbocation, the hybridization of carbon atom is"
-    },
-    "answer": {
-        "d": {
-            "text": "$ dsp^{2} $"
-        },
-        "c": {
-            "text": "$ sp^{3} $"
-        },
-        "correct": "b",
-        "b": {
-            "text": "$ sp^{2} $"
-        },
-        "a": {
-            "text": "Sp"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Chemistry"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "The product of electrolysis of potassium acetate is"
-    },
-    "answer": {
-        "d": {
-            "text": "Methane"
-        },
-        "c": {
-            "text": "Ethane"
-        },
-        "correct": "c",
-        "b": {
-            "text": "Ethene"
-        },
-        "a": {
-            "text": "Ethyne"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Chemistry"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "Which of the following statement is correct?"
-    },
-    "answer": {
-        "d": {
-            "text": "None of the above"
-        },
-        "c": {
-            "text": "Four stroke engine requires lighter flywheel."
-        },
-        "correct": "b",
-        "b": {
-            "text": "Two stroke engine develops twice as much the power developed by four stroke engine at same speed."
-        },
-        "a": {
-            "text": "Two stroke provide two power stroke in two stroke engines."
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Aptitude"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "In diesel engine, ignition is due to"
-    },
-    "answer": {
-        "d": {
-            "text": "high compression ratio"
-        },
-        "c": {
-            "text": "dry air"
-        },
-        "correct": "d",
-        "b": {
-            "text": "water"
-        },
-        "a": {
-            "text": "spark from spark plug"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Aptitude"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "Which of the following is not the type of renewable energy?"
-    },
-    "answer": {
-        "d": {
-            "text": "Geothermal energy"
-        },
-        "c": {
-            "text": "Tidal energy"
-        },
-        "correct": "b",
-        "b": {
-            "text": "Nuclear energy"
-        },
-        "a": {
-            "text": "Hydro potential energy"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Aptitude"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "Which form of energy is directly obtained from biomass?"
-    },
-    "answer": {
-        "d": {
-            "text": "All"
-        },
-        "c": {
-            "text": "Electrical energy"
-        },
-        "correct": "a",
-        "b": {
-            "text": "Light energy"
-        },
-        "a": {
-            "text": "Thermal energy"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Aptitude"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "Bricks are generally prepared by burning......."
-    },
-    "answer": {
-        "d": {
-            "text": "All"
-        },
-        "c": {
-            "text": "stone"
-        },
-        "correct": "b",
-        "b": {
-            "text": "clay"
-        },
-        "a": {
-            "text": "cement"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Aptitude"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "Fine aggregate is also known as"
-    },
-    "answer": {
-        "d": {
-            "text": "gravel"
-        },
-        "c": {
-            "text": "sand"
-        },
-        "correct": "c",
-        "b": {
-            "text": "silt"
-        },
-        "a": {
-            "text": "clay"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Aptitude"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "Generally, design strength of concrete is achieved after 28.......... of wring."
-    },
-    "answer": {
-        "d": {
-            "text": "years"
-        },
-        "c": {
-            "text": "months"
-        },
-        "correct": "b",
-        "b": {
-            "text": "days"
-        },
-        "a": {
-            "text": "hours"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Aptitude"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "Red colour of brick is due to"
-    },
-    "answer": {
-        "d": {
-            "text": "iron oxide"
-        },
-        "c": {
-            "text": "sillicon"
-        },
-        "correct": "d",
-        "b": {
-            "text": "clay"
-        },
-        "a": {
-            "text": "sand"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Aptitude"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "A name or number used to identify a storage location is"
-    },
-    "answer": {
-        "d": {
-            "text": "all"
-        },
-        "c": {
-            "text": "address"
-        },
-        "correct": "c",
-        "b": {
-            "text": "record"
-        },
-        "a": {
-            "text": "storage"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Aptitude"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "1 KB corresponds to"
-    },
-    "answer": {
-        "d": {
-            "text": "1000 bits"
-        },
-        "c": {
-            "text": "1000 bytes"
-        },
-        "correct": "b",
-        "b": {
-            "text": "1024 bytes"
-        },
-        "a": {
-            "text": "1024 bits"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Aptitude"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "Binary system uses"
-    },
-    "answer": {
-        "d": {
-            "text": "4 symbols"
-        },
-        "c": {
-            "text": "1 symbol"
-        },
-        "correct": "a",
-        "b": {
-            "text": "3 symbols"
-        },
-        "a": {
-            "text": "2 symbols"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Aptitude"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "Which is not a logic gate?"
-    },
-    "answer": {
-        "d": {
-            "text": "BUT"
-        },
-        "c": {
-            "text": "NOR"
-        },
-        "correct": "d",
-        "b": {
-            "text": "AND"
-        },
-        "a": {
-            "text": "OR"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Aptitude"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "The instrument used to measure current is"
-    },
-    "answer": {
-        "d": {
-            "text": "Ammeter"
-        },
-        "c": {
-            "text": "Wattmeter"
-        },
-        "correct": "d",
-        "b": {
-            "text": "Voltmeter"
-        },
-        "a": {
-            "text": "Currentmeter"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Aptitude"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "Which type of transformer is used to transmit electricity for long distance before connecting to main grid?"
-    },
-    "answer": {
-        "d": {
-            "text": "none"
-        },
-        "c": {
-            "text": "both a and b"
-        },
-        "correct": "a",
-        "b": {
-            "text": "step down"
-        },
-        "a": {
-            "text": "step up"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Aptitude"
-}, {
-    "marks": 1,
-    "question": {
-        "text": "Which of the following is one of the most common use of transistors?"
-    },
-    "answer": {
-        "d": {
-            "text": "Displaying outputs"
-        },
-        "c": {
-            "text": "Printing documents"
-        },
-        "correct": "a",
-        "b": {
-            "text": "Generating electricity"
-        },
-        "a": {
-            "text": "Amplifying signals"
-        }
-    },
-    "exam_code": 1404124781,
-    "subject": "Aptitude"
-}]
+[
+  {
+    "subject": "Mathematics",
+    "answer": {
+      "c": {
+        "text": "$ n\\pi + \\frac{\\pi}{4} $"
+      },
+      "b": {
+        "text": "$ 2n\\pi $"
+      },
+      "d": {
+        "text": "(2n + 1)$ \\frac{\\pi}{14} $"
+      },
+      "correct": "d",
+      "a": {
+        "text": "(2n + 1)$ \\frac{\\pi}{2} $"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "The general values of $ \\theta $ in the equation $ tan5\\theta $ = $ cot2\\theta $"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Mathematics",
+    "answer": {
+      "c": {
+        "text": "x $ ^{2} $ – 7x + 10 = 0"
+      },
+      "b": {
+        "text": "(x + 2) (2x – 6) = 0"
+      },
+      "d": {
+        "text": "2(x –1) (x – 4) = 0"
+      },
+      "correct": "a",
+      "a": {
+        "text": "(x –3) (2x – 4) = 0"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "The equation having both the roots common to x $ ^{2} $ – 5x + 6 = 0 is"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Mathematics",
+    "answer": {
+      "c": {
+        "text": "$ \\frac{1}{x} $"
+      },
+      "b": {
+        "text": "x"
+      },
+      "d": {
+        "text": "x $ ^{–2} $"
+      },
+      "correct": "b",
+      "a": {
+        "text": "1"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "If f and g are two functions which are inverse of each other then fog (x) is"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Mathematics",
+    "answer": {
+      "c": {
+        "text": "sinx + cosx"
+      },
+      "b": {
+        "text": "$  \\frac{2secx}{1-tanx} $"
+      },
+      "d": {
+        "text": "2secx (1 + tan $ ^{2} $ x)"
+      },
+      "correct": "a",
+      "a": {
+        "text": "–sinx– cosx"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "If $ y = \\frac{1-tanx}{secx} $ then the value of $ \\frac{dy}{dx} $ ="
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Mathematics",
+    "answer": {
+      "c": {
+        "text": "$ 2a(e^{ax}+1)+c $"
+      },
+      "b": {
+        "text": "$ \\frac{1}{a} log(e^{ax+1}) $"
+      },
+      "d": {
+        "text": "$ a \\frac{log(e^{ax})}{2} + c $"
+      },
+      "correct": "b",
+      "a": {
+        "text": "$ \\frac{2( e^{ax} + 1 )}{a} + c $"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "Value of  $ \\int_{}^{} \\frac{ e^{ax}}{e^{ax}+1}dx = $"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Mathematics",
+    "answer": {
+      "c": {
+        "text": "$ \\frac{1}{2} $"
+      },
+      "b": {
+        "text": "$ \\frac{1}{4} $"
+      },
+      "d": {
+        "text": "1"
+      },
+      "correct": "c",
+      "a": {
+        "text": "$ \\frac{1}{3} $"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "The value of $ \\lim_{n \\rightarrow \\infty}( \\frac{1}{n^{2}} + \\frac{2}{n^{2}} + \\frac{3}{n^{2}}+ .......+ \\frac{n}{n^{2}}  ) = $"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Mathematics",
+    "answer": {
+      "c": {
+        "text": "$ \\frac{\\pi}{4} $"
+      },
+      "b": {
+        "text": "$ \\frac{\\pi}{3} $"
+      },
+      "d": {
+        "text": "$ \\frac{\\pi}{6} $"
+      },
+      "correct": "b",
+      "a": {
+        "text": "$ \\frac{\\pi}{2} $"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "If $ \\vec{a} $ and $ \\vec{b} $  are two unit vectors such that $ (\\vec{a} + 2\\vec{b}) $ and $ (5\\vec{a} - 4\\vec{b}) $ are perpendicular to each other then the angle between $ \\vec{a} $ and $ \\vec{b} $ is"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Mathematics",
+    "answer": {
+      "c": {
+        "text": "$ \\frac{1}{3},-\\frac{2}{3} ,-\\frac{2}{3} $"
+      },
+      "b": {
+        "text": "$ \\frac{2}{3},\\frac{1}{3} ,-\\frac{2}{3} $"
+      },
+      "d": {
+        "text": "none"
+      },
+      "correct": "a",
+      "a": {
+        "text": "$ -\\frac{1}{3},\\frac{2}{3} ,\\frac{2}{3} $"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "The direction ratios of the line are –1, 2,2 then its direction cosines are"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Mathematics",
+    "answer": {
+      "c": {
+        "text": "16A"
+      },
+      "b": {
+        "text": "10A"
+      },
+      "d": {
+        "text": "32A"
+      },
+      "correct": "c",
+      "a": {
+        "text": "5A"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "If A = $ \\begin{bmatrix}2 & 0 &0 \\\\0 & 2 & 0 \\\\0 & 0 & 2 \\end{bmatrix} $  then A $ ^{5} $ ="
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Mathematics",
+    "answer": {
+      "c": {
+        "text": "a + b = ab"
+      },
+      "b": {
+        "text": "a + b = 1"
+      },
+      "d": {
+        "text": "a + b = 0"
+      },
+      "correct": "c",
+      "a": {
+        "text": "a $ ^{2} $ + b $ ^{2} $ = 1"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "If the three points (a, 0), (0,b) and (1,1) are collinear then"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "English",
+    "answer": {
+      "c": {
+        "text": "/pɪtɪ/"
+      },
+      "b": {
+        "text": "/paɪətɪ/"
+      },
+      "d": {
+        "text": "/peətɪ/"
+      },
+      "correct": "d",
+      "a": {
+        "text": "/paɪtɪ/"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "The phonemic transcription of the word 'piety' is _________"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "English",
+    "answer": {
+      "c": {
+        "text": "3 $ ^{rd} $"
+      },
+      "b": {
+        "text": "2 $ ^{nd} $"
+      },
+      "d": {
+        "text": "4 $ ^{th} $"
+      },
+      "correct": "c",
+      "a": {
+        "text": "1 $ ^{st} $"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "The word ' Influential' has its stress on the ________ syllable."
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "English",
+    "answer": {
+      "c": {
+        "text": "quickness"
+      },
+      "b": {
+        "text": "sharpness"
+      },
+      "d": {
+        "text": "confidence"
+      },
+      "correct": "c",
+      "a": {
+        "text": "conciseness"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "The synonym of the word 'brevity' is _______"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "English",
+    "answer": {
+      "c": {
+        "text": "impure"
+      },
+      "b": {
+        "text": "showy"
+      },
+      "d": {
+        "text": "agitated"
+      },
+      "correct": "d",
+      "a": {
+        "text": "complicated"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "The antonym of the word 'serene' is ________."
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "English",
+    "answer": {
+      "c": {
+        "text": "Will she come to PEA supposing it rains heavily?"
+      },
+      "b": {
+        "text": "Black as she is, she is beautiful."
+      },
+      "d": {
+        "text": "If he had left home early, he would be with us now."
+      },
+      "correct": "a",
+      "a": {
+        "text": "Never does she arrive in time"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "Which is the wrong sentences?"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "English",
+    "answer": {
+      "c": {
+        "text": "to going"
+      },
+      "b": {
+        "text": "to have gone"
+      },
+      "d": {
+        "text": "going"
+      },
+      "correct": "b",
+      "a": {
+        "text": "to go"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "I am considering ______ home tomorrow."
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "English",
+    "answer": {
+      "c": {
+        "text": "filling"
+      },
+      "b": {
+        "text": "filled"
+      },
+      "d": {
+        "text": "to be filled"
+      },
+      "correct": "c",
+      "a": {
+        "text": "fill"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "Like humans, zoo animals must have dentists______ their teeth."
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "English",
+    "answer": {
+      "c": {
+        "text": "with"
+      },
+      "b": {
+        "text": "from"
+      },
+      "d": {
+        "text": "at"
+      },
+      "correct": "a",
+      "a": {
+        "text": "by"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "Were you disappointed _______ your examination result?"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "English",
+    "answer": {
+      "c": {
+        "text": "They were let to scold him."
+      },
+      "b": {
+        "text": "He let himself be scolded."
+      },
+      "d": {
+        "text": "He let himself to have been scolded."
+      },
+      "correct": "d",
+      "a": {
+        "text": "He let himself to be scolded."
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "The correct passive of \" He let them scold him\" is _______ ."
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "English",
+    "answer": {
+      "c": {
+        "text": "compound"
+      },
+      "b": {
+        "text": "complex"
+      },
+      "d": {
+        "text": "mixed"
+      },
+      "correct": "d",
+      "a": {
+        "text": "simple"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "'Having got up early, Kareena along with her parents went to Bandra because of the film shooting' is a ______sentences."
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "English",
+    "answer": {
+      "c": {
+        "text": "S + V $ _{i} $ + O $ _{D} $ + Prepositional phrase"
+      },
+      "b": {
+        "text": "S + V $ _{t} $ + O $ _{I} $ + prepositional phrase"
+      },
+      "d": {
+        "text": "S + V $ _{i} $ + O $ _{1} $ + prep. + O $ _{D} $"
+      },
+      "correct": "d",
+      "a": {
+        "text": "S + V $ _{t} $ + O $ _{I} $ + prep. +  O $ _{D} $"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "' We congratulated him on his success' is based on the pattern_________."
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "English",
+    "answer": {
+      "c": {
+        "text": "played"
+      },
+      "b": {
+        "text": "to play"
+      },
+      "d": {
+        "text": "playing"
+      },
+      "correct": "a",
+      "a": {
+        "text": "play"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "He did nothing but _________."
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "English",
+    "answer": {
+      "c": {
+        "text": "since"
+      },
+      "b": {
+        "text": "as"
+      },
+      "d": {
+        "text": "for"
+      },
+      "correct": "c",
+      "a": {
+        "text": "because"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "We must die someday, ____ man is mortal."
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "English",
+    "answer": {
+      "c": {
+        "text": "aren't they"
+      },
+      "b": {
+        "text": "can it"
+      },
+      "d": {
+        "text": "can they"
+      },
+      "correct": "b",
+      "a": {
+        "text": "can't they"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "Nothing but houses can be seen from here, ___ ?"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "English",
+    "answer": {
+      "c": {
+        "text": "none"
+      },
+      "b": {
+        "text": "some"
+      },
+      "d": {
+        "text": "both a & b"
+      },
+      "correct": "a",
+      "a": {
+        "text": "the"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "I like ____ people I work with."
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Physics",
+    "answer": {
+      "c": {
+        "text": "a uniform speed"
+      },
+      "b": {
+        "text": "a deceleration"
+      },
+      "d": {
+        "text": "None"
+      },
+      "correct": "a",
+      "a": {
+        "text": "an acceleration"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "A passenger in a moving bus tosses a coin. If the coin falls behind him the bus must be moving with"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Physics",
+    "answer": {
+      "c": {
+        "text": "energy is absorbed"
+      },
+      "b": {
+        "text": "volume increases"
+      },
+      "d": {
+        "text": "energy is liberated"
+      },
+      "correct": "c",
+      "a": {
+        "text": "area decreases"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "When a drop splits up into number of drops"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Physics",
+    "answer": {
+      "c": {
+        "text": "3/5"
+      },
+      "b": {
+        "text": "2/5"
+      },
+      "d": {
+        "text": "7/2"
+      },
+      "correct": "d",
+      "a": {
+        "text": "5/3"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "In an adiabatic change, the pressure P and temperature T of diatomic gas are related by the relation     P $ \\propto $ T $ ^{X} $ where value of x is"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Physics",
+    "answer": {
+      "c": {
+        "text": "depends on mass of the body"
+      },
+      "b": {
+        "text": "depends on molecular weight of body"
+      },
+      "d": {
+        "text": "universal constant"
+      },
+      "correct": "b",
+      "a": {
+        "text": "dimensionless"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "The ratio of specific heat capacity to molar heat capacity of a body is"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Physics",
+    "answer": {
+      "c": {
+        "text": "sin $ \\omega $ t + cos $ \\omega $ t"
+      },
+      "b": {
+        "text": "cos2 $ \\omega $ t"
+      },
+      "d": {
+        "text": "sin2 $ \\omega $ t+ cos 2 $ \\omega $ t"
+      },
+      "correct": "a",
+      "a": {
+        "text": "sin2 $ \\omega $ t"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "The function which represent SHM is"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Physics",
+    "answer": {
+      "c": {
+        "text": "spherical wave front"
+      },
+      "b": {
+        "text": "cylindrical wave front"
+      },
+      "d": {
+        "text": "conical wave front"
+      },
+      "correct": "c",
+      "a": {
+        "text": "plane wave front"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "The inverse square law of intensity is valid for a"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Physics",
+    "answer": {
+      "c": {
+        "text": "<2I"
+      },
+      "b": {
+        "text": "2I"
+      },
+      "d": {
+        "text": ">2I"
+      },
+      "correct": "d",
+      "a": {
+        "text": "I"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "A current I is flowing through a resistance connected to a source of small internal resistance. The resistance is reduced to half, The current through resistance will be"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Physics",
+    "answer": {
+      "c": {
+        "text": "800V"
+      },
+      "b": {
+        "text": "80V"
+      },
+      "d": {
+        "text": "8V"
+      },
+      "correct": "b",
+      "a": {
+        "text": "0"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "A hollow metal sphere of radius 10cm is charged such that the potential on its surface is 80V. The potential at centre of sphere is"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Physics",
+    "answer": {
+      "c": {
+        "text": "$ \\beta $-particle"
+      },
+      "b": {
+        "text": "proton"
+      },
+      "d": {
+        "text": "neutron"
+      },
+      "correct": "c",
+      "a": {
+        "text": "$ \\alpha $-particle"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "The largest wavelength of particle moving with same velocity will be for"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Physics",
+    "answer": {
+      "c": {
+        "text": "boron"
+      },
+      "b": {
+        "text": "antimony"
+      },
+      "d": {
+        "text": "arsenic"
+      },
+      "correct": "c",
+      "a": {
+        "text": "phosphorus"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "The impurity atom which should be doped in pure silicon to make p type of semiconductor is"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Chemistry",
+    "answer": {
+      "c": {
+        "text": "6.990×10 $ ^{24} $ gm"
+      },
+      "b": {
+        "text": "3.95×10 $ ^{22} $ gm"
+      },
+      "d": {
+        "text": "2.48×10 $ ^{2} $ gm"
+      },
+      "correct": "b",
+      "a": {
+        "text": "1.43×10 $ ^{6} $ gm"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "The weight of one atom of Uranium is 238 amu, its actual weight is"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Chemistry",
+    "answer": {
+      "c": {
+        "text": "2"
+      },
+      "b": {
+        "text": "3"
+      },
+      "d": {
+        "text": "l"
+      },
+      "correct": "b",
+      "a": {
+        "text": "4"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "The equivalent weight of an element is 4. Its chloride has a vapour density 59.25. Then the valency of the element is"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Chemistry",
+    "answer": {
+      "c": {
+        "text": "1.8×10"
+      },
+      "b": {
+        "text": "2.6×$ 10^{4} $"
+      },
+      "d": {
+        "text": "2.6×$ 10^{3} $"
+      },
+      "correct": "c",
+      "a": {
+        "text": "l.8×$ 10^{2} $"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "The mole fraction of NaOH in 4m aqueous NaOH solution is"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Chemistry",
+    "answer": {
+      "c": {
+        "text": "10"
+      },
+      "b": {
+        "text": "6"
+      },
+      "d": {
+        "text": "14"
+      },
+      "correct": "a",
+      "a": {
+        "text": "2"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "The maximum number of electrons present in a 3d orbital is"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Chemistry",
+    "answer": {
+      "c": {
+        "text": "CO"
+      },
+      "b": {
+        "text": "$ NH_{3} $"
+      },
+      "d": {
+        "text": "$ BeCl_{2} $"
+      },
+      "correct": "d",
+      "a": {
+        "text": "$ SO_{2} $"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "Which of this is non-polar molecule with polar covalent bond?"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Chemistry",
+    "answer": {
+      "c": {
+        "text": "Fe(CO) $ _{5} $"
+      },
+      "b": {
+        "text": "[Fe(CN) $ _{6} $ ] $ ^{-3} $"
+      },
+      "d": {
+        "text": "Fe $ _{3} $ O $ _{4} $"
+      },
+      "correct": "c",
+      "a": {
+        "text": "Fe $ _{2} $ (SO $ _{4} $ ) $ _{3} $"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "In which of these compounds iron has least oxidation number"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Chemistry",
+    "answer": {
+      "c": {
+        "text": "NH $ _{4} $ CI"
+      },
+      "b": {
+        "text": "K $ _{2} $ SO $ _{4} $"
+      },
+      "d": {
+        "text": "CH $ _{3} $ COONa"
+      },
+      "correct": "c",
+      "a": {
+        "text": "Na $ _{2} $ CO $ _{3} $"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "Which of this salt have cationic hydrolysis?"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Chemistry",
+    "answer": {
+      "c": {
+        "text": "Zn"
+      },
+      "b": {
+        "text": "Al"
+      },
+      "d": {
+        "text": "Mg"
+      },
+      "correct": "b",
+      "a": {
+        "text": "Fe"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "HNO $ _{3} $ can be stored in vessels made up of"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Chemistry",
+    "answer": {
+      "c": {
+        "text": "Carnallite"
+      },
+      "b": {
+        "text": "Caliche"
+      },
+      "d": {
+        "text": "Petroleum"
+      },
+      "correct": "c",
+      "a": {
+        "text": "Sea-weeds"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "Bromine is manufactured from?"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Chemistry",
+    "answer": {
+      "c": {
+        "text": "Siderite - Fe"
+      },
+      "b": {
+        "text": "Cinnabar- Hg"
+      },
+      "d": {
+        "text": "Bauxite - Cu"
+      },
+      "correct": "d",
+      "a": {
+        "text": "Calamine -Zn"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "Which of this is incorrect match of ore and metal?"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Chemistry",
+    "answer": {
+      "c": {
+        "text": "C"
+      },
+      "b": {
+        "text": "CO"
+      },
+      "d": {
+        "text": "H $ _{2} $"
+      },
+      "correct": "a",
+      "a": {
+        "text": "Cu $ _{2} $ O"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "The reducing agent in Bessemer converter during extraction of Copper pyrite is"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Chemistry",
+    "answer": {
+      "c": {
+        "text": "Air"
+      },
+      "b": {
+        "text": "CaO"
+      },
+      "d": {
+        "text": "Haematite"
+      },
+      "correct": "d",
+      "a": {
+        "text": "SiO $ _{2} $"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "In open hearth process impurities are removed by oxidation with"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Chemistry",
+    "answer": {
+      "c": {
+        "text": "Berzelius"
+      },
+      "b": {
+        "text": "Kolbe"
+      },
+      "d": {
+        "text": "Huckel"
+      },
+      "correct": "b",
+      "a": {
+        "text": "Wohler"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "Who synthesized the first organic compound starting from elements"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Chemistry",
+    "answer": {
+      "c": {
+        "text": "$ sp^{3} $"
+      },
+      "b": {
+        "text": "$ sp^{2} $"
+      },
+      "d": {
+        "text": "$ dsp^{2} $"
+      },
+      "correct": "b",
+      "a": {
+        "text": "Sp"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "In carbocation, the hybridization of carbon atom is"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Chemistry",
+    "answer": {
+      "c": {
+        "text": "Ethane"
+      },
+      "b": {
+        "text": "Ethene"
+      },
+      "d": {
+        "text": "Methane"
+      },
+      "correct": "c",
+      "a": {
+        "text": "Ethyne"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "The product of electrolysis of potassium acetate is"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Aptitude",
+    "answer": {
+      "c": {
+        "text": "Four stroke engine requires lighter flywheel."
+      },
+      "b": {
+        "text": "Two stroke engine develops twice as much the power developed by four stroke engine at same speed."
+      },
+      "d": {
+        "text": "None of the above"
+      },
+      "correct": "b",
+      "a": {
+        "text": "Two stroke provide two power stroke in two stroke engines."
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "Which of the following statement is correct?"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Aptitude",
+    "answer": {
+      "c": {
+        "text": "dry air"
+      },
+      "b": {
+        "text": "water"
+      },
+      "d": {
+        "text": "high compression ratio"
+      },
+      "correct": "d",
+      "a": {
+        "text": "spark from spark plug"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "In diesel engine, ignition is due to"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Aptitude",
+    "answer": {
+      "c": {
+        "text": "Tidal energy"
+      },
+      "b": {
+        "text": "Nuclear energy"
+      },
+      "d": {
+        "text": "Geothermal energy"
+      },
+      "correct": "b",
+      "a": {
+        "text": "Hydro potential energy"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "Which of the following is not the type of renewable energy?"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Aptitude",
+    "answer": {
+      "c": {
+        "text": "Electrical energy"
+      },
+      "b": {
+        "text": "Light energy"
+      },
+      "d": {
+        "text": "All"
+      },
+      "correct": "a",
+      "a": {
+        "text": "Thermal energy"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "Which form of energy is directly obtained from biomass?"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Aptitude",
+    "answer": {
+      "c": {
+        "text": "stone"
+      },
+      "b": {
+        "text": "clay"
+      },
+      "d": {
+        "text": "All"
+      },
+      "correct": "b",
+      "a": {
+        "text": "cement"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "Bricks are generally prepared by burning......."
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Aptitude",
+    "answer": {
+      "c": {
+        "text": "sand"
+      },
+      "b": {
+        "text": "silt"
+      },
+      "d": {
+        "text": "gravel"
+      },
+      "correct": "c",
+      "a": {
+        "text": "clay"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "Fine aggregate is also known as"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Aptitude",
+    "answer": {
+      "c": {
+        "text": "months"
+      },
+      "b": {
+        "text": "days"
+      },
+      "d": {
+        "text": "years"
+      },
+      "correct": "b",
+      "a": {
+        "text": "hours"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "Generally, design strength of concrete is achieved after 28.......... of wring."
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Aptitude",
+    "answer": {
+      "c": {
+        "text": "sillicon"
+      },
+      "b": {
+        "text": "clay"
+      },
+      "d": {
+        "text": "iron oxide"
+      },
+      "correct": "d",
+      "a": {
+        "text": "sand"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "Red colour of brick is due to"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Aptitude",
+    "answer": {
+      "c": {
+        "text": "address"
+      },
+      "b": {
+        "text": "record"
+      },
+      "d": {
+        "text": "all"
+      },
+      "correct": "c",
+      "a": {
+        "text": "storage"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "A name or number used to identify a storage location is"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Aptitude",
+    "answer": {
+      "c": {
+        "text": "1000 bytes"
+      },
+      "b": {
+        "text": "1024 bytes"
+      },
+      "d": {
+        "text": "1000 bits"
+      },
+      "correct": "b",
+      "a": {
+        "text": "1024 bits"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "1 KB corresponds to"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Aptitude",
+    "answer": {
+      "c": {
+        "text": "1 symbol"
+      },
+      "b": {
+        "text": "3 symbols"
+      },
+      "d": {
+        "text": "4 symbols"
+      },
+      "correct": "a",
+      "a": {
+        "text": "2 symbols"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "Binary system uses"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Aptitude",
+    "answer": {
+      "c": {
+        "text": "NOR"
+      },
+      "b": {
+        "text": "AND"
+      },
+      "d": {
+        "text": "BUT"
+      },
+      "correct": "d",
+      "a": {
+        "text": "OR"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "Which is not a logic gate?"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Aptitude",
+    "answer": {
+      "c": {
+        "text": "Wattmeter"
+      },
+      "b": {
+        "text": "Voltmeter"
+      },
+      "d": {
+        "text": "Ammeter"
+      },
+      "correct": "d",
+      "a": {
+        "text": "Currentmeter"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "The instrument used to measure current is"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Aptitude",
+    "answer": {
+      "c": {
+        "text": "both a and b"
+      },
+      "b": {
+        "text": "step down"
+      },
+      "d": {
+        "text": "none"
+      },
+      "correct": "a",
+      "a": {
+        "text": "step up"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "Which type of transformer is used to transmit electricity for long distance before connecting to main grid?"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  },
+  {
+    "subject": "Aptitude",
+    "answer": {
+      "c": {
+        "text": "Printing documents"
+      },
+      "b": {
+        "text": "Generating electricity"
+      },
+      "d": {
+        "text": "Displaying outputs"
+      },
+      "correct": "a",
+      "a": {
+        "text": "Amplifying signals"
+      }
+    },
+    "marks": 1,
+    "question": {
+      "text": "Which of the following is one of the most common use of transistors?"
+    },
+    "exam_category": "BE-IOE",
+    "exam_code": 1404130198
+  }
+]
