@@ -40,7 +40,7 @@ def subscribe_user_to_exam(request):
         users_result = User.objects.filter(
             Q(username__contains=query) | Q(email__contains=query)
         )
-        for each in users_result:
-            print each
+        # for each in users_result:
+        #     print each
         parameters['users_result'] = users_result
     return render_to_response('subscribe_to_exam.html', parameters, context_instance=RequestContext(request))
