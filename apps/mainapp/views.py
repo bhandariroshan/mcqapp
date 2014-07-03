@@ -360,7 +360,8 @@ def attend_dps_exam(request, exam_code):
     subscribed = user_profile_obj.check_subscribed(request.user.username, exam_code)
     if request.user.is_authenticated() and subscribed:
         user_det = user_profile_obj.get_user_by_username(request.user.username)
-        user_exams = user['valid_exam']
+
+        user_exams = user_det['valid_exam']
         if int(exam_code) not in user_exams:
             return HttpResponseRedirect('/')
         parameters = {}
