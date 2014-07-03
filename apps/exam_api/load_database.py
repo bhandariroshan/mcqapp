@@ -13,6 +13,7 @@ def load_examset_in_database(request):
     the function is used to load fake exam set in the exam collection
     of mcq database
     '''
+    print 'entered'
     question_api = QuestionApi()
     distinct_dict = question_api.find_distinct_value('exam_code', {})
     exam_list = []
@@ -22,12 +23,17 @@ def load_examset_in_database(request):
         )
         if len(questions) != 0:
             question_id_list = [ObjectId(i['uid']['id']) for i in questions]
+            if len(question_id_list) == 100:
+                exam_category = "MBBS-IOM"
+            else:
+                exam_category = "BE-IOE"
+
             exam_dict = {
                 "exam_name": "IOE Practice Exam",
                 "exam_date": 1401359880,
                 "image": "exam.jpg",
                 "exam_code": dist,
-                "exam_category": "BE-IOE",
+                "exam_category": exam_category,
                 "exam_duration": 60,
                 "exam_family": 'DPS',
                 "question_list": question_id_list
