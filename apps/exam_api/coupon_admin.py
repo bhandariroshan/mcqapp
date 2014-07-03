@@ -3,8 +3,10 @@ from apps.mainapp.classes.Userprofile import UserProfile
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.contrib.auth.decorators import user_passes_test, login_required
+from django.contrib.auth.models import User
+from django.db.models import Q
 
-@login_required(login_url='/')
+
 @user_passes_test(lambda u: u.is_superuser)
 def coupon_search(request):
     mycoupon = Coupon()
@@ -28,3 +30,17 @@ def coupon_search(request):
     else:
         parameters['coupon'] = ''
     return render_to_response("coupon_admin.html", parameters, context_instance=RequestContext(request))
+
+@user_passes_test(lambda u: u.is_superuser)
+def subscribe_user_to_exam(request):
+    mycoupon = Coupon()
+    parameters = {}
+    if request.method == 'POST':
+        query = request.POST.get('username')
+        users_result = User.objects.filter(
+            Q(username__contains=query) | Q(email__contains=query)
+        )
+        for each in users_result:
+            print each
+        parameters['users_result'] = users_result
+    return render_to_response('subscribe_to_exam.html', parameters, context_instance=RequestContext(request))

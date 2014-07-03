@@ -1,0 +1,16 @@
+<table width="800px" height="1200px" border="1px">
+{% for each_coupon in coupons %}
+			<td width="200px" height="200px" style="padding:5px;">
+				<p>Stuck in a problem?</br>Or need more coupons?</p>
+				<p>Call:</br>9808166147 or 9841157853 or 9842227969 or visit meroanswer.com</p>
+				<p style="text-align: center;"></p>
+			</td>
+			<td width="200px" height="200px" style="text-align: center;">
+				<img src="images/{{img}}" width="150px" height="150px">
+			</td>
+		{% if not forloop.counter0|divisibleby:2 %}
+		</tr>
+		{% endif %}
+{% endfor %}
+	</table>
+	

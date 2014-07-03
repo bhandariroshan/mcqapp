@@ -93,3 +93,6 @@ class Coupon():
 
     def update_coupons(self, subscription_type):
         return self.db_object.update_multi(self.table_name, {'subscription_type':subscription_type} ,{'printed':True})
+
+    def update_serial_no(self, serial_no, coupon_code):
+        return self.db_object.update(self.table_name, {'code': coupon_code}, {'serial_no': serial_no, 'printed': True})
