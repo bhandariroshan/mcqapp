@@ -25,8 +25,10 @@ def load_examset_in_database(request):
             question_id_list = [ObjectId(i['uid']['id']) for i in questions]
             if len(question_id_list) == 100:
                 exam_category = "MBBS-IOM"
+                exam_duration = 120
             else:
                 exam_category = "BE-IOE"
+                exam_duration = 60
 
             exam_dict = {
                 "exam_name": "IOE Practice Exam",
@@ -34,7 +36,7 @@ def load_examset_in_database(request):
                 "image": "exam.jpg",
                 "exam_code": dist,
                 "exam_category": exam_category,
-                "exam_duration": 60,
+                "exam_duration": exam_duration,
                 "exam_family": 'DPS',
                 "question_list": question_id_list
             }
@@ -119,25 +121,25 @@ def load_modelquestion_in_database(request):
     the function is used to load fake data in question collection
     of mcq database in mongodb
     '''
-    for var in range(201, 206):
-        f = open(
-            settings.APP_ROOT + '/apps/exam_api/' + str(var) + '.json', 'rb'
-        )
-        json_obj = json.loads(f.read())
-        for i, x in enumerate(json_obj):
-            x['question_number'] = i + 1
-        question_api = QuestionApi()
-        question_api.insert_new_question(json_obj)
+    # for var in range(201, 206):
+    #     f = open(
+    #         settings.APP_ROOT + '/apps/exam_api/' + str(var) + '.json', 'rb'
+    #     )
+    #     json_obj = json.loads(f.read())
+    #     for i, x in enumerate(json_obj):
+    #         x['question_number'] = i + 1
+    #     question_api = QuestionApi()
+    #     question_api.insert_new_question(json_obj)
 
-    for var in range(301, 303):
-        f = open(
-            settings.APP_ROOT + '/apps/exam_api/' + str(var) + '.json', 'rb'
-        )
-        json_obj = json.loads(f.read())
-        for i, x in enumerate(json_obj):
-            x['question_number'] = i + 1
-        question_api = QuestionApi()
-        question_api.insert_new_question(json_obj)
+    # for var in range(301, 303):
+    #     f = open(
+    #         settings.APP_ROOT + '/apps/exam_api/' + str(var) + '.json', 'rb'
+    #     )
+    #     json_obj = json.loads(f.read())
+    #     for i, x in enumerate(json_obj):
+    #         x['question_number'] = i + 1
+    #     question_api = QuestionApi()
+    #     question_api.insert_new_question(json_obj)
 
     for var in range(1, 11):
         if var == 5 or var == 6:
