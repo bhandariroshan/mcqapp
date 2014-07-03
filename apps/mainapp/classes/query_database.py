@@ -48,9 +48,8 @@ class QuestionApi():
             distinct_val=distinct_val,
             query=query)
 
-    def get_single_question(self, query ={}):
+    def get_single_question(self, query={}):
         return self.db_object.get_one(self.table_name, query)
-
 
 
 class ExammodelApi():

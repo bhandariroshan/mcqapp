@@ -7,9 +7,8 @@ from facepy import GraphAPI
 from allauth.socialaccount.models import SocialToken, SocialAccount
 from allauth.socialaccount.providers.facebook.views import login_by_token
 
-from django.http import Http404
 from django.core.paginator import Paginator
-
+from django.conf import settings
 from django.shortcuts import render_to_response
 from django.http import HttpResponseRedirect, HttpResponse
 from django.template import RequestContext
@@ -26,7 +25,6 @@ from apps.exam_api.views import ExamHandler
 from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi,\
     ExamStartSignal, HonorCodeAcceptSingal, AttemptedAnswerDatabase,\
     CurrentQuestionNumber
-from django.conf import settings
 
 
 def sign_up_sign_in(request, android_user=False):
@@ -175,8 +173,8 @@ def landing(request):
             eachExamDetails = exam_model_api.find_one_exammodel(
                 {'exam_code': eachExam}
             )
-            
-            if eachExamDetails == None:
+
+            if eachExamDetails is None:
                 continue
 
             up_exm['name'] = eachExamDetails.get('exam_name')
@@ -798,7 +796,12 @@ def generate_coupon(request, subscription_type):
         subscription_type = 'MBBS-IOM'
     coupon.update_coupons(subscription_type.upper())
     coupon.generate_coupons(subscription_type.upper())
-    return HttpResponse(json.dumps({'status': 'success', 'message': subscription_type + ' coupons generated'}))
+    return HttpResponse(
+        json.dumps(
+            {'status': 'success',
+             'message': subscription_type + ' coupons generated'}
+        )
+    )
 
 
 @user_passes_test(lambda u: u.is_superuser)
@@ -818,21 +821,32 @@ def get_coupons(request, subscription_type):
     coupons = coupon_obj.get_coupons(subscription_type)
     print ('Total coupons available: {0}').format(len(coupons))
     page_obj = Paginator(coupons, 12)
-    for i in range(1,page_obj.num_pages+1):
-        count = base_count + (i-1)*12
+    for i in range(1, page_obj.num_pages + 1):
+        count = base_count + (i - 1) * 12
         for cc, each_coup in enumerate(page_obj.page(i)):
-            coupon_obj.update_serial_no(serial_no= int(count+cc+1), coupon_code=each_coup['code'])
+            coupon_obj.update_serial_no(
+                serial_no=int(count + cc + 1), coupon_code=each_coup['code']
+            )
         abc = render_to_response(
             'coupons-print.html',
             {'coupons': page_obj.page(i), 'count': count}
         )
-        Html_file= open(settings.APP_ROOT+"/../meroanswer-coupons/htmls/" + "coupon-" + str(i) + ".html","w")
+        Html_file = open(
+            settings.APP_ROOT + "/../meroanswer-coupons/htmls/" +
+            "coupon-" + str(i) + ".html", "w"
+        )
         Html_file.write(str(abc))
         Html_file.close()
 
     coupon_count.update_coupon_count(count)
     subprocess.call(['../meroanswer-coupons/coupon-gen.sh'])
-    return HttpResponse(json.dumps({'status': 'ok', 'message': str(page_obj.num_pages) + ' Page '+ subscription_type + ' coupons generated'}))
+    return HttpResponse(
+        json.dumps(
+            {'status': 'ok',
+             'message': str(page_obj.num_pages) + ' Page ' +
+             subscription_type + ' coupons generated'}
+        )
+    )
 
 
 def results(request, exam_code):
@@ -859,8 +873,9 @@ def results(request, exam_code):
             'exam_code': int(exam_code),
             'user_id': request.user.id,
             'ess_time': ess_check['start_time']
-            },fields={'q_no': 1, 'attempt_details': 1
-        })
+        },
+            fields={'q_no': 1, 'attempt_details': 1}
+        )
     except:
         all_ans = ''
     answer_list = ''
@@ -887,11 +902,11 @@ def results(request, exam_code):
     from apps.mainapp.classes.result import Result
     result_obj = Result()
     result_obj.save_result({
-            'useruid': request.user.id,
-            'exam_code': int(exam_code),
-            'ess_time': ess_check['start_time'],
-            'result': score_list
-        })
+        'useruid': request.user.id,
+        'exam_code': int(exam_code),
+        'ess_time': ess_check['start_time'],
+        'result': score_list
+    })
     parameters['exam_code'] = exam_code
     parameters['myrankcard'] = {'total': 200, 'rank': 1}
     return render_to_response(
@@ -933,14 +948,13 @@ def show_result(request, exam_code, subject_name):
         if exam_details['exam_family'] == 'CPS' and current_time - \
                 exam_details['exam_date'] < exam_details['exam_duration'] * 60:
             return HttpResponseRedirect('/')
-            
-        parameters['exam_details'] = exam_details
-        question_obj = QuestionApi()
-        if exam_details['exam_category'] == 'BE-IOE':
-            question_id_list = exam_details['question_list']
 
-        questions = exam_handler_obj.get_filtered_question_from_database(int(exam_code), subject_name)
-        total_questions = len(questions)       
+        parameters['exam_details'] = exam_details
+
+        questions = exam_handler_obj.get_filtered_question_from_database(
+            int(exam_code), subject_name
+        )
+        total_questions = len(questions)
         try:
             current_q_no = int(request.GET.get('q', ''))
             if current_q_no >= total_questions:
