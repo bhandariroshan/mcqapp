@@ -1814,7 +1814,7 @@
         "exam_code": 201,
         "marks": 1,
         "question": {
-            "text": "One character takes …............ bytes of memory.",
+            "text": "One character takes …............ bits of memory.",
             "image": ""
         },
         "subject": "Aptitude"
