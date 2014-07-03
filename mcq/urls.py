@@ -29,4 +29,6 @@ urlpatterns = patterns(
     url(r'^iom/$', 'apps.mainapp.views.iomdashboard'),
     url(r'^iom/(?P<exam_code>\w{1,15})/$', 'apps.mainapp.views.attend_IOM_dps_exam'),
     url(r'^random/', include('apps.random_questions.urls', app_name='random_questions')),
+    url(r'^subscribe_exam/$', 'apps.exam_api.coupon_admin.subscribe_user_to_exam'),
+    url(r'^paying_users/$', 'apps.exam_api.coupon_admin.paying_users'),
 )
