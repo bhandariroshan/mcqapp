@@ -63,7 +63,7 @@
 
             <div id="upcomingPracticeExams" class="tab-content active" style="height: 836px; overflow-y: scroll;">
               {% if '/iom/' not in request.path %}
-              <article class="valign row text-color-white ui-widget-content ui-corner-all my-margin">
+              <article class="valign row text-color-white ui-widget-content ui-corner-all my-margin" style="border: 1px solid red;">
                   <div style="width:25%">
                       <img src="/static/images/exam.jpg" width="145px" />
                   </div>
@@ -72,7 +72,7 @@
                       <p><strong>Date: </strong>When ever you like in a single sitting</p>
                       <p><strong>Time: </strong>Anytime</p>
                           <p><strong>Cost: </strong>Rs. 30 (<a href="/coupon/">coupon code</a> entry required)</p>
-                       <div class="medium primary btn pretty button-margin" >
+                       <div class="medium warning btn pretty button-margin" >
                             <a id="generateNewExam" href="javascript:void(0)">Start New Exam</a>
                         </div>
                     </div>
