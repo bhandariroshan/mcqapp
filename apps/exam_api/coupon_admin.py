@@ -65,44 +65,66 @@ def paying_users(request):
             'email': each_user.get('email'),
             'first_name': each_user.get('first_name'),
             'last_name': each_user.get('last_name'),
-            'subscription_type': ' , '.join(each_user.get('subscription_type')),
-            'total_coupons': len(each_user.get('coupons'))
         }
         coupon_count = {}
-        price = 0
+        subscription_type = 'IDP'
         if 'BE-IOE' in each_user.get('subscription_type'):
             if len(each_user.get('subscription_type')) == 1:
-                coupon_count['BE-IOE'] = 1
+                subscription_type = 'BE-IOE'
             else:
                 if 'MBBS-IOM' in each_user.get('subscription_type'):
-                    coupon_count['MBBS-IOM'] = 1
+                    subscription_type = 'both'
 
         elif 'MBBS-IOM' in each_user.get('subscription_type'):
             if len(each_user.get('subscription_type')) == 1:
-                coupon_count['MBBS-IOM'] = 1
+                subscription_type = 'MBBS-IOM'
             else:
                 if 'BE-IOE' in each_user.get('subscription_type'):
-                    coupon_count['BE-IOE'] = 1
-        else:
-            if len(each_user.get('subscription_type')) != 0:
-                valid_exams = each_user.get('valid_exam')
-                if len(valid_exams) !=0:
-                    for each_exam in valid_exams:
-                        print each_exam
-                        try:
-                            exam_det = myexam.get_exam_detail(int(each_exam))
-                            print ('exam_det: {0}').format(exam_det)
-                            exam_family = exam_det.get('exam_family')
-                            exam_category = exam_det.get('exam_category')
-                            new_type = exam_family + "-" + exam_category
-                            coupon_count[new_type] = coupon_count.get(new_type, 1) + 1
-                        except:
-                            pass
-        user_details['coupon_count'] = coupon_count
-        # for each_coupon in each_user.get('coupons'):
-        #     one_coupon = mycoupon.get_coupon_by_coupon_code(each_coupon)
-        #     subscription_type = one_coupon.get('subscription_type')
-        #     coupon_count[subscription_type] = coupon_count.get(subscription_type, 0) + 1
+                    subscription_type = 'both'
+        
+        if len(each_user.get('subscription_type')) != 0:
+            #coupons
+            for each_coupon in each_user.get('coupons'):
+                try:
+                    one_coupon = mycoupon.get_coupon_by_coupon_code(each_coupon)
+                    exam_type = one_coupon.get('subscription_type')
+                    if exam_type == 'BE-IOE' and one_coupon.get('serial_no') is not None:
+                        exam_type = exam_type + '(discount)'
+                    new_type = subscription_type+ "/" + exam_type
+                    coupon_count[new_type] = coupon_count.get(new_type, 0) + 1
+                except:
+                    pass
+            #exams
+            # valid_exams = each_user.get('valid_exam')
+            # for each_exam in valid_exams:
+            #     print each_exam
+            #     try:
+            #         exam_det = myexam.get_exam_detail(int(each_exam))
+            #         print ('exam_det: {0}').format(exam_det)
+            #         exam_family = exam_det.get('exam_family')
+            #         exam_category = exam_det.get('exam_category')
+            #         new_type = exam_family + "-" + exam_category
+            #         coupon_count[new_type] = coupon_count.get(new_type, 1) + 1
+            #     except:
+            #         pass
+        user_details['coupon_count'] = ' ; '.join([key + ' - '+str(value) for key, value in coupon_count.iteritems()])
+        total_coupons = 0
+        coupon_price = {
+            'BE-IOE/DPS': 30,
+            'BE-IOE/CPS': 30,
+            'BE-IOE/BE-IOE': 500,
+            'BE-IOE/BE-IOE(discount)': 250,
+            'MBBS-IOM/DPS': 20,
+            'MBBS-IOM/CPS': 20,
+            'MBBS-IOM/MBBS-IOM': 300
+        }
+        price = 0
+        for key, value in coupon_count.iteritems():
+            total_coupons += value
+            price += coupon_price[key] * value
+
+        user_details['total_coupons'] = total_coupons
+        user_details['price'] = price
 
         print ('coupon_count for {0}: {1}').format(each_user.get('username'), coupon_count)
         paying_users.append(user_details)

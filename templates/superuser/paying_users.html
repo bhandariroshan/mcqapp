@@ -23,9 +23,9 @@
 			<td>{{each_user.username}}</td>
 			<td>{{each_user.email}}</td>
 			<td>{{each_user.first_name}} {{each_user.last_name}}</td>
-			<td>{{each_user.subscription_type}}</td>
-			<td>{{each_user.subscription_type|length}}</td>
-			<td>0</td>
+			<td>{{each_user.coupon_count}}</td>
+			<td>{{each_user.total_coupons}}</td>
+			<td>{{each_user.price}}</td>
 			
 		</tr>
 		{% endfor %}
