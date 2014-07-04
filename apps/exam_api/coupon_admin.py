@@ -41,8 +41,7 @@ def subscribe_user_to_exam(request):
         users_result = User.objects.filter(
             Q(username__contains=query) | Q(email__contains=query)
         )
-        # for each in users_result:
-        #     print each
+        
         parameters['users_result'] = users_result
     return render_to_response('superuser/subscribe_to_exam.html', parameters, context_instance=RequestContext(request))
 
@@ -58,7 +57,7 @@ def paying_users(request):
         users_result = profiles.search_user(query)
         
     else:
-        users_result = profiles.get_all_users()
+        users_result = profiles.get_all_users(limit=1000)
     for each_user in users_result:
         user_details = {
             'username': each_user.get('username'),
@@ -94,19 +93,7 @@ def paying_users(request):
                     coupon_count[new_type] = coupon_count.get(new_type, 0) + 1
                 except:
                     pass
-            #exams
-            # valid_exams = each_user.get('valid_exam')
-            # for each_exam in valid_exams:
-            #     print each_exam
-            #     try:
-            #         exam_det = myexam.get_exam_detail(int(each_exam))
-            #         print ('exam_det: {0}').format(exam_det)
-            #         exam_family = exam_det.get('exam_family')
-            #         exam_category = exam_det.get('exam_category')
-            #         new_type = exam_family + "-" + exam_category
-            #         coupon_count[new_type] = coupon_count.get(new_type, 1) + 1
-            #     except:
-            #         pass
+            
         user_details['coupon_count'] = ' ; '.join([key + ' - '+str(value) for key, value in coupon_count.iteritems()])
         total_coupons = 0
         coupon_price = {
@@ -125,8 +112,13 @@ def paying_users(request):
 
         user_details['total_coupons'] = total_coupons
         user_details['price'] = price
-
-        print ('coupon_count for {0}: {1}').format(each_user.get('username'), coupon_count)
-        paying_users.append(user_details)
+        if price != 0 or request.method == 'POST':
+            paying_users.append(user_details)
     parameters['users_result'] = paying_users
+    parameters['users_result'] = sorted(paying_users, key=getKey, reverse=True)
     return render_to_response('superuser/paying_users.html', parameters, context_instance=RequestContext(request))
+
+def getKey(item):
+    return item['price']
+
+
