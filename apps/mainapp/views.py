@@ -1036,7 +1036,10 @@ def get_list_of_result(request):
             exam_details = exam_obj.find_one_exammodel(
                 {'exam_code': int(exam_code)}
             )
-            if exam_details['exam_family'] == 'DPS':
+            if exam_details is not None:
+                if exam_details.get('exam_family') == 'DPS':
+                    continue
+            else:
                 continue
             attempt_timestamps = ans.get_attempted_exams(
                 'ess_time',
