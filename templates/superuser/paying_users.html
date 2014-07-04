@@ -2,7 +2,9 @@
 {% block content %}
 <div class="wrapper " id="simple" style="margin-top:6%;margin-bottom:2%">
 	<section class="row">		
+	{% if request.method == 'GET' %}
 <h2>Total paying users: {{users_result|length}}</h2>
+	{% endif %}
 	<form method="post" action=".">{% csrf_token %}
 		<input type="text" id="id_username" name="username" placeholder="Username or Email" required="required">
 	</form>
