@@ -107,6 +107,7 @@ def get_upcoming_exams(request):
         for eachExam in user_exams:
             exam_model_api= ExammodelApi()
             up_exam = exam_model_api.find_one_exammodel({'exam_code':eachExam}, {'question_list':0})  
+            up_exam['exam_date'] = int(up_exam['exam_date'])
             upcoming_exams.append(up_exam)
         for eachUpCExams in upc_exams:
             if eachUpCExams not in upc_exams:
