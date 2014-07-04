@@ -5,7 +5,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 from apps.mainapp.classes.Coupon import Coupon
 from apps.mainapp.classes.Userprofile import UserProfile
-
+from apps.mainapp.classes.query_database import ExammodelApi
 from .views import ExamHandler
 import datetime, time
 
@@ -99,14 +99,18 @@ def get_upcoming_exams(request):
     '''
     if request.user.is_authenticated():
         exam_handler = ExamHandler()
-        upcoming_exams = exam_handler.list_upcoming_exams()
-        for eachExam in upcoming_exams:
-            user_obj = UserProfile()
-            subscription_status = user_obj.check_subscribed(
-                request.user.username, eachExam['exam_code']
-            )
-            eachExam['subscribed'] = 1 if subscription_status else 0
-
+        upc_exams = exam_handler.list_upcoming_exams({'exam_category':'MBBS-IOM'}, fields={'question_list':0})
+        user_obj = UserProfile()
+        usr = user_obj.get_user_by_username(request.user.username)
+        user_exams = usr['valid_exam']
+        upcoming_exams = []
+        for eachExam in user_exams:
+            exam_model_api= ExammodelApi()
+            up_exam = exam_model_api.find_one_exammodel({'exam_code':eachExam}, {'question_list':0})  
+            upcoming_exams.append(up_exam)
+        for eachUpCExams in upc_exams:
+            if eachUpCExams not in upc_exams:
+                upcoming_exams.append(eachUpCExams)
         return HttpResponse(json.dumps(
             {'status': 'ok', 'result': upcoming_exams}
         )

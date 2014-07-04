@@ -99,12 +99,12 @@ class ExamHandler():
         )
         return return_question_list
 
-    def list_upcoming_exams(self, condition={}):
+    def list_upcoming_exams(self, condition={}, fields=None):
         '''
         this function lists the available exam models
         '''
         exam_set = ExammodelApi()
-        exam_list = exam_set.find_all_exammodel(condition)
+        exam_list = exam_set.find_all_exammodel(condition, fields=fields)
         for eachExam in exam_list:
             eachExam['exam_code'] = int(eachExam['exam_code'])
             eachExam['exam_date'] = int(eachExam['exam_date'])
