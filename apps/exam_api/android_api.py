@@ -110,7 +110,7 @@ def get_upcoming_exams(request):
             upcoming_exams.append(up_exam)
         for eachUpCExams in upc_exams:
             if eachUpCExams not in upc_exams:
-                eachUpCExams['exam_date'] = int(eachUpCExams)
+                eachUpCExams['exam_date'] = int(eachUpCExams['exam_date'])
                 upcoming_exams.append(eachUpCExams)
 
         return HttpResponse(json.dumps(
