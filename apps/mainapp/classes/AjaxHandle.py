@@ -515,7 +515,7 @@ class AjaxHandle():
                     {"exam_code": int(exam_code), 'marks': 1}
                 )
 
-                print questions
+                # print questions
                 sorted_questions = sorted(
                     questions, key=lambda k: k['question_number']
                 )

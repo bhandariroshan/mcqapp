@@ -1349,3 +1349,6 @@ def attend_IOM_dps_exam(request, exam_code):
 
     else:
         return HttpResponseRedirect('/iom/')
+
+def couponspage_redirect(request):
+    return HttpResponseRedirect('/coupon/')
