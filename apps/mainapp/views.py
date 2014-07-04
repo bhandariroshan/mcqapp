@@ -169,16 +169,18 @@ def landing(request):
             parameters['student_category_set'] = False
 
         all_valid_exams = exam_model_api.find_all_exammodel_descending(
-                {'exam_code': {'$in': user_exams}}, sort_index='exam_date'
-            )
+            {'exam_code': {'$in': user_exams}}, sort_index='exam_date'
+        )
         for count, eachExamDetails in enumerate(all_valid_exams):
             up_exm = {}
 
             if eachExamDetails is None:
                 continue
 
-            if eachExamDetails['exam_category'] == 'BE-IOE' and eachExamDetails['exam_family'] == 'DPS':
-                up_exm['name'] = "IOE Practice Exam " + str(len(all_valid_exams) - count)
+            if eachExamDetails['exam_category'] == 'BE-IOE' and \
+                    eachExamDetails['exam_family'] == 'DPS':
+                up_exm['name'] = "IOE Practice Exam " + \
+                    str(len(all_valid_exams) - count)
 
             if 'IDP' in subscription_type:
                 up_exm['subscribed'] = True
@@ -357,7 +359,9 @@ def attend_cps_exam(request, exam_code):
 
 def attend_dps_exam(request, exam_code):
     user_profile_obj = UserProfile()
-    subscribed = user_profile_obj.check_subscribed(request.user.username, exam_code)
+    subscribed = user_profile_obj.check_subscribed(
+        request.user.username, exam_code
+    )
     if request.user.is_authenticated() and subscribed:
         user_det = user_profile_obj.get_user_by_username(request.user.username)
 
@@ -1349,6 +1353,7 @@ def attend_IOM_dps_exam(request, exam_code):
 
     else:
         return HttpResponseRedirect('/iom/')
+
 
 def couponspage_redirect(request):
     return HttpResponseRedirect('/coupon/')

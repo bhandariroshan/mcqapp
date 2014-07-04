@@ -65,7 +65,6 @@ class ExammodelApi():
     def find_one_exammodel(self, condition, fields=None):
         return self.db_object.get_one(self.table_name, condition, fields)
 
-
     def find_all_exammodel(self, condition1, fields=None,
                            sort_index='_id', limit=200):
         return self.db_object.get_all(self.table_name, condition1,

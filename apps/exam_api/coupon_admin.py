@@ -1,9 +1,8 @@
 from apps.mainapp.classes.Coupon import Coupon
 from apps.mainapp.classes.Userprofile import UserProfile
-from apps.mainapp.classes.Exams import Exam
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from django.contrib.auth.decorators import user_passes_test, login_required
+from django.contrib.auth.decorators import user_passes_test
 from django.contrib.auth.models import User
 from django.db.models import Q
 
@@ -21,7 +20,8 @@ def coupon_search(request):
             user_details = {
                 'name': coupon_user.get('name'),
                 'username': coupon_user.get('username'),
-                'fb_link': 'https://facebook.com/'+ coupon_user.get('link').split('/')[-2]
+                'fb_link': 'https://facebook.com/' +
+                coupon_user.get('link').split('/')[-2]
 
             }
         else:
@@ -30,32 +30,40 @@ def coupon_search(request):
         parameters['coupon'] = coupon_obj
     else:
         parameters['coupon'] = ''
-    return render_to_response("coupon_admin.html", parameters, context_instance=RequestContext(request))
+    return render_to_response(
+        "coupon_admin.html",
+        parameters,
+        context_instance=RequestContext(request)
+    )
+
 
 @user_passes_test(lambda u: u.is_superuser)
 def subscribe_user_to_exam(request):
-    mycoupon = Coupon()
     parameters = {}
     if request.method == 'POST':
         query = request.POST.get('username')
         users_result = User.objects.filter(
             Q(username__contains=query) | Q(email__contains=query)
         )
-        
+
         parameters['users_result'] = users_result
-    return render_to_response('superuser/subscribe_to_exam.html', parameters, context_instance=RequestContext(request))
+    return render_to_response(
+        'superuser/subscribe_to_exam.html',
+        parameters,
+        context_instance=RequestContext(request)
+    )
+
 
 @user_passes_test(lambda u: u.is_superuser)
 def paying_users(request):
     profiles = UserProfile()
     mycoupon = Coupon()
-    myexam = Exam()
     parameters = {}
     paying_users = []
     if request.method == 'POST':
         query = request.POST.get('username')
         users_result = profiles.search_user(query)
-        
+
     else:
         users_result = profiles.get_all_users(limit=1000)
     for each_user in users_result:
@@ -80,21 +88,26 @@ def paying_users(request):
             else:
                 if 'BE-IOE' in each_user.get('subscription_type'):
                     subscription_type = 'both'
-        
+
         if len(each_user.get('subscription_type')) != 0:
             #coupons
             for each_coupon in each_user.get('coupons'):
                 try:
-                    one_coupon = mycoupon.get_coupon_by_coupon_code(each_coupon)
+                    one_coupon = mycoupon.get_coupon_by_coupon_code(
+                        each_coupon)
                     exam_type = one_coupon.get('subscription_type')
-                    if exam_type == 'BE-IOE' and one_coupon.get('serial_no') is not None:
+                    if exam_type == 'BE-IOE' and one_coupon.get('serial_no') \
+                            is not None:
                         exam_type = exam_type + '(discount)'
-                    new_type = subscription_type+ "/" + exam_type
+                    new_type = subscription_type + "/" + exam_type
                     coupon_count[new_type] = coupon_count.get(new_type, 0) + 1
                 except:
                     pass
-            
-        user_details['coupon_count'] = ' ; '.join([key + ' - '+str(value) for key, value in coupon_count.iteritems()])
+
+        user_details['coupon_count'] = ' ; '.join(
+            [key + ' - ' + str(value)
+                for key, value in coupon_count.iteritems()]
+        )
         total_coupons = 0
         coupon_price = {
             'BE-IOE/DPS': 30,
@@ -116,9 +129,12 @@ def paying_users(request):
             paying_users.append(user_details)
     parameters['users_result'] = paying_users
     parameters['users_result'] = sorted(paying_users, key=getKey, reverse=True)
-    return render_to_response('superuser/paying_users.html', parameters, context_instance=RequestContext(request))
+    return render_to_response(
+        'superuser/paying_users.html',
+        parameters,
+        context_instance=RequestContext(request)
+    )
+
 
 def getKey(item):
     return item['price']
-
-

@@ -120,8 +120,10 @@ def get_upcoming_exams(request):
         user_exams = usr['valid_exam']
         upcoming_exams = []
         for count, eachExam in enumerate(user_exams):
-            exam_model_api= ExammodelApi()
-            up_exam = exam_model_api.find_one_exammodel({'exam_code':eachExam}, {'question_list':0})  
+            exam_model_api = ExammodelApi()
+            up_exam = exam_model_api.find_one_exammodel(
+                {'exam_code': eachExam}, {'question_list': 0}
+            )
             up_exam['exam_date'] = int(up_exam['exam_date'])
             up_exam['exam_name'] = 'IOE Practice Exam ' + str(count + 1)
             up_exam['subscribed'] = 1
