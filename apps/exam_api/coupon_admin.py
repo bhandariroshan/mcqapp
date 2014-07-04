@@ -74,7 +74,7 @@ def paying_users(request):
             'last_name': each_user.get('last_name'),
         }
         coupon_count = {}
-        subscription_type = 'IDP'
+        subscription_type = ''
         if 'BE-IOE' in each_user.get('subscription_type'):
             if len(each_user.get('subscription_type')) == 1:
                 subscription_type = 'BE-IOE'
@@ -88,17 +88,28 @@ def paying_users(request):
             else:
                 if 'BE-IOE' in each_user.get('subscription_type'):
                     subscription_type = 'both'
-
-        if len(each_user.get('subscription_type')) != 0:
+        else:
+            subscription_type = ''
+        if len(each_user.get('subscription_type')) != 0 or len(each_user.get('coupons')) != 0:
             #coupons
             for each_coupon in each_user.get('coupons'):
                 try:
                     one_coupon = mycoupon.get_coupon_by_coupon_code(
-                        each_coupon)
+                        str(each_coupon))
                     exam_type = one_coupon.get('subscription_type')
                     if exam_type == 'BE-IOE' and one_coupon.get('serial_no') \
                             is not None:
                         exam_type = exam_type + '(discount)'
+                    if subscription_type == '':
+                        valid_exams = each_user.get('valid_exam')
+                        if len(valid_exams) != 0:
+                            if 301 in valid_exams or 302 in valid_exams:
+                                subscription_type = 'MBBS-IOM'
+                            else:
+                                subscription_type = 'BE-IOE'
+                        else:
+                                subscription_type = 'BE-IOE'
+
                     new_type = subscription_type + "/" + exam_type
                     coupon_count[new_type] = coupon_count.get(new_type, 0) + 1
                 except:
@@ -114,6 +125,8 @@ def paying_users(request):
             'BE-IOE/CPS': 30,
             'BE-IOE/BE-IOE': 500,
             'BE-IOE/BE-IOE(discount)': 250,
+            # 'IDP/DPS': 30,
+            # 'IDP/CPS': 30,
             'MBBS-IOM/DPS': 20,
             'MBBS-IOM/CPS': 20,
             'MBBS-IOM/MBBS-IOM': 300
