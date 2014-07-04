@@ -56,6 +56,7 @@ def subscribe_user_to_exam(request):
 
 @user_passes_test(lambda u: u.is_superuser)
 def paying_users(request):
+    blocked_usernames = ['santosh', 'sudip', 'sujit', 'roshan', 'sijan', 'raj']
     profiles = UserProfile()
     mycoupon = Coupon()
     parameters = {}
@@ -64,10 +65,11 @@ def paying_users(request):
     if request.method == 'POST':
         query = request.POST.get('username')
         users_result = profiles.search_user(query)
-
     else:
         users_result = profiles.get_all_users(limit=1000)
     for each_user in users_result:
+        if each_user.get('username') in blocked_usernames:
+            continue
         user_details = {
             'username': each_user.get('username'),
             'email': each_user.get('email'),
