@@ -8876,7 +8876,7 @@ table.rounded > tbody:first-child tr:first-child td {
 *****************************************************/
 .site-header {
   background-color: #134450;
-  /*background-image: url("../img/lander-bg.png");*/
+  background-image: url("");
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-background-size: cover;
@@ -9311,7 +9311,7 @@ table.rounded > tbody:first-child tr:first-child td {
   width: 10px;
   height: 11px;
   outline: 0;
-  background: url(../img/slider/controls.png) -86px -11px no-repeat;
+  background: url('') -86px -11px no-repeat;
   margin: 0 3px;
 }
 
@@ -9326,7 +9326,7 @@ table.rounded > tbody:first-child tr:first-child td {
   width: 9px;
   height: 11px;
   outline: 0;
-  background: url(../img/slider/controls.png) -86px -44px no-repeat;
+  background: url('') -86px -44px no-repeat;
   margin: 0 3px;
 }
 

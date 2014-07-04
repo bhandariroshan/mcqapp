@@ -105,6 +105,9 @@ class ExamHandler():
         '''
         exam_set = ExammodelApi()
         exam_list = exam_set.find_all_exammodel(condition)
+        for eachExam in exam_list:
+            eachExam['exam_code'] = int(eachExam['exam_code'])
+            eachExam['exam_date'] = int(eachExam['exam_date'])
         return exam_list
 
     def check_answers(self, exam_code, answer_list):
