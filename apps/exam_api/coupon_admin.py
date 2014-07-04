@@ -60,6 +60,7 @@ def paying_users(request):
     mycoupon = Coupon()
     parameters = {}
     paying_users = []
+    total_type_count = {}
     if request.method == 'POST':
         query = request.POST.get('username')
         users_result = profiles.search_user(query)
@@ -85,12 +86,18 @@ def paying_users(request):
         elif 'MBBS-IOM' in each_user.get('subscription_type'):
             if len(each_user.get('subscription_type')) == 1:
                 subscription_type = 'MBBS-IOM'
-            else:
-                if 'BE-IOE' in each_user.get('subscription_type'):
-                    subscription_type = 'both'
         else:
             subscription_type = ''
         if len(each_user.get('subscription_type')) != 0 or len(each_user.get('coupons')) != 0:
+            if subscription_type == '':
+                valid_exams = each_user.get('valid_exam')
+                if len(valid_exams) != 0:
+                    if 301 in valid_exams or 302 in valid_exams:
+                        subscription_type = 'MBBS-IOM'
+                    else:
+                        subscription_type = 'BE-IOE'
+                else:
+                    subscription_type = 'BE-IOE'
             #coupons
             for each_coupon in each_user.get('coupons'):
                 try:
@@ -100,17 +107,8 @@ def paying_users(request):
                     if exam_type == 'BE-IOE' and one_coupon.get('serial_no') \
                             is not None:
                         exam_type = exam_type + '(discount)'
-                    if subscription_type == '':
-                        valid_exams = each_user.get('valid_exam')
-                        if len(valid_exams) != 0:
-                            if 301 in valid_exams or 302 in valid_exams:
-                                subscription_type = 'MBBS-IOM'
-                            else:
-                                subscription_type = 'BE-IOE'
-                        else:
-                                subscription_type = 'BE-IOE'
-
                     new_type = subscription_type + "/" + exam_type
+                    total_type_count[new_type] = total_type_count.get(new_type, 0) + 1
                     coupon_count[new_type] = coupon_count.get(new_type, 0) + 1
                 except:
                     pass
@@ -140,7 +138,7 @@ def paying_users(request):
         user_details['price'] = price
         if price != 0 or request.method == 'POST':
             paying_users.append(user_details)
-    parameters['users_result'] = paying_users
+    parameters['total_type_count'] = total_type_count
     parameters['users_result'] = sorted(paying_users, key=getKey, reverse=True)
     return render_to_response(
         'superuser/paying_users.html',
