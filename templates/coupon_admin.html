@@ -20,6 +20,7 @@
 		<th>Code</th>
 		<th>Printed</th>
 		<th>Status</th>
+		<th>Serial No</th>
 		<th>Type</th>
 		{% if coupon_user %}
 			<th>Username</th>
@@ -30,10 +31,11 @@
 			<td>{{coupon.code}}</td>
 			<td>{{coupon.printed}}</td>
 			<td>{{coupon.used.status}}</td>
+			<td>{{coupon.serial_no}}</td>
 			<td>{{coupon.subscription_type}}</td>
 			{% if coupon_user %}
-				<td>{{coupon_user.name}}</td>
 				<td>{{coupon_user.username}}</td>
+				<td>{{coupon_user.name}}</td>
 				<td><a href="{{coupon_user.fb_link}}" target="_blank_">Click Here</a></td>
 			{% endif %}
 		</tr>

@@ -25,7 +25,7 @@
             "text": "Which one of the following is correct?",
             "image": ""
         },
-        "subject": "Math"
+        "subject": "Mathematics"
     },
     {
         "answer": {
@@ -53,7 +53,7 @@
             "text": "If f(x-2) = x then f(x)=",
             "image": ""
         },
-        "subject": "Math"
+        "subject": "Mathematics"
     },
     {
         "answer": {
@@ -81,7 +81,7 @@
             "text": "Which one is the best alternative for the roots of quadratic equation $ ax^{2}+bx+c=0, a \\neq 0, a, b, c \\in \\mathbb{R} $, to be real?",
             "image": ""
         },
-        "subject": "Math"
+        "subject": "Mathematics"
     },
     {
         "answer": {
@@ -109,7 +109,7 @@
             "text": "The value of $ \\begin{vmatrix}\n-a^{2} & ab & ac \\\\ab & -b^{2} & bc \\\\ac & bc & -c^{2}\n\\end{vmatrix} $ =",
             "image": ""
         },
-        "subject": "Math"
+        "subject": "Mathematics"
     },
     {
         "answer": {
@@ -137,7 +137,7 @@
             "text": "$ \\int\\begin{bmatrix} \\frac{1}{ln x}- \\frac{1}{(ln x)^{2}} \\end{bmatrix}dx = $",
             "image": ""
         },
-        "subject": "Math"
+        "subject": "Mathematics"
     },
     {
         "answer": {
@@ -165,7 +165,7 @@
             "text": "$ \\lim_{x \\rightarrow 0} \\frac{\\begin{vmatrix}x\\end{vmatrix}}{x} = $",
             "image": ""
         },
-        "subject": "Math"
+        "subject": "Mathematics"
     },
     {
         "answer": {
@@ -193,7 +193,7 @@
             "text": "If $ y = e^{ax+b} $ then $ \\frac{d^{2}y}{dx^{2}} $ at x=0 is",
             "image": ""
         },
-        "subject": "Math"
+        "subject": "Mathematics"
     },
     {
         "answer": {
@@ -221,7 +221,7 @@
             "text": "The number of spheres of a given radius and touching the co-ordinate planes is",
             "image": ""
         },
-        "subject": "Math"
+        "subject": "Mathematics"
     },
     {
         "answer": {
@@ -249,7 +249,7 @@
             "text": "If $ \\overrightarrow{a}, \\overrightarrow{b}, \\overrightarrow{c} $ are three unit vectors with relation $ \\overrightarrow{a} + \\overrightarrow{b} + \\overrightarrow{c} = 0 $, what is the angle between $ \\overrightarrow{b} and \\overrightarrow{c} $ ?",
             "image": ""
         },
-        "subject": "Math"
+        "subject": "Mathematics"
     },
     {
         "answer": {
@@ -277,7 +277,7 @@
             "text": "The area of $ \\triangle $ with two vertices (1, 2), (4, 5) and centroid (0, 0) is",
             "image": ""
         },
-        "subject": "Math"
+        "subject": "Mathematics"
     },
     {
         "answer": {
@@ -1814,7 +1814,7 @@
         "exam_code": 201,
         "marks": 1,
         "question": {
-            "text": "One character takes …............ bytes of memory.",
+            "text": "One character takes …............ bits of memory.",
             "image": ""
         },
         "subject": "Aptitude"
@@ -1845,7 +1845,7 @@
             "text": "The angles of a $ \\triangle $ are in the ratio 1:2:7, then the ratio of the greatest side to the least side is",
             "image": ""
         },
-        "subject": "Math"
+        "subject": "Mathematics"
     },
     {
         "answer": {
@@ -1873,7 +1873,7 @@
             "text": "If z and w are two complex numbers, then $ z\\overline{w}+w\\overline{z} $ =",
             "image": ""
         },
-        "subject": "Math"
+        "subject": "Mathematics"
     },
     {
         "answer": {
@@ -1901,7 +1901,7 @@
             "text": "$ \\lim_{x \\rightarrow \\theta} \\frac{xcos\\theta - \\theta cosx}{x-\\theta} $",
             "image": ""
         },
-        "subject": "Math"
+        "subject": "Mathematics"
     },
     {
         "answer": {
@@ -1929,7 +1929,7 @@
             "text": "$ \\frac {d}{dx} $ (arctan sinh x) =",
             "image": ""
         },
-        "subject": "Math"
+        "subject": "Mathematics"
     },
     {
         "answer": {
@@ -1957,7 +1957,7 @@
             "text": "The number of ways in which five identical balls can be distributed among ten identical boxes such that no box contains more than one ball is",
             "image": ""
         },
-        "subject": "Math"
+        "subject": "Mathematics"
     },
     {
         "answer": {
@@ -1985,7 +1985,7 @@
             "text": "The sum to infinity of the series $ 1 + 2\\left(1-\\frac{1}{n}\\right) + 3\\left(1-\\frac{1}{n}\\right)^{2} + \\dots\\dots + \\infty $ is",
             "image": ""
         },
-        "subject": "Math"
+        "subject": "Mathematics"
     },
     {
         "answer": {
@@ -2013,7 +2013,7 @@
             "text": "The coefficient of $ x^{p} $ and $ x^{q} $ in the expansion of $ (1+x)^{p+q} $ where p and q are positive integers are",
             "image": ""
         },
-        "subject": "Math"
+        "subject": "Mathematics"
     },
     {
         "answer": {
@@ -2041,7 +2041,7 @@
             "text": "The point (1, 2) lies outside of the circle $ x^{2} + y^{2} = k $ if k satisfies the condition",
             "image": ""
         },
-        "subject": "Math"
+        "subject": "Mathematics"
     },
     {
         "answer": {
@@ -2069,7 +2069,7 @@
             "text": "The equation of common tangent of the parabola $ y^{2} = x $ and $ x^{2} = y $ is",
             "image": ""
         },
-        "subject": "Math"
+        "subject": "Mathematics"
     },
     {
         "answer": {
@@ -2097,7 +2097,7 @@
             "text": "In an ellipse, the distance between its foci is 6 and its minor axis is 8. Then the eccentricity of the ellipse is",
             "image": ""
         },
-        "subject": "Math"
+        "subject": "Mathematics"
     },
     {
         "answer": {
@@ -2125,7 +2125,7 @@
             "text": "$ \\int\\frac{dx}{\\sqrt{e^{2x}-1}} $ =",
             "image": ""
         },
-        "subject": "Math"
+        "subject": "Mathematics"
     },
     {
         "answer": {
@@ -2153,7 +2153,7 @@
             "text": "If the curve $ y = ax^{2} – 6x + b $ passes through (0, 2) and has its horizontal tangent at $ x = \\frac{3}{2} $, then the values of a and b are",
             "image": ""
         },
-        "subject": "Math"
+        "subject": "Mathematics"
     },
     {
         "answer": {
@@ -2181,7 +2181,7 @@
             "text": "If $ \\vec{a} $ and $ \\vec{b} $ are two unit vectors inclined to x-axis at angles of $ 30^o $ and $ 120^o $ respectively then $ |\\vec{a} + \\vec{b}| = $ ?",
             "image": ""
         },
-        "subject": "Math"
+        "subject": "Mathematics"
     },
     {
         "answer": {
@@ -2209,7 +2209,7 @@
             "text": "$ \\int_{0}^{\\pi} cos^{3}x dx = $",
             "image": ""
         },
-        "subject": "Math"
+        "subject": "Mathematics"
     },
     {
         "answer": {
@@ -2237,7 +2237,7 @@
             "text": "If A = $ \\left(\\begin{array}{c}x && x \\\\ x && x\\end{array}\\right) $, then the value of $ A^{3} $ equals to",
             "image": ""
         },
-        "subject": "Math"
+        "subject": "Mathematics"
     },
     {
         "answer": {
@@ -2265,7 +2265,7 @@
             "text": "If the length of the perpendicular drawn from the origin on a plane is 7 units and its direction ratios are -3, 2, -6, then the equation of the plane is",
             "image": ""
         },
-        "subject": "Math"
+        "subject": "Mathematics"
     },
     {
         "answer": {
@@ -2293,7 +2293,7 @@
             "text": "Distance between the pair of parallel lines represented by $ x^{2} – 6xy + 9y^{2} + 3x -9y -4 = 0 $ is",
             "image": ""
         },
-        "subject": "Math"
+        "subject": "Mathematics"
     },
     {
         "answer": {
@@ -2321,7 +2321,7 @@
             "text": "If $ tan7\\theta = cot5\\theta $, then general solution for $ \\theta $ is",
             "image": ""
         },
-        "subject": "Math"
+        "subject": "Mathematics"
     },
     {
         "answer": {
@@ -2349,7 +2349,7 @@
             "text": "A and B are two sets having 3 and 5 element respectively and having 2 elements common to both. Then the number of elements in (A x B) is",
             "image": ""
         },
-        "subject": "Math"
+        "subject": "Mathematics"
     },
     {
         "answer": {
@@ -2377,7 +2377,7 @@
             "text": "The area bounded by the curves $ y = x^{2} $ and y = |x| is",
             "image": ""
         },
-        "subject": "Math"
+        "subject": "Mathematics"
     },
     {
         "answer": {

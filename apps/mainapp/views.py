@@ -1,12 +1,14 @@
 import time
 import datetime
 import json
+import subprocess
 from facepy import GraphAPI
-import re
 
 from allauth.socialaccount.models import SocialToken, SocialAccount
 from allauth.socialaccount.providers.facebook.views import login_by_token
 
+from django.core.paginator import Paginator
+from django.conf import settings
 from django.shortcuts import render_to_response
 from django.http import HttpResponseRedirect, HttpResponse
 from django.template import RequestContext
@@ -18,8 +20,8 @@ from apps.mainapp.classes.MailChimp import MailChimp
 from apps.mainapp.classes.Exams import RankCard, ScoreCard
 from apps.mainapp.classes.Coupon import Coupon
 from apps.mainapp.classes.Userprofile import UserProfile
+from apps.mainapp.classes.CouponCount import CouponCount
 from apps.exam_api.views import ExamHandler
-
 from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi,\
     ExamStartSignal, HonorCodeAcceptSingal, AttemptedAnswerDatabase,\
     CurrentQuestionNumber
@@ -166,16 +168,17 @@ def landing(request):
         except:
             parameters['student_category_set'] = False
 
-        for eachExam in user_exams:
-            up_exm = {}
-            eachExamDetails = exam_model_api.find_one_exammodel(
-                {'exam_code': eachExam}
+        all_valid_exams = exam_model_api.find_all_exammodel_descending(
+                {'exam_code': {'$in': user_exams}}, sort_index='exam_date'
             )
-            
-            if eachExamDetails == None:
+        for count, eachExamDetails in enumerate(all_valid_exams):
+            up_exm = {}
+
+            if eachExamDetails is None:
                 continue
 
-            up_exm['name'] = eachExamDetails.get('exam_name')
+            if eachExamDetails['exam_category'] == 'BE-IOE' and eachExamDetails['exam_family'] == 'DPS':
+                up_exm['name'] = "IOE Practice Exam " + str(len(all_valid_exams) - count)
 
             if 'IDP' in subscription_type:
                 up_exm['subscribed'] = True
@@ -354,11 +357,13 @@ def attend_cps_exam(request, exam_code):
 
 def attend_dps_exam(request, exam_code):
     user_profile_obj = UserProfile()
-    subscribed = user_profile_obj.check_subscribed(
-        request.user.username, exam_code
-    )
+    subscribed = user_profile_obj.check_subscribed(request.user.username, exam_code)
     if request.user.is_authenticated() and subscribed:
         user_det = user_profile_obj.get_user_by_username(request.user.username)
+
+        user_exams = user_det['valid_exam']
+        if int(exam_code) not in user_exams:
+            return HttpResponseRedirect('/')
         parameters = {}
         parameters['user'] = user_det
         ess = ExamStartSignal()
@@ -781,32 +786,70 @@ def distributors(request):
 
 
 @user_passes_test(lambda u: u.is_superuser)
-def generate_coupon(request):
+def generate_coupon(request, subscription_type):
     # 1. DPS (Daily Practice Set)
     # 2. CPS (Competitive Pracice Set)
     # 3. MBBS-IOM
     # 4. BE-IOE
     # 5. IDP (Inter Disciplinary Plan)
     coupon = Coupon()
-    # # coupon.generate_coupons('IDP')
-    coupon.generate_coupons('DPS')
-    # coupon.generate_coupons('CPS')
-    # coupon.generate_coupons('BE-IOE')
-    # coupon.generate_coupons('MBBS-IOM')
-    return HttpResponse(json.dumps({'status': 'success'}))
+    if subscription_type == 'beioe':
+        subscription_type = 'BE-IOE'
+    elif subscription_type == 'mbbsiom':
+        subscription_type = 'MBBS-IOM'
+    coupon.update_coupons(subscription_type.upper())
+    coupon.generate_coupons(subscription_type.upper())
+    return HttpResponse(
+        json.dumps(
+            {'status': 'success',
+             'message': subscription_type + ' coupons generated'}
+        )
+    )
 
 
 @user_passes_test(lambda u: u.is_superuser)
 def get_coupons(request, subscription_type):
     coupon_obj = Coupon()
+    coupon_count = CouponCount()
+    base_count = coupon_count.get_coupon_count()
+    if base_count is not None:
+        base_count = base_count['count']
+    else:
+        base_count = 1000
     if subscription_type == 'beioe':
         subscription_type = 'BE-IOE'
     elif subscription_type == 'mbbsiom':
         subscription_type = 'MBBS-IOM'
     subscription_type = subscription_type.upper()
     coupons = coupon_obj.get_coupons(subscription_type)
-    # coupon_obj.update_coupons(subscription_type)
-    return HttpResponse(json.dumps({'status': 'ok', 'coupons': coupons}))
+    print ('Total coupons available: {0}').format(len(coupons))
+    page_obj = Paginator(coupons, 12)
+    for i in range(1, page_obj.num_pages + 1):
+        count = base_count + (i - 1) * 12
+        for cc, each_coup in enumerate(page_obj.page(i)):
+            coupon_obj.update_serial_no(
+                serial_no=int(count + cc + 1), coupon_code=each_coup['code']
+            )
+        abc = render_to_response(
+            'coupons-print.html',
+            {'coupons': page_obj.page(i), 'count': count}
+        )
+        Html_file = open(
+            settings.APP_ROOT + "/../meroanswer-coupons/htmls/" +
+            "coupon-" + str(i) + ".html", "w"
+        )
+        Html_file.write(str(abc))
+        Html_file.close()
+
+    coupon_count.update_coupon_count(count)
+    subprocess.call(['../meroanswer-coupons/coupon-gen.sh'])
+    return HttpResponse(
+        json.dumps(
+            {'status': 'ok',
+             'message': str(page_obj.num_pages) + ' Page ' +
+             subscription_type + ' coupons generated'}
+        )
+    )
 
 
 def results(request, exam_code):
@@ -833,8 +876,9 @@ def results(request, exam_code):
             'exam_code': int(exam_code),
             'user_id': request.user.id,
             'ess_time': ess_check['start_time']
-            },fields={'q_no': 1, 'attempt_details': 1
-        })
+        },
+            fields={'q_no': 1, 'attempt_details': 1}
+        )
     except:
         all_ans = ''
     answer_list = ''
@@ -861,11 +905,11 @@ def results(request, exam_code):
     from apps.mainapp.classes.result import Result
     result_obj = Result()
     result_obj.save_result({
-            'useruid': request.user.id,
-            'exam_code': int(exam_code),
-            'ess_time': ess_check['start_time'],
-            'result': score_list
-        })
+        'useruid': request.user.id,
+        'exam_code': int(exam_code),
+        'ess_time': ess_check['start_time'],
+        'result': score_list
+    })
     parameters['exam_code'] = exam_code
     parameters['myrankcard'] = {'total': 200, 'rank': 1}
     return render_to_response(
@@ -907,14 +951,13 @@ def show_result(request, exam_code, subject_name):
         if exam_details['exam_family'] == 'CPS' and current_time - \
                 exam_details['exam_date'] < exam_details['exam_duration'] * 60:
             return HttpResponseRedirect('/')
-            
-        parameters['exam_details'] = exam_details
-        question_obj = QuestionApi()
-        if exam_details['exam_category'] == 'BE-IOE':
-            question_id_list = exam_details['question_list']
 
-        questions = exam_handler_obj.get_filtered_question_from_database(int(exam_code), subject_name)
-        total_questions = len(questions)       
+        parameters['exam_details'] = exam_details
+
+        questions = exam_handler_obj.get_filtered_question_from_database(
+            int(exam_code), subject_name
+        )
+        total_questions = len(questions)
         try:
             current_q_no = int(request.GET.get('q', ''))
             if current_q_no >= total_questions:

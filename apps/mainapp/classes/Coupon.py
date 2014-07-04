@@ -37,11 +37,14 @@ class Coupon():
             coupon = coupon + number_system[num]
             # print self.db_object.get_one(self.table_name, {'code':str(coupon)})
             if self.db_object.get_one(self.table_name,{'code':str(coupon)}) is None:
+                request_time  = datetime.datetime.now()
+                gen_time  = time.mktime(request_time.timetuple())
                 data = {
                     'code':coupon,
                     'subscription_type':subscription_type, 
                     'used':{'status':0},
-                    'printed':False
+                    'printed':False,
+                    'generated_time':gen_time
                     }
                 self.db_object.insert_one(self.table_name, data)
         return 'generated'            
@@ -82,11 +85,14 @@ class Coupon():
     		For sample code for which one to many relationship exists. 
     	'''
         request_time  = datetime.datetime.now()
-        request_time  = time.mktime(request_time.timetuple())    
-        return self.db_object.update_upsert(self.table_name, {'code':coupon_code},{'used':{'status':1}})        
+        request_time  = time.mktime(request_time.timetuple())
+        return self.db_object.update_upsert(self.table_name, {'code':coupon_code},{'used':{'status':1, 'used_time':request_time}})
 
     def get_coupons(self, subscription_type):
         return self.db_object.get_all_vals(self.table_name,{'subscription_type':subscription_type, 'used.status':0, 'printed':False})
 
     def update_coupons(self, subscription_type):
         return self.db_object.update_multi(self.table_name, {'subscription_type':subscription_type} ,{'printed':True})
+
+    def update_serial_no(self, serial_no, coupon_code):
+        return self.db_object.update(self.table_name, {'code': coupon_code}, {'serial_no': serial_no, 'printed': True})

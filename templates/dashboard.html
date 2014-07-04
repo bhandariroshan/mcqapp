@@ -63,7 +63,7 @@
 
             <div id="upcomingPracticeExams" class="tab-content active" style="height: 836px; overflow-y: scroll;">
               {% if '/iom/' not in request.path %}
-              <article class="valign row text-color-white ui-widget-content ui-corner-all my-margin">
+              <article class="valign row text-color-white ui-widget-content ui-corner-all my-margin" style="border: 1px solid red;">
                   <div style="width:25%">
                       <img src="/static/images/exam.jpg" width="145px" />
                   </div>
@@ -72,7 +72,7 @@
                       <p><strong>Date: </strong>When ever you like in a single sitting</p>
                       <p><strong>Time: </strong>Anytime</p>
                           <p><strong>Cost: </strong>Rs. 30 (<a href="/coupon/">coupon code</a> entry required)</p>
-                       <div class="medium primary btn pretty button-margin" >
+                       <div class="medium warning btn pretty button-margin" >
                             <a id="generateNewExam" href="javascript:void(0)">Start New Exam</a>
                         </div>
                     </div>
@@ -95,7 +95,7 @@
                 <div style="width:65%">
                     <!-- <h4><a href="#" id="{{eachExam.code}}/"><strong>{{eachExam.name}}</strong></a></h4> -->
                     {% if eachExam.exam_category == 'BE-IOE' and eachExam.exam_family == 'DPS' %}
-                    <h4><a href="#" id="{{eachExam.code}}/"><strong>IOE Practice Model {{forloop.counter}}</strong></a></h4>
+                    <h4><a href="#" id="{{eachExam.code}}/"><strong>{{eachExam.name}}</strong></a></h4>
                     {% else %}
                       <h4><a href="#" id="{{eachExam.code}}/"><strong>IOM Practice Model {{forloop.counter}}</strong></a></h4>                    
                     {% endif %}
@@ -206,7 +206,7 @@
         {% if not 'iom' in request.path %}
           <li class="warning alert">
             <h2 style="text-align: center; font-size: 40px; text-decoration:underline;">  Notice </h2>
-            <p>Our system is similar to Institute of Engineering's computerized system. You can get coupons from <a href="/distributors/"><distributors</a> and start practicing questions.
+            <p>Our system is similar to Institute of Engineering's computerized system. You can get coupons from <a href="/distributors/">distributors</a> and start practicing questions.
             </p><!-- 
             <div class="medium primary btn pretty" >
                 <a href="#" id="enterSubsCoupon" style="width: 150px;" onclick="attempt_exam('subs')">Enter here</a>
@@ -226,6 +226,10 @@
 
           <div class="twelve columns ui-corner-all">
               <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fmeroanswer&amp;width&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true&amp;appId=238848396304709" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:290px;" allowTransparency="true"></iframe>
+
+<a href="https://twitter.com/Meroanswer" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @Meroanswer</a>
+
+
           </div>
 
         <!--         {% if not student_category %}
@@ -354,13 +358,13 @@ var ex_code;
   }
 
   $('#generateNewExam').on('click', function(){
-    {% if 'BE-IOE' not in subscription_type %}
-      var html_str = 'Coupon code are necessary to ensure the regular operation of exam. Coupon codes are available at various <a href="/#/" style="color:red;"><strong>distributors</strong></a>. Please enter code your below'
-        $('#infoText').html(html_str); 
-        $('#validateCouponforNewExam').click();
+    {% if 'BE-IOE' in subscription_type or 'IDP' in subscription_type %}
+      get_new_ioe_exam();      
       
       {% else %}
-        get_new_ioe_exam();
+        var html_str = 'Coupon code are necessary to ensure the regular operation of exam. Coupon codes are available at various <a href="/#/" style="color:red;"><strong>distributors</strong></a>. Please enter code your below'
+        $('#infoText').html(html_str); 
+        $('#validateCouponforNewExam').click();
     {% endif %}
   });
 
@@ -369,6 +373,9 @@ var ex_code;
     chek_valid_dps_code(code);
   });
 </script>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
 <script type="text/javascript">
   mixpanel.track_links("#DPSExamsTab", "Viewed DPS Exams on dashboard", {"referrer": document.referrer});
   mixpanel.track_links("#CPSExamsTab", "Viewed CPS Exams on dashboard", {"referrer": document.referrer});
