@@ -18,8 +18,8 @@ class MongoConnection():
         pass
         # self.db[table_name].create_index([(index, pymongo.DESCENDING)])
 
-    def get_one(self, table_name, conditions={}):
-        single_doc = self.db[table_name].find_one(conditions)
+    def get_one(self, table_name, conditions={}, fields=None):
+        single_doc = self.db[table_name].find_one(conditions, fields)
         json_doc = json.dumps(single_doc, default=json_util.default)
         json_doc = json_doc.replace("$oid", "id")
         json_doc = json_doc.replace("_id", "uid")
