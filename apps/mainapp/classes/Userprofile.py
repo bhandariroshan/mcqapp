@@ -8,6 +8,21 @@ class UserProfile():
         self.table_name = 'userprofile'
         # self.db_object.create_table(self.table_name)
 
+    def search_user(self, query):
+        return self.db_object.get_all(
+            self.table_name,
+            {
+                '$or': [
+                    {'username': {'$regex' : "(?i).*"+query+".*"}},
+                    {'email': {'$regex' : "(?i).*"+query+".*"}},
+                    {'name': {'$regex' : "(?i).*"+query+".*"}}
+                ]
+            }
+        )
+
+    def get_all_users(self):
+        return self.db_object.get_all(self.table_name)
+
     def save_user(self, user={}):
         self.db_object.insert_one(self.table_name, user)
 

@@ -50,6 +50,6 @@ def latest_users(request):
             pass
     parameters['latest_users'] = latest_users
     return render_to_response(
-        'latest_users.html',
+        'superuser/latest_users.html',
         parameters, context_instance=RequestContext(request)
     )
