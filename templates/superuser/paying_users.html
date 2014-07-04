@@ -2,6 +2,7 @@
 {% block content %}
 <div class="wrapper " id="simple" style="margin-top:6%;margin-bottom:2%">
 	<section class="row">		
+<h2>Total paying users: {{users_result|length}}</h2>
 	<form method="post" action=".">{% csrf_token %}
 		<input type="text" id="id_username" name="username" placeholder="Username or Email" required="required">
 	</form>
@@ -12,6 +13,8 @@
 	<section class="row">
 	{% if users_result %}
 	<table>
+
+		<th>S.N.</th>
 		<th>Username</th>
 		<th>Email</th>
 		<th>Name</th>
@@ -20,6 +23,7 @@
 		<th>Price</th>
 		{% for each_user in users_result %}
 		<tr>
+			<td>{{forloop.counter}}</td>
 			<td>{{each_user.username}}</td>
 			<td>{{each_user.email}}</td>
 			<td>{{each_user.first_name}} {{each_user.last_name}}</td>
