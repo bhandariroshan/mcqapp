@@ -1,3 +1,5 @@
+import datetime
+import time
 import json
 
 from django.http import HttpResponse
@@ -5,9 +7,11 @@ from django.views.decorators.csrf import csrf_exempt
 
 from apps.mainapp.classes.Coupon import Coupon
 from apps.mainapp.classes.Userprofile import UserProfile
-from apps.mainapp.classes.query_database import ExammodelApi
+from apps.mainapp.classes.query_database import ExammodelApi, \
+    AttemptedAnswerDatabase, QuestionApi
+
 from .views import ExamHandler
-import datetime, time
+
 
 @csrf_exempt
 def get_question_set(request, exam_code):
@@ -22,9 +26,17 @@ def get_question_set(request, exam_code):
 
         up_exm = exam_obj.get_exam_detail(int(exam_code))
         if up_exm['exam_family'] == 'CPS':
-            if time.mktime(datetime.datetime.now().timetuple()) < up_exm['exam_date']:
-                return HttpResponse(json.dumps({'status':'error','message':'Exam has not begin yet, please check back later.'}))
-                
+            if time.mktime(
+                datetime.datetime.now().timetuple()
+            ) < up_exm['exam_date']:
+                return HttpResponse(
+                    json.dumps(
+                        {'status': 'error',
+                         'message': 'Exam has not begin yet, please \
+                         check back later.'}
+                    )
+                )
+
         coupon_obj = Coupon()
         user_profile_obj = UserProfile()
         subscription_status = user_obj.check_subscribed(request.user.username,
@@ -99,14 +111,20 @@ def get_upcoming_exams(request):
     '''
     if request.user.is_authenticated():
         exam_handler = ExamHandler()
-        upc_exams = exam_handler.list_upcoming_exams({'exam_category':'MBBS-IOM'}, fields={'question_list':0})
+        upc_exams = exam_handler.list_upcoming_exams(
+            {'exam_category': 'MBBS-IOM'},
+            fields={'question_list': 0}
+        )
         user_obj = UserProfile()
         usr = user_obj.get_user_by_username(request.user.username)
         user_exams = usr['valid_exam']
         upcoming_exams = []
         for eachExam in user_exams:
-            exam_model_api= ExammodelApi()
-            up_exam = exam_model_api.find_one_exammodel({'exam_code':eachExam}, {'question_list':0})  
+            exam_model_api = ExammodelApi()
+            up_exam = exam_model_api.find_one_exammodel(
+                {'exam_code': eachExam},
+                {'question_list': 0}
+            )
             up_exam['exam_date'] = int(up_exam['exam_date'])
             up_exam['subscribed'] = 1
             upcoming_exams.append(up_exam)
@@ -144,35 +162,43 @@ def get_scores(request):
             )
             )
 
-        from apps.mainapp.classes.query_database import AttemptedAnswerDatabase, QuestionApi
-        from apps.mainapp.classes.query_database import ExammodelApi
         exam_obj = ExammodelApi()
-        exam_details = exam_obj.find_one_exammodel({'exam_code':int(exam_code)})
+        exam_details = exam_obj.find_one_exammodel(
+            {'exam_code': int(exam_code)}
+        )
 
-        question_obj = QuestionApi() 
+        question_obj = QuestionApi()
         ans = AttemptedAnswerDatabase()
-        questions = question_obj.find_all_questions({"exam_code": int(exam_code)})        
-        sorted_questions = sorted(questions, key=lambda k: k['question_number'])
+        questions = question_obj.find_all_questions(
+            {"exam_code": int(exam_code)}
+        )
+        sorted_questions = sorted(
+            questions, key=lambda k: k['question_number']
+        )
         attempt_time = time.mktime(datetime.datetime.now().timetuple())
         if exam_details['exam_family'] == 'CPS':
-            if (attempt_time - (exam_details['exam_date'] + exam_details['exam_duration']*60)) > 15*60:
-                return HttpResponse(json.dumps({'status':'error', 
-                    'message':'We are sorry, you are late in submitting your answers.'}))
+            if (attempt_time - (exam_details['exam_date'] +
+                exam_details['exam_duration'] * 60
+            )) > 15 * 60:
+                return HttpResponse(json.dumps(
+                    {'status': 'error',
+                     'message': 'We are sorry, you are late in submitting \
+                     your answers.'}))
 
-        for i in range(0,len(answer_list)):
+        for i in range(0, len(answer_list)):
             ans.update_upsert_push({
-                'user_id':request.user.id,
-                'ess_time':int(attempt_time),
-                'attempt_device':'android',
-                'q_id':sorted_questions[i]['uid']['id'],
-                'exam_code':int(exam_code),
-                'q_no':i},{
-                'attempt_details':{
-                    'selected_ans':answer_list[i],
-                    'attempt_time':int(attempt_time)
-                }})
+                'user_id': request.user.id,
+                'ess_time': int(attempt_time),
+                'attempt_device': 'android',
+                'q_id': sorted_questions[i]['uid']['id'],
+                'exam_code': int(exam_code),
+                'q_no': i},
+                {'attempt_details': {
+                 'selected_ans': answer_list[i],
+                 'attempt_time': int(attempt_time)
+                 }})
 
-        exam_handler = ExamHandler()                
+        exam_handler = ExamHandler()
         score_dict = exam_handler.check_answers(exam_code, answer_list)
         return HttpResponse(json.dumps(
             {'status': 'ok', 'result': score_dict}

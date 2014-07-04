@@ -35,7 +35,7 @@ class ExamHandler():
             else:
                 question_api = QuestionApi()
                 question_list = question_api.find_all_questions(
-                    {'exam_code':int(exam_code), "marks": 1}
+                    {'exam_code': int(exam_code), "marks": 1}
                 )
 
                 sorted_questions = sorted(
@@ -56,23 +56,29 @@ class ExamHandler():
                 {"exam_code": int(exam_code)}
             )
             if exam_model['exam_category'] == 'BE-IOE':
-                question_id_list = [ObjectId(i['id']) for i in exam_model['question_list']]
+                question_id_list = [
+                    ObjectId(i['id']) for i in exam_model['question_list']
+                ]
 
                 question_api = QuestionApi()
                 question_list = question_api.find_all_questions({
-                        '_id': {"$in": question_id_list},
-                        'subject': {"$regex": re.compile("^" + str(subject_name) + "$", re.IGNORECASE), "$options": "-i"},
-                    })
+                    '_id': {"$in": question_id_list},
+                    'subject': {"$regex": re.compile(
+                        "^" + str(subject_name) + "$", re.IGNORECASE),
+                        "$options": "-i"},
+                })
                 sorted_questions = sorted(
                     question_list, key=lambda k: k['question_number'])
                 return sorted_questions
-            else:                
+            else:
                 question_api = QuestionApi()
                 question_list = question_api.find_all_questions({
-                    'exam_code':int(exam_code), 
+                    'exam_code': int(exam_code),
                     "marks": 1,
-                    'subject': {"$regex": re.compile("^" + str(subject_name) + "$", re.IGNORECASE), "$options": "-i"},
-                    }
+                    'subject': {"$regex": re.compile(
+                        "^" + str(subject_name) + "$", re.IGNORECASE),
+                        "$options": "-i"},
+                }
                 )
 
                 sorted_questions = sorted(
@@ -80,7 +86,7 @@ class ExamHandler():
                 return sorted_questions
 
         except:
-            pass        
+            pass
 
     def get_paginated_question_set(self, exam_code, current_pg_num):
         exammodel_api = ExammodelApi()

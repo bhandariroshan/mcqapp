@@ -693,7 +693,9 @@ class AjaxHandle():
         exam_code = request.POST.get('exam_code')
         res['exam_code'] = int(exam_code)
         exam_obj = ExammodelApi()
-        exam_details = exam_obj.find_one_exammodel({'exam_code': int(exam_code)})
+        exam_details = exam_obj.find_one_exammodel(
+            {'exam_code': int(exam_code)}
+        )
         res['exam_details'] = exam_details
         ess = ExamStartSignal()
         ess_check = ess.check_exam_started(

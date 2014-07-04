@@ -1,6 +1,8 @@
 from .MongoConnection import MongoConnection
-import time, datetime
+import time
+import datetime
 from bson.objectid import ObjectId
+
 
 class Notifications():
     def __init__(self):
