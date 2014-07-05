@@ -28,12 +28,15 @@ def test():
 def deploy():
     # _create_directory_structure_if_necessary(HOST_FOLDER)
     _get_latest_source(source_folder)
+    _update_virtualenv(source_folder)
     _update_settings(source_folder)
-    run('cd /srv/www/meroanswer/source/ && source ../virtualenv/bin/activate && python manage.py collectstatic')
+    # run('cd /srv/www/meroanswer/source/ && source ../virtualenv/bin/activate && python manage.py collectstatic')
+    run('source /srv/www/meroanswer/virtualenv/bin/activate && cd /srv/www/meroanswer/source/ && python manage.py collectstatic')
     sudo ('reload %s'%(HOST_FOLDER))
 
 def deploy_test():
     _get_latest_source(test_source_folder)
+    _update_virtualenv(test_source_folder)
     _update_settings(test_source_folder, 'settings_test.py')
     run('source /srv/www/mcq.phunka.com/virtualenv/bin/activate && cd /srv/www/mcq.phunka.com/application/ && python manage.py collectstatic')
     sudo ('reload mcq.phunka.com')
@@ -73,7 +76,7 @@ def _get_latest_source(source_folder):
 
     if exists(source_folder + '/.git'): #1
         # run('cd %s && git fetch && git pull && git checkout master' % (source_folder,)) #23
-        run('cd %s && git fetch && git pull && git checkout tomerge-pulchowkexam' % (source_folder,)) #23
+        run('cd %s && git fetch && git pull && git checkout randon-questionset' % (source_folder,)) #23
     else:
         run('git clone %s %s' % (REPO_URL, source_folder)) #4
     current_commit = local("git log -n 1 --format=%H", capture=True) #5
@@ -95,7 +98,6 @@ def _update_virtualenv(source_folder):
     run('%s/bin/pip install -r %s/requirement.txt' % ( #2
             virtualenv_folder, source_folder
     ))
-
     run('source %s/bin/activate' % (virtualenv_folder))
 
 def _update_static_files(code_only_folder):
