@@ -52,9 +52,6 @@ class MongoConnection():
     def update_upsert_push(self, table_name, where, what):
         self.db[table_name].update(where, {"$push": what}, upsert=True)
 
-    def update(self, table_name, where, what):
-        self.db[table_name].update(where, {"$set": what}, upsert=False)
-
     def update_multi(self, table_name, where, what):
         self.db[table_name].update(where, {"$set": what}, upsert=False,
                                    multi=True)

@@ -1,31 +1,30 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="wrapper " id="simple" style="margin-top:6%;margin-bottom:2%">
-	<section class="row">		
+	<section class="row">
+	<h2>Subscribe user to exam</h2>
 	<form method="post" action=".">{% csrf_token %}
 		<input type="text" id="id_username" name="username" placeholder="Username or Email" required="required">
+		<input type="text" id="id_exam_code" name="exam_code" placeholder="Exam Codes separated by comma" style="width:300px;">
+		<button type="submit">Subscribe</button>
 	</form>
 	</section>
 </div>
 
 <div class="wrapper" id="showcase">
 	<section class="row">
-	{% if users_result %}
+	{% if user_result %}
 	<table>
 		<th>Username</th>
 		<th>Email</th>
 		<th>Name</th>
 		<th>Exam Code</th>
-		{% for each_user in users_result %}
 		<tr>
-			<td>{{each_user.username}}</td>
-			<td>{{each_user.email}}</td>
-			<td>{{each_user.first_name}} {{each_user.last_name}}</td>
-			<td>{{each_user.exam_code}}</td>
-
-			
+			<td>{{user_result.username}}</td>
+			<td>{{user_result.email}}</td>
+			<td>{{user_result.name}}</td>
+			<td>{{user_result.valid_exam}}</td>
 		</tr>
-		{% endfor %}
 	</table>
 	{% endif %}
 	</section>
