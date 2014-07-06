@@ -13,9 +13,13 @@ def coupon_search(request):
     parameters = {}
     if request.method == 'POST':
         code = request.POST.get('coupon')
-        coupon_obj = mycoupon.get_coupon_by_coupon_code(code)
+        try:
+            int_code = int(code)
+        except:
+            int_code = None
+        coupon_obj = mycoupon.search_by_code_or_serial(code, int_code)
         userprofile = UserProfile()
-        coupon_user = userprofile.get_user_by_coupon(code)
+        coupon_user = userprofile.get_user_by_coupon(str(code))
         if coupon_user is not None:
             user_details = {
                 'name': coupon_user.get('name'),
@@ -46,7 +50,6 @@ def subscribe_user_to_exam(request):
         exam_code_list = exam_code.split(',')
         profiles = UserProfile()
         if exam_code != '':
-            print ('exam_code: {0}').format(exam_code)
             for each in exam_code_list:
                 profiles.update_push({'username': username}, {'valid_exam': int(each.strip())})
         parameters['user_result'] = profiles.get_user_by_username(username)

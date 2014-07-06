@@ -72,8 +72,6 @@ def _create_directory_structure_if_necessary(site_name):
 
 def _get_latest_source(source_folder):
     # run('cd %s && git reset --hard && git clean -f -d && git checkout master && git pull -f' % (source_folder))
-    
-
     if exists(source_folder + '/.git'): #1
         # run('cd %s && git fetch && git pull && git checkout master' % (source_folder,)) #23
         run('cd %s && git fetch && git pull && git checkout randon-questionset' % (source_folder,)) #23
@@ -95,7 +93,7 @@ def _update_virtualenv(source_folder):
     virtualenv_folder = source_folder + '/../virtualenv'
     if not exists(virtualenv_folder + '/bin/pip'): #1
         run('virtualenv --python=python2.7 %s' % (virtualenv_folder,))
-    run('%s/bin/pip install -r %s/requirement.txt' % ( #2
+    run('%s/bin/pip install -r %s/requirements.txt' % ( #2
             virtualenv_folder, source_folder
     ))
     run('source %s/bin/activate' % (virtualenv_folder))
