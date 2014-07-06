@@ -123,7 +123,6 @@
             </div> 
             <div id="upcomingExams" class="tab-content">
 
-              <h1 style="font-weight: bold;color: green;">Coming Soon !!</h1>
               {% for eachExam in upcoming_exams %}
                 {% ifequal eachExam.exam_family 'CPS' %}
                   {% if user.student_category == 'IDP' or user.student_category == eachExam.exam_category %}
@@ -156,7 +155,8 @@
                 {% endifequal %}
               {% endfor %}
             </div> 
-            <!-- <div class="tab-content" id="notices">
+            {% comment %}
+            <div class="tab-content" id="notices">
               {% for eachSchedule in upcoming_schedules %}
                <article class="valign row text-color-white ui-widget-content ui-corner-all my-margin">
                   <div>
@@ -173,7 +173,8 @@
                   </div>
                 </article>
               {% endfor %}
-            </div>-->
+            </div>
+            {% endcomment %}
             <!-- <div class="tab-content" id="notices">
                <article class="valign row text-color-white">
                   <div>
@@ -206,14 +207,13 @@
         {% endif %}
 
         {% if not 'iom' in request.path %}
-          <!-- <li class="warning alert">
+          <li class="warning alert">
             <h2 style="text-align: center; font-size: 40px; text-decoration:underline;">  Notice </h2>
-            <p>Our system is similar to Institute of Engineering's computerized system. You can get coupons from <a href="/distributors/">distributors</a> and start practicing questions.
-            </p><!-- 
-            <div class="medium primary btn pretty" >
-                <a href="#" id="enterSubsCoupon" style="width: 150px;" onclick="attempt_exam('subs')">Enter here</a>
-            </div> -->              
-          <!--</li> -->
+            <p><strong>IOE Competitive Exam</strong> is going to be held on <strong>Tuesday, 8th July, 2014 at 8:00 PM.</strong>
+             Get your <a href = "/coupon" target="_blank_"> coupons </a> and be ready to win exciting prizes !!
+            </p>
+            
+          </li>
         {% endif %}
         {% if not subscribed %}
           <div class="twelve columns">
