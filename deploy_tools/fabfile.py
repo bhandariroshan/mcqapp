@@ -31,14 +31,14 @@ def deploy():
     _update_virtualenv(source_folder)
     _update_settings(source_folder)
     # run('cd /srv/www/meroanswer/source/ && source ../virtualenv/bin/activate && python manage.py collectstatic')
-    run('source /srv/www/meroanswer/virtualenv/bin/activate && cd /srv/www/meroanswer/source/ && python manage.py collectstatic')
+    run('source /srv/www/meroanswer/virtualenv/bin/activate && cd /srv/www/meroanswer/source/ && python manage.py collectstatic --noinput')
     sudo ('reload %s'%(HOST_FOLDER))
 
 def deploy_test():
     _get_latest_source(test_source_folder)
     _update_virtualenv(test_source_folder)
     _update_settings(test_source_folder, 'settings_test.py')
-    run('source /srv/www/mcq.phunka.com/virtualenv/bin/activate && cd /srv/www/mcq.phunka.com/application/ && python manage.py collectstatic')
+    run('source /srv/www/mcq.phunka.com/virtualenv/bin/activate && cd /srv/www/mcq.phunka.com/application/ && python manage.py collectstatic --noinput')
     sudo ('reload mcq.phunka.com')
 
 def update_latest_code():

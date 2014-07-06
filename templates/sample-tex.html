@@ -28,7 +28,7 @@
   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 <script type="text/javascript">
-$.post( "/exam/{{exam}}", function( data ) {
+$.get( "/latex-get-data/", function( data ) {
 
 questions = JSON.parse(data).result;
 content = "";

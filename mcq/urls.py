@@ -9,6 +9,7 @@ urlpatterns = patterns(
     '',
     url(r'^$', 'apps.mainapp.views.landing'),
     url(r'^latex-store$', 'apps.mainapp.views.add_html'),
+    url(r'^latex-get-data/$', 'apps.mainapp.views.get_all_questions'),
     url(r'^latex$', 'apps.mainapp.views.latex_html'),
     url(r'^home/$', 'apps.mainapp.views.dashboard'),
     url(r'^generate-coupon/(?P<subscription_type>\w{1,15})/$',
