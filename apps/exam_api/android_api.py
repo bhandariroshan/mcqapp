@@ -72,7 +72,9 @@ def get_question_set(request, exam_code):
 
             if len(model_question_set) > 0:
                 return HttpResponse(json.dumps(
-                    {'status': 'ok', 'result': model_question_set})
+                    {'status': 'ok',
+                     'result': model_question_set,
+                     'exam_model_code': exam_code})
                 )
             else:
                 return HttpResponse(json.dumps(
