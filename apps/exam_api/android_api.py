@@ -177,7 +177,7 @@ def get_upcoming_exams(request):
 
         return HttpResponse(json.dumps(
             {'status': 'ok',
-             'result': upcoming_exams,
+             'result': upcoming_exams[::-1],
              'subscribed_ioe': subscribed_ioe,
              'subscribed_iom': subscribed_iom}
         )
