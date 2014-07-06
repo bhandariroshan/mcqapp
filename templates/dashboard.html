@@ -123,7 +123,6 @@
             </div> 
             <div id="upcomingExams" class="tab-content">
 
-              <h1 style="font-weight: bold;color: green;">Coming Soon !!</h1>
               {% for eachExam in upcoming_exams %}
                 {% ifequal eachExam.exam_family 'CPS' %}
                   {% if user.student_category == 'IDP' or user.student_category == eachExam.exam_category %}
