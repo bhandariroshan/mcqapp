@@ -31,13 +31,11 @@ def get_question_set(request, exam_code):
         '''
         user = user_profile_obj.get_user_by_username(request.user.username)
         if exam_code == '0':
-            user_validation = user_profile_obj.check_subscription_plan(
-                user['username']
-            )
             subscription = False
-            if user_validation['status'] == 'ok':
-                if user_validation['subscription_type'] in ['IDP', 'BE-IOE']:
-                    subscription = True
+            if "BE-IOE" in user['subscription_type']:
+                subscription = True
+            elif "IDP" in user['subscription_type']:
+                subscription = True
             if not subscription and not coupon_obj.validate_coupon(
                 coupon_code, 'BE-IOE', 'DPS'
             ):
