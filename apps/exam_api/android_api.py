@@ -19,6 +19,7 @@ def get_question_set(request, exam_code):
     '''
     the function returns the api of a model question
     '''
+    exam_code = int(exam_code)
     if request.user.is_authenticated():
         coupon_code = request.POST.get('coupon')
         user_profile_obj = UserProfile()
@@ -30,7 +31,7 @@ def get_question_set(request, exam_code):
         the newly generated exam_code is used to access questions.
         '''
         user = user_profile_obj.get_user_by_username(request.user.username)
-        if exam_code == '0':
+        if exam_code == 0:
             subscription = False
             if "BE-IOE" in user['subscription_type']:
                 subscription = True
