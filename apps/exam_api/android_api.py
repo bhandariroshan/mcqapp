@@ -48,6 +48,9 @@ def get_question_set(request, exam_code):
                 return response
             else:
                 exam_code = generate_random_ioe_questions(request)
+                user_profile_obj.save_valid_exam(
+                    user['username'], int(exam_code)
+                )
         up_exm = exam_obj.get_exam_detail(int(exam_code))
         if up_exm['exam_family'] == 'CPS':
             if time.mktime(
