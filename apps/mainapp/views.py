@@ -79,6 +79,17 @@ def sign_up_sign_in(request, android_user=False):
     )
 
 
+def get_all_questions(request):
+    question_api = QuestionApi()
+   
+    questions = question_api.find_all_questions(
+            {"question.html": {"$exits":False}},
+            fields={'question_number': 1, 'exam_code':1, 'question':1, 'answer':1,'id':0}
+        )       
+
+    return HttpResponse(json.dumps({"status":"ok","result":questions}))
+
+
 def latex_html(request):
     return render_to_response(
         "sample-tex.html", {'exam': request.GET.get('exam')},
@@ -88,9 +99,7 @@ def latex_html(request):
 
 @csrf_exempt
 def add_html(request):
-
     questions = json.loads(request.POST.get('q'))
-
     for question in questions:
         question_api = QuestionApi()
         question_api.latex_html(
@@ -106,7 +115,6 @@ def add_html(request):
     return render_to_response(
         "sample-tex.html", context_instance=RequestContext(request)
     )
-
 
 @csrf_exempt
 def android(request):
