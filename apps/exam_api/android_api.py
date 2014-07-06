@@ -209,15 +209,13 @@ def get_scores(request):
         exam_details = exam_obj.find_one_exammodel(
             {'exam_code': int(exam_code)}
         )
-
-        question_obj = QuestionApi()
+        question_list = exam_details.get_questionset_from_database(int(exam_code))
+        # question_obj = QuestionApi()
         ans = AttemptedAnswerDatabase()
-        questions = question_obj.find_all_questions(
-            {"exam_code": int(exam_code)}
-        )
-        sorted_questions = sorted(
-            questions, key=lambda k: k['question_number']
-        )
+        # questions = question_obj.find_all_questions(
+        #     {"exam_code": int(exam_code)}
+        # )
+        
         attempt_time = time.mktime(datetime.datetime.now().timetuple())
         if exam_details['exam_family'] == 'CPS':
             if (attempt_time - (exam_details['exam_date'] +
@@ -233,7 +231,7 @@ def get_scores(request):
                 'user_id': request.user.id,
                 'ess_time': int(attempt_time),
                 'attempt_device': 'android',
-                'q_id': sorted_questions[i]['uid']['id'],
+                'q_id': question_list[i]['uid']['id'],
                 'exam_code': int(exam_code),
                 'q_no': i},
                 {'attempt_details': {
