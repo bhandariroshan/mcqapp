@@ -141,3 +141,9 @@ class Coupon():
             {'serial_no': serial_no,
              'printed': True}
         )
+
+    def search_by_code_or_serial(self, query, int_code=None):
+        if int_code is None:
+            return self.db_object.get_one(self.table_name, {'code': str(query)})
+        else:
+            return self.db_object.get_one(self.table_name, {'serial_no': int_code})

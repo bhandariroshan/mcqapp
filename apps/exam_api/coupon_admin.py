@@ -13,9 +13,13 @@ def coupon_search(request):
     parameters = {}
     if request.method == 'POST':
         code = request.POST.get('coupon')
-        coupon_obj = mycoupon.get_coupon_by_coupon_code(code)
+        try:
+            int_code = int(code)
+        except:
+            int_code = None
+        coupon_obj = mycoupon.search_by_code_or_serial(code, int_code)
         userprofile = UserProfile()
-        coupon_user = userprofile.get_user_by_coupon(code)
+        coupon_user = userprofile.get_user_by_coupon(str(code))
         if coupon_user is not None:
             user_details = {
                 'name': coupon_user.get('name'),
@@ -41,12 +45,14 @@ def coupon_search(request):
 def subscribe_user_to_exam(request):
     parameters = {}
     if request.method == 'POST':
-        query = request.POST.get('username')
-        users_result = User.objects.filter(
-            Q(username__contains=query) | Q(email__contains=query)
-        )
-
-        parameters['users_result'] = users_result
+        username = request.POST.get('username')
+        exam_code = request.POST.get('exam_code')
+        exam_code_list = exam_code.split(',')
+        profiles = UserProfile()
+        if exam_code != '':
+            for each in exam_code_list:
+                profiles.update_push({'username': username}, {'valid_exam': int(each.strip())})
+        parameters['user_result'] = profiles.get_user_by_username(username)
     return render_to_response(
         'superuser/subscribe_to_exam.html',
         parameters,
@@ -67,6 +73,15 @@ def paying_users(request):
         users_result = profiles.search_user(query)
     else:
         users_result = profiles.get_all_users(limit=1000)
+    coupon_price = {
+        'BE-IOE/DPS': 30,
+        'BE-IOE/CPS': 30,
+        'BE-IOE/BE-IOE': 500,
+        'BE-IOE/BE-IOE(discount)': 250,
+        'MBBS-IOM/DPS': 20,
+        'MBBS-IOM/CPS': 20,
+        'MBBS-IOM/MBBS-IOM': 300
+    }
     for each_user in users_result:
         if each_user.get('username') in blocked_usernames:
             continue
@@ -120,17 +135,6 @@ def paying_users(request):
                 for key, value in coupon_count.iteritems()]
         )
         total_coupons = 0
-        coupon_price = {
-            'BE-IOE/DPS': 30,
-            'BE-IOE/CPS': 30,
-            'BE-IOE/BE-IOE': 500,
-            'BE-IOE/BE-IOE(discount)': 250,
-            # 'IDP/DPS': 30,
-            # 'IDP/CPS': 30,
-            'MBBS-IOM/DPS': 20,
-            'MBBS-IOM/CPS': 20,
-            'MBBS-IOM/MBBS-IOM': 300
-        }
         price = 0
         for key, value in coupon_count.iteritems():
             total_coupons += value
@@ -141,6 +145,11 @@ def paying_users(request):
         if price != 0 or request.method == 'POST':
             paying_users.append(user_details)
     parameters['total_type_count'] = total_type_count
+    parameters['categorical_price'] = [key+ ' : ' +str(value*coupon_price[key]) for key, value in total_type_count.iteritems()]
+    total_price = 0
+    for each in parameters['categorical_price']:
+        total_price += int(each.split(':')[1].strip())
+    parameters['total_price'] = total_price
     parameters['users_result'] = sorted(paying_users, key=getKey, reverse=True)
     return render_to_response(
         'superuser/paying_users.html',

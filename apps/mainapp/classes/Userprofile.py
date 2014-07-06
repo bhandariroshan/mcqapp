@@ -41,6 +41,9 @@ class UserProfile():
     def update_upsert(self, where={}, what={}):
         return self.db_object.update_upsert(self.table_name, where, what)
 
+    def update_push(self, where={}, what={}):
+        return self.db_object.update_push(self.table_name, where, what)
+
     def check_subscription_plan(self, user_name):
         user = self.db_object.get_one(self.table_name, {'username': user_name})
         if user is not None:

@@ -3,11 +3,23 @@
 <div class="wrapper " id="simple" style="margin-top:6%;margin-bottom:2%">
 	<section class="row">		
 	{% if request.method == 'GET' %}
+		<div style="float: left;">
 		<h2>Total paying users: {{users_result|length}}</h2>
 		{% for key, value in total_type_count.items %}
 			<p>{{key}}: {{value}}</p>
 		{% endfor %}
+		</div>
+		<div style="float: right;">
+		<h2>Total Price: {{total_price}}</h2>
+		{% for each in categorical_price %}
+			<p>{{each}}</p>
+		{% endfor %}
+		</div>
+	{% else %}
+	<a href="/paying_users/">Back to Paying Users</a>
 	{% endif %}
+	</section>
+	<section class="row">
 	<form method="post" action=".">{% csrf_token %}
 		<input type="text" id="id_username" name="username" placeholder="Username or Email" required="required">
 	</form>
