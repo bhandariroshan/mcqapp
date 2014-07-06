@@ -83,8 +83,8 @@ def get_all_questions(request):
     question_api = QuestionApi()
    
     questions = question_api.find_all_questions(
-            {"question.html": {"$exits":False}},
-            fields={'question_number': 1, 'exam_code':1, 'question':1, 'answer':1,'id':0}
+            {"question.html": {"$exists":False}},
+            fields={'question_number': 1, 'exam_code':1, 'question':1, 'answer':1,'_id':0}
         )       
 
     return HttpResponse(json.dumps({"status":"ok","result":questions}))
