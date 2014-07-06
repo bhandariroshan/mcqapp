@@ -59,6 +59,9 @@ class MongoConnection():
     def update_upsert(self, table_name, where, what):
         self.db[table_name].update(where, {"$set": what}, upsert=True)
 
+    def update(self, table_name, where, what):
+        self.db[table_name].update(where, {"$set": what}, upsert=False)
+
     def map_reduce(self, table_name, mapper, reducer,
                    query, sort=-1, limit=20):
         if sort == 1:

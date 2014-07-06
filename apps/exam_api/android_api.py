@@ -9,6 +9,7 @@ from apps.mainapp.classes.Coupon import Coupon
 from apps.mainapp.classes.Userprofile import UserProfile
 from apps.mainapp.classes.query_database import ExammodelApi, \
     AttemptedAnswerDatabase, QuestionApi
+from apps.random_questions.views import generate_random_ioe_questions
 
 from .views import ExamHandler
 
@@ -18,12 +19,38 @@ def get_question_set(request, exam_code):
     '''
     the function returns the api of a model question
     '''
+    exam_code = int(exam_code)
     if request.user.is_authenticated():
         coupon_code = request.POST.get('coupon')
-        user_obj = UserProfile()
+        user_profile_obj = UserProfile()
         from apps.mainapp.classes.Exams import Exam
         exam_obj = Exam()
-
+        coupon_obj = Coupon()
+        '''
+        if exam_code is 0 then new set is generated randomly and
+        the newly generated exam_code is used to access questions.
+        '''
+        user = user_profile_obj.get_user_by_username(request.user.username)
+        if exam_code == 0:
+            subscription = False
+            if "BE-IOE" in user['subscription_type']:
+                subscription = True
+            elif "IDP" in user['subscription_type']:
+                subscription = True
+            if not subscription and not coupon_obj.validate_coupon(
+                coupon_code, 'BE-IOE', 'DPS'
+            ):
+                response = HttpResponse(
+                    json.dumps(
+                        {'status': 'error', 'message': 'Invalid Coupon Code.'}
+                    )
+                )
+                return response
+            else:
+                exam_code = generate_random_ioe_questions(request)
+                user_profile_obj.save_valid_exam(
+                    user['username'], int(exam_code)
+                )
         up_exm = exam_obj.get_exam_detail(int(exam_code))
         if up_exm['exam_family'] == 'CPS':
             if time.mktime(
@@ -37,12 +64,9 @@ def get_question_set(request, exam_code):
                     )
                 )
 
-        coupon_obj = Coupon()
-        user_profile_obj = UserProfile()
-        subscription_status = user_obj.check_subscribed(request.user.username,
-                                                        exam_code
-                                                        )
-        user = user_profile_obj.get_user_by_username(request.user.username)
+        subscription_status = user_profile_obj.check_subscribed(
+            request.user.username, exam_code
+        )
 
         '''Validation for subscription here'''
         if subscription_status or int(exam_code) in user['valid_exam']:
@@ -52,7 +76,9 @@ def get_question_set(request, exam_code):
 
             if len(model_question_set) > 0:
                 return HttpResponse(json.dumps(
-                    {'status': 'ok', 'result': model_question_set})
+                    {'status': 'ok',
+                     'result': model_question_set,
+                     'exam_model_code': exam_code})
                 )
             else:
                 return HttpResponse(json.dumps(
@@ -65,7 +91,6 @@ def get_question_set(request, exam_code):
         if coupon_obj.validate_coupon(coupon_code, up_exm['exam_category'],
                                       up_exm['exam_family']) is True:
 
-            user_profile_obj = UserProfile()
             user_profile_obj.change_subscription_plan(request.user.username,
                                                       coupon_code)
             #save the coupon code in user's couponcode array
@@ -73,7 +98,7 @@ def get_question_set(request, exam_code):
                                                     request.user.username)
             user_profile_obj.save_coupon(request.user.username, coupon_code)
 
-            subscription_status = user_obj.check_subscribed(
+            subscription_status = user_profile_obj.check_subscribed(
                 request.user.username, exam_code
             )
             if subscription_status:
@@ -83,7 +108,9 @@ def get_question_set(request, exam_code):
                     get_questionset_from_database(exam_code)
 
                 response = HttpResponse(json.dumps(
-                    {'status': 'ok', 'result': model_question_set}
+                    {'status': 'ok',
+                     'result': model_question_set,
+                     'exam_model_code': exam_code}
                 )
                 )
             else:
@@ -117,6 +144,19 @@ def get_upcoming_exams(request):
         )
         user_obj = UserProfile()
         usr = user_obj.get_user_by_username(request.user.username)
+        '''
+        check full subscription of user
+        return subscription status of exam_category for the user`
+        '''
+        subscribed_ioe = 0
+        subscribed_iom = 0
+        if "BE-IOE" in usr['subscription_type']:
+            subscribed_ioe = 1
+        elif "MBBS-IOM" in usr['subscription_type']:
+            subscribed_iom = 1
+        elif "IDP" in usr['subscription_type']:
+            subscribed_ioe = subscribed_iom = 1
+
         user_exams = usr['valid_exam']
         upcoming_exams = []
         for count, eachExam in enumerate(user_exams):
@@ -136,7 +176,10 @@ def get_upcoming_exams(request):
                 upcoming_exams.append(eachUpCExams)
 
         return HttpResponse(json.dumps(
-            {'status': 'ok', 'result': upcoming_exams}
+            {'status': 'ok',
+             'result': upcoming_exams,
+             'subscribed_ioe': subscribed_ioe,
+             'subscribed_iom': subscribed_iom}
         )
         )
     else:
