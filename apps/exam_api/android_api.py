@@ -204,20 +204,18 @@ def get_scores(request):
                 {'status': 'error', 'message': IMPROPER_REQUEST}
             )
             )
-
+        exam_handler = ExamHandler()
         exam_obj = ExammodelApi()
         exam_details = exam_obj.find_one_exammodel(
             {'exam_code': int(exam_code)}
         )
-
-        question_obj = QuestionApi()
+        question_list = exam_handler.get_questionset_from_database(int(exam_code))
+        # question_obj = QuestionApi()
         ans = AttemptedAnswerDatabase()
-        questions = question_obj.find_all_questions(
-            {"exam_code": int(exam_code)}
-        )
-        sorted_questions = sorted(
-            questions, key=lambda k: k['question_number']
-        )
+        # questions = question_obj.find_all_questions(
+        #     {"exam_code": int(exam_code)}
+        # )
+        
         attempt_time = time.mktime(datetime.datetime.now().timetuple())
         if exam_details['exam_family'] == 'CPS':
             if (attempt_time - (exam_details['exam_date'] +
@@ -233,7 +231,7 @@ def get_scores(request):
                 'user_id': request.user.id,
                 'ess_time': int(attempt_time),
                 'attempt_device': 'android',
-                'q_id': sorted_questions[i]['uid']['id'],
+                'q_id': question_list[i]['uid']['id'],
                 'exam_code': int(exam_code),
                 'q_no': i},
                 {'attempt_details': {
@@ -241,7 +239,7 @@ def get_scores(request):
                  'attempt_time': int(attempt_time)
                  }})
 
-        exam_handler = ExamHandler()
+
         score_dict = exam_handler.check_answers(exam_code, answer_list)
         return HttpResponse(json.dumps(
             {'status': 'ok', 'result': score_dict}
