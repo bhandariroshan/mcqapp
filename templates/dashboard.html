@@ -155,7 +155,7 @@
                 {% endifequal %}
               {% endfor %}
               {% endcomment %}
-
+              {% if not 'iom' in request.path %}
               <article class="valign row text-color-white ui-widget-content ui-corner-all my-margin subscribed ">
                     <!-- <div style="width:10%"> -->
                       <i class="icon-lock icon-color-notsubscribed myicon" style="margin-top:12px;margin-left: 10px;"></i>
@@ -174,7 +174,9 @@
                       </div>
                   </div>
                 </article>
-
+                {% else %}
+                <h2 style="color: green;text-align: center;">Coming Soon !!</h2>
+                {% endif %}
             </div> 
             {% comment %}
             <div class="tab-content" id="notices">
