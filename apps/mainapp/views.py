@@ -81,13 +81,17 @@ def sign_up_sign_in(request, android_user=False):
 
 def get_all_questions(request):
     question_api = QuestionApi()
-   
-    questions = question_api.find_all_questions(
-            {"question.html": {"$exists":False}},
-            fields={'question_number': 1, 'exam_code':1, 'question':1, 'answer':1,'_id':0}
-        )       
 
-    return HttpResponse(json.dumps({"status":"ok","result":questions}))
+    questions = question_api.find_all_questions(
+        {"question.html": {"$exists": False}},
+        fields={'question_number': 1,
+                'exam_code': 1,
+                'question': 1,
+                'answer': 1,
+                '_id': 0}
+    )
+
+    return HttpResponse(json.dumps({"status": "ok", "result": questions}))
 
 
 def latex_html(request):
@@ -115,6 +119,7 @@ def add_html(request):
     return render_to_response(
         "sample-tex.html", context_instance=RequestContext(request)
     )
+
 
 @csrf_exempt
 def android(request):
@@ -381,7 +386,6 @@ def attend_dps_exam(request, exam_code):
         ess = ExamStartSignal()
         exam_obj = ExammodelApi()
         exam_handler_obj = ExamHandler()
-        ess = ExamStartSignal()
 
         try:
             profile_image = user_det['profile_image']
