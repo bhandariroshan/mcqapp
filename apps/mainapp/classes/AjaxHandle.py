@@ -745,12 +745,6 @@ class AjaxHandle():
                 'result': score_list
             }
         )
-        if request.user.is_authenticated():
-            current_time = time.mktime(datetime.datetime.now().timetuple())
-            if exam_details['exam_family'] == 'CPS' and current_time - \
-                    exam_details['exam_date'] < exam_details['exam_duration'] * 60:
-                parameters['exam_completed'] = False
-
         parameters['exam_code'] = exam_code
         parameters['myrankcard'] = {'total': 200, 'rank': 1}
         html = str(render_to_response(
