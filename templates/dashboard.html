@@ -122,7 +122,6 @@
               {% endfor %}
             </div> 
             <div id="upcomingExams" class="tab-content">
-            {% comment %}
               {% for eachExam in upcoming_exams %}
                 {% ifequal eachExam.exam_family 'CPS' %}
                   {% if user.student_category == 'IDP' or user.student_category == eachExam.exam_category %}
@@ -154,7 +153,7 @@
                 {% endif %}
                 {% endifequal %}
               {% endfor %}
-              {% endcomment %}
+              {% comment %}
               {% if not 'iom' in request.path %}
               <article class="valign row text-color-white ui-widget-content ui-corner-all my-margin subscribed ">
                     <!-- <div style="width:10%"> -->
@@ -177,6 +176,7 @@
                 {% else %}
                 <h2 style="color: green;text-align: center;">Coming Soon !!</h2>
                 {% endif %}
+                {% endcomment %}
             </div> 
             {% comment %}
             <div class="tab-content" id="notices">
