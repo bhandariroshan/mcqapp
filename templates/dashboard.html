@@ -110,9 +110,9 @@
                     {% endif %}
                      <div class="medium primary btn pretty button-margin" >
                         {% if eachExam.exam_category == 'BE-IOE' %}
-                          <a id="giveDPSExamBtn" href="{% if eachExam.subscribed %}/dps/{{eachExam.code}}/{% else %}#{% endif %}" {% if not eachExam.subscribed %} onclick="attempt_exam('{{eachExam.code}}')" {% endif %}>Give Exam</a>
+                          <a id="giveDPSExamBtn" href="{% if eachExam.subscribed %}/dps/{{eachExam.code}}/{% else %}#{% endif %}" {% if not eachExam.subscribed %} onclick="attempt_exam('{{eachExam.code}}')" {% endif %}>Take Exam</a>
                           {% else %}
-                            <a id="giveDPSExamBtn" href="{% if eachExam.subscribed %}/iom/{{eachExam.code}}/{% else %}#{% endif %}" {% if not eachExam.subscribed %} onclick="attempt_exam('{{eachExam.code}}')" {% endif %}>Give Exam</a>
+                            <a id="giveDPSExamBtn" href="{% if eachExam.subscribed %}/iom/{{eachExam.code}}/{% else %}#{% endif %}" {% if not eachExam.subscribed %} onclick="attempt_exam('{{eachExam.code}}')" {% endif %}>Take Exam</a>
                         {% endif %}
                       </div>
                   </div>
@@ -122,7 +122,6 @@
               {% endfor %}
             </div> 
             <div id="upcomingExams" class="tab-content">
-            {% comment %}
               {% for eachExam in upcoming_exams %}
                 {% ifequal eachExam.exam_family 'CPS' %}
                   {% if user.student_category == 'IDP' or user.student_category == eachExam.exam_category %}
@@ -147,14 +146,14 @@
                     <p><strong>Cost: </strong>Rs. 30 (<a href="/coupon/">coupon code</a> entry required)</p>
                     {% endif %}
                      <div class="medium primary btn pretty button-margin" >
-                          <a id="giveCPSExamBtn" href="{% if eachExam.subscribed %}/cps/{{eachExam.code}}/{% else %}#{% endif %}" {% if not eachExam.subscribed %} onclick="attempt_exam('{{eachExam.code}}')" {% endif %}>Give Exam</a>
+                          <a id="giveCPSExamBtn" href="{% if eachExam.subscribed %}/cps/{{eachExam.code}}/{% else %}#{% endif %}" {% if not eachExam.subscribed %} onclick="attempt_exam('{{eachExam.code}}')" {% endif %}>Take Exam</a>
                       </div>
                   </div>
                 </article>
                 {% endif %}
                 {% endifequal %}
               {% endfor %}
-              {% endcomment %}
+              {% comment %}
               {% if not 'iom' in request.path %}
               <article class="valign row text-color-white ui-widget-content ui-corner-all my-margin subscribed ">
                     <!-- <div style="width:10%"> -->
@@ -170,13 +169,14 @@
                     <p><strong>Feature: </strong>Exam set prepared by toppers from IOE</p>
                     <p><strong>Feature: </strong>Completely based on new online system at IOE, Pulchowk Campus. </p>
                      <div class="medium primary btn pretty button-margin" >
-                          <a id="giveCPSExamBtn" href="#">Give Exam</a>
+                          <a id="giveCPSExamBtn" href="#">Take Exam</a>
                       </div>
                   </div>
                 </article>
                 {% else %}
                 <h2 style="color: green;text-align: center;">Coming Soon !!</h2>
                 {% endif %}
+                {% endcomment %}
             </div> 
             {% comment %}
             <div class="tab-content" id="notices">
@@ -312,7 +312,7 @@
     <div class="row">
       <div id="dangerMessageNewExam" style="color: red;margin-left: 15%;"></div>
       <div class="ten columns centered text-center" style="margin-top:6%;">
-        <p id="infoText">Coupon code are necessary to ensure smooth conducting of examination. Every time you give exam, you need to enter coupon code available at various <a href="/distributors/" style="color:red;"><strong>distributors</strong></a>. Please enter <strong>your</strong> coupon code</p>
+        <p id="infoText">Coupon code are necessary to ensure smooth conducting of examination. Every time you take exam, you need to enter coupon code available at various <a href="/distributors/" style="color:red;"><strong>distributors</strong></a>. Please enter <strong>your</strong> coupon code</p>
           <li class="prepend field">
             <span class="adjoined">Coupon: </span>
             <input id="enterCouponforNewExamCode" class="xwide text input" type="text" placeholder="Please enter the coupon code" />
@@ -334,7 +334,7 @@
     <div class="row">
       <div id="dangerMessageCPSExam" style="color: red;margin-left: 15%;"></div>
       <div class="ten columns centered text-center" style="margin-top:6%;">
-        <p id="infoText">Coupon code are necessary to ensure smooth conducting of examination. Every time you give exam, you need to enter coupon code available at various <a href="/distributors/" style="color:red;"><strong>distributors</strong></a>. Please enter <strong>your</strong> coupon code</p>
+        <p id="infoText">Coupon code are necessary to ensure smooth conducting of examination. Every time you take exam, you need to enter coupon code available at various <a href="/distributors/" style="color:red;"><strong>distributors</strong></a>. Please enter <strong>your</strong> coupon code</p>
           <li class="prepend field">
             <span class="adjoined">Coupon: </span>
             <input id="enterCPSCoupon" class="xwide text input" type="text" placeholder="Please enter the coupon code" />
@@ -358,7 +358,7 @@ var ex_code;
     ex_code=exam_code;
     $('#infoText').html('');
     if (exam_code.toLowerCase() == 'sample'){
-      var html_str = 'Every time you give exam, you need to enter <a href="/coupon-codes/" style="color:red;"><strong>coupon codes</strong></a> are available at various <a href="/#/" style="color:red;"><strong>distributors</strong></a>. Please enter your coupon code'
+      var html_str = 'Every time you take exam, you need to enter <a href="/coupon-codes/" style="color:red;"><strong>coupon codes</strong></a> are available at various <a href="/#/" style="color:red;"><strong>distributors</strong></a>. Please enter your coupon code'
       $('#infoText').html(html_str);
     }
     else{      

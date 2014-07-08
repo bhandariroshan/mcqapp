@@ -81,13 +81,17 @@ def sign_up_sign_in(request, android_user=False):
 
 def get_all_questions(request):
     question_api = QuestionApi()
-   
-    questions = question_api.find_all_questions(
-            {"question.html": {"$exists":False}},
-            fields={'question_number': 1, 'exam_code':1, 'question':1, 'answer':1,'_id':0}
-        )       
 
-    return HttpResponse(json.dumps({"status":"ok","result":questions}))
+    questions = question_api.find_all_questions(
+        {"question.html": {"$exists": False}},
+        fields={'question_number': 1,
+                'exam_code': 1,
+                'question': 1,
+                'answer': 1,
+                '_id': 0}
+    )
+
+    return HttpResponse(json.dumps({"status": "ok", "result": questions}))
 
 
 def latex_html(request):
@@ -115,6 +119,7 @@ def add_html(request):
     return render_to_response(
         "sample-tex.html", context_instance=RequestContext(request)
     )
+
 
 @csrf_exempt
 def android(request):
@@ -180,6 +185,8 @@ def landing(request):
             {'exam_code': {'$in': user_exams}}, sort_index='exam_date'
         )
         for count, eachExamDetails in enumerate(all_valid_exams):
+            if eachExamDetails['exam_family'] == 'CPS':
+                continue
             up_exm = {}
 
             if eachExamDetails is None:
@@ -201,19 +208,41 @@ def landing(request):
                     subscribed_exams
 
             up_exm['code'] = eachExamDetails['exam_code']
-            if eachExamDetails['exam_family'] != 'DPS':
-                exam_start_time = datetime.datetime.strptime(
-                    str(datetime.datetime.fromtimestamp(
-                        int(eachExamDetails.get('exam_date')))),
-                    "%Y-%m-%d %H:%M:%S").time()
-                up_exm['exam_time'] = exam_start_time
-                up_exm['exam_date'] = datetime.datetime.fromtimestamp(
-                    int(eachExamDetails.get('exam_date'))
-                ).strftime("%A, %d. %B %Y")
             up_exm['exam_category'] = eachExamDetails.get('exam_category')
             up_exm['exam_family'] = eachExamDetails.get('exam_family')
             up_exm['image'] = eachExamDetails.get('image')
             up_exams.append(up_exm)
+
+        all_cps_exam = exam_model_api.find_all_exammodel_descending(
+            {'exam_family': 'CPS'}, sort_index='exam_date'
+        )
+        for count, cps_exams in enumerate(all_cps_exam):
+            up_cps_exam = {}
+            up_cps_exam['name'] = "IOE Competitive Exam " + \
+                str(len(all_cps_exam) - count)
+
+            if 'IDP' in subscription_type:
+                up_cps_exam['subscribed'] = True
+
+            elif cps_exams['exam_category'] in subscription_type:
+                up_cps_exam['subscribed'] = True
+
+            else:
+                up_cps_exam['subscribed'] = cps_exams.get('exam_code') in \
+                    subscribed_exams
+            up_cps_exam['code'] = cps_exams['exam_code']
+            exam_start_time = datetime.datetime.strptime(
+                str(datetime.datetime.fromtimestamp(
+                    int(cps_exams.get('exam_date')))),
+                "%Y-%m-%d %H:%M:%S").time()
+            up_cps_exam['exam_time'] = exam_start_time
+            up_cps_exam['exam_date'] = datetime.datetime.fromtimestamp(
+                int(cps_exams.get('exam_date'))
+            ).strftime("%A, %d. %B %Y")
+            up_cps_exam['exam_category'] = cps_exams.get('exam_category')
+            up_cps_exam['exam_family'] = cps_exams.get('exam_family')
+            up_cps_exam['image'] = cps_exams.get('image')
+            up_exams.append(up_cps_exam)
 
         parameters['upcoming_exams'] = up_exams
 
@@ -255,11 +284,9 @@ def attend_cps_exam(request, exam_code):
         ess = ExamStartSignal()
         exam_obj = ExammodelApi()
         user_profile_obj = UserProfile()
-        question_obj = QuestionApi()
+        exam_handler_obj = ExamHandler()
         ess = ExamStartSignal()
         atte_ans = AttemptedAnswerDatabase()
-        # questions = question_obj.find_all_questions(
-            # {"exam_code": int(exam_code)}, fields={'answer.correct':0})
         user = user_profile_obj.get_user_by_username(request.user.username)
         exam_details = exam_obj.find_one_exammodel(
             {'exam_code': int(exam_code)}
@@ -291,7 +318,6 @@ def attend_cps_exam(request, exam_code):
         current_time = time.mktime(datetime.datetime.now().timetuple())
         if current_time - exam_details['exam_date'] > \
                 exam_details['exam_duration'] * 60:
-            # print "Redirected to results"
             return HttpResponseRedirect('/results/' + str(exam_code))
 
         validate_start = ess.check_exam_started(
@@ -304,9 +330,6 @@ def attend_cps_exam(request, exam_code):
         })
         time_elapsed = time.mktime(datetime.datetime.now().timetuple()) - \
             int(exam_details['exam_date'])
-        total_questions = question_obj.get_count(
-            {"exam_code": int(exam_code), 'marks': 1}
-        )
         current_pg_num = 1
         next_page = 0
 
@@ -332,14 +355,16 @@ def attend_cps_exam(request, exam_code):
 
         parameters['current_pg_num'] = current_pg_num
 
-        questions = question_obj.get_paginated_questions(
-            {"exam_code": int(exam_code), 'marks': 1},
-            fields={'answer.correct': 0}, page_num=current_pg_num
+        questions = exam_handler_obj.get_paginated_question_set(
+            int(exam_code), current_pg_num
         )
         sorted_questions = sorted(
             questions, key=lambda k: k['question_number']
         )
-
+        parameters['exam_time'] = datetime.datetime.strptime(
+            str(datetime.datetime.fromtimestamp(
+                int(exam_details.get('exam_date')
+                    ))), "%Y-%m-%d %H:%M:%S").time()
         parameters['all_answers'] = json.dumps(all_answers)
         parameters['questions'] = sorted_questions
         exam_details['exam_duration'] = (exam_details['exam_duration'] * 60 -
@@ -347,8 +372,8 @@ def attend_cps_exam(request, exam_code):
         exam_details['exam_date'] = datetime.datetime.fromtimestamp(
             int(exam_details['exam_date'])
         ).strftime('%Y-%m-%d')
+
         parameters['exam_details'] = exam_details
-        parameters['max_questions_number'] = total_questions
         parameters['exam_code'] = exam_code
         parameters['user'] = user
         if exm_date_time_linux <= time.mktime(
@@ -381,7 +406,6 @@ def attend_dps_exam(request, exam_code):
         ess = ExamStartSignal()
         exam_obj = ExammodelApi()
         exam_handler_obj = ExamHandler()
-        ess = ExamStartSignal()
 
         try:
             profile_image = user_det['profile_image']
@@ -428,7 +452,8 @@ def attend_dps_exam(request, exam_code):
             validate_start = ess.check_exam_started(
                 {'exam_code': int(exam_code),
                  'useruid': request.user.id,
-                 'start': 1, 'end': 0}
+                 'start': 1,
+                 'end': 0}
             )
             check = validate_start['start_time']
 
@@ -458,7 +483,8 @@ def attend_dps_exam(request, exam_code):
             validate_start = ess.check_exam_started(
                 {'exam_code': int(exam_code),
                  'useruid': request.user.id,
-                 'start': 1, 'end': 0}
+                 'start': 1,
+                 'end': 0}
             )
             check = validate_start['start_time']
 
@@ -834,7 +860,6 @@ def get_coupons(request, subscription_type):
         subscription_type = 'MBBS-IOM'
     subscription_type = subscription_type.upper()
     coupons = coupon_obj.get_coupons(subscription_type)
-    print ('Total coupons available: {0}').format(len(coupons))
     page_obj = Paginator(coupons, 12)
     for i in range(1, page_obj.num_pages + 1):
         count = base_count + (i - 1) * 12
@@ -882,6 +907,12 @@ def results(request, exam_code):
     else:
         total_questions = 100
 
+    if request.user.is_authenticated():
+        current_time = time.mktime(datetime.datetime.now().timetuple())
+        if exam_details['exam_family'] == 'CPS' and current_time - \
+                exam_details['exam_date'] < exam_details['exam_duration'] * 60:
+            parameters['exam_completed'] = False
+
     ans = AttemptedAnswerDatabase()
     try:
         all_ans = ans.find_all_atttempted_answer({
@@ -897,7 +928,6 @@ def results(request, exam_code):
     anss = []
     for eachAns in all_ans:
         anss.append(eachAns['q_no'])
-    print answer_list
     for i in range(1, total_questions + 1):
         try:
             if i in anss:
