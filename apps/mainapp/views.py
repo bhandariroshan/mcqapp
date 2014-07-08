@@ -867,7 +867,7 @@ def get_coupons(request, subscription_type):
             coupon_obj.update_serial_no(
                 serial_no=int(count + cc + 1), coupon_code=each_coup['code']
             )
-            print each_coup['code']
+            print ('coupon: {0} len: {1}').format(each_coup['code'], len(each_coup['code']))
         abc = render_to_response(
             'coupons-print.html',
             {'coupons': page_obj.page(i), 'count': count}
