@@ -231,12 +231,10 @@ def landing(request):
                 up_cps_exam['subscribed'] = cps_exams.get('exam_code') in \
                     subscribed_exams
             up_cps_exam['code'] = cps_exams['exam_code']
-            print cps_exams.get('exam_date')
             exam_start_time = datetime.datetime.strptime(
                 str(datetime.datetime.fromtimestamp(
                     int(cps_exams.get('exam_date')))),
                 "%Y-%m-%d %H:%M:%S").time()
-            print exam_start_time
             up_cps_exam['exam_time'] = exam_start_time
             up_cps_exam['exam_date'] = datetime.datetime.fromtimestamp(
                 int(cps_exams.get('exam_date'))
@@ -286,7 +284,7 @@ def attend_cps_exam(request, exam_code):
         ess = ExamStartSignal()
         exam_obj = ExammodelApi()
         user_profile_obj = UserProfile()
-        question_obj = QuestionApi()
+        exam_handler_obj = ExamHandler()
         ess = ExamStartSignal()
         atte_ans = AttemptedAnswerDatabase()
         user = user_profile_obj.get_user_by_username(request.user.username)
@@ -332,9 +330,6 @@ def attend_cps_exam(request, exam_code):
         })
         time_elapsed = time.mktime(datetime.datetime.now().timetuple()) - \
             int(exam_details['exam_date'])
-        total_questions = question_obj.get_count(
-            {"exam_code": int(exam_code), 'marks': 1}
-        )
         current_pg_num = 1
         next_page = 0
 
@@ -360,9 +355,8 @@ def attend_cps_exam(request, exam_code):
 
         parameters['current_pg_num'] = current_pg_num
 
-        questions = question_obj.get_paginated_questions(
-            {"exam_code": int(exam_code), 'marks': 1},
-            fields={'answer.correct': 0}, page_num=current_pg_num
+        questions = exam_handler_obj.get_paginated_question_set(
+            int(exam_code), current_pg_num
         )
         sorted_questions = sorted(
             questions, key=lambda k: k['question_number']
@@ -380,7 +374,6 @@ def attend_cps_exam(request, exam_code):
         ).strftime('%Y-%m-%d')
 
         parameters['exam_details'] = exam_details
-        parameters['max_questions_number'] = total_questions
         parameters['exam_code'] = exam_code
         parameters['user'] = user
         if exm_date_time_linux <= time.mktime(
@@ -867,7 +860,6 @@ def get_coupons(request, subscription_type):
         subscription_type = 'MBBS-IOM'
     subscription_type = subscription_type.upper()
     coupons = coupon_obj.get_coupons(subscription_type)
-    print ('Total coupons available: {0}').format(len(coupons))
     page_obj = Paginator(coupons, 12)
     for i in range(1, page_obj.num_pages + 1):
         count = base_count + (i - 1) * 12
@@ -875,6 +867,7 @@ def get_coupons(request, subscription_type):
             coupon_obj.update_serial_no(
                 serial_no=int(count + cc + 1), coupon_code=each_coup['code']
             )
+            print ('coupon: {0} len: {1}').format(each_coup['code'], len(each_coup['code']))
         abc = render_to_response(
             'coupons-print.html',
             {'coupons': page_obj.page(i), 'count': count}
@@ -936,7 +929,6 @@ def results(request, exam_code):
     anss = []
     for eachAns in all_ans:
         anss.append(eachAns['q_no'])
-    print answer_list
     for i in range(1, total_questions + 1):
         try:
             if i in anss:

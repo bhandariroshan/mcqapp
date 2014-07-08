@@ -511,10 +511,6 @@ class AjaxHandle():
                     int(exam_code), current_pg_num
                 )
 
-                total_questions = question_obj.get_count(
-                    {"exam_code": int(exam_code), 'marks': 1}
-                )
-
                 # print questions
                 sorted_questions = sorted(
                     questions, key=lambda k: k['question_number']
@@ -523,8 +519,6 @@ class AjaxHandle():
                 # parameters['questions'] = json.dumps(sorted_questions)
                 parameters['questions'] = sorted_questions
                 parameters['exam_details'] = exam_details
-
-                parameters['max_questions_number'] = total_questions
 
                 parameters['exam_code'] = exam_code
                 user_profile_obj = UserProfile()
@@ -612,9 +606,6 @@ class AjaxHandle():
                 time_elapsed = time.mktime(
                     datetime.datetime.now().timetuple()
                 ) - int(exam_details['exam_date'])
-                total_questions = question_obj.get_count(
-                    {"exam_code": int(exam_code)}
-                )
 
                 current_pg_num = 1
                 next_page = 0
@@ -640,11 +631,9 @@ class AjaxHandle():
 
                 parameters['current_pg_num'] = current_pg_num
 
-                questions = question_obj.get_paginated_questions(
-                    {"exam_code": int(exam_code),
-                     'marks': 1},
-                    fields={'answer.correct': 0},
-                    page_num=current_pg_num
+                exam_handler_obj = ExamHandler()
+                questions = exam_handler_obj.get_paginated_question_set(
+                    int(exam_code), current_pg_num
                 )
                 sorted_questions = sorted(
                     questions, key=lambda k: k['question_number']
@@ -659,7 +648,6 @@ class AjaxHandle():
                     int(exam_details['exam_date'])
                 ).strftime('%Y-%m-%d')
                 parameters['exam_details'] = exam_details
-                parameters['max_questions_number'] = total_questions
                 parameters['exam_code'] = exam_code
                 parameters['user'] = user
                 html = str(render_to_response(
@@ -745,6 +733,13 @@ class AjaxHandle():
                 'result': score_list
             }
         )
+        if request.user.is_authenticated():
+            current_time = time.mktime(datetime.datetime.now().timetuple())
+            if exam_details['exam_family'] == 'CPS' and current_time - \
+                    exam_details['exam_date'] < exam_details['exam_duration'] \
+                    * 60:
+                parameters['exam_completed'] = False
+
         parameters['exam_code'] = exam_code
         parameters['myrankcard'] = {'total': 200, 'rank': 1}
         html = str(render_to_response(
