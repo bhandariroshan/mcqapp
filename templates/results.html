@@ -4,7 +4,7 @@
 <div class="row">
 <div class="twelve columns" style="margin-top:12%; margin-bottom:7%;">
     <h3 class="h-text-align ui-corner-all" style="text-align: center;"><strong>{{exam_details.exam_name}}</strong></h3>
-    <li id='exam_not_complete_alert' class='warning' style="display: none">Answers will be available after exam duration is completed. Please check back later.</li>
+    <li id='exam_not_complete_alert' class='warning' style="display: none; color:red;">Answers will be available after exam duration is completed. Please check back later.</li>
     <section class="tabs">
 		<ul class="tab-nav">
 		    <li class="active"> <a href="#">Score Card</a></li>		    
@@ -24,8 +24,7 @@
 				<tbody>
 				{% for eachSubject in result %}
 					<tr>
-						<td>{% if eachSubject.subject != 'Total' %}<a style="color:#58c026;" 
-            {% if not exam_completed %} onclick="exam_not_complete_alert()" {% else %} href="/answers/{{exam_code}}/{{eachSubject.subject}}/?q=0" {% endif %}>{% endif %}{{eachSubject.subject}} {% if eachSubject.subject != 'Total' %} <small><i>(view answers)</i></small>{% endif %}</a></td>
+						<td>{% if eachSubject.subject != 'Total' %}<a style="color:#58c026;" {% if not exam_completed %} onclick="exam_not_complete_alert()" {% else %} href="/answers/{{exam_code}}/{{eachSubject.subject}}/?q=0" {% endif %}>{% endif %}{{eachSubject.subject}} {% if eachSubject.subject != 'Total' %} <small><i>(view answers)</i></small>{% endif %}</a></td>
           
 						<td>{{eachSubject.attempted}}</td>	
 						<td>{{eachSubject.correct_subject_answer}}</td>
@@ -60,8 +59,10 @@
 </div>
 
 {% endblock %}
+{% block javascript %}
 <script type='text/javascript'>
   function exam_not_complete_alert(){
     $('#exam_not_complete_alert').css('display', 'block');
   }
 </script>
+{% endblock %}
