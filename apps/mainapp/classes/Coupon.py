@@ -31,16 +31,21 @@ class Coupon():
                 d. status (used/free)
         '''
         import random
-        for i in range(0, 200):
-            number_system = 'zAyBxCwDvEuFt9GsH8rI7qJp6KoLnM5mNlOk4PjQih3Rg\
+        # for i in range(0, 200):
+        count = 0
+        while count<200:
+            number_system = 'zAyBxCwDvEuFt9GsH8r7qJp6KoLnM5mNOk4PjQih3Rg\
             SfTeU2dVcWbXa1YZz0'
-            num = random.randint(999999999, pow(62, 6))
+            num = random.randint(999999999, pow(60, 6))
             coupon = ''
-            while(num > 62):
-                rem = num % 62
-                num = num / 62
+            while(num > 60):
+                rem = num % 60
+                num = num / 60
                 coupon = coupon + number_system[rem]
             coupon = coupon + number_system[num]
+            if len(coupon)<6:
+                continue
+
             # print self.db_object.get_one(
             #     self.table_name, {'code':str(coupon)}
             # )
@@ -57,6 +62,7 @@ class Coupon():
                     'generated_time': gen_time
                 }
                 self.db_object.insert_one(self.table_name, data)
+            count += 1
         return 'generated'
 
     def validate_coupon(self, coupon_code, exam_category=None,
