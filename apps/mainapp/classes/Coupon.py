@@ -43,9 +43,10 @@ class Coupon():
                 num = num / 60
                 coupon = coupon + number_system[rem]
             coupon = coupon + number_system[num]
+            if coupon.find(' ') != -1:
+                coupon = coupon.replace(' ', '')
             if len(coupon)<6:
                 continue
-
             # print self.db_object.get_one(
             #     self.table_name, {'code':str(coupon)}
             # )
