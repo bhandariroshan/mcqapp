@@ -142,7 +142,6 @@ def get_upcoming_exams(request):
             {'exam_category': 'MBBS-IOM'},
             fields={'question_list': 0}
         )
-        print 'upc_exams', upc_exams
         user_obj = UserProfile()
         usr = user_obj.get_user_by_username(request.user.username)
         '''
