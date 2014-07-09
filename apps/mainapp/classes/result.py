@@ -10,17 +10,17 @@ class Result():
     def save_result(self, result={}):
         self.db_object.update_upsert(self.table_name, result, result)
 
-    def find_ioe_exam_rank(self, exam_code):
+    def find_ioe_exam_rank(self, exam_code, useruid):
+        aggregation_pipeline = []
         result = self.db_object.aggregrate_all(self.table_name, [
-     			{'$match': {'exam_code' : 391}},
+     			{'$match': {'exam_code' : int(exam_code)}},
      			{ "$unwind": "$result" },
 			    { "$group": {
 		         "_id": "$_id",
-		         
 		         "result": { "$push": "$result" },
 		         "useruid": { "$first": "$useruid" },
 		         "exam_code": { "$first": "$exam_code" },
-		         "ess_time": { "$first": "$ess_time" },		        
+		         "ess_time": { "$first": "$ess_time" },
 		         "Total": { 
 		             "$max": {
 		                 "$cond": [
@@ -92,7 +92,8 @@ class Result():
 		         "result": 1,
 		         "useruid": 1,
 		         "exam_code": 1,
-		         "ess_time": 1		         
+		         "ess_time": 1
 		     }}
 		])
-	return result
+		# rank = next(index for (index, d) in enumerate(result) if d["useruid"] == useruid)
+		return result

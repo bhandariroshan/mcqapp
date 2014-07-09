@@ -947,13 +947,18 @@ def results(request, exam_code):
     parameters['result'] = score_list
     from apps.mainapp.classes.result import Result
     result_obj = Result()
-    for eachResult in score_list:
-        result_obj.save_result({
-            'useruid': request.user.id,
-            'exam_code': int(exam_code),
-            'ess_time': ess_check['start_time'],
-            eachResult['subject']: eachResult
-        })
+    # for eachResult in score_list:
+    try:
+        result_obj.save_result(
+            {
+                'useruid': request.user.id,
+                'exam_code': int(exam_code),
+                'ess_time': ess_check['start_time'],
+                'result': score_list
+            }
+        )
+    except:
+        pass
     parameters['exam_code'] = exam_code
     parameters['myrankcard'] = {'total': 200, 'rank': 1}
     return render_to_response(
