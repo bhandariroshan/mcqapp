@@ -142,6 +142,7 @@ def get_upcoming_exams(request):
             {'exam_category': 'MBBS-IOM'},
             fields={'question_list': 0}
         )
+        print 'upc_exams', upc_exams
         user_obj = UserProfile()
         usr = user_obj.get_user_by_username(request.user.username)
         '''
@@ -164,17 +165,17 @@ def get_upcoming_exams(request):
             up_exam = exam_model_api.find_one_exammodel(
                 {'exam_code': eachExam}, {'question_list': 0}
             )
-            if up_exam is not None:
+            if up_exam is not None and up_exam['exam_category'] != 'MBBS-IOM':
                 up_exam['exam_date'] = int(up_exam['exam_date'])
                 up_exam['exam_name'] = 'IOE Practice Exam ' + str(count + 1)
                 up_exam['subscribed'] = 1
                 upcoming_exams.append(up_exam)
 
-        for eachUpCExams in upc_exams:
-            if eachUpCExams not in upc_exams:
-                eachUpCExams['exam_date'] = int(eachUpCExams['exam_date'])
-                eachUpCExams['subscribed'] = 1
-                upcoming_exams.append(eachUpCExams)
+        for count, eachUpCExams in enumerate(upc_exams):
+            eachUpCExams['exam_name'] = 'IOM Practice Exam ' + str(count + 1)
+            eachUpCExams['exam_date'] = int(eachUpCExams['exam_date'])
+            eachUpCExams['subscribed'] = 1
+            upcoming_exams.append(eachUpCExams)
 
         return HttpResponse(json.dumps(
             {'status': 'ok',
