@@ -228,7 +228,7 @@
             </li>
         </div>      
         {% endif %}
-
+        {% comment %}
         {% if not 'iom' in request.path %}
           <li class="warning alert">
             <h2 style="text-align: center; font-size: 40px; text-decoration:underline;">  Notice </h2>
@@ -238,6 +238,7 @@
             
           </li>
         {% endif %}
+        {% endcomment %}
         {% if not subscribed %}
           <div class="twelve columns">
             <li class="success alert">
