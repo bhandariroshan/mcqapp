@@ -13,7 +13,7 @@ from apps.mainapp.classes.Userprofile import UserProfile
 
 from apps.exam_api.views import ExamHandler
 from apps.mainapp.classes.Exams import Exam
-from apps.mainapp.classes.query_database import ExammodelApi,\
+from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi,\
     ExamStartSignal, HonorCodeAcceptSingal, AttemptedAnswerDatabase,\
     CurrentQuestionNumber
 
@@ -481,6 +481,7 @@ class AjaxHandle():
                 ) / 60
 
                 parameters['all_answers'] = json.dumps(all_answers)
+                question_obj = QuestionApi()
 
                 current_pg_num = 1
                 next_page = 0
@@ -560,6 +561,7 @@ class AjaxHandle():
             parameters = {}
             exam_obj = ExammodelApi()
             user_profile_obj = UserProfile()
+            question_obj = QuestionApi()
             ess = ExamStartSignal()
             atte_ans = AttemptedAnswerDatabase()
             # questions = question_obj.find_all_questions(

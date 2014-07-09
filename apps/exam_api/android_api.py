@@ -8,7 +8,7 @@ from django.views.decorators.csrf import csrf_exempt
 from apps.mainapp.classes.Coupon import Coupon
 from apps.mainapp.classes.Userprofile import UserProfile
 from apps.mainapp.classes.query_database import ExammodelApi, \
-    AttemptedAnswerDatabase
+    AttemptedAnswerDatabase, QuestionApi
 from apps.random_questions.views import generate_random_ioe_questions
 
 from .views import ExamHandler
@@ -156,7 +156,6 @@ def get_upcoming_exams(request):
             subscribed_iom = 1
         elif "IDP" in usr['subscription_type']:
             subscribed_ioe = subscribed_iom = 1
-
         user_exams = usr['valid_exam']
         upcoming_exams = []
         for count, eachExam in enumerate(user_exams):
@@ -169,13 +168,11 @@ def get_upcoming_exams(request):
                 up_exam['exam_name'] = 'IOE Practice Exam ' + str(count + 1)
                 up_exam['subscribed'] = 1
                 upcoming_exams.append(up_exam)
-
         for count, eachUpCExams in enumerate(upc_exams):
             eachUpCExams['exam_name'] = 'IOM Practice Exam ' + str(count + 1)
             eachUpCExams['exam_date'] = int(eachUpCExams['exam_date'])
-            eachUpCExams['subscribed'] = 1
+            eachUpCExams['subscribed'] = 1 if eachUpCExams['exam_code'] in user_exams else 0
             upcoming_exams.append(eachUpCExams)
-
         return HttpResponse(json.dumps(
             {'status': 'ok',
              'result': upcoming_exams[::-1],
@@ -188,7 +185,6 @@ def get_upcoming_exams(request):
             {'status': 'error', 'message': 'Not a valid request'}
         )
         )
-
 
 @csrf_exempt
 def get_scores(request):
@@ -210,15 +206,13 @@ def get_scores(request):
         exam_details = exam_obj.find_one_exammodel(
             {'exam_code': int(exam_code)}
         )
-        question_list = exam_handler.get_questionset_from_database(
-            int(exam_code)
-        )
+        question_list = exam_handler.get_questionset_from_database(int(exam_code))
         # question_obj = QuestionApi()
         ans = AttemptedAnswerDatabase()
         # questions = question_obj.find_all_questions(
         #     {"exam_code": int(exam_code)}
         # )
-
+        
         attempt_time = time.mktime(datetime.datetime.now().timetuple())
         if exam_details['exam_family'] == 'CPS':
             if (attempt_time - (exam_details['exam_date'] +
@@ -241,6 +235,7 @@ def get_scores(request):
                  'selected_ans': answer_list[i],
                  'attempt_time': int(attempt_time)
                  }})
+
 
         score_dict = exam_handler.check_answers(exam_code, answer_list)
         return HttpResponse(json.dumps(
