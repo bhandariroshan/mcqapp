@@ -24,7 +24,8 @@
 				<tbody>
 				{% for eachSubject in result %}
 					<tr>
-						<td>{% if eachSubject.subject != 'Total' %}<a style="color:#58c026;" {% if not exam_completed %} onclick="exam_not_complete_alert()" {% else %} href="/answers/{{exam_code}}/{{eachSubject.subject}}/?q=0" {% endif %}>{% endif %}{{eachSubject.subject}} {% if eachSubject.subject != 'Total' %} <small><i>(view answers)</i></small>{% endif %}</a></td>
+						<td>{% if eachSubject.subject != 'Total' %}<a style="color:#58c026;" 
+						{% if not exam_completed %} onclick="exam_not_complete_alert()" {% else %} href="/answers/{{exam_code}}/{{eachSubject.subject}}/?q=0" {% endif %}>{% endif %}{{eachSubject.subject}} {% if eachSubject.subject != 'Total' %} <small><i>(view answers)</i></small>{% endif %}</a></td>
           
 						<td>{{eachSubject.attempted}}</td>	
 						<td>{{eachSubject.correct_subject_answer}}</td>
