@@ -902,7 +902,7 @@ def results(request, exam_code):
         {'exam_code': int(exam_code),
          'useruid': request.user.id}
     )
-
+     # return HttpResponse(json.dumps(ess))
     if exam_details['exam_category'] == 'BE-IOE':
         total_questions = 65
     else:
