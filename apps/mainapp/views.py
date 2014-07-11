@@ -867,7 +867,6 @@ def get_coupons(request, subscription_type):
             coupon_obj.update_serial_no(
                 serial_no=int(count + cc + 1), coupon_code=each_coup['code']
             )
-            print ('coupon: {0} len: {1}').format(each_coup['code'], len(each_coup['code']))
         abc = render_to_response(
             'coupons-print.html',
             {'coupons': page_obj.page(i), 'count': count}
@@ -947,18 +946,13 @@ def results(request, exam_code):
     parameters['result'] = score_list
     from apps.mainapp.classes.result import Result
     result_obj = Result()
-    # for eachResult in score_list:
-    try:
-        result_obj.save_result(
-            {
-                'useruid': request.user.id,
-                'exam_code': int(exam_code),
-                'ess_time': ess_check['start_time'],
-                'result': score_list
-            }
-        )
-    except:
-        pass
+    for eachResult in score_list:
+        result_obj.save_result({
+            'useruid': request.user.id,
+            'exam_code': int(exam_code),
+            'ess_time': ess_check['start_time'],
+            eachResult['subject']: eachResult
+        })
     parameters['exam_code'] = exam_code
     parameters['myrankcard'] = {'total': 200, 'rank': 1}
     return render_to_response(

@@ -733,6 +733,7 @@ class AjaxHandle():
                 'result': score_list
             }
         )
+        parameters['exam_completed'] = True
         if request.user.is_authenticated():
             current_time = time.mktime(datetime.datetime.now().timetuple())
             if exam_details['exam_family'] == 'CPS' and current_time - \
