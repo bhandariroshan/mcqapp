@@ -13,16 +13,16 @@
     </div>
   {% else %}
 
-<h1>!!! NOTICE !!!</h1>
-  <p style="margin-top:3%; color:red;"> You will now have system exactly similar to pulchowk's system. </p><br>
-  <p style="color:red;"> Please "allow" full screen mode to run after you click "Start Exam" </p><br>
-  <p style="color:red;">Please note you will have no access to keyboard after this.</p><br>
-  <p style="color:red;"> Please use latest version of Chrome or Firefox browser to attend exam properly. </p><br>
+<h2><strong>!!! NOTICE !!!</strong></h2>
+  <p style="margin-top:2%; color:red;"><strong> You will now have system exactly similar to "IOE Entrance Examination system". </strong></p>
+  <p style="color:red;"><strong> Please "allow full screen" mode to run after you click "Start Exam" </strong></p>
+  <p style="color:red;"><strong>Please note you will have "no access to keyboard" after this.</strong></p>
+  <p style="color:red;"><strong> Please use latest version of "Chrome or Firefox" browser to attend exam properly. </strong></p>
   <p style=""> To take exam in IOE's system you will need username and password which will be provided to you by IOE but for now your username and pass word are as mentioned below:- </p>
-  <p style="font-size:15px; color:red;">Username: <b>{{request.user.username}}</b></p>
-  <p style="font-size:15px;color:red;">password: <b>{{request.user.username}}56</b></p>
-  <input type="button" id="full_screen_button" class="medium primary btn pretty button-margin" value="Start Exam" onclick="show_fullscreen()" style="margin-top:3%;margin-bottom:3%;">
-  <br><br>
+  <p style="font-size:15px;"><strong>Username:- {{request.user.username}}</strong></p>
+  <p style="font-size:15px;"><strong>Password:- {{request.user.username}}56</strong></p>
+  <input type="button" id="full_screen_button" class="medium primary btn pretty button-margin" value="Start Exam" onclick="show_fullscreen()" style="margin-top:2%;margin-bottom:2%;">
+  <br>
   {% endif %}
 </div>
 {% if not render_before_exam %}
@@ -35,24 +35,22 @@
     <img src="/static/images/logos/tu-logo.jpg" style="max-height:100px"><br>
     <strong>Tribhuvan University</strong><br>
     <strong>Institute of Engineering </strong><br>
-    <strong>Pulchowk, Lalitpur, Nepal</strong><br>
-    <strong>{{exam_details.exam_name}}</strong>
+    <strong>Pulchowk, Lalitpur, Nepal</strong><br><br>
     </h5>
-
 
     <div id="exam_login_container" >
       <!-- <input type="text" id="input1" class="osk-trigger" placeholder="disable return" data-osk-options="disableReturn">< -->
       <!-- <input type="text" id="input2" class="osk-trigger" placeholder="disable symbols" data-osk-options="disableSymbols">  -->
       <div id="errorMessage" class="hidden" style="color:red;">Username or Password Mismatch</div>
-      <label>Username</label><input type="text" id="exam_username" class="osk-trigger" placeholder="Username">
-      <label>Password</label><input type="password" id="exam_password" class="osk-trigger" placeholder="Password">
+      <label><strong>Username</strong></label><input type="text" id="exam_username" class="osk-trigger" placeholder="Username">
+      <label><strong>Password</strong></label><input type="password" id="exam_password" class="osk-trigger" placeholder="Password">
       <!-- <textarea id="input4" class="osk-trigger" placeholder="enable everything"></textarea> -->  
-      <input type="button" value="Submit" onclick="render_instructions()"> <input onclick="clear_login()" type="button" value="Clear">
+      <input type="button" class="medium primary btn pretty button-margin" value="Submit" onclick="render_instructions()"> <input onclick="clear_login()" type="button" value="Clear">
     </div>
 
     <div class="twelve columns hidden" id="instructions">
-      <h5 class="h-text-align ui-widget-header ui-corner-all"><strong>Instructions</strong><br></h5>
-      <p style="margin-left:3%; margin-top:2%;">Please read the following instructions carefully before you start the exam.</p>
+      <h3 class="h-text-align ui-widget-header ui-corner-all"><strong>Instructions</strong></h3>
+      <p style="margin-left:3%; margin-top:1%;">Please read the following instructions carefully before you start the exam.</p>
       <p style="margin-left:4%;margin-top:2%;">
         1. You will have 1 hour for the exam. <br>
         2. There will be "next" button at the end of the page to go to next page and attempt another questions. <br>
@@ -65,7 +63,7 @@
         9. If you do not submit at the end of the exam then your exam will be invalid. So make sure you submit before you go out. <br>
         10. Warning will be shown before 15 minutes remained. 
       </p>
-      <div class="medium primary btn pretty button-margin" style="margin-left:35%%;">
+      <div class="medium primary btn pretty button-margin" style="margin-left:35%;">
         <a href="#" onclick="start_ioe_exam()">Start Exam</a>
       </div>
     </div>
