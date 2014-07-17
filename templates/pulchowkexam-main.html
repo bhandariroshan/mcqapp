@@ -13,14 +13,14 @@
     </div>
   {% else %}
 
-<h1>!!! NOTICE !!!</h1>
-  <p style="margin-top:3%; color:red;"><strong> You will now have system exactly similar to pulchowk's system. </strong></p>
-  <p style="color:red;"><strong> Please "allow" full screen mode to run after you click "Start Exam" </strong></p>
-  <p style="color:red;"><strong>Please note you will have no access to keyboard after this.</strong></p>
-  <p style="color:red;"><strong> Please use latest version of Chrome or Firefox browser to attend exam properly. </strong></p>
+<h2><strong>!!! NOTICE !!!</strong></h2>
+  <p style="margin-top:2%; color:red;"><strong> You will now have system exactly similar to "IOE Entrance Examination system". </strong></p>
+  <p style="color:red;"><strong> Please "allow full screen" mode to run after you click "Start Exam" </strong></p>
+  <p style="color:red;"><strong>Please note you will have "no access to keyboard" after this.</strong></p>
+  <p style="color:red;"><strong> Please use latest version of "Chrome or Firefox" browser to attend exam properly. </strong></p>
   <p style=""> To take exam in IOE's system you will need username and password which will be provided to you by IOE but for now your username and pass word are as mentioned below:- </p>
-  <p style="font-size:15px;"><strong>Username: {{request.user.username}}</strong></p>
-  <p style="font-size:15px;"><strong>Password: {{request.user.username}}56</strong></p>
+  <p style="font-size:15px;"><strong>Username:- {{request.user.username}}</strong></p>
+  <p style="font-size:15px;"><strong>Password:- {{request.user.username}}56</strong></p>
   <input type="button" id="full_screen_button" class="medium primary btn pretty button-margin" value="Start Exam" onclick="show_fullscreen()" style="margin-top:2%;margin-bottom:2%;">
   <br>
   {% endif %}
@@ -35,10 +35,8 @@
     <img src="/static/images/logos/tu-logo.jpg" style="max-height:100px"><br>
     <strong>Tribhuvan University</strong><br>
     <strong>Institute of Engineering </strong><br>
-    <strong>Pulchowk, Lalitpur, Nepal</strong><br>
-    <strong>{{exam_details.exam_name}}</strong>
+    <strong>Pulchowk, Lalitpur, Nepal</strong><br><br>
     </h5>
-
 
     <div id="exam_login_container" >
       <!-- <input type="text" id="input1" class="osk-trigger" placeholder="disable return" data-osk-options="disableReturn">< -->
@@ -51,7 +49,7 @@
     </div>
 
     <div class="twelve columns hidden" id="instructions">
-      <h5 class="h-text-align ui-widget-header ui-corner-all"><strong>Instructions</strong><br></h5>
+      <h3 class="h-text-align ui-widget-header ui-corner-all"><strong>Instructions</strong></h3>
       <p style="margin-left:3%; margin-top:1%;">Please read the following instructions carefully before you start the exam.</p>
       <p style="margin-left:4%;margin-top:2%;">
         1. You will have 1 hour for the exam. <br>
