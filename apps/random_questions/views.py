@@ -83,3 +83,59 @@ def add_questions_in_exam_model(request):
                 {"question_list": question_id_list}
             )
     return HttpResponse('Question list saved in Exam model')
+
+
+def generate_random_iom_questions(request):
+    '''
+    The function generates generates a random question set for iom exam by
+    randomly picking question from all exam sets
+    '''
+    question_api = QuestionApi()
+    distinct_dict = question_api.find_distinct_value(
+        'exam_code',
+        {'exam_type': 'MEDICAL'}
+    )
+    question_sets = []
+    for each_code in distinct_dict['results']:
+        questions = question_api.find_all_questions(
+            {"exam_code": each_code},
+            fields={'question_number': 1}
+        )
+        if not len(questions) > 100:
+            question_sets.append(questions)
+    final_question_set = []
+    if len(question_sets) == 0:
+        pass
+    elif len(question_sets) == 1:
+        final_question_set = question_sets[0]
+    else:
+        for i in range(len(question_sets[0])):
+            final_question_set.append(
+                ObjectId(
+                    question_sets[
+                        random.randrange(len(question_sets))][i]['uid']['id']
+                )
+            )
+    # print final_question_set
+    exammodel_api = ExammodelApi()
+    last_exam_code = exammodel_api.find_all_exammodel_descending(
+        {},
+        fields={"exam_code": 1},
+        sort_index="exam_code",
+        limit=1
+    )
+    new_exam_code = int(last_exam_code[0]['exam_code']) + 1
+    new_exam_model = {
+        "exam_name": "IOM Practice set",
+        "exam_date": time.mktime(
+            datetime.datetime.now().timetuple()
+        ),
+        "image": "exam.jpg",
+        "exam_code": new_exam_code,
+        "exam_category": "MBBS-IOM",
+        "exam_duration": 120,
+        "exam_family": 'DPS',
+        "question_list": final_question_set
+    }
+    exammodel_api.insert_new_model(new_exam_model)
+    return new_exam_code
