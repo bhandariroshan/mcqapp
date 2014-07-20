@@ -707,7 +707,14 @@ class AjaxHandle():
         anss = []
         for eachAns in all_ans:
             anss.append(eachAns['q_no'])
-        for i in range(1, total_questions + 1):
+        if exam_details['exam_category'] == 'BE-IOE':
+            loop_start = 1
+            loop_end = total_questions + 1
+        else:
+            loop_start = 0
+            loop_end = total_questions 
+
+        for i in range(loop_start, loop_end):
             try:
                 if i in anss:
                     answer_list += all_ans[anss.index(i)][

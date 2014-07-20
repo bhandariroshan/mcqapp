@@ -49,4 +49,5 @@ urlpatterns = patterns(
             'apps.random_questions.urls', app_name='random_questions'
         )),
     url(r'^paying_users/$', 'apps.exam_api.coupon_admin.paying_users'),
+    url(r'^mongonaut/', include('mongonaut.urls')),
 )

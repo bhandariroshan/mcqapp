@@ -152,7 +152,7 @@ class ExamHandler():
             temp['attempted'] = 0
             temp['score'] = 0
             correct_answers[subs] = temp
-
+        print len(answer_list), answer_list
         for index, choice in enumerate(answer_list):
             correct_answers[
                 sorted_questions[index]['subject'].lower()][

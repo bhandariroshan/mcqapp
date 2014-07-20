@@ -928,7 +928,15 @@ def results(request, exam_code):
     anss = []
     for eachAns in all_ans:
         anss.append(eachAns['q_no'])
-    for i in range(1, total_questions + 1):
+
+    if exam_details['exam_category'] == 'BE-IOE':
+        loop_start = 1
+        loop_end = total_questions + 1
+    else:
+        loop_start = 0
+        loop_end = total_questions 
+
+    for i in range(loop_start, loop_end):
         try:
             if i in anss:
                 answer_list += all_ans[anss.index(i)][
@@ -1043,13 +1051,17 @@ def show_result(request, exam_code, subject_name):
             query = {'exam_code': int(exam_code),
                      'user_id': int(request.user.id),
                      'ess_time': ess_check['start_time'],
-                     'q_no': questions[current_q_no]['question_number']}
+                     'q_id': questions[current_q_no]['uid']['id']}
             att_ans = ans.find_all_atttempted_answer(query)
             parameters['attempted'] = att_ans[0]['attempt_details'][
                 len(att_ans[0]['attempt_details']) - 1]['selected_ans']
+            # print query
         except:
             att_ans = ''
             parameters['attempted'] = ''
+
+        
+        # print att_ans, current_q_no
 
         user_profile_obj = UserProfile()
         user = user_profile_obj.get_user_by_username(request.user.username)
@@ -1108,8 +1120,7 @@ def get_list_of_result(request):
                         else:
                             answer_list += 'e'
                     except:
-                        answer_list += 'e'
-
+                        answer_list += 'e'                
                 exam_handler = ExamHandler()
                 score_list = exam_handler.check_answers(exam_code, answer_list)
                 rank = 0
