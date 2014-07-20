@@ -182,7 +182,7 @@ def landing(request):
             parameters['student_category_set'] = False
 
         all_valid_exams = exam_model_api.find_all_exammodel_descending(
-            {'exam_code': {'$in': user_exams}}, sort_index='exam_date'
+            {'exam_code': {'$in': user_exams}}, sort_index='exam_date', 'exam_category':'BE-IOE'
         )
         for count, eachExamDetails in enumerate(all_valid_exams):
             if eachExamDetails['exam_family'] == 'CPS':
