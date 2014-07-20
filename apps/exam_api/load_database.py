@@ -26,12 +26,14 @@ def load_examset_in_database(request):
             if len(question_id_list) == 100:
                 exam_category = "MBBS-IOM"
                 exam_duration = 120
+                exam_name = "IOM Practice Exam"
             else:
                 exam_category = "BE-IOE"
                 exam_duration = 60
+                exam_name = "IOE Practice Exam"
 
             exam_dict = {
-                "exam_name": "IOE Practice Exam",
+                "exam_name": exam_name,
                 "exam_date": 1401359880,
                 "image": "exam.jpg",
                 "exam_code": dist,
