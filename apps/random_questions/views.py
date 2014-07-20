@@ -137,5 +137,6 @@ def generate_random_iom_questions(request):
         "exam_family": 'DPS',
         "question_list": final_question_set
     }
+    # print final_question_set
     exammodel_api.insert_new_model(new_exam_model)
     return new_exam_code

@@ -46,28 +46,35 @@ function get_next_page_success(data){
 		}
 
 }
+
 function load_result(exm_code){
 	ajax_request('load_result', 'load_result_success', {'exam_code':exm_code});
 }
-function get_new_ioe_exam(){
-	ajax_request('get_new_ioe_exam', 'get_new_ioe_exam_success',{});
+
+function get_new_exam(type){
+	ajax_request('get_new_exam', 'get_new_exam_success',{'type':type});
 }
 
-function get_new_ioe_exam_success(data){
+function get_new_exam_success(data){
 	data = jQuery.parseJSON(data);
 	if (data['status']=='ok'){
-		window.location = '/dps/' + data['exam_code']
+		if (data['type']=='be-ioe'){
+			window.location = '/dps/' + data['exam_code']			
+		}
+		else{
+			window.location = '/iom/' + data['exam_code']
+		}
 	}
 }
 
-function chek_valid_dps_code(code){
-	ajax_request('chek_valid_dps_code', 'chek_valid_dps_code_success', {'code':code});
+function chek_valid_dps_code(code, type){
+	ajax_request('chek_valid_dps_code', 'chek_valid_dps_code_success', {'code':code, 'type':type});
 }
 
 function chek_valid_dps_code_success(data){
 	data = jQuery.parseJSON(data);
 	if (data['status']=='ok'){
-		get_new_ioe_exam();
+		get_new_exam(data['type']);
 	}
 	else{
 		$('#dangerMessageNewExam').html('Invalid coupon code, Please enter a new code');

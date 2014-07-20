@@ -185,7 +185,7 @@ def landing(request):
             {'exam_code': {'$in': user_exams}}, sort_index='exam_date'
         )
         for count, eachExamDetails in enumerate(all_valid_exams):
-            if eachExamDetails['exam_family'] == 'CPS':
+            if eachExamDetails['exam_family'] == 'CPS' or eachExamDetails['exam_category'] == 'MBBS-IOM':
                 continue
             up_exm = {}
 
@@ -928,7 +928,15 @@ def results(request, exam_code):
     anss = []
     for eachAns in all_ans:
         anss.append(eachAns['q_no'])
-    for i in range(1, total_questions + 1):
+
+    if exam_details['exam_category'] == 'BE-IOE':
+        loop_start = 1
+        loop_end = total_questions + 1
+    else:
+        loop_start = 0
+        loop_end = total_questions 
+
+    for i in range(loop_start, loop_end):
         try:
             if i in anss:
                 answer_list += all_ans[anss.index(i)][
@@ -1000,6 +1008,7 @@ def show_result(request, exam_code, subject_name):
         questions = exam_handler_obj.get_filtered_question_from_database(
             int(exam_code), subject_name
         )
+        # print questions
         total_questions = len(questions)
         try:
             current_q_no = int(request.GET.get('q', ''))
@@ -1042,13 +1051,17 @@ def show_result(request, exam_code, subject_name):
             query = {'exam_code': int(exam_code),
                      'user_id': int(request.user.id),
                      'ess_time': ess_check['start_time'],
-                     'q_no': questions[current_q_no]['question_number']}
+                     'q_id': questions[current_q_no]['uid']['id']}
             att_ans = ans.find_all_atttempted_answer(query)
             parameters['attempted'] = att_ans[0]['attempt_details'][
                 len(att_ans[0]['attempt_details']) - 1]['selected_ans']
+            # print query
         except:
             att_ans = ''
             parameters['attempted'] = ''
+
+        
+        # print att_ans, current_q_no
 
         user_profile_obj = UserProfile()
         user = user_profile_obj.get_user_by_username(request.user.username)
@@ -1107,8 +1120,7 @@ def get_list_of_result(request):
                         else:
                             answer_list += 'e'
                     except:
-                        answer_list += 'e'
-
+                        answer_list += 'e'                
                 exam_handler = ExamHandler()
                 score_list = exam_handler.check_answers(exam_code, answer_list)
                 rank = 0
@@ -1165,7 +1177,7 @@ def iomdashboard(request):
         parameters['user'] = user
 
         subscription_type = user['subscription_type']
-
+        parameters['subscription_type'] = subscription_type
         if len(subscription_type) != 0:
             parameters['subscribed'] = True
         else:
@@ -1338,19 +1350,9 @@ def attend_IOM_dps_exam(request, exam_code):
             ) / 60
 
             parameters['all_answers'] = json.dumps(all_answers)
-            question_obj = QuestionApi()
-            questions = question_obj.find_all_questions(
-                {"exam_code": int(exam_code),
-                 'marks': 1},
-                fields={'answer.correct': 0}
-            )
-            total_questions = question_obj.get_count(
-                {"exam_code": int(exam_code),
-                 'marks': 1}
-            )
-            sorted_questions = sorted(
-                questions, key=lambda k: k['question_number']
-            )
+            exam_handler_obj = ExamHandler()
+            sorted_questions = exam_handler_obj.get_questionset_from_database(exam_code)
+            total_questions = len(sorted_questions)
 
             parameters['questions'] = json.dumps(sorted_questions)
             parameters['exam_details'] = exam_details
