@@ -141,26 +141,24 @@ def load_modelquestion_in_database(request):
     #     question_api = QuestionApi()
     #     question_api.insert_new_question(json_obj)
 
-    # for var in range(1, 11):
-    #     if var == 5 or var == 6:
-    #         continue
-    #     f = open(settings.APP_ROOT + '/apps/exam_api/extraction/v4s' +
-    #              str(var) + '/text.docx-json.json-new_json.json', 'rb')
-    #     json_obj = json.loads(f.read())
-    #     for i, x in enumerate(json_obj):
-    #         x['question_number'] = i + 1
-    #     question_api = QuestionApi()
-    #     question_api.insert_new_question(json_obj)
-    f = open(
-        settings.APP_ROOT +
-        '/apps/exam_api/extraction/v5s5/text.docx-json.json-new_json.json',
-        'rb'
-    )
-    json_obj = json.loads(f.read())
-    for i, x in enumerate(json_obj):
-        x['question_number'] = i + 1
-    question_api = QuestionApi()
-    question_api.insert_new_question(json_obj)
+    for var in range(1, 8):
+        f = open(settings.APP_ROOT + '/apps/exam_api/iom-new/set-' +
+                 str(var) + '.csv-json.json', 'r')
+        json_obj = json.loads(f.read())
+        for i, x in enumerate(json_obj):
+            x['question_number'] = i + 1
+        question_api = QuestionApi()
+        question_api.insert_new_question(json_obj)
+    # f = open(
+    #     settings.APP_ROOT +
+    #     '/apps/exam_api/extraction/v5s5/text.docx-json.json-new_json.json',
+    #     'rb'
+    # )
+    # json_obj = json.loads(f.read())
+    # for i, x in enumerate(json_obj):
+    #     x['question_number'] = i + 1
+    # question_api = QuestionApi()
+    # question_api.insert_new_question(json_obj)
     return HttpResponse("Question saved in the database")
 
 
