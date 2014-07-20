@@ -7,7 +7,7 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.http import HttpResponse
 
-from apps.random_questions.views import generate_random_ioe_questions
+from apps.random_questions.views import generate_random_ioe_questions, generate_random_iom_questions
 from apps.mainapp.classes.Coupon import Coupon
 from apps.mainapp.classes.Userprofile import UserProfile
 
@@ -788,17 +788,21 @@ class AjaxHandle():
             )
         )
 
-    def get_new_ioe_exam(self, request):
+    def get_new_exam(self, request):
         user_profile_obj = UserProfile()
+        ex_type = request.POST.get('type')
         if request.user.is_authenticated():
+            if ex_type == 'be-ioe':
+                exam_code = generate_random_ioe_questions(request)
+            else:
+                exam_code = generate_random_iom_questions(request)
 
-            exam_code = generate_random_ioe_questions(request)
             user_profile_obj.save_valid_exam(
                 request.user.username, int(exam_code)
             )
             return HttpResponse(
                 json.dumps(
-                    {'exam_code': int(exam_code), 'status': 'ok'}
+                    {'exam_code': int(exam_code), 'status': 'ok', 'type': ex_type}
                 )
             )
         else:
@@ -815,6 +819,7 @@ class AjaxHandle():
             user_profile_obj = UserProfile()
             coupon_obj = Coupon()
             code = request.POST.get('code')
+            ex_type = request.POST.get('type')
             coupon_code = coupon_obj.get_unused_coupon_by_coupon_code(code)
 
             if coupon_code is None:
@@ -833,7 +838,18 @@ class AjaxHandle():
                     code, request.user.username
                 )
                 return HttpResponse(
-                    json.dumps({'message': 'valid', 'status': 'ok'})
+                    json.dumps({'message': 'valid', 'status': 'ok', 'type':ex_type})
+                )
+
+            elif 'MBBS-IOM' in coupon_code['subscription_type']:
+                user_profile_obj.change_subscription_plan(
+                    request.user.username, code
+                )
+                coupon_obj.change_used_status_of_coupon(
+                    code, request.user.username
+                )
+                return HttpResponse(
+                    json.dumps({'message': 'valid', 'status': 'ok', 'type':ex_type})
                 )
 
             elif 'DPS' in coupon_code['subscription_type']:
@@ -841,7 +857,7 @@ class AjaxHandle():
                     code, request.user.username
                 )
                 return HttpResponse(
-                    json.dumps({'message': 'valid', 'status': 'ok'})
+                    json.dumps({'message': 'valid', 'status': 'ok', 'type':ex_type})
                 )
 
             else:

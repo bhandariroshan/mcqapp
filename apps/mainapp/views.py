@@ -185,7 +185,7 @@ def landing(request):
             {'exam_code': {'$in': user_exams}}, sort_index='exam_date'
         )
         for count, eachExamDetails in enumerate(all_valid_exams):
-            if eachExamDetails['exam_family'] == 'CPS':
+            if eachExamDetails['exam_family'] == 'CPS' or eachExamDetails['exam_category'] == 'MBBS-IOM':
                 continue
             up_exm = {}
 
@@ -1000,6 +1000,7 @@ def show_result(request, exam_code, subject_name):
         questions = exam_handler_obj.get_filtered_question_from_database(
             int(exam_code), subject_name
         )
+        # print questions
         total_questions = len(questions)
         try:
             current_q_no = int(request.GET.get('q', ''))
@@ -1165,7 +1166,7 @@ def iomdashboard(request):
         parameters['user'] = user
 
         subscription_type = user['subscription_type']
-
+        parameters['subscription_type'] = subscription_type
         if len(subscription_type) != 0:
             parameters['subscribed'] = True
         else:
@@ -1338,19 +1339,9 @@ def attend_IOM_dps_exam(request, exam_code):
             ) / 60
 
             parameters['all_answers'] = json.dumps(all_answers)
-            question_obj = QuestionApi()
-            questions = question_obj.find_all_questions(
-                {"exam_code": int(exam_code),
-                 'marks': 1},
-                fields={'answer.correct': 0}
-            )
-            total_questions = question_obj.get_count(
-                {"exam_code": int(exam_code),
-                 'marks': 1}
-            )
-            sorted_questions = sorted(
-                questions, key=lambda k: k['question_number']
-            )
+            exam_handler_obj = ExamHandler()
+            sorted_questions = exam_handler_obj.get_questionset_from_database(exam_code)
+            total_questions = len(sorted_questions)
 
             parameters['questions'] = json.dumps(sorted_questions)
             parameters['exam_details'] = exam_details
