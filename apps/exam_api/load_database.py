@@ -26,12 +26,14 @@ def load_examset_in_database(request):
             if len(question_id_list) == 100:
                 exam_category = "MBBS-IOM"
                 exam_duration = 120
+                exam_name = "IOM Practice Exam"
             else:
                 exam_category = "BE-IOE"
                 exam_duration = 60
+                exam_name = "IOE Practice Exam"
 
             exam_dict = {
-                "exam_name": "IOE Practice Exam",
+                "exam_name": exam_name,
                 "exam_date": 1401359880,
                 "image": "exam.jpg",
                 "exam_code": dist,
@@ -141,26 +143,24 @@ def load_modelquestion_in_database(request):
     #     question_api = QuestionApi()
     #     question_api.insert_new_question(json_obj)
 
-    # for var in range(1, 11):
-    #     if var == 5 or var == 6:
-    #         continue
-    #     f = open(settings.APP_ROOT + '/apps/exam_api/extraction/v4s' +
-    #              str(var) + '/text.docx-json.json-new_json.json', 'rb')
-    #     json_obj = json.loads(f.read())
-    #     for i, x in enumerate(json_obj):
-    #         x['question_number'] = i + 1
-    #     question_api = QuestionApi()
-    #     question_api.insert_new_question(json_obj)
-    f = open(
-        settings.APP_ROOT +
-        '/apps/exam_api/extraction/v5s5/text.docx-json.json-new_json.json',
-        'rb'
-    )
-    json_obj = json.loads(f.read())
-    for i, x in enumerate(json_obj):
-        x['question_number'] = i + 1
-    question_api = QuestionApi()
-    question_api.insert_new_question(json_obj)
+    for var in range(1, 8):
+        f = open(settings.APP_ROOT + '/apps/exam_api/iom-new/set-' +
+                 str(var) + '.csv-json.json', 'r')
+        json_obj = json.loads(f.read())
+        for i, x in enumerate(json_obj):
+            x['question_number'] = i + 1
+        question_api = QuestionApi()
+        question_api.insert_new_question(json_obj)
+    # f = open(
+    #     settings.APP_ROOT +
+    #     '/apps/exam_api/extraction/v5s5/text.docx-json.json-new_json.json',
+    #     'rb'
+    # )
+    # json_obj = json.loads(f.read())
+    # for i, x in enumerate(json_obj):
+    #     x['question_number'] = i + 1
+    # question_api = QuestionApi()
+    # question_api.insert_new_question(json_obj)
     return HttpResponse("Question saved in the database")
 
 
