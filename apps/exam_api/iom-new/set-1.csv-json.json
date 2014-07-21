@@ -90,7 +90,7 @@
     "answer": {
       "d": {
         "image": "",
-        "text": "2l"
+        "text": "4l"
       },
       "correct": "a",
       "a": {
@@ -343,7 +343,7 @@
     "exam_code": 1405923264,
     "question": {
       "image": "",
-      "text": "A set if 24 tuning forks are so arranged that each gives 6 beats per sec with the previous one. If the frequency of the last tuning fork is double that of the first, the frequency of second tuning fork is"
+      "text": "A set of 24 tuning forks are so arranged that each gives 6 beats per sec with the previous one. If the frequency of the last tuning fork is double that of the first, the frequency of second tuning fork is"
     },
     "exam_type": "MEDICAL"
   },
@@ -401,7 +401,7 @@
     "exam_code": 1405923264,
     "question": {
       "image": "",
-      "text": "An e− is moving around the nucleus of H - atom in cirular orbit of radius r. The coulomb force $ \\vec{F} $ between the two is"
+      "text": "An $ e^- $ is moving around the nucleus of H - atom in circular orbit of radius r. The coulomb force $ \\vec{F} $ between the two is"
     },
     "exam_type": "MEDICAL"
   },
@@ -633,7 +633,7 @@
     "exam_code": 1405923264,
     "question": {
       "image": "",
-      "text": "5 ml of HCl, 20 ml of N / 2 $ H_2SO_4 $ and 30 ml of N / 3 $ HNO_3 $ are mixed together and volume is made to 1 litre. The normality of resulting solution is"
+      "text": "5 ml of N HCl, 20 ml of N / 2 $ H_2SO_4 $ and 30 ml of N / 3 $ HNO_3 $ are mixed together and volume is made to 1 litre. The normality of resulting solution is"
     },
     "exam_type": "MEDICAL"
   },
@@ -820,7 +820,7 @@
       "correct": "c",
       "a": {
         "image": "",
-        "text": "ohms $ cm^{-1} $"
+        "text": "$ ohm^{-1} cm^{-1} $"
       },
       "b": {
         "image": "",
@@ -828,7 +828,7 @@
       },
       "c": {
         "image": "",
-        "text": "$ ohm^{-1}  cm^{-1} $"
+        "text": "ohms $ cm^{-1} $"
       }
     },
     "marks": 1,
@@ -1474,7 +1474,7 @@
     "exam_code": 1405923264,
     "question": {
       "image": "",
-      "text": "Zygotic meisis takes place in:"
+      "text": "Zygotic meiosis takes place in:"
     },
     "exam_type": "MEDICAL"
   },
