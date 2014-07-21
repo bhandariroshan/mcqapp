@@ -53,7 +53,7 @@
     "exam_code": 1405923267,
     "question": {
       "image": "",
-      "text": "A stone is thrown at an angle $ \\theta $ to the horizontal reache a maximum height H. Then the time of flight of stone will be"
+      "text": "A stone is thrown at an angle $ \\theta $ to the horizontal reaches a maximum height H. Then the time of flight of stone will be"
     },
     "exam_type": "MEDICAL"
   },
@@ -140,7 +140,7 @@
     "exam_code": 1405923267,
     "question": {
       "image": "",
-      "text": "Pressure inside two soap bubble is 1.01 and 1.02 atm. Ration between their volume is "
+      "text": "Pressure inside two soap bubble is 1.01 and 1.02 atm. Ratio between their volume is "
     },
     "exam_type": "MEDICAL"
   },
@@ -401,7 +401,7 @@
     "exam_code": 1405923267,
     "question": {
       "image": "",
-      "text": "The electric potential at the surface of an atomic nucleus (z=50) of radius $ 9 \\times 10^15 $ m is"
+      "text": "The electric potential at the surface of an atomic nucleus (z=50) of radius $ 9 \\times 10^-{15} $ m is"
     },
     "exam_type": "MEDICAL"
   },
@@ -546,7 +546,7 @@
     "exam_code": 1405923267,
     "question": {
       "image": "",
-      "text": "The ration of the  maxium to the minimum wavelenths in Balmer series of H-spectrum is"
+      "text": "The ratio of the  maxium to the minimum wavelenths in Balmer series of H-spectrum is"
     },
     "exam_type": "MEDICAL"
   },
@@ -952,7 +952,7 @@
     "exam_code": 1405923267,
     "question": {
       "image": "",
-      "text": "The equilibrium constant for the reversible reation, $ N_2 + 3H_2 \\leftrightarrow 2NH_3 $ is K and for the reaction $ \\frac{1}{2}N_2 + \\frac{3}{2}H_2 \\leftrightarrow NH_3 $ is K' ; then"
+      "text": "The equilibrium constant for the reversible reaction, $ N_2 + 3H_2 \\leftrightarrow 2NH_3 $ is K and for the reaction $ \\frac{1}{2}N_2 + \\frac{3}{2}H_2 \\leftrightarrow NH_3 $ is K' ; then"
     },
     "exam_type": "MEDICAL"
   },
@@ -960,20 +960,20 @@
     "answer": {
       "d": {
         "image": "",
-        "text": "$ 10^39 $"
+        "text": "$ 10^{39} $"
       },
       "correct": "a",
       "a": {
         "image": "",
-        "text": "$ 10^90 $"
+        "text": "$ 10^{90} $"
       },
       "b": {
         "image": "",
-        "text": "$ 10^19 $"
+        "text": "$ 10^{19} $"
       },
       "c": {
         "image": "",
-        "text": "$ 10^20 $"
+        "text": "$ 10^{20} $"
       }
     },
     "marks": 1,
@@ -1329,7 +1329,7 @@
     "exam_code": 1405923267,
     "question": {
       "image": "",
-      "text": "In the reaction sequence $ CH_2 = CH_2 \\xrightarrow{Hypochlorous \\space acid} X \\xrightarrow{Y} HO–CH_2CH_2–OH $ X and Y respectively are"
+      "text": "In the reaction sequence X and Y are respectively: $$ CH_2 = CH_2 \\xrightarrow{Hypochlorous \\space acid} \\space X \\space \\xrightarrow{Y} HO–CH_2CH_2–OH $$"
     },
     "exam_type": "MEDICAL"
   },
