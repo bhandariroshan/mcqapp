@@ -438,7 +438,7 @@
     "answer": {
       "d": {
         "image": "",
-        "text": "$ \\frac{mu_o}{2 \\pi } $"
+        "text": "$ \\frac{\\mu_o}{2 \\pi } $"
       },
       "correct": "d",
       "a": {
