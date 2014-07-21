@@ -1126,7 +1126,7 @@
     "exam_code": 1405923264,
     "question": {
       "image": "",
-      "text": "The correct order of boiling point f primary $ (1^o) $, secondary $ (2^o) $ and tertiary $ (3^o) $ alcohal is:"
+      "text": "The correct order of boiling point f primary $ (1^o) $, secondary $ (2^o) $ and tertiary $ (3^o) $ alcohol is:"
     },
     "exam_type": "MEDICAL"
   },
@@ -1139,7 +1139,7 @@
       "correct": "c",
       "a": {
         "image": "",
-        "text": "iso-propyl alcohal"
+        "text": "iso-propyl alcohol"
       },
       "b": {
         "image": "",
@@ -1147,7 +1147,7 @@
       },
       "c": {
         "image": "",
-        "text": "benzyl alcohal"
+        "text": "benzyl alcohol"
       }
     },
     "marks": 1,

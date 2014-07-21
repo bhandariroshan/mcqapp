@@ -82,7 +82,7 @@
     "exam_code": 1405923270,
     "question": {
       "image": "",
-      "text": "A simple pendulum has a time period $ T_1 $ when on earth surface and $ T_2 $ when taken to height 2R above the earth's surface where R is radius of the earth. The value of $ T_1 / T_2 $ is"
+      "text": "A simple pendulum has a time period $ T_1 $ when on earth's surface and $ T_2 $ when taken to height 2R above the earth's surface where R is radius of the earth. The value of $ T_1 / T_2 $ is"
     },
     "exam_type": "MEDICAL"
   },
@@ -111,7 +111,7 @@
     "exam_code": 1405923270,
     "question": {
       "image": "",
-      "text": "For a constant hydraulic stress on an object, the fractional change in the objects volume (Δv / v) and its bulk modulus B are related as:"
+      "text": "For a constant hydraulic stress on an object, the fractional change in the objects volume (Δv / v) and its bulk modulus (B) are related as:"
     },
     "exam_type": "MEDICAL"
   },
@@ -140,7 +140,7 @@
     "exam_code": 1405923270,
     "question": {
       "image": "",
-      "text": "The radius of a soap bubble is r. The surface tension of soap solution is T. Keeping temperature constant, the radius of the soap bubble is doubled, the energy necessary for this will be"
+      "text": "The radius of a soap bubble is r. The surface tension of soap solution is T. Keeping temperature constant, the radius of the soap bubble is doubled. The energy necessary for this will be"
     },
     "exam_type": "MEDICAL"
   },
@@ -182,7 +182,7 @@
       "correct": "b",
       "a": {
         "image": "",
-        "text": "all substance exist in solid form"
+        "text": "all substances exist in solid form"
       },
       "b": {
         "image": "",
@@ -264,7 +264,7 @@
     "answer": {
       "d": {
         "image": "",
-        "text": "1 / (m + 1)"
+        "text": "1 /m + 1"
       },
       "correct": "d",
       "a": {
@@ -314,7 +314,7 @@
     "exam_code": 1405923270,
     "question": {
       "image": "",
-      "text": "Focal length of objective and eye piece of telescope are 200 cm and 4 cm respectively. What is length of telescope for normal adjustment?"
+      "text": "Focal length of objective and eye piece of telescope are 200 cm and 4 cm respectively. What is the length of telescope for normal adjustment?"
     },
     "exam_type": "MEDICAL"
   },
@@ -401,7 +401,7 @@
     "exam_code": 1405923270,
     "question": {
       "image": "",
-      "text": "You are given n resistors, each of resistance r. They are 1st combined to get minimum possible resistance, then they are connected to get maximum possible resistance. The ratio between minimum to maximum resistance is"
+      "text": "You are given n resistors, each of resistance r. They are 1st combined to get minimum possible resistance, then they are connected to get the maximum possible resistance. The ratio between minimum to maximum resistance is"
     },
     "exam_type": "MEDICAL"
   },
@@ -625,7 +625,7 @@
       },
       "c": {
         "image": "",
-        "text": "$ 1 / 2 n^2 $"
+        "text": "1 / 2  $ n^2 $"
       }
     },
     "marks": 1,
@@ -836,7 +836,7 @@
     "exam_code": 1405923270,
     "question": {
       "image": "",
-      "text": "How many ml of 1M $ H_2SO_4 $ solution required to neutralize 10 ml of 1M NaOH?"
+      "text": "How many ml of 1M $ H_2SO_4 $ solution is required to neutralize 10 ml of 1M NaOH?"
     },
     "exam_type": "MEDICAL"
   },
@@ -1085,7 +1085,7 @@
       },
       "b": {
         "image": "",
-        "text": "$ Al_2O_3.2H_2O $"
+        "text": "$ Al_2O_3.12H_2O $"
       },
       "c": {
         "image": "",
@@ -1201,7 +1201,7 @@
       },
       "b": {
         "image": "",
-        "text": "Ethyl alcohal"
+        "text": "Ethyl alcohol"
       },
       "c": {
         "image": "",
@@ -1263,7 +1263,7 @@
       },
       "c": {
         "image": "",
-        "text": "Propyl alcohal"
+        "text": "Propyl alcohol"
       }
     },
     "marks": 1,
@@ -1329,7 +1329,7 @@
     "exam_code": 1405923270,
     "question": {
       "image": "",
-      "text": "Methyl alcohal can be distinguised from ethyl alcohal using:"
+      "text": "Methyl alcohol can be distinguished from ethyl alcohol using:"
     },
     "exam_type": "MEDICAL"
   },
@@ -1346,7 +1346,7 @@
       },
       "b": {
         "image": "",
-        "text": "an alcohal"
+        "text": "an alcohol"
       },
       "c": {
         "image": "",
@@ -1437,7 +1437,7 @@
       },
       "c": {
         "image": "",
-        "text": "benzyl alcohal"
+        "text": "benzyl alcohol"
       }
     },
     "marks": 1,
@@ -1466,7 +1466,7 @@
       },
       "c": {
         "image": "",
-        "text": "asconycetes"
+        "text": "ascomycetes"
       }
     },
     "marks": 1,
@@ -2075,7 +2075,7 @@
       },
       "c": {
         "image": "",
-        "text": "diconfylic dorsally convex"
+        "text": "dicondylic dorsally convex"
       }
     },
     "marks": 1,
@@ -2120,7 +2120,7 @@
     "answer": {
       "d": {
         "image": "",
-        "text": "medulla oblangata"
+        "text": "medulla oblongata"
       },
       "correct": "c",
       "a": {
@@ -2692,7 +2692,7 @@
     "exam_code": 1405923270,
     "question": {
       "image": "",
-      "text": "Portugese man of war' is common name of"
+      "text": "'Portugese man of war' is common name of"
     },
     "exam_type": "MEDICAL"
   },
@@ -2787,20 +2787,20 @@
     "answer": {
       "d": {
         "image": "",
-        "text": "Cleavage $ rightarrow $ Blastulation $ rightarrow $ Gastrulation $ rightarrow $ Notogenesis $ rightarrow $ Organogenesis"
+        "text": "Cleavage $ \\rightarrow $ Blastulation $ \\rightarrow $ Gastrulation $ \\rightarrow $ Notogenesis $ \\rightarrow $ Organogenesis"
       },
       "correct": "d",
       "a": {
         "image": "",
-        "text": "Cleavage $ rightarrow $ Blastulation $ rightarrow $ Gastrulation $ rightarrow $ Organogenesis $ rightarrow $ Notogenesis "
+        "text": "Cleavage $ \\rightarrow $ Blastulation $ \\rightarrow $ Gastrulation $ \\rightarrow $ Organogenesis $ \\rightarrow $ Notogenesis "
       },
       "b": {
         "image": "",
-        "text": "Cleavage $ rightarrow $ Gastrulation $ rightarrow $ Notogenesis $ rightarrow $ Organogenesis"
+        "text": "Cleavage $ \\rightarrow $ Gastrulation $ \\rightarrow $ Notogenesis $ \\rightarrow $ Organogenesis"
       },
       "c": {
         "image": "",
-        "text": "Blastulation $ rightarrow $Notogenesis $ rightarrow $ Organogenesis"
+        "text": "Blastulation $ \\rightarrow $ Notogenesis $ \\rightarrow $ Organogenesis"
       }
     },
     "marks": 1,

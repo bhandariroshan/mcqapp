@@ -670,20 +670,20 @@
     "answer": {
       "d": {
         "image": "",
-        "text": "$ frac {MW}{1} $"
+        "text": "$ \\frac{MW}{1} $"
       },
       "correct": "c",
       "a": {
         "image": "",
-        "text": "$ frac  {MW}{2} $"
+        "text": "$ \\frac{MW}{2} $"
       },
       "b": {
         "image": "",
-        "text": "$ frac {MW}{3} $"
+        "text": "$ \\frac{MW}{3} $"
       },
       "c": {
         "image": "",
-        "text": "$ frac {MW}{6} $"
+        "text": "$ \\frac{MW}{6} $"
       }
     },
     "marks": 1,
@@ -1052,7 +1052,7 @@
       "correct": "b",
       "a": {
         "image": "",
-        "text": "$ treatment with HNO_3 $"
+        "text": "treatment with $ HNO_3 $"
       },
       "b": {
         "image": "",

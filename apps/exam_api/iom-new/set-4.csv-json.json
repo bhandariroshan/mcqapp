@@ -3,7 +3,7 @@
     "answer": {
       "d": {
         "image": "",
-        "text": "not expressable in terms of M, L, T"
+        "text": "not expressible in terms of M, L, T"
       },
       "correct": "a",
       "a": {
@@ -227,7 +227,7 @@
     "exam_code": 1405923267,
     "question": {
       "image": "",
-      "text": "The rate of emission of radiation of a black body at temperature 27°C is $ E_1 $. If it temperature is increased to 327°C, the rate of emission of radition is $ E_2 $. The relation between $ E_1\\space&E_2 $ is "
+      "text": "The rate of emission of radiation of a black body at temperature 27°C is $ E_1 $. If it temperature is increased to 327°C, the rate of emission of radiation is $ E_2 $. The relation between $ E_1\\space & \\space aE_2 $ is "
     },
     "exam_type": "MEDICAL"
   },
@@ -298,7 +298,7 @@
       "correct": "a",
       "a": {
         "image": "",
-        "text": "$ 2(I_1+I_2 $"
+        "text": "$ 2(I_1+I_2) $"
       },
       "b": {
         "image": "",
@@ -356,11 +356,11 @@
       "correct": "d",
       "a": {
         "image": "",
-        "text": "$ 1/2 \\epsilon_0 \\epsilon^2 Ad $"
+        "text": "$ 1/2 \\space \\epsilon_0 \\epsilon^2 Ad $"
       },
       "b": {
         "image": "",
-        "text": "$ 1/2 \\epsilon_0 \\epsilon^2/Ad $"
+        "text": "$ 1/2 \\space \\epsilon_0 \\epsilon^2 / Ad $"
       },
       "c": {
         "image": "",
@@ -372,7 +372,7 @@
     "exam_code": 1405923267,
     "question": {
       "image": "",
-      "text": "The energy required to charge a parallel plate condenser of plate separtion d and plate area of cross-setion A such that the uniform electic field between the plates is $ \\epsilon $ is"
+      "text": "The energy required to charge a parallel plate condenser of plate separation d and plate area of cross-section A such that the uniform electric field between the plates is $ \\epsilon $ is"
     },
     "exam_type": "MEDICAL"
   },
@@ -380,7 +380,7 @@
     "answer": {
       "d": {
         "image": "",
-        "text": "$ 9 \\times 10^5 v $"
+        "text": "$ 9 \\times 10^5 $ v"
       },
       "correct": "b",
       "a": {
@@ -389,11 +389,11 @@
       },
       "b": {
         "image": "",
-        "text": "$ 8 \\times 10^6 v $"
+        "text": "$ 8 \\times 10^6 $ v"
       },
       "c": {
         "image": "",
-        "text": "9v"
+        "text": "9 v"
       }
     },
     "marks": 1,
@@ -401,7 +401,7 @@
     "exam_code": 1405923267,
     "question": {
       "image": "",
-      "text": "The electric potential at the surface of an atomic nucleus (z=50) of radius $ 9 x 10^15 $ m is"
+      "text": "The electric potential at the surface of an atomic nucleus (z=50) of radius $ 9 \\times 10^15 $ m is"
     },
     "exam_type": "MEDICAL"
   },
@@ -807,7 +807,7 @@
     "exam_code": 1405923267,
     "question": {
       "image": "",
-      "text": "The $ P^H $ of a solution obtained by mixing 5 g of $ CH_3COOH $ and 7.5 g of $CH_3COONa $ and making the volume equal to 500 ml is [$ K_a $ for $ CH_3COOH = 1.80 \\times 10^{-5} $]:"
+      "text": "The $ P^H $ of a solution obtained by mixing 5 g of $ CH_3COOH $ and 7.5 g of $CH_3COONa $ and making the volume equal to 500 ml is:               [$ K_a $ for $ CH_3COOH = 1.80 \\times 10^{-5} $]"
     },
     "exam_type": "MEDICAL"
   },

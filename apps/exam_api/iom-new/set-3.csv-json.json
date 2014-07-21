@@ -90,12 +90,12 @@
     "answer": {
       "d": {
         "image": "",
-        "text": "$ \\frac{YA}{L} $"
+        "text": "$ \\frac{YA}{l} $"
       },
       "correct": "d",
       "a": {
         "image": "",
-        "text": "$ \\frac{YL}{A} $"
+        "text": "$ \\frac{Yl}{A} $"
       },
       "b": {
         "image": "",
@@ -111,7 +111,7 @@
     "exam_code": 1405923266,
     "question": {
       "image": "",
-      "text": "A wire length L and cross section area A is stretched through a certain length l. If y is young's modulus of the material of the wire, then the force constant of the wire is"
+      "text": "A wire length L and cross section area A is stretched through a certain length l. If Y is Young's modulus of the material of the wire, then the force constant of the wire is"
     },
     "exam_type": "MEDICAL"
   },
@@ -633,7 +633,7 @@
     "exam_code": 1405923266,
     "question": {
       "image": "",
-      "text": "In Schottlky defect"
+      "text": "In Schottky defect"
     },
     "exam_type": "MEDICAL"
   },
@@ -807,7 +807,7 @@
     "exam_code": 1405923266,
     "question": {
       "image": "",
-      "text": "Sodium potassium tartarate is a "
+      "text": "Sodium potassium tartrate is a "
     },
     "exam_type": "MEDICAL"
   },
