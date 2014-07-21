@@ -1,2902 +1,2902 @@
 [
   {
-    "exam_type": "MEDICAL",
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "800m"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "100m"
+      },
+      "b": {
+        "image": "",
+        "text": "200m"
+      },
+      "c": {
+        "image": "",
+        "text": "400m"
+      }
+    },
+    "marks": 1,
     "subject": "physics",
+    "exam_code": 1405923268,
+    "question": {
+      "image": "",
+      "text": "The maximum horizontal range of projectile is 400m. The maximum height attained by it will be"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
     "answer": {
-      "correct": "a",
+      "d": {
+        "image": "",
+        "text": "with acceleration $ \\frac{mv_2}{l} $"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "radially outwards"
+      },
       "b": {
-        "text": "200m",
-        "image": ""
+        "image": "",
+        "text": "radially inwards"
       },
       "c": {
-        "text": "400m",
-        "image": ""
-      },
-      "a": {
-        "text": "100m",
-        "image": ""
-      },
-      "d": {
-        "text": "800m",
-        "image": ""
+        "image": "",
+        "text": "tangentially outwards"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
-    "question": {
-      "text": "The maximum horizontal range of projectile is 400m. The maximum height attained by it will be",
-      "image": ""
-    }
-  },
-  {
-    "exam_type": "MEDICAL",
     "subject": "physics",
+    "exam_code": 1405923268,
+    "question": {
+      "image": "",
+      "text": "A stone of mass m is tied to a string of length l and rotated in a circle with a constant speed v. If the string is released, the stone fires"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
     "answer": {
-      "correct": "c",
+      "d": {
+        "image": "",
+        "text": "$ \\frac{1}{2} $"
+      },
+      "correct": "d",
+      "a": {
+        "image": "",
+        "text": "$ \\frac{1}{\\sqrt{2}} $"
+      },
       "b": {
-        "text": "radially inwards",
-        "image": ""
+        "image": "",
+        "text": "2"
       },
       "c": {
-        "text": "tangentially outwards",
-        "image": ""
-      },
-      "a": {
-        "text": "radially outwards",
-        "image": ""
-      },
-      "d": {
-        "text": "with acceleration $ \\frac{mv_2}{l} $",
-        "image": ""
+        "image": "",
+        "text": "$ \\sqrt{2} $"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
-    "question": {
-      "text": "A stone of mass m is tied to a string of length l and rotated in a circle with a constant speed v. If the string is released, the stone fires",
-      "image": ""
-    }
-  },
-  {
-    "exam_type": "MEDICAL",
     "subject": "physics",
+    "exam_code": 1405923268,
+    "question": {
+      "image": "",
+      "text": "For a satellite moving in a orbit around the earth, the ratio of KE to PE is"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
     "answer": {
-      "correct": "d",
+      "d": {
+        "image": "",
+        "text": "$ 2s^2y $"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "$ \\frac{s}{2y} $"
+      },
       "b": {
-        "text": "2",
-        "image": ""
+        "image": "",
+        "text": "$ \\frac {2y}{s^2} $"
       },
       "c": {
-        "text": "$ \\sqrt{2} $",
-        "image": ""
-      },
-      "a": {
-        "text": "$ \\frac{1}{\\sqrt{2}} $",
-        "image": ""
-      },
-      "d": {
-        "text": "$ \\frac{1}{2} $",
-        "image": ""
+        "image": "",
+        "text": "$ \\frac{s^2}{2y} $"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
-    "question": {
-      "text": "For a satellite moving in a orbit around the earth, the ratio of KE to PE is",
-      "image": ""
-    }
-  },
-  {
-    "exam_type": "MEDICAL",
     "subject": "physics",
+    "exam_code": 1405923268,
+    "question": {
+      "image": "",
+      "text": "If 's' is stress and 'y' is young's modulus of material of a wire, the energy stored in the wire pre unit volume is"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
     "answer": {
-      "correct": "c",
+      "d": {
+        "image": "",
+        "text": "1: 2"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "$ 1: 2^{1/3} $"
+      },
       "b": {
-        "text": "$ \\frac {2y}{s^2} $",
-        "image": ""
+        "image": "",
+        "text": "$ 2^{1/3} :1 $"
       },
       "c": {
-        "text": "$ \\frac{s^2}{2y} $",
-        "image": ""
-      },
-      "a": {
-        "text": "$ \\frac{s}{2y} $",
-        "image": ""
-      },
-      "d": {
-        "text": "$ 2s^2y $",
-        "image": ""
+        "image": "",
+        "text": "2 : 1"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
-    "question": {
-      "text": "If 's' is stress and 'y' is young's modulus of material of a wire, the energy stored in the wire pre unit volume is",
-      "image": ""
-    }
-  },
-  {
-    "exam_type": "MEDICAL",
     "subject": "physics",
+    "exam_code": 1405923268,
+    "question": {
+      "image": "",
+      "text": "Two small drops of mercury, each of radius R coalesce to form a single large drop. The ratio of the total surface energies before and after the charge is"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
     "answer": {
-      "correct": "b",
+      "d": {
+        "image": "",
+        "text": "none"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "0"
+      },
       "b": {
-        "text": "$ 2^{1/3} :1 $",
-        "image": ""
+        "image": "",
+        "text": "1"
       },
       "c": {
-        "text": "2 : 1",
-        "image": ""
-      },
-      "a": {
-        "text": "$ 1: 2^{1/3} $",
-        "image": ""
-      },
-      "d": {
-        "text": "1: 2",
-        "image": ""
+        "image": "",
+        "text": "$ \\infty $"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
-    "question": {
-      "text": "Two small drops of mercury, each of radius R coalesce to form a single large drop. The ratio of the total surface energies before and after the charge is",
-      "image": ""
-    }
-  },
-  {
-    "exam_type": "MEDICAL",
     "subject": "physics",
+    "exam_code": 1405923268,
+    "question": {
+      "image": "",
+      "text": "A gas undergoes an adiabatic chage. Its specific heat in the process is"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
     "answer": {
+      "d": {
+        "image": "",
+        "text": "0,0"
+      },
       "correct": "a",
+      "a": {
+        "image": "",
+        "text": "0,1"
+      },
       "b": {
-        "text": "1",
-        "image": ""
+        "image": "",
+        "text": "1,0"
       },
       "c": {
-        "text": "$ \\infty $",
-        "image": ""
-      },
-      "a": {
-        "text": "0",
-        "image": ""
-      },
-      "d": {
-        "text": "none",
-        "image": ""
+        "image": "",
+        "text": "0.5, 0.5"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
-    "question": {
-      "text": "A gas undergoes an adiabatic chage. Its specific heat in the process is",
-      "image": ""
-    }
-  },
-  {
-    "exam_type": "MEDICAL",
     "subject": "physics",
+    "exam_code": 1405923268,
+    "question": {
+      "image": "",
+      "text": "The reflactance and emmitance of a perfectly black body are respectively"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
     "answer": {
+      "d": {
+        "image": "",
+        "text": "same in all cases"
+      },
       "correct": "a",
+      "a": {
+        "image": "",
+        "text": "isothermal"
+      },
       "b": {
-        "text": "1,0",
-        "image": ""
+        "image": "",
+        "text": "adiabatic"
       },
       "c": {
-        "text": "0.5, 0.5",
-        "image": ""
-      },
-      "a": {
-        "text": "0,1",
-        "image": ""
-      },
-      "d": {
-        "text": "0,0",
-        "image": ""
+        "image": "",
+        "text": "isochoric"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
-    "question": {
-      "text": "The reflactance and emmitance of a perfectly black body are respectively",
-      "image": ""
-    }
-  },
-  {
-    "exam_type": "MEDICAL",
     "subject": "physics",
+    "exam_code": 1405923268,
+    "question": {
+      "image": "",
+      "text": "A sample of gas expands from voume $ V_1 $ to $ V_2 $. The amount of work done by the gas is maximum. When the expansion is"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
     "answer": {
-      "correct": "a",
+      "d": {
+        "image": "",
+        "text": "$ 2 \\times 10^{-11} S $"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "$ 2 \\times 10 ^ {-4} S $"
+      },
       "b": {
-        "text": "adiabatic",
-        "image": ""
+        "image": "",
+        "text": "$ 2 \\times 10^4 S $"
       },
       "c": {
-        "text": "isochoric",
-        "image": ""
-      },
-      "a": {
-        "text": "isothermal",
-        "image": ""
-      },
-      "d": {
-        "text": "same in all cases",
-        "image": ""
+        "image": "",
+        "text": "$ 2 \\times 10^ {-4} S $"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
-    "question": {
-      "text": "A sample of gas expands from voume $ V_1 $ to $ V_2 $. The amount of work done by the gas is maximum. When the expansion is",
-      "image": ""
-    }
-  },
-  {
-    "exam_type": "MEDICAL",
     "subject": "physics",
+    "exam_code": 1405923268,
+    "question": {
+      "image": "",
+      "text": "Time taken by sunlight to pass through a window of thickness 4mm whose refractive index is 3/2 is"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
     "answer": {
+      "d": {
+        "image": "",
+        "text": "$ 0,5 \\times 10^8 $"
+      },
       "correct": "c",
+      "a": {
+        "image": "",
+        "text": "$ 3 \\times 10^8 $"
+      },
       "b": {
-        "text": "$ 2 \\times 10^4 S $",
-        "image": ""
+        "image": "",
+        "text": "$ \\frac{3}{\\sqrt{2}} \\times 10^8 $"
       },
       "c": {
-        "text": "$ 2 \\times 10^ {-4} S $",
-        "image": ""
-      },
-      "a": {
-        "text": "$ 2 \\times 10 ^ {-4} S $",
-        "image": ""
-      },
-      "d": {
-        "text": "$ 2 \\times 10^{-11} S $",
-        "image": ""
+        "image": "",
+        "text": "$ \\sqrt{3} \\times 10^8 $"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
-    "question": {
-      "text": "Time taken by sunlight to pass through a window of thickness 4mm whose refractive index is 3/2 is",
-      "image": ""
-    }
-  },
-  {
-    "exam_type": "MEDICAL",
     "subject": "physics",
+    "exam_code": 1405923268,
+    "question": {
+      "image": "",
+      "text": "When the angle of incidence on a material is 60, the reflected light is completely polarized. The velocity of the refracted ray inside the material in m/s is"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
     "answer": {
-      "correct": "c",
+      "d": {
+        "image": "",
+        "text": "4.00 m"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "0.50 m"
+      },
       "b": {
-        "text": "$ \\frac{3}{\\sqrt{2}} \\times 10^8 $",
-        "image": ""
+        "image": "",
+        "text": "1.00 m"
       },
       "c": {
-        "text": "$ \\sqrt{3} \\times 10^8 $",
-        "image": ""
-      },
-      "a": {
-        "text": "$ 3 \\times 10^8 $",
-        "image": ""
-      },
-      "d": {
-        "text": "$ 0,5 \\times 10^8 $",
-        "image": ""
+        "image": "",
+        "text": "2.00 m"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
-    "question": {
-      "text": "When the angle of incidence on a material is 60, the reflected light is completely polarized. The velocity of the refracted ray inside the material in m/s is",
-      "image": ""
-    }
-  },
-  {
-    "exam_type": "MEDICAL",
     "subject": "physics",
+    "exam_code": 1405923268,
+    "question": {
+      "image": "",
+      "text": "A Plano convex lens is made of glass of refractive index 1.6. The radius of curvature of the curved surface is 60 cm. The focal length of the lens is"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
     "answer": {
+      "d": {
+        "image": "",
+        "text": "0.5D"
+      },
       "correct": "b",
+      "a": {
+        "image": "",
+        "text": " + 2D"
+      },
       "b": {
-        "text": "1.00 m",
-        "image": ""
+        "image": "",
+        "text": "- 1D"
       },
       "c": {
-        "text": "2.00 m",
-        "image": ""
-      },
-      "a": {
-        "text": "0.50 m",
-        "image": ""
-      },
-      "d": {
-        "text": "4.00 m",
-        "image": ""
+        "image": "",
+        "text": " +5 D"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
-    "question": {
-      "text": "A Plano convex lens is made of glass of refractive index 1.6. The radius of curvature of the curved surface is 60 cm. The focal length of the lens is",
-      "image": ""
-    }
-  },
-  {
-    "exam_type": "MEDICAL",
     "subject": "physics",
+    "exam_code": 1405923268,
+    "question": {
+      "image": "",
+      "text": "The person cannot see the objects beyond 100 cm. The power of lens to correct this vision will be:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
     "answer": {
+      "d": {
+        "image": "",
+        "text": "$ 4 \\pi \\epsilon_oQ \\times 10^{20} volt/m $"
+      },
       "correct": "b",
+      "a": {
+        "image": "",
+        "text": "$ 12 \\pi \\epsilon_oQ \\times 10^{23} volt/m $"
+      },
       "b": {
-        "text": "- 1D",
-        "image": ""
+        "image": "",
+        "text": "$ 4 \\pi \\epsilon_oQ \\times 10^{23} volt/m $"
       },
       "c": {
-        "text": " +5 D",
-        "image": ""
-      },
-      "a": {
-        "text": " + 2D",
-        "image": ""
-      },
-      "d": {
-        "text": "0.5D",
-        "image": ""
+        "image": "",
+        "text": "$ 12 \\pi \\epsilon_oQ \\times 10^{20} volt/m $"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
-    "question": {
-      "text": "The person cannot see the objects beyond 100 cm. The power of lens to correct this vision will be:",
-      "image": ""
-    }
-  },
-  {
-    "exam_type": "MEDICAL",
     "subject": "physics",
+    "exam_code": 1405923268,
+    "question": {
+      "image": "",
+      "text": "The electric potential at a point in free space due to a charge Q columb is $ Q \\times 10^{11} $ volts. THe electric field at the point is "
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
     "answer": {
-      "correct": "b",
+      "d": {
+        "image": "",
+        "text": "R/32"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "R/4"
+      },
       "b": {
-        "text": "$ 4 \\pi \\epsilon_oQ \\times 10^{23} volt/m $",
-        "image": ""
+        "image": "",
+        "text": "R/8"
       },
       "c": {
-        "text": "$ 12 \\pi \\epsilon_oQ \\times 10^{20} volt/m $",
-        "image": ""
-      },
-      "a": {
-        "text": "$ 12 \\pi \\epsilon_oQ \\times 10^{23} volt/m $",
-        "image": ""
-      },
-      "d": {
-        "text": "$ 4 \\pi \\epsilon_oQ \\times 10^{20} volt/m $",
-        "image": ""
+        "image": "",
+        "text": "R/16"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
-    "question": {
-      "text": "The electric potential at a point in free space due to a charge Q columb is $ Q \\times 10^{11} $ volts. THe electric field at the point is ",
-      "image": ""
-    }
-  },
-  {
-    "exam_type": "MEDICAL",
     "subject": "physics",
+    "exam_code": 1405923268,
+    "question": {
+      "image": "",
+      "text": "A wire is cut into 4 pieces, which are put together by sides to obtain one condutor. If the original resistance of wire was R, the resistance of the bundle will be"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
     "answer": {
+      "d": {
+        "image": "",
+        "text": "8%"
+      },
       "correct": "c",
+      "a": {
+        "image": "",
+        "text": "1%"
+      },
       "b": {
-        "text": "R/8",
-        "image": ""
+        "image": "",
+        "text": "2%"
       },
       "c": {
-        "text": "R/16",
-        "image": ""
-      },
-      "a": {
-        "text": "R/4",
-        "image": ""
-      },
-      "d": {
-        "text": "R/32",
-        "image": ""
+        "image": "",
+        "text": "4%"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
-    "question": {
-      "text": "A wire is cut into 4 pieces, which are put together by sides to obtain one condutor. If the original resistance of wire was R, the resistance of the bundle will be",
-      "image": ""
-    }
-  },
-  {
-    "exam_type": "MEDICAL",
     "subject": "physics",
+    "exam_code": 1405923268,
+    "question": {
+      "image": "",
+      "text": "A conducting wire is stretched to increase m length by 2%. What is the percentage change in its resistance?"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
     "answer": {
-      "correct": "c",
+      "d": {
+        "image": "",
+        "text": "$ r^2 $"
+      },
+      "correct": "d",
+      "a": {
+        "image": "",
+        "text": "$ \\frac{1}{r^2} $"
+      },
       "b": {
-        "text": "2%",
-        "image": ""
+        "image": "",
+        "text": "1/r"
       },
       "c": {
-        "text": "4%",
-        "image": ""
-      },
-      "a": {
-        "text": "1%",
-        "image": ""
-      },
-      "d": {
-        "text": "8%",
-        "image": ""
+        "image": "",
+        "text": "r"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
-    "question": {
-      "text": "A conducting wire is stretched to increase m length by 2%. What is the percentage change in its resistance?",
-      "image": ""
-    }
-  },
-  {
-    "exam_type": "MEDICAL",
     "subject": "physics",
+    "exam_code": 1405923268,
+    "question": {
+      "image": "",
+      "text": "The magnetic moment of a current I carrying circular coil of radius r and number of turns n varies as"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
     "answer": {
-      "correct": "d",
+      "d": {
+        "image": "",
+        "text": "$ \\frac{V_O}{4} $"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "$ v_o $"
+      },
       "b": {
-        "text": "1/r",
-        "image": ""
+        "image": "",
+        "text": "$ 2V_o $"
       },
       "c": {
-        "text": "r",
-        "image": ""
-      },
-      "a": {
-        "text": "$ \\frac{1}{r^2} $",
-        "image": ""
-      },
-      "d": {
-        "text": "$ r^2 $",
-        "image": ""
+        "image": "",
+        "text": "$ \\frac{V_O}{2} $"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
-    "question": {
-      "text": "The magnetic moment of a current I carrying circular coil of radius r and number of turns n varies as",
-      "image": ""
-    }
-  },
-  {
-    "exam_type": "MEDICAL",
     "subject": "physics",
+    "exam_code": 1405923268,
+    "question": {
+      "image": "",
+      "text": "A source of light is placed at a distance of 1m from a photocell and the cut off potential is found to be $ v_o $. If the distance is doubled the cut off potential will be"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
     "answer": {
-      "correct": "a",
+      "d": {
+        "image": "",
+        "text": "$ \\frac{e^2}{2r^2} $"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "$ \\frac{e^2}{r^2} $"
+      },
       "b": {
-        "text": "$ 2V_o $",
-        "image": ""
+        "image": "",
+        "text": "$ \\frac{e^2}{2r} $"
       },
       "c": {
-        "text": "$ \\frac{V_O}{2} $",
-        "image": ""
-      },
-      "a": {
-        "text": "$ v_o $",
-        "image": ""
-      },
-      "d": {
-        "text": "$ \\frac{V_O}{4} $",
-        "image": ""
+        "image": "",
+        "text": "$ \\frac{e^2}{r} $"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
-    "question": {
-      "text": "A source of light is placed at a distance of 1m from a photocell and the cut off potential is found to be $ v_o $. If the distance is doubled the cut off potential will be",
-      "image": ""
-    }
-  },
-  {
-    "exam_type": "MEDICAL",
     "subject": "physics",
+    "exam_code": 1405923268,
+    "question": {
+      "image": "",
+      "text": "The K.E of the $ e^- $ in an orbit of radius r in H-atom is (e = electronic charge )"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
     "answer": {
-      "correct": "b",
+      "d": {
+        "image": "",
+        "text": "16/R"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "1/R"
+      },
       "b": {
-        "text": "$ \\frac{e^2}{2r} $",
-        "image": ""
+        "image": "",
+        "text": "4/R"
       },
       "c": {
-        "text": "$ \\frac{e^2}{r} $",
-        "image": ""
-      },
-      "a": {
-        "text": "$ \\frac{e^2}{r^2} $",
-        "image": ""
-      },
-      "d": {
-        "text": "$ \\frac{e^2}{2r^2} $",
-        "image": ""
+        "image": "",
+        "text": "9/R"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
-    "question": {
-      "text": "The K.E of the $ e^- $ in an orbit of radius r in H-atom is (e = electronic charge )",
-      "image": ""
-    }
-  },
-  {
-    "exam_type": "MEDICAL",
     "subject": "physics",
+    "exam_code": 1405923268,
+    "question": {
+      "image": "",
+      "text": "The series limit wavelength of the lyman series for the H-atom is given by"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
     "answer": {
-      "correct": "a",
+      "d": {
+        "image": "",
+        "text": "7μC, 1μC"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "4μC, 4μC"
+      },
       "b": {
-        "text": "4/R",
-        "image": ""
+        "image": "",
+        "text": "6μC, 2μC"
       },
       "c": {
-        "text": "9/R",
-        "image": ""
-      },
-      "a": {
-        "text": "1/R",
-        "image": ""
-      },
-      "d": {
-        "text": "16/R",
-        "image": ""
+        "image": "",
+        "text": "5μC, 3μC"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
-    "question": {
-      "text": "The series limit wavelength of the lyman series for the H-atom is given by",
-      "image": ""
-    }
-  },
-  {
-    "exam_type": "MEDICAL",
     "subject": "physics",
-    "answer": {
-      "correct": "b",
-      "b": {
-        "text": "6μC, 2μC",
-        "image": ""
-      },
-      "c": {
-        "text": "5μC, 3μC",
-        "image": ""
-      },
-      "a": {
-        "text": "4μC, 4μC",
-        "image": ""
-      },
-      "d": {
-        "text": "7μC, 1μC",
-        "image": ""
-      }
-    },
-    "marks": 1,
-    "exam_code": 1405858439,
+    "exam_code": 1405923268,
     "question": {
-      "text": "Two point charges are 3m apart and their combined charge is 8. The force of replusing between them is 0.012N charge are",
-      "image": ""
-    }
+      "image": "",
+      "text": "Two point charges are 3m apart and their combined charge is 8. The force of replusing between them is 0.012N charge are"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "chemistry",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "M/8"
+      },
       "correct": "c",
+      "a": {
+        "image": "",
+        "text": "M"
+      },
       "b": {
-        "text": "M/2",
-        "image": ""
+        "image": "",
+        "text": "M/2"
       },
       "c": {
-        "text": "M/5",
-        "image": ""
-      },
-      "a": {
-        "text": "M",
-        "image": ""
-      },
-      "d": {
-        "text": "M/8",
-        "image": ""
+        "image": "",
+        "text": "M/5"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "chemistry",
+    "exam_code": 1405923268,
     "question": {
-      "text": "If the molecular weight of $ KMnO_4 $ is M, then the equivalent weight of $ KMnO_4 $ in acidic medium would be:",
-      "image": ""
-    }
+      "image": "",
+      "text": "If the molecular weight of $ KMnO_4 $ is M, then the equivalent weight of $ KMnO_4 $ in acidic medium would be:"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "chemistry",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "$ \\sqrt\\frac{h}{\\pi} $"
+      },
       "correct": "a",
+      "a": {
+        "image": "",
+        "text": "$ \\frac{1}{2m}\\sqrt\\frac{h}{\\pi} $"
+      },
       "b": {
-        "text": "$ \\sqrt\\frac{h}{2\\pi} $",
-        "image": ""
+        "image": "",
+        "text": "$ \\sqrt\\frac{h}{2\\pi} $"
       },
       "c": {
-        "text": "$ \\frac{1}{m}\\sqrt\\frac{h}{\\pi} $",
-        "image": ""
-      },
-      "a": {
-        "text": "$ \\frac{1}{2m}\\sqrt\\frac{h}{\\pi} $",
-        "image": ""
-      },
-      "d": {
-        "text": "$ \\sqrt\\frac{h}{\\pi} $",
-        "image": ""
+        "image": "",
+        "text": "$ \\frac{1}{m}\\sqrt\\frac{h}{\\pi} $"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "chemistry",
+    "exam_code": 1405923268,
     "question": {
-      "text": "If the uncertainty in position and momentum are equal, the uncertainty in velocity is:",
-      "image": ""
-    }
+      "image": "",
+      "text": "If the uncertainty in position and momentum are equal, the uncertainty in velocity is:"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "chemistry",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "140"
+      },
       "correct": "d",
+      "a": {
+        "image": "",
+        "text": "144"
+      },
       "b": {
-        "text": "28",
-        "image": ""
+        "image": "",
+        "text": "28"
       },
       "c": {
-        "text": "100",
-        "image": ""
-      },
-      "a": {
-        "text": "144",
-        "image": ""
-      },
-      "d": {
-        "text": "140",
-        "image": ""
+        "image": "",
+        "text": "100"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "chemistry",
+    "exam_code": 1405923268,
     "question": {
-      "text": "If 20% $ N_2 $ is present in a compound, its molecular weight can be:",
-      "image": ""
-    }
+      "image": "",
+      "text": "If 20% $ N_2 $ is present in a compound, its molecular weight can be:"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "chemistry",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "$ frac {MW}{1} $"
+      },
       "correct": "c",
+      "a": {
+        "image": "",
+        "text": "$ frac  {MW}{2} $"
+      },
       "b": {
-        "text": "$ frac {MW}{3} $",
-        "image": ""
+        "image": "",
+        "text": "$ frac {MW}{3} $"
       },
       "c": {
-        "text": "$ frac {MW}{6} $",
-        "image": ""
-      },
-      "a": {
-        "text": "$ frac  {MW}{2} $",
-        "image": ""
-      },
-      "d": {
-        "text": "$ frac {MW}{1} $",
-        "image": ""
+        "image": "",
+        "text": "$ frac {MW}{6} $"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "chemistry",
+    "exam_code": 1405923268,
     "question": {
-      "text": "In standardization of $ Na_2S_2O_3 $ using $ K_2Cr_2O_7 $ by iodeometry, the eq. wt of $ K_2Cr_2O_7 $ is:",
-      "image": ""
-    }
+      "image": "",
+      "text": "In standardization of $ Na_2S_2O_3 $ using $ K_2Cr_2O_7 $ by iodeometry, the eq. wt of $ K_2Cr_2O_7 $ is:"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "chemistry",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "5.6g"
+      },
       "correct": "b",
+      "a": {
+        "image": "",
+        "text": "143.83g"
+      },
       "b": {
-        "text": "56g",
-        "image": ""
+        "image": "",
+        "text": "56g"
       },
       "c": {
-        "text": "14.4g",
-        "image": ""
-      },
-      "a": {
-        "text": "143.83g",
-        "image": ""
-      },
-      "d": {
-        "text": "5.6g",
-        "image": ""
+        "image": "",
+        "text": "14.4g"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "chemistry",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Equivalent weight of a metal is 18.67. When it reacts with chlorine the weight of metal which will form 162.51 gm of metal chloride is:",
-      "image": ""
-    }
+      "image": "",
+      "text": "Equivalent weight of a metal is 18.67. When it reacts with chlorine the weight of metal which will form 162.51 gm of metal chloride is:"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "chemistry",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "none"
+      },
       "correct": "a",
+      "a": {
+        "image": "",
+        "text": "remain constant"
+      },
       "b": {
-        "text": "became double",
-        "image": ""
+        "image": "",
+        "text": "became double"
       },
       "c": {
-        "text": "beome 1/4 th",
-        "image": ""
-      },
-      "a": {
-        "text": "remain constant",
-        "image": ""
-      },
-      "d": {
-        "text": "none",
-        "image": ""
+        "image": "",
+        "text": "beome 1/4 th"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "chemistry",
+    "exam_code": 1405923268,
     "question": {
-      "text": "On doubling P and V with constant temperaure, the equilibrium constant will:",
-      "image": ""
-    }
+      "image": "",
+      "text": "On doubling P and V with constant temperaure, the equilibrium constant will:"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "chemistry",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "f-electron"
+      },
       "correct": "d",
+      "a": {
+        "image": "",
+        "text": "S-electron"
+      },
       "b": {
-        "text": "p-electron",
-        "image": ""
+        "image": "",
+        "text": "p-electron"
       },
       "c": {
-        "text": "d-electron",
-        "image": ""
-      },
-      "a": {
-        "text": "S-electron",
-        "image": ""
-      },
-      "d": {
-        "text": "f-electron",
-        "image": ""
+        "image": "",
+        "text": "d-electron"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "chemistry",
+    "exam_code": 1405923268,
     "question": {
-      "text": "An electron having an Azimuthal quantum number l=3, is",
-      "image": ""
-    }
+      "image": "",
+      "text": "An electron having an Azimuthal quantum number l=3, is"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "chemistry",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "none"
+      },
       "correct": "c",
+      "a": {
+        "image": "",
+        "text": "69500 colulombs"
+      },
       "b": {
-        "text": "96500 coulomb",
-        "image": ""
+        "image": "",
+        "text": "96500 coulomb"
       },
       "c": {
-        "text": "96500 coulombs approx",
-        "image": ""
-      },
-      "a": {
-        "text": "69500 colulombs",
-        "image": ""
-      },
-      "d": {
-        "text": "none",
-        "image": ""
+        "image": "",
+        "text": "96500 coulombs approx"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "chemistry",
+    "exam_code": 1405923268,
     "question": {
-      "text": "One Faraday is equal to ",
-      "image": ""
-    }
+      "image": "",
+      "text": "One Faraday is equal to "
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "chemistry",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "$ CCl_4 $"
+      },
       "correct": "c",
+      "a": {
+        "image": "",
+        "text": "$ PCl_3 $"
+      },
       "b": {
-        "text": "$ NCl_3 $",
-        "image": ""
+        "image": "",
+        "text": "$ NCl_3 $"
       },
       "c": {
-        "text": "$ AlCl_3 $",
-        "image": ""
-      },
-      "a": {
-        "text": "$ PCl_3 $",
-        "image": ""
-      },
-      "d": {
-        "text": "$ CCl_4 $",
-        "image": ""
+        "image": "",
+        "text": "$ AlCl_3 $"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "chemistry",
+    "exam_code": 1405923268,
     "question": {
-      "text": "An example of Lewis acid is",
-      "image": ""
-    }
+      "image": "",
+      "text": "An example of Lewis acid is"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "chemistry",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "0.10 moles / L"
+      },
       "correct": "d",
+      "a": {
+        "image": "",
+        "text": "3.2 moles / L"
+      },
       "b": {
-        "text": "3.2 gm/L",
-        "image": ""
+        "image": "",
+        "text": "3.2 gm/L"
       },
       "c": {
-        "text": "1.00 moles / L",
-        "image": ""
-      },
-      "a": {
-        "text": "3.2 moles / L",
-        "image": ""
-      },
-      "d": {
-        "text": "0.10 moles / L",
-        "image": ""
+        "image": "",
+        "text": "1.00 moles / L"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "chemistry",
+    "exam_code": 1405923268,
     "question": {
-      "text": "The molar concentration of 32 gm $ O_2 $ in 10 l is",
-      "image": ""
-    }
+      "image": "",
+      "text": "The molar concentration of 32 gm $ O_2 $ in 10 l is"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "chemistry",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "3"
+      },
       "correct": "c",
+      "a": {
+        "image": "",
+        "text": "0"
+      },
       "b": {
-        "text": "2",
-        "image": ""
+        "image": "",
+        "text": "2"
       },
       "c": {
-        "text": "2",
-        "image": ""
-      },
-      "a": {
-        "text": "0",
-        "image": ""
-      },
-      "d": {
-        "text": "3",
-        "image": ""
+        "image": "",
+        "text": "2"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "chemistry",
+    "exam_code": 1405923268,
     "question": {
-      "text": "For a given reaction $ t_{1/2} = \\frac{1}{k \\alpha} $ the order of this reaction is",
-      "image": ""
-    }
+      "image": "",
+      "text": "For a given reaction $ t_{1/2} = \\frac{1}{k \\alpha} $ the order of this reaction is"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "chemistry",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "amalgams"
+      },
       "correct": "c",
+      "a": {
+        "image": "",
+        "text": "Chloride ores"
+      },
       "b": {
-        "text": "oxide ores",
-        "image": ""
+        "image": "",
+        "text": "oxide ores"
       },
       "c": {
-        "text": "sulphide ores",
-        "image": ""
-      },
-      "a": {
-        "text": "Chloride ores",
-        "image": ""
-      },
-      "d": {
-        "text": "amalgams",
-        "image": ""
+        "image": "",
+        "text": "sulphide ores"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "chemistry",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Froth floatation process is used for metallurgy of",
-      "image": ""
-    }
+      "image": "",
+      "text": "Froth floatation process is used for metallurgy of"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "chemistry",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "water vapour is released"
+      },
       "correct": "d",
+      "a": {
+        "image": "",
+        "text": "CO is released"
+      },
       "b": {
-        "text": "$ CO+CO_2 $ is released",
-        "image": ""
+        "image": "",
+        "text": "$ CO+CO_2 $ is released"
       },
       "c": {
-        "text": "$ CO_2 $ is released",
-        "image": ""
-      },
-      "a": {
-        "text": "CO is released",
-        "image": ""
-      },
-      "d": {
-        "text": "water vapour is released",
-        "image": ""
+        "image": "",
+        "text": "$ CO_2 $ is released"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "chemistry",
+    "exam_code": 1405923268,
     "question": {
-      "text": "When washing soda is heated,",
-      "image": ""
-    }
+      "image": "",
+      "text": "When washing soda is heated,"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "chemistry",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "is a metal"
+      },
       "correct": "c",
+      "a": {
+        "image": "",
+        "text": "has more atomic weight"
+      },
       "b": {
-        "text": "is more electronegative",
-        "image": ""
+        "image": "",
+        "text": "is more electronegative"
       },
       "c": {
-        "text": "is more electropositive",
-        "image": ""
-      },
-      "a": {
-        "text": "has more atomic weight",
-        "image": ""
-      },
-      "d": {
-        "text": "is a metal",
-        "image": ""
+        "image": "",
+        "text": "is more electropositive"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "chemistry",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Sodium reacts with water more vigorously than lithium because it:",
-      "image": ""
-    }
+      "image": "",
+      "text": "Sodium reacts with water more vigorously than lithium because it:"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "chemistry",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "none"
+      },
       "correct": "b",
+      "a": {
+        "image": "",
+        "text": "$ Cl_2 $ and $ SO_2 $"
+      },
       "b": {
-        "text": "$ Cl_2 $ and $ ClO_2 $",
-        "image": ""
+        "image": "",
+        "text": "$ Cl_2 $ and $ ClO_2 $"
       },
       "c": {
-        "text": "$ Cl_2 $ and $ CO $",
-        "image": ""
-      },
-      "a": {
-        "text": "$ Cl_2 $ and $ SO_2 $",
-        "image": ""
-      },
-      "d": {
-        "text": "none",
-        "image": ""
+        "image": "",
+        "text": "$ Cl_2 $ and $ CO $"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "chemistry",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Euchlorine is a mixture of",
-      "image": ""
-    }
+      "image": "",
+      "text": "Euchlorine is a mixture of"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "chemistry",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "calcium hydroxide"
+      },
       "correct": "d",
+      "a": {
+        "image": "",
+        "text": "Calcium bicarbonate"
+      },
       "b": {
-        "text": "Sodium bicarbonate",
-        "image": ""
+        "image": "",
+        "text": "Sodium bicarbonate"
       },
       "c": {
-        "text": "Potash alum",
-        "image": ""
-      },
-      "a": {
-        "text": "Calcium bicarbonate",
-        "image": ""
-      },
-      "d": {
-        "text": "calcium hydroxide",
-        "image": ""
+        "image": "",
+        "text": "Potash alum"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "chemistry",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Water softening by Clarke's process uses:",
-      "image": ""
-    }
+      "image": "",
+      "text": "Water softening by Clarke's process uses:"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "chemistry",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "electrolytically"
+      },
       "correct": "b",
+      "a": {
+        "image": "",
+        "text": "$ treatment with HNO_3 $"
+      },
       "b": {
-        "text": "distillation in vacuum",
-        "image": ""
+        "image": "",
+        "text": "distillation in vacuum"
       },
       "c": {
-        "text": "solidifying",
-        "image": ""
-      },
-      "a": {
-        "text": "$ treatment with HNO_3 $",
-        "image": ""
-      },
-      "d": {
-        "text": "electrolytically",
-        "image": ""
+        "image": "",
+        "text": "solidifying"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "chemistry",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Mercury is purified by",
-      "image": ""
-    }
+      "image": "",
+      "text": "Mercury is purified by"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "chemistry",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "Aqueous bromine solution"
+      },
       "correct": "a",
+      "a": {
+        "image": "",
+        "text": "Alkaline permanganate solution"
+      },
       "b": {
-        "text": "Acidified permanganate solution",
-        "image": ""
+        "image": "",
+        "text": "Acidified permanganate solution"
       },
       "c": {
-        "text": "Neutral permanganate solution",
-        "image": ""
-      },
-      "a": {
-        "text": "Alkaline permanganate solution",
-        "image": ""
-      },
-      "d": {
-        "text": "Aqueous bromine solution",
-        "image": ""
+        "image": "",
+        "text": "Neutral permanganate solution"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "chemistry",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Baeyer's reagent is",
-      "image": ""
-    }
+      "image": "",
+      "text": "Baeyer's reagent is"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "chemistry",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "ammonical cuprous chloride solution"
+      },
       "correct": "d",
+      "a": {
+        "image": "",
+        "text": "$ conc. H_2SO_4 $"
+      },
       "b": {
-        "text": "$ Br_2 $ in $ CCl_4 $",
-        "image": ""
+        "image": "",
+        "text": "$ Br_2 $ in $ CCl_4 $"
       },
       "c": {
-        "text": "$ dil. KMnO_4 $",
-        "image": ""
-      },
-      "a": {
-        "text": "$ conc. H_2SO_4 $",
-        "image": ""
-      },
-      "d": {
-        "text": "ammonical cuprous chloride solution",
-        "image": ""
+        "image": "",
+        "text": "$ dil. KMnO_4 $"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "chemistry",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Ethene and Ethyne can be distinguished by",
-      "image": ""
-    }
+      "image": "",
+      "text": "Ethene and Ethyne can be distinguished by"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "chemistry",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "electrovalent"
+      },
       "correct": "b",
+      "a": {
+        "image": "",
+        "text": "More ionization"
+      },
       "b": {
-        "text": "less ionization",
-        "image": ""
+        "image": "",
+        "text": "less ionization"
       },
       "c": {
-        "text": "covalent bond",
-        "image": ""
-      },
-      "a": {
-        "text": "More ionization",
-        "image": ""
-      },
-      "d": {
-        "text": "electrovalent",
-        "image": ""
+        "image": "",
+        "text": "covalent bond"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "chemistry",
+    "exam_code": 1405923268,
     "question": {
-      "text": "$ CH_3COOH $ is weaker acid then $ H_2SO_4 $. It is due to:",
-      "image": ""
-    }
+      "image": "",
+      "text": "$ CH_3COOH $ is weaker acid then $ H_2SO_4 $. It is due to:"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "chemistry",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "$ Zn-Hg / HCl $"
+      },
       "correct": "d",
+      "a": {
+        "image": "",
+        "text": "$ H_2/Pt $"
+      },
       "b": {
-        "text": "$ LiAlH_4 $",
-        "image": ""
+        "image": "",
+        "text": "$ LiAlH_4 $"
       },
       "c": {
-        "text": "$ K_2Cr_2O_7 / H_2SO_4 $",
-        "image": ""
-      },
-      "a": {
-        "text": "$ H_2/Pt $",
-        "image": ""
-      },
-      "d": {
-        "text": "$ Zn-Hg / HCl $",
-        "image": ""
+        "image": "",
+        "text": "$ K_2Cr_2O_7 / H_2SO_4 $"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "chemistry",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Which of the following converts carbonyl compounds into hydrocarbons ?",
-      "image": ""
-    }
+      "image": "",
+      "text": "Which of the following converts carbonyl compounds into hydrocarbons ?"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "chemistry",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "$ CH_3OCH_3 $"
+      },
       "correct": "b",
+      "a": {
+        "image": "",
+        "text": "$ C_2H_5NH_2 $"
+      },
       "b": {
-        "text": "$ CH_3CHO $",
-        "image": ""
+        "image": "",
+        "text": "$ CH_3CHO $"
       },
       "c": {
-        "text": "$ C_2H_2OC_2H_5 $",
-        "image": ""
-      },
-      "a": {
-        "text": "$ C_2H_5NH_2 $",
-        "image": ""
-      },
-      "d": {
-        "text": "$ CH_3OCH_3 $",
-        "image": ""
+        "image": "",
+        "text": "$ C_2H_2OC_2H_5 $"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "chemistry",
+    "exam_code": 1405923268,
     "question": {
-      "text": "When excess ethanol is passed over platinised asbestos is excess air, the compound formed is",
-      "image": ""
-    }
+      "image": "",
+      "text": "When excess ethanol is passed over platinised asbestos is excess air, the compound formed is"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "chemistry",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "Propyl bromide"
+      },
       "correct": "d",
+      "a": {
+        "image": "",
+        "text": "Methyl iodide"
+      },
       "b": {
-        "text": "Ethyl idodie",
-        "image": ""
+        "image": "",
+        "text": "Ethyl idodie"
       },
       "c": {
-        "text": "Ethyl bromide",
-        "image": ""
-      },
-      "a": {
-        "text": "Methyl iodide",
-        "image": ""
-      },
-      "d": {
-        "text": "Propyl bromide",
-        "image": ""
+        "image": "",
+        "text": "Ethyl bromide"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "chemistry",
+    "exam_code": 1405923268,
     "question": {
-      "text": "An alkyl halide forms a Grignard reagent which reacts with water to form propane. The original alkyl halide is:",
-      "image": ""
-    }
+      "image": "",
+      "text": "An alkyl halide forms a Grignard reagent which reacts with water to form propane. The original alkyl halide is:"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "chemistry",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "Acetal dehyde"
+      },
       "correct": "a",
+      "a": {
+        "image": "",
+        "text": "Phenol"
+      },
       "b": {
-        "text": "Carboxylic acid",
-        "image": ""
+        "image": "",
+        "text": "Carboxylic acid"
       },
       "c": {
-        "text": "Methanol",
-        "image": ""
-      },
-      "a": {
-        "text": "Phenol",
-        "image": ""
-      },
-      "d": {
-        "text": "Acetal dehyde",
-        "image": ""
+        "image": "",
+        "text": "Methanol"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "chemistry",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Aromatic acidic hydrocarbon among the following is:",
-      "image": ""
-    }
+      "image": "",
+      "text": "Aromatic acidic hydrocarbon among the following is:"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "chemistry",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "$ CH_3COOH $"
+      },
       "correct": "a",
+      "a": {
+        "image": "",
+        "text": "$ CH_3CHO $"
+      },
       "b": {
-        "text": "$ CH_3COCH_3 $",
-        "image": ""
+        "image": "",
+        "text": "$ CH_3COCH_3 $"
       },
       "c": {
-        "text": "$ C_3H_4$",
-        "image": ""
-      },
-      "a": {
-        "text": "$ CH_3CHO $",
-        "image": ""
-      },
-      "d": {
-        "text": "$ CH_3COOH $",
-        "image": ""
+        "image": "",
+        "text": "$ C_3H_4$"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "chemistry",
+    "exam_code": 1405923268,
     "question": {
-      "text": "When ethanol is passed over red hot copper at $ 300^o $ C, the product formed is",
-      "image": ""
-    }
+      "image": "",
+      "text": "When ethanol is passed over red hot copper at $ 300^o $ C, the product formed is"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "chemistry",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "1M solution of glucose"
+      },
       "correct": "c",
+      "a": {
+        "image": "",
+        "text": "6% solution of glucose"
+      },
       "b": {
-        "text": "25% solution of glucose",
-        "image": ""
+        "image": "",
+        "text": "25% solution of glucose"
       },
       "c": {
-        "text": "0.1 M solution of glucose",
-        "image": ""
-      },
-      "a": {
-        "text": "6% solution of glucose",
-        "image": ""
-      },
-      "d": {
-        "text": "1M solution of glucose",
-        "image": ""
+        "image": "",
+        "text": "0.1 M solution of glucose"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
-    "question": {
-      "text": "A 6% solution of urea is isotonic with",
-      "image": ""
-    }
-  },
-  {
-    "exam_type": "MEDICAL",
     "subject": "chemistry",
+    "exam_code": 1405923268,
+    "question": {
+      "image": "",
+      "text": "A 6% solution of urea is isotonic with"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
     "answer": {
+      "d": {
+        "image": "",
+        "text": "$ H_2SO_4 $"
+      },
       "correct": "b",
+      "a": {
+        "image": "",
+        "text": "$ H_2S_2O_5 $"
+      },
       "b": {
-        "text": "$ H_2S_2O_8 $",
-        "image": ""
+        "image": "",
+        "text": "$ H_2S_2O_8 $"
       },
       "c": {
-        "text": "$ H_2SO_5 $",
-        "image": ""
-      },
-      "a": {
-        "text": "$ H_2S_2O_5 $",
-        "image": ""
-      },
-      "d": {
-        "text": "$ H_2SO_4 $",
-        "image": ""
+        "image": "",
+        "text": "$ H_2SO_5 $"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
-    "question": {
-      "text": "Marshall's acid is",
-      "image": ""
-    }
-  },
-  {
-    "exam_type": "MEDICAL",
     "subject": "chemistry",
+    "exam_code": 1405923268,
+    "question": {
+      "image": "",
+      "text": "Marshall's acid is"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
     "answer": {
+      "d": {
+        "image": "",
+        "text": "Reduction with CO"
+      },
       "correct": "d",
+      "a": {
+        "image": "",
+        "text": "reduction with Al"
+      },
       "b": {
-        "text": "Calcium",
-        "image": ""
+        "image": "",
+        "text": "Calcium"
       },
       "c": {
-        "text": "reduction with $ H_2 $",
-        "image": ""
-      },
-      "a": {
-        "text": "reduction with Al",
-        "image": ""
-      },
-      "d": {
-        "text": "Reduction with CO",
-        "image": ""
+        "image": "",
+        "text": "reduction with $ H_2 $"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
-    "question": {
-      "text": "Iron is obtained on a large scale from $ Fe_2O_3 $ by:",
-      "image": ""
-    }
-  },
-  {
-    "exam_type": "MEDICAL",
     "subject": "chemistry",
+    "exam_code": 1405923268,
+    "question": {
+      "image": "",
+      "text": "Iron is obtained on a large scale from $ Fe_2O_3 $ by:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
     "answer": {
+      "d": {
+        "image": "",
+        "text": "5"
+      },
       "correct": "a",
+      "a": {
+        "image": "",
+        "text": "2"
+      },
       "b": {
-        "text": "3",
-        "image": ""
+        "image": "",
+        "text": "3"
       },
       "c": {
-        "text": "4",
-        "image": ""
-      },
-      "a": {
-        "text": "2",
-        "image": ""
-      },
-      "d": {
-        "text": "5",
-        "image": ""
+        "image": "",
+        "text": "4"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
-    "question": {
-      "text": "Total no. of isomers of $ C_3H_7Cl $",
-      "image": ""
-    }
-  },
-  {
-    "exam_type": "MEDICAL",
     "subject": "chemistry",
+    "exam_code": 1405923268,
+    "question": {
+      "image": "",
+      "text": "Total no. of isomers of $ C_3H_7Cl $"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
     "answer": {
+      "d": {
+        "image": "",
+        "text": "Heavy oil"
+      },
       "correct": "a",
+      "a": {
+        "image": "",
+        "text": "Light oil"
+      },
       "b": {
-        "text": "Middle oil",
-        "image": ""
+        "image": "",
+        "text": "Middle oil"
       },
       "c": {
-        "text": "Athracene oil",
-        "image": ""
-      },
-      "a": {
-        "text": "Light oil",
-        "image": ""
-      },
-      "d": {
-        "text": "Heavy oil",
-        "image": ""
+        "image": "",
+        "text": "Athracene oil"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "chemistry",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Benzene is obtained by fractional distillation of:",
-      "image": ""
-    }
+      "image": "",
+      "text": "Benzene is obtained by fractional distillation of:"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "botany",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "no branching"
+      },
       "correct": "d",
+      "a": {
+        "image": "",
+        "text": "true branching"
+      },
       "b": {
-        "text": "false branching",
-        "image": ""
+        "image": "",
+        "text": "false branching"
       },
       "c": {
-        "text": "multiple branching",
-        "image": ""
-      },
-      "a": {
-        "text": "true branching",
-        "image": ""
-      },
-      "d": {
-        "text": "no branching",
-        "image": ""
+        "image": "",
+        "text": "multiple branching"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "botany",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Filament of spirogyra has",
-      "image": ""
-    }
+      "image": "",
+      "text": "Filament of spirogyra has"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "botany",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "All"
+      },
       "correct": "d",
+      "a": {
+        "image": "",
+        "text": "Protoplasm"
+      },
       "b": {
-        "text": "Cell wall",
-        "image": ""
+        "image": "",
+        "text": "Cell wall"
       },
       "c": {
-        "text": "Growth",
-        "image": ""
-      },
-      "a": {
-        "text": "Protoplasm",
-        "image": ""
-      },
-      "d": {
-        "text": "All",
-        "image": ""
+        "image": "",
+        "text": "Growth"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "botany",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Virus lack",
-      "image": ""
-    }
+      "image": "",
+      "text": "Virus lack"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "botany",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "9 celled"
+      },
       "correct": "b",
+      "a": {
+        "image": "",
+        "text": "6 celled"
+      },
       "b": {
-        "text": "7 celled",
-        "image": ""
+        "image": "",
+        "text": "7 celled"
       },
       "c": {
-        "text": "8 celled",
-        "image": ""
-      },
-      "a": {
-        "text": "6 celled",
-        "image": ""
-      },
-      "d": {
-        "text": "9 celled",
-        "image": ""
+        "image": "",
+        "text": "8 celled"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "botany",
+    "exam_code": 1405923268,
     "question": {
-      "text": "A mature angiosperm ovule is",
-      "image": ""
-    }
+      "image": "",
+      "text": "A mature angiosperm ovule is"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "botany",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "Chlorophyceae"
+      },
       "correct": "c",
+      "a": {
+        "image": "",
+        "text": "Rhodophyceae"
+      },
       "b": {
-        "text": "Phaeophyceae",
-        "image": ""
+        "image": "",
+        "text": "Phaeophyceae"
       },
       "c": {
-        "text": "Cyanophyceae",
-        "image": ""
-      },
-      "a": {
-        "text": "Rhodophyceae",
-        "image": ""
-      },
-      "d": {
-        "text": "Chlorophyceae",
-        "image": ""
+        "image": "",
+        "text": "Cyanophyceae"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "botany",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Algae found in thermal springs belongs to",
-      "image": ""
-    }
+      "image": "",
+      "text": "Algae found in thermal springs belongs to"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "botany",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "none"
+      },
       "correct": "a",
+      "a": {
+        "image": "",
+        "text": "can survive only in absence of living host"
+      },
       "b": {
-        "text": "normally parasite but can live as saprophyte",
-        "image": ""
+        "image": "",
+        "text": "normally parasite but can live as saprophyte"
       },
       "c": {
-        "text": "can survive in absense of dead host",
-        "image": ""
-      },
-      "a": {
-        "text": "can survive only in absence of living host",
-        "image": ""
-      },
-      "d": {
-        "text": "none",
-        "image": ""
+        "image": "",
+        "text": "can survive in absense of dead host"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "botany",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Obligate parasites are those which",
-      "image": ""
-    }
+      "image": "",
+      "text": "Obligate parasites are those which"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "botany",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "none"
+      },
       "correct": "c",
+      "a": {
+        "image": "",
+        "text": "Mucor"
+      },
       "b": {
-        "text": "rhizopus",
-        "image": ""
+        "image": "",
+        "text": "rhizopus"
       },
       "c": {
-        "text": "Saccharomyces",
-        "image": ""
-      },
-      "a": {
-        "text": "Mucor",
-        "image": ""
-      },
-      "d": {
-        "text": "none",
-        "image": ""
+        "image": "",
+        "text": "Saccharomyces"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "botany",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Fungus without mycelium is:",
-      "image": ""
-    }
+      "image": "",
+      "text": "Fungus without mycelium is:"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "botany",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "proteins"
+      },
       "correct": "b",
+      "a": {
+        "image": "",
+        "text": "sugar"
+      },
       "b": {
-        "text": "riboflavin",
-        "image": ""
+        "image": "",
+        "text": "riboflavin"
       },
       "c": {
-        "text": "vitamin c",
-        "image": ""
-      },
-      "a": {
-        "text": "sugar",
-        "image": ""
-      },
-      "d": {
-        "text": "proteins",
-        "image": ""
+        "image": "",
+        "text": "vitamin c"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "botany",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Yeast cells are important source of",
-      "image": ""
-    }
+      "image": "",
+      "text": "Yeast cells are important source of"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "botany",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "mitochondria"
+      },
       "correct": "b",
+      "a": {
+        "image": "",
+        "text": "cytoplasm"
+      },
       "b": {
-        "text": "chloroplast",
-        "image": ""
+        "image": "",
+        "text": "chloroplast"
       },
       "c": {
-        "text": "nucleus",
-        "image": ""
-      },
-      "a": {
-        "text": "cytoplasm",
-        "image": ""
-      },
-      "d": {
-        "text": "mitochondria",
-        "image": ""
+        "image": "",
+        "text": "nucleus"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "botany",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Pyrenoids are found in algae in",
-      "image": ""
-    }
+      "image": "",
+      "text": "Pyrenoids are found in algae in"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "botany",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "sexual reproduction"
+      },
       "correct": "c",
+      "a": {
+        "image": "",
+        "text": "micropropagation"
+      },
       "b": {
-        "text": "macropropagation",
-        "image": ""
+        "image": "",
+        "text": "macropropagation"
       },
       "c": {
-        "text": "vegetative propagation",
-        "image": ""
-      },
-      "a": {
-        "text": "micropropagation",
-        "image": ""
-      },
-      "d": {
-        "text": "sexual reproduction",
-        "image": ""
+        "image": "",
+        "text": "vegetative propagation"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "botany",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Binary fission in is a mode of:",
-      "image": ""
-    }
+      "image": "",
+      "text": "Binary fission in is a mode of:"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "botany",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "none"
+      },
       "correct": "a",
+      "a": {
+        "image": "",
+        "text": "producers"
+      },
       "b": {
-        "text": "consumers",
-        "image": ""
+        "image": "",
+        "text": "consumers"
       },
       "c": {
-        "text": "decomposers",
-        "image": ""
-      },
-      "a": {
-        "text": "producers",
-        "image": ""
-      },
-      "d": {
-        "text": "none",
-        "image": ""
+        "image": "",
+        "text": "decomposers"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "botany",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Cyanobactera are:",
-      "image": ""
-    }
+      "image": "",
+      "text": "Cyanobactera are:"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "botany",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "Bacterium"
+      },
       "correct": "b",
+      "a": {
+        "image": "",
+        "text": "Antibacterial"
+      },
       "b": {
-        "text": "Antiviral",
-        "image": ""
+        "image": "",
+        "text": "Antiviral"
       },
       "c": {
-        "text": "Anti animal cell",
-        "image": ""
-      },
-      "a": {
-        "text": "Antibacterial",
-        "image": ""
-      },
-      "d": {
-        "text": "Bacterium",
-        "image": ""
+        "image": "",
+        "text": "Anti animal cell"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "botany",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Interferon is:",
-      "image": ""
-    }
+      "image": "",
+      "text": "Interferon is:"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "botany",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "changed if immature"
+      },
       "correct": "b",
+      "a": {
+        "image": "",
+        "text": "changed"
+      },
       "b": {
-        "text": "constant",
-        "image": ""
+        "image": "",
+        "text": "constant"
       },
       "c": {
-        "text": "changed if mature",
-        "image": ""
-      },
-      "a": {
-        "text": "changed",
-        "image": ""
-      },
-      "d": {
-        "text": "changed if immature",
-        "image": ""
+        "image": "",
+        "text": "changed if mature"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "botany",
+    "exam_code": 1405923268,
     "question": {
-      "text": "During mitosis, number of chromosome gets",
-      "image": ""
-    }
+      "image": "",
+      "text": "During mitosis, number of chromosome gets"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "botany",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "40"
+      },
       "correct": "b",
+      "a": {
+        "image": "",
+        "text": "10"
+      },
       "b": {
-        "text": "20",
-        "image": ""
+        "image": "",
+        "text": "20"
       },
       "c": {
-        "text": "30",
-        "image": ""
-      },
-      "a": {
-        "text": "10",
-        "image": ""
-      },
-      "d": {
-        "text": "40",
-        "image": ""
+        "image": "",
+        "text": "30"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "botany",
+    "exam_code": 1405923268,
     "question": {
-      "text": "What will be the gematic chromosome number of cell if somatic cell has 40 chromosomes?",
-      "image": ""
-    }
+      "image": "",
+      "text": "What will be the gematic chromosome number of cell if somatic cell has 40 chromosomes?"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "botany",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "$ 1NADPH_2 $"
+      },
       "correct": "d",
+      "a": {
+        "image": "",
+        "text": "2ATP"
+      },
       "b": {
-        "text": "1ATP",
-        "image": ""
+        "image": "",
+        "text": "1ATP"
       },
       "c": {
-        "text": "3ATP",
-        "image": ""
-      },
-      "a": {
-        "text": "2ATP",
-        "image": ""
-      },
-      "d": {
-        "text": "$ 1NADPH_2 $",
-        "image": ""
+        "image": "",
+        "text": "3ATP"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "botany",
+    "exam_code": 1405923268,
     "question": {
-      "text": "During alcoholic fermentation, acetaldehyde is converted into ethyl alcohol by use of",
-      "image": ""
-    }
+      "image": "",
+      "text": "During alcoholic fermentation, acetaldehyde is converted into ethyl alcohol by use of"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "botany",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "high water in soil"
+      },
       "correct": "b",
+      "a": {
+        "image": "",
+        "text": "low temperature, high humidity"
+      },
       "b": {
-        "text": "high temperature, low humidity",
-        "image": ""
+        "image": "",
+        "text": "high temperature, low humidity"
       },
       "c": {
-        "text": "high humidity",
-        "image": ""
-      },
-      "a": {
-        "text": "low temperature, high humidity",
-        "image": ""
-      },
-      "d": {
-        "text": "high water in soil",
-        "image": ""
+        "image": "",
+        "text": "high humidity"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "botany",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Transpiration is high during:",
-      "image": ""
-    }
+      "image": "",
+      "text": "Transpiration is high during:"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "botany",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "8"
+      },
       "correct": "a",
+      "a": {
+        "image": "",
+        "text": "5"
+      },
       "b": {
-        "text": "6",
-        "image": ""
+        "image": "",
+        "text": "6"
       },
       "c": {
-        "text": "16",
-        "image": ""
-      },
-      "a": {
-        "text": "5",
-        "image": ""
-      },
-      "d": {
-        "text": "8",
-        "image": ""
+        "image": "",
+        "text": "16"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "botany",
+    "exam_code": 1405923268,
     "question": {
-      "text": "How many time does a simple cell divide mitotically to from 32 cells?",
-      "image": ""
-    }
+      "image": "",
+      "text": "How many time does a simple cell divide mitotically to from 32 cells?"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "botany",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "vessels"
+      },
       "correct": "a",
+      "a": {
+        "image": "",
+        "text": "cambial activity"
+      },
       "b": {
-        "text": "xylem",
-        "image": ""
+        "image": "",
+        "text": "xylem"
       },
       "c": {
-        "text": "pericyle",
-        "image": ""
-      },
-      "a": {
-        "text": "cambial activity",
-        "image": ""
-      },
-      "d": {
-        "text": "vessels",
-        "image": ""
+        "image": "",
+        "text": "pericyle"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "botany",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Pitch and cortex is formed due to:",
-      "image": ""
-    }
+      "image": "",
+      "text": "Pitch and cortex is formed due to:"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "botany",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "Solanaceae"
+      },
       "correct": "a",
+      "a": {
+        "image": "",
+        "text": "Crucifere"
+      },
       "b": {
-        "text": "Compositae",
-        "image": ""
+        "image": "",
+        "text": "Compositae"
       },
       "c": {
-        "text": "Liliceae",
-        "image": ""
-      },
-      "a": {
-        "text": "Crucifere",
-        "image": ""
-      },
-      "d": {
-        "text": "Solanaceae",
-        "image": ""
+        "image": "",
+        "text": "Liliceae"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "botany",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Replum develops later in ovary of:",
-      "image": ""
-    }
+      "image": "",
+      "text": "Replum develops later in ovary of:"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "botany",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "carrot root"
+      },
       "correct": "c",
+      "a": {
+        "image": "",
+        "text": "sugarcane"
+      },
       "b": {
-        "text": "potato root",
-        "image": ""
+        "image": "",
+        "text": "potato root"
       },
       "c": {
-        "text": "beet root",
-        "image": ""
-      },
-      "a": {
-        "text": "sugarcane",
-        "image": ""
-      },
-      "d": {
-        "text": "carrot root",
-        "image": ""
+        "image": "",
+        "text": "beet root"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
-    "question": {
-      "text": "Red root is another name of",
-      "image": ""
-    }
-  },
-  {
-    "exam_type": "MEDICAL",
     "subject": "botany",
+    "exam_code": 1405923268,
+    "question": {
+      "image": "",
+      "text": "Red root is another name of"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
     "answer": {
+      "d": {
+        "image": "",
+        "text": "It is a part of the plant"
+      },
       "correct": "a",
+      "a": {
+        "image": "",
+        "text": "it arises in the axil of a leaf"
+      },
       "b": {
-        "text": "It looks like a branch",
-        "image": ""
+        "image": "",
+        "text": "It looks like a branch"
       },
       "c": {
-        "text": "It is hard, straight pointed structure",
-        "image": ""
-      },
-      "a": {
-        "text": "it arises in the axil of a leaf",
-        "image": ""
-      },
-      "d": {
-        "text": "It is a part of the plant",
-        "image": ""
+        "image": "",
+        "text": "It is hard, straight pointed structure"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "botany",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Thorn is modified branch because:",
-      "image": ""
-    }
+      "image": "",
+      "text": "Thorn is modified branch because:"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "zoology",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "Medulla"
+      },
       "correct": "d",
+      "a": {
+        "image": "",
+        "text": "Pons varoli"
+      },
       "b": {
-        "text": "Cerebellum",
-        "image": ""
+        "image": "",
+        "text": "Cerebellum"
       },
       "c": {
-        "text": "Mid brain oblongata",
-        "image": ""
-      },
-      "a": {
-        "text": "Pons varoli",
-        "image": ""
-      },
-      "d": {
-        "text": "Medulla",
-        "image": ""
+        "image": "",
+        "text": "Mid brain oblongata"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "zoology",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Vomiting centre is present in:",
-      "image": ""
-    }
+      "image": "",
+      "text": "Vomiting centre is present in:"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "zoology",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "duodenal"
+      },
       "correct": "d",
+      "a": {
+        "image": "",
+        "text": "colon"
+      },
       "b": {
-        "text": "stomach",
-        "image": ""
+        "image": "",
+        "text": "stomach"
       },
       "c": {
-        "text": "oesophagus submucosa",
-        "image": ""
-      },
-      "a": {
-        "text": "colon",
-        "image": ""
-      },
-      "d": {
-        "text": "duodenal",
-        "image": ""
+        "image": "",
+        "text": "oesophagus submucosa"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "zoology",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Brunner's gland are found inside:",
-      "image": ""
-    }
+      "image": "",
+      "text": "Brunner's gland are found inside:"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "zoology",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "occulomotor, abducens and spinal accessory"
+      },
       "correct": "d",
+      "a": {
+        "image": "",
+        "text": "optic, facial and spinal nerve"
+      },
       "b": {
-        "text": "occulomotor, trigerminal and spinal",
-        "image": ""
+        "image": "",
+        "text": "occulomotor, trigerminal and spinal"
       },
       "c": {
-        "text": "trigerminal, abducens and vagus",
-        "image": ""
-      },
-      "a": {
-        "text": "optic, facial and spinal nerve",
-        "image": ""
-      },
-      "d": {
-        "text": "occulomotor, abducens and spinal accessory",
-        "image": ""
+        "image": "",
+        "text": "trigerminal, abducens and vagus"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "zoology",
+    "exam_code": 1405923268,
     "question": {
-      "text": "The 3rd, 6th and 11th cranial nerves are:",
-      "image": ""
-    }
+      "image": "",
+      "text": "The 3rd, 6th and 11th cranial nerves are:"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "zoology",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "nephron"
+      },
       "correct": "d",
+      "a": {
+        "image": "",
+        "text": "Lung"
+      },
       "b": {
-        "text": "Liver",
-        "image": ""
+        "image": "",
+        "text": "Liver"
       },
       "c": {
-        "text": "neuron",
-        "image": ""
-      },
-      "a": {
-        "text": "Lung",
-        "image": ""
-      },
-      "d": {
-        "text": "nephron",
-        "image": ""
+        "image": "",
+        "text": "neuron"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "zoology",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Loop of Henle is found in:",
-      "image": ""
-    }
+      "image": "",
+      "text": "Loop of Henle is found in:"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "zoology",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "merozoites"
+      },
       "correct": "b",
+      "a": {
+        "image": "",
+        "text": "trophozoite"
+      },
       "b": {
-        "text": "microgametocyte",
-        "image": ""
+        "image": "",
+        "text": "microgametocyte"
       },
       "c": {
-        "text": "macrogametocyte",
-        "image": ""
-      },
-      "a": {
-        "text": "trophozoite",
-        "image": ""
-      },
-      "d": {
-        "text": "merozoites",
-        "image": ""
+        "image": "",
+        "text": "macrogametocyte"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "zoology",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Ex-flagellation in the life cycle of plasmodium occurs in:",
-      "image": ""
-    }
+      "image": "",
+      "text": "Ex-flagellation in the life cycle of plasmodium occurs in:"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "zoology",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "plasma membrane"
+      },
       "correct": "a",
+      "a": {
+        "image": "",
+        "text": "Pellicle"
+      },
       "b": {
-        "text": "Cuticle",
-        "image": ""
+        "image": "",
+        "text": "Cuticle"
       },
       "c": {
-        "text": "Plasmalemma",
-        "image": ""
-      },
-      "a": {
-        "text": "Pellicle",
-        "image": ""
-      },
-      "d": {
-        "text": "plasma membrane",
-        "image": ""
+        "image": "",
+        "text": "Plasmalemma"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "zoology",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Outer covering of Paramecium is known as",
-      "image": ""
-    }
+      "image": "",
+      "text": "Outer covering of Paramecium is known as"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "zoology",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "12 and 16"
+      },
       "correct": "a",
+      "a": {
+        "image": "",
+        "text": "12 and 13"
+      },
       "b": {
-        "text": "13 and 14",
-        "image": ""
+        "image": "",
+        "text": "13 and 14"
       },
       "c": {
-        "text": "11 and 12",
-        "image": ""
-      },
-      "a": {
-        "text": "12 and 13",
-        "image": ""
-      },
-      "d": {
-        "text": "12 and 16",
-        "image": ""
+        "image": "",
+        "text": "11 and 12"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "zoology",
+    "exam_code": 1405923268,
     "question": {
-      "text": "In earthworm, ovaries attached to septa between segment",
-      "image": ""
-    }
+      "image": "",
+      "text": "In earthworm, ovaries attached to septa between segment"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "zoology",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "dehydration"
+      },
       "correct": "c",
+      "a": {
+        "image": "",
+        "text": "starvation"
+      },
       "b": {
-        "text": "intoxication",
-        "image": ""
+        "image": "",
+        "text": "intoxication"
       },
       "c": {
-        "text": "asphyxia",
-        "image": ""
-      },
-      "a": {
-        "text": "starvation",
-        "image": ""
-      },
-      "d": {
-        "text": "dehydration",
-        "image": ""
+        "image": "",
+        "text": "asphyxia"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "zoology",
+    "exam_code": 1405923268,
     "question": {
-      "text": "If the skin of earthworm becomes dry, it dies due to",
-      "image": ""
-    }
+      "image": "",
+      "text": "If the skin of earthworm becomes dry, it dies due to"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "zoology",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "cocoon formation takes place"
+      },
       "correct": "a",
+      "a": {
+        "image": "",
+        "text": "sperms mature earlier than ova"
+      },
       "b": {
-        "text": "fertilization is external",
-        "image": ""
+        "image": "",
+        "text": "fertilization is external"
       },
       "c": {
-        "text": "ova mature earlier than sperms",
-        "image": ""
-      },
-      "a": {
-        "text": "sperms mature earlier than ova",
-        "image": ""
-      },
-      "d": {
-        "text": "cocoon formation takes place",
-        "image": ""
+        "image": "",
+        "text": "ova mature earlier than sperms"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "zoology",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Self-fertilization does not occur in earthworm because:",
-      "image": ""
-    }
+      "image": "",
+      "text": "Self-fertilization does not occur in earthworm because:"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "zoology",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "thigmotaxis"
+      },
       "correct": "d",
+      "a": {
+        "image": "",
+        "text": "phototaxis"
+      },
       "b": {
-        "text": "thermotaxis",
-        "image": ""
+        "image": "",
+        "text": "thermotaxis"
       },
       "c": {
-        "text": "hydrotaxis",
-        "image": ""
-      },
-      "a": {
-        "text": "phototaxis",
-        "image": ""
-      },
-      "d": {
-        "text": "thigmotaxis",
-        "image": ""
+        "image": "",
+        "text": "hydrotaxis"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "zoology",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Response of organisms to stimulus of touch is called:",
-      "image": ""
-    }
+      "image": "",
+      "text": "Response of organisms to stimulus of touch is called:"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "zoology",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "postcaval vein"
+      },
       "correct": "c",
+      "a": {
+        "image": "",
+        "text": "innominate vein"
+      },
       "b": {
-        "text": "external jugular vein",
-        "image": ""
+        "image": "",
+        "text": "external jugular vein"
       },
       "c": {
-        "text": "subclavian vein",
-        "image": ""
-      },
-      "a": {
-        "text": "innominate vein",
-        "image": ""
-      },
-      "d": {
-        "text": "postcaval vein",
-        "image": ""
+        "image": "",
+        "text": "subclavian vein"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "zoology",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Brachial and muculo-cutaneous veins in frog unite to form",
-      "image": ""
-    }
+      "image": "",
+      "text": "Brachial and muculo-cutaneous veins in frog unite to form"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "zoology",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "oval, nucleated, biconcave"
+      },
       "correct": "b",
+      "a": {
+        "image": "",
+        "text": "elliptical, non-nucleated biconclave"
+      },
       "b": {
-        "text": "elliptical, nucleated, biconvex",
-        "image": ""
+        "image": "",
+        "text": "elliptical, nucleated, biconvex"
       },
       "c": {
-        "text": "oval, non-nucleated biconvex",
-        "image": ""
-      },
-      "a": {
-        "text": "elliptical, non-nucleated biconclave",
-        "image": ""
-      },
-      "d": {
-        "text": "oval, nucleated, biconcave",
-        "image": ""
+        "image": "",
+        "text": "oval, non-nucleated biconvex"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "zoology",
+    "exam_code": 1405923268,
     "question": {
-      "text": "RBC of frog is:",
-      "image": ""
-    }
+      "image": "",
+      "text": "RBC of frog is:"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "zoology",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "Buccal Cavity"
+      },
       "correct": "a",
+      "a": {
+        "image": "",
+        "text": "Diaphragm"
+      },
       "b": {
-        "text": "Lungs",
-        "image": ""
+        "image": "",
+        "text": "Lungs"
       },
       "c": {
-        "text": "Skin",
-        "image": ""
-      },
-      "a": {
-        "text": "Diaphragm",
-        "image": ""
-      },
-      "d": {
-        "text": "Buccal Cavity",
-        "image": ""
+        "image": "",
+        "text": "Skin"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "zoology",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Which is not involved in respiration in frog?",
-      "image": ""
-    }
+      "image": "",
+      "text": "Which is not involved in respiration in frog?"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "zoology",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "1 chambered"
+      },
       "correct": "b",
+      "a": {
+        "image": "",
+        "text": "4 chambered"
+      },
       "b": {
-        "text": "3 chambered",
-        "image": ""
+        "image": "",
+        "text": "3 chambered"
       },
       "c": {
-        "text": "2 chambered",
-        "image": ""
-      },
-      "a": {
-        "text": "4 chambered",
-        "image": ""
-      },
-      "d": {
-        "text": "1 chambered",
-        "image": ""
+        "image": "",
+        "text": "2 chambered"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "zoology",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Ambhibian heart is:",
-      "image": ""
-    }
+      "image": "",
+      "text": "Ambhibian heart is:"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "zoology",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "proterozoic era"
+      },
       "correct": "b",
+      "a": {
+        "image": "",
+        "text": "Palaeozoic era"
+      },
       "b": {
-        "text": "Mesozoic era",
-        "image": ""
+        "image": "",
+        "text": "Mesozoic era"
       },
       "c": {
-        "text": "recent",
-        "image": ""
-      },
-      "a": {
-        "text": "Palaeozoic era",
-        "image": ""
-      },
-      "d": {
-        "text": "proterozoic era",
-        "image": ""
+        "image": "",
+        "text": "recent"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "zoology",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Golden age of replites",
-      "image": ""
-    }
+      "image": "",
+      "text": "Golden age of replites"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "zoology",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "toad"
+      },
       "correct": "b",
+      "a": {
+        "image": "",
+        "text": "cat fish"
+      },
       "b": {
-        "text": "dog fish",
-        "image": ""
+        "image": "",
+        "text": "dog fish"
       },
       "c": {
-        "text": "frog",
-        "image": ""
-      },
-      "a": {
-        "text": "cat fish",
-        "image": ""
-      },
-      "d": {
-        "text": "toad",
-        "image": ""
+        "image": "",
+        "text": "frog"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "zoology",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Fertilization is internal in:",
-      "image": ""
-    }
+      "image": "",
+      "text": "Fertilization is internal in:"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "zoology",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "ophiuthrix"
+      },
       "correct": "b",
+      "a": {
+        "image": "",
+        "text": "star fish"
+      },
       "b": {
-        "text": "ascaris",
-        "image": ""
+        "image": "",
+        "text": "ascaris"
       },
       "c": {
-        "text": "sea lily",
-        "image": ""
-      },
-      "a": {
-        "text": "star fish",
-        "image": ""
-      },
-      "d": {
-        "text": "ophiuthrix",
-        "image": ""
+        "image": "",
+        "text": "sea lily"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "zoology",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Which is not a member of echinodermata?",
-      "image": ""
-    }
+      "image": "",
+      "text": "Which is not a member of echinodermata?"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "zoology",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "Enterobius"
+      },
       "correct": "a",
+      "a": {
+        "image": "",
+        "text": "Aphrodite"
+      },
       "b": {
-        "text": "Chaetopterus",
-        "image": ""
+        "image": "",
+        "text": "Chaetopterus"
       },
       "c": {
-        "text": "Gordius",
-        "image": ""
-      },
-      "a": {
-        "text": "Aphrodite",
-        "image": ""
-      },
-      "d": {
-        "text": "Enterobius",
-        "image": ""
+        "image": "",
+        "text": "Gordius"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "zoology",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Sea mouse' is common name of:",
-      "image": ""
-    }
+      "image": "",
+      "text": "Sea mouse' is common name of:"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "zoology",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "body cavity is full of haemolymph"
+      },
       "correct": "b",
+      "a": {
+        "image": "",
+        "text": "jointed legs circulatory system"
+      },
       "b": {
-        "text": "closed",
-        "image": ""
+        "image": "",
+        "text": "closed"
       },
       "c": {
-        "text": "true coelom is restriced to gonads",
-        "image": ""
-      },
-      "a": {
-        "text": "jointed legs circulatory system",
-        "image": ""
-      },
-      "d": {
-        "text": "body cavity is full of haemolymph",
-        "image": ""
+        "image": "",
+        "text": "true coelom is restriced to gonads"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "zoology",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Which is false about arthropods?",
-      "image": ""
-    }
+      "image": "",
+      "text": "Which is false about arthropods?"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "zoology",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "open circulatory system"
+      },
       "correct": "d",
+      "a": {
+        "image": "",
+        "text": "annuli present"
+      },
       "b": {
-        "text": "triplobastic",
-        "image": ""
+        "image": "",
+        "text": "triplobastic"
       },
       "c": {
-        "text": "ture coelomate",
-        "image": ""
-      },
-      "a": {
-        "text": "annuli present",
-        "image": ""
-      },
-      "d": {
-        "text": "open circulatory system",
-        "image": ""
+        "image": "",
+        "text": "ture coelomate"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "zoology",
+    "exam_code": 1405923268,
     "question": {
-      "text": "What is false about annelids?",
-      "image": ""
-    }
+      "image": "",
+      "text": "What is false about annelids?"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "zoology",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "tongue"
+      },
       "correct": "b",
+      "a": {
+        "image": "",
+        "text": "liver"
+      },
       "b": {
-        "text": "spleen",
-        "image": ""
+        "image": "",
+        "text": "spleen"
       },
       "c": {
-        "text": "panchreas",
-        "image": ""
-      },
-      "a": {
-        "text": "liver",
-        "image": ""
-      },
-      "d": {
-        "text": "tongue",
-        "image": ""
+        "image": "",
+        "text": "panchreas"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "zoology",
+    "exam_code": 1405923268,
     "question": {
-      "text": "All are endodermal in origin except",
-      "image": ""
-    }
+      "image": "",
+      "text": "All are endodermal in origin except"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "zoology",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "ectomesoderm"
+      },
       "correct": "a",
+      "a": {
+        "image": "",
+        "text": "ectoderm"
+      },
       "b": {
-        "text": "endoderm",
-        "image": ""
+        "image": "",
+        "text": "endoderm"
       },
       "c": {
-        "text": "mesoderm",
-        "image": ""
-      },
-      "a": {
-        "text": "ectoderm",
-        "image": ""
-      },
-      "d": {
-        "text": "ectomesoderm",
-        "image": ""
+        "image": "",
+        "text": "mesoderm"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "zoology",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Posterior pituitary gland develops from:",
-      "image": ""
-    }
+      "image": "",
+      "text": "Posterior pituitary gland develops from:"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "zoology",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "mesoderm only"
+      },
       "correct": "d",
+      "a": {
+        "image": "",
+        "text": "ectoderm and endoderm"
+      },
       "b": {
-        "text": "ectoderm and mesoderm",
-        "image": ""
+        "image": "",
+        "text": "ectoderm and mesoderm"
       },
       "c": {
-        "text": "ectoderm only",
-        "image": ""
-      },
-      "a": {
-        "text": "ectoderm and endoderm",
-        "image": ""
-      },
-      "d": {
-        "text": "mesoderm only",
-        "image": ""
+        "image": "",
+        "text": "ectoderm only"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "zoology",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Skeleton and muscle in a vetebrate embryo develop from",
-      "image": ""
-    }
+      "image": "",
+      "text": "Skeleton and muscle in a vetebrate embryo develop from"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "zoology",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "endothelium and connective tissue with muscle fibre"
+      },
       "correct": "d",
+      "a": {
+        "image": "",
+        "text": "endothelium and muscle fibre"
+      },
       "b": {
-        "text": "endothelium and muscle firbe",
-        "image": ""
+        "image": "",
+        "text": "endothelium and muscle firbe"
       },
       "c": {
-        "text": "endodthelium and connective tissue",
-        "image": ""
-      },
-      "a": {
-        "text": "endothelium and muscle fibre",
-        "image": ""
-      },
-      "d": {
-        "text": "endothelium and connective tissue with muscle fibre",
-        "image": ""
+        "image": "",
+        "text": "endodthelium and connective tissue"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "zoology",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Blood capillaries are made up of:",
-      "image": ""
-    }
+      "image": "",
+      "text": "Blood capillaries are made up of:"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "zoology",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "Reptilia and avess"
+      },
       "correct": "c",
+      "a": {
+        "image": "",
+        "text": "Echinodermata and chordate"
+      },
       "b": {
-        "text": "Arthropoda and mollusca",
-        "image": ""
+        "image": "",
+        "text": "Arthropoda and mollusca"
       },
       "c": {
-        "text": "Reptilian and mammalian",
-        "image": ""
-      },
-      "a": {
-        "text": "Echinodermata and chordate",
-        "image": ""
-      },
-      "d": {
-        "text": "Reptilia and avess",
-        "image": ""
+        "image": "",
+        "text": "Reptilian and mammalian"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "zoology",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Duck-billed platypus is connecting link between:",
-      "image": ""
-    }
+      "image": "",
+      "text": "Duck-billed platypus is connecting link between:"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "zoology",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "vestigial organs"
+      },
       "correct": "a",
+      "a": {
+        "image": "",
+        "text": "homologous and analgous organs"
+      },
       "b": {
-        "text": "homologus and vestigial organs",
-        "image": ""
+        "image": "",
+        "text": "homologus and vestigial organs"
       },
       "c": {
-        "text": "homologous organs only",
-        "image": ""
-      },
-      "a": {
-        "text": "homologous and analgous organs",
-        "image": ""
-      },
-      "d": {
-        "text": "vestigial organs",
-        "image": ""
+        "image": "",
+        "text": "homologous organs only"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "zoology",
+    "exam_code": 1405923268,
     "question": {
-      "text": "An important evidence in favour of organic evolution is the occurance of:",
-      "image": ""
-    }
+      "image": "",
+      "text": "An important evidence in favour of organic evolution is the occurance of:"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "zoology",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "44"
+      },
       "correct": "b",
+      "a": {
+        "image": "",
+        "text": "24"
+      },
       "b": {
-        "text": "28",
-        "image": ""
+        "image": "",
+        "text": "28"
       },
       "c": {
-        "text": "34",
-        "image": ""
-      },
-      "a": {
-        "text": "24",
-        "image": ""
-      },
-      "d": {
-        "text": "44",
-        "image": ""
+        "image": "",
+        "text": "34"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "zoology",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Total number of teeth in rabbit is",
-      "image": ""
-    }
+      "image": "",
+      "text": "Total number of teeth in rabbit is"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "zoology",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "Goitre"
+      },
       "correct": "b",
+      "a": {
+        "image": "",
+        "text": "Myxeedema"
+      },
       "b": {
-        "text": "Acromegaly",
-        "image": ""
+        "image": "",
+        "text": "Acromegaly"
       },
       "c": {
-        "text": "Cretinism",
-        "image": ""
-      },
-      "a": {
-        "text": "Myxeedema",
-        "image": ""
-      },
-      "d": {
-        "text": "Goitre",
-        "image": ""
+        "image": "",
+        "text": "Cretinism"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "zoology",
+    "exam_code": 1405923268,
     "question": {
-      "text": "Which of the following is not related to thyroid gland?",
-      "image": ""
-    }
+      "image": "",
+      "text": "Which of the following is not related to thyroid gland?"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "zoology",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "symbiiosis"
+      },
       "correct": "b",
+      "a": {
+        "image": "",
+        "text": "mutualism"
+      },
       "b": {
-        "text": "commensalism",
-        "image": ""
+        "image": "",
+        "text": "commensalism"
       },
       "c": {
-        "text": "parasitism",
-        "image": ""
-      },
-      "a": {
-        "text": "mutualism",
-        "image": ""
-      },
-      "d": {
-        "text": "symbiiosis",
-        "image": ""
+        "image": "",
+        "text": "parasitism"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "zoology",
+    "exam_code": 1405923268,
     "question": {
-      "text": "The relationship between tow animals in which one gets benefit and other gets neither benefit nor harm is:",
-      "image": ""
-    }
+      "image": "",
+      "text": "The relationship between tow animals in which one gets benefit and other gets neither benefit nor harm is:"
+    },
+    "exam_type": "MEDICAL"
   },
   {
-    "exam_type": "MEDICAL",
-    "subject": "zoology",
     "answer": {
+      "d": {
+        "image": "",
+        "text": "Homocoelous"
+      },
       "correct": "a",
+      "a": {
+        "image": "",
+        "text": "Heterocoelous"
+      },
       "b": {
-        "text": "Ambhicoelous",
-        "image": ""
+        "image": "",
+        "text": "Ambhicoelous"
       },
       "c": {
-        "text": "Acoelous",
-        "image": ""
-      },
-      "a": {
-        "text": "Heterocoelous",
-        "image": ""
-      },
-      "d": {
-        "text": "Homocoelous",
-        "image": ""
+        "image": "",
+        "text": "Acoelous"
       }
     },
     "marks": 1,
-    "exam_code": 1405858439,
+    "subject": "zoology",
+    "exam_code": 1405923268,
     "question": {
-      "text": "In aves, vertebrae are:",
-      "image": ""
-    }
+      "image": "",
+      "text": "In aves, vertebrae are:"
+    },
+    "exam_type": "MEDICAL"
   }
 ]

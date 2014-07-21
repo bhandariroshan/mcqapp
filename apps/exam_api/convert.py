@@ -12,6 +12,11 @@ def convert(csv_file_name):
     with open(csv_file_name, 'r') as csvfile:
     # with codecs.open('IOM-set-1.csv', 'rb') as csvfile:
     # with open('IOM-set-1.csv', 'rb', 'utf-8') as csvfile:
+        time_stamp = int(
+            time.mktime(
+                datetime.datetime.now().timetuple()
+            )
+        )
         my_data = csv.reader(csvfile, delimiter=',', quotechar='"')
         data_list = []
         count = 0
@@ -44,11 +49,7 @@ def convert(csv_file_name):
                     "subject": item[6],
                     "marks": 1,
                     "exam_type": 'MEDICAL',
-                    "exam_code": int(
-                        time.mktime(
-                            datetime.datetime.now().timetuple()
-                        )
-                    )
+                    "exam_code": time_stamp
                 }
                 data_list.append(data_dict)
             count += 1

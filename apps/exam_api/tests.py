@@ -16,6 +16,7 @@ class TestJsonOutput(unittest.TestCase):
         self.data = json.loads(json_data)
         self.NUMBER_OF_QUESTIONS = 100
         self.EXAM_TYPE = 'MEDICAL'
+        self.EXAM_CODE = self.data[0]['exam_code']
         self.SUBJECT = {
             'physics': range(0, 20),
             'chemistry': range(20, 50),
@@ -86,6 +87,11 @@ class TestJsonOutput(unittest.TestCase):
             subject_lower = item['subject'].lower()
             assert subject_lower in self.SUBJECT
             assert count in self.SUBJECT[subject_lower]
+
+    def test_exam_code_uniformity(self):
+        """test option for each exam code to be same"""
+        for item in self.data:
+            assert item['exam_code'] == self.EXAM_CODE
 
 
 if __name__ == '__main__':
