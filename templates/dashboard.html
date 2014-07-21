@@ -109,10 +109,8 @@
                 </div>
                 <div style="width:65%">
                     <!-- <h4><a href="#" id="{{eachExam.code}}/"><strong>{{eachExam.name}}</strong></a></h4> -->
-                    {% if eachExam.exam_category == 'BE-IOE' and eachExam.exam_family == 'DPS' %}
-                    <h4><a href="#" id="{{eachExam.code}}/"><strong>{{eachExam.name}}</strong></a></h4>
-                    {% else %}
-                      <h4><a href="#" id="{{eachExam.code}}/"><strong>IOM Practice Model {{forloop.counter}}</strong></a></h4>                    
+                    {% if eachExam.exam_family == 'DPS' %}
+                      <h4><a href="#" id="{{eachExam.code}}/"><strong>{{eachExam.name}}</strong></a></h4>
                     {% endif %}
                     <p><strong>Date: </strong>When ever you like in a single sitting</p>
                     <p><strong>Time: </strong>Anytime</p>

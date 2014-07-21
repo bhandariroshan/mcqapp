@@ -1161,20 +1161,97 @@ def couponpage(request):
 
 def iomdashboard(request):
     if request.user.is_authenticated():
-        from apps.exam_api.views import ExamHandler
-        exam_handler = ExamHandler()
-        upcoming_exams = exam_handler.list_upcoming_exams(
-            {'exam_category': 'MBBS-IOM'}
-        )
         parameters = {}
         up_exams = []
-
-        user_profile_obj = UserProfile()
+        user_profile_obj = UserProfile()      
+        user = user_profile_obj.get_user_by_username(request.user.username)
         subscribed_exams = user_profile_obj.get_subscribed_exams(
             request.user.username
-        )
-        user = user_profile_obj.get_user_by_username(request.user.username)
+        )          
         parameters['user'] = user
+        exam_model_api = ExammodelApi()
+        user_exams = user['valid_exam']
+
+        subscription_type = user['subscription_type']
+        print user_exams, subscription_type
+        if len(subscription_type) != 0:
+            parameters['subscribed'] = True
+        else:
+            parameters['subscribed'] = False
+
+        parameters['subscription_type'] = user['subscription_type']
+
+        try:
+            if user['student_category_set'] == 1:
+                parameters['student_category_set'] = True
+            else:
+                parameters['student_category_set'] = False
+        except:
+            parameters['student_category_set'] = False
+
+        all_valid_exams = exam_model_api.find_all_exammodel_descending(
+            {'exam_code': {'$in': user_exams}}, sort_index='exam_date'
+        )
+
+        for count, eachExamDetails in enumerate(all_valid_exams):
+            if eachExamDetails['exam_family'] == 'CPS' or eachExamDetails['exam_category'] == 'BE-IOE':
+                continue
+            up_exm = {}
+
+            if eachExamDetails is None:
+                continue
+
+            if eachExamDetails['exam_category'] == 'MBBS-IOM' and \
+                    eachExamDetails['exam_family'] == 'DPS':
+                up_exm['name'] = "IOM Practice Exam " + \
+                    str(len(all_valid_exams) - count)
+
+            if 'IDP' in subscription_type:
+                up_exm['subscribed'] = True
+
+            elif eachExamDetails['exam_category'] in subscription_type:
+                up_exm['subscribed'] = True
+
+            else:
+                up_exm['subscribed'] = eachExamDetails.get('exam_code') in \
+                    subscribed_exams
+            up_exm['code'] = eachExamDetails['exam_code']
+            up_exm['exam_category'] = eachExamDetails.get('exam_category')
+            up_exm['exam_family'] = eachExamDetails.get('exam_family')
+            up_exm['image'] = eachExamDetails.get('image')
+            up_exams.append(up_exm)
+
+        all_cps_exam = exam_model_api.find_all_exammodel_descending(
+            {'exam_family': 'CPS'}, sort_index='exam_date'
+        )
+        for count, cps_exams in enumerate(all_cps_exam):
+            up_cps_exam = {}
+            up_cps_exam['name'] = "IOM Competitive Exam " + \
+                str(len(all_cps_exam) - count)
+
+            if 'IDP' in subscription_type:
+                up_cps_exam['subscribed'] = True
+
+            elif cps_exams['exam_category'] in subscription_type:
+                up_cps_exam['subscribed'] = True
+
+            else:
+                up_cps_exam['subscribed'] = cps_exams.get('exam_code') in \
+                    subscribed_exams
+            up_cps_exam['code'] = cps_exams['exam_code']
+            exam_start_time = datetime.datetime.strptime(
+                str(datetime.datetime.fromtimestamp(
+                    int(cps_exams.get('exam_date')))),
+                "%Y-%m-%d %H:%M:%S").time()
+            up_cps_exam['exam_time'] = exam_start_time
+            up_cps_exam['exam_date'] = datetime.datetime.fromtimestamp(
+                int(cps_exams.get('exam_date'))
+            ).strftime("%A, %d. %B %Y")
+            up_cps_exam['exam_category'] = cps_exams.get('exam_category')
+            up_cps_exam['exam_family'] = cps_exams.get('exam_family')
+            up_cps_exam['image'] = cps_exams.get('image')
+            if up_cps_exam['exam_category'] == 'MBBS-IOM':
+                up_exams.append(up_cps_exam)
 
         subscription_type = user['subscription_type']
         parameters['subscription_type'] = subscription_type
@@ -1190,36 +1267,8 @@ def iomdashboard(request):
         except:
             parameters['student_category_set'] = False
 
-        for eachExam in upcoming_exams:
-            up_exm = {}
 
-            up_exm['name'] = eachExam['exam_name']
-
-            if 'IDP' in subscription_type:
-                up_exm['subscribed'] = True
-
-            elif eachExam['exam_category'] in subscription_type:
-                up_exm['subscribed'] = True
-
-            else:
-                up_exm['subscribed'] = eachExam['exam_code'] in \
-                    subscribed_exams
-
-            up_exm['code'] = eachExam['exam_code']
-            if eachExam['exam_family'] != 'DPS':
-                exam_start_time = datetime.datetime.strptime(
-                    str(datetime.datetime.fromtimestamp(
-                        int(eachExam['exam_date']
-                            ))), "%Y-%m-%d %H:%M:%S").time()
-                up_exm['exam_time'] = exam_start_time
-                up_exm['exam_date'] = datetime.datetime.fromtimestamp(
-                    int(eachExam['exam_date'])
-                ).strftime("%A, %d. %B %Y")
-            up_exm['exam_category'] = eachExam['exam_category']
-            up_exm['exam_family'] = eachExam['exam_family']
-            up_exm['image'] = eachExam['image']
-            up_exams.append(up_exm)
-
+        # print up_exams, len(up_exams)
         parameters['upcoming_exams'] = up_exams
         # print up_exams
 
