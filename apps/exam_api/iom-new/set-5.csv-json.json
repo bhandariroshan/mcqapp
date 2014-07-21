@@ -32,7 +32,7 @@
     "answer": {
       "d": {
         "image": "",
-        "text": "with acceleration $ \\frac{mv_2}{l} $"
+        "text": "with acceleration $ \\frac{mv^2}{l} $"
       },
       "correct": "c",
       "a": {
@@ -82,7 +82,7 @@
     "exam_code": 1405923268,
     "question": {
       "image": "",
-      "text": "For a satellite moving in a orbit around the earth, the ratio of KE to PE is"
+      "text": "For a satellite moving in an orbit around the earth, the ratio of KE to PE is"
     },
     "exam_type": "MEDICAL"
   },
@@ -198,7 +198,7 @@
     "exam_code": 1405923268,
     "question": {
       "image": "",
-      "text": "The reflactance and emmitance of a perfectly black body are respectively"
+      "text": "The reflectance and emittance of a perfectly black body are respectively"
     },
     "exam_type": "MEDICAL"
   },
@@ -264,7 +264,7 @@
     "answer": {
       "d": {
         "image": "",
-        "text": "$ 0,5 \\times 10^8 $"
+        "text": "$ 0.5 \\times 10^8 $"
       },
       "correct": "c",
       "a": {
@@ -372,7 +372,7 @@
     "exam_code": 1405923268,
     "question": {
       "image": "",
-      "text": "The electric potential at a point in free space due to a charge Q columb is $ Q \\times 10^{11} $ volts. THe electric field at the point is "
+      "text": "The electric potential at a point in free space due to a charge Q coulomb is $ Q \\times 10^{11} $ volts. The electric field at the point is "
     },
     "exam_type": "MEDICAL"
   },
@@ -691,7 +691,7 @@
     "exam_code": 1405923268,
     "question": {
       "image": "",
-      "text": "In standardization of $ Na_2S_2O_3 $ using $ K_2Cr_2O_7 $ by iodeometry, the eq. wt of $ K_2Cr_2O_7 $ is:"
+      "text": "In standardization of $ Na_2S_2O_3 $ using $ K_2Cr_2O_7 $ by iodometry, the eq. wt of $ K_2Cr_2O_7 $ is:"
     },
     "exam_type": "MEDICAL"
   },
@@ -737,11 +737,11 @@
       },
       "b": {
         "image": "",
-        "text": "became double"
+        "text": "become double"
       },
       "c": {
         "image": "",
-        "text": "beome 1/4 th"
+        "text": "become 1/4 th"
       }
     },
     "marks": 1,
@@ -749,7 +749,7 @@
     "exam_code": 1405923268,
     "question": {
       "image": "",
-      "text": "On doubling P and V with constant temperaure, the equilibrium constant will:"
+      "text": "On doubling P and V with constant temperature, the equilibrium constant will:"
     },
     "exam_type": "MEDICAL"
   },
@@ -791,11 +791,11 @@
       "correct": "c",
       "a": {
         "image": "",
-        "text": "69500 colulombs"
+        "text": "69500 coulombs"
       },
       "b": {
         "image": "",
-        "text": "96500 coulomb"
+        "text": "96500 coulombs"
       },
       "c": {
         "image": "",
@@ -882,7 +882,7 @@
       },
       "b": {
         "image": "",
-        "text": "2"
+        "text": "1"
       },
       "c": {
         "image": "",
@@ -1134,7 +1134,7 @@
     "answer": {
       "d": {
         "image": "",
-        "text": "electrovalent"
+        "text": "electrovalent bond"
       },
       "correct": "b",
       "a": {
@@ -1213,7 +1213,7 @@
     "exam_code": 1405923268,
     "question": {
       "image": "",
-      "text": "When excess ethanol is passed over platinised asbestos is excess air, the compound formed is"
+      "text": "When excess ethanol is passed over platinized asbestos in excess air, the compound formed is"
     },
     "exam_type": "MEDICAL"
   },
@@ -1437,7 +1437,7 @@
       },
       "c": {
         "image": "",
-        "text": "Athracene oil"
+        "text": "Anthracene oil"
       }
     },
     "marks": 1,
@@ -1959,7 +1959,7 @@
       },
       "c": {
         "image": "",
-        "text": "Liliceae"
+        "text": "Liliaceae"
       }
     },
     "marks": 1,
@@ -2033,7 +2033,7 @@
     "answer": {
       "d": {
         "image": "",
-        "text": "Medulla"
+        "text": "Medulla oblongata"
       },
       "correct": "d",
       "a": {
@@ -2046,7 +2046,7 @@
       },
       "c": {
         "image": "",
-        "text": "Mid brain oblongata"
+        "text": "Mid brain"
       }
     },
     "marks": 1,
@@ -2062,7 +2062,7 @@
     "answer": {
       "d": {
         "image": "",
-        "text": "duodenal"
+        "text": "duodenal submucosa"
       },
       "correct": "d",
       "a": {
@@ -2075,7 +2075,7 @@
       },
       "c": {
         "image": "",
-        "text": "oesophagus submucosa"
+        "text": "oesophagus"
       }
     },
     "marks": 1,
@@ -2100,11 +2100,11 @@
       },
       "b": {
         "image": "",
-        "text": "occulomotor, trigerminal and spinal"
+        "text": "occulomotor, trigeminal and spinal"
       },
       "c": {
         "image": "",
-        "text": "trigerminal, abducens and vagus"
+        "text": "trigeminal, abducens and vagus"
       }
     },
     "marks": 1,
@@ -2547,7 +2547,7 @@
     "exam_code": 1405923268,
     "question": {
       "image": "",
-      "text": "Sea mouse' is common name of:"
+      "text": "'Sea mouse' is common name of:"
     },
     "exam_type": "MEDICAL"
   },
@@ -2560,15 +2560,15 @@
       "correct": "b",
       "a": {
         "image": "",
-        "text": "jointed legs circulatory system"
+        "text": "jointed legs"
       },
       "b": {
         "image": "",
-        "text": "closed"
+        "text": "closed circulatory system"
       },
       "c": {
         "image": "",
-        "text": "true coelom is restriced to gonads"
+        "text": "true coelom is restricted to gonads"
       }
     },
     "marks": 1,
@@ -2700,20 +2700,20 @@
     "answer": {
       "d": {
         "image": "",
-        "text": "endothelium and connective tissue with muscle fibre"
+        "text": "endothelium only"
       },
       "correct": "d",
       "a": {
         "image": "",
-        "text": "endothelium and muscle fibre"
+        "text": "endothelium and muscle fiber"
       },
       "b": {
         "image": "",
-        "text": "endothelium and muscle firbe"
+        "text": "endothelium and connective tissue"
       },
       "c": {
         "image": "",
-        "text": "endodthelium and connective tissue"
+        "text": "endothelium and connective tissue with muscle fiber"
       }
     },
     "marks": 1,
@@ -2729,7 +2729,7 @@
     "answer": {
       "d": {
         "image": "",
-        "text": "Reptilia and avess"
+        "text": "Reptilia and aves"
       },
       "correct": "c",
       "a": {
@@ -2866,7 +2866,7 @@
     "exam_code": 1405923268,
     "question": {
       "image": "",
-      "text": "The relationship between tow animals in which one gets benefit and other gets neither benefit nor harm is:"
+      "text": "The relationship between two animals in which one gets benefit and other gets neither benefit nor harm is:"
     },
     "exam_type": "MEDICAL"
   },
@@ -2883,7 +2883,7 @@
       },
       "b": {
         "image": "",
-        "text": "Ambhicoelous"
+        "text": "Amphicoelous"
       },
       "c": {
         "image": "",
