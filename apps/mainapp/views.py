@@ -1163,8 +1163,11 @@ def iomdashboard(request):
     if request.user.is_authenticated():
         parameters = {}
         up_exams = []
-        user_profile_obj = UserProfile()        
+        user_profile_obj = UserProfile()      
         user = user_profile_obj.get_user_by_username(request.user.username)
+        subscribed_exams = user_profile_obj.get_subscribed_exams(
+            request.user.username
+        )          
         parameters['user'] = user
         exam_model_api = ExammodelApi()
         user_exams = user['valid_exam']
