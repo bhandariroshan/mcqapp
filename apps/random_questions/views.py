@@ -21,7 +21,7 @@ def generate_random_ioe_questions(request):
             {"exam_code": each_code, 'marks': 1},
             fields={'question_number': 1}
         )
-        if not len(questions) > 65:
+        if len(questions) == 65:
             question_sets.append(questions)
     final_question_set = []
     if len(question_sets) == 0:
@@ -44,7 +44,10 @@ def generate_random_ioe_questions(request):
         sort_index="exam_code",
         limit=1
     )
-    new_exam_code = int(last_exam_code[0]['exam_code']) + 1
+    if len(last_exam_code) > 0:
+        new_exam_code = int(last_exam_code[0]['exam_code']) + 1
+    else:
+        new_exam_code = 1001
     new_exam_model = {
         "exam_name": "IOE Practice set",
         "exam_date": time.mktime(
@@ -101,7 +104,7 @@ def generate_random_iom_questions(request):
             {"exam_code": each_code},
             fields={'question_number': 1}
         )
-        if not len(questions) > 100:
+        if len(questions) == 100:
             question_sets.append(questions)
     final_question_set = []
     if len(question_sets) == 0:
@@ -124,7 +127,11 @@ def generate_random_iom_questions(request):
         sort_index="exam_code",
         limit=1
     )
-    new_exam_code = int(last_exam_code[0]['exam_code']) + 1
+    if len(last_exam_code) > 0:
+        new_exam_code = int(last_exam_code[0]['exam_code']) + 1
+    else:
+        new_exam_code = 1001
+
     new_exam_model = {
         "exam_name": "IOM Practice set",
         "exam_date": time.mktime(
