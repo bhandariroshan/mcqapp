@@ -184,18 +184,19 @@ def landing(request):
         all_valid_exams = exam_model_api.find_all_exammodel_descending(
             {'exam_code': {'$in': user_exams}}, sort_index='exam_date'
         )
+        count_out = 0
         for count, eachExamDetails in enumerate(all_valid_exams):
             if eachExamDetails['exam_family'] == 'CPS' or eachExamDetails['exam_category'] == 'MBBS-IOM':
                 continue
-            up_exm = {}
-
+            up_exm = {}            
+            count_out = count_out + 1
             if eachExamDetails is None:
                 continue
 
             if eachExamDetails['exam_category'] == 'BE-IOE' and \
                     eachExamDetails['exam_family'] == 'DPS':
-                up_exm['name'] = "IOE Practice Exam " + \
-                    str(len(all_valid_exams) - count)
+                up_exm['name'] = "IOE Practice Exam " + str(count_out)
+
 
             if 'IDP' in subscription_type:
                 up_exm['subscribed'] = True
@@ -1192,19 +1193,20 @@ def iomdashboard(request):
         all_valid_exams = exam_model_api.find_all_exammodel_descending(
             {'exam_code': {'$in': user_exams}}, sort_index='exam_date'
         )
-
+        count_out = 0
         for count, eachExamDetails in enumerate(all_valid_exams):
             if eachExamDetails['exam_family'] == 'CPS' or eachExamDetails['exam_category'] == 'BE-IOE':
                 continue
+
             up_exm = {}
+            count_out = count_out + 1
 
             if eachExamDetails is None:
                 continue
 
             if eachExamDetails['exam_category'] == 'MBBS-IOM' and \
                     eachExamDetails['exam_family'] == 'DPS':
-                up_exm['name'] = "IOM Practice Exam " + \
-                    str(len(all_valid_exams) - count)
+                up_exm['name'] = "IOM Practice Exam " + str(count_out)
 
             if 'IDP' in subscription_type:
                 up_exm['subscribed'] = True
