@@ -894,7 +894,7 @@
     "exam_code": 1405923265,
     "question": {
       "image": "",
-      "text": "Calculate the equivalent conductivity of 1M $ H_2SO_4 $ whose specific conductivity is 26 $ \\times \\space 10^{-2} \\space ohm^{-2} cm^{-1} $"
+      "text": "Calculate the equivalent conductivity of 1M $ H_2SO_4 $ whose specific conductivity is $ 26 \\times \\space 10^{-2} \\space ohm^{-1} cm^{-1} $"
     },
     "exam_type": "MEDICAL"
   },
@@ -1205,7 +1205,7 @@
       },
       "c": {
         "image": "",
-        "text": "acetyl calicylic acid"
+        "text": "acetyl salicylic acid"
       }
     },
     "marks": 1,
@@ -1922,7 +1922,7 @@
       "correct": "a",
       "a": {
         "image": "",
-        "text": "Transpiration"
+        "text": "Transcription"
       },
       "b": {
         "image": "",
@@ -2025,7 +2025,7 @@
     "exam_code": 1405923265,
     "question": {
       "image": "",
-      "text": "Floral formula EBr $ \\oplus \\space K_{(5)} \\space \\overleftrightarrow{C_{(5)}\\space A_5} \\space G_{\\underline 2} $"
+      "text": "Floral formula EBr $ \\oplus \\space K_{(5)} \\space \\overleftrightarrow{C_{(5)}\\space A_5} \\space G_{(\\underline 2)} $"
     },
     "exam_type": "MEDICAL"
   },
@@ -2303,7 +2303,7 @@
       },
       "b": {
         "image": "",
-        "text": "anadromous"
+        "text": "grass hopper"
       },
       "c": {
         "image": "",
@@ -2576,7 +2576,7 @@
     "exam_code": 1405923265,
     "question": {
       "image": "",
-      "text": "Indevelopment of a frog, process of gastrulation involves"
+      "text": "In development of a frog, process of gastrulation involves"
     },
     "exam_type": "MEDICAL"
   },
