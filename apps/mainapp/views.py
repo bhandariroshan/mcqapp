@@ -934,7 +934,7 @@ def results(request, exam_code):
         loop_end = total_questions + 1
     else:
         loop_start = 0
-        loop_end = total_questions 
+        loop_end = total_questions
 
     for i in range(loop_start, loop_end):
         try:
@@ -1060,7 +1060,6 @@ def show_result(request, exam_code, subject_name):
             att_ans = ''
             parameters['attempted'] = ''
 
-        
         # print att_ans, current_q_no
 
         user_profile_obj = UserProfile()
@@ -1120,7 +1119,7 @@ def get_list_of_result(request):
                         else:
                             answer_list += 'e'
                     except:
-                        answer_list += 'e'                
+                        answer_list += 'e'
                 exam_handler = ExamHandler()
                 score_list = exam_handler.check_answers(exam_code, answer_list)
                 rank = 0
@@ -1163,17 +1162,17 @@ def iomdashboard(request):
     if request.user.is_authenticated():
         parameters = {}
         up_exams = []
-        user_profile_obj = UserProfile()      
+        user_profile_obj = UserProfile()
         user = user_profile_obj.get_user_by_username(request.user.username)
         subscribed_exams = user_profile_obj.get_subscribed_exams(
             request.user.username
-        )          
+        )
         parameters['user'] = user
         exam_model_api = ExammodelApi()
         user_exams = user['valid_exam']
 
         subscription_type = user['subscription_type']
-        print user_exams, subscription_type
+        # print user_exams, subscription_type
         if len(subscription_type) != 0:
             parameters['subscribed'] = True
         else:
@@ -1266,7 +1265,6 @@ def iomdashboard(request):
                 parameters['student_category_set'] = False
         except:
             parameters['student_category_set'] = False
-
 
         # print up_exams, len(up_exams)
         parameters['upcoming_exams'] = up_exams

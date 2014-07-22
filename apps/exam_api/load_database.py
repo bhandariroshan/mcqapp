@@ -13,7 +13,6 @@ def load_examset_in_database(request):
     the function is used to load fake exam set in the exam collection
     of mcq database
     '''
-    print 'entered'
     question_api = QuestionApi()
     distinct_dict = question_api.find_distinct_value('exam_code', {})
     exam_list = []
