@@ -21,26 +21,30 @@ class ExamHandler():
             exam_model = exammodel_api.find_one_exammodel(
                 {"exam_code": int(exam_code)}
             )
-            if exam_model['exam_category'] == 'BE-IOE':
-                question_id_list = [
-                    ObjectId(i['id']) for i in exam_model['question_list']
-                ]
-                question_api = QuestionApi()
-                question_list = question_api.find_all_questions(
-                    {'_id': {"$in": question_id_list}, "marks": 1}
-                )
-                sorted_questions = sorted(
-                    question_list, key=lambda k: k['question_number'])
-                return sorted_questions
-            else:
-                question_api = QuestionApi()
-                question_list = question_api.find_all_questions(
-                    {'exam_code': int(exam_code), "marks": 1}
-                )
+            # if exam_model['exam_category'] == 'BE-IOE':
+            question_id_list = [
+                ObjectId(i['id']) for i in exam_model['question_list']
+            ]
+            question_api = QuestionApi()
+            question_list = question_api.find_all_questions(
+                {
+                    '_id': {"$in": question_id_list},
+                    "marks": 1
+                },
+                fields={'answer.correct': 0}
+            )
+            sorted_questions = sorted(
+                question_list, key=lambda k: k['question_number'])
+            return sorted_questions
+            # else:
+            #     question_api = QuestionApi()
+            #     question_list = question_api.find_all_questions(
+            #         {'exam_code': int(exam_code), "marks": 1}
+            #     )
 
-                sorted_questions = sorted(
-                    question_list, key=lambda k: k['question_number'])
-                return sorted_questions
+            #     sorted_questions = sorted(
+            #         question_list, key=lambda k: k['question_number'])
+            #     return sorted_questions
 
         except:
             pass
@@ -55,35 +59,35 @@ class ExamHandler():
             exam_model = exammodel_api.find_one_exammodel(
                 {"exam_code": int(exam_code)}
             )
-            if exam_model['exam_category'] == 'BE-IOE':
-                question_id_list = [
-                    ObjectId(i['id']) for i in exam_model['question_list']
-                ]
+            # if exam_model['exam_category'] == 'BE-IOE':
+            question_id_list = [
+                ObjectId(i['id']) for i in exam_model['question_list']
+            ]
 
-                question_api = QuestionApi()
-                question_list = question_api.find_all_questions({
-                    '_id': {"$in": question_id_list},
-                    'subject': {"$regex": re.compile(
-                        "^" + str(subject_name) + "$", re.IGNORECASE),
-                        "$options": "-i"},
-                })
-                sorted_questions = sorted(
-                    question_list, key=lambda k: k['question_number'])
-                return sorted_questions
-            else:
-                question_api = QuestionApi()
-                question_list = question_api.find_all_questions({
-                    'exam_code': int(exam_code),
-                    "marks": 1,
-                    'subject': {"$regex": re.compile(
-                        "^" + str(subject_name) + "$", re.IGNORECASE),
-                        "$options": "-i"},
-                }
-                )
+            question_api = QuestionApi()
+            question_list = question_api.find_all_questions({
+                '_id': {"$in": question_id_list},
+                'subject': {"$regex": re.compile(
+                    "^" + str(subject_name) + "$", re.IGNORECASE),
+                    "$options": "-i"},
+            })
+            sorted_questions = sorted(
+                question_list, key=lambda k: k['question_number'])
+            return sorted_questions
+            # else:
+            #     question_api = QuestionApi()
+            #     question_list = question_api.find_all_questions({
+            #         'exam_code': int(exam_code),
+            #         "marks": 1,
+            #         'subject': {"$regex": re.compile(
+            #             "^" + str(subject_name) + "$", re.IGNORECASE),
+            #             "$options": "-i"},
+            #     }
+            #     )
 
-                sorted_questions = sorted(
-                    question_list, key=lambda k: k['question_number'])
-                return sorted_questions
+            #     sorted_questions = sorted(
+            #         question_list, key=lambda k: k['question_number'])
+            #     return sorted_questions
 
         except:
             pass
@@ -126,7 +130,18 @@ class ExamHandler():
         exam_model = exammodel_api.find_one_exammodel(
             {'exam_code': int(exam_code)}
         )
-        sorted_questions = self.get_questionset_from_database(exam_code)
+        question_id_list = [
+            ObjectId(i['id']) for i in exam_model['question_list']
+        ]
+        question_api = QuestionApi()
+        question_list = question_api.find_all_questions(
+            {
+                '_id': {"$in": question_id_list},
+                "marks": 1
+            }
+        )
+        sorted_questions = sorted(
+            question_list, key=lambda k: k['question_number'])
         subjects = set([i['subject'].lower() for i in sorted_questions])
 
         correct_answers = {}
@@ -137,7 +152,7 @@ class ExamHandler():
             temp['attempted'] = 0
             temp['score'] = 0
             correct_answers[subs] = temp
-
+        # print len(answer_list), answer_list
         for index, choice in enumerate(answer_list):
             correct_answers[
                 sorted_questions[index]['subject'].lower()][

@@ -1,0 +1,2902 @@
+[
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "none"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "A / B"
+      },
+      "b": {
+        "image": "",
+        "text": "(A + B)"
+      },
+      "c": {
+        "image": "",
+        "text": "(A - B)"
+      }
+    },
+    "marks": 1,
+    "subject": "Physics",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Two quantities A and B have different dimensions; which mathematical operation given below is physically meaningful?"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "4 : 1"
+      },
+      "correct": "d",
+      "a": {
+        "image": "",
+        "text": "1 : 2"
+      },
+      "b": {
+        "image": "",
+        "text": "2 : 1"
+      },
+      "c": {
+        "image": "",
+        "text": "1 : 4"
+      }
+    },
+    "marks": 1,
+    "subject": "Physics",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "An object is projected at an angle of $ 45^o $ with horizontal. The horizontal range and maximum height reached will be in ratio "
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "quadrupled"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "unchanged"
+      },
+      "b": {
+        "image": "",
+        "text": "doubled"
+      },
+      "c": {
+        "image": "",
+        "text": "halved"
+      }
+    },
+    "marks": 1,
+    "subject": "Physics",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "If the radius of circular path of particle going around the circle is doubled without changing its frequency of rotation, then centripetel force on it is"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "44.8 km/s"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "5.6 km/s"
+      },
+      "b": {
+        "image": "",
+        "text": "11.2 km/s"
+      },
+      "c": {
+        "image": "",
+        "text": "22.4 km/s"
+      }
+    },
+    "marks": 1,
+    "subject": "Physics",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "The escape velocity of a body on the surface of the earth is 11.2 km/s. If the mass of earth is doubled and its radius halved, the escape velocity becomes"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "8 mm"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "1 mm"
+      },
+      "b": {
+        "image": "",
+        "text": "2 mm"
+      },
+      "c": {
+        "image": "",
+        "text": "4 mm"
+      }
+    },
+    "marks": 1,
+    "subject": "Physics",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "For a wire of length l, maximum change in length under stress condition is 2 mm. What is the change of length under same condition when length of wire is halved?"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "4 : 5"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "5 : 4"
+      },
+      "b": {
+        "image": "",
+        "text": "1 : 9"
+      },
+      "c": {
+        "image": "",
+        "text": "9 : 1"
+      }
+    },
+    "marks": 1,
+    "subject": "Physics",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "The ratio of thermal conductivity of two rods of different materials is 5 : 4. The two rods of same area of cross section and same thermal resistance will have the lengths in the ratio"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "equally dark"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "darker than plate"
+      },
+      "b": {
+        "image": "",
+        "text": "brighter than plate"
+      },
+      "c": {
+        "image": "",
+        "text": "equally bright"
+      }
+    },
+    "marks": 1,
+    "subject": "Physics",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "A polished matal plate with rough black spot on it is heated to about 1400 K and quickly taken to dark room. The spot will appear"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "$ \\frac{\\Delta P}{\\gamma^2 P} $"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "$ - \\frac{\\Delta P}{P} $"
+      },
+      "b": {
+        "image": "",
+        "text": "$ \\frac{\\gamma \\Delta P}{P} $"
+      },
+      "c": {
+        "image": "",
+        "text": "$ - \\frac{\\Delta P}{\\gamma P} $"
+      }
+    },
+    "marks": 1,
+    "subject": "Physics",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "During an adiabatic process, the pressure P of a fixed mass of an ideal gas changes by ΔPand its volume V changes ΔV. If $ \\gamma = \\frac{cp}{cv^2} $ then $ \\frac{\\Delta v}{v} $ is given by"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "1.59"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "2.41"
+      },
+      "b": {
+        "image": "",
+        "text": "1.41"
+      },
+      "c": {
+        "image": "",
+        "text": "2.59"
+      }
+    },
+    "marks": 1,
+    "subject": "Physics",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "The critical angle for TIR in diamond is 24.5. The refractive index of the diamond is"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "0.01"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "40"
+      },
+      "b": {
+        "image": "",
+        "text": "80"
+      },
+      "c": {
+        "image": "",
+        "text": "50"
+      }
+    },
+    "marks": 1,
+    "subject": "Physics",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "A telescope has focal length of objective and eye piece as 200 cm and 5 cm respectively. What is its magnification?"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "630 nm"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "420 nm"
+      },
+      "b": {
+        "image": "",
+        "text": "500 nm"
+      },
+      "c": {
+        "image": "",
+        "text": "750 nm"
+      }
+    },
+    "marks": 1,
+    "subject": "Physics",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "In an interference expt, third bright fringe is obtained on the screen with a light of 700 nm. What should be the wavelength of light source in order to obtain fifth bright fringe at same point?"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "$ I_o / 8 $"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "$ I_o $"
+      },
+      "b": {
+        "image": "",
+        "text": "$ I_o / 2 $"
+      },
+      "c": {
+        "image": "",
+        "text": "$ I_o / 4 $"
+      }
+    },
+    "marks": 1,
+    "subject": "Physics",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "An unpolarised beam of intensity $ I_o $ is incident on a pair of Nicols making an angle $ 60^o $ with each other. The intensity of light emerging from the pair is"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "$ Vn^{2/3} $"
+      },
+      "correct": "d",
+      "a": {
+        "image": "",
+        "text": "Vn"
+      },
+      "b": {
+        "image": "",
+        "text": "V / n"
+      },
+      "c": {
+        "image": "",
+        "text": "$ Vn^{1/3} $"
+      }
+    },
+    "marks": 1,
+    "subject": "Physics",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Small drops of same size are charged to V volt each. If n such drop coalesce to form a single large drop, its potential will be"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "150 μJ"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "300 μJ"
+      },
+      "b": {
+        "image": "",
+        "text": "450 μJ"
+      },
+      "c": {
+        "image": "",
+        "text": "225 μJ"
+      }
+    },
+    "marks": 1,
+    "subject": "Physics",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "A capacitor of capacitance value 1 μF is charged to 30 V and the battery is then disconnected. If it is connected across a 2 μF capacitor, the energy lost by the system is"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "$ \\frac{n}{R} $"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "$ n^2 R $"
+      },
+      "b": {
+        "image": "",
+        "text": "$ \\frac{R}{n^2} $"
+      },
+      "c": {
+        "image": "",
+        "text": "$ \\frac{R}{n} $"
+      }
+    },
+    "marks": 1,
+    "subject": "Physics",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Resistance n each of r Ω when connected in parallel give an equivalent resistance of R Ω. If these resistances were connected in series, the combination would have a resistance in Ω equal to"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "$ \\frac{\\mu_o}{2 \\pi } $"
+      },
+      "correct": "d",
+      "a": {
+        "image": "",
+        "text": "$ \\frac{\\sqrt{3}\\mu_o}{2 \\pi } $"
+      },
+      "b": {
+        "image": "",
+        "text": "$ \\frac{\\mu_o}{\\pi } $"
+      },
+      "c": {
+        "image": "",
+        "text": "$ \\frac{3\\mu_o}{2 \\pi } $"
+      }
+    },
+    "marks": 1,
+    "subject": "Physics",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Two long parallel wires P and Q are both perpendicular to the plane of paper with distance 5 mm between them. If P and Q carry current of 2.5 A and 5 A respectively in the same direction then the magnetic field at a point half way between the wires is"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "stream of neutrons"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "stream of electrons"
+      },
+      "b": {
+        "image": "",
+        "text": "stream of protons"
+      },
+      "c": {
+        "image": "",
+        "text": "stream of α - particles"
+      }
+    },
+    "marks": 1,
+    "subject": "Physics",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Cathode rays are"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "$ \\lambda = \\frac{R}{6} $"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "$ \\lambda = \\frac{36}{5R} $"
+      },
+      "b": {
+        "image": "",
+        "text": "$ \\lambda = \\frac{5R}{36} $"
+      },
+      "c": {
+        "image": "",
+        "text": "$ \\lambda = \\frac{6}{R} $"
+      }
+    },
+    "marks": 1,
+    "subject": "Physics",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "If the e− in a H - atom jumps from an orbit with level $ n_1 $ = 3 to an orbit with level $ n_2 $ = 2, the emitted radiation has a wavelength given by"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "$ 2a_o $"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "$ 4a_o $"
+      },
+      "b": {
+        "image": "",
+        "text": "$ 8a_o $"
+      },
+      "c": {
+        "image": "",
+        "text": "$ \\sqrt{2}a_o $"
+      }
+    },
+    "marks": 1,
+    "subject": "Physics",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "In terms of Bohr radius, the radius of second Bohr orbit of H - atom is given by"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "1"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "64 / 27"
+      },
+      "b": {
+        "image": "",
+        "text": "27 / 64"
+      },
+      "c": {
+        "image": "",
+        "text": "4 /3"
+      }
+    },
+    "marks": 1,
+    "subject": "Physics",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "$ r_1 $ and $ r_2 $ are the radii of the atomic nuclei of mass number 64 and 27 respectively. The ratio $ \\frac{r_1}{r_2} $ is"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "$ NO_2 $"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "$ SO_2 $"
+      },
+      "b": {
+        "image": "",
+        "text": "$ H_2O_2 $"
+      },
+      "c": {
+        "image": "",
+        "text": "$ CO_2 $"
+      }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Which of the following is not a reducing agent?"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "$ +4 $"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "$ +6 $"
+      },
+      "b": {
+        "image": "",
+        "text": "$ -6 $"
+      },
+      "c": {
+        "image": "",
+        "text": "0"
+      }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Oxidation number of C in $ C_6H_{12}O_6 $ is:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "$ 1 \\times 10^{-10} $"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "$ 4 \\times 10^{-15} $"
+      },
+      "b": {
+        "image": "",
+        "text": "$ 4 \\times 10^{-10} $"
+      },
+      "c": {
+        "image": "",
+        "text": "$ 1 \\times 10^{-15} $"
+      }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "The solubility in water of a sparingly soluble salt $ AB_2 $ is $ 1.0 \\times 10^{-5} \\space mol L^{-1} $. Its solublilty product number will be "
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Malachite"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "Calamine"
+      },
+      "b": {
+        "image": "",
+        "text": "Chile salt petre"
+      },
+      "c": {
+        "image": "",
+        "text": "Cassiterite"
+      }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Important ore of zinc is"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Lime"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "$ CaCO_3 $"
+      },
+      "b": {
+        "image": "",
+        "text": "$ SiO_2 $"
+      },
+      "c": {
+        "image": "",
+        "text": "$ CaO $"
+      }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Which is not a basic flux?"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Ionic interaction"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "hydrogen bond formation"
+      },
+      "b": {
+        "image": "",
+        "text": "Van der waal's forces"
+      },
+      "c": {
+        "image": "",
+        "text": "Covelent attraction"
+      }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "When two ice cubes are pressed over each other, they unite to form once cube. Which of the following forces is responsible to hold them together?"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "$ CHCl_3 $"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "$ CS_2 $"
+      },
+      "b": {
+        "image": "",
+        "text": "$ C_2H_5OH $"
+      },
+      "c": {
+        "image": "",
+        "text": "$ CCl_4 $"
+      }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Which one of the following is soluble in water?"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Acetylene"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "Aldehyde"
+      },
+      "b": {
+        "image": "",
+        "text": "Allyl iodide"
+      },
+      "c": {
+        "image": "",
+        "text": "Allyl alchohal"
+      }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Glycerol reacts with HI to form:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "inter molecular hydrogen bonding in alcohol"
+      },
+      "correct": "d",
+      "a": {
+        "image": "",
+        "text": "dipolar character of ethers"
+      },
+      "b": {
+        "image": "",
+        "text": "alcohols having resonance structure"
+      },
+      "c": {
+        "image": "",
+        "text": "intermolecular hydrogen bonding in ethers"
+      }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "An ehter is more volatile than an alcohol with same molecular formula due to:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "o-dinitrobenzene"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "m-dinitrobenzene"
+      },
+      "b": {
+        "image": "",
+        "text": "1, 3, 5-trinitrobenzene"
+      },
+      "c": {
+        "image": "",
+        "text": "p-dinitrobenzene"
+      }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Nitrobenzene on heating with a mixture of fuming $ HNO_3 $ and conc. $ H_2SO_4 $ produces"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "$ Ba^{++} $"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "$ Cl^- $"
+      },
+      "b": {
+        "image": "",
+        "text": "$ Li^+ $"
+      },
+      "c": {
+        "image": "",
+        "text": "$ Sr^{++} $"
+      }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "A salt gives crimson red color in Bunsen burner. The color is due to presence of ion:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "C"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "N"
+      },
+      "b": {
+        "image": "",
+        "text": "O"
+      },
+      "c": {
+        "image": "",
+        "text": "P"
+      }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "An element forms $ XCl_3, X_2O_5, XO_2 $ but cant form $ XCl_5 $. It may be:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "$ PCl_3 $"
+      },
+      "correct": "d",
+      "a": {
+        "image": "",
+        "text": "$ AlCl_3 $"
+      },
+      "b": {
+        "image": "",
+        "text": "$ BF_3 $"
+      },
+      "c": {
+        "image": "",
+        "text": "Ethene"
+      }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Which of the following is non planar?"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "3"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "13"
+      },
+      "b": {
+        "image": "",
+        "text": "12"
+      },
+      "c": {
+        "image": "",
+        "text": "10"
+      }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "pH of 0.01 M NaOH is"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "a reducing agent"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "a catalyst"
+      },
+      "b": {
+        "image": "",
+        "text": "an acid"
+      },
+      "c": {
+        "image": "",
+        "text": "an oxidizing agent"
+      }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "A solution of $ SO_2 $ in water reacts with $ H_2S $ precipitating sulphur. Here $ SO_2 $ reacts as"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "$ NaNO_3 $"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "KCl"
+      },
+      "b": {
+        "image": "",
+        "text": "$ NH_4Cl $"
+      },
+      "c": {
+        "image": "",
+        "text": "$ NaHCO_3 $"
+      }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Color of litmus changes from blue to red by:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "sp"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "$ sp^3 $"
+      },
+      "b": {
+        "image": "",
+        "text": "$ sp^2 $"
+      },
+      "c": {
+        "image": "",
+        "text": "sp and $ sp^2 $"
+      }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "The carbon - carbon hybridization in benzene is:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "both a and c"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "oxidation"
+      },
+      "b": {
+        "image": "",
+        "text": "reduction"
+      },
+      "c": {
+        "image": "",
+        "text": "neutralization"
+      }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Bleaching by $ SO_2 $ is due to "
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Cu and Cr"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "Zn and Ni"
+      },
+      "b": {
+        "image": "",
+        "text": "Cu and Sn"
+      },
+      "c": {
+        "image": "",
+        "text": "Cu and Zn"
+      }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Bronze is mixture of "
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "stability"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "mass"
+      },
+      "b": {
+        "image": "",
+        "text": "energy"
+      },
+      "c": {
+        "image": "",
+        "text": "volume"
+      }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Mass defect of a substance is related to its"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Claisen - Schmidt condensation"
+      },
+      "correct": "d",
+      "a": {
+        "image": "",
+        "text": "Benzoin codensation"
+      },
+      "b": {
+        "image": "",
+        "text": "Reimer - Tiemann reaction"
+      },
+      "c": {
+        "image": "",
+        "text": "Aldol condensation"
+      }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "The reaction $ C_6H_6CHO + CH_3CHO \\xrightarrow{NaOH} C_6H_5CH=CHCHO + H_2O $ is known as:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "$ Na_2S $"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "$ Na_2SO_3 $"
+      },
+      "b": {
+        "image": "",
+        "text": "$ NaHSO_4 $"
+      },
+      "c": {
+        "image": "",
+        "text": "$ Na_2SO_4 $"
+      }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Which of the following salt would give $ SO_2 $ with hot and dil. $ H_2SO_4 $ and also decolorizes $ Br_2 $ water?"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "all of these"
+      },
+      "correct": "d",
+      "a": {
+        "image": "",
+        "text": "synthetic fibres"
+      },
+      "b": {
+        "image": "",
+        "text": "pesticides"
+      },
+      "c": {
+        "image": "",
+        "text": "plastics"
+      }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Petrochemicals can be used to prepare"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "W = ΔE - ΔH"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "ΔE = ΔH + W"
+      },
+      "b": {
+        "image": "",
+        "text": "ΔE = W - ΔH"
+      },
+      "c": {
+        "image": "",
+        "text": "ΔH = ΔE + W"
+      }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "The relation of internal energy, enthalpy and work done can be represented  by"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "$ Ca(OH)_2 $"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "$ Mg(OH)_2 $"
+      },
+      "b": {
+        "image": "",
+        "text": "$ MgCO_3 $"
+      },
+      "c": {
+        "image": "",
+        "text": "$ CaCO_3 $"
+      }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Milk of Magnesia is:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "none"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "$ CH_4 $"
+      },
+      "b": {
+        "image": "",
+        "text": "$ C_6H_6 $"
+      },
+      "c": {
+        "image": "",
+        "text": "both a and b"
+      }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "A mixture of sodium benzoate and soda lime on heating produce:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "$ 6.6 \\times 10^{-37} $ m"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "$ 6.6 \\times 10^{-33} $ m"
+      },
+      "b": {
+        "image": "",
+        "text": "$ 6.6 \\times 10^{-35} $ m"
+      },
+      "c": {
+        "image": "",
+        "text": "$ 6.6 \\times 10^{-36} $ m"
+      }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "The de-Broglie wavelength of particle of a parcticle with mass 1 g and velocity 100 m/s is:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Oxidation"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "Electrophilic substitution"
+      },
+      "b": {
+        "image": "",
+        "text": "Nucleophilic substitution"
+      },
+      "c": {
+        "image": "",
+        "text": "Free-radical substitution"
+      }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Halogenations of alkanes is an example of:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "$ C_2H_4 $"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "$ CH_4 $"
+      },
+      "b": {
+        "image": "",
+        "text": "$ C_2H_6 $"
+      },
+      "c": {
+        "image": "",
+        "text": "$ C_2H_2 $"
+      }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "$ CaC_2 $ reacts with $ H_2O $ to produce:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "$ SO_3 $"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "CO"
+      },
+      "b": {
+        "image": "",
+        "text": "$ CO_2 $"
+      },
+      "c": {
+        "image": "",
+        "text": "$ SO_2 $"
+      }
+    },
+    "marks": 1,
+    "subject": "Chemistry",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "The gas evolved by heating potassium ferrocyanide crystals with Conc. $ H_2SO_4 $ is:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Viral inhibitor"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "Bacteriostatic only"
+      },
+      "b": {
+        "image": "",
+        "text": "Bactericidal only"
+      },
+      "c": {
+        "image": "",
+        "text": "Bacteriostatic or bactericidal"
+      }
+    },
+    "marks": 1,
+    "subject": "Botany",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Antibiotics are"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Cyanophyceae"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "Rhodophyceae"
+      },
+      "b": {
+        "image": "",
+        "text": "Phaeophyceae"
+      },
+      "c": {
+        "image": "",
+        "text": "Chlorophyceae"
+      }
+    },
+    "marks": 1,
+    "subject": "Botany",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Green algae belongs to"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "none"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "sporophylls"
+      },
+      "b": {
+        "image": "",
+        "text": "cataphylls"
+      },
+      "c": {
+        "image": "",
+        "text": "mesophylls"
+      }
+    },
+    "marks": 1,
+    "subject": "Botany",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "The short bearing leaves of fern are called:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "none"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "gametophytic tissue on ventral side"
+      },
+      "b": {
+        "image": "",
+        "text": "gametophytic tissue on dorsal side"
+      },
+      "c": {
+        "image": "",
+        "text": "sporophytic tissue of sporophyll"
+      }
+    },
+    "marks": 1,
+    "subject": "Botany",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Sex organs of pteridophytes are embedded in:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Cucurbita"
+      },
+      "correct": "d",
+      "a": {
+        "image": "",
+        "text": "Riccia"
+      },
+      "b": {
+        "image": "",
+        "text": "Marchantia"
+      },
+      "c": {
+        "image": "",
+        "text": "Funeria"
+      }
+    },
+    "marks": 1,
+    "subject": "Botany",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Which of the following is not a Bryophyte?"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Angiosperm"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "Bryophyta"
+      },
+      "b": {
+        "image": "",
+        "text": "Pteridophyta"
+      },
+      "c": {
+        "image": "",
+        "text": "Gymnosperm"
+      }
+    },
+    "marks": 1,
+    "subject": "Botany",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Which of the following is seedless vascular plant?"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "flower"
+      },
+      "correct": "d",
+      "a": {
+        "image": "",
+        "text": "Embryo"
+      },
+      "b": {
+        "image": "",
+        "text": "Vascular tissue"
+      },
+      "c": {
+        "image": "",
+        "text": "seed"
+      }
+    },
+    "marks": 1,
+    "subject": "Botany",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "During plant evolution, which one develops last?"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "leaves"
+      },
+      "correct": "d",
+      "a": {
+        "image": "",
+        "text": "Roots"
+      },
+      "b": {
+        "image": "",
+        "text": "Rhizoids"
+      },
+      "c": {
+        "image": "",
+        "text": "stems"
+      }
+    },
+    "marks": 1,
+    "subject": "Botany",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Sporangia of fern develop on"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Typhoid"
+      },
+      "correct": "d",
+      "a": {
+        "image": "",
+        "text": "Malaria"
+      },
+      "b": {
+        "image": "",
+        "text": "cholera"
+      },
+      "c": {
+        "image": "",
+        "text": "yellow fever"
+      }
+    },
+    "marks": 1,
+    "subject": "Botany",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Widal test is used for susceptibility of:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "mesophyte"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "xerophytes"
+      },
+      "b": {
+        "image": "",
+        "text": "hydrophytes"
+      },
+      "c": {
+        "image": "",
+        "text": "halophytes"
+      }
+    },
+    "marks": 1,
+    "subject": "Botany",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Mechanical tissue is undeveloped in"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Hugo von Mohl"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "Purkinje"
+      },
+      "b": {
+        "image": "",
+        "text": "Robert Brown"
+      },
+      "c": {
+        "image": "",
+        "text": "Robert Hooke"
+      }
+    },
+    "marks": 1,
+    "subject": "Botany",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Who coined the term cell?"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Telophase"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "Anaphase"
+      },
+      "b": {
+        "image": "",
+        "text": "Metaphase"
+      },
+      "c": {
+        "image": "",
+        "text": "Prophase"
+      }
+    },
+    "marks": 1,
+    "subject": "Botany",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "In which of the following stages, chromosomes are arranged in equatorial phase?"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "negligeable to $ O_2 $ liberated"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "double of $ O_2 $ liberated"
+      },
+      "b": {
+        "image": "",
+        "text": "equal to $ O_2 $ liberated"
+      },
+      "c": {
+        "image": "",
+        "text": "half of $ O_2 $ liberated"
+      }
+    },
+    "marks": 1,
+    "subject": "Botany",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Amount of $ CO_2 $ absorbed in photosynthesis is almost"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "none"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "root"
+      },
+      "b": {
+        "image": "",
+        "text": "stem"
+      },
+      "c": {
+        "image": "",
+        "text": "leaf"
+      }
+    },
+    "marks": 1,
+    "subject": "Botany",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Lowest value of water potential can be observed in"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "glucoprotein"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "acidic proteins"
+      },
+      "b": {
+        "image": "",
+        "text": "basic proteins"
+      },
+      "c": {
+        "image": "",
+        "text": "mucoprotein"
+      }
+    },
+    "marks": 1,
+    "subject": "Botany",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Histones are"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "endodermis"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "Epiblema"
+      },
+      "b": {
+        "image": "",
+        "text": "pericycle"
+      },
+      "c": {
+        "image": "",
+        "text": "cortex"
+      }
+    },
+    "marks": 1,
+    "subject": "Botany",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "In roots lateral branches grow from"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Solanaceae"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "Leguminoseae"
+      },
+      "b": {
+        "image": "",
+        "text": "Compositae"
+      },
+      "c": {
+        "image": "",
+        "text": "Liliaceae"
+      }
+    },
+    "marks": 1,
+    "subject": "Botany",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Capitulum inflorescence with involucres of bracrs having disc and ray florets is"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Crysanthemum"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "Mustard"
+      },
+      "b": {
+        "image": "",
+        "text": "Lathyrus"
+      },
+      "c": {
+        "image": "",
+        "text": "Cotton"
+      }
+    },
+    "marks": 1,
+    "subject": "Botany",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Leafy stipules are present in"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "rafflesia"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "cuscuta"
+      },
+      "b": {
+        "image": "",
+        "text": "loranthus"
+      },
+      "c": {
+        "image": "",
+        "text": "pitcher plant"
+      }
+    },
+    "marks": 1,
+    "subject": "Botany",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Total stem parasite is"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "none"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "Cephaleuros"
+      },
+      "b": {
+        "image": "",
+        "text": "Vorticella"
+      },
+      "c": {
+        "image": "",
+        "text": "Spirogyra"
+      }
+    },
+    "marks": 1,
+    "subject": "Botany",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Parasitic algae is:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Dixon and Jolly"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "Urey and Miller"
+      },
+      "b": {
+        "image": "",
+        "text": "Jacob and Monod"
+      },
+      "c": {
+        "image": "",
+        "text": "Oparin and Haldane"
+      }
+    },
+    "marks": 1,
+    "subject": "Zoology",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Spark discharge apparatus for testing chemical origin of life was designed by"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "ulna"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "tibia"
+      },
+      "b": {
+        "image": "",
+        "text": "fibula"
+      },
+      "c": {
+        "image": "",
+        "text": "radius"
+      }
+    },
+    "marks": 1,
+    "subject": "Zoology",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Cnemial crest is present in:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Aves"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "Amphibia"
+      },
+      "b": {
+        "image": "",
+        "text": "Mammalia"
+      },
+      "c": {
+        "image": "",
+        "text": "Repitilia"
+      }
+    },
+    "marks": 1,
+    "subject": "Zoology",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Mesonephric kidney is found in:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Mammalia"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "Pisces"
+      },
+      "b": {
+        "image": "",
+        "text": "Amphibia"
+      },
+      "c": {
+        "image": "",
+        "text": "Repitilia"
+      }
+    },
+    "marks": 1,
+    "subject": "Zoology",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Dicondylic skull with 10 pairs of cranial nerves occur in"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Fishes"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "Gymnosperms"
+      },
+      "b": {
+        "image": "",
+        "text": "Mammals"
+      },
+      "c": {
+        "image": "",
+        "text": "Dinosaurs"
+      }
+    },
+    "marks": 1,
+    "subject": "Zoology",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Mesozoic era was dominated by"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Amphibia"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "Mollusca"
+      },
+      "b": {
+        "image": "",
+        "text": "Echinodermata"
+      },
+      "c": {
+        "image": "",
+        "text": "Pisces"
+      }
+    },
+    "marks": 1,
+    "subject": "Zoology",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Cuttle fish is a member of"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "jointed leg, coelomate and marine"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "Coelomate, spiny and marine"
+      },
+      "b": {
+        "image": "",
+        "text": "Acoelomate, spiny and marine"
+      },
+      "c": {
+        "image": "",
+        "text": "Coelomate, horny and marine"
+      }
+    },
+    "marks": 1,
+    "subject": "Zoology",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Echinodermata is a group of animals:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Birds"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "Fishes"
+      },
+      "b": {
+        "image": "",
+        "text": "Amphibians"
+      },
+      "c": {
+        "image": "",
+        "text": "Reptiles"
+      }
+    },
+    "marks": 1,
+    "subject": "Zoology",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Heart is two chambered in:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "sense organs and muscles"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "Testes and Pancreas"
+      },
+      "b": {
+        "image": "",
+        "text": "Nervous system and skeleton"
+      },
+      "c": {
+        "image": "",
+        "text": "Blood vessels and excretory organs"
+      }
+    },
+    "marks": 1,
+    "subject": "Zoology",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Which one develops from mesoderm?"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "4 steps"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "6 steps"
+      },
+      "b": {
+        "image": "",
+        "text": "3 steps"
+      },
+      "c": {
+        "image": "",
+        "text": "5 steps"
+      }
+    },
+    "marks": 1,
+    "subject": "Zoology",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Development of frog completes in:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "all"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "venacava"
+      },
+      "b": {
+        "image": "",
+        "text": "sinus venosus"
+      },
+      "c": {
+        "image": "",
+        "text": "pulmonary artery"
+      }
+    },
+    "marks": 1,
+    "subject": "Zoology",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "In frog, blood flows to right auricle from:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "none"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "10 pairs"
+      },
+      "b": {
+        "image": "",
+        "text": "9 pairs"
+      },
+      "c": {
+        "image": "",
+        "text": "12 pairs"
+      }
+    },
+    "marks": 1,
+    "subject": "Zoology",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Number of cranial nerves in frog is"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "both a and c"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "testes of frog"
+      },
+      "b": {
+        "image": "",
+        "text": "kidney of frog"
+      },
+      "c": {
+        "image": "",
+        "text": "kidney of rabbit"
+      }
+    },
+    "marks": 1,
+    "subject": "Zoology",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Bidders canal is found in"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Chemotaxis"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "Hydrotaxis"
+      },
+      "b": {
+        "image": "",
+        "text": "Geotaxis"
+      },
+      "c": {
+        "image": "",
+        "text": "Rheotaxis"
+      }
+    },
+    "marks": 1,
+    "subject": "Zoology",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Response of organism to current of water is:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "all"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "selection and ingestion of food"
+      },
+      "b": {
+        "image": "",
+        "text": "ingestion and burrowing"
+      },
+      "c": {
+        "image": "",
+        "text": "selection and burrowing"
+      }
+    },
+    "marks": 1,
+    "subject": "Zoology",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "In earthworm, mouth helps in"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "all"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "Ammonotelic"
+      },
+      "b": {
+        "image": "",
+        "text": "Ureotelic"
+      },
+      "c": {
+        "image": "",
+        "text": "Uricotelic"
+      }
+    },
+    "marks": 1,
+    "subject": "Zoology",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Well fed earthworm is:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "all"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "septal nephridia"
+      },
+      "b": {
+        "image": "",
+        "text": "pharyngeal nephridia"
+      },
+      "c": {
+        "image": "",
+        "text": "integomentory nephridia"
+      }
+    },
+    "marks": 1,
+    "subject": "Zoology",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Which nephridia in earthworm is related to blood gland?"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "egestion"
+      },
+      "correct": "d",
+      "a": {
+        "image": "",
+        "text": "ingestion"
+      },
+      "b": {
+        "image": "",
+        "text": "osmoregulation"
+      },
+      "c": {
+        "image": "",
+        "text": "reproduction"
+      }
+    },
+    "marks": 1,
+    "subject": "Zoology",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Crytopyge of paramecium is meant for"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "incoculation of mosquito and sporozoites formation"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "inoculation and first fever"
+      },
+      "b": {
+        "image": "",
+        "text": "liver cycle and RBC cycle"
+      },
+      "c": {
+        "image": "",
+        "text": "inoculation and first release of merozoites"
+      }
+    },
+    "marks": 1,
+    "subject": "Zoology",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Pre-patent period of malaria is between:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "medulla oblangata"
+      },
+      "correct": "d",
+      "a": {
+        "image": "",
+        "text": "cerebellum"
+      },
+      "b": {
+        "image": "",
+        "text": "the vagus nerve"
+      },
+      "c": {
+        "image": "",
+        "text": "cerebral peduncle"
+      }
+    },
+    "marks": 1,
+    "subject": "Zoology",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Respiratory centre is located in"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "secretion of thyrotropin"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "regulation of body temperature"
+      },
+      "b": {
+        "image": "",
+        "text": "regulation of body growth"
+      },
+      "c": {
+        "image": "",
+        "text": "immunological functions"
+      }
+    },
+    "marks": 1,
+    "subject": "Zoology",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Mammalian thymus is mainly concerned with"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Bundle of His"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "SA node"
+      },
+      "b": {
+        "image": "",
+        "text": "AV node"
+      },
+      "c": {
+        "image": "",
+        "text": "sinus venosus"
+      }
+    },
+    "marks": 1,
+    "subject": "Zoology",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "The pacemaker of heart is"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "2"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "1"
+      },
+      "b": {
+        "image": "",
+        "text": "3"
+      },
+      "c": {
+        "image": "",
+        "text": "4"
+      }
+    },
+    "marks": 1,
+    "subject": "Zoology",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "One oxygen molecule can carry ....... Hb molecules"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "phylogeny repeats ontogeny"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "omnis vivu e vivum"
+      },
+      "b": {
+        "image": "",
+        "text": "omnus cellula e cellula"
+      },
+      "c": {
+        "image": "",
+        "text": "ontogeny repeates phylogeny"
+      }
+    },
+    "marks": 1,
+    "subject": "Zoology",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "The biogenetic law of Haeckel is"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Both homologous and anaologous"
+      },
+      "correct": "d",
+      "a": {
+        "image": "",
+        "text": "Homologous with no analogy"
+      },
+      "b": {
+        "image": "",
+        "text": "Analogous with no homology"
+      },
+      "c": {
+        "image": "",
+        "text": "Neither analogous nor homologous"
+      }
+    },
+    "marks": 1,
+    "subject": "Zoology",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Wings of bird and bat are"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Plasma = blood + lymphocytes"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "Neuron = cyton + dendrite + axon + synapse"
+      },
+      "b": {
+        "image": "",
+        "text": "Lymph = plasma + RBC + WBC"
+      },
+      "c": {
+        "image": "",
+        "text": "Blood = plasma + RBC + WBC + blood platelets"
+      }
+    },
+    "marks": 1,
+    "subject": "Zoology",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Which is correct?"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Reticulo cartilage"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "Hyaline cartilage"
+      },
+      "b": {
+        "image": "",
+        "text": "Elastic cartilage"
+      },
+      "c": {
+        "image": "",
+        "text": "Fibro cartilage"
+      }
+    },
+    "marks": 1,
+    "subject": "Zoology",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Intervertebral disc consists of shock absorbing connective tissue called as"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "thymus"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "thyroid"
+      },
+      "b": {
+        "image": "",
+        "text": "parathyroid"
+      },
+      "c": {
+        "image": "",
+        "text": "pituitary"
+      }
+    },
+    "marks": 1,
+    "subject": "Zoology",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "The hormone that controls Calcium and Phosphorus level in body is secreted by"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Melanin"
+      },
+      "correct": "d",
+      "a": {
+        "image": "",
+        "text": "keratin"
+      },
+      "b": {
+        "image": "",
+        "text": "$ \\beta $ cartoene"
+      },
+      "c": {
+        "image": "",
+        "text": "Histochrome"
+      }
+    },
+    "marks": 1,
+    "subject": "Zoology",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "Which is responsible for body pigmentation?"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "intestine"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "ommasum"
+      },
+      "b": {
+        "image": "",
+        "text": "Rumen"
+      },
+      "c": {
+        "image": "",
+        "text": "colon"
+      }
+    },
+    "marks": 1,
+    "subject": "Zoology",
+    "exam_code": 1405923269,
+    "question": {
+      "image": "",
+      "text": "In desert, camel can store extra water in the:"
+    },
+    "exam_type": "MEDICAL"
+  }
+]

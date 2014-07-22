@@ -2189,7 +2189,7 @@
     },
     {
         "question": {
-            "text": "The compound B formed in the sequence of reaction: $$ CH_3CH_2CH_2OH \\xrightarrow{PCl_5}A \\xrightarrow[KOH]{alcohalic} B \\space is: $$ "
+            "text": "The compound B formed in the sequence of reaction: $$ CH_3CH_2CH_2OH \\xrightarrow{PCl_5}A \\xrightarrow[KOH]{alcoholic} B \\space is: $$ "
         },
         "answer": {
             "a": {

@@ -63,20 +63,35 @@
 
             <div id="upcomingPracticeExams" class="tab-content active">
               {% if '/iom/' not in request.path %}
-              <article class="valign row text-color-white ui-widget-content ui-corner-all my-margin" style="border: 1px solid red;">
-                  <div style="width:25%">
-                      <img src="/static/images/exam.jpg" width="145px" />
-                  </div>
-                  <div style="width:65%">
-                      <h4><a href="#" id=""><strong>Start New IOE Practice Exam</strong></a></h4>
-                      <p><strong>Date: </strong>When ever you like in a single sitting</p>
-                      <p><strong>Time: </strong>Anytime</p>
-                          <p><strong>Cost: </strong>Rs. 30 (<a href="/coupon/">coupon code</a> entry required)</p>
-                       <div class="medium warning btn pretty button-margin" >
-                            <a id="generateNewExam" href="javascript:void(0)">Start New Exam</a>
-                        </div>
+                <article class="valign row text-color-white ui-widget-content ui-corner-all my-margin" style="border: 1px solid red;">
+                    <div style="width:25%">
+                        <img src="/static/images/exam.jpg" width="145px" />
                     </div>
-              </article>
+                    <div style="width:65%">
+                        <h4><a href="#" id=""><strong>Start New IOE Practice Exam</strong></a></h4>
+                        <p><strong>Date: </strong>When ever you like in a single sitting</p>
+                        <p><strong>Time: </strong>Anytime</p>
+                            <p><strong>Cost: </strong>Rs. 30 (<a href="/coupon/">coupon code</a> entry required)</p>
+                         <div class="medium warning btn pretty button-margin" >
+                              <a id="generateNewIOEExam" href="javascript:void(0)">Start New Exam</a>
+                          </div>
+                      </div>
+                </article>
+              {% else %}
+                <article class="valign row text-color-white ui-widget-content ui-corner-all my-margin" style="border: 1px solid red;">
+                    <div style="width:25%">
+                        <img src="/static/images/exam.jpg" width="145px" />
+                    </div>
+                    <div style="width:65%">
+                        <h4><a href="#" id=""><strong>Start New IOM Practice Exam</strong></a></h4>
+                        <p><strong>Date: </strong>When ever you like in a single sitting</p>
+                        <p><strong>Time: </strong>Anytime</p>
+                            <p><strong>Cost: </strong>Rs. 20 (<a href="/coupon/">coupon code</a> entry required)</p>
+                         <div class="medium warning btn pretty button-margin" >
+                              <a id="generateNewIOMExam" href="javascript:void(0)">Start New Exam</a>
+                          </div>
+                      </div>
+                </article>              
               {% endif %}
               {% for eachExam in upcoming_exams %}
                 {% ifequal eachExam.exam_family  'DPS' %}
@@ -94,10 +109,8 @@
                 </div>
                 <div style="width:65%">
                     <!-- <h4><a href="#" id="{{eachExam.code}}/"><strong>{{eachExam.name}}</strong></a></h4> -->
-                    {% if eachExam.exam_category == 'BE-IOE' and eachExam.exam_family == 'DPS' %}
-                    <h4><a href="#" id="{{eachExam.code}}/"><strong>{{eachExam.name}}</strong></a></h4>
-                    {% else %}
-                      <h4><a href="#" id="{{eachExam.code}}/"><strong>IOM Practice Model {{forloop.counter}}</strong></a></h4>                    
+                    {% if eachExam.exam_family == 'DPS' %}
+                      <h4><a href="#" id="{{eachExam.code}}/"><strong>{{eachExam.name}}</strong></a></h4>
                     {% endif %}
                     <p><strong>Date: </strong>When ever you like in a single sitting</p>
                     <p><strong>Time: </strong>Anytime</p>
@@ -355,6 +368,8 @@
 <script src="{% static "js/ajax-handle.js" %}"></script>
 <script type="text/javascript">
 var ex_code;
+var ex_type;
+
   function attempt_exam(exam_code){
     ex_code=exam_code;
     $('#infoText').html('');
@@ -390,21 +405,34 @@ $('#enterCouponforNewExamCode').keypress(function(e) {
     }
 });
 
-  $('#generateNewExam').on('click', function(){
+$('#generateNewIOEExam').on('click', function(){
+  ex_type = 'be-ioe';
+
     {% if 'BE-IOE' in subscription_type or 'IDP' in subscription_type %}
-      get_new_ioe_exam();      
-      
+      get_new_exam('be-ioe');
       {% else %}
-        var html_str = 'Coupon codes are available at various <a href="/#/" style="color:red;"><strong>distributors</strong></a>. <h3 style="font-weight:bold"> Please enter code below</h3>'
+        var html_str = 'Coupon codes are available at various <a href="/#/" style="color:red;"><strong>distributors</strong></a>. <h3 style="font-weight:bold"> Please enter code below</h3>';
+        $('#infoText').html(html_str);
+        $('#validateCouponforNewExam').click();
+    {% endif %}
+  });
+  
+$('#generateNewIOMExam').on('click', function(){
+  ex_type = 'mbbs-iom';
+    {% if 'MBBS-IOM' in subscription_type or 'IDP' in subscription_type %}
+      get_new_exam('mbbs-iom');
+      {% else %}
+        var html_str = 'Coupon codes are available at various <a href="/#/" style="color:red;"><strong>distributors</strong></a>. <h3 style="font-weight:bold"> Please enter code below</h3>';
         $('#infoText').html(html_str); 
         $('#validateCouponforNewExam').click();
     {% endif %}
   });
 
-  $('#enterCouponforNewExamCodeBtn').on('click', function(){
+$('#enterCouponforNewExamCodeBtn').on('click', function(){
     var code = $('#enterCouponforNewExamCode').val();
-    chek_valid_dps_code(code);
-  });
+    chek_valid_dps_code(code, ex_type);
+});
+
 </script>
 
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>

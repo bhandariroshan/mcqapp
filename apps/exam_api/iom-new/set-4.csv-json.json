@@ -1,0 +1,2902 @@
+[
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "not expressible in terms of M, L, T"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "$ M^0L^0T^1 $"
+      },
+      "b": {
+        "image": "",
+        "text": "$ M^1L^0T^2 $"
+      },
+      "c": {
+        "image": "",
+        "text": "$ M^0L^0T^0 $"
+      }
+    },
+    "marks": 1,
+    "subject": "physics",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "If C and R denote capacitance and resistance, the dimension of CR are"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "$ \\sqrt{\\frac{2H \\sin\\theta}{g}} $"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "$ \\sqrt{\\frac{2H}{g}} $"
+      },
+      "b": {
+        "image": "",
+        "text": "$ 2 \\sqrt{\\frac{2H}{g}} $"
+      },
+      "c": {
+        "image": "",
+        "text": "$ 2 \\sqrt{\\frac{2H \\sin\\theta}{g}} $"
+      }
+    },
+    "marks": 1,
+    "subject": "physics",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "A stone is thrown at an angle $ \\theta $ to the horizontal reaches a maximum height H. Then the time of flight of stone will be"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "$ 8π^2N $"
+      },
+      "correct": "d",
+      "a": {
+        "image": "",
+        "text": "4πN"
+      },
+      "b": {
+        "image": "",
+        "text": "$ 4π^2N $"
+      },
+      "c": {
+        "image": "",
+        "text": "8πN"
+      }
+    },
+    "marks": 1,
+    "subject": "physics",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "A particle of mass 2 kg is moving along a circular path of radius 1m. If its angular speed is 2π rad/s, the centripetal force will be"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "l α 1/L"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "l α y"
+      },
+      "b": {
+        "image": "",
+        "text": "l α 1/A"
+      },
+      "c": {
+        "image": "",
+        "text": "l α A"
+      }
+    },
+    "marks": 1,
+    "subject": "physics",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "An iron bar of length L, cross section A and Young's modulus y is pulled by a foce F from both ends so as to produce an elongation l. Which of the following statement is correct? "
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "2:01"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "103:41:00"
+      },
+      "b": {
+        "image": "",
+        "text": "$ 102^2: 101:^2 $"
+      },
+      "c": {
+        "image": "",
+        "text": "8:01"
+      }
+    },
+    "marks": 1,
+    "subject": "physics",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Pressure inside two soap bubble is 1.01 and 1.02 atm. Ratio between their volume is "
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "2 / 3"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "1 / 3"
+      },
+      "b": {
+        "image": "",
+        "text": "2 / 5"
+      },
+      "c": {
+        "image": "",
+        "text": "3 / 2"
+      }
+    },
+    "marks": 1,
+    "subject": "physics",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Two liquids are at temperature 20°C and 40°C. When the same mass of them is mixed, the temperature of the mixture is 32°C. What is the ratio of specific heats?"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "13.22 g/cc"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "13.11 g/cc"
+      },
+      "b": {
+        "image": "",
+        "text": "13.65 g/cc"
+      },
+      "c": {
+        "image": "",
+        "text": "14.57 g/cc"
+      }
+    },
+    "marks": 1,
+    "subject": "physics",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "The coefficient of real expansion of mercury is $ 0.18 x 10^-3 /°C $. If the density of mercury at 0°C is 13.6 g/cc, the density at 473 K will be  "
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "$ E_2=4E_1 $"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "$ E_2=24E_1 $"
+      },
+      "b": {
+        "image": "",
+        "text": "$ E_2=16E_1 $"
+      },
+      "c": {
+        "image": "",
+        "text": "$ E_2=8E_1 $"
+      }
+    },
+    "marks": 1,
+    "subject": "physics",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "The rate of emission of radiation of a black body at temperature 27°C is $ E_1 $. If it temperature is increased to 327°C, the rate of emission of radiation is $ E_2 $. The relation between $ E_1\\space & \\space aE_2 $ is "
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "1-f/x"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "x/f"
+      },
+      "b": {
+        "image": "",
+        "text": "1+f/x"
+      },
+      "c": {
+        "image": "",
+        "text": "f/x"
+      }
+    },
+    "marks": 1,
+    "subject": "physics",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "The maginification of image when an object is plaed at a distance x from the principal focus of a mirror of focal length f is"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "1.732"
+      },
+      "correct": "d",
+      "a": {
+        "image": "",
+        "text": "1.31"
+      },
+      "b": {
+        "image": "",
+        "text": "1.33"
+      },
+      "c": {
+        "image": "",
+        "text": "1.6"
+      }
+    },
+    "marks": 1,
+    "subject": "physics",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "If the angle of minimum deviation is 60° for an equilateral prism, then the refractive index of the material of the prism is "
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "$ (\\sqrt{I_1} - \\sqrt{I_2})^2 $"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "$ 2(I_1+I_2) $"
+      },
+      "b": {
+        "image": "",
+        "text": "$ I_1 + I_1 $"
+      },
+      "c": {
+        "image": "",
+        "text": "$ (\\sqrt{I_1} + \\sqrt{I_2})^2 $"
+      }
+    },
+    "marks": 1,
+    "subject": "physics",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Two periodic waves of intensities $ I_1 \\space and \\space I_2 $ pass through a region at the same time in the ame direction. The sum of maximum and minimum intensities is"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "$ 0.5 \\times 10^8 $"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "$ 3 \\times 10^8 $"
+      },
+      "b": {
+        "image": "",
+        "text": "$ 3 / \\sqrt{2} \\times 10^8 $"
+      },
+      "c": {
+        "image": "",
+        "text": "$  \\sqrt{3} \\times 10^8 $"
+      }
+    },
+    "marks": 1,
+    "subject": "physics",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "When the angle of incidence on a material is 60, the reflected light is completely polarized. The velocity of the refracted ray inside the material in m/s is"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "$ \\epsilon_2 / A \\epsilon^2 d $"
+      },
+      "correct": "d",
+      "a": {
+        "image": "",
+        "text": "$ 1/2 \\space \\epsilon_0 \\epsilon^2 Ad $"
+      },
+      "b": {
+        "image": "",
+        "text": "$ 1/2 \\space \\epsilon_0 \\epsilon^2 / Ad $"
+      },
+      "c": {
+        "image": "",
+        "text": "$ \\epsilon_0 epsilon^2 /Ad $"
+      }
+    },
+    "marks": 1,
+    "subject": "physics",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "The energy required to charge a parallel plate condenser of plate separation d and plate area of cross-section A such that the uniform electric field between the plates is $ \\epsilon $ is"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "$ 9 \\times 10^5 $ v"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "80 v"
+      },
+      "b": {
+        "image": "",
+        "text": "$ 8 \\times 10^6 $ v"
+      },
+      "c": {
+        "image": "",
+        "text": "9 v"
+      }
+    },
+    "marks": 1,
+    "subject": "physics",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "The electric potential at the surface of an atomic nucleus (z=50) of radius $ 9 \\times 10^-{15} $ m is"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "4R"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "R/2"
+      },
+      "b": {
+        "image": "",
+        "text": "R/4"
+      },
+      "c": {
+        "image": "",
+        "text": "R/8"
+      }
+    },
+    "marks": 1,
+    "subject": "physics",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "When a wire of uniform cross-section a, length l and radius R is bent into complete circle, resistance between any two of diametrically opposite points will be "
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "20%"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "2.50%"
+      },
+      "b": {
+        "image": "",
+        "text": "10%"
+      },
+      "c": {
+        "image": "",
+        "text": "5%"
+      }
+    },
+    "marks": 1,
+    "subject": "physics",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "The electric current in a lamp decreases by 5%. The power output decreases by "
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "$ 1/\\rho $"
+      },
+      "correct": "d",
+      "a": {
+        "image": "",
+        "text": "$ \\rho^{2} $"
+      },
+      "b": {
+        "image": "",
+        "text": "$ 1/\\sqrt{\\rho} $"
+      },
+      "c": {
+        "image": "",
+        "text": "$ \\rho $"
+      }
+    },
+    "marks": 1,
+    "subject": "physics",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "According to Joule's law, If p.d. across a conductor having a material of specific resistance $ \\rho $, remains constant, then heat produced in the conductor is directly proportional to "
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "1/2 times"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "8 times"
+      },
+      "b": {
+        "image": "",
+        "text": "4 times "
+      },
+      "c": {
+        "image": "",
+        "text": "2 times "
+      }
+    },
+    "marks": 1,
+    "subject": "physics",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "If the velocity of the charged particle is doubled and strength of magnetic field is halved, then radius becomes"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "144 : 7"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "9 : 5"
+      },
+      "b": {
+        "image": "",
+        "text": "36 : 5"
+      },
+      "c": {
+        "image": "",
+        "text": "27 : 15"
+      }
+    },
+    "marks": 1,
+    "subject": "physics",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "The ratio of the  maxium to the minimum wavelenths in Balmer series of H-spectrum is"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Conservation of energy"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "conservation of linear momentum"
+      },
+      "b": {
+        "image": "",
+        "text": "conservation of angular momentum"
+      },
+      "c": {
+        "image": "",
+        "text": "conservation of quantum frequency"
+      }
+    },
+    "marks": 1,
+    "subject": "physics",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "To explain his theory, Bohr used"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "24"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "4"
+      },
+      "b": {
+        "image": "",
+        "text": "8"
+      },
+      "c": {
+        "image": "",
+        "text": "16"
+      }
+    },
+    "marks": 1,
+    "subject": "chemistry",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Helium diffuses twice as fast as another gas B. If the vapour density of He is 2, the molecular weight of B is"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "at high temp and low pressure"
+      },
+      "correct": "d",
+      "a": {
+        "image": "",
+        "text": "at low temp and high pressure"
+      },
+      "b": {
+        "image": "",
+        "text": "at low temp and low pressure"
+      },
+      "c": {
+        "image": "",
+        "text": "at high temp and high pressure"
+      }
+    },
+    "marks": 1,
+    "subject": "chemistry",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "A gas is said to behave like an ideal gas when the relation PV/T = constant. When do you expect a real gas to behave like an ideal gas?"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "44.8 L"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "6.4 L"
+      },
+      "b": {
+        "image": "",
+        "text": "11.2 L"
+      },
+      "c": {
+        "image": "",
+        "text": "22.4 L"
+      }
+    },
+    "marks": 1,
+    "subject": "chemistry",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "12 g of Mg on reacting with an acid would give $ H_2 $, the volume of which at STP would be"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Isochores"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "Isotopes"
+      },
+      "b": {
+        "image": "",
+        "text": "Isotones"
+      },
+      "c": {
+        "image": "",
+        "text": "Isobars"
+      }
+    },
+    "marks": 1,
+    "subject": "chemistry",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Atoms having same mass number but different nuclear charges are called"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "8"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "2"
+      },
+      "b": {
+        "image": "",
+        "text": "4"
+      },
+      "c": {
+        "image": "",
+        "text": "6"
+      }
+    },
+    "marks": 1,
+    "subject": "chemistry",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "The co-ordination number of Platinum in $ [Pt(NH_3)_4Cl_2]^{2+} $ ion is:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "$ Zn/Cu^{2+} // Zn ^{2+} / Cu $"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "$ Cu/Cu^{2+} // Zn ^{2+} / Zn $"
+      },
+      "b": {
+        "image": "",
+        "text": "$ Zn/Zn^{2+} // Cu ^{2+} / Cu $"
+      },
+      "c": {
+        "image": "",
+        "text": "$ Cu/Zn^{2+} // Cu ^{2+} / Zn $"
+      }
+    },
+    "marks": 1,
+    "subject": "chemistry",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "The cell reaction, $ Zn + Cu^{2+} \\rightarrow Zn^{2+} + Cu $, is best represented by:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "atomic mass of atom"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "shape of atom"
+      },
+      "b": {
+        "image": "",
+        "text": "mass of atom"
+      },
+      "c": {
+        "image": "",
+        "text": "atomic number of atom"
+      }
+    },
+    "marks": 1,
+    "subject": "chemistry",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "The long form of periodic table is based on"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "3.9494"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "2.8854"
+      },
+      "b": {
+        "image": "",
+        "text": "4.7882"
+      },
+      "c": {
+        "image": "",
+        "text": "6.1975"
+      }
+    },
+    "marks": 1,
+    "subject": "chemistry",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "The $ P^H $ of a solution obtained by mixing 5 g of $ CH_3COOH $ and 7.5 g of $CH_3COONa $ and making the volume equal to 500 ml is:               [$ K_a $ for $ CH_3COOH = 1.80 \\times 10^{-5} $]"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "15"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "45"
+      },
+      "b": {
+        "image": "",
+        "text": "90"
+      },
+      "c": {
+        "image": "",
+        "text": "22.5"
+      }
+    },
+    "marks": 1,
+    "subject": "chemistry",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Equivalent weight of oxalic acid is"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "all of the above"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "Normality"
+      },
+      "b": {
+        "image": "",
+        "text": "Molality"
+      },
+      "c": {
+        "image": "",
+        "text": "Molarity"
+      }
+    },
+    "marks": 1,
+    "subject": "chemistry",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Which is not affected by temperature"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Brownian movement"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "Electophoresis"
+      },
+      "b": {
+        "image": "",
+        "text": "Electro-osmosis"
+      },
+      "c": {
+        "image": "",
+        "text": "Tyndall effect"
+      }
+    },
+    "marks": 1,
+    "subject": "chemistry",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "The migration of colloidal particle under the influence of electric field towards an electrode is known as"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "9.9 g"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "6.6 g"
+      },
+      "b": {
+        "image": "",
+        "text": "1.32 g"
+      },
+      "c": {
+        "image": "",
+        "text": "3.3 g"
+      }
+    },
+    "marks": 1,
+    "subject": "chemistry",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "What is the amount of chlorine evolved when 2 A of current is passed for 20 min in an aqueous solution of NaCl?"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "K x K' = 1"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "K = K'"
+      },
+      "b": {
+        "image": "",
+        "text": "K = $ K'^{1/2} $"
+      },
+      "c": {
+        "image": "",
+        "text": "$ K' = K ^{1/2} $"
+      }
+    },
+    "marks": 1,
+    "subject": "chemistry",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "The equilibrium constant for the reversible reaction, $ N_2 + 3H_2 \\leftrightarrow 2NH_3 $ is K and for the reaction $ \\frac{1}{2}N_2 + \\frac{3}{2}H_2 \\leftrightarrow NH_3 $ is K' ; then"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "$ 10^{39} $"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "$ 10^{90} $"
+      },
+      "b": {
+        "image": "",
+        "text": "$ 10^{19} $"
+      },
+      "c": {
+        "image": "",
+        "text": "$ 10^{20} $"
+      }
+    },
+    "marks": 1,
+    "subject": "chemistry",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "The equilibrium constant $ (K_C) $ or the reaction is: $ 3Sn^{4+} + Cr \\rightarrow 3Sn^{2+} + 2 Cr^{3+} \\space [E^o_{cell} = 0.885 V, n=6 ]$"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Hess's law"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "First law of thermodynamics"
+      },
+      "b": {
+        "image": "",
+        "text": "Second law of thermodynamics"
+      },
+      "c": {
+        "image": "",
+        "text": "Third law of thermodynamics"
+      }
+    },
+    "marks": 1,
+    "subject": "chemistry",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Which law states that entropy of all pure crystalline solids is zero at absolute zero?"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "$ H_3PO_4 $"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "$ H_3PO_3 $"
+      },
+      "b": {
+        "image": "",
+        "text": "$ H_3PO_2 $"
+      },
+      "c": {
+        "image": "",
+        "text": "$ H_4P_2O_7 $"
+      }
+    },
+    "marks": 1,
+    "subject": "chemistry",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "$ PCl_3 $ and cold water reacts to produce"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "$ HNO_2 $"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "$ HNO_3 $"
+      },
+      "b": {
+        "image": "",
+        "text": "HCl"
+      },
+      "c": {
+        "image": "",
+        "text": "$ H_2SO_4 $"
+      }
+    },
+    "marks": 1,
+    "subject": "chemistry",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Which of the following act a pickling agent?"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "$ I^2 $"
+      },
+      "correct": "d",
+      "a": {
+        "image": "",
+        "text": "$ KIO_3 $"
+      },
+      "b": {
+        "image": "",
+        "text": "$ KO_2 $"
+      },
+      "c": {
+        "image": "",
+        "text": "$ I^- $"
+      }
+    },
+    "marks": 1,
+    "subject": "chemistry",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Ozone reacts with the solution fo KI and forms:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "$ Pb_3O_4 $"
+      },
+      "correct": "d",
+      "a": {
+        "image": "",
+        "text": "$ Pb(NO_3)_2 $"
+      },
+      "b": {
+        "image": "",
+        "text": "$ PbCO_3.Pb(OH)_2 $"
+      },
+      "c": {
+        "image": "",
+        "text": "$ Pb(OH)_2.4PbCO_3 $"
+      }
+    },
+    "marks": 1,
+    "subject": "chemistry",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Sindoor is represented by"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "$ Fe_2O_4.3H_2O $"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "$ Fe_3O_4 $"
+      },
+      "b": {
+        "image": "",
+        "text": "$ Fe_2O_3 $"
+      },
+      "c": {
+        "image": "",
+        "text": "FeO"
+      }
+    },
+    "marks": 1,
+    "subject": "chemistry",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Reason of passivity of iron is"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Fe and Pb"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "Cu and Hg"
+      },
+      "b": {
+        "image": "",
+        "text": "Zn and Hg"
+      },
+      "c": {
+        "image": "",
+        "text": "Cu and Al"
+      }
+    },
+    "marks": 1,
+    "subject": "chemistry",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Auto-reduction proces is used in the extraction of "
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "buta-1, 3-diene"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "vinyl chloride"
+      },
+      "b": {
+        "image": "",
+        "text": "tetracholoro ethylene"
+      },
+      "c": {
+        "image": "",
+        "text": "tetrafluoro ethylene"
+      }
+    },
+    "marks": 1,
+    "subject": "chemistry",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Teflon is a polymer of "
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Tertiary amine"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "primary aromatic amines"
+      },
+      "b": {
+        "image": "",
+        "text": "secondary amines"
+      },
+      "c": {
+        "image": "",
+        "text": "primary aliphatic amines"
+      }
+    },
+    "marks": 1,
+    "subject": "chemistry",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Gabriel-phthalimide synthesis is used for preparation of"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "none"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "benzoic acidd"
+      },
+      "b": {
+        "image": "",
+        "text": "benzaldehyde"
+      },
+      "c": {
+        "image": "",
+        "text": "benzoyl cyanide"
+      }
+    },
+    "marks": 1,
+    "subject": "chemistry",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Reduction of benzoyl chloride with Pd and $ BaSO_4 $ produces"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "o-dinitrobenzene"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "m-nitrobenzene"
+      },
+      "b": {
+        "image": "",
+        "text": "m-dinitrobenzene"
+      },
+      "c": {
+        "image": "",
+        "text": "p-dinitrobenzene"
+      }
+    },
+    "marks": 1,
+    "subject": "chemistry",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Nitrobenzene on heating a mixture of Conc. $ HNO_3 $ and conc $ H_2SO_4 $ produce "
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "$ CH_2Cl.CH_2OH and NaHCO_3 $"
+      },
+      "correct": "d",
+      "a": {
+        "image": "",
+        "text": "$ CH_3CH_2Cl $ and NaCl "
+      },
+      "b": {
+        "image": "",
+        "text": "$ CH_3CH_2Cl $ and NaOH"
+      },
+      "c": {
+        "image": "",
+        "text": "$ CH_3CH_2OH \\space and \\space H_2SO_4 $"
+      }
+    },
+    "marks": 1,
+    "subject": "chemistry",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "In the reaction sequence X and Y are respectively: $$ CH_2 = CH_2 \\xrightarrow{Hypochlorous \\space acid} \\space X \\space \\xrightarrow{Y} HO–CH_2CH_2–OH $$"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Reimer Tiemann reaction"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "Hofmann reaction"
+      },
+      "b": {
+        "image": "",
+        "text": "Dow's reaction"
+      },
+      "c": {
+        "image": "",
+        "text": "Wurtz reaction"
+      }
+    },
+    "marks": 1,
+    "subject": "chemistry",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Reaction, $C_2H_5I + C_5H_{11}I + 2Na \\rightarrow C_2H_5 - C_5H_{11} + 2NaI $ is called"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Ketones"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "Alkenes"
+      },
+      "b": {
+        "image": "",
+        "text": "Ethers"
+      },
+      "c": {
+        "image": "",
+        "text": "Aldehydes"
+      }
+    },
+    "marks": 1,
+    "subject": "chemistry",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Which of the following doesn't show electromeric effect?"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Glucose"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "$ CH_3CHO $"
+      },
+      "b": {
+        "image": "",
+        "text": "$ C_6H_5CHO $"
+      },
+      "c": {
+        "image": "",
+        "text": "$ CH_3COCH_3 $"
+      }
+    },
+    "marks": 1,
+    "subject": "chemistry",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Which does not react with Fehling solution?"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "$ C_6H_5COOH + CH_3OH $"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "$ C_6H_5CH_2OH + HCOOH $"
+      },
+      "b": {
+        "image": "",
+        "text": "$ C_6H_5CH_2OH + CH_3OH $"
+      },
+      "c": {
+        "image": "",
+        "text": "$ C_6H_5OH + CH_3COOH $"
+      }
+    },
+    "marks": 1,
+    "subject": "chemistry",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "In the following reaction $ C_6H_5COOCH_3 \\xrightarrow{LiAlH_4, H_2O/H^+} A+B $, A and B are respectively"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "none"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "leaf"
+      },
+      "b": {
+        "image": "",
+        "text": "stem"
+      },
+      "c": {
+        "image": "",
+        "text": "prothallus"
+      }
+    },
+    "marks": 1,
+    "subject": "botany",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Sporangia bearing sori are produced on:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "20"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "8"
+      },
+      "b": {
+        "image": "",
+        "text": "16"
+      },
+      "c": {
+        "image": "",
+        "text": "10"
+      }
+    },
+    "marks": 1,
+    "subject": "botany",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "In moss capsule, numberof peristome teeth of each row is"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "None"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "Epistatis"
+      },
+      "b": {
+        "image": "",
+        "text": "Dominance"
+      },
+      "c": {
+        "image": "",
+        "text": "Mutation"
+      }
+    },
+    "marks": 1,
+    "subject": "botany",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "A gene pair hides the effect of another, the phenomenon is"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "All of them"
+      },
+      "correct": "d",
+      "a": {
+        "image": "",
+        "text": "Budding"
+      },
+      "b": {
+        "image": "",
+        "text": "fragmentation"
+      },
+      "c": {
+        "image": "",
+        "text": "Fission"
+      }
+    },
+    "marks": 1,
+    "subject": "botany",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Vegetative reproduction in fungi takes place by:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "symbiotic"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "Parasites"
+      },
+      "b": {
+        "image": "",
+        "text": "Saprophytes"
+      },
+      "c": {
+        "image": "",
+        "text": "Autotrophic"
+      }
+    },
+    "marks": 1,
+    "subject": "botany",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Yeast cells are:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Tubers"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "Gemmae"
+      },
+      "b": {
+        "image": "",
+        "text": "Spores"
+      },
+      "c": {
+        "image": "",
+        "text": "Zygote"
+      }
+    },
+    "marks": 1,
+    "subject": "botany",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "In Bryophytes, sporophyte is formed by germination of:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Puccinia"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "Albugo"
+      },
+      "b": {
+        "image": "",
+        "text": "Rhizopus"
+      },
+      "c": {
+        "image": "",
+        "text": "Aspergillu"
+      }
+    },
+    "marks": 1,
+    "subject": "botany",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Black mould of bread is common name of:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "many"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "1"
+      },
+      "b": {
+        "image": "",
+        "text": "2"
+      },
+      "c": {
+        "image": "",
+        "text": "8 - 16"
+      }
+    },
+    "marks": 1,
+    "subject": "botany",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "No. of gametes formed in each cell during conjugation in spirogyra is:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "false fruit"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "monocot"
+      },
+      "b": {
+        "image": "",
+        "text": "dicot"
+      },
+      "c": {
+        "image": "",
+        "text": "conifers"
+      }
+    },
+    "marks": 1,
+    "subject": "botany",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Chilgoza is the name of seed of:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Curd"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "Ethyl alcohol"
+      },
+      "b": {
+        "image": "",
+        "text": "Acetic acid"
+      },
+      "c": {
+        "image": "",
+        "text": "cheese"
+      }
+    },
+    "marks": 1,
+    "subject": "botany",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Yeasts are produced during manufacture of:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Small fishes"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "Phytoplankton"
+      },
+      "b": {
+        "image": "",
+        "text": "Zooplankton"
+      },
+      "c": {
+        "image": "",
+        "text": "Aquatic insects"
+      }
+    },
+    "marks": 1,
+    "subject": "botany",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "In a pond ecosystem, the food chain starts with:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Golgi cycle"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "Glycoxylate cycle"
+      },
+      "b": {
+        "image": "",
+        "text": "fermentation"
+      },
+      "c": {
+        "image": "",
+        "text": "Krebs cycle"
+      }
+    },
+    "marks": 1,
+    "subject": "botany",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Fermentation of pyruvic acid into carbon dioxide and water ocuurs in:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Four carbon sugar in presence of oxygen"
+      },
+      "correct": "d",
+      "a": {
+        "image": "",
+        "text": "Two carbon sugar in absense of oxygen"
+      },
+      "b": {
+        "image": "",
+        "text": "Three carbon sugar in absense of oxygen"
+      },
+      "c": {
+        "image": "",
+        "text": "Three carb onsugar in presence of oxygen"
+      }
+    },
+    "marks": 1,
+    "subject": "botany",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Glycolysis is a process in which glucose is degraded into:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Endoplasmic reticulum"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "Mitochondria"
+      },
+      "b": {
+        "image": "",
+        "text": "Choloroplast"
+      },
+      "c": {
+        "image": "",
+        "text": "Lysosome"
+      }
+    },
+    "marks": 1,
+    "subject": "botany",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Qantasomes are found in:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Mitochondria"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "Golgi bodies"
+      },
+      "b": {
+        "image": "",
+        "text": "Lysosomes"
+      },
+      "c": {
+        "image": "",
+        "text": "Endoplasmic reticulum"
+      }
+    },
+    "marks": 1,
+    "subject": "botany",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Hydrolytic enzyme are stored in:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Hydrogen bond"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "Glycosidic bond"
+      },
+      "b": {
+        "image": "",
+        "text": "Phosphate group"
+      },
+      "c": {
+        "image": "",
+        "text": "Peptide bond"
+      }
+    },
+    "marks": 1,
+    "subject": "botany",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "In Nucleic acid, nucleotides are joined by:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Floral bud"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "Axillary bud"
+      },
+      "b": {
+        "image": "",
+        "text": "Terminal bud"
+      },
+      "c": {
+        "image": "",
+        "text": "Extra axillary bud"
+      }
+    },
+    "marks": 1,
+    "subject": "botany",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "The tendrils of vitis (grape) plant are modified:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Citrus"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "Opuntia"
+      },
+      "b": {
+        "image": "",
+        "text": "Asparagus"
+      },
+      "c": {
+        "image": "",
+        "text": "Bougainvelia"
+      }
+    },
+    "marks": 1,
+    "subject": "botany",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Phylloclades are present in:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Phenoxylic"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "Ring porous"
+      },
+      "b": {
+        "image": "",
+        "text": "diffuse porous"
+      },
+      "c": {
+        "image": "",
+        "text": "Polyxylic"
+      }
+    },
+    "marks": 1,
+    "subject": "botany",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Wood of cycas is:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "compositae"
+      },
+      "correct": "d",
+      "a": {
+        "image": "",
+        "text": "Crucierae"
+      },
+      "b": {
+        "image": "",
+        "text": "Malvaceae"
+      },
+      "c": {
+        "image": "",
+        "text": "Liliaceae"
+      }
+    },
+    "marks": 1,
+    "subject": "botany",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Wich of the following does not have polypetalous flower?"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "first acidic then alkaline"
+      },
+      "correct": "d",
+      "a": {
+        "image": "",
+        "text": "alkaline"
+      },
+      "b": {
+        "image": "",
+        "text": "acidic"
+      },
+      "c": {
+        "image": "",
+        "text": "neutral"
+      }
+    },
+    "marks": 1,
+    "subject": "zoology",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "The medium of food vacoule of Amoeba remains:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Moccuses"
+      },
+      "correct": "d",
+      "a": {
+        "image": "",
+        "text": "Coelenterates"
+      },
+      "b": {
+        "image": "",
+        "text": "Pisces"
+      },
+      "c": {
+        "image": "",
+        "text": "Crustaceans"
+      }
+    },
+    "marks": 1,
+    "subject": "zoology",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Devil fih is:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Coelem"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "Enteron"
+      },
+      "b": {
+        "image": "",
+        "text": "Pseudocoel"
+      },
+      "c": {
+        "image": "",
+        "text": "Haemocoel"
+      }
+    },
+    "marks": 1,
+    "subject": "zoology",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "In arthropods, the body cavity is called:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "trunk, thorax, abdomen"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "head, thorax, abdomen"
+      },
+      "b": {
+        "image": "",
+        "text": "head, trunk, abdomen"
+      },
+      "c": {
+        "image": "",
+        "text": "cephalothorax, head, abdomen"
+      }
+    },
+    "marks": 1,
+    "subject": "zoology",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Body of an insect is divisible into:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Sea anemone"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "Sea urchin"
+      },
+      "b": {
+        "image": "",
+        "text": "Asterias"
+      },
+      "c": {
+        "image": "",
+        "text": "Ophiothrix"
+      }
+    },
+    "marks": 1,
+    "subject": "zoology",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Aristotles lantern occurs in:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Jelly fish"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "Star fish"
+      },
+      "b": {
+        "image": "",
+        "text": "Silver fish"
+      },
+      "c": {
+        "image": "",
+        "text": "Shark"
+      }
+    },
+    "marks": 1,
+    "subject": "zoology",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Which one is a fish ?"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "tail fin"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "Skin "
+      },
+      "b": {
+        "image": "",
+        "text": "Gills"
+      },
+      "c": {
+        "image": "",
+        "text": "Lungs"
+      }
+    },
+    "marks": 1,
+    "subject": "zoology",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Tadpole respires through"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "hypoyony"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "Fragmentation"
+      },
+      "b": {
+        "image": "",
+        "text": "hypertomy"
+      },
+      "c": {
+        "image": "",
+        "text": "autotomy"
+      }
+    },
+    "marks": 1,
+    "subject": "zoology",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "When lizards are threatened, they can break off their tails and escape. This phenomenon is called:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "none"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "epidermis only"
+      },
+      "b": {
+        "image": "",
+        "text": "dermis only"
+      },
+      "c": {
+        "image": "",
+        "text": "both epidermis and dermis"
+      }
+    },
+    "marks": 1,
+    "subject": "zoology",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Pigment cells of frog are found in:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "dorsal aorta"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "heptic vein"
+      },
+      "b": {
+        "image": "",
+        "text": "renal portal system"
+      },
+      "c": {
+        "image": "",
+        "text": "hepatic portal system"
+      }
+    },
+    "marks": 1,
+    "subject": "zoology",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "The venous system of frog differs from that of mammal in having:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "mesenteron"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "blastocoel"
+      },
+      "b": {
+        "image": "",
+        "text": "archenteron"
+      },
+      "c": {
+        "image": "",
+        "text": "coelenteron"
+      }
+    },
+    "marks": 1,
+    "subject": "zoology",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "The cavity formed during embryogenesis of frog is:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "18 to 20"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "7,8,9"
+      },
+      "b": {
+        "image": "",
+        "text": "10 to 12"
+      },
+      "c": {
+        "image": "",
+        "text": "14 to 16"
+      }
+    },
+    "marks": 1,
+    "subject": "zoology",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Cliterllum of earthworm consists of Segments:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "all"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "only amylatic enzyme"
+      },
+      "b": {
+        "image": "",
+        "text": "only proteolytic"
+      },
+      "c": {
+        "image": "",
+        "text": "only chitinase enzyme"
+      }
+    },
+    "marks": 1,
+    "subject": "zoology",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Chromophill cells of earthworm contain:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "8 pairs"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "4 pairs"
+      },
+      "b": {
+        "image": "",
+        "text": "1 pair"
+      },
+      "c": {
+        "image": "",
+        "text": "3 paris"
+      }
+    },
+    "marks": 1,
+    "subject": "zoology",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "How many heaarts are found in earthworm?"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "entry of cryptomerozoites into red blood cells"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "entry of sporozoites in blood capillaries"
+      },
+      "b": {
+        "image": "",
+        "text": "entry of merozoites into liver cells"
+      },
+      "c": {
+        "image": "",
+        "text": "release of merozoites from red blood cells"
+      }
+    },
+    "marks": 1,
+    "subject": "zoology",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Fever in malaia is due to:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Neurotoxin"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "Toxin"
+      },
+      "b": {
+        "image": "",
+        "text": "Paramecium"
+      },
+      "c": {
+        "image": "",
+        "text": "Hypnotoxin"
+      }
+    },
+    "marks": 1,
+    "subject": "zoology",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Kappa partiicles in Paramecium produce a toxic substance called"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "light bones"
+      },
+      "correct": "d",
+      "a": {
+        "image": "",
+        "text": "heavy bones"
+      },
+      "b": {
+        "image": "",
+        "text": "beak"
+      },
+      "c": {
+        "image": "",
+        "text": "flight muscles"
+      }
+    },
+    "marks": 1,
+    "subject": "zoology",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Volant animals don't have:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "ACTH"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "GH"
+      },
+      "b": {
+        "image": "",
+        "text": "PTH"
+      },
+      "c": {
+        "image": "",
+        "text": "ADH"
+      }
+    },
+    "marks": 1,
+    "subject": "zoology",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Which hormone promotes cell division, proten synthesis and bone growth?"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "0,2,2,3,3"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "2,2,3,4,3"
+      },
+      "b": {
+        "image": "",
+        "text": "0,3,3,3,3"
+      },
+      "c": {
+        "image": "",
+        "text": "2,3,3,3,3"
+      }
+    },
+    "marks": 1,
+    "subject": "zoology",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Digital formula of hind limb of rabbit is:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "42-44"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "45-47"
+      },
+      "b": {
+        "image": "",
+        "text": "46-48"
+      },
+      "c": {
+        "image": "",
+        "text": "33-36"
+      }
+    },
+    "marks": 1,
+    "subject": "zoology",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Number of vertebra in rabbit is:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Basophils"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "RBCs"
+      },
+      "b": {
+        "image": "",
+        "text": "Lymphocytes"
+      },
+      "c": {
+        "image": "",
+        "text": "Thrombocytes"
+      }
+    },
+    "marks": 1,
+    "subject": "zoology",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Which of the following blood cells help in blood coagulation ?"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "all of above"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "ectoderm"
+      },
+      "b": {
+        "image": "",
+        "text": "mesoderm"
+      },
+      "c": {
+        "image": "",
+        "text": "endoderm"
+      }
+    },
+    "marks": 1,
+    "subject": "zoology",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Connective tissue belongs to:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "fovea centralis"
+      },
+      "correct": "d",
+      "a": {
+        "image": "",
+        "text": "optic disc"
+      },
+      "b": {
+        "image": "",
+        "text": "periphery"
+      },
+      "c": {
+        "image": "",
+        "text": "macula densa"
+      }
+    },
+    "marks": 1,
+    "subject": "zoology",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Retina is most sensitive at:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "8 lobes"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "4 lobes"
+      },
+      "b": {
+        "image": "",
+        "text": "2 lobes"
+      },
+      "c": {
+        "image": "",
+        "text": "6 lobes"
+      }
+    },
+    "marks": 1,
+    "subject": "zoology",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Right lung of rabbit is divided into:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "meibomian gland"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "sweat glands"
+      },
+      "b": {
+        "image": "",
+        "text": "sebaceous glands"
+      },
+      "c": {
+        "image": "",
+        "text": "thymus gland"
+      }
+    },
+    "marks": 1,
+    "subject": "zoology",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "In mammals, mammary glands are modified:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "Loop of Hence"
+      },
+      "correct": "a",
+      "a": {
+        "image": "",
+        "text": "Nephron"
+      },
+      "b": {
+        "image": "",
+        "text": "Glomerulus"
+      },
+      "c": {
+        "image": "",
+        "text": "Bownan's capsule"
+      }
+    },
+    "marks": 1,
+    "subject": "zoology",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "The functional unit of kidney is:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "5.0 billion years"
+      },
+      "correct": "c",
+      "a": {
+        "image": "",
+        "text": "2.3 billion year"
+      },
+      "b": {
+        "image": "",
+        "text": "4.3 billion years"
+      },
+      "c": {
+        "image": "",
+        "text": "3.9 billion years"
+      }
+    },
+    "marks": 1,
+    "subject": "zoology",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Life has existed on earth for last"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "palaeontology"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "ontegeny"
+      },
+      "b": {
+        "image": "",
+        "text": "phylogeny"
+      },
+      "c": {
+        "image": "",
+        "text": "ancestry"
+      }
+    },
+    "marks": 1,
+    "subject": "zoology",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Evolutionary history of an organism is called:"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "all of the above"
+      },
+      "correct": "d",
+      "a": {
+        "image": "",
+        "text": "There is no growth phase in cleavage"
+      },
+      "b": {
+        "image": "",
+        "text": "consumption of $ O_2 $ increases in cleavage"
+      },
+      "c": {
+        "image": "",
+        "text": "nucleus-cytoplasmic ratio increases in cleavage"
+      }
+    },
+    "marks": 1,
+    "subject": "zoology",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "Cleavage differs from mitosis because"
+    },
+    "exam_type": "MEDICAL"
+  },
+  {
+    "answer": {
+      "d": {
+        "image": "",
+        "text": "tongue"
+      },
+      "correct": "b",
+      "a": {
+        "image": "",
+        "text": "liver"
+      },
+      "b": {
+        "image": "",
+        "text": "spleen"
+      },
+      "c": {
+        "image": "",
+        "text": "pancrease"
+      }
+    },
+    "marks": 1,
+    "subject": "zoology",
+    "exam_code": 1405923267,
+    "question": {
+      "image": "",
+      "text": "All are endodermal in origin except:"
+    },
+    "exam_type": "MEDICAL"
+  }
+]
