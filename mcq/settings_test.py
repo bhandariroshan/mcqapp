@@ -1,6 +1,7 @@
 # Django settings for foodtrade project.
 import os
-DEBUG = False
+DEBUG = True
+# DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
