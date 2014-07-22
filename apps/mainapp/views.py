@@ -409,6 +409,7 @@ def attend_dps_exam(request, exam_code):
 
         try:
             profile_image = user_det['profile_image']
+            print 'profile_image is: ', profile_image
         except:
             social_account = SocialAccount.objects.get(
                 user__id=request.user.id
@@ -418,10 +419,13 @@ def attend_dps_exam(request, exam_code):
             )
 
             graph = GraphAPI(access_token)
+            print 'graph: ', graph
+            print social_account.uid
             det = graph.get(
                 social_account.uid +
                 '/picture/?redirect=0&height=300&type=normal&width=300'
             )
+            print 'Debugging expired access token: ', det
             profile_image = det['data']['url']
             user_profile_obj.update_profile_image(
                 profile_image, request.user.username
