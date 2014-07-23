@@ -77,9 +77,7 @@ def get_question_set(request, exam_code):
                 )
         up_exm = exam_obj.get_exam_detail(int(exam_code))
         if up_exm['exam_family'] == 'CPS':
-            if time.mktime(
-                datetime.datetime.now().timetuple()
-            ) < up_exm['exam_date']:
+            if time.mktime(datetime.datetime.now().timetuple()) < up_exm['exam_date']:
                 return HttpResponse(
                     json.dumps(
                         {'status': 'error',
@@ -96,7 +94,8 @@ def get_question_set(request, exam_code):
         if subscription_status or int(exam_code) in user['valid_exam']:
             exam_handler = ExamHandler()
             model_question_set = exam_handler.get_questionset_from_database(
-                exam_code)
+                exam_code
+            )
 
             if len(model_question_set) > 0:
                 return HttpResponse(json.dumps(
@@ -112,8 +111,7 @@ def get_question_set(request, exam_code):
                 )
                 )
 
-        if coupon_obj.validate_coupon(coupon_code, up_exm['exam_category'],
-                                      up_exm['exam_family']) is True:
+        if coupon_obj.validate_coupon(coupon_code, up_exm['exam_category'], up_exm['exam_family']) is True:
 
             user_profile_obj.change_subscription_plan(request.user.username,
                                                       coupon_code)
@@ -250,9 +248,7 @@ def get_scores(request):
 
         attempt_time = time.mktime(datetime.datetime.now().timetuple())
         if exam_details['exam_family'] == 'CPS':
-            if (attempt_time - (exam_details['exam_date'] +
-                exam_details['exam_duration'] * 60
-            )) > 15 * 60:
+            if (attempt_time - (exam_details['exam_date'] + exam_details['exam_duration'] * 60)) > 15 * 60:
                 return HttpResponse(json.dumps(
                     {'status': 'error',
                      'message': 'We are sorry, you are late in submitting \
