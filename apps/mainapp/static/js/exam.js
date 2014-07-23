@@ -7,7 +7,7 @@ $('.li-height').click(function(){
   $(check_id).trigger('gumby.check');
 
    ans_html = $('#myAnswers').html();  
-   ans_html = ans_html  + '<button  style="border: 0px;background: #fff; display:inline;" href="#" onclick="load_question('+ current_question_number +')">' + String(current_question_number+1) +
+   ans_html = ans_html  + '<button  style="border: 0px;background: #fff; display:inline; min-width: 75px;" href="#" onclick="load_question('+ current_question_number +')">' + String(current_question_number+1) +
    '. <li id="liAns' + String(current_question_number) +'" class="success badge">' + clicked + '</li></button>';
 
    if ((ans_list.indexOf(current_question_number) > -1)==false)  {
@@ -108,7 +108,7 @@ function load_question(q_no){
 
 $('.loadNext').click(function(){
        ans_html = $('#myAnswers').html();
-       ans_html = ans_html + '<button style="border: 0px; background: #fff;display:inline;"" href="#" id="aHref"' + String(current_question_number)+ ' onclick="load_question('+ current_question_number +')">' + String(current_question_number+1) + '. <li class="danger badge" id="liAns'+ String(current_question_number) +'">' + 'NA' + '</li></button>';
+       ans_html = ans_html + '<button style="border: 0px; background: #fff;display:inline;min-width: 75px;" href="#" id="aHref"' + String(current_question_number)+ ' onclick="load_question('+ current_question_number +')">' + String(current_question_number+1) + '. <li class="danger badge" id="liAns'+ String(current_question_number) +'">' + 'NA' + '</li></button>';
        if ((ans_list.indexOf(current_question_number) > -1)==false)  {
            $('#myAnswers').html(ans_html);
           ans_list.push(current_question_number);
@@ -185,15 +185,15 @@ $(document).ready(function(){
     ans_list.push(i);      
       if (q_no.indexOf(i) > -1){
         if (all_answers[q_no.indexOf(i)]['selected_ans'] == 'NA'){
-          ans_html = ans_html + '<button style="border: 0px; background: #fff;display:inline;"" href="#" id="aHref' + String(all_answers[q_no.indexOf(i)]['q_no']) + '" onclick="load_question('+ String(all_answers[q_no.indexOf(i)]['q_no']) +')">' + String(all_answers[q_no.indexOf(i)]['q_no']+1) + '. <li class="danger badge" id="liAns'+ String(all_answers[q_no.indexOf(i)]['q_no']) +'">' + 'NA' + '</li></button>';      
+          ans_html = ans_html + '<button style="border: 0px; background: #fff;display:inline;min-width: 75px;" href="#" id="aHref' + String(all_answers[q_no.indexOf(i)]['q_no']) + '" onclick="load_question('+ String(all_answers[q_no.indexOf(i)]['q_no']) +')">' + String(all_answers[q_no.indexOf(i)]['q_no']+1) + '. <li class="danger badge" id="liAns'+ String(all_answers[q_no.indexOf(i)]['q_no']) +'">' + 'NA' + '</li></button>';      
         }
         else{
           var last_selected_answer  = all_answers[q_no.indexOf(i)]['attempt_details'][all_answers[q_no.indexOf(i)]['attempt_details'].length-1]['selected_ans'];
-          ans_html = ans_html + '<button style="border: 0px; background: #fff;display:inline;"" href="#" id="aHref' + String(all_answers[q_no.indexOf(i)]['q_no']) + '"onclick="load_question('+ String(all_answers[q_no.indexOf(i)]['q_no']) +')">' + String(all_answers[q_no.indexOf(i)]['q_no']+1) + '. <li class="success badge" id="liAns'+ String(all_answers[q_no.indexOf(i)]['q_no']) +'">' + last_selected_answer.toUpperCase() + '</li></button>';      
+          ans_html = ans_html + '<button style="border: 0px; background: #fff;display:inline;min-width: 75px;" href="#" id="aHref' + String(all_answers[q_no.indexOf(i)]['q_no']) + '"onclick="load_question('+ String(all_answers[q_no.indexOf(i)]['q_no']) +')">' + String(all_answers[q_no.indexOf(i)]['q_no']+1) + '. <li class="success badge" id="liAns'+ String(all_answers[q_no.indexOf(i)]['q_no']) +'">' + last_selected_answer.toUpperCase() + '</li></button>';      
         }                             
       }    
     else{    
-        ans_html = ans_html + '<button style="border: 0px; background: #fff;display:inline;"" href="#" id="aHref' + String(i) + '" onclick="load_question('+ String(i) +')">' + String(i+1) + '. <li class="danger badge" id="liAns'+ String(i) +'">' + 'NA' + '</li></button>';
+        ans_html = ans_html + '<button style="border: 0px; background: #fff;display:inline;min-width: 75px;" href="#" id="aHref' + String(i) + '" onclick="load_question('+ String(i) +')">' + String(i+1) + '. <li class="danger badge" id="liAns'+ String(i) +'">' + 'NA' + '</li></button>';
     }
   }
   $('#myAnswers').html(ans_html);
