@@ -60,7 +60,7 @@ def get_question_set(request, exam_code):
         if exam_code is -1 then new IOM set is generated randomly and
         the newly generated exam_code is used to access questions.
         '''
-        if exam_code == -1:
+        if exam_code == 1:
             if "MBBS-IOM" in user['subscription_type']:
                 subscription = True
             if not subscription and not coupon_obj.validate_coupon(coupon_code, 'MBBS-IOM', 'DPS'):
