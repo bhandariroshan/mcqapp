@@ -5,11 +5,13 @@ import json
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 
+from apps.mainapp.classes.Exams import Exam
 from apps.mainapp.classes.Coupon import Coupon
 from apps.mainapp.classes.Userprofile import UserProfile
 from apps.mainapp.classes.query_database import ExammodelApi, \
-    AttemptedAnswerDatabase, QuestionApi
-from apps.random_questions.views import generate_random_ioe_questions
+    AttemptedAnswerDatabase
+from apps.random_questions.views import generate_random_ioe_questions, \
+    generate_random_iom_questions
 
 from .views import ExamHandler
 
@@ -23,23 +25,25 @@ def get_question_set(request, exam_code):
     if request.user.is_authenticated():
         coupon_code = request.POST.get('coupon')
         user_profile_obj = UserProfile()
-        from apps.mainapp.classes.Exams import Exam
+
         exam_obj = Exam()
         coupon_obj = Coupon()
+
+        user = user_profile_obj.get_user_by_username(request.user.username)
+        subscription = False
+        if "IDP" in user['subscription_type']:
+            subscription = True
+
         '''
-        if exam_code is 0 then new set is generated randomly and
+        if exam_code is 0 then new IOE set is generated randomly and
         the newly generated exam_code is used to access questions.
         '''
-        user = user_profile_obj.get_user_by_username(request.user.username)
         if exam_code == 0:
-            subscription = False
             if "BE-IOE" in user['subscription_type']:
                 subscription = True
-            elif "IDP" in user['subscription_type']:
-                subscription = True
-            if not subscription and not coupon_obj.validate_coupon(
-                coupon_code, 'BE-IOE', 'DPS'
-            ):
+            # elif "IDP" in user['subscription_type']:
+            #     subscription = True
+            if not subscription and not coupon_obj.validate_coupon(coupon_code, 'BE-IOE', 'DPS'):
                 response = HttpResponse(
                     json.dumps(
                         {'status': 'error', 'message': 'Invalid Coupon Code.'}
@@ -51,11 +55,29 @@ def get_question_set(request, exam_code):
                 user_profile_obj.save_valid_exam(
                     user['username'], int(exam_code)
                 )
+
+        '''
+        if exam_code is -1 then new IOM set is generated randomly and
+        the newly generated exam_code is used to access questions.
+        '''
+        if exam_code == -1:
+            if "MBBS-IOM" in user['subscription_type']:
+                subscription = True
+            if not subscription and not coupon_obj.validate_coupon(coupon_code, 'MBBS-IOM', 'DPS'):
+                response = HttpResponse(
+                    json.dumps(
+                        {'status': 'error', 'message': 'Invalid Coupon Code.'}
+                    )
+                )
+                return response
+            else:
+                exam_code = generate_random_iom_questions(request)
+                user_profile_obj.save_valid_exam(
+                    user['username'], int(exam_code)
+                )
         up_exm = exam_obj.get_exam_detail(int(exam_code))
         if up_exm['exam_family'] == 'CPS':
-            if time.mktime(
-                datetime.datetime.now().timetuple()
-            ) < up_exm['exam_date']:
+            if time.mktime(datetime.datetime.now().timetuple()) < up_exm['exam_date']:
                 return HttpResponse(
                     json.dumps(
                         {'status': 'error',
@@ -72,7 +94,8 @@ def get_question_set(request, exam_code):
         if subscription_status or int(exam_code) in user['valid_exam']:
             exam_handler = ExamHandler()
             model_question_set = exam_handler.get_questionset_from_database(
-                exam_code)
+                exam_code
+            )
 
             if len(model_question_set) > 0:
                 return HttpResponse(json.dumps(
@@ -88,8 +111,7 @@ def get_question_set(request, exam_code):
                 )
                 )
 
-        if coupon_obj.validate_coupon(coupon_code, up_exm['exam_category'],
-                                      up_exm['exam_family']) is True:
+        if coupon_obj.validate_coupon(coupon_code, up_exm['exam_category'], up_exm['exam_family']) is True:
 
             user_profile_obj.change_subscription_plan(request.user.username,
                                                       coupon_code)
@@ -137,11 +159,11 @@ def get_upcoming_exams(request):
     the function returns api of upcoming exams
     '''
     if request.user.is_authenticated():
-        exam_handler = ExamHandler()
-        upc_exams = exam_handler.list_upcoming_exams(
-            {'exam_category': 'MBBS-IOM'},
-            fields={'question_list': 0}
-        )
+        # exam_handler = ExamHandler()
+        # upc_exams = exam_handler.list_upcoming_exams(
+        #     {'exam_category': 'MBBS-IOM'},
+        #     fields={'question_list': 0}
+        # )
         user_obj = UserProfile()
         usr = user_obj.get_user_by_username(request.user.username)
         '''
@@ -163,16 +185,26 @@ def get_upcoming_exams(request):
             up_exam = exam_model_api.find_one_exammodel(
                 {'exam_code': eachExam}, {'question_list': 0}
             )
-            if up_exam is not None and up_exam['exam_category'] != 'MBBS-IOM':
+            if up_exam is None:
+                continue
+
+            elif up_exam['exam_category'] == 'BE-IOE':
                 up_exam['exam_date'] = int(up_exam['exam_date'])
                 up_exam['exam_name'] = 'IOE Practice Exam ' + str(count + 1)
                 up_exam['subscribed'] = 1
                 upcoming_exams.append(up_exam)
-        for count, eachUpCExams in enumerate(upc_exams):
-            eachUpCExams['exam_name'] = 'IOM Practice Exam ' + str(count + 1)
-            eachUpCExams['exam_date'] = int(eachUpCExams['exam_date'])
-            eachUpCExams['subscribed'] = 1 if eachUpCExams['exam_code'] in user_exams else 0
-            upcoming_exams.append(eachUpCExams)
+
+            elif up_exam['exam_category'] == 'MBBS-IOM':
+                up_exam['exam_date'] = int(up_exam['exam_date'])
+                up_exam['exam_name'] = 'IOM Practice Exam ' + str(count + 1)
+                up_exam['subscribed'] = 1
+                upcoming_exams.append(up_exam)
+
+        # for count, eachUpCExams in enumerate(upc_exams):
+        #     eachUpCExams['exam_name'] = 'IOM Practice Exam ' + str(count + 1)
+        #     eachUpCExams['exam_date'] = int(eachUpCExams['exam_date'])
+        #     eachUpCExams['subscribed'] = 1 if eachUpCExams['exam_code'] in user_exams else 0
+        #     upcoming_exams.append(eachUpCExams)
         return HttpResponse(json.dumps(
             {'status': 'ok',
              'result': upcoming_exams[::-1],
@@ -186,13 +218,14 @@ def get_upcoming_exams(request):
         )
         )
 
+
 @csrf_exempt
 def get_scores(request):
     '''
     the function returns api of scores obtained in each subject
     '''
     if request.user.is_authenticated():
-        IMPROPER_REQUEST = 'Couldn\'t process improper request'
+        IMPROPER_REQUEST = 'Could not process improper request'
         try:
             exam_code = int(request.POST['exam_code'])
             answer_list = list(request.POST['answers'])
@@ -212,12 +245,10 @@ def get_scores(request):
         # questions = question_obj.find_all_questions(
         #     {"exam_code": int(exam_code)}
         # )
-        
+
         attempt_time = time.mktime(datetime.datetime.now().timetuple())
         if exam_details['exam_family'] == 'CPS':
-            if (attempt_time - (exam_details['exam_date'] +
-                exam_details['exam_duration'] * 60
-            )) > 15 * 60:
+            if (attempt_time - (exam_details['exam_date'] + exam_details['exam_duration'] * 60)) > 15 * 60:
                 return HttpResponse(json.dumps(
                     {'status': 'error',
                      'message': 'We are sorry, you are late in submitting \
@@ -235,7 +266,6 @@ def get_scores(request):
                  'selected_ans': answer_list[i],
                  'attempt_time': int(attempt_time)
                  }})
-
 
         score_dict = exam_handler.check_answers(exam_code, answer_list)
         return HttpResponse(json.dumps(

@@ -182,20 +182,21 @@ def landing(request):
             parameters['student_category_set'] = False
 
         all_valid_exams = exam_model_api.find_all_exammodel_descending(
-            {'exam_code': {'$in': user_exams}, 'exam_category':'BE-IOE'}, sort_index='exam_date'
+            {'exam_code': {'$in': user_exams},
+             'exam_category': 'BE-IOE'},
+            sort_index='exam_date'
         )
+        count_out = 0
         for count, eachExamDetails in enumerate(all_valid_exams):
             if eachExamDetails['exam_family'] == 'CPS' or eachExamDetails['exam_category'] == 'MBBS-IOM':
                 continue
             up_exm = {}
-
+            count_out = count_out + 1
             if eachExamDetails is None:
                 continue
 
-            if eachExamDetails['exam_category'] == 'BE-IOE' and \
-                    eachExamDetails['exam_family'] == 'DPS':
-                up_exm['name'] = "IOE Practice Exam " + \
-                    str(len(all_valid_exams) - count)
+            if eachExamDetails['exam_category'] == 'BE-IOE' and eachExamDetails['exam_family'] == 'DPS':
+                up_exm['name'] = "IOE Practice Exam " + str(count_out)
 
             if 'IDP' in subscription_type:
                 up_exm['subscribed'] = True
@@ -204,8 +205,7 @@ def landing(request):
                 up_exm['subscribed'] = True
 
             else:
-                up_exm['subscribed'] = eachExamDetails.get('exam_code') in \
-                    subscribed_exams
+                up_exm['subscribed'] = eachExamDetails.get('exam_code') in subscribed_exams
 
             up_exm['code'] = eachExamDetails['exam_code']
             up_exm['exam_category'] = eachExamDetails.get('exam_category')
@@ -214,12 +214,12 @@ def landing(request):
             up_exams.append(up_exm)
 
         all_cps_exam = exam_model_api.find_all_exammodel_descending(
-            {'exam_family': 'CPS'}, sort_index='exam_date'
+            {'exam_family': 'CPS'},
+            sort_index='exam_date'
         )
         for count, cps_exams in enumerate(all_cps_exam):
             up_cps_exam = {}
-            up_cps_exam['name'] = "IOE Competitive Exam " + \
-                str(len(all_cps_exam) - count)
+            up_cps_exam['name'] = "IOE Competitive Exam " + str(len(all_cps_exam) - count)
 
             if 'IDP' in subscription_type:
                 up_cps_exam['subscribed'] = True
@@ -228,16 +228,19 @@ def landing(request):
                 up_cps_exam['subscribed'] = True
 
             else:
-                up_cps_exam['subscribed'] = cps_exams.get('exam_code') in \
-                    subscribed_exams
+                up_cps_exam['subscribed'] = cps_exams.get('exam_code') in subscribed_exams
             up_cps_exam['code'] = cps_exams['exam_code']
             exam_start_time = datetime.datetime.strptime(
                 str(datetime.datetime.fromtimestamp(
-                    int(cps_exams.get('exam_date')))),
+                    int(
+                        cps_exams.get('exam_date')
+                    )
+                    )),
                 "%Y-%m-%d %H:%M:%S").time()
             up_cps_exam['exam_time'] = exam_start_time
             up_cps_exam['exam_date'] = datetime.datetime.fromtimestamp(
-                int(cps_exams.get('exam_date'))
+                int(cps_exams.get('exam_date')
+                    )
             ).strftime("%A, %d. %B %Y")
             up_cps_exam['exam_category'] = cps_exams.get('exam_category')
             up_cps_exam['exam_family'] = cps_exams.get('exam_family')
@@ -316,8 +319,7 @@ def attend_cps_exam(request, exam_code):
             })
 
         current_time = time.mktime(datetime.datetime.now().timetuple())
-        if current_time - exam_details['exam_date'] > \
-                exam_details['exam_duration'] * 60:
+        if current_time - exam_details['exam_date'] > exam_details['exam_duration'] * 60:
             return HttpResponseRedirect('/results/' + str(exam_code))
 
         validate_start = ess.check_exam_started(
@@ -328,8 +330,7 @@ def attend_cps_exam(request, exam_code):
             'exam_code': int(exam_code), 'user_id': int(request.user.id),
             'ess_time': int(validate_start['start_time'])
         })
-        time_elapsed = time.mktime(datetime.datetime.now().timetuple()) - \
-            int(exam_details['exam_date'])
+        time_elapsed = time.mktime(datetime.datetime.now().timetuple()) - int(exam_details['exam_date'])
         current_pg_num = 1
         next_page = 0
 
@@ -361,14 +362,10 @@ def attend_cps_exam(request, exam_code):
         sorted_questions = sorted(
             questions, key=lambda k: k['question_number']
         )
-        parameters['exam_time'] = datetime.datetime.strptime(
-            str(datetime.datetime.fromtimestamp(
-                int(exam_details.get('exam_date')
-                    ))), "%Y-%m-%d %H:%M:%S").time()
+        parameters['exam_time'] = datetime.datetime.strptime(str(datetime.datetime.fromtimestamp(int(exam_details.get('exam_date')))), "%Y-%m-%d %H:%M:%S").time()
         parameters['all_answers'] = json.dumps(all_answers)
         parameters['questions'] = sorted_questions
-        exam_details['exam_duration'] = (exam_details['exam_duration'] * 60 -
-                                         time_elapsed) / 60
+        exam_details['exam_duration'] = (exam_details['exam_duration'] * 60 - time_elapsed) / 60
         exam_details['exam_date'] = datetime.datetime.fromtimestamp(
             int(exam_details['exam_date'])
         ).strftime('%Y-%m-%d')
@@ -376,8 +373,7 @@ def attend_cps_exam(request, exam_code):
         parameters['exam_details'] = exam_details
         parameters['exam_code'] = exam_code
         parameters['user'] = user
-        if exm_date_time_linux <= time.mktime(
-                datetime.datetime.now().timetuple()):
+        if exm_date_time_linux <= time.mktime(datetime.datetime.now().timetuple()):
             parameters['render_before_exam'] = False
         else:
             parameters['render_before_exam'] = True
@@ -419,13 +415,13 @@ def attend_dps_exam(request, exam_code):
             )
 
             graph = GraphAPI(access_token)
-            print 'graph: ', graph
-            print social_account.uid
+            # print 'graph: ', graph
+            # print social_account.uid
             det = graph.get(
                 social_account.uid +
                 '/picture/?redirect=0&height=300&type=normal&width=300'
             )
-            print 'Debugging expired access token: ', det
+            # print 'Debugging expired access token: ', det
             profile_image = det['data']['url']
             user_profile_obj.update_profile_image(
                 profile_image, request.user.username
@@ -449,7 +445,8 @@ def attend_dps_exam(request, exam_code):
                 'useruid': request.user.id}, {
                 'start': 1,
                 'start_time': int(
-                    time.mktime(datetime.datetime.now().timetuple())),
+                    time.mktime(datetime.datetime.now().timetuple())
+                ),
                 'end': 0,
                 'end_time': ''
             })
@@ -496,10 +493,10 @@ def attend_dps_exam(request, exam_code):
             atte_ans = AttemptedAnswerDatabase()
             all_answers = atte_ans.find_all_atttempted_answer({
                 'exam_code': int(exam_code), 'user_id': int(request.user.id),
-                'ess_time': int(validate_start['start_time'])})
+                'ess_time': int(validate_start['start_time'])
+            })
             time_elapsed = time.mktime(
-                datetime.datetime.now().timetuple()) - validate_start[
-                'start_time']
+                datetime.datetime.now().timetuple()) - validate_start['start_time']
             exam_details['exam_duration'] = (
                 exam_details['exam_duration'] * 60 - time_elapsed) / 60
 
@@ -629,9 +626,9 @@ def attend_dps_exam_old(request, exam_code):
             all_answers = atte_ans.find_all_atttempted_answer({
                 'exam_code': int(exam_code),
                 'user_id': int(request.user.id),
-                'ess_time': int(validate_start['start_time'])})
-            time_elapsed = time.mktime(datetime.datetime.now().timetuple()) -\
-                validate_start['start_time']
+                'ess_time': int(validate_start['start_time'])
+            })
+            time_elapsed = time.mktime(datetime.datetime.now().timetuple()) - validate_start['start_time']
             exam_details['exam_duration'] = (
                 exam_details['exam_duration'] * 60 - time_elapsed
             ) / 60
@@ -713,8 +710,7 @@ def honorcode(request, exam_code):
             return HttpResponseRedirect('/dps/' + str(exam_code) + '/')
 
         current_time = time.mktime(datetime.datetime.now().timetuple())
-        if current_time - exam_details['exam_date'] > \
-                exam_details['exam_duration'] * 60:
+        if current_time - exam_details['exam_date'] > exam_details['exam_duration'] * 60:
             return HttpResponseRedirect('/results/' + str(exam_code))
 
         if_cps_ended = ess.check_exam_started(
@@ -913,8 +909,7 @@ def results(request, exam_code):
     parameters['exam_completed'] = True
     if request.user.is_authenticated():
         current_time = time.mktime(datetime.datetime.now().timetuple())
-        if exam_details['exam_family'] == 'CPS' and current_time - \
-                exam_details['exam_date'] < exam_details['exam_duration'] * 60:
+        if exam_details['exam_family'] == 'CPS' and current_time - exam_details['exam_date'] < exam_details['exam_duration'] * 60:
             parameters['exam_completed'] = False
 
     ans = AttemptedAnswerDatabase()
@@ -1003,8 +998,7 @@ def show_result(request, exam_code, subject_name):
     parameters = {}
     if request.user.is_authenticated() and subscribed:
         current_time = time.mktime(datetime.datetime.now().timetuple())
-        if exam_details['exam_family'] == 'CPS' and current_time - \
-                exam_details['exam_date'] < exam_details['exam_duration'] * 60:
+        if exam_details['exam_family'] == 'CPS' and current_time - exam_details['exam_date'] < exam_details['exam_duration'] * 60:
             return HttpResponseRedirect('/')
 
         parameters['exam_details'] = exam_details
@@ -1195,19 +1189,19 @@ def iomdashboard(request):
         all_valid_exams = exam_model_api.find_all_exammodel_descending(
             {'exam_code': {'$in': user_exams}}, sort_index='exam_date'
         )
-
+        count_out = 0
         for count, eachExamDetails in enumerate(all_valid_exams):
             if eachExamDetails['exam_family'] == 'CPS' or eachExamDetails['exam_category'] == 'BE-IOE':
                 continue
+
             up_exm = {}
+            count_out = count_out + 1
 
             if eachExamDetails is None:
                 continue
 
-            if eachExamDetails['exam_category'] == 'MBBS-IOM' and \
-                    eachExamDetails['exam_family'] == 'DPS':
-                up_exm['name'] = "IOM Practice Exam " + \
-                    str(len(all_valid_exams) - count)
+            if eachExamDetails['exam_category'] == 'MBBS-IOM' and eachExamDetails['exam_family'] == 'DPS':
+                up_exm['name'] = "IOM Practice Exam " + str(count_out)
 
             if 'IDP' in subscription_type:
                 up_exm['subscribed'] = True
@@ -1216,8 +1210,7 @@ def iomdashboard(request):
                 up_exm['subscribed'] = True
 
             else:
-                up_exm['subscribed'] = eachExamDetails.get('exam_code') in \
-                    subscribed_exams
+                up_exm['subscribed'] = eachExamDetails.get('exam_code') in subscribed_exams
             up_exm['code'] = eachExamDetails['exam_code']
             up_exm['exam_category'] = eachExamDetails.get('exam_category')
             up_exm['exam_family'] = eachExamDetails.get('exam_family')
@@ -1225,12 +1218,12 @@ def iomdashboard(request):
             up_exams.append(up_exm)
 
         all_cps_exam = exam_model_api.find_all_exammodel_descending(
-            {'exam_family': 'CPS'}, sort_index='exam_date'
+            {'exam_family': 'CPS'},
+            sort_index='exam_date'
         )
         for count, cps_exams in enumerate(all_cps_exam):
             up_cps_exam = {}
-            up_cps_exam['name'] = "IOM Competitive Exam " + \
-                str(len(all_cps_exam) - count)
+            up_cps_exam['name'] = "IOM Competitive Exam " + str(len(all_cps_exam) - count)
 
             if 'IDP' in subscription_type:
                 up_cps_exam['subscribed'] = True
@@ -1239,8 +1232,7 @@ def iomdashboard(request):
                 up_cps_exam['subscribed'] = True
 
             else:
-                up_cps_exam['subscribed'] = cps_exams.get('exam_code') in \
-                    subscribed_exams
+                up_cps_exam['subscribed'] = cps_exams.get('exam_code') in subscribed_exams
             up_cps_exam['code'] = cps_exams['exam_code']
             exam_start_time = datetime.datetime.strptime(
                 str(datetime.datetime.fromtimestamp(
@@ -1394,8 +1386,7 @@ def attend_IOM_dps_exam(request, exam_code):
                 'exam_code': int(exam_code),
                 'user_id': int(request.user.id),
                 'ess_time': int(validate_start['start_time'])})
-            time_elapsed = time.mktime(datetime.datetime.now().timetuple()) -\
-                validate_start['start_time']
+            time_elapsed = time.mktime(datetime.datetime.now().timetuple()) - validate_start['start_time']
             exam_details['exam_duration'] = (
                 exam_details['exam_duration'] * 60 - time_elapsed
             ) / 60
