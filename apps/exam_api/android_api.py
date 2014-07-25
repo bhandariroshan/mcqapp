@@ -1,6 +1,7 @@
 import datetime
 import time
 import json
+from bson.objectid import ObjectId
 
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -8,12 +9,38 @@ from django.views.decorators.csrf import csrf_exempt
 from apps.mainapp.classes.Exams import Exam
 from apps.mainapp.classes.Coupon import Coupon
 from apps.mainapp.classes.Userprofile import UserProfile
-from apps.mainapp.classes.query_database import ExammodelApi, \
-    AttemptedAnswerDatabase
-from apps.random_questions.views import generate_random_ioe_questions, \
-    generate_random_iom_questions
+from apps.mainapp.classes.query_database import ExammodelApi, AttemptedAnswerDatabase, QuestionApi
+from apps.random_questions.views import generate_random_ioe_questions, generate_random_iom_questions
 
 from .views import ExamHandler
+
+
+def get_question_set_for_android(exam_code):
+    '''
+    This function returns the questions of for a exam model
+    by checking the exam_code for android with correct answer
+    '''
+    exammodel_api = ExammodelApi()
+    try:
+        exam_model = exammodel_api.find_one_exammodel(
+            {"exam_code": int(exam_code)}
+        )
+        question_id_list = [
+            ObjectId(i['id']) for i in exam_model['question_list']
+        ]
+        question_api = QuestionApi()
+        question_list = question_api.find_all_questions(
+            {
+                '_id': {"$in": question_id_list},
+                "marks": 1
+            }
+        )
+        sorted_questions = sorted(
+            question_list, key=lambda k: k['question_number'])
+        return sorted_questions
+
+    except:
+        pass
 
 
 @csrf_exempt
@@ -41,8 +68,6 @@ def get_question_set(request, exam_code):
         if exam_code == 0:
             if "BE-IOE" in user['subscription_type']:
                 subscription = True
-            # elif "IDP" in user['subscription_type']:
-            #     subscription = True
             if not subscription and not coupon_obj.validate_coupon(coupon_code, 'BE-IOE', 'DPS'):
                 response = HttpResponse(
                     json.dumps(
@@ -57,7 +82,7 @@ def get_question_set(request, exam_code):
                 )
 
         '''
-        if exam_code is -1 then new IOM set is generated randomly and
+        if exam_code is 1 then new IOM set is generated randomly and
         the newly generated exam_code is used to access questions.
         '''
         if exam_code == 1:
@@ -81,8 +106,7 @@ def get_question_set(request, exam_code):
                 return HttpResponse(
                     json.dumps(
                         {'status': 'error',
-                         'message': 'Exam has not begin yet, please \
-                         check back later.'}
+                         'message': 'Exam has not begin yet, please check back later.'}
                     )
                 )
 
@@ -92,8 +116,7 @@ def get_question_set(request, exam_code):
 
         '''Validation for subscription here'''
         if subscription_status or int(exam_code) in user['valid_exam']:
-            exam_handler = ExamHandler()
-            model_question_set = exam_handler.get_questionset_from_database(
+            model_question_set = get_question_set_for_android(
                 exam_code
             )
 
@@ -125,10 +148,9 @@ def get_question_set(request, exam_code):
             )
             if subscription_status:
                 '''Add Validation for subscription here'''
-                exam_handler = ExamHandler()
-                model_question_set = exam_handler.\
-                    get_questionset_from_database(exam_code)
-
+                model_question_set = get_question_set_for_android(
+                    exam_code
+                )
                 response = HttpResponse(json.dumps(
                     {'status': 'ok',
                      'result': model_question_set,
@@ -159,11 +181,6 @@ def get_upcoming_exams(request):
     the function returns api of upcoming exams
     '''
     if request.user.is_authenticated():
-        # exam_handler = ExamHandler()
-        # upc_exams = exam_handler.list_upcoming_exams(
-        #     {'exam_category': 'MBBS-IOM'},
-        #     fields={'question_list': 0}
-        # )
         user_obj = UserProfile()
         usr = user_obj.get_user_by_username(request.user.username)
         '''
@@ -200,11 +217,6 @@ def get_upcoming_exams(request):
                 up_exam['subscribed'] = 1
                 upcoming_exams.append(up_exam)
 
-        # for count, eachUpCExams in enumerate(upc_exams):
-        #     eachUpCExams['exam_name'] = 'IOM Practice Exam ' + str(count + 1)
-        #     eachUpCExams['exam_date'] = int(eachUpCExams['exam_date'])
-        #     eachUpCExams['subscribed'] = 1 if eachUpCExams['exam_code'] in user_exams else 0
-        #     upcoming_exams.append(eachUpCExams)
         return HttpResponse(json.dumps(
             {'status': 'ok',
              'result': upcoming_exams[::-1],
@@ -239,20 +251,14 @@ def get_scores(request):
         exam_details = exam_obj.find_one_exammodel(
             {'exam_code': int(exam_code)}
         )
-        question_list = exam_handler.get_questionset_from_database(int(exam_code))
-        # question_obj = QuestionApi()
+        question_list = get_question_set_for_android(int(exam_code))
         ans = AttemptedAnswerDatabase()
-        # questions = question_obj.find_all_questions(
-        #     {"exam_code": int(exam_code)}
-        # )
-
         attempt_time = time.mktime(datetime.datetime.now().timetuple())
         if exam_details['exam_family'] == 'CPS':
             if (attempt_time - (exam_details['exam_date'] + exam_details['exam_duration'] * 60)) > 15 * 60:
                 return HttpResponse(json.dumps(
                     {'status': 'error',
-                     'message': 'We are sorry, you are late in submitting \
-                     your answers.'}))
+                     'message': 'We are sorry, you are late in submitting your answers.'}))
 
         for i in range(0, len(answer_list)):
             ans.update_upsert_push({
