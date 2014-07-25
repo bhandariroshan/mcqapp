@@ -44,9 +44,9 @@ def convert(csv_file_name):
                             "text": item[4],
                             "image": item[11]
                         },
-                        "correct": item[5]
+                        "correct": item[5].lower()
                     },
-                    "subject": item[6],
+                    "subject": item[6].lower(),
                     "marks": 1,
                     "exam_type": 'MEDICAL',
                     "exam_code": time_stamp
