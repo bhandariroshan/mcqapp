@@ -7,6 +7,8 @@ docopt==0.4.0
 ecdsa==0.11
 facepy==1.0.3
 mailchimp==2.0.7
+mandrill==1.0.53
+mongoengine==0.8.7
 oauthlib==0.6.1
 paramiko==1.12.4
 pycrypto==2.6.1
@@ -17,4 +19,3 @@ requests-oauthlib==0.4.0
 six==1.7.2
 sqlparse==0.1.11
 wsgiref==0.1.2
-mandrill==1.0.53
