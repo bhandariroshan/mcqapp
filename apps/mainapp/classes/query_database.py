@@ -172,7 +172,3 @@ class CurrentQuestionNumber():
 
     def update_current_question_number(self, where, what):
         return self.db_object.update_upsert(self.table_name, where, what)
-
-
-
-        
