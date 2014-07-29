@@ -1,6 +1,5 @@
 import random
 import datetime
-import time
 
 from bson.objectid import ObjectId
 
@@ -40,48 +39,49 @@ class GenerateQuiz():
             while random_num in random_list:
                 random_num = random.randrange(len(subject_questions))
             random_list.append(random_num)
-            question_list.append(subject_questions[random_num])
-        print(question_list)
+            question_list.append(ObjectId(subject_questions[random_num]['uid']['id']))
+
         # insert the newly generated questions into exammodel collection
         # with exam code incremented by one
-        # exammodel_api = ExammodelApi()
-        # last_exam_code = exammodel_api.find_all_exammodel_descending(
-        #     {},
-        #     fields={"exam_code": 1},
-        #     sort_index="exam_code",
-        #     limit=1
-        # )
-        # if len(last_exam_code) > 0:
-        #     new_exam_code = int(last_exam_code[0]['exam_code']) + 1
-        # else:
-        #     new_exam_code = 1001
-        # if exam_type == "ENGINEERING":
-        #     exam_category = "BE-IOE"
-        # elif exam_type == "MEDICAL":
-        #     exam_category = "MBBS-IOM"
+        exammodel_api = ExammodelApi()
+        last_exam_code = exammodel_api.find_all_exammodel_descending(
+            {},
+            fields={"exam_code": 1},
+            sort_index="exam_code",
+            limit=1
+        )
+        if len(last_exam_code) > 0:
+            new_exam_code = int(last_exam_code[0]['exam_code']) + 1
+        else:
+            new_exam_code = 1001
+        if exam_type == "ENGINEERING":
+            exam_category = "BE-IOE"
+        elif exam_type == "MEDICAL":
+            exam_category = "MBBS-IOM"
 
-        # new_exam_model = {
-        #     "exam_name": "Meroanswer Daily Quiz",
-        #     "exam_date": time.mktime(
-        #         datetime.datetime.now().timetuple()
-        #     ),
-        #     "image": "exam.jpg",
-        #     "exam_code": new_exam_code,
-        #     "exam_category": exam_category,
-        #     "exam_family": 'QUIZ',
-        #     "question_list": question_list
-        # }
-        # exammodel_api.insert_new_model(new_exam_model)
+        new_exam_model = {
+            "exam_name": "Meroanswer Daily Quiz",
+            "exam_date": str(datetime.datetime.utcnow().date()),
+            "image": "exam.jpg",
+            "exam_code": new_exam_code,
+            "exam_category": exam_category,
+            "exam_family": "QUIZ",
+            "question_list": question_list
+        }
+        exammodel_api.insert_new_model(new_exam_model)
+        return new_exam_model
 
-    def return_quiz_questions(self, exam_date, exam_category):
+    def return_quiz_questions(self, exam_category):
         """
         This function receives the exam_date and exam_category parameters and
         returns the quiz question list for that exam.
         """
         exam_category = exam_category.upper()
+        exam_date = str(datetime.datetime.utcnow().date())
         exammodel_api = ExammodelApi()
         exam_model = exammodel_api.find_one_exammodel(
-            {"exam_date": exam_date,
+            {"exam_family": "QUIZ",
+             "exam_date": exam_date,
              "exam_category": exam_category}
         )
         question_id_list = [
@@ -90,15 +90,10 @@ class GenerateQuiz():
         question_api = QuestionApi()
         question_list = question_api.find_all_questions(
             {
-                '_id': {"$in": question_id_list},
-                "marks": 1
+                '_id': {"$in": question_id_list}
             },
             fields={'answer.correct': 0}
         )
         sorted_questions = sorted(
             question_list, key=lambda k: k['question_number'])
         return sorted_questions
-
-
-generate_quiz = GenerateQuiz()
-generate_quiz.generate_new_quiz('medical')
