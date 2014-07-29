@@ -15,4 +15,4 @@ class QuizAnswer(mongo.DynamicDocument):
     mongo.connect("mcq", host="localhost", port=27017)
     question_id = mongo.ObjectIdField()
     attempted_option = mongo.StringField(max_length=10)
-    created_date = mongo.DateTimeField(datetime.datetime.now())
+    created_date = mongo.StringField(default=str(datetime.datetime.utcnow().date()))
