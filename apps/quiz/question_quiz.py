@@ -1,13 +1,13 @@
 import random
 import datetime
-
 from bson.objectid import ObjectId
-
 from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi
-
+from django.conf import settings
+from django.shortcuts import render_to_response
+from django.http import HttpResponseRedirect, HttpResponse
+from django.template import RequestContext
 
 class GenerateQuiz():
-
     """
     This class is used to generate new quiz questions. Number of questions generated
     can change and vary for different exam types.
@@ -92,8 +92,8 @@ class GenerateQuiz():
             {
                 '_id': {"$in": question_id_list}
             },
-            fields={'answer.correct': 0}
+            fields={'answer.correct': 0, 'question_number': 0}
         )
-        sorted_questions = sorted(
-            question_list, key=lambda k: k['question_number'])
-        return sorted_questions
+        for count, eachQuestion in enumerate(question_list):
+            eachQuestion['question_number'] = count + 1
+        return exam_model['exam_code'], question_list
