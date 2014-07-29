@@ -7,7 +7,7 @@ admin.autodiscover()
 
 urlpatterns = patterns(
     '',
-    url(r'^$', 'apps.mainapp.views.landing'),
+    url(r'^$', 'apps.mainapp.views.landing', name="home_page"),
     url(r'^latex-store$', 'apps.mainapp.views.add_html'),
     url(r'^latex-get-data/$', 'apps.mainapp.views.get_all_questions'),
     url(r'^latex$', 'apps.mainapp.views.latex_html'),
@@ -47,6 +47,10 @@ urlpatterns = patterns(
     url(r'^random/',
         include(
             'apps.random_questions.urls', app_name='random_questions'
+        )),
+    url(r'^quiz/',
+        include(
+            'apps.quiz.urls', app_name='quiz'
         )),
     url(r'^paying_users/$', 'apps.exam_api.coupon_admin.paying_users'),
     # url(r'^mongonaut/', include('mongonaut.urls')),
