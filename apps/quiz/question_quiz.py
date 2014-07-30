@@ -2,10 +2,7 @@ import random
 import datetime
 from bson.objectid import ObjectId
 from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi
-from django.conf import settings
-from django.shortcuts import render_to_response
-from django.http import HttpResponseRedirect, HttpResponse
-from django.template import RequestContext
+
 
 class GenerateQuiz():
     """
