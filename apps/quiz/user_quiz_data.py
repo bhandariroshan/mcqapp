@@ -45,24 +45,23 @@ class SaveQuiz():
         )
         question_api = QuestionApi()
         daily_score = 0
-        question_list = []
         for quiz_objects in quiz_answer_obj:
             question = question_api.find_one_question(
                 {"_id": quiz_objects.question_id},
             )
-            question_list.append(question)
             if question['answer']['correct'] == quiz_objects.attempted_option:
                 daily_score += 1
         exam_model_obj = ExammodelApi()
         current_exam_model = exam_model_obj.find_one_exammodel(
             {"exam_code": exam_code}
         )
-        quiz_result_obj = QuizResult.objects(
+        quiz_result_obj = QuizResult(
             exam_code=exam_code,
             attempted_date=quiz_answer_obj[0].attempted_date,
             quiz_type=current_exam_model['exam_category']
         )
         quiz_result_obj.user_id = request.user.id
-        quiz_result_obj.exam_score = daily_score,
+        quiz_result_obj.exam_score = daily_score
         quiz_result_obj.submitted = True
         quiz_result_obj.save()
+        return True

@@ -66,7 +66,6 @@ class SingleQuizView(View):
 
 @csrf_exempt
 def ajax_request(request, func_name):
-    print "Inside aja"
     from .ajax_handle import AjaxHandle
     ajax_handle = AjaxHandle()
     return_msg = getattr(ajax_handle, func_name)(request)

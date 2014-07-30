@@ -18,3 +18,14 @@ function save_quiz_answer(exam_code, question_id, selected_ans){
 function save_quiz_answer_success(data){
 	data = jQuery.parseJSON(data);
 }
+
+function ajax_set_quiz_finished(exam_code){
+    ajax_request('set_quiz_finished', 'set_quiz_finished_success', {'exam_code':exam_code});  
+}
+
+function set_quiz_finished_success(data){
+  data =jQuery.parseJSON(data);
+  if(data['status'] == 'success'){
+    window.location = '/leaderboard/';
+  }
+}

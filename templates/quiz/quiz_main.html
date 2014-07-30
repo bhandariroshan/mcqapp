@@ -116,7 +116,7 @@
             <p id="infoText">You have successfully reached the end of this exam. What would you like to do?</p>
               <li class="prepend field">
                 <div class="medium primary btn" >
-                  <a href="#" onclick="set_exam_finished()">Submit</a>
+                  <a href="#" onclick="set_quiz_finished()">Submit</a>
                   <a id="reviewAns" href="#" onclick="review()">Review</a>
                 </div>
               </li>
@@ -170,8 +170,8 @@ var all_answers = {{all_answers|safe}};
 <script src="/static/js/quiz/quiz_ajax.js"></script>
 <script src="/static/js/quiz/quiz.js"></script>
 <script type="text/javascript">
-  function set_exam_finished(){
-    ajax_set_exam_finished(exam_code, true);
+  function set_quiz_finished(){
+    ajax_set_quiz_finished(exam_code, true);
   }
   function review(){
     $('#closegumby').click();
