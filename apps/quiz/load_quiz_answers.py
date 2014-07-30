@@ -18,12 +18,13 @@ class SaveQuiz():
         """
         question_id = request.POST.get('question_id')
         option = request.POST.get('option')
+        exam_code = request.POST.get('exam_code')
         attempted_date = time.mktime(datetime.datetime.now().date().timetuple())
         quiz_answer_obj, created = QuizAnswer.objects.get_or_create(
             question_id=ObjectId(question_id),
             user_id=request.user.id,
             attempted_date=attempted_date,
-            defaults={"attempted_option": option}
+            defaults={"attempted_option": option, "exam_code": exam_code}
         )
         if not created:
             quiz_answer_obj.attempted_option = option
