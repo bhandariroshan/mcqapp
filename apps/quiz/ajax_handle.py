@@ -9,7 +9,7 @@ class AjaxHandle():
     def __init__(self):
         pass
 
-    def save_answer(self, request):
+    def save_quiz_answer(self, request):
     	from .load_quiz_answers import SaveQuiz
     	quiz_ans_obj = SaveQuiz()
     	quiz_ans_obj.save_user_quiz(request)

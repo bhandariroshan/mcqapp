@@ -58,7 +58,7 @@ class SingleQuizView(View):
             'exam_code': int(exam_code),
             'user_id': int(request.user.id),
         })
-        print all_answers
+        print questions[0]['uid']['id']
         parameters['all_answers'] = json.dumps(all_answers)
         return render(request, self.template_name, parameters)
 
@@ -66,6 +66,7 @@ class SingleQuizView(View):
 
 @csrf_exempt
 def ajax_request(request, func_name):
+    print "Inside aja"
     from .ajax_handle import AjaxHandle
     ajax_handle = AjaxHandle()
     return_msg = getattr(ajax_handle, func_name)(request)
