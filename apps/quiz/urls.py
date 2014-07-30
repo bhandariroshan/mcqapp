@@ -18,4 +18,6 @@ urlpatterns = patterns(
         view=SingleQuizView.as_view(),
         name='single_quiz'
     ),
+    url(r'^quiz-ajax/(?P<func_name>\w{1,40})$',
+        'apps.quiz.views.ajax_request', name='quiz_ajax'),
 )

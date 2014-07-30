@@ -1,3 +1,4 @@
+from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render
 # Create your views here.
 from django.http import HttpResponseRedirect, HttpResponse
@@ -15,10 +16,10 @@ from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi,\
 
 
 def generate_quiz(request, exam_type):
-	print "Roshan"
-	quiz_obj = GenerateQuiz()
-	quiz = quiz_obj.generate_new_quiz(exam_type)
-	return HttpResponse(json.dumps({'status':'Quiz Generated'}))
+    print "Roshan"
+    quiz_obj = GenerateQuiz()
+    quiz = quiz_obj.generate_new_quiz(exam_type)
+    return HttpResponse(json.dumps({'status':'Quiz Generated'}))
 
 class QuizView(View):   
     template_name = 'exam_main.html'
@@ -44,8 +45,8 @@ class SingleQuizView(View):
 
     @method_decorator(login_required)
     def get(self, request, exam_category, *args, **kwargs):
-    	parameters ={}
-    	question_quiz_obj = GenerateQuiz()
+        parameters ={}
+        question_quiz_obj = GenerateQuiz()
         exam_code, questions = question_quiz_obj.return_quiz_questions(exam_category)
         parameters['start_question_number'] = 0
         parameters['questions'] = json.dumps(questions)
@@ -60,3 +61,12 @@ class SingleQuizView(View):
         print all_answers
         parameters['all_answers'] = json.dumps(all_answers)
         return render(request, self.template_name, parameters)
+
+
+
+@csrf_exempt
+def ajax_request(request, func_name):
+    from .ajax_handle import AjaxHandle
+    ajax_handle = AjaxHandle()
+    return_msg = getattr(ajax_handle, func_name)(request)
+    return return_msg

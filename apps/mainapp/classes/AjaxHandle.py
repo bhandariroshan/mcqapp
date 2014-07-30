@@ -269,9 +269,8 @@ class AjaxHandle():
                      'message': 'Not Authorized for this action'}
                 )
             )
-    def save_quiz_answer(self, request):
-        pass
-        
+
+
     def honor_code_accept(self, request):
         if request.user.is_authenticated():
             exam_code = request.POST.get('exam_code', '')

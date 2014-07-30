@@ -11,11 +11,13 @@ class SaveQuiz():
     QuizAnswer collection
     """
 
-    def save_user_quiz(self, request, question_id, option):
+    def save_user_quiz(self, request):
         """
         This function receives the user information, question id and option
         chosen by user for the question and saves the data in the database
         """
+        question_id = request.POST.get('question_id')
+        option = request.POST.get('option')
         attempted_date = time.mktime(datetime.datetime.now().date().timetuple())
         quiz_answer_obj, created = QuizAnswer.objects.get_or_create(
             question_id=ObjectId(question_id),
