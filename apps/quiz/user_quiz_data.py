@@ -37,25 +37,39 @@ class QuizResult():
     This class is used for result related queries of of quiz
     """
 
-    def daily_quiz_score(self, request):
+    def save_daily_quiz_score(self, request):
         """
         This function receives user information and exam code
         and returns the score of the user for daily quiz.
         """
-        from apps.mainapp.classes.query_database import QuestionApi
+        from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi
+        from .models import QuizResult
+
         exam_code = int(request.POST.get('exam_code'))
-        user_quiz_answers = QuizAnswer.objects(
+        quiz_answer_obj = QuizAnswer.objects(
             exam_code=exam_code,
             user_id=request.user.id
         )
         question_api = QuestionApi()
         daily_score = 0
         question_list = []
-        for quiz_objects in user_quiz_answers:
+        for quiz_objects in quiz_answer_obj:
             question = question_api.find_one_question(
                 {"_id": quiz_objects.question_id},
             )
             question_list.append(question)
             if question['answer']['correct'] == quiz_objects.attempted_option:
                 daily_score += 1
-        return daily_score, question_list
+        exam_model_obj = ExammodelApi()
+        current_exam_model = exam_model_obj.find_one_exammodel(
+            {"exam_code": exam_code}
+        )
+        quiz_result_obj = QuizResult.objects(
+            exam_code=exam_code,
+            attempted_date=quiz_answer_obj[0].attempted_date,
+            quiz_type=current_exam_model['exam_category']
+        )
+        quiz_result_obj.user_id = request.user.id
+        quiz_result_obj.exam_score = daily_score,
+        quiz_result_obj.submitted = True
+        quiz_result_obj.save()
