@@ -9,6 +9,9 @@ from django.core.urlresolvers import reverse_lazy
 
 from .question_quiz import GenerateQuiz
 import json
+from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi,\
+    ExamStartSignal, HonorCodeAcceptSingal, AttemptedAnswerDatabase,\
+    CurrentQuestionNumber
 
 
 def generate_quiz(request, exam_type):
@@ -44,8 +47,16 @@ class SingleQuizView(View):
     	parameters ={}
     	question_quiz_obj = GenerateQuiz()
         exam_code, questions = question_quiz_obj.return_quiz_questions(exam_category)
-        parameters['current_question_number'] = 0
-        parameters['questions'] = questions
-        parameters['start_question'] = questions[0]        
-        parameters['exam_code'] = exam_code
+        parameters['start_question_number'] = 0
+        parameters['questions'] = json.dumps(questions)
+        parameters['start_question'] = questions[0]
+        parameters['max_questions_number'] = len(questions)
+        parameters['exam_code'] = exam_code        
+        atte_ans = AttemptedAnswerDatabase()
+        all_answers = atte_ans.find_all_atttempted_answer({
+            'exam_code': int(exam_code),
+            'user_id': int(request.user.id),
+        })
+        print all_answers
+        parameters['all_answers'] = json.dumps(all_answers)
         return render(request, self.template_name, parameters)

@@ -269,7 +269,9 @@ class AjaxHandle():
                      'message': 'Not Authorized for this action'}
                 )
             )
-
+    def save_quiz_answer(self, request):
+        pass
+        
     def honor_code_accept(self, request):
         if request.user.is_authenticated():
             exam_code = request.POST.get('exam_code', '')
@@ -794,6 +796,7 @@ class AjaxHandle():
                  'notattempted': nt_att}
             )
         )
+
 
     def get_new_exam(self, request):
         user_profile_obj = UserProfile()

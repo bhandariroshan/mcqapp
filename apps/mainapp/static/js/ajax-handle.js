@@ -136,6 +136,15 @@ function save_answer(exam_code, question_id, selected_ans,current_question_numbe
 	{'qid':question_id, 'sans':selected_ans, 'exam_code':exam_code, 'current_question_number':current_question_number});
 
 }
+function save_quiz_answer(exam_code, question_id, selected_ans,current_question_number){
+	ajax_request('save_answer', 'save_quiz_answer_success', 
+	{'qid':question_id, 'sans':selected_ans, 'exam_code':exam_code, 'current_question_number':current_question_number});	
+}
+
+function save_quiz_answer_success(data){
+	data = jQuery.parseJSON(data);
+}
+
 function save_answer_success(data){
 	data = jQuery.parseJSON(data);
 	if (data['status'] == 'TimeElapsedError'){
