@@ -1,7 +1,4 @@
 # Create your views here.
-from django.shortcuts import render_to_response
-from django.template import RequestContext
-from django.http import HttpResponse
 
 
 class AjaxHandle():
@@ -10,6 +7,7 @@ class AjaxHandle():
         pass
 
     def save_quiz_answer(self, request):
-    	from .load_quiz_answers import SaveQuiz
-    	quiz_ans_obj = SaveQuiz()
-    	quiz_ans_obj.save_user_quiz(request)
+        from .user_quiz_data import SaveQuiz
+
+        quiz_ans_obj = SaveQuiz()
+        quiz_ans_obj.save_user_quiz(request)
