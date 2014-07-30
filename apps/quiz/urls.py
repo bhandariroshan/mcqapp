@@ -10,7 +10,7 @@ urlpatterns = patterns(
         name='quiz_home'
     ),
     url(
-        r'^generate/(?P<exam_type>\w{1,40})/$', 
+        r'^generate/(?P<exam_type>\w{1,40})/$',
         'apps.quiz.views.generate_quiz'
     ),
     url(

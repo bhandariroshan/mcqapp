@@ -37,14 +37,25 @@ class QuizResult():
     This class is used for result related queries of of quiz
     """
 
-    def user_quiz_result(self, request):
+    def daily_quiz_score(self, request):
         """
         This function receives user information and exam code
-        and returns the result of the quiz for that quiz.
+        and returns the score of the user for daily quiz.
         """
-
+        from apps.mainapp.classes.query_database import QuestionApi
         exam_code = int(request.POST.get('exam_code'))
         user_quiz_answers = QuizAnswer.objects(
             exam_code=exam_code,
             user_id=request.user.id
         )
+        question_api = QuestionApi()
+        daily_score = 0
+        question_list = []
+        for quiz_objects in user_quiz_answers:
+            question = question_api.find_one_question(
+                {"_id": quiz_objects.question_id},
+            )
+            question_list.append(question)
+            if question['answer']['correct'] == quiz_objects.attempted_option:
+                daily_score += 1
+        return daily_score, question_list
