@@ -15,6 +15,7 @@ class QuizAnswer(mongo.DynamicDocument):
     '''
     mongo.connect("mcq", host="localhost", port=27017)
     question_id = mongo.ObjectIdField()
+    exam_code = mongo.IntField()
     attempted_option = mongo.StringField(max_length=10)
     attempted_date = mongo.IntField(
         default=time.mktime(datetime.datetime.now().date().timetuple())
