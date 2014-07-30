@@ -7,8 +7,7 @@ from .models import QuizAnswer
 
 class SaveQuiz():
     """
-    This class is used to save answers chosen by user in the
-    QuizAnswer collection
+    This class is used to perform save related operations of quiz
     """
 
     def save_user_quiz(self, request):
@@ -30,12 +29,6 @@ class SaveQuiz():
         if not created:
             quiz_answer_obj.attempted_option = option
             quiz_answer_obj.save()
-
-
-class QuizResult():
-    """
-    This class is used for result related queries of of quiz
-    """
 
     def save_daily_quiz_score(self, request):
         """
