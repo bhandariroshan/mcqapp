@@ -1,6 +1,8 @@
 import random
 import datetime
+import time
 from bson.objectid import ObjectId
+
 from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi
 
 
@@ -58,7 +60,7 @@ class GenerateQuiz():
 
         new_exam_model = {
             "exam_name": "Meroanswer Daily Quiz",
-            "exam_date": str(datetime.datetime.utcnow().date()),
+            "exam_date": time.mktime(datetime.datetime.now().date().timetuple()),
             "image": "exam.jpg",
             "exam_code": new_exam_code,
             "exam_category": exam_category,
@@ -74,7 +76,7 @@ class GenerateQuiz():
         returns the quiz question list for that exam.
         """
         exam_category = exam_category.upper()
-        exam_date = str(datetime.datetime.utcnow().date())
+        exam_date = time.mktime(datetime.datetime.now().date().timetuple())
         exammodel_api = ExammodelApi()
         exam_model = exammodel_api.find_one_exammodel(
             {"exam_family": "QUIZ",
