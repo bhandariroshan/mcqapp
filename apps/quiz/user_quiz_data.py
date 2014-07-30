@@ -65,3 +65,15 @@ class SaveQuiz():
         quiz_result_obj.submitted = True
         quiz_result_obj.save()
         return True
+
+    def check_quiz_submitted(self, request):
+        """
+        This functions checks whether quiz is submitted by the user
+        and return true if submitted else returns false
+        """
+        from .models import QuizResult
+
+        exam_code = int(request.POST.get('exam_code'))
+        return QuizResult.objects.filter(
+            exam_code=exam_code, user_id=request.user.id
+        ).count() > 0
