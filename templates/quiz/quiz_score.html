@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load staticfiles %} 
+{% block content %}
+<div class="row">
+<div class="twelve columns" style="margin-top:12%; margin-bottom:7%;">
+    <h3 class="h-text-align ui-corner-all" style="text-align: center;"><strong>{{exam_details.exam_name}}</strong></h3>
+    <li id='exam_not_complete_alert' class='warning' style="display: none;"><h3 style="text-align: center;color:red;">Answers will be available after exam duration is completed. Please check back later.</h3></li>
+    <section class="tabs">
+		<ul class="tab-nav">
+		    <li class="active"> <a href="#">Score Card</a></li>		    
+		    <!-- <li><a href="#">Rank Card</a></li> -->
+		</ul>
+		<div class="tab-content active">
+			<table>
+				<thead>				
+					<tr>
+						<th>SN</th>
+						<th>Quiz Date</th>
+						<th>Mark Scored</th>
+					</tr>
+				</thead>
+				<tbody>
+				{% for eachResult in quizes %}
+					<tr>       
+						<td>{{forloop.counter}}</td>	
+						<td>{{eachResult.attempted_date}}</td>
+						<td>{{eachResult.exam_score}}</td>
+					</tr>
+				{% endfor %}
+				</tbody>
+			</table>
+		</div>
+
+		<div class="tab-content">
+			{% if not myrankcard %}
+				<table>
+					<thead>
+						<tr>
+							<th>Rank Card</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr><td>Your Rank</td><td>{{myrankcard.rank}}</td></tr>
+						<tr><td>Total Participants</td><td>{{myrankcard.total}}</td></tr>
+					</tbody>
+				</table>
+			{% else %}
+
+			{% endif %}
+		</div>
+	</section>
+</div>
+</div>
+
+{% endblock %}
+{% block javascript %}
+<script type='text/javascript'>
+  function exam_not_complete_alert(){
+    $('#exam_not_complete_alert').css('display', 'block');
+  }
+</script>
+{% endblock %}

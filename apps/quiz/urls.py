@@ -15,6 +15,11 @@ urlpatterns = patterns(
         view=QuizGenerate.as_view(), 
         name='generate_quiz'  
     ),
+    
+    url(
+        r'^myscore/$',
+        view=QuizScore.as_view(), 
+        name='my_score'),
 
     url(
         r'^(?P<exam_category>[-\w]+)/$',
@@ -28,9 +33,5 @@ urlpatterns = patterns(
         name='quiz_ajax',
     ),
         
-    url(
-        r'^myscore/(?P<exam_category>[-\w]+)/$',
-        view=QuizScore.as_view(), 
-        name='my_score'),
-    
+
 )

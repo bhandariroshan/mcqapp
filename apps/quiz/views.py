@@ -48,8 +48,8 @@ class SingleQuizView(View):
         from .user_quiz_data import SaveQuiz
         quiz_ans_obj = SaveQuiz()
         check_submitted = quiz_ans_obj.check_quiz_submitted(request, exam_code)
-        # if check_submitted:
-        #     return HttpResponseRedirect('/quiz/myscore/' + exam_category)
+        if check_submitted:
+            return HttpResponseRedirect('/quiz/myscore/')
 
         parameters['start_question_number'] = 0
         parameters['questions'] = json.dumps(questions)
@@ -70,11 +70,15 @@ class SingleQuizView(View):
 
 
 class QuizScore(View):
-    template_name = 'myscore.html'
+    template_name = 'quiz/quiz_score.html'
     def get(self, request, *args, **kwargs):
-        quiz_obj = GenerateQuiz()
-        quiz = quiz_obj.generate_new_quiz(exam_type)
-        return HttpResponse(json.dumps({'status':'Quiz Generated'}))
+        parameters = {}
+        from .user_leaderboard import LeaderBoard
+        leader_board = LeaderBoard()
+        user_leaderboard = leader_board.user_quiz_result(request)
+        parameters['quizes'] = user_leaderboard['quiz_result']
+        parameters['total_score'] =  user_leaderboard['total_score']
+        return render(request, self.template_name, parameters)
 
 
 class AjaxRequest(View):    
@@ -83,5 +87,3 @@ class AjaxRequest(View):
         ajax_handle = AjaxHandle()
         return_msg = getattr(ajax_handle, func_name)(request)        
         return return_msg
-
-
