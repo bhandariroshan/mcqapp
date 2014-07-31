@@ -150,7 +150,25 @@ def dashboard(request):
         return HttpResponseRedirect('/')
 
 
-def landing(request):
+def set_category(request):
+    if request.user.is_authenticated():
+        parameters = {}
+        user_profile_obj = UserProfile()
+        user = user_profile_obj.get_user_by_username(request.user.username)
+        
+        if 'MBBS-IOM' in user['student_category']:
+            return HttpResponseRedirect('/iom/')
+
+        elif 'BE-IOE' in user['student_category']:
+            return HttpResponseRedirect('/ioe/')
+
+        parameters['user'] = user
+        return render_to_response(
+            'setcategory.html', parameters,
+            context_instance=RequestContext(request)
+        )
+
+def ioe_home_page(request):
     if request.user.is_authenticated():
         parameters = {}
         up_exams = []

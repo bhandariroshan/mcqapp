@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load staticfiles %} 
+{% block content %}
+
+<div class="row my-margin-top row-bg-color">   
+      <div class="twelve columns success alert" id="categorySelect">
+        <li class="field">
+          <h3><strong>Select your faculty</strong></h3><br>
+            <div>          
+              <label class="radio" for="iomCheck">
+                <input name="radio" id="iomCheck" type="radio">
+                <span></span> Medical
+              </label>
+              <label class="radio" for="ioeCheck">
+                <input name="radio" id="ioeCheck" type="radio">
+                <span></span> Engineering
+              </label>
+            </div>
+            <br>
+            <div class="medium primary btn pretty button-margin" >
+                <a href="#" onclick="save_category()"> Save </a>
+            </div>
+        </li>
+      </div> 
+</div>
+{% endblock %}
+
+{% block javascript %}
+<script src="{% static "js/ajax-handle.js" %}"></script>
+<script type="text/javascript">
+  function save_category(){
+      var ioeCheck = $('#ioeCheck').is(':checked');
+      var iomCheck = $('#iomCheck').is(':checked')
+      ajax_save_category(ioeCheck, iomCheck);
+  }
+</script>
+{% endblock %}

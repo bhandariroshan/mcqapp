@@ -188,6 +188,6 @@ function ajax_save_category(ioe_check, iom_check){
 function save_category_success(data){
 	data = jQuery.parseJSON(data);
 	if(data['status']=='ok'){
-		$('#categorySelect').hide();
+		window.location = data['url'];
 	}
 }

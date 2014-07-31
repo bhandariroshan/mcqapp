@@ -7,7 +7,8 @@ admin.autodiscover()
 
 urlpatterns = patterns(
     '',
-    url(r'^$', 'apps.mainapp.views.landing', name="home_page"),
+    url(r'^$', 'apps.mainapp.views.set_category', name="set_category"),
+    url(r'^ioe/$', 'apps.mainapp.views.ioe_home_page', name="ioe_home_page"),
     url(r'^latex-store$', 'apps.mainapp.views.add_html'),
     url(r'^latex-get-data/$', 'apps.mainapp.views.get_all_questions'),
     url(r'^latex$', 'apps.mainapp.views.latex_html'),

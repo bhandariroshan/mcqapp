@@ -367,20 +367,26 @@ class AjaxHandle():
     def save_category(self, request):
         user = UserProfile()
         if request.user.is_authenticated():
-            ioe_check = bool(request.POST.get('ioe_check', ''))
-            iom_check = bool(request.POST.get('iom_check', ''))
-            if ioe_check and iom_check:
-                cat = 'IDP'
-            elif ioe_check:
+            # print request
+            ioe_check = request.POST.get('ioe_check')
+            iom_check = request.POST.get('iom_check')
+            print request.POST
+            print ioe_check, iom_check
+
+            if ioe_check == 'true':
                 cat = 'BE-IOE'
-            elif iom_check:
+                url = '/ioe/'
+
+            elif iom_check == 'true' :
                 cat = 'MBBS-IOM'
+                url = '/iom/'
+
             user.update_upsert(
                 {'username': request.user.username},
                 {'student_category': cat,
                  'student_category_set': 1}
             )
-            return HttpResponse(json.dumps({'status': 'ok'}))
+            return HttpResponse(json.dumps({'status': 'ok', 'url':url}))
         else:
             return HttpResponse(
                 json.dumps(

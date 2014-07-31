@@ -16,11 +16,6 @@ from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi,\
 
 
 class QuizGenerate(View):   
-    def get_context_data(self, **kwargs):
-        # Call the base implementation first to get a context
-        context = super(QuizView, self).get_context_data(**kwargs)
-        return context
-
     def get(self, request, exam_type, *args, **kwargs):
         quiz_obj = GenerateQuiz()
         quiz = quiz_obj.generate_new_quiz(exam_type)
