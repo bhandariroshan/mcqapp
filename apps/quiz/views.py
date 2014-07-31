@@ -45,7 +45,8 @@ class SingleQuizView(View):
         check_submitted = quiz_ans_obj.check_quiz_submitted(request, exam_code)
         if check_submitted:
             return HttpResponseRedirect('/quiz/myscore/')
-
+        else:
+            return HttpResponse(json.dumps({'status':'??'}))
         parameters['start_question_number'] = 0
         parameters['questions'] = json.dumps(questions)
         parameters['start_question'] = questions[0]
