@@ -155,7 +155,7 @@ def set_category(request):
         parameters = {}
         user_profile_obj = UserProfile()
         user = user_profile_obj.get_user_by_username(request.user.username)
-        
+
         if 'MBBS-IOM' in user['student_category']:
             return HttpResponseRedirect('/iom/')
 
@@ -168,6 +168,11 @@ def set_category(request):
             context_instance=RequestContext(request)
         )
 
+def landing(request):
+    return render_to_response(
+        'landing.html', context_instance=RequestContext(request)
+    )
+    
 def ioe_home_page(request):
     if request.user.is_authenticated():
         parameters = {}
@@ -290,9 +295,7 @@ def ioe_home_page(request):
             context_instance=RequestContext(request)
         )
     else:
-        return render_to_response(
-            'landing.html', context_instance=RequestContext(request)
-        )
+        return HttpResponseRedirect('/')
 
 
 def attend_cps_exam(request, exam_code):
