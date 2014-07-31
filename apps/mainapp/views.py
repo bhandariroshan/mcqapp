@@ -167,12 +167,16 @@ def set_category(request):
             'setcategory.html', parameters,
             context_instance=RequestContext(request)
         )
+    else:
+        return render_to_response(
+            'landing.html', context_instance=RequestContext(request)
+    )
 
 def landing(request):
     return render_to_response(
         'landing.html', context_instance=RequestContext(request)
     )
-    
+
 def ioe_home_page(request):
     if request.user.is_authenticated():
         parameters = {}
