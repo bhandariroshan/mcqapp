@@ -1,10 +1,9 @@
-from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi,\
-    AttemptedAnswerDatabase
-
 import datetime
 import time
 from bson.objectid import ObjectId
 import re
+
+from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi, AttemptedAnswerDatabase
 
 
 class ExamHandler():
@@ -21,7 +20,6 @@ class ExamHandler():
             exam_model = exammodel_api.find_one_exammodel(
                 {"exam_code": int(exam_code)}
             )
-            # if exam_model['exam_category'] == 'BE-IOE':
             question_id_list = [
                 ObjectId(i['id']) for i in exam_model['question_list']
             ]
@@ -36,15 +34,6 @@ class ExamHandler():
             sorted_questions = sorted(
                 question_list, key=lambda k: k['question_number'])
             return sorted_questions
-            # else:
-            #     question_api = QuestionApi()
-            #     question_list = question_api.find_all_questions(
-            #         {'exam_code': int(exam_code), "marks": 1}
-            #     )
-
-            #     sorted_questions = sorted(
-            #         question_list, key=lambda k: k['question_number'])
-            #     return sorted_questions
 
         except:
             pass
@@ -59,7 +48,6 @@ class ExamHandler():
             exam_model = exammodel_api.find_one_exammodel(
                 {"exam_code": int(exam_code)}
             )
-            # if exam_model['exam_category'] == 'BE-IOE':
             question_id_list = [
                 ObjectId(i['id']) for i in exam_model['question_list']
             ]
@@ -74,20 +62,6 @@ class ExamHandler():
             sorted_questions = sorted(
                 question_list, key=lambda k: k['question_number'])
             return sorted_questions
-            # else:
-            #     question_api = QuestionApi()
-            #     question_list = question_api.find_all_questions({
-            #         'exam_code': int(exam_code),
-            #         "marks": 1,
-            #         'subject': {"$regex": re.compile(
-            #             "^" + str(subject_name) + "$", re.IGNORECASE),
-            #             "$options": "-i"},
-            #     }
-            #     )
-
-            #     sorted_questions = sorted(
-            #         question_list, key=lambda k: k['question_number'])
-            #     return sorted_questions
 
         except:
             pass
@@ -152,12 +126,12 @@ class ExamHandler():
             temp['attempted'] = 0
             temp['score'] = 0
             correct_answers[subs] = temp
-        # print len(answer_list), answer_list
+
         for index, choice in enumerate(answer_list):
             correct_answers[
                 sorted_questions[index]['subject'].lower()][
-                'subject_total_marks'] += 1 * \
-                int(sorted_questions[index]['marks'])
+                'subject_total_marks'] += 1 * int(sorted_questions[index]['marks'])
+
             if choice in ['a', 'b', 'c', 'd']:
                 correct_answers[
                     sorted_questions[index][
@@ -167,19 +141,15 @@ class ExamHandler():
                         correct_answers[sorted_questions[index][
                             'subject'].lower()]['correct_subject_answer'] += 1
                         correct_answers[sorted_questions[index][
-                            'subject'].lower()]['score'] += 1 * \
-                            int(sorted_questions[index]['marks'])
+                            'subject'].lower()]['score'] += 1 * int(sorted_questions[index]['marks'])
                     except:
                         correct_answers[
-                            sorted_questions[index]['subject'].lower()][
-                            'score'
-                        ] += 1
+                            sorted_questions[index]['subject'].lower()]['score'] += 1
                 else:
                     if exam_model['exam_category'] in ["BE-IOE", "MBBS-MOE"]:
                         try:
                             correct_answers[
-                                sorted_questions[index][
-                                    'subject'].lower()]['score'] -= 0.25
+                                sorted_questions[index]['subject'].lower()]['score'] -= 0.25
                         except:
                             pass
 
