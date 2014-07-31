@@ -42,11 +42,11 @@ class SingleQuizView(View):
 
         from .user_quiz_data import SaveQuiz
         quiz_ans_obj = SaveQuiz()
-        check_submitted = quiz_ans_obj.check_quiz_submitted(request, exam_code)
+        check_submitted = quiz_ans_obj.check_quiz_submitted(request, int(exam_code))
+        
         if check_submitted:
             return HttpResponseRedirect('/quiz/myscore/')
-        else:
-            return HttpResponse(json.dumps({'status':'??'}))
+
         parameters['start_question_number'] = 0
         parameters['questions'] = json.dumps(questions)
         parameters['start_question'] = questions[0]
