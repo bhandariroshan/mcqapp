@@ -25,5 +25,4 @@ class LeaderBoard():
             user_id=user.id, quiz_type="MBBS-IOM").order_by('attempted_date')
         parameters['iom_total_score'] = QuizResult.objects.filter(
             user_id=user.id, quiz_type="MBBS-IOM").sum('quiz_score')
-        print parameters
         return parameters

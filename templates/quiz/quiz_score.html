@@ -26,7 +26,7 @@
 				{% for eachResult in ioe_quiz_result %}
 					<tr>       
 						<td>{{forloop.counter}}</td>	
-						<td>{{eachResult.name}}</td>	
+						<td>{{eachResult.quiz_name}}</td>	
 						<td>{{eachResult.attempted_date}}</td>
 						<td>{{eachResult.quiz_score}}</td>
 					</tr>
@@ -55,7 +55,7 @@
 				{% for eachResult in iom_quiz_result %}
 					<tr>       
 						<td>{{forloop.counter}}</td>
-						<td>{{eachResult.name}}</td>	
+						<td>{{eachResult.quiz_name}}</td>	
 						<td>{{eachResult.attempted_date}}</td>
 						<td>{{eachResult.quiz_score}}</td>
 					</tr>
