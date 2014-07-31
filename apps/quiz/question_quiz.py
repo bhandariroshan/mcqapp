@@ -5,6 +5,8 @@ from bson.objectid import ObjectId
 
 from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi
 
+from .decorators import check_quiz_generated
+
 
 class GenerateQuiz():
     """
@@ -12,11 +14,14 @@ class GenerateQuiz():
     can change and vary for different exam types.
     """
 
+    @check_quiz_generated
     def generate_new_quiz(self, exam_type):
         """
         This function generates new set of quiz questions and saves the
         question list in the exammodel collection
         """
+        exam_date = time.mktime(datetime.datetime.now().date().timetuple())
+        exammodel_api = ExammodelApi()
         question_api = QuestionApi()
         exam_type = exam_type.upper()
         subjects = question_api.find_distinct_value(
@@ -42,7 +47,7 @@ class GenerateQuiz():
 
         # insert the newly generated questions into exammodel collection
         # with exam code incremented by one
-        exammodel_api = ExammodelApi()
+
         last_exam_code = exammodel_api.find_all_exammodel_descending(
             {},
             fields={"exam_code": 1},
@@ -70,7 +75,7 @@ class GenerateQuiz():
 
         new_exam_model = {
             "exam_name": exam_name,
-            "exam_date": time.mktime(datetime.datetime.now().date().timetuple()),
+            "exam_date": exam_date,
             "image": "exam.jpg",
             "exam_code": new_exam_code,
             "exam_category": exam_category,
