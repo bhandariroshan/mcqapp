@@ -13,7 +13,7 @@ import json
 from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi,\
     ExamStartSignal, HonorCodeAcceptSingal, AttemptedAnswerDatabase,\
     CurrentQuestionNumber
-
+import datetime
 
 class QuizGenerate(View):   
     def get(self, request, exam_type, *args, **kwargs):
@@ -71,8 +71,20 @@ class QuizScore(View):
         from .user_leaderboard import LeaderBoard
         leader_board = LeaderBoard()
         user_leaderboard = leader_board.user_quiz_result(request)
-        parameters['iom_quiz_result'] = user_leaderboard['iom_quiz_result']
-        parameters['ioe_quiz_result'] = user_leaderboard['ioe_quiz_result']
+
+        ioe_quiz_result = []
+        iom_quiz_result = []
+
+        for eachResult in user_leaderboard['ioe_quiz_result']:            
+            eachResult['attempted_date'] =  datetime.datetime.fromtimestamp(int(eachResult['attempted_date'])).strftime('%Y-%m-%d')
+            ioe_quiz_result.append(eachResult)
+
+        for eachResult in user_leaderboard['iom_quiz_result']:
+            eachResult['attempted_date'] =  datetime.datetime.fromtimestamp(int(eachResult['attempted_date'])).strftime('%Y-%m-%d')
+            iom_quiz_result.append(eachResult)
+            
+        parameters['iom_quiz_result'] = iom_quiz_result
+        parameters['ioe_quiz_result'] = ioe_quiz_result
         parameters['iom_total_score'] = user_leaderboard['iom_total_score']
         parameters['ioe_total_score'] = user_leaderboard['ioe_total_score']
         return render(request, self.template_name, parameters)
