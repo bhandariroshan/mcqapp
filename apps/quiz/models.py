@@ -26,7 +26,8 @@ class QuizResult(mongo.DynamicDocument):
     '''
     The new collection to save user information about the quiz
     '''
-    exam_code = mongo.IntField()
+    quiz_name = mongo.StringField(max_length=200)
+    quiz_code = mongo.IntField()
     attempted_date = mongo.IntField()
-    exam_score = mongo.IntField()
+    quiz_score = mongo.IntField()
     quiz_type = mongo.StringField(max_length=100)

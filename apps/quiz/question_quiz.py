@@ -53,18 +53,29 @@ class GenerateQuiz():
             new_exam_code = int(last_exam_code[0]['exam_code']) + 1
         else:
             new_exam_code = 1001
+
         if exam_type == "ENGINEERING":
             exam_category = "BE-IOE"
+            quiz_number = exammodel_api.get_exam_count(
+                {"exam_family": "QUIZ", "exam_category": "BE-IOE"}
+            ) + 1
+            exam_name = "Meroanswer IOE Daily Quiz"
+
         elif exam_type == "MEDICAL":
             exam_category = "MBBS-IOM"
+            quiz_number = exammodel_api.get_exam_count(
+                {"exam_family": "QUIZ", "exam_category": "MBBS-IOM"}
+            ) + 1
+            exam_name = "Meroanswer IOM Daily Quiz"
 
         new_exam_model = {
-            "exam_name": "Meroanswer Daily Quiz",
+            "exam_name": exam_name,
             "exam_date": time.mktime(datetime.datetime.now().date().timetuple()),
             "image": "exam.jpg",
             "exam_code": new_exam_code,
             "exam_category": exam_category,
             "exam_family": "QUIZ",
+            "quiz_number": quiz_number,
             "question_list": question_list
         }
         exammodel_api.insert_new_model(new_exam_model)
