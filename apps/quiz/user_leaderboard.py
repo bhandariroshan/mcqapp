@@ -17,8 +17,12 @@ class LeaderBoard():
         except:
             return False
         parameters['user'] = user
-        parameters['quiz_result'] = QuizResult.objects.filter(
-            user_id=user.id).order_by('exam_date')
-        parameters['total_score'] = QuizResult.objects.filter(
-            user_id=user.id).sum('exam_score')
+        parameters['ioe_quiz_result'] = QuizResult.objects.filter(
+            user_id=user.id, quiz_type="BE-IOE").order_by('attempted_date')
+        parameters['ioe_total_score'] = QuizResult.objects.filter(
+            user_id=user.id, quiz_type="BE-IOE").sum('quiz_score')
+        parameters['iom_quiz_result'] = QuizResult.objects.filter(
+            user_id=user.id, quiz_type="MBBS-IOM").order_by('attempted_date')
+        parameters['ioe_total_score'] = QuizResult.objects.filter(
+            user_id=user.id, quiz_type="MBBS-IOM").sum('quiz_score')
         return parameters

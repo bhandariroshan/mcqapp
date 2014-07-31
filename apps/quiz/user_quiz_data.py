@@ -29,6 +29,7 @@ class SaveQuiz():
         if not created:
             quiz_answer_obj.attempted_option = option
             quiz_answer_obj.save()
+            return True
 
     def save_daily_quiz_score(self, request):
         """
@@ -55,13 +56,16 @@ class SaveQuiz():
         current_exam_model = exam_model_obj.find_one_exammodel(
             {"exam_code": exam_code}
         )
+        exam_name = current_exam_model['exam_name']
+        quiz_number = current_exam_model['quiz_number']
         quiz_result_obj = QuizResult(
-            exam_code=exam_code,
+            quiz_code=exam_code,
             attempted_date=quiz_answer_obj[0].attempted_date,
             quiz_type=current_exam_model['exam_category']
         )
+        quiz_result_obj.quiz_name = ' '.join([exam_name, str(quiz_number)])
         quiz_result_obj.user_id = request.user.id
-        quiz_result_obj.exam_score = daily_score
+        quiz_result_obj.quiz_score = daily_score
         quiz_result_obj.submitted = True
         quiz_result_obj.save()
         return True

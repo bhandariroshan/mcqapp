@@ -78,6 +78,9 @@ class ExammodelApi():
     def update_exam_model(self, where, what):
         return self.db_object.update(self.table_name, where, what)
 
+    def get_exam_count(self, where):
+        return self.db_object.get_count(self.table_name, where)
+
 
 class AttemptedAnswerDatabase():
 
