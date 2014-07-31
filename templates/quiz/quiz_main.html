@@ -11,9 +11,8 @@
           </div><br/><br/>
     </div>
 {% endblock %}
-{% block exam_content %}
+{% block exam_content %}    
     <div class="twelve columns">
-
       <div class="seven columns">      
         <div style=" height: 40px; " class="twelve columns">
           <span>
@@ -38,7 +37,8 @@
         </div>
         <div class="twelve columns" id="optionsDiv" style="margin-left: 0%;">           
           <ul class="two_up tiles" id="{{start_question.uid.id}}">
-            
+            {% csrf_token %}
+
               <li class="field ui-widget-content ui-corner-all li-height" data-intro="Click on correct answer to submit" data-position="bottom" id="a">
                 <p class="h-text-align ui-widget-header ui-corner-all">A</p>
                 <div class="clickDiv " id="divOptionA" ><span></span>
@@ -157,6 +157,7 @@ var questions = {{questions|safe}};
 var exm_code = exam_code;
 var all_answers = {{all_answers|safe}};
 
+
 (function() {
   $(function() {
     $('body').chardinJs();
@@ -171,8 +172,10 @@ var all_answers = {{all_answers|safe}};
 <script src="/static/js/quiz/quiz.js"></script>
 <script type="text/javascript">
   function set_quiz_finished(){
-    ajax_set_quiz_finished(exam_code, true);
+      var csrf  = $('input[name="csrfmiddlewaretoken"]').val();
+    ajax_set_quiz_finished(exam_code, csrf);
   }
+  
   function review(){
     $('#closegumby').click();
   }

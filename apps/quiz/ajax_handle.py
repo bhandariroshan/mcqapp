@@ -3,6 +3,7 @@ from django.http import HttpResponseRedirect, HttpResponse
 import json
 from .user_quiz_data import SaveQuiz
 
+
 class AjaxHandle():
     """doc string for AjaxHandle"""
     def __init__(self):
