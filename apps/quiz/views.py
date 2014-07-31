@@ -76,8 +76,10 @@ class QuizScore(View):
         from .user_leaderboard import LeaderBoard
         leader_board = LeaderBoard()
         user_leaderboard = leader_board.user_quiz_result(request)
-        parameters['quizes'] = user_leaderboard['quiz_result']
-        parameters['total_score'] =  user_leaderboard['total_score']
+        parameters['iom_quiz_result'] = user_leaderboard['iom_quiz_result']
+        parameters['ioe_quiz_result'] = user_leaderboard['ioe_quiz_result']
+        parameters['iom_total_score'] = user_leaderboard['iom_total_score']
+        parameters['ioe_total_score'] = user_leaderboard['ioe_total_score']
         return render(request, self.template_name, parameters)
 
 

@@ -7,48 +7,69 @@
     <li id='exam_not_complete_alert' class='warning' style="display: none;"><h3 style="text-align: center;color:red;">Answers will be available after exam duration is completed. Please check back later.</h3></li>
     <section class="tabs">
 		<ul class="tab-nav">
-		    <li class="active"> <a href="#">Score Card</a></li>		    
+		    	<li class="{% if iom_quiz_result|length == 0 %} active {% endif %}"> <a href="#">IOE Quiz</a></li>		    
+		    	<li class="{% if ioe_quiz_result|length == 0 %} active {% endif %}"> <a href="#">IOM Quiz</a></li>		    
 		    <!-- <li><a href="#">Rank Card</a></li> -->
 		</ul>
-		<div class="tab-content active">
+
+		<div class="tab-content {% if iom_quiz_result|length == 0 %} active {% endif %}">
 			<table>
 				<thead>				
 					<tr>
 						<th>SN</th>
+						<th>Name</th>
 						<th>Quiz Date</th>
 						<th>Mark Scored</th>
 					</tr>
 				</thead>
 				<tbody>
-				{% for eachResult in quizes %}
+				{% for eachResult in ioe_quiz_result %}
 					<tr>       
 						<td>{{forloop.counter}}</td>	
+						<td>{{eachResult.name}}</td>	
 						<td>{{eachResult.attempted_date}}</td>
-						<td>{{eachResult.exam_score}}</td>
+						<td>{{eachResult.quiz_score}}</td>
 					</tr>
 				{% endfor %}
+				<tr>
+					<td></td>
+					<td></td>
+					<td>Total Score</td>
+					<td>{{ioe_total_score}}</td>
+				</tr>
 				</tbody>
 			</table>
 		</div>
 
-		<div class="tab-content">
-			{% if not myrankcard %}
-				<table>
-					<thead>
-						<tr>
-							<th>Rank Card</th>
-							<th></th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr><td>Your Rank</td><td>{{myrankcard.rank}}</td></tr>
-						<tr><td>Total Participants</td><td>{{myrankcard.total}}</td></tr>
-					</tbody>
-				</table>
-			{% else %}
-
-			{% endif %}
+		<div class="tab-content {% if ioe_quiz_result|length == 0 %} active {% endif %}">
+			<table>
+				<thead>				
+					<tr>
+						<th>SN</th>
+						<th>Name</th>
+						<th>Quiz Date</th>
+						<th>Mark Scored</th>
+					</tr>
+				</thead>
+				<tbody>
+				{% for eachResult in iom_quiz_result %}
+					<tr>       
+						<td>{{forloop.counter}}</td>
+						<td>{{eachResult.name}}</td>	
+						<td>{{eachResult.attempted_date}}</td>
+						<td>{{eachResult.quiz_score}}</td>
+					</tr>
+				{% endfor %}
+				<tr>
+					<td></td>
+					<td></td>
+					<td>Total Score</td>
+					<td>{{iom_total_score}}</td>
+				</tr>
+				</tbody>
+			</table>
 		</div>
+
 	</section>
 </div>
 </div>
