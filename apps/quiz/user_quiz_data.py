@@ -77,5 +77,5 @@ class SaveQuiz():
         """
         from .models import QuizResult
         return QuizResult.objects.filter(
-            exam_code=exam_code, user_id=request.user.id
+            quiz_code=exam_code, user_id=request.user.id
         ).count() > 0
