@@ -110,6 +110,11 @@ class QuizScore(View):
             eachResult['attempted_date'] =  datetime.datetime.fromtimestamp(int(eachResult['attempted_date'])).strftime('%Y-%m-%d')
             iom_quiz_result.append(eachResult)
             
+        if user['student_category'] == 'BE-IOE':
+            parameters['ioe_user'] = True
+        else:
+            parameters['iom_user'] = True
+        parameters['user'] = user
         parameters['iom_quiz_result'] = iom_quiz_result
         parameters['ioe_quiz_result'] = ioe_quiz_result
         parameters['iom_total_score'] = user_leaderboard['iom_total_score']
