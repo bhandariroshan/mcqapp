@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
-{% load staticfiles %} 
+{% load staticfiles %}
+{% load result_extra %}
 {% block content %}
 <div class="row">
 <div class="twelve columns" style="margin-top:12%; margin-bottom:7%;">
@@ -23,11 +24,11 @@
 					</tr>
 				</thead>
 				<tbody>
-				{% for eachResult in ioe_quiz_result %}
+				{% for eachResult in user_leaderboard.ioe_quiz_result %}
 					<tr>       
 						<td>{{forloop.counter}}</td>	
 						<td>{{eachResult.quiz_name}}</td>	
-						<td>{{eachResult.attempted_date}}</td>
+						<td>{{eachResult.attempted_date|unix_to_date}}</td>
 						<td>{{eachResult.quiz_score}}</td>
 					</tr>
 				{% endfor %}
@@ -35,7 +36,7 @@
 					<td></td>
 					<td></td>
 					<td>Total Score</td>
-					<td>{{ioe_total_score}}</td>
+					<td>{{user_leaderboard.ioe_total_score}}</td>
 				</tr>
 				</tbody>
 			</table>
@@ -52,11 +53,11 @@
 					</tr>
 				</thead>
 				<tbody>
-				{% for eachResult in iom_quiz_result %}
+				{% for eachResult in user_leaderboard.iom_quiz_result %}
 					<tr>       
 						<td>{{forloop.counter}}</td>
 						<td>{{eachResult.quiz_name}}</td>	
-						<td>{{eachResult.attempted_date}}</td>
+						<td>{{eachResult.attempted_date|unix_to_date}}</td>
 						<td>{{eachResult.quiz_score}}</td>
 					</tr>
 				{% endfor %}
@@ -64,7 +65,7 @@
 					<td></td>
 					<td></td>
 					<td>Total Score</td>
-					<td>{{iom_total_score}}</td>
+					<td>{{user_leaderboard.iom_total_score}}</td>
 				</tr>
 				</tbody>
 			</table>

@@ -7,28 +7,33 @@ from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import login_required
 
 from apps.mainapp.classes.query_database import AttemptedAnswerDatabase
-from apps.mainapp.classes.Userprofile import UserProfile
 
 from .question_quiz import GenerateQuiz
-from .user_quiz_data import SaveQuiz
+from .ajax_handle import AjaxHandle
 from .user_leaderboard import LeaderBoard
+from .user_quiz_data import SaveQuiz
 
 
 class QuizGenerate(View):
-
     def get(self, request, exam_type, *args, **kwargs):
         quiz_obj = GenerateQuiz()
         quiz_obj.generate_new_quiz(exam_type)
         return HttpResponse(json.dumps({'status': 'Quiz Generated'}))
 
 
+<<<<<<< HEAD
 class QuizView(View):
+    template_name = 'exam_main.html'
+=======
+class QuizView(View):   
     template_name = 'quiz/quiz_landing.html'
+>>>>>>> 39b10aaee4102033cedd07f87df5e1b358274118
 
     # @method_decorator(login_required(login_url=reverse_lazy('home_page')))
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated():
-            parameters = {}
+            parameters ={}
+            from apps.mainapp.classes.Userprofile import UserProfile
             user_profile_obj = UserProfile()
             user = user_profile_obj.get_user_by_username(request.user.username)
             if user['student_category_set'] == 0:
@@ -42,7 +47,7 @@ class QuizView(View):
                 return render(request, self.template_name, parameters)
         else:
             return render(request, self.template_name)
-
+            
 
 class SingleQuizView(View):
     template_name = 'quiz/quiz_main.html'
@@ -51,6 +56,7 @@ class SingleQuizView(View):
     def get(self, request, exam_category, *args, **kwargs):
         parameters = {}
         question_quiz_obj = GenerateQuiz()
+        from apps.mainapp.classes.Userprofile import UserProfile
         user_profile_obj = UserProfile()
         user = user_profile_obj.get_user_by_username(request.user.username)
         parameters['user'] = user
@@ -87,28 +93,48 @@ class QuizScore(View):
 
     def get(self, request, *args, **kwargs):
         parameters = {}
+<<<<<<< HEAD
+        leader_board = LeaderBoard()
+        leader_board.user_quiz_result(request)
+        parameters['user_leaderboard'] = leader_board
 
+=======
+        from apps.mainapp.classes.Userprofile import UserProfile
+        
         user_profile_obj = UserProfile()
         user = user_profile_obj.get_user_by_username(request.user.username)
         parameters['user'] = user
 
+        from .user_leaderboard import LeaderBoard
         leader_board = LeaderBoard()
-        leader_board.user_quiz_result(request)
+        user_leaderboard = leader_board.user_quiz_result(request)
 
+        ioe_quiz_result = []
+        iom_quiz_result = []
+
+        for eachResult in user_leaderboard['ioe_quiz_result']:            
+            eachResult['attempted_date'] =  datetime.datetime.fromtimestamp(int(eachResult['attempted_date'])).strftime('%Y-%m-%d')
+            ioe_quiz_result.append(eachResult)
+
+        for eachResult in user_leaderboard['iom_quiz_result']:
+            eachResult['attempted_date'] =  datetime.datetime.fromtimestamp(int(eachResult['attempted_date'])).strftime('%Y-%m-%d')
+            iom_quiz_result.append(eachResult)
+            
         if user['student_category'] == 'BE-IOE':
             parameters['ioe_user'] = True
         else:
             parameters['iom_user'] = True
         parameters['user'] = user
-        parameters['user_leaderboard'] = leader_board
+        parameters['iom_quiz_result'] = iom_quiz_result
+        parameters['ioe_quiz_result'] = ioe_quiz_result
+        parameters['iom_total_score'] = user_leaderboard['iom_total_score']
+        parameters['ioe_total_score'] = user_leaderboard['ioe_total_score']
+>>>>>>> 39b10aaee4102033cedd07f87df5e1b358274118
         return render(request, self.template_name, parameters)
 
 
 class AjaxRequest(View):
-
     def post(self, request, func_name, *args, **kwargs):
-
-        from .ajax_handle import AjaxHandle
         ajax_handle = AjaxHandle()
         return_msg = getattr(ajax_handle, func_name)(request)
         return return_msg
