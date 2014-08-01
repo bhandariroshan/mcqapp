@@ -28,6 +28,7 @@ class QuizView(View):
     # @method_decorator(login_required(login_url=reverse_lazy('home_page')))
     @method_decorator(login_required)
     def get(self, request, *args, **kwargs):
+        return HttpResponseRedirect('/')
         return render(request, self.template_name)
 
 
