@@ -116,4 +116,4 @@ class GenerateQuiz():
         )
         for count, eachQuestion in enumerate(question_list):
             eachQuestion['question_number'] = count + 1
-        return exam_model['exam_code'], question_list
+        return exam_model, question_list

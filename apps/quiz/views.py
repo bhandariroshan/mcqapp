@@ -43,7 +43,9 @@ class SingleQuizView(View):
         user_profile_obj = UserProfile()
         user = user_profile_obj.get_user_by_username(request.user.username)
         parameters['user'] = user
-        exam_code, questions = question_quiz_obj.return_quiz_questions(exam_category)
+        exam_model, questions = question_quiz_obj.return_quiz_questions(exam_category)
+        exam_code = exam_model['exam_code']
+        parameters['quiz_details'] = exam_model
 
         from .user_quiz_data import SaveQuiz
         quiz_ans_obj = SaveQuiz()
