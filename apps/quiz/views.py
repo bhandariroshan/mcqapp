@@ -32,14 +32,13 @@ class QuizView(View):
             from apps.mainapp.classes.Userprofile import UserProfile
             user_profile_obj = UserProfile()
             user = user_profile_obj.get_user_by_username(request.user.username)
-            print user
             if user['student_category_set'] == 0:
                 return HttpResponseRedirect('/')
             else:
                 if user['student_category'] == 'BE-IOE':
-                    ioe_user = True
+                    parameters['ioe_user'] = True
                 else:
-                    iom_user = True
+                    parameters['iom_user'] = True
                 parameters['user'] = user
                 return render(request, self.template_name, parameters)
         else:
