@@ -38,6 +38,7 @@ class QuizView(View):
                 ioe_user = True
             else:
                 iom_user = True
+            parameters['user'] = user
             return render(request, self.template_name)
 
 class SingleQuizView(View):   
