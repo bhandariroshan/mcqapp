@@ -96,7 +96,14 @@
                     </a>
                 </div>
           </ul>
-        </div>              
+        </div>  
+        <div style=" height: 40px; " class="twelve columns">
+          <span style="float:right">
+            <div class="small primary btn pretty" id="submitAnswers" >
+              <a href="javascript:void(0)" onclick="$('#trigger_gumby_div').click()" data-intro="Submit your Answers" data-position="top">Submit</a>
+            </div>
+          </span>
+        </div>             
         <div style="clear:both"></div>
       </div>
       
@@ -113,7 +120,7 @@
         <div class="row">
           <div id="dangerMessage"></div>
           <div class="ten columns centered text-center" style="margin-top:6%;">
-            <p id="infoText">You have successfully reached the end of this exam. What would you like to do?</p>
+            <p id="infoText">Are you sure you want to submit?
               <li class="prepend field">
                 <div class="medium primary btn" >
                   <a href="#" onclick="set_quiz_finished()">Submit</a>

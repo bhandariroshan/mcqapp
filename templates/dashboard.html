@@ -56,7 +56,7 @@
         <section class="twelve columns tabs" style="margin-top: 5%;">
             <ul class="tab-nav">
                 <li class="active"><a href="javascript:void(0)" id="DPSExamsTab">Practice Exams</a></li> 
-                <li><a href="javascript:void(0)" id="CPSExamsTab">Competitive Exams</a></li>                
+                <li><a href="javascript:void(0)" id="CPSExamsTab">Competitive Exams</a></li>
                 <!-- <li><a href="#">Notices</a></li> -->
                 <!-- <li class="ttip" data-tooltip="Subscription required."><a href="#">Progress Card</a></li> -->
             </ul>
@@ -227,7 +227,8 @@
         <div class="twelve columns">
         {% if not 'iom' in request.path %}
           <li class="warning alert">
-            <h2 style="text-align: center; font-size: 40px; text-decoration:underline;">  IOE Daily Quiz  </h2>
+            <h2 style="text-align: center; font-size: 40px; text-decoration:underline;">  IOE Daily Quiz  </h2>            
+            <p>Practice few questions daily for free. <a href="javascript:void(0)" onclick="$('#trigger_gumby_div').click()">More details</a></p>
             <div class="medium primary btn pretty" style="margin-left: 21%;margin-top: 3%;">
                 <a href="/quiz/be-ioe/" id="" style="width: 150px;"> Start Quiz </a>
             </div>              
@@ -235,6 +236,7 @@
           {% else %}
             <li class="warning alert">
               <h2 style="text-align: center; font-size: 40px;text-decoration:underline;" >  IOM Daily Quiz  </h2>          
+              <p>Practice few questions daily for free. <a href="javascript:void(0)" onclick="$('#trigger_gumby_div').click()">More details</a></p>
             <div class="medium primary btn pretty" style="margin-left: 21%;margin-top: 3%; ">
                 <a href="/quiz/mbbs-iom/" id="" style="width: 150px;"> Start Quiz </a>
             </div>              
@@ -356,6 +358,24 @@
           <li class="prepend field">
             <button class="medium primary btn" type="submit">
               <a id="enterCPSCouponBtn" href="#">Start Exam</a>
+            </button>
+          </li>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="trigger_gumby_div" style="visibility:hidden;" class="pretty medium primary btn switch" gumby-trigger="#details_div"></div>
+<div class="modal" id="details_div">
+  <div class="content">
+    <a class="close switch" gumby-trigger="|#details_div" id="closeDetailsDiv"><i class="icon-cancel" /></i></a>
+    <div class="row">
+      <div id="dangerMessage"></div>
+      <div class="ten columns centered text-center" style="margin-top:6%;">
+        <p id="infoText">Daily Quizes are free. But, you can practice very limited questions in daily quizes. To get full access to thousands of questions, get a coupon or <a href="/subscription/" style="color:red;"><strong>subscribe</strong></a> to one of our model. Coupon codes are available at various <a href="/coupon/" style="color:red;"><strong>distributors</strong></a></p>
+          <li class="prepend field">
+            <button class="medium primary btn" type="submit">
+              <a href="#" onclick="$('#closeDetailsDiv').click()">Close</a>
             </button>
           </li>
       </div>

@@ -396,7 +396,7 @@ class AjaxHandle():
                 )
             )
 
-    def get_nexp_page_of_questions(self, request):
+    def get_next_page_of_questions(self, request):
         user_profile_obj = UserProfile()
         exam_code = int(request.POST['exam_code'])
         subscribed = user_profile_obj.check_subscribed(
