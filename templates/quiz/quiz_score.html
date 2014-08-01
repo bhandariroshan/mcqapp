@@ -85,7 +85,7 @@
     $('#exam_not_complete_alert').css('display', 'block');
   }
   $(document).ready(function(){
-  		if(iom_len == 0 && ioe_len ==0 ) {
+  		if(iom_len != 0 && ioe_len !=0 ) {
   			$('#iomQuizLi').addClass('active');
   			$('#tab-content-iom').addClass('active');
   			$('#ioeQuizLi').removeClass('active');
@@ -98,6 +98,12 @@
   			$('#tab-content-iom').removeClass('active');  			
   		}
   		else if(ioe_len == 0 && iom_len !=0 ) {
+  			$('#iomQuizLi').addClass('active');
+  			$('#tab-content-iom').addClass('active');
+  			$('#ioeQuizLi').removeClass('active');
+  			$('#tab-content-ioe').removeClass('active');
+  		}
+  		else{
   			$('#iomQuizLi').addClass('active');
   			$('#tab-content-iom').addClass('active');
   			$('#ioeQuizLi').removeClass('active');
