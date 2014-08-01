@@ -20,6 +20,7 @@ from apps.mainapp.classes.MailChimp import MailChimp
 from apps.mainapp.classes.Exams import RankCard, ScoreCard
 from apps.mainapp.classes.Coupon import Coupon
 from apps.mainapp.classes.Userprofile import UserProfile
+
 from apps.mainapp.classes.CouponCount import CouponCount
 from apps.exam_api.views import ExamHandler
 from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi,\

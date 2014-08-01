@@ -39,6 +39,10 @@ class SingleQuizView(View):
     def get(self, request, exam_category, *args, **kwargs):
         parameters ={}
         question_quiz_obj = GenerateQuiz()
+        from apps.mainapp.classes.Userprofile import UserProfile
+        user_profile_obj = UserProfile()
+        user = user_profile_obj.get_user_by_username(request.user.username)
+        parameters['user'] = user
         exam_code, questions = question_quiz_obj.return_quiz_questions(exam_category)
 
         from .user_quiz_data import SaveQuiz
@@ -70,6 +74,12 @@ class QuizScore(View):
     template_name = 'quiz/quiz_score.html'
     def get(self, request, *args, **kwargs):
         parameters = {}
+        from apps.mainapp.classes.Userprofile import UserProfile
+        
+        user_profile_obj = UserProfile()
+        user = user_profile_obj.get_user_by_username(request.user.username)
+        parameters['user'] = user
+
         from .user_leaderboard import LeaderBoard
         leader_board = LeaderBoard()
         user_leaderboard = leader_board.user_quiz_result(request)
