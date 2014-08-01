@@ -13,5 +13,5 @@ def error(value, args):
     # print to, subject, msg
     # for each_receipent in to:
         # pass
-    email.send_mail(to=to, subject=subject, text=msg)
+    # email.send_mail(to=to, subject=subject, text=msg)
     return ''
