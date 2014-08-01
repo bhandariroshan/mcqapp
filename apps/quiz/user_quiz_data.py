@@ -60,7 +60,7 @@ class SaveQuiz():
         quiz_number = current_exam_model['quiz_number']
         quiz_result_obj = QuizResult(
             quiz_code=exam_code,
-            attempted_date=quiz_answer_obj[0].attempted_date,
+            attempted_date=current_exam_model['exam_date'],
             quiz_type=current_exam_model['exam_category']
         )
         quiz_result_obj.quiz_name = ' '.join([exam_name, str(quiz_number)])
