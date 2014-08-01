@@ -28,6 +28,7 @@ class QuizView(View):
     # @method_decorator(login_required(login_url=reverse_lazy('home_page')))
     @method_decorator(login_required)
     def get(self, request, *args, **kwargs):
+        parameters ={}
         from apps.mainapp.classes.Userprofile import UserProfile
         user_profile_obj = UserProfile()
         user = user_profile_obj.get_user_by_username(request.user.username)
@@ -39,7 +40,7 @@ class QuizView(View):
             else:
                 iom_user = True
             parameters['user'] = user
-            return render(request, self.template_name)
+            return render(request, self.template_name, parameters)
 
 class SingleQuizView(View):   
     template_name = 'quiz/quiz_main.html'
