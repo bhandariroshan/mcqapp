@@ -7,12 +7,12 @@
     <li id='exam_not_complete_alert' class='warning' style="display: none;"><h3 style="text-align: center;color:red;">Answers will be available after exam duration is completed. Please check back later.</h3></li>
     <section class="tabs">
 		<ul class="tab-nav">
-		    	<li class="{% if iom_quiz_result|length == 0 %} active {% endif %}"> <a href="#">IOE Quiz</a></li>		    
-		    	<li class="{% if ioe_quiz_result|length == 0 %} active {% endif %}"> <a href="#">IOM Quiz</a></li>		    
+		    	<li  id="ioeQuizLi"> <a href="#">IOE Quiz</a></li>		    
+		    	<li  id="iomQuizLi"> <a href="#">IOM Quiz</a></li>		    
 		    <!-- <li><a href="#">Rank Card</a></li> -->
 		</ul>
 
-		<div class="tab-content {% if iom_quiz_result|length == 0 %} active {% endif %}">
+		<div class="tab-content" id="tab-content-ioe">
 			<table>
 				<thead>				
 					<tr>
@@ -41,7 +41,7 @@
 			</table>
 		</div>
 
-		<div class="tab-content {% if ioe_quiz_result|length == 0 %} active {% endif %}">
+		<div class="tab-content" id="tab-content-iom">
 			<table>
 				<thead>				
 					<tr>
@@ -77,8 +77,38 @@
 {% endblock %}
 {% block javascript %}
 <script type='text/javascript'>
+  
+  var iom_len = {{ iom_quiz_result|length }};
+  var ioe_len = {{ ioe_quiz_result|length }};
+
   function exam_not_complete_alert(){
     $('#exam_not_complete_alert').css('display', 'block');
   }
+  $(document).ready(function(){
+  		if(iom_len != 0 && ioe_len !=0 ) {
+  			$('#iomQuizLi').addClass('active');
+  			$('#tab-content-iom').addClass('active');
+  			$('#ioeQuizLi').removeClass('active');
+  			$('#tab-content-ioe').removeClass('active');
+  		}
+  		else if(iom_len == 0 && ioe_len !=0 ){
+  			$('#ioeQuizLi').addClass('active');
+  			$('#tab-content-ioe').addClass('active');
+  			$('#iomQuizLi').removeClass('active');
+  			$('#tab-content-iom').removeClass('active');  			
+  		}
+  		else if(ioe_len == 0 && iom_len !=0 ) {
+  			$('#iomQuizLi').addClass('active');
+  			$('#tab-content-iom').addClass('active');
+  			$('#ioeQuizLi').removeClass('active');
+  			$('#tab-content-ioe').removeClass('active');
+  		}
+  		else{
+  			$('#iomQuizLi').addClass('active');
+  			$('#tab-content-iom').addClass('active');
+  			$('#ioeQuizLi').removeClass('active');
+  			$('#tab-content-ioe').removeClass('active');
+  		}
+  });
 </script>
 {% endblock %}
