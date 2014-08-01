@@ -23,14 +23,22 @@ class QuizGenerate(View):
 
 
 class QuizView(View):   
-    template_name = 'exam_main.html'
+    template_name = 'quiz/quiz_landing.html'
 
     # @method_decorator(login_required(login_url=reverse_lazy('home_page')))
     @method_decorator(login_required)
     def get(self, request, *args, **kwargs):
-        return HttpResponseRedirect('/')
-        return render(request, self.template_name)
-
+        from apps.mainapp.classes.Userprofile import UserProfile
+        user_profile_obj = UserProfile()
+        user = user_profile_obj.get_user_by_username(request.user.username)
+        if user['student_category_set'] == 0:
+            return HttpResponseRedirect('/')
+        else:
+            if user['student_category'] == 'BE-IOE':
+                ioe_user = True
+            else:
+                iom_user = True
+            return render(request, self.template_name)
 
 class SingleQuizView(View):   
     template_name = 'quiz/quiz_main.html'

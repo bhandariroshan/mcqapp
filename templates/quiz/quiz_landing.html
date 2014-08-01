@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load staticfiles %} 
+{% block content %}
+<div class="twelve columm page-homepage reboot">
+<section id="section-premium" class="feature premium" style="margin-top:0%;">
+        <div class="premium-container">
+          <div class="premium-options-holder">
+          <h1>MeroAnswer Daily Quiz</h1>
+            <div class="premium-option premium" style="width:40%">
+              <h1>Features</h1>
+              <p class="premium-tag">
+              </p>
+              <p class="premium-price">Completely FREE, No hidden charge</p>
+              
+              <!-- <aside>
+                <img src="//d2c87l0yth4zbw.cloudfront.net/i/home/devices-free-new-en.png" class="device-img">
+              </aside> -->
+
+              <ul class="premium-details-list" style="font-size:15px;">
+                <li class="active">New Questions everyday</li>
+                <li class="active zebra">Get score instantly</li>
+                <li class="active">Everyday Winners for IOM and IOE separately</li>
+                <li class="active zebra">Practice set coupons for free everyday for winners</li>
+                <li class="active">Leader Board to see your score and ranking everyday</li>
+                <li class="active zebra">Limited Questions </li>
+              </ul>
+
+		        <div class="medium primary btn pretty" style="margin-left: 6%;margin-top: 3%; margin-bottom:3%;">
+		        	{% if ioe_user %}
+		            	<a href="/quiz/be-ioe/" id="" style="width: 150px;"> Start Quiz </a>
+		            {% else %}
+		            	<a href="/quiz/mbbs-iom/" id="" style="width: 150px;"> Start Quiz </a>
+		            {% endif %}
+		        </div>
+            </div>                        
+          </div>
+
+        </div>
+      </section>
+
+</div>      
+{% endblock %}
+
+{% block javascript %}
+{% endblock %}
