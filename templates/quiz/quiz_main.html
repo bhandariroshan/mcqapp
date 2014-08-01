@@ -31,7 +31,7 @@
           {% if start_question.question.image %}
           {% if start_question.question.image != '' %}
 
-          <img src="/static/images/{{exam_code}}/{{start_question.question.image}}" style=" height:140px" />
+          <img src="/static/images/{{start_question.exam_code}}/{{start_question.question.image}}" style=" height:140px" />
           {% endif %}
           {% endif %} 
         </div>
@@ -46,7 +46,7 @@
                     {{ start_question.answer.a.text }}<br>
                     {% if start_question.answer.a.image  %}
                       {% if start_question.answer.a.image != '' %}
-                        <img src="/static/images/{{exam_code}}/{{start_question.answer.a.image}}" style="height:140px;" />
+                        <img src="/static/images/{{start_question.exam_code}}/{{start_question.answer.a.image}}" style="height:140px;" />
                       {% endif %}
                     {% endif %}
                     </a>
@@ -61,7 +61,7 @@
                     {{ start_question.answer.b.text }}<br>
                     {% if start_question.answer.b.image  %}
                       {% if start_question.answer.b.image != '' %}
-                        <img src="/static/images/{{exam_code}}/{{start_question.answer.b.image}}" style="height:140px;" />
+                        <img src="/static/images/{{start_question.exam_code}}/{{start_question.answer.b.image}}" style="height:140px;" />
                       {% endif %}
                     {% endif %}
                     </a>
@@ -76,7 +76,7 @@
                     {{ start_question.answer.c.text }}<br>
                     {% if start_question.answer.c.image   %}
                       {% if start_question.answer.c.image != '' %}
-                        <img src="/static/images/{{exam_code}}/{{start_question.answer.c.image}}" style=" height:140px;" />
+                        <img src="/static/images/{{start_question.exam_code}}/{{start_question.answer.c.image}}" style=" height:140px;" />
                       {% endif %}
                     {% endif %}
                     </a>
@@ -90,7 +90,7 @@
                     {{ start_question.answer.d.text }}<br>
                     {% if start_question.answer.d.image %}
                       {% if start_question.answer.d.image != '' %}
-                        <img src="/static/images/{{exam_code}}/{{start_question.answer.d.image}}" style="height:140px;" />
+                        <img src="/static/images/{{start_question.exam_code}}/{{start_question.answer.d.image}}" style="height:140px;" />
                       {% endif %}
                     {% endif %}
                     </a>

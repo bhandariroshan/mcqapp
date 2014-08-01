@@ -31,7 +31,7 @@
           <span  style="font-weight:bold;"><span style="color:blue;">{{start_question.question_number}}. </span> {{ start_question.question.text }} </span>
           {% if start_question.question.image != '' %}
 
-          <img src="/static/images/{{exam_code}}/{{start_question.question.image}}" style=" height:140px" />
+          <img src="/static/images/{{start_question.exam_code}}/{{start_question.question.image}}" style=" height:140px" />
           {% endif %}
         </div>
         <div class="twelve columns" id="optionsDiv" style="margin-left: 0%;">           
@@ -43,7 +43,7 @@
                     <a href="javascript:void(0)">
                     {{ start_question.answer.a.text }}<br>
                     {% if start_question.answer.a.image != '' %}
-                      <img src="/static/images/{{exam_code}}/{{start_question.answer.a.image}}" style="height:140px;" />
+                      <img src="/static/images/{{start_question.exam_code}}/{{start_question.answer.a.image}}" style="height:140px;" />
                     {% endif %}
                     </a>
                 </div>
@@ -56,7 +56,7 @@
                     <a href="javascript:void(0)">
                     {{ start_question.answer.b.text }}<br>
                     {% if start_question.answer.b.image != '' %}
-                      <img src="/static/images/{{exam_code}}/{{start_question.answer.b.image}}" style="height:140px;" />
+                      <img src="/static/images/{{start_question.exam_code}}/{{start_question.answer.b.image}}" style="height:140px;" />
                     {% endif %}
                     </a>
                 </div>
@@ -69,7 +69,7 @@
                     <a href="javascript:void(0)">
                     {{ start_question.answer.c.text }}<br>
                     {% if start_question.answer.c.image != '' %}
-                      <img src="/static/images/{{exam_code}}/{{start_question.answer.c.image}}" style=" height:140px;" />
+                      <img src="/static/images/{{start_question.exam_code}}/{{start_question.answer.c.image}}" style=" height:140px;" />
                     {% endif %}
                     </a>
                 </div>
@@ -81,7 +81,7 @@
                     <a href="javascript:void(0)">
                     {{ start_question.answer.d.text }}<br>
                     {% if start_question.answer.d.image != '' %}
-                      <img src="/static/images/{{exam_code}}/{{start_question.answer.d.image}}" style="height:140px;" />
+                      <img src="/static/images/{{start_question.exam_code}}/{{start_question.answer.d.image}}" style="height:140px;" />
                     {% endif %}
                     </a>
                 </div>
