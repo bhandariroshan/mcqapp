@@ -7,15 +7,14 @@ from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import login_required
 
 from apps.mainapp.classes.query_database import AttemptedAnswerDatabase
-from apps.mainapp.classes.Userprofile import UserProfile
 
 from .question_quiz import GenerateQuiz
-from .user_quiz_data import SaveQuiz
+from .ajax_handle import AjaxHandle
 from .user_leaderboard import LeaderBoard
+from .user_quiz_data import SaveQuiz
 
 
 class QuizGenerate(View):
-
     def get(self, request, exam_type, *args, **kwargs):
         quiz_obj = GenerateQuiz()
         quiz_obj.generate_new_quiz(exam_type)
@@ -23,25 +22,12 @@ class QuizGenerate(View):
 
 
 class QuizView(View):
-    template_name = 'quiz/quiz_landing.html'
+    template_name = 'exam_main.html'
 
     # @method_decorator(login_required(login_url=reverse_lazy('home_page')))
+    @method_decorator(login_required)
     def get(self, request, *args, **kwargs):
-        if request.user.is_authenticated():
-            parameters = {}
-            user_profile_obj = UserProfile()
-            user = user_profile_obj.get_user_by_username(request.user.username)
-            if user['student_category_set'] == 0:
-                return HttpResponseRedirect('/')
-            else:
-                if user['student_category'] == 'BE-IOE':
-                    parameters['ioe_user'] = True
-                else:
-                    parameters['iom_user'] = True
-                parameters['user'] = user
-                return render(request, self.template_name, parameters)
-        else:
-            return render(request, self.template_name)
+        return render(request, self.template_name)
 
 
 class SingleQuizView(View):
@@ -51,12 +37,7 @@ class SingleQuizView(View):
     def get(self, request, exam_category, *args, **kwargs):
         parameters = {}
         question_quiz_obj = GenerateQuiz()
-        user_profile_obj = UserProfile()
-        user = user_profile_obj.get_user_by_username(request.user.username)
-        parameters['user'] = user
-        exam_model, questions = question_quiz_obj.return_quiz_questions(exam_category)
-        exam_code = exam_model['exam_code']
-        parameters['quiz_details'] = exam_model
+        exam_code, questions = question_quiz_obj.return_quiz_questions(exam_category)
 
         quiz_ans_obj = SaveQuiz()
         check_submitted = quiz_ans_obj.check_quiz_submitted(request, int(exam_code))
@@ -87,28 +68,15 @@ class QuizScore(View):
 
     def get(self, request, *args, **kwargs):
         parameters = {}
-
-        user_profile_obj = UserProfile()
-        user = user_profile_obj.get_user_by_username(request.user.username)
-        parameters['user'] = user
-
         leader_board = LeaderBoard()
         leader_board.user_quiz_result(request)
-
-        if user['student_category'] == 'BE-IOE':
-            parameters['ioe_user'] = True
-        else:
-            parameters['iom_user'] = True
-        parameters['user'] = user
         parameters['user_leaderboard'] = leader_board
+
         return render(request, self.template_name, parameters)
 
 
 class AjaxRequest(View):
-
     def post(self, request, func_name, *args, **kwargs):
-
-        from .ajax_handle import AjaxHandle
         ajax_handle = AjaxHandle()
         return_msg = getattr(ajax_handle, func_name)(request)
         return return_msg
