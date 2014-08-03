@@ -132,24 +132,24 @@ def load_modelquestion_in_database(request):
     #     question_api = QuestionApi()
     #     question_api.insert_new_question(json_obj)
 
-    # for var in range(301, 303):
-    #     f = open(
-    #         settings.APP_ROOT + '/apps/exam_api/' + str(var) + '.json', 'rb'
-    #     )
-    #     json_obj = json.loads(f.read())
-    #     for i, x in enumerate(json_obj):
-    #         x['question_number'] = i + 1
-    #     question_api = QuestionApi()
-    #     question_api.insert_new_question(json_obj)
-
-    for var in range(1, 8):
-        f = open(settings.APP_ROOT + '/apps/exam_api/iom-new/set-' +
-                 str(var) + '.csv-json.json', 'r')
+    for var in range(201, 204):
+        f = open(
+            settings.APP_ROOT + '/apps/exam_api/' + str(var) + '.json', 'r'
+        )
         json_obj = json.loads(f.read())
         for i, x in enumerate(json_obj):
             x['question_number'] = i + 1
         question_api = QuestionApi()
         question_api.insert_new_question(json_obj)
+
+    # for var in range(1, 8):
+    #     f = open(settings.APP_ROOT + '/apps/exam_api/iom-new/set-' +
+    #              str(var) + '.csv-json.json', 'r')
+    #     json_obj = json.loads(f.read())
+    #     for i, x in enumerate(json_obj):
+    #         x['question_number'] = i + 1
+    #     question_api = QuestionApi()
+    #     question_api.insert_new_question(json_obj)
     # f = open(
     #     settings.APP_ROOT +
     #     '/apps/exam_api/extraction/v5s5/text.docx-json.json-new_json.json',
