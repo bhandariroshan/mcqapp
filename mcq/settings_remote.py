@@ -141,16 +141,17 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.mainapp',
+    'django.contrib.admin',
+    'django.contrib.admindocs',
+
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.facebook',
-    # 'allauth.socialaccount.providers.twitter',
-    # Uncomment the next line to enable the admin:
-    'django.contrib.admin',
-    # Uncomment the next line to enable admin documentation:
-    'django.contrib.admindocs',
+    'allauth.socialaccount.providers.twitter',
+    # 'apps.random_questions',
+    'apps.mainapp',
+    'apps.quiz',
 )
 
 # A sample logging configuration. The only tangible logging
