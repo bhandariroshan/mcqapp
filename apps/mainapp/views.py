@@ -675,7 +675,7 @@ def attend_dps_exam_old(request, exam_code):
             total_questions = len(questions)
             parameters['total_questions'] = len(questions)
             parameters['max_questions_number'] = len(questions)
-            parameters['questions'] = sorted_questions
+            parameters['questions'] = json.dumps(sorted_questions)
             parameters['exam_details'] = exam_details
 
             start_question_number = 0
