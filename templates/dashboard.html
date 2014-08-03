@@ -93,9 +93,10 @@
                       </div>
                 </article>              
               {% endif %}
+
               {% for eachExam in upcoming_exams %}
                 {% ifequal eachExam.exam_family  'DPS' %}
-                {% if user.student_category == 'IDP' or user.student_category == eachExam.exam_category %}
+                
                <article class="valign row text-color-white ui-widget-content ui-corner-all my-margin {% if eachExam.subscribed %} subscribed {% else %} notsubscribed {% endif %}">
                 <!-- <div style="width:10%"> -->
                   {% if eachExam.subscribed %}
@@ -107,6 +108,7 @@
                 <div style="width:25%">
                     <img src="/static/images/{{eachExam.image}}" width="145px" />
                 </div>
+
                 <div style="width:65%">
                     <!-- <h4><a href="#" id="{{eachExam.code}}/"><strong>{{eachExam.name}}</strong></a></h4> -->
                     {% if eachExam.exam_family == 'DPS' %}
@@ -130,14 +132,14 @@
                       </div>
                   </div>
                 </article>
-                {% endif %}
+                
                 {% endifequal %}
               {% endfor %}
             </div> 
             <div id="upcomingExams" class="tab-content">
               {% for eachExam in upcoming_exams %}
                 {% ifequal eachExam.exam_family 'CPS' %}
-                  {% if user.student_category == 'IDP' or user.student_category == eachExam.exam_category %}
+                  
                     <article class="valign row text-color-white ui-widget-content ui-corner-all my-margin {% if eachExam.subscribed %} subscribed {% else %} notsubscribed {% endif %}">
                     <!-- <div style="width:10%"> -->
                     {% if eachExam.subscribed %}
@@ -163,7 +165,7 @@
                       </div>
                   </div>
                 </article>
-                {% endif %}
+                
                 {% endifequal %}
               {% endfor %}
               {% comment %}
