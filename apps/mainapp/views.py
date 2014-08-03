@@ -240,7 +240,7 @@ def ioe_home_page(request):
             up_exm['exam_family'] = eachExamDetails.get('exam_family')
             up_exm['image'] = eachExamDetails.get('image')
             up_exams.append(up_exm)
-    
+
         all_cps_exam = exam_model_api.find_all_exammodel_descending(
             {'exam_family': 'CPS'},
             sort_index='exam_date'
@@ -662,7 +662,7 @@ def attend_dps_exam_old(request, exam_code):
             parameters['all_answers'] = json.dumps(all_answers)
             exam_handler_obj = ExamHandler()
             questions = exam_handler_obj.get_questionset_from_database(
-                int(exam_code), marks=2 
+                int(exam_code)
             )
             for count, eachQuestion in enumerate(questions):
                 eachQuestion['question_number'] = count + 1
@@ -930,10 +930,11 @@ def results(request, exam_code):
          'useruid': request.user.id}
     )
      # return HttpResponse(json.dumps(ess))
-    if exam_details['exam_category'] == 'BE-IOE':
-        total_questions = 55
-    else:
-        total_questions = 100
+    exam_handler_obj = ExamHandler()
+    exam_details = exam_obj.find_one_exammodel(
+        {'exam_code': int(exam_code)}
+    )
+    total_questions = len(exam_details['question_list'])
     parameters['exam_completed'] = True
     if request.user.is_authenticated():
         current_time = time.mktime(datetime.datetime.now().timetuple())
@@ -976,7 +977,7 @@ def results(request, exam_code):
 
     print answer_list
     exam_handler = ExamHandler()
-    score_list = exam_handler.check_answers(exam_code, answer_list, marks=2)
+    score_list = exam_handler.check_answers(exam_code, answer_list)
     user_profile_obj = UserProfile()
     user = user_profile_obj.get_user_by_username(request.user.username)
     parameters['user'] = user
