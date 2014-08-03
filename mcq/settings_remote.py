@@ -152,6 +152,8 @@ INSTALLED_APPS = (
     # 'apps.random_questions',
     'apps.mainapp',
     'apps.quiz',
+    'apps.exam_api',
+    'apps.random_questions'
 )
 
 # A sample logging configuration. The only tangible logging
