@@ -19,7 +19,7 @@ def generate_random_ioe_questions(request):
     for each_code in distinct_dict['results']:
         questions = question_api.find_all_questions(
             {"exam_code": each_code, 'marks': 2},
-            fields={'question_number': 1}
+            fields={'question_number': 1, 'subject': 1}
         )
         if len(questions) == 55:
             question_sets.append(questions)
@@ -30,7 +30,7 @@ def generate_random_ioe_questions(request):
         final_question_set = question_sets[0]
     else:
         for i in range(len(question_sets[0])):
-            if question_sets[0][i]['subject'] != 'english':
+            if question_sets[0][i]['subject'].lower() != 'english':
                 random_num = random.randrange(len(question_sets))
 
             final_question_set.append(
