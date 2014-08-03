@@ -111,7 +111,6 @@ class ExamHandler():
         question_list = question_api.find_all_questions(
             {
                 '_id': {"$in": question_id_list},
-                "marks": marks
             }
         )
         sorted_questions = sorted(
