@@ -28,10 +28,12 @@
           </span>
         </div>        
         <div id="questionText" data-intro="Read the question carefully" data-position="top" class="div-margin twelve columns ui-widget-content ui-corner-all question-min-height">
-          <span  style="font-weight:bold;"><span style="color:blue;">{{start_question.question_number}}. </span> {{ start_question.question.text }} </span>
-          {% if start_question.question.image != '' %}
-
-          <img src="/static/images/{{start_question.exam_code}}/{{start_question.question.image}}" style=" height:140px" />
+          <span  style="font-weight:bold;"><span style="color:blue;">{{start_question.question_number}}. </span> {{ start_question.question.text }} 
+          </span>
+          {% if start_question.question.image  %}
+              {% if start_question.question.image != '' %}
+              <img src="/static/images/{{start_question.exam_code}}/{{start_question.question.image}}" style=" height:140px" />
+              {% endif %}
           {% endif %}
         </div>
         <div class="twelve columns" id="optionsDiv" style="margin-left: 0%;">           
@@ -42,8 +44,10 @@
                 <div class="clickDiv " id="divOptionA" ><span></span>
                     <a href="javascript:void(0)">
                     {{ start_question.answer.a.text }}<br>
-                    {% if start_question.answer.a.image != '' %}
-                      <img src="/static/images/{{start_question.exam_code}}/{{start_question.answer.a.image}}" style="height:140px;" />
+                    {% if start_question.answer.a.image  %}
+                      {% if start_question.answer.a.image != '' %}
+                        <img src="/static/images/{{start_question.exam_code}}/{{start_question.answer.a.image}}" style="height:140px;" />
+                      {% endif %}
                     {% endif %}
                     </a>
                 </div>
@@ -55,8 +59,10 @@
                 <div class="clickDiv " id="divOptionB" ><span></span>
                     <a href="javascript:void(0)">
                     {{ start_question.answer.b.text }}<br>
-                    {% if start_question.answer.b.image != '' %}
-                      <img src="/static/images/{{start_question.exam_code}}/{{start_question.answer.b.image}}" style="height:140px;" />
+                    {% if start_question.answer.b.image  %}
+                      {% if start_question.answer.b.image != '' %}
+                        <img src="/static/images/{{start_question.exam_code}}/{{start_question.answer.b.image}}" style="height:140px;" />
+                      {% endif %}
                     {% endif %}
                     </a>
                 </div>
@@ -68,8 +74,10 @@
                 <div class="clickDiv " id="divOptionC" ><span></span>
                     <a href="javascript:void(0)">
                     {{ start_question.answer.c.text }}<br>
-                    {% if start_question.answer.c.image != '' %}
-                      <img src="/static/images/{{start_question.exam_code}}/{{start_question.answer.c.image}}" style=" height:140px;" />
+                    {% if start_question.answer.c.image  %}
+                      {% if start_question.answer.c.image != '' %}
+                        <img src="/static/images/{{start_question.exam_code}}/{{start_question.answer.c.image}}" style=" height:140px;" />
+                      {% endif %}
                     {% endif %}
                     </a>
                 </div>
@@ -80,8 +88,10 @@
                 <div class="clickDiv " id="divOptionD" ><span></span>
                     <a href="javascript:void(0)">
                     {{ start_question.answer.d.text }}<br>
-                    {% if start_question.answer.d.image != '' %}
-                      <img src="/static/images/{{start_question.exam_code}}/{{start_question.answer.d.image}}" style="height:140px;" />
+                    {% if start_question.answer.d.image  %}
+                      {% if start_question.answer.d.image != '' %}
+                        <img src="/static/images/{{start_question.exam_code}}/{{start_question.answer.d.image}}" style="height:140px;" />
+                      {% endif %}
                     {% endif %}
                     </a>
                 </div>
@@ -147,7 +157,7 @@ var attempted = [];
 var exam_code = {{exam_code|safe}};
 var questions = {{questions|safe}};
 var exam_duration = {{exam_details.exam_duration}};
-
+var exm_code = exam_code;
 (function() {
   $(function() {
     $('body').chardinJs();
