@@ -10,7 +10,7 @@ urlpatterns = patterns(
     url(r'cps/(?P<exam_code>\w{1,40})/$',
         'apps.mainapp.views.attend_cps_exam'),
     url(r'dps/(?P<exam_code>\w{1,40})/$',
-        'apps.mainapp.views.attend_dps_exam'),
+        'apps.mainapp.views.attend_dps_exam_old'),
     url(r'answers/(?P<exam_code>\w{1,40})/(?P<subject_name>\w{1,40})/$',
         'apps.mainapp.views.show_result'),
     url(r'list-results/$',

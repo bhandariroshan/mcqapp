@@ -31,6 +31,7 @@ class ExamHandler():
                 },
                 fields={'answer.correct': 0}
             )
+
             sorted_questions = sorted(
                 question_list, key=lambda k: k['question_number'])
             return sorted_questions

@@ -567,11 +567,11 @@ def attend_dps_exam(request, exam_code):
             user_profile_obj = UserProfile()
             user = user_profile_obj.get_user_by_username(request.user.username)
             parameters['user'] = user
-            return render_to_response(
-                'pulchowkexam-main.html',
-                parameters,
-                context_instance=RequestContext(request)
-            )
+            # return render_to_response(
+            #     'pulchowkexam-main.html',
+            #     parameters,
+            #     context_instance=RequestContext(request)
+            # )
 
     else:
         return HttpResponseRedirect('/')
@@ -660,19 +660,21 @@ def attend_dps_exam_old(request, exam_code):
             ) / 60
 
             parameters['all_answers'] = json.dumps(all_answers)
-            question_obj = QuestionApi()
-            questions = question_obj.find_all_questions(
-                {"exam_code": int(exam_code),
-                 'marks': 1},
-                fields={'answer.correct': 0}
+            exam_handler_obj = ExamHandler()
+            questions = exam_handler_obj.get_questionset_from_database(
+                int(exam_code)
             )
-            total_questions = question_obj.get_count(
-                {"exam_code": int(exam_code), 'marks': 1}
-            )
+            print "roshan bhandari"
+            print questions
+            # print questions
             sorted_questions = sorted(
                 questions, key=lambda k: k['question_number']
             )
-
+            parameters['questions'] = sorted_questions
+            parameters['exam_details'] = exam_details
+            total_questions = len(questions)
+            parameters['total_questions'] = len(questions)
+            parameters['max_questions_number'] = len(questions)
             parameters['questions'] = json.dumps(sorted_questions)
             parameters['exam_details'] = exam_details
 
@@ -929,7 +931,7 @@ def results(request, exam_code):
     )
      # return HttpResponse(json.dumps(ess))
     if exam_details['exam_category'] == 'BE-IOE':
-        total_questions = 65
+        total_questions = 55
     else:
         total_questions = 100
     parameters['exam_completed'] = True
