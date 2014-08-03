@@ -93,6 +93,7 @@
                       </div>
                 </article>              
               {% endif %}
+              
               {% for eachExam in upcoming_exams %}
                 {% ifequal eachExam.exam_family  'DPS' %}
                 {% if user.student_category == 'IDP' or user.student_category == eachExam.exam_category %}
@@ -107,6 +108,7 @@
                 <div style="width:25%">
                     <img src="/static/images/{{eachExam.image}}" width="145px" />
                 </div>
+
                 <div style="width:65%">
                     <!-- <h4><a href="#" id="{{eachExam.code}}/"><strong>{{eachExam.name}}</strong></a></h4> -->
                     {% if eachExam.exam_family == 'DPS' %}

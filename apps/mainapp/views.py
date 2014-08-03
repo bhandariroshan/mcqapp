@@ -240,7 +240,7 @@ def ioe_home_page(request):
             up_exm['exam_family'] = eachExamDetails.get('exam_family')
             up_exm['image'] = eachExamDetails.get('image')
             up_exams.append(up_exm)
-
+    
         all_cps_exam = exam_model_api.find_all_exammodel_descending(
             {'exam_family': 'CPS'},
             sort_index='exam_date'
