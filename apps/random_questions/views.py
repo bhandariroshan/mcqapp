@@ -14,14 +14,14 @@ def generate_random_ioe_questions(request):
     question from all exam sets
     '''
     question_api = QuestionApi()
-    distinct_dict = question_api.find_distinct_value('exam_code', {'marks': 1})
+    distinct_dict = question_api.find_distinct_value('exam_code', {'marks': 2})
     question_sets = []
     for each_code in distinct_dict['results']:
         questions = question_api.find_all_questions(
-            {"exam_code": each_code, 'marks': 1},
+            {"exam_code": each_code, 'marks': 2},
             fields={'question_number': 1}
         )
-        if len(questions) == 65:
+        if len(questions) == 55:
             question_sets.append(questions)
     final_question_set = []
     if len(question_sets) == 0:
@@ -30,12 +30,15 @@ def generate_random_ioe_questions(request):
         final_question_set = question_sets[0]
     else:
         for i in range(len(question_sets[0])):
+            if question_sets[0][i]['subject'] != 'english':
+                random_num = random.randrange(len(question_sets))
+
             final_question_set.append(
                 ObjectId(
-                    question_sets[
-                        random.randrange(len(question_sets))][i]['uid']['id']
+                    question_sets[random_num][i]['uid']['id']
                 )
             )
+
     # print final_question_set
     exammodel_api = ExammodelApi()
     last_exam_code = exammodel_api.find_all_exammodel_descending(
@@ -56,7 +59,7 @@ def generate_random_ioe_questions(request):
         "image": "exam.jpg",
         "exam_code": new_exam_code,
         "exam_category": "BE-IOE",
-        "exam_duration": 60,
+        "exam_duration": 120,
         "exam_family": 'DPS',
         "question_list": final_question_set
     }
