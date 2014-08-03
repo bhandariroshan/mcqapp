@@ -975,7 +975,7 @@ def results(request, exam_code):
         except:
             answer_list += 'e'
 
-    print answer_list
+    
     exam_handler = ExamHandler()
     score_list = exam_handler.check_answers(exam_code, answer_list)
     user_profile_obj = UserProfile()
