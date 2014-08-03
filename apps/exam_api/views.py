@@ -66,7 +66,7 @@ class ExamHandler():
         except:
             pass
 
-    def get_paginated_question_set(self, exam_code, current_pg_num, marks=1):
+    def get_paginated_question_set(self, exam_code, current_pg_num):
         exammodel_api = ExammodelApi()
         exam_model = exammodel_api.find_one_exammodel(
             {"exam_code": int(exam_code)}
@@ -77,7 +77,7 @@ class ExamHandler():
         ]
         question_api = QuestionApi()
         return_question_list = question_api.get_paginated_questions(
-            {'_id': {"$in": question_id_list}, "marks": marks},
+            {'_id': {"$in": question_id_list}},
             fields={'answer.correct': 0},
             page_num=current_pg_num
         )
@@ -94,7 +94,7 @@ class ExamHandler():
             eachExam['exam_date'] = int(eachExam['exam_date'])
         return exam_list
 
-    def check_answers(self, exam_code, answer_list, marks=1):
+    def check_answers(self, exam_code, answer_list):
         '''
         This function receives list of answers and exam_code
         and return the dictionary with correct answers of each subject
@@ -115,6 +115,11 @@ class ExamHandler():
         )
         sorted_questions = sorted(
             question_list, key=lambda k: k['question_number'])
+
+        negative_marking = False
+        if exam_model['exam_category'] == "BE-IOE" and sorted_questions[0]['marks'] == 1:
+            negative_marking = True
+
         subjects = set([i['subject'].lower() for i in sorted_questions])
 
         correct_answers = {}
@@ -144,13 +149,12 @@ class ExamHandler():
                     except:
                         correct_answers[
                             sorted_questions[index]['subject'].lower()]['score'] += 1
-                else:
-                    if exam_model['exam_category'] in ["BE-IOE", "MBBS-MOE"] and marks == 1:
-                        try:
-                            correct_answers[
-                                sorted_questions[index]['subject'].lower()]['score'] -= 0.25
-                        except:
-                            pass
+                elif negative_marking:
+                    try:
+                        correct_answers[
+                            sorted_questions[index]['subject'].lower()]['score'] -= 0.25
+                    except:
+                        pass
 
         total_score = 0
         total_attempted = 0
