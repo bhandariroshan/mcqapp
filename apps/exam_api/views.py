@@ -10,7 +10,7 @@ class ExamHandler():
     '''
     The class performs activities related to a exam
     '''
-    def get_questionset_from_database(self, exam_code):
+    def get_questionset_from_database(self, exam_code, marks=1):
         '''
         This function returns the questions of a model
         by checking the exam_code
@@ -27,7 +27,7 @@ class ExamHandler():
             question_list = question_api.find_all_questions(
                 {
                     '_id': {"$in": question_id_list},
-                    "marks": 1
+                    "marks": marks
                 },
                 fields={'answer.correct': 0}
             )
@@ -66,7 +66,7 @@ class ExamHandler():
         except:
             pass
 
-    def get_paginated_question_set(self, exam_code, current_pg_num):
+    def get_paginated_question_set(self, exam_code, current_pg_num, marks=1):
         exammodel_api = ExammodelApi()
         exam_model = exammodel_api.find_one_exammodel(
             {"exam_code": int(exam_code)}
@@ -77,7 +77,7 @@ class ExamHandler():
         ]
         question_api = QuestionApi()
         return_question_list = question_api.get_paginated_questions(
-            {'_id': {"$in": question_id_list}, "marks": 1},
+            {'_id': {"$in": question_id_list}, "marks": marks},
             fields={'answer.correct': 0},
             page_num=current_pg_num
         )
@@ -94,7 +94,7 @@ class ExamHandler():
             eachExam['exam_date'] = int(eachExam['exam_date'])
         return exam_list
 
-    def check_answers(self, exam_code, answer_list):
+    def check_answers(self, exam_code, answer_list, marks=1):
         '''
         This function receives list of answers and exam_code
         and return the dictionary with correct answers of each subject
@@ -111,7 +111,7 @@ class ExamHandler():
         question_list = question_api.find_all_questions(
             {
                 '_id': {"$in": question_id_list},
-                "marks": 1
+                "marks": marks
             }
         )
         sorted_questions = sorted(
@@ -146,7 +146,7 @@ class ExamHandler():
                         correct_answers[
                             sorted_questions[index]['subject'].lower()]['score'] += 1
                 else:
-                    if exam_model['exam_category'] in ["BE-IOE", "MBBS-MOE"]:
+                    if exam_model['exam_category'] in ["BE-IOE", "MBBS-MOE"] and marks == 1:
                         try:
                             correct_answers[
                                 sorted_questions[index]['subject'].lower()]['score'] -= 0.25
