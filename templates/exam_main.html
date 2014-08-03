@@ -155,7 +155,7 @@ var all_answers = {{all_answers|safe}};
 var max_questions_number = {{max_questions_number}};
 var attempted = [];
 var exam_code = {{exam_code|safe}};
-var questions = {{questions|safe}};
+var questions = $.parseJSON({{questions}});
 var exam_duration = {{exam_details.exam_duration}};
 var exm_code = exam_code;
 (function() {
