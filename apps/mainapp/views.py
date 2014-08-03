@@ -662,10 +662,10 @@ def attend_dps_exam_old(request, exam_code):
             parameters['all_answers'] = json.dumps(all_answers)
             exam_handler_obj = ExamHandler()
             questions = exam_handler_obj.get_questionset_from_database(
-                int(exam_code)
+                int(exam_code), marks=2 
             )
-            print "roshan bhandari"
-            print questions
+            for count, eachQuestion in enumerate(questions):
+                eachQuestion['question_number'] = count + 1
             # print questions
             sorted_questions = sorted(
                 questions, key=lambda k: k['question_number']
@@ -956,13 +956,14 @@ def results(request, exam_code):
     for eachAns in all_ans:
         anss.append(eachAns['q_no'])
 
-    if exam_details['exam_category'] == 'BE-IOE':
-        loop_start = 1
-        loop_end = total_questions + 1
-    else:
-        loop_start = 0
-        loop_end = total_questions
-
+    # if exam_details['exam_category'] == 'BE-IOE':
+    #     loop_start = 1
+    #     loop_end = total_questions + 1
+    # else:
+    #     loop_start = 0
+    #     loop_end = total_questions
+    loop_start = 0
+    loop_end = total_questions
     for i in range(loop_start, loop_end):
         try:
             if i in anss:
@@ -973,8 +974,9 @@ def results(request, exam_code):
         except:
             answer_list += 'e'
 
+    print answer_list
     exam_handler = ExamHandler()
-    score_list = exam_handler.check_answers(exam_code, answer_list)
+    score_list = exam_handler.check_answers(exam_code, answer_list, marks=2)
     user_profile_obj = UserProfile()
     user = user_profile_obj.get_user_by_username(request.user.username)
     parameters['user'] = user
