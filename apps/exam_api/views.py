@@ -10,7 +10,7 @@ class ExamHandler():
     '''
     The class performs activities related to a exam
     '''
-    def get_questionset_from_database(self, exam_code):
+    def get_questionset_from_database(self, exam_code, html=True):
         '''
         This function returns the questions of a model
         by checking the exam_code
@@ -24,12 +24,20 @@ class ExamHandler():
                 ObjectId(i['id']) for i in exam_model['question_list']
             ]
             question_api = QuestionApi()
-            question_list = question_api.find_all_questions(
-                {
-                    '_id': {"$in": question_id_list}
-                },
-                fields={'answer.correct': 0}
-            )
+            if html:
+                question_list = question_api.find_all_questions(
+                    {
+                        '_id': {"$in": question_id_list}
+                    },
+                    fields={'answer.correct': 0}                    
+                )
+            else:
+                question_list = question_api.find_all_questions(
+                    {
+                        '_id': {"$in": question_id_list}
+                    },
+                    fields={'answer.correct': 0, "question.html": 0}
+                )
 
             sorted_questions = sorted(
                 question_list, key=lambda k: k['question_number'])
