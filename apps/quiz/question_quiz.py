@@ -13,6 +13,8 @@ class GenerateQuiz():
     This class is used to generate new quiz questions. Number of questions generated
     can change and vary for different exam types.
     """
+    exam_model = None
+    question_list = None
 
     @check_quiz_generated
     def generate_new_quiz(self, exam_type):
@@ -28,7 +30,6 @@ class GenerateQuiz():
             "subject",
             {"exam_type": exam_type}
         )['results']
-
         if exam_type == "ENGINEERING":
             exam_category = "BE-IOE"
             quiz_number = exammodel_api.get_exam_count(
@@ -50,12 +51,14 @@ class GenerateQuiz():
         question_list = []
         random_list = []
         for i in range(NUMBER_OF_QUESTIONS):
+            print 'inside loop', i
             subject_questions = question_api.find_all_questions(
                 {"subject": subjects[i % len(subjects)],
                  "exam_type": exam_type,
                  "marks": marks},
                 fields={"_id": 1}
             )
+            print 'subject_questions', subject_questions
             random_num = random.randrange(len(subject_questions))
 
             # generate unique random numbers to avoid repetition
@@ -89,7 +92,7 @@ class GenerateQuiz():
             "question_list": question_list
         }
         exammodel_api.insert_new_model(new_exam_model)
-        return new_exam_model
+        return True
 
     def return_quiz_questions(self, exam_category):
         """
@@ -99,21 +102,21 @@ class GenerateQuiz():
         exam_category = exam_category.upper()
         exam_date = time.mktime(datetime.datetime.now().date().timetuple())
         exammodel_api = ExammodelApi()
-        exam_model = exammodel_api.find_one_exammodel(
+        self.exam_model = exammodel_api.find_one_exammodel(
             {"exam_family": "QUIZ",
              "exam_date": exam_date,
              "exam_category": exam_category}
         )
         question_id_list = [
-            ObjectId(i['id']) for i in exam_model['question_list']
+            ObjectId(i['id']) for i in self.exam_model['question_list']
         ]
         question_api = QuestionApi()
-        question_list = question_api.find_all_questions(
+        self.question_list = question_api.find_all_questions(
             {
                 '_id': {"$in": question_id_list}
             },
             fields={'answer.correct': 0, 'question_number': 0}
         )
-        for count, eachQuestion in enumerate(question_list):
+        for count, eachQuestion in enumerate(self.question_list):
             eachQuestion['question_number'] = count + 1
-        return exam_model, question_list
+        return True

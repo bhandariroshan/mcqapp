@@ -139,6 +139,8 @@ def load_modelquestion_in_database(request):
         json_obj = json.loads(f.read())
         for i, x in enumerate(json_obj):
             x['question_number'] = i + 1
+            x['exam_type'] = 'ENGINEERING'
+            x['subject'] = x['subject'].lower()
         question_api = QuestionApi()
         question_api.insert_new_question(json_obj)
 
