@@ -36,7 +36,11 @@ class ExamHandler():
                     {
                         '_id': {"$in": question_id_list}
                     },
-                    fields={'answer.correct': 0, "question.html": 0}
+                    fields={
+                            "answer.correct": 0, "question.html": 0, 
+                            "answer.a.html": 0, "answer.b.html": 0, 
+                            "answer.c.html": 0, "answer.d.html": 0
+                    }
                 )
 
             sorted_questions = sorted(
