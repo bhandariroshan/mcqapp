@@ -670,7 +670,7 @@ def attend_dps_exam_old(request, exam_code):
             sorted_questions = sorted(
                 questions, key=lambda k: k['question_number']
             )
-            parameters['questions'] = json.dumps(sorted_questions)
+            parameters['questions'] = sorted_questions
             parameters['exam_details'] = exam_details
             total_questions = len(questions)
             parameters['total_questions'] = len(questions)
@@ -1426,7 +1426,7 @@ def attend_IOM_dps_exam(request, exam_code):
             sorted_questions = exam_handler_obj.get_questionset_from_database(exam_code, False)
             total_questions = len(sorted_questions)
 
-            parameters['questions'] = json.dumps(sorted_questions)
+            parameters['questions'] = sorted_questions
             parameters['exam_details'] = exam_details
 
             start_question_number = 0
