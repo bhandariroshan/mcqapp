@@ -32,12 +32,12 @@ class QuizResultAdminView(View):
                 if each['date'] == each_result['attempted_date']:
                     index = count
             if index != -1:
-                if each_result['exam_type'] == 'BE-IOE':
+                if each_result['quiz_type'] == 'BE-IOE':
                     final_result[index]['item'][0]['result'].append(each_result)
                 else:
                     final_result[index]['item'][1]['result'].append(each_result)
             else:
-                if each_result['exam_type'] == 'BE-IOE':
+                if each_result['quiz_type'] == 'BE-IOE':
                     final_result.append({
                         'date': each_result['attempted_date'],
                         'item': [{'result': [each_result]}, {'result': []}]
