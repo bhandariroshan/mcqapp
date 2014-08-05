@@ -3,18 +3,18 @@
 
 {% block content %}
 	<div style="margin:70px;">
-	{{final_result}}
 	{% for each_result in final_result %}
 	    
 	    {% if each_result.date == today %}
-	    	<h4 class="mytitle">Today</h4>
+	    	<h2 class="mytitle">Today</h2>
 	    {% elif each_result.date == yesterday %}
-	    	<h4 class="mytitle">Yesterday</h4>
+	    	<h2 class="mytitle">Yesterday</h2>
 	    {% else %}
-	    	<h4 class="mytitle">{{each_result.date|date:"l, M jS"}}</h4>
+	    	<h2 class="mytitle">{{each_result.date|date:"l, M jS"}}</h2>
 	    {% endif %}
 				{% for each_type in each_result.item %}
 				{% if each_type.result|length != 0 %}
+				<h3>{{each_type.result.1.quiz_type}}: Total users -> {{each_type.result|length}}</h3>
 				    <table>
 						<th>S.N.</th>
 						<th>Name</th>

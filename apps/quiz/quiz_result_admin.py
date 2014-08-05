@@ -14,7 +14,7 @@ class QuizResultAdminView(View):
     def get(self, request, *args, **kwargs):
         parameters = {}
         user_profile_obj = UserProfile()
-        all_results = QuizResult.objects.all().order_by('attempted_date')
+        all_results = QuizResult.objects.all().order_by('-quiz_score')
         final_result = []
         for each_result in all_results:
             index = -1
