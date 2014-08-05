@@ -31,6 +31,9 @@ class UserProfile():
     def get_user_by_username(self, user_name=''):
         return self.db_object.get_one(self.table_name, {'username': user_name})
 
+    def get_user_by_userid(self, useruid=''):
+        return self.db_object.get_one(self.table_name, {'useruid': useruid})
+
     def update_profile_image(self, profile_image, username):
         return self.db_object.update(
             self.table_name,

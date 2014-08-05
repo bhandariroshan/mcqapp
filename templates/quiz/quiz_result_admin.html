@@ -14,26 +14,32 @@
 	    	<h4 class="mytitle">{{each_result.date|date:"l, M jS"}}</h4>
 	    {% endif %}
 				{% for each_type in each_result.item %}
+				{% if each_type.result|length != 0 %}
 				    <table>
 						<th>S.N.</th>
+						<th>Name</th>
+						<th>Username</th>
 						<th>Userid</th>
-						<th>Attempted Date</th>
 						<th>Score</th>
 						<th>Quiz Type</th>
+						<th>Facebook Link</th>
 						<th>Quiz Code</th>
 						<th>Quiz Name</th>
 				        {% for item in each_type.result %}
 							<tr>
 						        <td>{{forloop.counter}}</td>
+						        <td>{{item.name}}</td>
+						        <td>{{item.username}}</td>
 								<td>{{item.user_id}}</td>
-								<td>{{item.attempted_date}}</td>
-								<td>{{item.score}}</td>
+								<td>{{item.quiz_score}}</td>
 								<td>{{item.quiz_type}}</td>
+								<td><a href="{{item.facebook_link}}">{{item.facebook_link}}</a></td>
 								<td>{{item.quiz_code}}</td>
 								<td>{{item.quiz_name}}</td>
 							</tr>
 				        {% endfor %}
 				       </table>
+				{% endif %}
 					
 				{% endfor %}
 		{% endfor %}

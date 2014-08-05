@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.generic import View
 from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import user_passes_test
-# from apps.mainapp.classes.Userprofile import UserProfile
+from apps.mainapp.classes.Userprofile import UserProfile
 from .models import QuizResult
 from datetime import datetime, timedelta
 
@@ -13,15 +13,8 @@ class QuizResultAdminView(View):
     @method_decorator(user_passes_test(lambda u: u.is_superuser))
     def get(self, request, *args, **kwargs):
         parameters = {}
-        # user_profile_obj = UserProfile()
-        # user = user_profile_obj.get_user_by_username(request.user.username)
-        # ioe_results = QuizResult.objects.filter(quiz_type="BE-IOE").order_by('attempted_date')
-        # iom_results = QuizResult.objects.filter(quiz_type="MBBS-IOM").order_by('attempted_date')
+        user_profile_obj = UserProfile()
         all_results = QuizResult.objects.all().order_by('attempted_date')
-        # for each in ioe_results:
-        #     each['attempted_date'] = datetime.datetime.fromtimestamp(
-        #         int(each['attempted_date'])
-        #     )
         final_result = []
         for each_result in all_results:
             index = -1
@@ -38,6 +31,11 @@ class QuizResultAdminView(View):
                     final_result[index]['item'][1]['result'].append(each_result)
             else:
                 if each_result['quiz_type'] == 'BE-IOE':
+                    myuser = user_profile_obj.get_user_by_userid(int(each_result['user_id']))
+                    each_result['name'] = myuser['first_name'] + ' ' + myuser['last_name']
+                    each_result['username'] = myuser['username']
+                    each_result['facebook_link'] = myuser['link']
+                    each_result['email'] = myuser['email']
                     final_result.append({
                         'date': each_result['attempted_date'],
                         'item': [{'result': [each_result]}, {'result': []}]
