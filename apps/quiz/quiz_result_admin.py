@@ -29,7 +29,7 @@ class QuizResultAdminView(View):
                 int(each_result['attempted_date'])
             ).date()
             for count, each in enumerate(final_result):
-                if each['attempted_date'] == each_result['attempted_date']:
+                if each['date'] == each_result['attempted_date']:
                     index = count
             if index != -1:
                 final_result[index]['item'].append(each_result)
