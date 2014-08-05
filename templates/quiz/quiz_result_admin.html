@@ -6,17 +6,14 @@
 	{{final_result}}
 	{% for each_result in final_result %}
 	    
-	    {% if each_result.attempted_date == today %}
+	    {% if each_result.date == today %}
 	    	<h4 class="mytitle">Today</h4>
-	    {% elif each_result.attempted_date == yesterday %}
+	    {% elif each_result.date == yesterday %}
 	    	<h4 class="mytitle">Yesterday</h4>
 	    {% else %}
-	    	<h4 class="mytitle">{{each_result.attempted_date|date:"l, M jS"}}</h4>
+	    	<h4 class="mytitle">{{each_result.date|date:"l, M jS"}}</h4>
 	    {% endif %}
-		
-			{% regroup each_result.item by exam_type as result_list %}
-				{% for myresult in result_list %}
-				    {{ myresult.grouper }}
+				{% for each_type in each_result.item %}
 				    <table>
 						<th>S.N.</th>
 						<th>Userid</th>
@@ -25,17 +22,19 @@
 						<th>Quiz Type</th>
 						<th>Quiz Code</th>
 						<th>Quiz Name</th>
-				        {% for item in myresult.list %}
+				        {% for item in each_type.result %}
 							<tr>
 						        <td>{{forloop.counter}}</td>
-								<td>{{result.user_id}}</td>
-								<td>{{result.attempted_date}}</td>
-								<td>{{result.score}}</td>
-								<td>{{result.quiz_code}}</td>
-								<td>{{result.quiz_name}}</td>
+								<td>{{item.user_id}}</td>
+								<td>{{item.attempted_date}}</td>
+								<td>{{item.score}}</td>
+								<td>{{item.quiz_type}}</td>
+								<td>{{item.quiz_code}}</td>
+								<td>{{item.quiz_name}}</td>
 							</tr>
 				        {% endfor %}
 				       </table>
+					
 				{% endfor %}
 		{% endfor %}
 	</div>
