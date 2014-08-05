@@ -3,8 +3,6 @@ from apps.mainapp.classes.Userprofile import UserProfile
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.contrib.auth.decorators import user_passes_test
-from django.contrib.auth.models import User
-from django.db.models import Q
 
 
 @user_passes_test(lambda u: u.is_superuser)
@@ -145,7 +143,7 @@ def paying_users(request):
         if price != 0 or request.method == 'POST':
             paying_users.append(user_details)
     parameters['total_type_count'] = total_type_count
-    parameters['categorical_price'] = [key+ ' : ' +str(value*coupon_price[key]) for key, value in total_type_count.iteritems()]
+    parameters['categorical_price'] = [key + ' : ' + str(value * coupon_price[key]) for key, value in total_type_count.iteritems()]
     total_price = 0
     for each in parameters['categorical_price']:
         total_price += int(each.split(':')[1].strip())

@@ -17,7 +17,6 @@ from django.contrib.auth.decorators import user_passes_test
 
 from apps.mainapp.classes.notifications import Notifications
 from apps.mainapp.classes.MailChimp import MailChimp
-from apps.mainapp.classes.Exams import RankCard, ScoreCard
 from apps.mainapp.classes.Coupon import Coupon
 from apps.mainapp.classes.Userprofile import UserProfile
 
@@ -171,136 +170,61 @@ def set_category(request):
     else:
         return render_to_response(
             'landing.html', context_instance=RequestContext(request)
-    )
+        )
+
 
 def landing(request):
     return render_to_response(
         'landing.html', context_instance=RequestContext(request)
     )
 
-def ioe_home_page(request):
-    if request.user.is_authenticated():
-        parameters = {}
-        up_exams = []
 
-        user_profile_obj = UserProfile()
-        subscribed_exams = user_profile_obj.get_subscribed_exams(
-            request.user.username
-        )
-        user = user_profile_obj.get_user_by_username(request.user.username)
-        exam_model_api = ExammodelApi()
-        user_exams = user['valid_exam']
+def user_dashboard(request, exam_type):
+    parameters = {}
+    exam_dict = {'ioe': 'BE-IOE', 'iom': 'MBBS-IOM'}
+    user_profile_obj = UserProfile()
+    exam_model_api = ExammodelApi()
+    user = user_profile_obj.get_user_by_username(request.user.username)
+    parameters['user'] = user
+    parameters['exam_type'] = exam_type
 
-        parameters['user'] = user
-        subscription_type = user['subscription_type']
-
-        if len(subscription_type) != 0:
-            parameters['subscribed'] = True
-        else:
-            parameters['subscribed'] = False
-
-        parameters['subscription_type'] = user['subscription_type']
-
-        try:
-            if user['student_category_set'] == 1:
-                parameters['student_category_set'] = True
-            else:
-                parameters['student_category_set'] = False
-        except:
-            parameters['student_category_set'] = False
-
-        all_valid_exams = exam_model_api.find_all_exammodel_descending(
-            {'exam_code': {'$in': user_exams},
-             'exam_category': 'BE-IOE'},
-            sort_index='exam_date'
-        )
-        count_out = 0
-        for count, eachExamDetails in enumerate(all_valid_exams):
-            if eachExamDetails['exam_family'] == 'CPS' or eachExamDetails['exam_category'] == 'MBBS-IOM':
-                continue
-            up_exm = {}
-            count_out = count_out + 1
-            if eachExamDetails is None:
-                continue
-
-            if eachExamDetails['exam_category'] == 'BE-IOE' and eachExamDetails['exam_family'] == 'DPS':
-                up_exm['name'] = "IOE Practice Exam " + str(count_out)
-
-            if 'IDP' in subscription_type:
-                up_exm['subscribed'] = True
-
-            elif eachExamDetails['exam_category'] in subscription_type:
-                up_exm['subscribed'] = True
-
-            else:
-                up_exm['subscribed'] = eachExamDetails.get('exam_code') in subscribed_exams
-
-            up_exm['code'] = eachExamDetails['exam_code']
-            up_exm['exam_category'] = eachExamDetails.get('exam_category')
-            up_exm['exam_family'] = eachExamDetails.get('exam_family')
-            up_exm['image'] = eachExamDetails.get('image')
-            up_exams.append(up_exm)
-
-        all_cps_exam = exam_model_api.find_all_exammodel_descending(
-            {'exam_family': 'CPS'},
-            sort_index='exam_date'
-        )
-        for count, cps_exams in enumerate(all_cps_exam):
-            up_cps_exam = {}
-            up_cps_exam['name'] = "IOE Competitive Exam " + str(len(all_cps_exam) - count)
-
-            if 'IDP' in subscription_type:
-                up_cps_exam['subscribed'] = True
-
-            elif cps_exams['exam_category'] in subscription_type:
-                up_cps_exam['subscribed'] = True
-
-            else:
-                up_cps_exam['subscribed'] = cps_exams.get('exam_code') in subscribed_exams
-            up_cps_exam['code'] = cps_exams['exam_code']
-            exam_start_time = datetime.datetime.strptime(
-                str(datetime.datetime.fromtimestamp(
-                    int(
-                        cps_exams.get('exam_date')
-                    )
-                    )),
-                "%Y-%m-%d %H:%M:%S").time()
-            up_cps_exam['exam_time'] = exam_start_time
-            up_cps_exam['exam_date'] = datetime.datetime.fromtimestamp(
-                int(cps_exams.get('exam_date')
-                    )
-            ).strftime("%A, %d. %B %Y")
-            up_cps_exam['exam_category'] = cps_exams.get('exam_category')
-            up_cps_exam['exam_family'] = cps_exams.get('exam_family')
-            up_cps_exam['image'] = cps_exams.get('image')
-            up_exams.append(up_cps_exam)
-
-        parameters['upcoming_exams'] = up_exams
-
-        rank_card_obj = RankCard()
-        rank_card = rank_card_obj.get_rank_card(
-            request.user.id, 'IOMMBBSMODEL000'
-        )
-        try:
-            parameters['rank_card'] = rank_card[0]
-        except:
-            pass
-
-        score_card_obj = ScoreCard()
-        socre_card = score_card_obj.get_score_card(
-            request.user.id, 'IOMMBBSMODEL000'
-        )
-        try:
-            parameters['socre_card'] = socre_card[0]
-        except:
-            pass
-        parameters['has_result'] = False
-        return render_to_response(
-            'dashboard.html', parameters,
-            context_instance=RequestContext(request)
-        )
+    if "IDP" in user['subscription_type']:
+        parameters['all_subscribed'] = True
+    elif exam_dict[exam_type] in user['subscription_type']:
+        parameters[str(exam_type) + '_subscribed'] = True
     else:
-        return HttpResponseRedirect('/')
+        parameters['subscribed'] = False
+
+    all_dps_exams = exam_model_api.find_all_exammodel_descending(
+        {'exam_code': {'$in': user['valid_exam']},
+         'exam_family': 'DPS',
+         'exam_category': exam_dict[exam_type]},
+        sort_index='exam_date'
+    )
+    parameters['all_dps_exams'] = all_dps_exams
+
+    cps_exams = exam_model_api.find_all_exammodel_descending(
+        {'exam_family': 'CPS',
+         'exam_category': exam_dict[exam_type]},
+        sort_index='exam_date'
+    )
+    all_cps_exams = []
+    for cps_exams in cps_exams:
+        up_cps_exam = {}
+        up_cps_exam['exam_subscribed'] = True
+        if not parameters['subscribed']:
+            up_cps_exam['exam_subscribed'] = cps_exams.get('exam_code') in user['valid_exam']
+
+        up_cps_exam['exam_details'] = cps_exams
+        all_cps_exams.append(up_cps_exam)
+
+    parameters['all_cps_exams'] = all_cps_exams
+
+    return render_to_response(
+        'dashboard.html',
+        parameters,
+        context_instance=RequestContext(request)
+    )
 
 
 def attend_cps_exam(request, exam_code):
@@ -431,7 +355,7 @@ def attend_dps_exam(request, exam_code):
 
         try:
             profile_image = user_det['profile_image']
-            print 'profile_image is: ', profile_image
+            # print 'profile_image is: ', profile_image
         except:
             social_account = SocialAccount.objects.get(
                 user__id=request.user.id
@@ -661,21 +585,19 @@ def attend_dps_exam_old(request, exam_code):
 
             parameters['all_answers'] = json.dumps(all_answers)
             exam_handler_obj = ExamHandler()
-            questions = exam_handler_obj.get_questionset_from_database(
+            exam_handler_obj.get_questionset_from_database(
                 int(exam_code), False
             )
+            questions = exam_handler_obj.sorted_question_list
+            print 'questions', questions
             for count, eachQuestion in enumerate(questions):
                 eachQuestion['question_number'] = count + 1
-            # print questions
-            sorted_questions = sorted(
-                questions, key=lambda k: k['question_number']
-            )
-            parameters['questions'] = json.dumps(sorted_questions)
+            parameters['questions'] = json.dumps(questions)
             parameters['exam_details'] = exam_details
             total_questions = len(questions)
             parameters['total_questions'] = len(questions)
             parameters['max_questions_number'] = len(questions)
-            parameters['questions'] = json.dumps(sorted_questions)
+            parameters['questions'] = json.dumps(questions)
             parameters['exam_details'] = exam_details
 
             start_question_number = 0
@@ -694,14 +616,12 @@ def attend_dps_exam_old(request, exam_code):
 
             if start_question_number == total_questions:
                 start_question_number = start_question_number - 1
-                parameters['next_to_start'] = sorted_questions[
-                    start_question_number]
+                parameters['next_to_start'] = questions[start_question_number]
             else:
-                parameters['next_to_start'] = sorted_questions[0]
+                parameters['next_to_start'] = questions[0]
 
             parameters['start_question_number'] = start_question_number
-            parameters['start_question'] = sorted_questions[
-                start_question_number]
+            parameters['start_question'] = questions[start_question_number]
             parameters['max_questions_number'] = total_questions
 
             parameters['exam_code'] = exam_code
@@ -930,10 +850,10 @@ def results(request, exam_code):
          'useruid': request.user.id}
     )
      # return HttpResponse(json.dumps(ess))
-    exam_handler_obj = ExamHandler()
-    exam_details = exam_obj.find_one_exammodel(
-        {'exam_code': int(exam_code)}
-    )
+    # exam_handler_obj = ExamHandler()
+    # exam_details = exam_obj.find_one_exammodel(
+    #     {'exam_code': int(exam_code)}
+    # )
     total_questions = len(exam_details['question_list'])
     parameters['exam_completed'] = True
     if request.user.is_authenticated():
@@ -974,7 +894,7 @@ def results(request, exam_code):
                 answer_list += 'e'
         except:
             answer_list += 'e'
-    
+
     exam_handler = ExamHandler()
     score_list = exam_handler.check_answers(exam_code, answer_list)
     user_profile_obj = UserProfile()
@@ -1184,161 +1104,6 @@ def couponpage(request):
         parameters,
         context_instance=RequestContext(request)
     )
-
-
-def iomdashboard(request):
-    if request.user.is_authenticated():
-        parameters = {}
-        up_exams = []
-        user_profile_obj = UserProfile()
-        user = user_profile_obj.get_user_by_username(request.user.username)
-        subscribed_exams = user_profile_obj.get_subscribed_exams(
-            request.user.username
-        )
-        parameters['user'] = user
-        exam_model_api = ExammodelApi()
-        user_exams = user['valid_exam']
-
-        subscription_type = user['subscription_type']
-        # print user_exams, subscription_type
-        if len(subscription_type) != 0:
-            parameters['subscribed'] = True
-        else:
-            parameters['subscribed'] = False
-
-        parameters['subscription_type'] = user['subscription_type']
-
-        try:
-            if user['student_category_set'] == 1:
-                parameters['student_category_set'] = True
-            else:
-                parameters['student_category_set'] = False
-        except:
-            parameters['student_category_set'] = False
-
-        all_valid_exams = exam_model_api.find_all_exammodel_descending(
-            {'exam_code': {'$in': user_exams}}, sort_index='exam_date'
-        )
-        count_out = 0
-        for count, eachExamDetails in enumerate(all_valid_exams):
-            if eachExamDetails['exam_family'] == 'CPS' or eachExamDetails['exam_category'] == 'BE-IOE':
-                continue
-
-            up_exm = {}
-            count_out = count_out + 1
-
-            if eachExamDetails is None:
-                continue
-
-            if eachExamDetails['exam_category'] == 'MBBS-IOM' and eachExamDetails['exam_family'] == 'DPS':
-                up_exm['name'] = "IOM Practice Exam " + str(count_out)
-
-            if 'IDP' in subscription_type:
-                up_exm['subscribed'] = True
-
-            elif eachExamDetails['exam_category'] in subscription_type:
-                up_exm['subscribed'] = True
-
-            else:
-                up_exm['subscribed'] = eachExamDetails.get('exam_code') in subscribed_exams
-            up_exm['code'] = eachExamDetails['exam_code']
-            up_exm['exam_category'] = eachExamDetails.get('exam_category')
-            up_exm['exam_family'] = eachExamDetails.get('exam_family')
-            up_exm['image'] = eachExamDetails.get('image')
-            up_exams.append(up_exm)
-
-        all_cps_exam = exam_model_api.find_all_exammodel_descending(
-            {'exam_family': 'CPS'},
-            sort_index='exam_date'
-        )
-        for count, cps_exams in enumerate(all_cps_exam):
-            up_cps_exam = {}
-            up_cps_exam['name'] = "IOM Competitive Exam " + str(len(all_cps_exam) - count)
-
-            if 'IDP' in subscription_type:
-                up_cps_exam['subscribed'] = True
-
-            elif cps_exams['exam_category'] in subscription_type:
-                up_cps_exam['subscribed'] = True
-
-            else:
-                up_cps_exam['subscribed'] = cps_exams.get('exam_code') in subscribed_exams
-            up_cps_exam['code'] = cps_exams['exam_code']
-            exam_start_time = datetime.datetime.strptime(
-                str(datetime.datetime.fromtimestamp(
-                    int(cps_exams.get('exam_date')))),
-                "%Y-%m-%d %H:%M:%S").time()
-            up_cps_exam['exam_time'] = exam_start_time
-            up_cps_exam['exam_date'] = datetime.datetime.fromtimestamp(
-                int(cps_exams.get('exam_date'))
-            ).strftime("%A, %d. %B %Y")
-            up_cps_exam['exam_category'] = cps_exams.get('exam_category')
-            up_cps_exam['exam_family'] = cps_exams.get('exam_family')
-            up_cps_exam['image'] = cps_exams.get('image')
-            if up_cps_exam['exam_category'] == 'MBBS-IOM':
-                up_exams.append(up_cps_exam)
-
-        subscription_type = user['subscription_type']
-        parameters['subscription_type'] = subscription_type
-        if len(subscription_type) != 0:
-            parameters['subscribed'] = True
-        else:
-            parameters['subscribed'] = False
-        try:
-            if user['student_category_set'] == 1:
-                parameters['student_category_set'] = True
-            else:
-                parameters['student_category_set'] = False
-        except:
-            parameters['student_category_set'] = False
-
-        # print up_exams, len(up_exams)
-        parameters['upcoming_exams'] = up_exams
-        # print up_exams
-
-        # schedule_obj = Schedules()
-        # schedules = schedule_obj.get_upcoming_schedules()
-        # up_schedules = []
-        # for eachSchedule in schedules:
-        #     up_sch = {}
-        #     up_sch['name'] = eachSchedule['name']
-        #     up_sch['code'] = eachSchedule['code']
-        #     up_sch['schedule_time'] = eachSchedule['schedule_time']
-        #     up_sch['schedule_category'] = eachSchedule['schedule_category']
-        #     up_sch['image'] = eachSchedule['image']
-        #     up_sch['schedule_date'] = datetime.datetime.fromtimestamp(
-            # int(eachSchedule['schedule_date'])).strftime("%A, %d. %B %Y")
-        #     up_schedules.append(up_sch)
-        # parameters['upcoming_schedules'] = up_schedules
-
-        rank_card_obj = RankCard()
-        rank_card = rank_card_obj.get_rank_card(
-            request.user.id, 'IOMMBBSMODEL000'
-        )
-        try:
-            parameters['rank_card'] = rank_card[0]
-        except:
-            pass
-
-        score_card_obj = ScoreCard()
-        socre_card = score_card_obj.get_score_card(
-            request.user.id, 'IOMMBBSMODEL000'
-        )
-        try:
-            parameters['socre_card'] = socre_card[0]
-        except:
-            pass
-        parameters['has_result'] = False
-        return render_to_response(
-            'dashboard.html',
-            parameters,
-            context_instance=RequestContext(request)
-        )
-    else:
-        return render_to_response(
-            'landing.html',
-            context_instance=RequestContext(request)
-        )
 
 
 def attend_IOM_dps_exam(request, exam_code):

@@ -59,10 +59,10 @@ function get_new_exam_success(data){
 	data = jQuery.parseJSON(data);
 	if (data['status']=='ok'){
 		if (data['type']=='be-ioe'){
-			window.location = '/dps/' + data['exam_code']			
+			window.location = '/ioe/dps/' + data['exam_code']			
 		}
 		else{
-			window.location = '/iom/' + data['exam_code']
+			window.location = '/iom/dps/' + data['exam_code']
 		}
 	}
 }
