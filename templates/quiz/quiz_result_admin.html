@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load staticfiles %} 
+
+{% block content %}
+	<div>
+		<table>
+			<th>S.N.</th>
+			<th>Userid</th>
+			<th>Attempted Date</th>
+			<th>Score</th>
+			<th>Quiz Type</th>
+			<th>Quiz Code</th>
+			<th>Quiz Name</th>
+			{% for each in all_results %}
+			<tr>
+				<td>{{forloop.counter}}</td>
+				<td>{{each.user_id}}</td>
+				<td>{{each.attempted_date}}</td>
+				<td>{{each.score}}</td>
+				<td>{{each.quiz_type}}</td>
+				<td>{{each.quiz_code}}</td>
+				<td>{{each.quiz_name}}</td>
+			</tr>
+			{% endfor %}
+		</table>
+	</div>
+{% endblock %}
