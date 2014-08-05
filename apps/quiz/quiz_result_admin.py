@@ -14,7 +14,7 @@ class QuizResultAdminView(View):
     def get(self, request, *args, **kwargs):
         parameters = {}
         user_profile_obj = UserProfile()
-        all_results = QuizResult.objects.all().order_by('-quiz_score')
+        all_results = QuizResult.objects.all().order_by('-attempted_date', '-quiz_score')
         final_result = []
         for each_result in all_results:
             index = -1
@@ -24,26 +24,27 @@ class QuizResultAdminView(View):
             for count, each in enumerate(final_result):
                 if each['date'] == each_result['attempted_date']:
                     index = count
+            myuser = user_profile_obj.get_user_by_userid(int(each_result['user_id']))
+            copy_result = {i for i in each_result}
+            copy_result['name'] = myuser['first_name'] + ' ' + myuser['last_name']
+            copy_result['username'] = myuser['username']
+            copy_result['facebook_link'] = myuser['link']
+            copy_result['email'] = myuser['email']
             if index != -1:
                 if each_result['quiz_type'] == 'BE-IOE':
-                    final_result[index]['item'][0]['result'].append(each_result)
+                    final_result[index]['item'][0]['result'].append(copy_result)
                 else:
-                    final_result[index]['item'][1]['result'].append(each_result)
+                    final_result[index]['item'][1]['result'].append(copy_result)
             else:
                 if each_result['quiz_type'] == 'BE-IOE':
-                    myuser = user_profile_obj.get_user_by_userid(int(each_result['user_id']))
-                    each_result['name'] = myuser['first_name'] + ' ' + myuser['last_name']
-                    each_result['username'] = myuser['username']
-                    each_result['facebook_link'] = myuser['link']
-                    each_result['email'] = myuser['email']
                     final_result.append({
-                        'date': each_result['attempted_date'],
-                        'item': [{'result': [each_result]}, {'result': []}]
+                        'date': copy_result['attempted_date'],
+                        'item': [{'result': [copy_result]}, {'result': []}]
                     })
                 else:
                     final_result.append({
-                        'date': each_result['attempted_date'],
-                        'item': [{'result': []}, {'result': [each_result]}]
+                        'date': copy_result['attempted_date'],
+                        'item': [{'result': []}, {'result': [copy_result]}]
                     })
         # parameters['ioe_results'] = ioe_results
         # parameters['ioe_results'] = ioe_results
