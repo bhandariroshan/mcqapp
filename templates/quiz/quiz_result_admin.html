@@ -14,7 +14,7 @@
 	    {% endif %}
 				{% for each_type in each_result.item %}
 				{% if each_type.result|length != 0 %}
-				<h3>{{each_type.result.1.quiz_type}}: Total users -> {{each_type.result|length}}</h3>
+				<h3>{{each_type.result.0.quiz_type}}: ({{each_type.result|length}})</h3>
 				    <table>
 						<th>S.N.</th>
 						<th>Name</th>
@@ -33,7 +33,7 @@
 								<td>{{item.user_id}}</td>
 								<td>{{item.quiz_score}}</td>
 								<td>{{item.quiz_type}}</td>
-								<td><a href="{{item.facebook_link}}">{{item.facebook_link}}</a></td>
+								<td><a href="{{item.facebook_link}}" target="_blank">Link</a></td>
 								<td>{{item.quiz_code}}</td>
 								<td>{{item.quiz_name}}</td>
 							</tr>
