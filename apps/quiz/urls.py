@@ -40,4 +40,10 @@ urlpatterns = patterns(
         name='single_quiz'
     ),
 
+    url(
+        r'^api/(?P<exam_category>[-\w]+)/$',
+        'apps.quiz.android_api.get_quiz_question',
+        name='quiz_question_api'
+    ),
+
 )
