@@ -498,7 +498,6 @@ def attend_dps_exam_old(request, exam_code):
         {'exam_code': int(exam_code)}
     )
     current_time = time.mktime(datetime.datetime.now().timetuple())
-
     validate_start = ess.check_exam_started(
         {'exam_code': int(exam_code),
          'useruid': request.user.id,
@@ -514,7 +513,7 @@ def attend_dps_exam_old(request, exam_code):
             'useruid': request.user.id}, {
             'start': 1,
             'start_time': int(
-                time.mktime(datetime.datetime.now().timetuple())),
+                current_time),
             'end': 0,
             'end_time': ''
         })
@@ -535,14 +534,14 @@ def attend_dps_exam_old(request, exam_code):
                 'end': 1,
                 'start': 0,
                 'end_time': int(
-                    time.mktime(datetime.datetime.now().timetuple()))})
+                    current_time)})
         ess.update_exam_start_signal({
             'exam_code': int(exam_code),
             'useruid': request.user.id},
             {
                 'start': 1,
                 'start_time': int(
-                    time.mktime(datetime.datetime.now().timetuple())),
+                    current_time),
                 'end': 0,
                 'end_time': ''
             })
@@ -561,7 +560,7 @@ def attend_dps_exam_old(request, exam_code):
             'user_id': int(request.user.id),
             'ess_time': int(validate_start['start_time'])
         })
-        time_elapsed = time.mktime(datetime.datetime.now().timetuple()) - validate_start['start_time']
+        time_elapsed = current_time - validate_start['start_time']
         exam_details['exam_duration'] = (
             exam_details['exam_duration'] * 60 - time_elapsed
         ) / 60
@@ -576,11 +575,7 @@ def attend_dps_exam_old(request, exam_code):
             eachQuestion['question_number'] = count + 1
         parameters['questions'] = json.dumps(questions)
         parameters['exam_details'] = exam_details
-        total_questions = len(questions)
-        parameters['total_questions'] = len(questions)
         parameters['max_questions_number'] = len(questions)
-        parameters['questions'] = json.dumps(questions)
-        parameters['exam_details'] = exam_details
 
         start_question_number = 0
         cqn = CurrentQuestionNumber()
@@ -596,7 +591,7 @@ def attend_dps_exam_old(request, exam_code):
         except:
             start_question_number = 0
 
-        if start_question_number == total_questions:
+        if start_question_number == len(questions):
             start_question_number = start_question_number - 1
             parameters['next_to_start'] = questions[start_question_number]
         else:
@@ -604,10 +599,7 @@ def attend_dps_exam_old(request, exam_code):
 
         parameters['start_question_number'] = start_question_number
         parameters['start_question'] = questions[start_question_number]
-        parameters['max_questions_number'] = total_questions
 
-        parameters['exam_code'] = exam_code
-        user_profile_obj = UserProfile()
         user = user_profile_obj.get_user_by_username(request.user.username)
         parameters['user'] = user
         return render_to_response(
