@@ -489,7 +489,6 @@ def attend_dps_exam(request, exam_code):
 
 @user_authenticated_and_subscribed_required
 def attend_dps_exam_old(request, exam_code):
-    user_profile_obj = UserProfile()
     parameters = {}
     ess = ExamStartSignal()
     exam_obj = ExammodelApi()
@@ -517,13 +516,7 @@ def attend_dps_exam_old(request, exam_code):
             'end': 0,
             'end_time': ''
         })
-        validate_start = ess.check_exam_started(
-            {'exam_code': int(exam_code),
-             'useruid': request.user.id,
-             'start': 1,
-             'end': 0}
-        )
-        check = validate_start['start_time']
+        check = current_time
 
     if current_time - check > exam_details['exam_duration'] * 60:
         ess.update_exam_start_signal({
@@ -545,22 +538,16 @@ def attend_dps_exam_old(request, exam_code):
                 'end': 0,
                 'end_time': ''
             })
-        validate_start = ess.check_exam_started(
-            {'exam_code': int(exam_code),
-             'useruid': request.user.id,
-             'start': 1,
-             'end': 0}
-        )
-        check = validate_start['start_time']
+        check = current_time
 
     if current_time - check < exam_details['exam_duration'] * 60:
         atte_ans = AttemptedAnswerDatabase()
         all_answers = atte_ans.find_all_atttempted_answer({
             'exam_code': int(exam_code),
             'user_id': int(request.user.id),
-            'ess_time': int(validate_start['start_time'])
+            'ess_time': int(check)
         })
-        time_elapsed = current_time - validate_start['start_time']
+        time_elapsed = current_time - check
         exam_details['exam_duration'] = (
             exam_details['exam_duration'] * 60 - time_elapsed
         ) / 60
@@ -582,7 +569,7 @@ def attend_dps_exam_old(request, exam_code):
         current_q_no = cqn.check_current_question_number({
             'exam_code': int(exam_code),
             'useruid': request.user.id,
-            'ess_time': validate_start['start_time']
+            'ess_time': check
         })
         try:
             start_question_number = current_q_no['cqn']
@@ -596,12 +583,10 @@ def attend_dps_exam_old(request, exam_code):
             parameters['next_to_start'] = questions[start_question_number]
         else:
             parameters['next_to_start'] = questions[0]
-
+        print 'start_question_number', start_question_number
         parameters['start_question_number'] = start_question_number
         parameters['start_question'] = questions[start_question_number]
 
-        user = user_profile_obj.get_user_by_username(request.user.username)
-        parameters['user'] = user
         return render_to_response(
             'exam_main.html',
             parameters,
@@ -805,21 +790,14 @@ def get_coupons(request, subscription_type):
 
 def results(request, exam_code):
     parameters = {}
-    res = {}
-    res['exam_code'] = int(exam_code)
     exam_obj = ExammodelApi()
     exam_details = exam_obj.find_one_exammodel({'exam_code': int(exam_code)})
-    res['exam_details'] = exam_details
     ess = ExamStartSignal()
     ess_check = ess.check_exam_started(
         {'exam_code': int(exam_code),
          'useruid': request.user.id}
     )
-     # return HttpResponse(json.dumps(ess))
-    # exam_handler_obj = ExamHandler()
-    # exam_details = exam_obj.find_one_exammodel(
-    #     {'exam_code': int(exam_code)}
-    # )
+
     total_questions = len(exam_details['question_list'])
     parameters['exam_completed'] = True
     if request.user.is_authenticated():
@@ -843,15 +821,7 @@ def results(request, exam_code):
     for eachAns in all_ans:
         anss.append(eachAns['q_no'])
 
-    # if exam_details['exam_category'] == 'BE-IOE':
-    #     loop_start = 1
-    #     loop_end = total_questions + 1
-    # else:
-    #     loop_start = 0
-    #     loop_end = total_questions
-    loop_start = 0
-    loop_end = total_questions
-    for i in range(loop_start, loop_end):
+    for i in range(total_questions):
         try:
             if i in anss:
                 answer_list += all_ans[anss.index(i)][
@@ -863,9 +833,6 @@ def results(request, exam_code):
 
     exam_handler = ExamHandler()
     score_list = exam_handler.check_answers(exam_code, answer_list)
-    user_profile_obj = UserProfile()
-    user = user_profile_obj.get_user_by_username(request.user.username)
-    parameters['user'] = user
     parameters['result'] = score_list
     from apps.mainapp.classes.result import Result
     result_obj = Result()
