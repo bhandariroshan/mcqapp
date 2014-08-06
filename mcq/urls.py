@@ -35,7 +35,7 @@ urlpatterns = patterns(
     url(r'^subscribe_exam/$',
         'apps.exam_api.coupon_admin.subscribe_user_to_exam'),
     url(r'^iom/dps/(?P<exam_code>\w{1,15})/$',
-        'apps.mainapp.views.attend_IOM_dps_exam'),
+        'apps.mainapp.views.attend_dps_exam_old'),
     url(r'^favicon\.ico$',
         RedirectView.as_view(
             url=settings.STATIC_URL + 'images/logos/favicon.ico')

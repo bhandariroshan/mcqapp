@@ -46,7 +46,6 @@ class ExamHandler():
                         "answer.c.html": 0, "answer.d.html": 0
                     }
                 )
-            print question_list
             self.sorted_question_list = sorted(
                 question_list, key=lambda k: k['question_number'])
             return True
