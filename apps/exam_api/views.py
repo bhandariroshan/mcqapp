@@ -29,7 +29,7 @@ class ExamHandler():
                     {
                         '_id': {"$in": question_id_list}
                     },
-                    fields={'answer.correct': 0}                    
+                    fields={'answer.correct': 0}
                 )
             else:
                 question_list = question_api.find_all_questions(
@@ -37,9 +37,9 @@ class ExamHandler():
                         '_id': {"$in": question_id_list}
                     },
                     fields={
-                            "answer.correct": 0, "question.html": 0, 
-                            "answer.a.html": 0, "answer.b.html": 0, 
-                            "answer.c.html": 0, "answer.d.html": 0
+                        "answer.correct": 0, "question.html": 0,
+                        "answer.a.html": 0, "answer.b.html": 0,
+                        "answer.c.html": 0, "answer.d.html": 0
                     }
                 )
 
@@ -122,7 +122,7 @@ class ExamHandler():
         question_api = QuestionApi()
         question_list = question_api.find_all_questions(
             {
-                '_id': {"$in": question_id_list},
+                '_id': {"$in": question_id_list}
             }
         )
         sorted_questions = sorted(

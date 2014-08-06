@@ -39,7 +39,11 @@ urlpatterns = patterns(
         view=SingleQuizView.as_view(),
         name='single_quiz'
     ),
-
+    url(
+        r'^api/scores/$',
+        'apps.quiz.android_api.save_quiz_score',
+        name='quiz_score_api'
+    ),
     url(
         r'^api/(?P<exam_category>[-\w]+)/$',
         'apps.quiz.android_api.get_quiz_question',
