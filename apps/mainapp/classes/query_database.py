@@ -20,9 +20,9 @@ class QuestionApi():
     def find_one_question(self, condition, fields=None):
         return self.db_object.get_one(self.table_name, condition, fields)
 
-    def find_all_questions(self, condition1, fields=None):
-        return self.db_object.get_all(self.table_name, condition1, fields,
-                                      sort_index='question_number')
+    def find_all_questions(self, condition1, fields=None, sort_index='question_number'):
+        return self.db_object.get_all(self.table_name, conditions=condition1, fields=fields,
+                                      sort_index=sort_index)
 
     def update_question(self, where, what):
         return self.db_object.update(self.table_name, where, what)

@@ -6,16 +6,17 @@ import time
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
 
 from apps.random_questions.views import generate_random_ioe_questions, generate_random_iom_questions
-from apps.mainapp.classes.Coupon import Coupon
-from apps.mainapp.classes.Userprofile import UserProfile
-
 from apps.exam_api.views import ExamHandler
 from apps.mainapp.classes.Exams import Exam
-from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi,\
-    ExamStartSignal, HonorCodeAcceptSingal, AttemptedAnswerDatabase,\
-    CurrentQuestionNumber
+from apps.mainapp.classes.query_database import ExammodelApi,\
+    ExamStartSignal, AttemptedAnswerDatabase, CurrentQuestionNumber
+
+from .Coupon import Coupon
+from .Userprofile import UserProfile
+
 
 ACCESS_TOKEN = ''
 ACCESS_TOKEN_SECRET = ''
@@ -60,11 +61,7 @@ class AjaxHandle():
                         )
                     )
 
-            if coupon_obj.validate_coupon(
-                coupon_code,
-                up_exm['exam_category'],
-                up_exm['exam_family']
-            ) is True:
+            if coupon_obj.validate_coupon(coupon_code, up_exm['exam_category'], up_exm['exam_family']) is True:
                 #save the coupon code in user's coupon code array
                 user_profile_obj.change_subscription_plan(
                     request.user.username, coupon_code
@@ -270,44 +267,6 @@ class AjaxHandle():
                 )
             )
 
-
-    def honor_code_accept(self, request):
-        if request.user.is_authenticated():
-            exam_code = request.POST.get('exam_code', '')
-            request.session[exam_code] = True
-
-            ess = ExamStartSignal()
-            start_time = datetime.datetime.now().timetuple()
-            start_time = time.mktime(start_time)
-
-            h_a_s = HonorCodeAcceptSingal()
-            h_a_s.update_honor_code_accept_Signal(
-                {'useruid': request.user.id,
-                 'exam_code': int(exam_code),
-                 'ess_time': int(start_time)},
-                {'accept': 1}
-            )
-
-            ess.insert_exam_start_signal({
-                'exam_code': int(exam_code),
-                'useruid': request.user.id,
-                'start': 1,
-                'start_time': int(start_time),
-                'end': 0
-            })
-            return HttpResponse(
-                json.dumps(
-                    {'status': 'ok', 'url': '/cps/' + exam_code + '/'}
-                )
-            )
-        else:
-            return HttpResponse(
-                json.dumps(
-                    {'status': 'error',
-                     'message': 'Not Authorized for this action'}
-                )
-            )
-
     def set_exam_finished(self, request):
         if request.user.is_authenticated():
             exam_code = request.POST.get('exam_code', '')
@@ -315,23 +274,6 @@ class AjaxHandle():
             ess = ExamStartSignal()
             end_time = datetime.datetime.now().timetuple()
             end_time = time.mktime(end_time)
-
-            validate = ess.check_exam_started({
-                'exam_code': int(exam_code),
-                'useruid': request.user.id,
-                'start': 1,
-                'end': 0
-            })
-
-            h_a_s = HonorCodeAcceptSingal()
-            try:
-                h_a_s.update_honor_code_accept_Signal({
-                    'useruid': request.user.id,
-                    'exam_code': int(exam_code),
-                    'ess_time': int(validate['start_time'])},
-                    {'accept': 0})
-            except:
-                pass
 
             ess.update_exam_start_signal({
                 'exam_code': int(exam_code),
@@ -377,7 +319,7 @@ class AjaxHandle():
                 cat = 'BE-IOE'
                 url = '/ioe/'
 
-            elif iom_check == 'true' :
+            elif iom_check == 'true':
                 cat = 'MBBS-IOM'
                 url = '/iom/'
 
@@ -386,7 +328,7 @@ class AjaxHandle():
                 {'student_category': cat,
                  'student_category_set': 1}
             )
-            return HttpResponse(json.dumps({'status': 'ok', 'url':url}))
+            return HttpResponse(json.dumps({'status': 'ok', 'url': url}))
         else:
             return HttpResponse(
                 json.dumps(
@@ -567,7 +509,6 @@ class AjaxHandle():
             parameters = {}
             exam_obj = ExammodelApi()
             user_profile_obj = UserProfile()
-            question_obj = QuestionApi()
             ess = ExamStartSignal()
             atte_ans = AttemptedAnswerDatabase()
             # questions = question_obj.find_all_questions(
@@ -680,90 +621,6 @@ class AjaxHandle():
                     )
                 )
 
-    def load_result(self, request):
-        self.set_exam_finished(request)
-        parameters = {}
-        res = {}
-        exam_code = request.POST.get('exam_code')
-        res['exam_code'] = int(exam_code)
-        exam_obj = ExammodelApi()
-        exam_details = exam_obj.find_one_exammodel(
-            {'exam_code': int(exam_code)}
-        )
-        res['exam_details'] = exam_details
-        ess = ExamStartSignal()
-        ess_check = ess.check_exam_started(
-            {'exam_code': int(exam_code),
-             'useruid': request.user.id}
-        )
-
-        total_questions = 65
-        ans = AttemptedAnswerDatabase()
-        try:
-            all_ans = ans.find_all_atttempted_answer({
-                'exam_code': int(exam_code),
-                'user_id': request.user.id,
-                'ess_time': ess_check['start_time']
-            },
-                fields={'q_no': 1, 'attempt_details': 1}
-            )
-        except:
-            all_ans = ''
-        answer_list = ''
-        anss = []
-        for eachAns in all_ans:
-            anss.append(eachAns['q_no'])
-        if exam_details['exam_category'] == 'BE-IOE':
-            loop_start = 1
-            loop_end = total_questions + 1
-        else:
-            loop_start = 0
-            loop_end = total_questions 
-
-        for i in range(loop_start, loop_end):
-            try:
-                if i in anss:
-                    answer_list += all_ans[anss.index(i)][
-                        'attempt_details'][0]['selected_ans']
-                else:
-                    answer_list += 'e'
-            except:
-                answer_list += 'e'
-
-        exam_handler = ExamHandler()
-        score_list = exam_handler.check_answers(exam_code, answer_list)
-        user_profile_obj = UserProfile()
-        user = user_profile_obj.get_user_by_username(request.user.username)
-        parameters['user'] = user
-        parameters['result'] = score_list
-        from apps.mainapp.classes.result import Result
-        result_obj = Result()
-        result_obj.save_result(
-            {
-                'useruid': request.user.id,
-                'exam_code': int(exam_code),
-                'ess_time': ess_check['start_time'],
-                'result': score_list
-            }
-        )
-        parameters['exam_completed'] = True
-        if request.user.is_authenticated():
-            current_time = time.mktime(datetime.datetime.now().timetuple())
-            if exam_details['exam_family'] == 'CPS' and current_time - \
-                    exam_details['exam_date'] < exam_details['exam_duration'] \
-                    * 60:
-                parameters['exam_completed'] = False
-
-        parameters['exam_code'] = exam_code
-        parameters['myrankcard'] = {'total': 200, 'rank': 1}
-        html = str(render_to_response(
-                   'ajax_results.html',
-                   parameters,
-                   context_instance=RequestContext(request)
-                   ))
-        html = html.replace('Content-Type: text/html; charset=utf-8', '')
-        return HttpResponse(json.dumps({'status': 'ok', 'html': html}))
-
     def get_unattempted_questions_number(self, request):
         exam_code = int(request.POST.get('exam_code'))
         ess = ExamStartSignal()
@@ -800,7 +657,6 @@ class AjaxHandle():
                  'notattempted': nt_att}
             )
         )
-
 
     def get_new_exam(self, request):
         user_profile_obj = UserProfile()
@@ -852,7 +708,7 @@ class AjaxHandle():
                     code, request.user.username
                 )
                 return HttpResponse(
-                    json.dumps({'message': 'valid', 'status': 'ok', 'type':ex_type})
+                    json.dumps({'message': 'valid', 'status': 'ok', 'type': ex_type})
                 )
 
             elif 'MBBS-IOM' in coupon_code['subscription_type']:
@@ -863,7 +719,7 @@ class AjaxHandle():
                     code, request.user.username
                 )
                 return HttpResponse(
-                    json.dumps({'message': 'valid', 'status': 'ok', 'type':ex_type})
+                    json.dumps({'message': 'valid', 'status': 'ok', 'type': ex_type})
                 )
 
             elif 'DPS' in coupon_code['subscription_type']:
@@ -871,7 +727,7 @@ class AjaxHandle():
                     code, request.user.username
                 )
                 return HttpResponse(
-                    json.dumps({'message': 'valid', 'status': 'ok', 'type':ex_type})
+                    json.dumps({'message': 'valid', 'status': 'ok', 'type': ex_type})
                 )
 
             else:

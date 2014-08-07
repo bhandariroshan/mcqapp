@@ -4,6 +4,7 @@ from bson.objectid import ObjectId
 import re
 
 from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi, AttemptedAnswerDatabase
+from apps.mainapp.classes.result import Result
 
 
 class ExamHandler():
@@ -113,7 +114,7 @@ class ExamHandler():
             eachExam['exam_date'] = int(eachExam['exam_date'])
         return exam_list
 
-    def check_answers(self, exam_code, answer_list):
+    def check_answers(self, request, exam_code, answer_list):
         '''
         This function receives list of answers and exam_code
         and return the dictionary with correct answers of each subject
@@ -199,6 +200,15 @@ class ExamHandler():
                 'subject_total_marks': total_marks
             }
         )
+        # result_obj = Result()
+        # for eachResult in score_list:
+        #     result_obj.save_result({
+        #         'useruid': request.user.id,
+        #         'exam_code': int(exam_code),
+        #         'ess_time': ess_check['start_time'],
+        #         eachResult['subject']: eachResult
+        #     })
+
         return score_list
 
 
