@@ -731,7 +731,6 @@ def results(request, exam_code):
             'ess_time': ess_check['start_time'],
             eachResult['subject']: eachResult
         })
-        print 'entered'
     parameters['exam_code'] = exam_code
     parameters['myrankcard'] = {'total': 200, 'rank': 1}
     return render_to_response(
@@ -837,11 +836,9 @@ def get_list_of_result(request):
         exam_details = exam_obj.find_one_exammodel(
             {'exam_code': int(exam_code)}
         )
-        if exam_details is not None:
-            if exam_details.get('exam_family') == 'DPS':
-                continue
-        else:
+        if exam_details is None or exam_details['exam_family'] == 'DPS':
             continue
+
         attempt_timestamps = ans.get_attempted_exams(
             'ess_time',
             {'user_id': request.user.id,
