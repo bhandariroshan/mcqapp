@@ -40,34 +40,35 @@ class SaveQuiz():
         from .models import QuizResult
 
         exam_code = int(request.POST.get('exam_code'))
-        quiz_answer_obj = QuizAnswer.objects(
-            exam_code=exam_code,
-            user_id=request.user.id
-        )
-        question_api = QuestionApi()
-        daily_score = 0
-        for quiz_objects in quiz_answer_obj:
-            question = question_api.find_one_question(
-                {"_id": quiz_objects.question_id},
-            )
-            if question['answer']['correct'] == quiz_objects.attempted_option:
-                daily_score += 1
         exam_model_obj = ExammodelApi()
         current_exam_model = exam_model_obj.find_one_exammodel(
             {"exam_code": exam_code}
         )
         exam_name = current_exam_model['exam_name']
         quiz_number = current_exam_model['quiz_number']
-        quiz_result_obj = QuizResult(
+        quiz_result_obj, created = QuizResult.objects.get_or_create(
             quiz_code=exam_code,
             attempted_date=current_exam_model['exam_date'],
-            quiz_type=current_exam_model['exam_category']
+            quiz_type=current_exam_model['exam_category'],
+            user_id=request.user.id,
+            defaults={"quiz_name": ' '.join([exam_name, str(quiz_number)])}
         )
-        quiz_result_obj.quiz_name = ' '.join([exam_name, str(quiz_number)])
-        quiz_result_obj.user_id = request.user.id
-        quiz_result_obj.quiz_score = daily_score
-        quiz_result_obj.submitted = True
-        quiz_result_obj.save()
+        if created:
+            quiz_answer_obj = QuizAnswer.objects(
+                exam_code=exam_code,
+                user_id=request.user.id
+            )
+            question_api = QuestionApi()
+            daily_score = 0
+            for quiz_objects in quiz_answer_obj:
+                question = question_api.find_one_question(
+                    {"_id": quiz_objects.question_id},
+                )
+                if question['answer']['correct'] == quiz_objects.attempted_option:
+                    daily_score += 1
+
+            quiz_result_obj.quiz_score = daily_score
+            quiz_result_obj.submitted = True
         return True
 
     def check_quiz_submitted(self, request, exam_code):
