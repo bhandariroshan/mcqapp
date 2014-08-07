@@ -488,7 +488,6 @@ class AjaxHandle():
                 ) / 60
 
                 parameters['all_answers'] = json.dumps(all_answers)
-                question_obj = QuestionApi()
 
                 current_pg_num = 1
                 next_page = 0
@@ -514,10 +513,10 @@ class AjaxHandle():
 
                 parameters['current_pg_num'] = current_pg_num
                 exam_handler_obj = ExamHandler()
-                questions = exam_handler_obj.get_paginated_question_set(
+                exam_handler_obj.get_paginated_question_set(
                     int(exam_code), current_pg_num
                 )
-
+                questions = exam_handler_obj.sorted_question_list
                 # print questions
                 sorted_questions = sorted(
                     questions, key=lambda k: k['question_number']

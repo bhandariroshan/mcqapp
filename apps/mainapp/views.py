@@ -339,12 +339,9 @@ def attend_dps_exam(request, exam_code):
     parameters = {}
     parameters['user'] = user_det
     ess = ExamStartSignal()
-    exam_obj = ExammodelApi()
-    exam_handler_obj = ExamHandler()
 
     try:
         profile_image = user_det['profile_image']
-        # print 'profile_image is: ', profile_image
     except:
         social_account = SocialAccount.objects.get(
             user__id=request.user.id
@@ -354,18 +351,15 @@ def attend_dps_exam(request, exam_code):
         )
 
         graph = GraphAPI(access_token)
-        # print 'graph: ', graph
-        # print social_account.uid
         det = graph.get(
             social_account.uid +
             '/picture/?redirect=0&height=300&type=normal&width=300'
         )
-        # print 'Debugging expired access token: ', det
         profile_image = det['data']['url']
         user_profile_obj.update_profile_image(
             profile_image, request.user.username
         )
-
+    exam_obj = ExammodelApi()
     exam_details = exam_obj.find_one_exammodel(
         {'exam_code': int(exam_code)}
     )
@@ -383,19 +377,12 @@ def attend_dps_exam(request, exam_code):
             'exam_code': int(exam_code),
             'useruid': request.user.id}, {
             'start': 1,
-            'start_time': int(
-                time.mktime(datetime.datetime.now().timetuple())
-            ),
+            'start_time': int(current_time),
             'end': 0,
             'end_time': ''
         })
-        validate_start = ess.check_exam_started(
-            {'exam_code': int(exam_code),
-             'useruid': request.user.id,
-             'start': 1,
-             'end': 0}
-        )
-        check = validate_start['start_time']
+
+        check = current_time
 
     if current_time - check > exam_details['exam_duration'] * 60:
         ess.update_exam_start_signal({
@@ -404,9 +391,7 @@ def attend_dps_exam(request, exam_code):
             'start': 1},
             {
                 'end': 1, 'start': 0,
-                'end_time': int(
-                    time.mktime(datetime.datetime.now().timetuple())
-                )
+                'end_time': int(current_time)
             }
         )
         ess.update_exam_start_signal({
@@ -414,28 +399,20 @@ def attend_dps_exam(request, exam_code):
             'useruid': request.user.id},
             {
                 'start': 1,
-                'start_time': int(
-                    time.mktime(datetime.datetime.now().timetuple())
-                ),
+                'start_time': int(current_time),
                 'end': 0,
                 'end_time': ''
             })
-        validate_start = ess.check_exam_started(
-            {'exam_code': int(exam_code),
-             'useruid': request.user.id,
-             'start': 1,
-             'end': 0}
-        )
-        check = validate_start['start_time']
+
+        check = current_time
 
     if current_time - check < exam_details['exam_duration'] * 60:
         atte_ans = AttemptedAnswerDatabase()
         all_answers = atte_ans.find_all_atttempted_answer({
             'exam_code': int(exam_code), 'user_id': int(request.user.id),
-            'ess_time': int(validate_start['start_time'])
+            'ess_time': int(check)
         })
-        time_elapsed = time.mktime(
-            datetime.datetime.now().timetuple()) - validate_start['start_time']
+        time_elapsed = current_time - check
         exam_details['exam_duration'] = (
             exam_details['exam_duration'] * 60 - time_elapsed) / 60
 
@@ -464,22 +441,17 @@ def attend_dps_exam(request, exam_code):
             parameters['page_end'] = True
 
         parameters['current_pg_num'] = current_pg_num
-        questions = exam_handler_obj.get_paginated_question_set(
+        exam_handler_obj = ExamHandler()
+        exam_handler_obj.get_paginated_question_set(
             int(exam_code), current_pg_num
         )
-        # print questions
-        sorted_questions = sorted(
-            questions, key=lambda k: k['question_number']
-        )
+        sorted_questions = exam_handler_obj.sorted_question_list
         parameters['questions'] = sorted_questions
         parameters['exam_details'] = exam_details
 
         parameters['max_questions_number'] = 65
 
         parameters['exam_code'] = exam_code
-        user_profile_obj = UserProfile()
-        user = user_profile_obj.get_user_by_username(request.user.username)
-        parameters['user'] = user
         # return render_to_response(
         #     'pulchowkexam-main.html',
         #     parameters,
@@ -883,10 +855,10 @@ def show_result(request, exam_code, subject_name):
 
     parameters['exam_details'] = exam_details
 
-    questions = exam_handler_obj.get_filtered_question_from_database(
+    exam_handler_obj.get_filtered_question_from_database(
         int(exam_code), subject_name
     )
-    # print questions
+    questions = exam_handler_obj.sorted_question_list
     total_questions = len(questions)
     try:
         current_q_no = int(request.GET.get('q', ''))

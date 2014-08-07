@@ -44,14 +44,14 @@ class ExamHandler():
                         "answer.correct": 0, "question.html": 0,
                         "answer.a.html": 0, "answer.b.html": 0,
                         "answer.c.html": 0, "answer.d.html": 0
-                    }
+                    },
+                    sort_index='question_number'
                 )
-            self.sorted_question_list = sorted(
-                question_list, key=lambda k: k['question_number'])
+            self.sorted_question_list = question_list
             return True
 
         except:
-            pass
+            return False
 
     def get_filtered_question_from_database(self, exam_code, subject_name):
         '''
@@ -68,18 +68,20 @@ class ExamHandler():
             ]
 
             question_api = QuestionApi()
-            question_list = question_api.find_all_questions({
-                '_id': {"$in": question_id_list},
-                'subject': {"$regex": re.compile(
-                    "^" + str(subject_name) + "$", re.IGNORECASE),
-                    "$options": "-i"},
-            })
-            sorted_questions = sorted(
-                question_list, key=lambda k: k['question_number'])
-            return sorted_questions
+            question_list = question_api.find_all_questions(
+                {'_id': {"$in": question_id_list},
+                 'subject': {"$regex": re.compile(
+                     "^" + str(subject_name) + "$", re.IGNORECASE),
+                     "$options": "-i"},
+                 },
+                fields=None,
+                sort_index='question_number'
+            )
+            self.sorted_question_list = question_list
+            return True
 
         except:
-            pass
+            return False
 
     def get_paginated_question_set(self, exam_code, current_pg_num):
         exammodel_api = ExammodelApi()
@@ -94,9 +96,11 @@ class ExamHandler():
         return_question_list = question_api.get_paginated_questions(
             {'_id': {"$in": question_id_list}},
             fields={'answer.correct': 0},
+            sort_index='question_number',
             page_num=current_pg_num
         )
-        return return_question_list
+        self.sorted_question_list = return_question_list
+        return True
 
     def list_upcoming_exams(self, condition={}, fields=None):
         '''
@@ -123,13 +127,10 @@ class ExamHandler():
             ObjectId(i['id']) for i in exam_model['question_list']
         ]
         question_api = QuestionApi()
-        question_list = question_api.find_all_questions(
-            {
-                '_id': {"$in": question_id_list},
-            }
+        sorted_questions = question_api.find_all_questions(
+            {'_id': {"$in": question_id_list}},
+            sort_index='question_number'
         )
-        sorted_questions = sorted(
-            question_list, key=lambda k: k['question_number'])
 
         negative_marking = False
         if exam_model['exam_category'] == "BE-IOE" and sorted_questions[0]['marks'] == 1:
