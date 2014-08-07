@@ -48,10 +48,10 @@ class SaveQuiz():
         quiz_number = current_exam_model['quiz_number']
         quiz_result_obj, created = QuizResult.objects.get_or_create(
             quiz_code=exam_code,
-            attempted_date=current_exam_model['exam_date'],
-            quiz_type=current_exam_model['exam_category'],
             user_id=request.user.id,
-            defaults={"quiz_name": ' '.join([exam_name, str(quiz_number)])}
+            defaults={"quiz_name": ' '.join([exam_name, str(quiz_number)]),
+                      "attempted_date": current_exam_model['exam_date'],
+                      "quiz_type": current_exam_model['exam_category']}
         )
         if created:
             quiz_answer_obj = QuizAnswer.objects(
