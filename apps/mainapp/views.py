@@ -194,6 +194,7 @@ def user_dashboard(request, exam_type):
     parameters['user'] = user
     parameters['exam_type'] = exam_type
 
+    parameters['subscribed'] = True
     if "IDP" in user['subscription_type']:
         parameters['all_subscribed'] = True
     elif exam_dict[exam_type] in user['subscription_type']:
