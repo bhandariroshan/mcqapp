@@ -75,6 +75,7 @@ def save_quiz_score(request, exam_model, answer_list):
     return daily_score
 
 
+@login_required
 def user_quiz_score(request):
     """
     This function receives the exam_code of the quiz and sa

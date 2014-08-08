@@ -11,6 +11,7 @@ from apps.mainapp.classes.Coupon import Coupon
 from apps.mainapp.classes.Userprofile import UserProfile
 from apps.mainapp.classes.query_database import ExammodelApi, AttemptedAnswerDatabase, QuestionApi
 from apps.random_questions.views import generate_random_ioe_questions, generate_random_iom_questions
+from apps.quiz.android_api import user_quiz_score
 
 from .views import ExamHandler
 
@@ -251,6 +252,9 @@ def get_scores(request):
         exam_details = exam_obj.find_one_exammodel(
             {'exam_code': int(exam_code)}
         )
+        if exam_details['exam_family'] == 'QUIZ':
+            return user_quiz_score(request)
+
         question_list = get_question_set_for_android(int(exam_code))
         ans = AttemptedAnswerDatabase()
         attempt_time = time.mktime(datetime.datetime.now().timetuple())
