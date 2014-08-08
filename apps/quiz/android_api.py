@@ -113,5 +113,5 @@ def user_quiz_score(request):
     response = [{"subject": quiz_result_obj.quiz_name,
                 "score": quiz_result_obj.quiz_score}]
     return HttpResponse(json.dumps(
-        {'status': 'ok', 'result': response}
+        {'status': 'ok', 'result': response, 'type': 'quiz'}
     ))

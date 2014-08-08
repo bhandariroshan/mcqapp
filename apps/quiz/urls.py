@@ -41,7 +41,7 @@ urlpatterns = patterns(
     ),
     url(
         r'^api/scores/$',
-        'apps.quiz.android_api.save_quiz_score',
+        'apps.quiz.android_api.user_quiz_score',
         name='quiz_score_api'
     ),
     url(
