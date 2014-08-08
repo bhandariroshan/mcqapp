@@ -20,11 +20,11 @@ class LeaderBoard():
         except:
             return False
         self.ioe_quiz_result = QuizResult.objects.filter(
-            user_id=user.id, quiz_type="BE-IOE").order_by('attempted_date')
+            user_id=user.id, quiz_type="BE-IOE").order_by('-attempted_date')
         self.ioe_total_score = QuizResult.objects.filter(
             user_id=user.id, quiz_type="BE-IOE").sum('quiz_score')
         self.iom_quiz_result = QuizResult.objects.filter(
-            user_id=user.id, quiz_type="MBBS-IOM").order_by('attempted_date')
+            user_id=user.id, quiz_type="MBBS-IOM").order_by('-attempted_date')
         self.iom_total_score = QuizResult.objects.filter(
             user_id=user.id, quiz_type="MBBS-IOM").sum('quiz_score')
 
