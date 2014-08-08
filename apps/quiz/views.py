@@ -1,7 +1,7 @@
 import json
 
 from django.shortcuts import render
-from django.http import HttpResponseRedirect, HttpResponse
+from django.http import HttpResponseRedirect, HttpResponse, Http404
 from django.views.generic import View
 from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import login_required
@@ -56,7 +56,10 @@ class SingleQuizView(View):
         user_profile_obj = UserProfile()
         user = user_profile_obj.get_user_by_username(request.user.username)
         parameters['user'] = user
-        question_quiz_obj.return_quiz_questions(exam_category)
+        try:
+            question_quiz_obj.return_quiz_questions(exam_category)
+        except:
+            raise Http404
         exam_code = question_quiz_obj.exam_model['exam_code']
         parameters['quiz_details'] = question_quiz_obj.exam_model
 

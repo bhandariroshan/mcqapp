@@ -4,13 +4,12 @@
 {% block content %}
 <div class="row">
 <div class="twelve columns" style="margin-top:12%; margin-bottom:7%;">
-    <h3 class="h-text-align ui-corner-all" style="text-align: center;"><strong>{{exam_details.exam_name}}</strong></h3>
+    <h5 class="h-text-align ui-corner-all" style="text-align: right;color:blue;"><a href="/"><strong>Practice More Exams Here...</strong></a></h5>
     <li id='exam_not_complete_alert' class='warning' style="display: none;"><h3 style="text-align: center;color:red;">Answers will be available after exam duration is completed. Please check back later.</h3></li>
     <section class="tabs">
 		<ul class="tab-nav">
 		    	<li  id="ioeQuizLi" {% if ioe_user %} class="active" {% endif %}> <a href="#">IOE Quiz</a></li>		    
 		    	<li  id="iomQuizLi" {% if iom_user %} class="active" {% endif %}> <a href="#">IOM Quiz</a></li>		    
-		    <!-- <li><a href="#">Rank Card</a></li> -->
 		</ul>
 
 		<div class="tab-content {% if ioe_user %} active {% endif %}">

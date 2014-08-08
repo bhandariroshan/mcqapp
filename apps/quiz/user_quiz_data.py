@@ -69,6 +69,7 @@ class SaveQuiz():
 
             quiz_result_obj.quiz_score = daily_score
             quiz_result_obj.submitted = True
+            quiz_result_obj.save()
         return True
 
     def check_quiz_submitted(self, request, exam_code):

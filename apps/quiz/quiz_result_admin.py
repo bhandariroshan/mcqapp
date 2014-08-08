@@ -1,10 +1,13 @@
+from datetime import datetime, timedelta
+
 from django.shortcuts import render
 from django.views.generic import View
 from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import user_passes_test
+
 from apps.mainapp.classes.Userprofile import UserProfile
+
 from .models import QuizResult
-from datetime import datetime, timedelta
 
 
 class QuizResultAdminView(View):
@@ -28,7 +31,7 @@ class QuizResultAdminView(View):
             copy_result = {i: each_result[i] for i in each_result}
             copy_result['name'] = myuser['first_name'] + ' ' + myuser['last_name']
             copy_result['username'] = myuser['username']
-            copy_result['facebook_link'] = "http://facebook.com/" + myuser['id']
+            # copy_result['facebook_link'] = "http://facebook.com/" + myuser['id']
             copy_result['email'] = myuser['email']
             if index != -1:
                 if each_result['quiz_type'] == 'BE-IOE':
