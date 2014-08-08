@@ -98,7 +98,6 @@
                 {% ifequal eachExam.exam_family  'DPS' %}
                 
                <article class="valign row text-color-white ui-widget-content ui-corner-all my-margin {% if eachExam.subscribed %} subscribed {% else %} notsubscribed {% endif %}">
-                <!-- <div style="width:10%"> -->
                   {% if eachExam.subscribed %}
                       <i class="icon-check icon-color-subscribed myicon" style="margin-top: 12px;margin-left: 10px;"></i>
                   {% else %}
@@ -110,7 +109,6 @@
                 </div>
 
                 <div style="width:65%">
-                    <!-- <h4><a href="#" id="{{eachExam.code}}/"><strong>{{eachExam.name}}</strong></a></h4> -->
                     {% if eachExam.exam_family == 'DPS' %}
                       <h4><a href="#" id="{{eachExam.code}}/"><strong>{{eachExam.name}}</strong></a></h4>
                     {% endif %}
