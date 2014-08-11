@@ -721,7 +721,7 @@ def results(request, exam_code):
         except:
             answer_list += 'e'
     exam_handler = ExamHandler()
-    score_list = exam_handler.check_answers(request, exam_code, answer_list)
+    score_list = exam_handler.save_result(request, exam_code, answer_list)
     parameters['result'] = score_list
     from apps.mainapp.classes.result import Result
     result_obj = Result()
@@ -869,7 +869,7 @@ def get_list_of_result(request):
                 except:
                     answer_list += 'e'
             exam_handler = ExamHandler()
-            score_list = exam_handler.check_answers(request, exam_code, answer_list)
+            score_list = exam_handler.save_result(request, exam_code, answer_list)
             rank = 0
             return_dict.append(
                 {'exam_code': exam_code,

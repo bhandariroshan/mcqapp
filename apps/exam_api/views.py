@@ -114,7 +114,7 @@ class ExamHandler():
             eachExam['exam_date'] = int(eachExam['exam_date'])
         return exam_list
 
-    def check_answers(self, request, exam_code, answer_list):
+    def save_result(self, request, exam_code, answer_list):
         '''
         This function receives list of answers and exam_code
         and return the dictionary with correct answers of each subject
