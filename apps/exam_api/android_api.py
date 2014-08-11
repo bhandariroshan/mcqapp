@@ -31,8 +31,7 @@ def get_question_set_for_android(exam_code):
         question_api = QuestionApi()
         question_list = question_api.find_all_questions(
             {
-                '_id': {"$in": question_id_list},
-                "marks": 1
+                '_id': {"$in": question_id_list}
             }
         )
         sorted_questions = sorted(
