@@ -31,7 +31,7 @@ class QuizResultAdminView(View):
             copy_result = {i: each_result[i] for i in each_result}
             copy_result['name'] = myuser['first_name'] + ' ' + myuser['last_name']
             copy_result['username'] = myuser['username']
-            # copy_result['facebook_link'] = "http://facebook.com/" + myuser['id']
+            copy_result['facebook_link'] = "http://facebook.com/" + myuser['id']
             copy_result['email'] = myuser['email']
             if index != -1:
                 if each_result['quiz_type'] == 'BE-IOE':
