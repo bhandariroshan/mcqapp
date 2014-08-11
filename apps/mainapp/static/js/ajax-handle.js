@@ -67,6 +67,15 @@ function get_new_exam_success(data){
 	}
 }
 
+function get_questions(exm_code){
+	ajax_request('get_questions', 'get_questions_success', {'exam_code':exm_code})
+}
+
+function get_questions_success(data){
+	data = jQuery.parseJSON(data);
+	questions =  data['questions'];
+}
+
 function chek_valid_dps_code(code, type){
 	ajax_request('chek_valid_dps_code', 'chek_valid_dps_code_success', {'code':code, 'type':type});
 }

@@ -26,6 +26,34 @@ class AjaxHandle():
     def __init__(self):
         pass
 
+    def get_questions(self, request):
+        if request.user.is_authenticated():
+            user_profile_obj = UserProfile()
+            exam_code = request.POST.get('exam_code')
+
+            subscribed = user_profile_obj.check_subscribed(
+                request.user.username, exam_code
+            )
+
+            if subscribed:
+                exam_handler_obj = ExamHandler()
+                questions = exam_handler_obj.get_questionset_from_database(
+                    int(exam_code), False
+                )
+
+                for count, eachQuestion in enumerate(questions):
+                    eachQuestion['question_number'] = count + 1
+                
+                sorted_questions = sorted(
+                    questions, key=lambda k: k['question_number']
+                )
+                return HttpResponse(json.dumps({'questions':sorted_questions, 'status':'ok'}))
+            else:
+                return HttpResponse(json.dumps({'status':'error', 'message':'You are not authorized to perform this action.'}))
+        else:
+            return HttpResponse(json.dumps({'status':'error', 'message':'You are not authorized to perform this action.'}))
+
+
     def validate_coupon(self, request):
         if request.user.is_authenticated():
             coupon_obj = Coupon()
