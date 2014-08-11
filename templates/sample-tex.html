@@ -35,10 +35,10 @@ content = "";
 for(var i = 0;i<questions.length;i++)
 {
 	var q_id = "q"+questions[i].exam_code+"_"+questions[i].question_number+"_";
-	content += '<div id="'+q_id+'">'+questions[i].question.text+'</div></br>';
+	content += '<div id="'+q_id+'">' + $('<div/>').text(questions[i].question.text).html() +'</div></br>';
 	for(var j = 0;j<4;j++)
 	{
-		content += '<div id="'+q_id+j+'">'+questions[i].answer[String.fromCharCode(97+j)].text+'</div><br/>';
+		content += '<div id="'+q_id+j+'">' + $('<div/>').text(questions[i].answer[String.fromCharCode(97+j)].text).html() + '</div><br/>';
 		if(i==questions.length-1&&j==3)
 	{
 		$("#cont").html(content);
