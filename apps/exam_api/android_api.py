@@ -273,7 +273,7 @@ def get_scores(request):
                  'attempt_time': int(attempt_time)
                  }})
 
-        score_dict = exam_handler.save_result(request, exam_code, answer_list)
+        score_dict = exam_handler.save_exam_result(request, exam_code, answer_list, attempt_time)
         return HttpResponse(json.dumps(
             {'status': 'ok', 'result': score_dict}
         )
