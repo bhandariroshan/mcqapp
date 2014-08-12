@@ -816,8 +816,7 @@ def show_result(request, exam_code, subject_name):
                  'ess_time': ess_check['start_time'],
                  'q_id': questions[current_q_no]['uid']['id']}
         att_ans = ans.find_all_atttempted_answer(query)
-        parameters['attempted'] = att_ans[0]['attempt_details'][
-            len(att_ans[0]['attempt_details']) - 1]['selected_ans']
+        parameters['attempted'] = att_ans[0]['attempt_details'][-1]['selected_ans']
     except:
         parameters['attempted'] = ''
 

@@ -154,13 +154,13 @@ class ExamHandler():
         },
             fields={'q_id': 1, 'attempt_details': 1}
         )
-
+        print all_ans
         # the dictionary saves the question attempted by the user with
         # the option chosen
         attempted_ans_dict = {}
         for ans in all_ans:
-            attempted_ans_dict[ans['quid']] = ans['attempt_details'][0]['selected_ans']
-
+            attempted_ans_dict[ans['quid']] = ans['attempt_details'][-1]['selected_ans']
+        print attempted_ans_dict
         # calculate score obtained in each subject
         for ques in sorted_questions:
             correct_answers[ques['subject'].lower()][
