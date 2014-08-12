@@ -689,51 +689,15 @@ def results(request, exam_code):
          'useruid': request.user.id}
     )
 
-    total_questions = len(exam_details['question_list'])
     parameters['exam_completed'] = True
     current_time = time.mktime(datetime.datetime.now().timetuple())
     if exam_details['exam_family'] == 'CPS' and current_time - exam_details['exam_date'] < exam_details['exam_duration'] * 60:
         parameters['exam_completed'] = False
 
-    ans = AttemptedAnswerDatabase()
-    try:
-        all_ans = ans.find_all_atttempted_answer({
-            'exam_code': int(exam_code),
-            'user_id': request.user.id,
-            'ess_time': ess_check['start_time']
-        },
-            fields={'q_no': 1, 'attempt_details': 1}
-        )
-    except:
-        all_ans = ''
-    answer_list = ''
-    anss = []
-    for eachAns in all_ans:
-        anss.append(eachAns['q_no'])
-
-    for i in range(total_questions):
-        try:
-            if i in anss:
-                answer_list += all_ans[anss.index(i)][
-                    'attempt_details'][0]['selected_ans']
-            else:
-                answer_list += 'e'
-        except:
-            answer_list += 'e'
     exam_handler = ExamHandler()
-    score_list = exam_handler.save_exam_result(
-        request, exam_code, answer_list, ess_check['start_time']
+    exam_handler.save_exam_result(
+        request, exam_details, ess_check['start_time']
     )
-    parameters['result'] = score_list
-    from apps.mainapp.classes.result import Result
-    result_obj = Result()
-    for eachResult in score_list:
-        result_obj.save_result({
-            'useruid': request.user.id,
-            'exam_code': int(exam_code),
-            'ess_time': ess_check['start_time'],
-            eachResult['subject']: eachResult
-        })
     parameters['exam_code'] = exam_code
     parameters['myrankcard'] = {'total': 200, 'rank': 1}
     return render_to_response(
