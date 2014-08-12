@@ -421,7 +421,7 @@
           </li>
         {% endif %}
         <li>
-          <a href="#"><span>{{user.name}} </span><i class="icon-down-open"></i></a>
+          <a href="#"><img src="{{profile_img_url}}" width="25px"><span style="vertical-align: super;"> {{user.name}} </span><i class="icon-down-open" style="vertical-align: super;"></i></a>
           <div class="dropdown" style="width:180px;{% if 'terms' in request.path or 'privacy' in request.path or 'results' in request.path or 'answers' in request.path %} margin-left: 0px;{% endif %}">
             <ul>
               <li><a href="/accounts/logout">logout</a></li>
