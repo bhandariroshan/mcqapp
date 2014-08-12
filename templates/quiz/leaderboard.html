@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
-{# {% load result_extra %} #}
 {% block content %}
 <div class="row">
 <div class="twelve columns" style="margin-top:12%; margin-bottom:7%;">
@@ -27,7 +26,7 @@
 						<td>{{forloop.counter}}</td>	
 						<td><img src="{{each_result.profile_img}}">  {{each_result.name}}</td>	
 						<td>{{each_result.total_quiz}}</td>
-						<td>{{each_result.total_score}}</td>
+						<td><strong>{{each_result.total_score}}</strong></td>
 					</tr>
 				{% endfor %}
 				</tbody>
@@ -50,7 +49,7 @@
 						<td>{{forloop.counter}}</td>	
 						<td><img src="{{each.profile_img}}">  {{each.name}}</td>	
 						<td>{{each.total_quiz}}</td>
-						<td>{{each.total_score}}</td>
+						<td><strong>{{each.total_score}}</strong></td>
 					</tr>
 				{% endfor %}
 				</tbody>
