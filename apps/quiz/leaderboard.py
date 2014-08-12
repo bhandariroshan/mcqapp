@@ -1,6 +1,6 @@
 from django.views.generic import View
 from django.shortcuts import render
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 from .models import QuizResult
 from apps.mainapp.classes.Userprofile import UserProfile
 
@@ -30,16 +30,15 @@ class LeaderBoardView(View):
         all_users = QuizResult.objects.distinct('user_id')
         final_ioe_result = []
         final_iom_result = []
-        print all_users
         for each_user in all_users:
             quiz_user = user_prof.get_user_by_userid(int(each_user))
-            data = {
-                'name': quiz_user.get('name'),
-                'profile_img': "http://graph.facebook.com/" + quiz_user.get('id') + "/picture"
-            }
             quiz_types = QuizResult.objects.filter(
                 user_id=each_user).distinct('quiz_type')
             for each in quiz_types:
+                data = {
+                    'name': quiz_user.get('name'),
+                    'profile_img': "http://graph.facebook.com/" + quiz_user.get('id') + "/picture"
+                }
                 score = QuizResult.objects.filter(
                     user_id=each_user, quiz_type=each).sum('quiz_score')
                 total_quiz = len(QuizResult.objects.filter(
@@ -50,18 +49,7 @@ class LeaderBoardView(View):
                     final_iom_result.append(data)
                 if each == 'BE-IOE':
                     final_ioe_result.append(data)
-
         new_ioe_list = sorted(final_ioe_result, key=lambda k: k['total_score'], reverse=True)
         new_iom_list = sorted(final_iom_result, key=lambda k: k['total_score'], reverse=True)
+
         return new_ioe_list, new_iom_list
-        # self.ioe_quiz_result = QuizResult.objects.filter(
-        #     quiz_type="BE-IOE").order_by('-attempted_date')
-
-        # self.ioe_total_score = QuizResult.objects.filter(
-        #     quiz_type="BE-IOE").sum('quiz_score')
-        # self.iom_quiz_result = QuizResult.objects.filter(
-        #     quiz_type="MBBS-IOM").order_by('-attempted_date')
-        # self.iom_total_score = QuizResult.objects.filter(
-        #     quiz_type="MBBS-IOM").sum('quiz_score')
-
-        # return True

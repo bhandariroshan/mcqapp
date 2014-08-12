@@ -45,12 +45,12 @@
 					</tr>
 				</thead>
 				<tbody>
-				{% for each_result in iom_result %}
+				{% for each in iom_result %}
 					<tr>       
 						<td>{{forloop.counter}}</td>	
-						<td><img src="{{each_result.profile_img}}">  {{each_result.name}}</td>	
-						<td>{{each_result.total_quiz}}</td>
-						<td>{{each_result.total_score}}</td>
+						<td><img src="{{each.profile_img}}">  {{each.name}}</td>	
+						<td>{{each.total_quiz}}</td>
+						<td>{{each.total_score}}</td>
 					</tr>
 				{% endfor %}
 				</tbody>
