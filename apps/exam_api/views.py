@@ -114,16 +114,13 @@ class ExamHandler():
             eachExam['exam_date'] = int(eachExam['exam_date'])
         return exam_list
 
-    def save_exam_result(self, request, exam_code, answer_list, ess_time):
+    def save_exam_result(self, request, exam_model, ess_time):
         '''
-        This function receives list of answers and exam_code
-        and return the dictionary with correct answers of each subject
-        and sum of correct answers
+        This function receives exam_code, user_id and ess_time and
+        saves the result of each subject of the exam in the result
+        collection
         '''
-        exammodel_api = ExammodelApi()
-        exam_model = exammodel_api.find_one_exammodel(
-            {'exam_code': int(exam_code)}
-        )
+        exam_code = exam_model['exam_code']
         question_id_list = [
             ObjectId(i['id']) for i in exam_model['question_list']
         ]
@@ -133,6 +130,7 @@ class ExamHandler():
             sort_index='question_number'
         )
 
+        # negative marking for 1 marks pulchowk exam.
         negative_marking = False
         if exam_model['exam_category'] == "BE-IOE" and sorted_questions[0]['marks'] == 1:
             negative_marking = True
@@ -143,73 +141,83 @@ class ExamHandler():
         for subs in subjects:
             temp = {}
             temp['subject_total_marks'] = 0
-            temp['correct_subject_answer'] = 0
+            temp['correct_subject_answer_count'] = 0
             temp['attempted'] = 0
-            temp['score'] = 0
+            temp['subject_score'] = 0
             correct_answers[subs] = temp
 
-        for index, choice in enumerate(answer_list):
-            correct_answers[
-                sorted_questions[index]['subject'].lower()][
-                'subject_total_marks'] += 1 * int(sorted_questions[index]['marks'])
+        # find all answers given by users of this exam
+        answer_database = AttemptedAnswerDatabase()
+        all_ans = answer_database.find_all_atttempted_answer({
+            'exam_code': int(exam_code),
+            'user_id': request.user.id,
+            'ess_time': ess_time
+        },
+            fields={'q_id': 1, 'attempt_details': 1}
+        )
 
-            if choice in ['a', 'b', 'c', 'd']:
-                correct_answers[
-                    sorted_questions[index][
-                        'subject'].lower()]['attempted'] += 1
-                if sorted_questions[index]['answer']['correct'] == choice:
-                    try:
-                        correct_answers[sorted_questions[index][
-                            'subject'].lower()]['correct_subject_answer'] += 1
-                        correct_answers[sorted_questions[index][
-                            'subject'].lower()]['score'] += 1 * int(sorted_questions[index]['marks'])
-                    except:
-                        correct_answers[
-                            sorted_questions[index]['subject'].lower()]['score'] += 1
+        # the dictionary saves the question attempted by the user with
+        # the option chosen
+        attempted_ans_dict = {}
+        for ans in all_ans:
+            attempted_ans_dict[ans['quid']] = ans['attempt_details'][0]['selected_ans']
+
+        # calculate score obtained in each subject
+        for ques in sorted_questions:
+            correct_answers[ques['subject'].lower()][
+                'subject_total_marks'] += int(ques['marks'])
+            try:
+                option = attempted_ans_dict[ques['uid']['id']]
+            except:
+                option = 'e'
+            if option in ['a', 'b', 'c', 'd']:
+                correct_answers[ques['subject'].lower()]['attempted'] += 1
+                if option == ques['answer']['correct']:
+                    correct_answers[ques['subject'].lower()]['correct_subject_answer_count'] += 1
+                    correct_answers[ques['subject'].lower()]['subject_score'] += int(ques['marks'])
                 elif negative_marking:
-                    try:
-                        correct_answers[
-                            sorted_questions[index]['subject'].lower()]['score'] -= 0.25
-                    except:
-                        pass
+                    correct_answers[ques['subject'].lower()]['subject_score'] -= 0.25
 
         total_score = 0
         total_attempted = 0
         total_marks = 0
         total_correct_answers = 0
-        score_list = []
 
+        # saves the score of each subject in the result collection along
+        # with user_id, exam_code, ess_time and the score
+        result_obj = Result()
         for key, value in correct_answers.iteritems():
             temp = {}
             temp['subject'] = key
-            temp['score'] = value['score']
+            temp['score'] = value['subject_score']
             temp['attempted'] = value['attempted']
             temp['subject_total_marks'] = value['subject_total_marks']
-            temp['correct_subject_answer'] = value['correct_subject_answer']
-            total_score += value['score']
+            temp['correct_subject_answer'] = value['correct_subject_answer_count']
+            result_obj.save_result({
+                'useruid': request.user.id,
+                'exam_code': int(exam_code),
+                'ess_time': ess_time,
+                key: temp
+            })
+            total_score += value['subject_score']
             total_attempted += value['attempted']
             total_marks += value['subject_total_marks']
-            total_correct_answers += value['correct_subject_answer']
-            score_list.append(temp)
-        score_list.append(
-            {
-                'subject': 'Total',
-                'score': total_score,
-                'attempted': total_attempted,
-                'correct_subject_answer': total_correct_answers,
-                'subject_total_marks': total_marks
-            }
-        )
-        # result_obj = Result()
-        # for eachResult in score_list:
-        #     result_obj.save_result({
-        #         'useruid': request.user.id,
-        #         'exam_code': int(exam_code),
-        #         'ess_time': ess_check['start_time'],
-        #         eachResult['subject']: eachResult
-        #     })
+            total_correct_answers += value['correct_subject_answer_count']
 
-        return score_list
+        total_dict = {
+            'subject': 'Total',
+            'score': total_score,
+            'attempted': total_attempted,
+            'subject_total_marks': total_marks,
+            'correct_subject_answer': total_correct_answers
+        }
+        result_obj.save_result({
+            'useruid': request.user.id,
+            'exam_code': int(exam_code),
+            'ess_time': ess_time,
+            'Total': total_dict
+        })
+        return True
 
 
 def save_user_answers(request, ess_starttimestamp):
