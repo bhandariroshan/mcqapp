@@ -16,7 +16,7 @@ from allauth.socialaccount.providers.facebook.views import login_by_token
 from django.core.paginator import Paginator
 from django.conf import settings
 from django.shortcuts import render_to_response
-from django.http import HttpResponseRedirect, HttpResponse
+from django.http import HttpResponseRedirect, HttpResponse, Http404
 from django.template import RequestContext
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import user_passes_test, login_required
@@ -24,6 +24,7 @@ from django.contrib.auth.decorators import user_passes_test, login_required
 from .classes.notifications import Notifications
 from .classes.MailChimp import MailChimp
 from .classes.Coupon import Coupon
+from .classes.result import Result
 from .classes.Userprofile import UserProfile
 from .classes.CouponCount import CouponCount
 from .classes.query_database import QuestionApi, ExammodelApi,\
@@ -191,6 +192,10 @@ def user_dashboard(request, exam_type):
     user_profile_obj = UserProfile()
     exam_model_api = ExammodelApi()
     user = user_profile_obj.get_user_by_username(request.user.username)
+
+    if user is None:
+        raise Http404
+
     parameters['user'] = user
     parameters['exam_type'] = exam_type
 
@@ -242,9 +247,17 @@ def attend_cps_exam(request, exam_code):
     exam_obj = ExammodelApi()
 
     user = user_profile_obj.get_user_by_username(request.user.username)
+
+    if user is None:
+        raise Http404
+
     exam_details = exam_obj.find_one_exammodel(
         {'exam_code': int(exam_code)}
     )
+
+    if exam_details is None:
+        raise Http404
+
     current_time = time.mktime(datetime.datetime.now().timetuple())
 
     if current_time < exam_details['exam_date']:
@@ -383,6 +396,10 @@ def attend_cps_exam(request, exam_code):
 def attend_dps_exam(request, exam_code):
     user_profile_obj = UserProfile()
     user_det = user_profile_obj.get_user_by_username(request.user.username)
+
+    if user_det is None:
+        raise Http404
+
     parameters = {}
     parameters['user'] = user_det
     ess = ExamStartSignal()
@@ -416,6 +433,10 @@ def attend_dps_exam(request, exam_code):
     exam_details = exam_obj.find_one_exammodel(
         {'exam_code': int(exam_code)}
     )
+
+    if exam_details is None:
+        raise Http404
+
     current_time = time.mktime(datetime.datetime.now().timetuple())
 
     validate_start = ess.check_exam_started(
@@ -683,6 +704,10 @@ def results(request, exam_code):
     parameters = {}
     exam_obj = ExammodelApi()
     exam_details = exam_obj.find_one_exammodel({'exam_code': int(exam_code)})
+
+    if exam_details is None:
+        raise Http404
+
     ess = ExamStartSignal()
     ess_check = ess.check_exam_started(
         {'exam_code': int(exam_code),
@@ -698,6 +723,16 @@ def results(request, exam_code):
     exam_handler.save_exam_result(
         request, exam_details, ess_check['start_time']
     )
+    result_obj = Result()
+    user_result = result_obj.find_all_result(
+        {'exam_code': int(exam_code),
+         'useruid': request.user.id,
+         'ess_time': ess_check['start_time']}
+    )
+    score_list = []
+    for results in user_result:
+        score_list.append(results['result'])
+    parameters['result'] = score_list
     parameters['exam_code'] = exam_code
     parameters['myrankcard'] = {'total': 200, 'rank': 1}
     return render_to_response(
@@ -730,6 +765,9 @@ def show_result(request, exam_code, subject_name):
     exam_details = exam_obj.find_one_exammodel(
         {'exam_code': int(exam_code)}
     )
+    if exam_details is None:
+        raise Http404
+
     parameters = {}
     current_time = time.mktime(datetime.datetime.now().timetuple())
     if exam_details['exam_family'] == 'CPS' and current_time - exam_details['exam_date'] < exam_details['exam_duration'] * 60:

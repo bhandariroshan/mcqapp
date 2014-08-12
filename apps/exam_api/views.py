@@ -13,7 +13,6 @@ class ExamHandler():
     '''
     sorted_question_list = None
     exam_list = None
-    score_list = None
 
     def get_questionset_from_database(self, exam_code, html=True):
         '''
@@ -197,7 +196,7 @@ class ExamHandler():
                 'useruid': request.user.id,
                 'exam_code': int(exam_code),
                 'ess_time': ess_time,
-                key: temp
+                'result': temp
             })
             total_score += value['subject_score']
             total_attempted += value['attempted']
@@ -215,7 +214,7 @@ class ExamHandler():
             'useruid': request.user.id,
             'exam_code': int(exam_code),
             'ess_time': ess_time,
-            'Total': total_dict
+            'result': total_dict
         })
         return True
 
