@@ -27,7 +27,6 @@ from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi,\
     ExamStartSignal, HonorCodeAcceptSingal, AttemptedAnswerDatabase,\
     CurrentQuestionNumber
 
-from django.utils import simplejson
 
 def sign_up_sign_in(request, android_user=False):
     social_account = SocialAccount.objects.get(user__id=request.user.id)
@@ -672,7 +671,7 @@ def attend_dps_exam_old(request, exam_code):
                 questions, key=lambda k: k['question_number']
             )
 
-            parameters['questions'] = simplejson.dumps({'questions':sorted_questions})
+            parameters['questions'] = json.dumps({'questions':sorted_questions})
             parameters['exam_details'] = exam_details
             total_questions = len(questions)
             parameters['total_questions'] = len(questions)

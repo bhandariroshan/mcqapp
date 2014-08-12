@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{# {% load result_extra %} #}
+{% block content %}
+<div class="row">
+<div class="twelve columns" style="margin-top:12%; margin-bottom:7%;">
+    <h2>Meroanswer Daily Quiz Leaderboard</h2>
+    <section class="tabs">
+		<ul class="tab-nav">
+		    	<li  id="ioeQuizLi" class="active" > <a href="#">IOE Quiz</a></li>		    
+		    	<li  id="iomQuizLi"> <a href="#">IOM Quiz</a></li>		    
+		</ul>
+
+		<div class="tab-content active">
+			<table>
+				<thead>				
+					<tr>
+						<th>Rank</th>
+						<th>User</th>
+						<th>Total quizzes attempted</th>
+						<th>Total Score</th>
+					</tr>
+				</thead>
+				<tbody>
+				{% for each_result in ioe_result %}
+					<tr>       
+						<td>{{forloop.counter}}</td>	
+						<td><img src="{{each_result.profile_img}}">  {{each_result.name}}</td>	
+						<td>{{each_result.total_quiz}}</td>
+						<td>{{each_result.total_score}}</td>
+					</tr>
+				{% endfor %}
+				</tbody>
+			</table>
+		</div>
+
+		<div class="tab-content">
+			<table>
+				<thead>				
+					<tr>
+						<th>Rank</th>
+						<th>User</th>
+						<th>Total quizzes attempted</th>
+						<th>Total Score</th>
+					</tr>
+				</thead>
+				<tbody>
+				{% for each_result in iom_result %}
+					<tr>       
+						<td>{{forloop.counter}}</td>	
+						<td><img src="{{each_result.profile_img}}">  {{each_result.name}}</td>	
+						<td>{{each_result.total_quiz}}</td>
+						<td>{{each_result.total_score}}</td>
+					</tr>
+				{% endfor %}
+				</tbody>
+			</table>
+		</div>
+
+	</section>
+</div>
+</div>
+
+{% endblock %}
+{% block javascript %}
+
+{% endblock %}
