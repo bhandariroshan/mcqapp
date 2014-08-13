@@ -1,4 +1,3 @@
-# Create your views here.
 import json
 import datetime
 import time
@@ -6,15 +5,16 @@ import time
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
 
 from apps.random_questions.views import generate_random_ioe_questions, generate_random_iom_questions
 from apps.exam_api.views import ExamHandler
-from apps.mainapp.classes.Exams import Exam
-from apps.mainapp.classes.query_database import ExammodelApi,\
-    ExamStartSignal, AttemptedAnswerDatabase, CurrentQuestionNumber
 
 from .Coupon import Coupon
 from .Userprofile import UserProfile
+from .Exams import Exam
+from .query_database import ExammodelApi, ExamStartSignal, AttemptedAnswerDatabase,\
+    CurrentQuestionNumber
 
 
 ACCESS_TOKEN = ''
@@ -23,84 +23,110 @@ ACCESS_TOKEN_SECRET = ''
 
 class AjaxHandle():
     """doc string for AjaxHandle"""
+
     def __init__(self):
         pass
 
+    @login_required
     def validate_coupon(self, request):
-        if request.user.is_authenticated():
-            coupon_obj = Coupon()
-            exam_code = request.POST.get('exam_code', '')
-            coupon_code = request.POST.get('coupon_code', '')
-            user_profile_obj = UserProfile()
-            user = user_profile_obj.get_user_by_username(request.user.username)
-            exam_obj = Exam()
-            if exam_code != 'subs':
-                up_exm = exam_obj.get_exam_detail(int(exam_code))
-            else:
-                if coupon_obj.has_susbcription_plan_in_coupon(coupon_code):
-                    coupon_obj.change_used_status_of_coupon(
-                        coupon_code, request.user.username
-                    )
-                    user_profile_obj.change_subscription_plan(
-                        request.user.username, coupon_code
-                    )
-                    user_profile_obj.save_coupon(
-                        request.user.username, coupon_code
-                    )
-                    return HttpResponse(
-                        json.dumps(
-                            {'status': 'ok', 'url': '/'}
-                        )
-                    )
-                else:
-                    return HttpResponse(
-                        json.dumps(
-                            {'status': 'error',
-                             'message': 'Invalid Coupon code.'}
-                        )
-                    )
-
-            if coupon_obj.validate_coupon(coupon_code, up_exm['exam_category'], up_exm['exam_family']) is True:
-                #save the coupon code in user's coupon code array
+        coupon_obj = Coupon()
+        exam_code = request.POST.get('exam_code', '')
+        coupon_code = request.POST.get('coupon_code', '')
+        user_profile_obj = UserProfile()
+        user = user_profile_obj.get_user_by_username(request.user.username)
+        exam_obj = Exam()
+        if exam_code != 'subs':
+            up_exm = exam_obj.get_exam_detail(int(exam_code))
+        else:
+            if coupon_obj.has_susbcription_plan_in_coupon(coupon_code):
+                coupon_obj.change_used_status_of_coupon(
+                    coupon_code, request.user.username
+                )
                 user_profile_obj.change_subscription_plan(
                     request.user.username, coupon_code
                 )
                 user_profile_obj.save_coupon(
                     request.user.username, coupon_code
                 )
-                #Refreshment of user
-                user = user_profile_obj.get_user_by_username(
-                    request.user.username
-                )
-                subscription_type = user['subscription_type']
-                # if coupon_code != 'IDP' or 'BE-IOE' or 'MBBS-IOM' then save
-                # the exam code in the valid exams
-                if 'IDP' not in subscription_type and 'BE-IOE' not in \
-                        subscription_type and 'MBBS-IOM' not in \
-                        subscription_type:
-                    user_profile_obj.save_valid_exam(
-                        request.user.username, exam_code
+                return HttpResponse(
+                    json.dumps(
+                        {'status': 'ok', 'url': '/'}
                     )
-
-                coupon_obj.change_used_status_of_coupon(
-                    coupon_code, request.user.username
                 )
-                if 'IDP' in subscription_type:
+            else:
+                return HttpResponse(
+                    json.dumps(
+                        {'status': 'error',
+                         'message': 'Invalid Coupon code.'}
+                    )
+                )
+
+        if coupon_obj.validate_coupon(coupon_code, up_exm['exam_category'], up_exm['exam_family']) is True:
+            #save the coupon code in user's coupon code array
+            user_profile_obj.change_subscription_plan(
+                request.user.username, coupon_code
+            )
+            user_profile_obj.save_coupon(
+                request.user.username, coupon_code
+            )
+            #Refreshment of user
+            user = user_profile_obj.get_user_by_username(
+                request.user.username
+            )
+            subscription_type = user['subscription_type']
+            # if coupon_code != 'IDP' or 'BE-IOE' or 'MBBS-IOM' then save
+            # the exam code in the valid exams
+            if 'IDP' not in subscription_type and 'BE-IOE' not in \
+                    subscription_type and 'MBBS-IOM' not in \
+                    subscription_type:
+                user_profile_obj.save_valid_exam(
+                    request.user.username, exam_code
+                )
+
+            coupon_obj.change_used_status_of_coupon(
+                coupon_code, request.user.username
+            )
+            if 'IDP' in subscription_type:
+                return HttpResponse(
+                    json.dumps(
+                        {'status': 'ok',
+                         'url': '/' + up_exm['exam_family'].lower() + '/' +
+                         exam_code}
+                    )
+                )
+
+            elif up_exm['exam_category'] in subscription_type:
+                if up_exm['exam_category'] != 'MBBS-IOM':
                     return HttpResponse(
                         json.dumps(
                             {'status': 'ok',
-                             'url': '/' + up_exm['exam_family'].lower() + '/' +
-                             exam_code}
+                             'url': '/' + up_exm['exam_family'].lower() +
+                             '/' + exam_code}
                         )
                     )
-
-                elif up_exm['exam_category'] in subscription_type:
-                    if up_exm['exam_category'] != 'MBBS-IOM':
+                else:
+                    return HttpResponse(
+                        json.dumps(
+                            {'status': 'ok',
+                             'url': '/' + 'iom' + '/' + exam_code}
+                        )
+                    )
+            else:
+                subscribed_exams = user_profile_obj.get_subscribed_exams(
+                    request.user.username
+                )
+                if int(exam_code) in subscribed_exams:
+                    #Check if exam is cps or dps
+                    #if exam is cps then return url '/cps/exam_code'
+                    #else return  url '/dps/exam_code/'
+                    exm_dtls = exam_obj.get_exam_detail(int(exam_code))
+                    if exm_dtls['exam_category'] != 'MBBS-IOM':
                         return HttpResponse(
                             json.dumps(
                                 {'status': 'ok',
-                                 'url': '/' + up_exm['exam_family'].lower() +
-                                 '/' + exam_code}
+                                 'url': '/' +
+                                 exm_dtls['exam_family'].lower() + '/' +
+                                 exam_code}
                             )
                         )
                     else:
@@ -111,231 +137,165 @@ class AjaxHandle():
                             )
                         )
                 else:
-                    subscribed_exams = user_profile_obj.get_subscribed_exams(
-                        request.user.username
-                    )
-                    if int(exam_code) in subscribed_exams:
-                        #Check if exam is cps or dps
-                        #if exam is cps then return url '/cps/exam_code'
-                        #else return  url '/dps/exam_code/'
-                        exm_dtls = exam_obj.get_exam_detail(int(exam_code))
-                        if exm_dtls['exam_category'] != 'MBBS-IOM':
-                            return HttpResponse(
-                                json.dumps(
-                                    {'status': 'ok',
-                                     'url': '/' +
-                                     exm_dtls['exam_family'].lower() + '/' +
-                                     exam_code}
-                                )
-                            )
-                        else:
-                            return HttpResponse(
-                                json.dumps(
-                                    {'status': 'ok',
-                                     'url': '/' + 'iom' + '/' + exam_code}
-                                )
-                            )
-                    else:
-                        return HttpResponse(
-                            json.dumps(
-                                {'status': 'error',
-                                 'message': 'Invalid Coupon code.'}
-                            )
+                    return HttpResponse(
+                        json.dumps(
+                            {'status': 'error',
+                             'message': 'Invalid Coupon code.'}
                         )
-            else:
-                return HttpResponse(
-                    json.dumps(
-                        {'status': 'error',
-                         'message': 'Invalid Coupon code.'}
                     )
-                )
         else:
             return HttpResponse(
                 json.dumps(
                     {'status': 'error',
-                     'message': 'You are not authorized to \
-                     perform this action.'}
+                     'message': 'Invalid Coupon code.'}
                 )
             )
 
+    @login_required
     def is_subscribed(self, request):
-        if request.user.is_authenticated():
-            coupon_obj = Coupon()
-            exam_code = request.POST.get('exam_code', '')
-            user_id = request.user.id
+        coupon_obj = Coupon()
+        exam_code = request.POST.get('exam_code', '')
+        user_id = request.user.id
 
-            if exam_code.strip() == 'sample':
+        if exam_code.strip() == 'sample':
+            return HttpResponse(
+                json.dumps(
+                    {'status': 'error', 'message': 'not subscribed'}
+                )
+            )
+        else:
+            if coupon_obj.check_subscried(exam_code, user_id):
+                return HttpResponse(
+                    json.dumps(
+                        {'status': 'ok',
+                         'url': '/honorcode/' + exam_code + '/'}
+                    )
+                )
+            else:
                 return HttpResponse(
                     json.dumps(
                         {'status': 'error', 'message': 'not subscribed'}
                     )
                 )
-            else:
-                if coupon_obj.check_subscried(exam_code, user_id):
-                    return HttpResponse(
-                        json.dumps(
-                            {'status': 'ok',
-                             'url': '/honorcode/' + exam_code + '/'}
-                        )
-                    )
-                else:
-                    return HttpResponse(
-                        json.dumps(
-                            {'status': 'error', 'message': 'not subscribed'}
-                        )
-                    )
-        else:
-            return HttpResponse(
-                json.dumps(
-                    {'status': 'error',
-                     'message': 'You are not authorized to perform \
-                     this action.'}
-                )
-            )
 
+    @login_required
     def save_answer(self, request):
-        if request.user.is_authenticated():
-            from apps.exam_api.views import save_user_answers
-            ess = ExamStartSignal()
-            exam_code = request.POST.get('exam_code', '')
-            validate = ess.check_exam_started(
-                {'exam_code': int(exam_code),
-                 'useruid': request.user.id,
-                 'start': 1,
-                 'end': 0}
+        from apps.exam_api.views import save_user_answers
+        ess = ExamStartSignal()
+        exam_code = request.POST.get('exam_code', '')
+        validate = ess.check_exam_started(
+            {'exam_code': int(exam_code),
+             'useruid': request.user.id,
+             'start': 1,
+             'end': 0}
+        )
+        if validate is not None:
+            ema = ExammodelApi()
+            exam_details = ema.find_one_exammodel(
+                {'exam_code': int(exam_code)}
             )
-            if validate is not None:
-                ema = ExammodelApi()
-                exam_details = ema.find_one_exammodel(
-                    {'exam_code': int(exam_code)}
-                )
-                if exam_details['exam_family'] == 'CPS':
-                    time_elapsed = time.mktime(
-                        datetime.datetime.now().timetuple()
-                    ) - exam_details['exam_date']
-                else:
-                    time_elapsed = time.mktime(
-                        datetime.datetime.now().timetuple()
-                    ) - validate['start_time']
-                time_remained = (
-                    exam_details['exam_duration'] * 60 - time_elapsed
-                ) / 60
-                '''check if user time has expired or not '''
-                if time_elapsed > exam_details['exam_duration'] * 60:
-                    return HttpResponse(
-                        json.dumps(
-                            {'status': 'TimeElapsedError',
-                             'message': 'Time has elapsed'}
-                        )
-                    )
-                else:
-                    save_user_answers(request, int(validate['start_time']))
-                    # if request.session.get('has_commented', False):
-                    cqn = CurrentQuestionNumber()
-                    cqn.update_current_question_number({
-                        'ess_time': int(validate['start_time']),
-                        'exam_code': int(exam_code),
-                        'useruid': request.user.id
-                    },
-                        {'cqn': int(request.POST.get(
-                            'current_question_number', '')
-                        ) + 1
-                        })
-                    request.session['exam_code'] = request.POST.get(
-                        'exam_code', ''
-                    )
-                    return HttpResponse(
-                        json.dumps(
-                            {'status': 'ok',
-                             'message': 'Answer successfully saved',
-                             'time_remained': time_remained}
-                        )
-                    )
-
+            if exam_details['exam_family'] == 'CPS':
+                time_elapsed = time.mktime(
+                    datetime.datetime.now().timetuple()
+                ) - exam_details['exam_date']
             else:
+                time_elapsed = time.mktime(
+                    datetime.datetime.now().timetuple()
+                ) - validate['start_time']
+            time_remained = (
+                exam_details['exam_duration'] * 60 - time_elapsed
+            ) / 60
+            '''check if user time has expired or not '''
+            if time_elapsed > exam_details['exam_duration'] * 60:
                 return HttpResponse(
                     json.dumps(
-                        {'status': 'error', 'message': 'Exam not Validated'}
+                        {'status': 'TimeElapsedError',
+                         'message': 'Time has elapsed'}
                     )
                 )
-        else:
-            return HttpResponse(
-                json.dumps(
-                    {'status': 'error',
-                     'message': 'Not Authorized for this action'}
+            else:
+                save_user_answers(request, int(validate['start_time']))
+                # if request.session.get('has_commented', False):
+                cqn = CurrentQuestionNumber()
+                cqn.update_current_question_number({
+                    'ess_time': int(validate['start_time']),
+                    'exam_code': int(exam_code),
+                    'useruid': request.user.id
+                },
+                    {'cqn': int(request.POST.get(
+                        'current_question_number', '')
+                    ) + 1
+                    })
+                request.session['exam_code'] = request.POST.get(
+                    'exam_code', ''
                 )
-            )
-
-    def set_exam_finished(self, request):
-        if request.user.is_authenticated():
-            exam_code = request.POST.get('exam_code', '')
-            redirect = request.POST.get('redirect', '')
-            ess = ExamStartSignal()
-            end_time = datetime.datetime.now().timetuple()
-            end_time = time.mktime(end_time)
-
-            ess.update_exam_start_signal({
-                'exam_code': int(exam_code),
-                'useruid': request.user.id,
-                'start': 1},
-                {'end': 1,
-                 'start': 0,
-                 'end_time': end_time}
-            )
-            request.session['current_question_number'] = ''
-            if redirect == '1':
                 return HttpResponse(
                     json.dumps(
                         {'status': 'ok',
-                         'redirect': 1,
-                         'url': '/results/' + exam_code + '/'}
+                         'message': 'Answer successfully saved',
+                         'time_remained': time_remained}
                     )
                 )
-            else:
-                return HttpResponse(
-                    json.dumps(
-                        {'status': 'ok', 'redirect': 0}
-                    )
-                )
+
         else:
             return HttpResponse(
                 json.dumps(
-                    {'status': 'error',
-                     'message': 'Not Authorized for this action'}
+                    {'status': 'error', 'message': 'Exam not Validated'}
                 )
             )
 
+    @login_required
+    def set_exam_finished(self, request):
+        exam_code = request.POST.get('exam_code', '')
+        redirect = request.POST.get('redirect', '')
+        ess = ExamStartSignal()
+        end_time = datetime.datetime.now().timetuple()
+        end_time = time.mktime(end_time)
+
+        ess.update_exam_start_signal({
+            'exam_code': int(exam_code),
+            'useruid': request.user.id,
+            'start': 1},
+            {'end': 1,
+             'start': 0,
+             'end_time': end_time}
+        )
+        request.session['current_question_number'] = ''
+        if redirect == '1':
+            return HttpResponse(
+                json.dumps(
+                    {'status': 'ok',
+                     'redirect': 1,
+                     'url': '/results/' + exam_code + '/'}
+                )
+            )
+        else:
+            return HttpResponse(
+                json.dumps(
+                    {'status': 'ok', 'redirect': 0}
+                )
+            )
+
+    @login_required
     def save_category(self, request):
         user = UserProfile()
-        if request.user.is_authenticated():
-            # print request
-            ioe_check = request.POST.get('ioe_check')
-            iom_check = request.POST.get('iom_check')
-            print request.POST
-            print ioe_check, iom_check
+        ioe_check = request.POST.get('ioe_check')
+        iom_check = request.POST.get('iom_check')
 
-            if ioe_check == 'true':
-                cat = 'BE-IOE'
-                url = '/ioe/'
+        if ioe_check == 'true':
+            cat = 'BE-IOE'
+            url = '/ioe/'
 
-            elif iom_check == 'true':
-                cat = 'MBBS-IOM'
-                url = '/iom/'
+        elif iom_check == 'true':
+            cat = 'MBBS-IOM'
+            url = '/iom/'
 
-            user.update_upsert(
-                {'username': request.user.username},
-                {'student_category': cat,
-                 'student_category_set': 1}
-            )
-            return HttpResponse(json.dumps({'status': 'ok', 'url': url}))
-        else:
-            return HttpResponse(
-                json.dumps(
-                    {'status': 'error',
-                     'message': 'You are not authorized to perform \
-                     this action.'}
-                )
-            )
+        user.update_upsert(
+            {'username': request.user.username},
+            {'student_category': cat,
+             'student_category_set': 1}
+        )
+        return HttpResponse(json.dumps({'status': 'ok', 'url': url}))
 
     def get_next_page_of_questions(self, request):
         user_profile_obj = UserProfile()
@@ -458,12 +418,10 @@ class AjaxHandle():
                     int(exam_code), current_pg_num
                 )
                 questions = exam_handler_obj.sorted_question_list
-                # print questions
                 sorted_questions = sorted(
                     questions, key=lambda k: k['question_number']
                 )
 
-                # parameters['questions'] = json.dumps(sorted_questions)
                 parameters['questions'] = sorted_questions
                 parameters['exam_details'] = exam_details
 
@@ -510,9 +468,6 @@ class AjaxHandle():
             user_profile_obj = UserProfile()
             ess = ExamStartSignal()
             atte_ans = AttemptedAnswerDatabase()
-            # questions = question_obj.find_all_questions(
-                # {"exam_code": int(exam_code)}, fields={'answer.correct':0}
-            # )
             user = user_profile_obj.get_user_by_username(request.user.username)
             exam_details = exam_obj.find_one_exammodel(
                 {'exam_code': int(exam_code)}
@@ -657,90 +612,73 @@ class AjaxHandle():
             )
         )
 
+    @login_required
     def get_new_exam(self, request):
         user_profile_obj = UserProfile()
         ex_type = request.POST.get('type')
-        if request.user.is_authenticated():
-            if ex_type == 'be-ioe':
-                exam_code = generate_random_ioe_questions(request)
-            else:
-                exam_code = generate_random_iom_questions(request)
-
-            user_profile_obj.save_valid_exam(
-                request.user.username, int(exam_code)
-            )
-            return HttpResponse(
-                json.dumps(
-                    {'exam_code': int(exam_code), 'status': 'ok', 'type': ex_type}
-                )
-            )
+        if ex_type == 'be-ioe':
+            exam_code = generate_random_ioe_questions(request)
         else:
-            return HttpResponse(
-                json.dumps(
-                    {'status': 'error',
-                     'message': 'You are not authorized to \
-                     perform this action'}
-                )
-            )
+            exam_code = generate_random_iom_questions(request)
 
+        user_profile_obj.save_valid_exam(
+            request.user.username, int(exam_code)
+        )
+        return HttpResponse(
+            json.dumps(
+                {'exam_code': int(exam_code), 'status': 'ok', 'type': ex_type}
+            )
+        )
+
+    @login_required
     def chek_valid_dps_code(self, request):
-        if request.user.is_authenticated():
-            user_profile_obj = UserProfile()
-            coupon_obj = Coupon()
-            code = request.POST.get('code')
-            ex_type = request.POST.get('type')
-            coupon_code = coupon_obj.get_unused_coupon_by_coupon_code(code)
+        user_profile_obj = UserProfile()
+        coupon_obj = Coupon()
+        code = request.POST.get('code')
+        ex_type = request.POST.get('type')
+        coupon_code = coupon_obj.get_unused_coupon_by_coupon_code(code)
 
-            if coupon_code is None:
-                return HttpResponse(
-                    json.dumps(
-                        {'message': 'Invalid Coupon Code.',
-                         'status': 'error'}
-                    )
+        if coupon_code is None:
+            return HttpResponse(
+                json.dumps(
+                    {'message': 'Invalid Coupon Code.',
+                     'status': 'error'}
                 )
+            )
 
-            if 'BE-IOE' in coupon_code['subscription_type']:
-                user_profile_obj.change_subscription_plan(
-                    request.user.username, code
-                )
-                coupon_obj.change_used_status_of_coupon(
-                    code, request.user.username
-                )
-                return HttpResponse(
-                    json.dumps({'message': 'valid', 'status': 'ok', 'type': ex_type})
-                )
+        if 'BE-IOE' in coupon_code['subscription_type']:
+            user_profile_obj.change_subscription_plan(
+                request.user.username, code
+            )
+            coupon_obj.change_used_status_of_coupon(
+                code, request.user.username
+            )
+            return HttpResponse(
+                json.dumps({'message': 'valid', 'status': 'ok', 'type': ex_type})
+            )
 
-            elif 'MBBS-IOM' in coupon_code['subscription_type']:
-                user_profile_obj.change_subscription_plan(
-                    request.user.username, code
-                )
-                coupon_obj.change_used_status_of_coupon(
-                    code, request.user.username
-                )
-                return HttpResponse(
-                    json.dumps({'message': 'valid', 'status': 'ok', 'type': ex_type})
-                )
+        elif 'MBBS-IOM' in coupon_code['subscription_type']:
+            user_profile_obj.change_subscription_plan(
+                request.user.username, code
+            )
+            coupon_obj.change_used_status_of_coupon(
+                code, request.user.username
+            )
+            return HttpResponse(
+                json.dumps({'message': 'valid', 'status': 'ok', 'type': ex_type})
+            )
 
-            elif 'DPS' in coupon_code['subscription_type']:
-                coupon_obj.change_used_status_of_coupon(
-                    code, request.user.username
-                )
-                return HttpResponse(
-                    json.dumps({'message': 'valid', 'status': 'ok', 'type': ex_type})
-                )
-
-            else:
-                return HttpResponse(
-                    json.dumps(
-                        {'message': 'Invalid Coupon Code.', 'status': 'error'}
-                    )
-                )
+        elif 'DPS' in coupon_code['subscription_type']:
+            coupon_obj.change_used_status_of_coupon(
+                code, request.user.username
+            )
+            return HttpResponse(
+                json.dumps({'message': 'valid', 'status': 'ok', 'type': ex_type})
+            )
 
         else:
             return HttpResponse(
                 json.dumps(
-                    {'status': 'error',
-                     'message': 'You are not authorized to \
-                     perform this action'}
+                    {'message': 'Invalid Coupon Code.', 'status': 'error'}
                 )
             )
