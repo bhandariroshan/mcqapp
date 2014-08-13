@@ -12,13 +12,13 @@ urlpatterns = patterns(
 
     url(
         r'^generate/(?P<exam_type>\w{1,40})/$',
-        view=QuizGenerate.as_view(), 
-        name='generate_quiz'  
+        view=QuizGenerate.as_view(),
+        name='generate_quiz'
     ),
-    
+
     url(
         r'^myscore/$',
-        view=QuizScore.as_view(), 
+        view=QuizScore.as_view(),
         name='my_score'),
 
     url(
@@ -29,9 +29,7 @@ urlpatterns = patterns(
 
     url(
         r'^quiz-ajax/(?P<func_name>\w{1,40})$',
-        AjaxRequest.as_view(), 
+        AjaxRequest.as_view(),
         name='quiz_ajax',
     ),
-        
-
 )
