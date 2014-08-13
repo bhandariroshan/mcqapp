@@ -74,7 +74,7 @@ def _get_latest_source(source_folder):
     # run('cd %s && git reset --hard && git clean -f -d && git checkout master && git pull -f' % (source_folder))
     if exists(source_folder + '/.git'): #1
         # run('cd %s && git fetch && git pull && git checkout master' % (source_folder,)) #23
-        run('cd %s && git fetch && git pull && git checkout randon-questionset' % (source_folder,)) #23
+        run('cd %s && git fetch && git pull && git checkout subit-code-optimise-2' % (source_folder,)) #23
     else:
         run('git clone %s %s' % (REPO_URL, source_folder)) #4
     current_commit = local("git log -n 1 --format=%H", capture=True) #5
