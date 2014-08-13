@@ -31,7 +31,8 @@ class LeaderBoardView(View):
         final_ioe_result = []
         final_iom_result = []
         for each_user in all_users:
-            if int(each_user) in range(2, 8):
+            # if int(each_user) in range(2, 8):
+            if False:
                 continue
             else:
                 quiz_user = user_prof.get_user_by_userid(int(each_user))
@@ -39,6 +40,7 @@ class LeaderBoardView(View):
                     user_id=each_user).distinct('quiz_type')
                 for each in quiz_types:
                     data = {
+                        'user_id': quiz_user.get('useruid'),
                         'name': quiz_user.get('name'),
                         'profile_img': "http://graph.facebook.com/" + quiz_user.get('id') + "/picture"
                     }
