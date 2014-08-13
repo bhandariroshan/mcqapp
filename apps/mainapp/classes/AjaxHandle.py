@@ -6,7 +6,6 @@ import time
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.http import HttpResponse
-from django.contrib.auth.decorators import login_required
 
 from apps.random_questions.views import generate_random_ioe_questions, generate_random_iom_questions
 from apps.exam_api.views import ExamHandler
