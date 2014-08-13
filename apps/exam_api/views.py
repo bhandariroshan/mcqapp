@@ -13,6 +13,7 @@ class ExamHandler():
     '''
     sorted_question_list = None
     exam_list = None
+    user_exam_result = None
 
     def get_questionset_from_database(self, exam_code, html=True):
         '''
@@ -154,13 +155,13 @@ class ExamHandler():
         },
             fields={'q_id': 1, 'attempt_details': 1}
         )
-        print all_ans
+
         # the dictionary saves the question attempted by the user with
         # the option chosen
         attempted_ans_dict = {}
         for ans in all_ans:
             attempted_ans_dict[ans['quid']] = ans['attempt_details'][-1]['selected_ans']
-        print attempted_ans_dict
+
         # calculate score obtained in each subject
         for ques in sorted_questions:
             correct_answers[ques['subject'].lower()][
@@ -181,6 +182,7 @@ class ExamHandler():
         total_attempted = 0
         total_marks = 0
         total_correct_answers = 0
+        score_list = []
 
         # saves the score of each subject in the result collection along
         # with user_id, exam_code, ess_time and the score
@@ -198,6 +200,7 @@ class ExamHandler():
                 'ess_time': ess_time,
                 'result': temp
             })
+            score_list.append(temp)
             total_score += value['subject_score']
             total_attempted += value['attempted']
             total_marks += value['subject_total_marks']
@@ -210,12 +213,14 @@ class ExamHandler():
             'subject_total_marks': total_marks,
             'correct_subject_answer': total_correct_answers
         }
+        score_list.append(total_dict)
         result_obj.save_result({
             'useruid': request.user.id,
             'exam_code': int(exam_code),
             'ess_time': ess_time,
             'result': total_dict
         })
+        self.user_exam_result = score_list
         return True
 
 

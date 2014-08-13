@@ -719,19 +719,22 @@ def results(request, exam_code):
     if exam_details['exam_family'] == 'CPS' and current_time - exam_details['exam_date'] < exam_details['exam_duration'] * 60:
         parameters['exam_completed'] = False
 
-    exam_handler = ExamHandler()
-    exam_handler.save_exam_result(
-        request, exam_details, ess_check['start_time']
-    )
     result_obj = Result()
     user_result = result_obj.find_all_result(
         {'exam_code': int(exam_code),
          'useruid': request.user.id,
          'ess_time': ess_check['start_time']}
     )
-    score_list = []
-    for results in user_result:
-        score_list.append(results['result'])
+    if len(user_result) > 0:
+        score_list = []
+        for results in user_result:
+            score_list.append(results['result'])
+    else:
+        exam_handler = ExamHandler()
+        exam_handler.save_exam_result(
+            request, exam_details, ess_check['start_time']
+        )
+        score_list = exam_handler.user_exam_result
     parameters['result'] = score_list
     parameters['exam_code'] = exam_code
     parameters['myrankcard'] = {'total': 200, 'rank': 1}
@@ -819,7 +822,6 @@ def show_result(request, exam_code, subject_name):
         parameters['attempted'] = att_ans[0]['attempt_details'][-1]['selected_ans']
     except:
         parameters['attempted'] = ''
-
     return render_to_response(
         'single-result.html',
         parameters,
@@ -829,60 +831,31 @@ def show_result(request, exam_code, subject_name):
 
 @login_required
 def get_list_of_result(request):
-    user_id = request.user.id
-    ans = AttemptedAnswerDatabase()
-    exam_attempts = ans.get_attempted_exams(
-        'exam_code', {'user_id': request.user.id}
-    )
+    exam_obj = ExammodelApi()
+    result_obj = Result()
+    user_profile_obj = UserProfile()
+    user = user_profile_obj.get_user_by_username(request.user.username)
     return_dict = []
-    for exam_code in exam_attempts['results']:
-        exam_obj = ExammodelApi()
+    for exam_code in user['valid_exam']:
         exam_details = exam_obj.find_one_exammodel(
             {'exam_code': int(exam_code)}
         )
         if exam_details is None or exam_details['exam_family'] == 'DPS':
             continue
-
-        attempt_timestamps = ans.get_attempted_exams(
-            'ess_time',
-            {'user_id': request.user.id,
-             'exam_code': int(exam_code)}
+        user_result = result_obj.find_all_result(
+            {'exam_code': int(exam_code),
+             'useruid': request.user.id}
         )
-        for eachAttempt in attempt_timestamps['results']:
-            all_ans = ans.find_all_atttempted_answer({
-                'exam_code': int(exam_code),
-                'user_id': user_id,
-                'ess_time': eachAttempt
-            })
-            answer_list = ''
-            anss = []
-            for eachAns in all_ans:
-                anss.append(eachAns['q_no'])
-            question_obj = QuestionApi()
-            total_questions = question_obj.get_count(
-                {"exam_code": int(exam_code)}
-            )
-            for i in range(0, total_questions):
-                try:
-                    if i in anss:
-                        answer_list += all_ans[anss.index(i)][
-                            'attempt_details'][0]['selected_ans']
-                    else:
-                        answer_list += 'e'
-                except:
-                    answer_list += 'e'
-            exam_handler = ExamHandler()
-            score_list = exam_handler.save_exam_result(
-                request, exam_code, answer_list, eachAttempt
-            )
-            rank = 0
-            return_dict.append(
-                {'exam_code': exam_code,
-                 'ess_time': eachAttempt,
-                 'result': score_list,
-                 'exam_details': exam_details,
-                 'rank': rank}
-            )
+        score_list = []
+        for results in user_result:
+            score_list.append(results['result'])
+        return_dict.append(
+            {'exam_code': int(exam_code),
+             'ess_time': user_result[0]['ess_time'],
+             'result': score_list,
+             'exam_details': exam_details,
+             'rank': 0}
+        )
     return HttpResponse(json.dumps(
         {'status': 'ok', 'result': return_dict})
     )
