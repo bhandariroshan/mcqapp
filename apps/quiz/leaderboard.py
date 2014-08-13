@@ -31,8 +31,7 @@ class LeaderBoardView(View):
         final_ioe_result = []
         final_iom_result = []
         for each_user in all_users:
-            # if int(each_user) in range(2, 8):
-            if False:
+            if int(each_user) in range(2, 8):
                 continue
             else:
                 quiz_user = user_prof.get_user_by_userid(int(each_user))
