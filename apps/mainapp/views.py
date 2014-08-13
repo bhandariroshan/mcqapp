@@ -829,36 +829,40 @@ def show_result(request, exam_code, subject_name):
     )
 
 
-@login_required
 def get_list_of_result(request):
-    exam_obj = ExammodelApi()
-    result_obj = Result()
-    user_profile_obj = UserProfile()
-    user = user_profile_obj.get_user_by_username(request.user.username)
-    return_dict = []
-    for exam_code in user['valid_exam']:
-        exam_details = exam_obj.find_one_exammodel(
-            {'exam_code': int(exam_code)}
+    if request.user.is_authenticated():
+        exam_obj = ExammodelApi()
+        result_obj = Result()
+        user_profile_obj = UserProfile()
+        user = user_profile_obj.get_user_by_username(request.user.username)
+        return_dict = []
+        for exam_code in user['valid_exam']:
+            exam_details = exam_obj.find_one_exammodel(
+                {'exam_code': int(exam_code)}
+            )
+            if exam_details is None or exam_details['exam_family'] == 'DPS':
+                continue
+            user_result = result_obj.find_all_result(
+                {'exam_code': int(exam_code),
+                 'useruid': request.user.id}
+            )
+            score_list = []
+            for results in user_result:
+                score_list.append(results['result'])
+            return_dict.append(
+                {'exam_code': int(exam_code),
+                 'ess_time': user_result[0]['ess_time'],
+                 'result': score_list,
+                 'exam_details': exam_details,
+                 'rank': 0}
+            )
+        return HttpResponse(json.dumps(
+            {'status': 'ok', 'result': return_dict})
         )
-        if exam_details is None or exam_details['exam_family'] == 'DPS':
-            continue
-        user_result = result_obj.find_all_result(
-            {'exam_code': int(exam_code),
-             'useruid': request.user.id}
+    else:
+        return HttpResponse(json.dumps(
+            {'status': 'error', 'message': 'Not a valid request'})
         )
-        score_list = []
-        for results in user_result:
-            score_list.append(results['result'])
-        return_dict.append(
-            {'exam_code': int(exam_code),
-             'ess_time': user_result[0]['ess_time'],
-             'result': score_list,
-             'exam_details': exam_details,
-             'rank': 0}
-        )
-    return HttpResponse(json.dumps(
-        {'status': 'ok', 'result': return_dict})
-    )
 
 
 def androidurl(request):

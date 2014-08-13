@@ -158,6 +158,11 @@ var exam_code = {{exam_details.exam_code|safe}};
 var questions = {{questions|safe}};
 var exam_duration = {{exam_details.exam_duration}};
 var exm_code = exam_code;
+var questions;
+
+$(document).ready(function(){
+  get_questions(exm_code);
+});
 
 (function() {
   $(function() {

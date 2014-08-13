@@ -101,7 +101,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "allauth.account.context_processors.account",
     "allauth.socialaccount.context_processors.socialaccount",
     # 'djstripe.context_processors.djstripe_settings',
-    # 'mainapp.classes.context_processors.user_info',
+    'apps.mainapp.contextprocessor.user_info',
 )
 
 # List of callables that know how to import templates from various sources.
@@ -148,7 +148,7 @@ INSTALLED_APPS = (
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.facebook',
-    'allauth.socialaccount.providers.twitter',
+    # 'allauth.socialaccount.providers.twitter',
     # 'apps.random_questions',
     'apps.mainapp',
     'apps.quiz',

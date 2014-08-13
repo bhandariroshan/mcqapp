@@ -32,18 +32,32 @@ class GenerateQuiz():
         )['results']
         if exam_type == "ENGINEERING":
             exam_category = "BE-IOE"
-            quiz_number = exammodel_api.get_exam_count(
-                {"exam_family": "QUIZ", "exam_category": "BE-IOE"}
-            ) + 1
+            last_quiz_number = exammodel_api.find_all_exammodel_descending(
+                {"exam_family": "QUIZ", "exam_category": "BE-IOE"},
+                fields={"quiz_number": 1},
+                sort_index="quiz_number",
+                limit=1
+            )
+            if len(last_quiz_number) > 0:
+                quiz_number = int(last_quiz_number[0]['quiz_number']) + 1
+            else:
+                quiz_number = 1
             exam_name = "Meroanswer IOE Daily Quiz"
             subjects.remove("english")
             marks = 2
 
         elif exam_type == "MEDICAL":
             exam_category = "MBBS-IOM"
-            quiz_number = exammodel_api.get_exam_count(
-                {"exam_family": "QUIZ", "exam_category": "MBBS-IOM"}
-            ) + 1
+            last_quiz_number = exammodel_api.find_all_exammodel_descending(
+                {"exam_family": "QUIZ", "exam_category": "MBBS-IOM"},
+                fields={"quiz_number": 1},
+                sort_index="quiz_number",
+                limit=1
+            )
+            if len(last_quiz_number) > 0:
+                quiz_number = int(last_quiz_number[0]['quiz_number']) + 1
+            else:
+                quiz_number = 1
             exam_name = "Meroanswer IOM Daily Quiz"
             marks = 1
 
@@ -51,14 +65,12 @@ class GenerateQuiz():
         question_list = []
         random_list = []
         for i in range(NUMBER_OF_QUESTIONS):
-            print 'inside loop', i
             subject_questions = question_api.find_all_questions(
                 {"subject": subjects[i % len(subjects)],
                  "exam_type": exam_type,
                  "marks": marks},
                 fields={"_id": 1}
             )
-            print 'subject_questions', subject_questions
             random_num = random.randrange(len(subject_questions))
 
             # generate unique random numbers to avoid repetition

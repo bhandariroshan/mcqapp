@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="row">
+<div class="centered twelve columns" style="margin-top:8%;">
+    <h2 style="text-align: center;">Meroanswer Daily Quiz Leaderboard</h2>
+    <section class="tabs">
+		<ul class="tab-nav">
+		    	<li  id="ioeQuizLi"  > <a href="#">IOE Quiz</a></li>		    
+		    	<li  id="iomQuizLi" class="active"> <a href="#">IOM Quiz</a></li>		    
+		</ul>
+
+		<div class="tab-content">
+			<table>
+				<thead>				
+					<tr>
+						<th>Rank</th>
+						<th>User</th>
+						<th>Total quizzes attempted</th>
+						<th>Total Score</th>
+					</tr>
+				</thead>
+				<tbody>
+				{% for each_result in ioe_result %}
+					<tr {% if each_result.user_id == request.user.id %} style="background-color: yellow;"{% endif %}>
+						<td>{{forloop.counter}}</td>	
+						<td><img src="{{each_result.profile_img}}">  {{each_result.name}}</td>	
+						<td>{{each_result.total_quiz}}</td>
+						<td><strong>{{each_result.total_score}}</strong></td>
+					</tr>
+				{% endfor %}
+				</tbody>
+			</table>
+		</div>
+
+		<div class="tab-content active">
+			<table>
+				<thead>				
+					<tr>
+						<th>Rank</th>
+						<th>User</th>
+						<th>Total quizzes attempted</th>
+						<th>Total Score</th>
+					</tr>
+				</thead>
+				<tbody>
+				{% for each in iom_result %}
+					<tr {% if each.user_id == request.user.id %} style="background-color: yellow;"{% endif %}>
+						<td>{{forloop.counter}}</td>	
+						<td><img src="{{each.profile_img}}">  {{each.name}}</td>	
+						<td>{{each.total_quiz}}</td>
+						<td><strong>{{each.total_score}}</strong></td>
+					</tr>
+				{% endfor %}
+				</tbody>
+			</table>
+		</div>
+
+	</section>
+</div>
+</div>
+
+{% endblock %}
+{% block javascript %}
+
+{% endblock %}

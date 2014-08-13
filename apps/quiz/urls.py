@@ -1,6 +1,7 @@
 from django.conf.urls import patterns, url
 from .views import QuizView, SingleQuizView, QuizGenerate, QuizScore, AjaxRequest
-
+from .quiz_result_admin import QuizResultAdminView
+from .leaderboard import LeaderBoardView
 
 urlpatterns = patterns(
     '',
@@ -21,15 +22,37 @@ urlpatterns = patterns(
         view=QuizScore.as_view(),
         name='my_score'),
 
-    url(
-        r'^(?P<exam_category>[-\w]+)/$',
-        view=SingleQuizView.as_view(),
-        name='single_quiz'
-    ),
 
     url(
         r'^quiz-ajax/(?P<func_name>\w{1,40})$',
         AjaxRequest.as_view(),
         name='quiz_ajax',
+    ),
+
+    url(
+        r'^winners/$',
+        QuizResultAdminView.as_view(),
+        name='quiz_winner',
+    ),
+    url(
+        r'^leaderboard/$',
+        view=LeaderBoardView.as_view(),
+        name='leaderboard'
+    ),
+
+    url(
+        r'^api/scores/$',
+        'apps.quiz.android_api.user_quiz_score',
+        name='quiz_score_api'
+    ),
+    url(
+        r'^api/(?P<exam_category>[-\w]+)/$',
+        'apps.quiz.android_api.get_quiz_question',
+        name='quiz_question_api'
+    ),
+    url(
+        r'^(?P<exam_category>[-\w]+)/$',
+        view=SingleQuizView.as_view(),
+        name='single_quiz'
     ),
 )

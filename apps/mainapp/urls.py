@@ -5,8 +5,6 @@ urlpatterns = patterns(
     '',
     url(r'^$', 'apps.mainapp.views.landing'),
     url(r'^/home/$', 'apps.mainapp.views.dashboard'),
-    url(r'honorcode/(?P<exam_code>\w{1,40})/$',
-        'apps.mainapp.views.honorcode'),
     url(r'ioe/cps/(?P<exam_code>\w{1,40})/$',
         'apps.mainapp.views.attend_cps_exam'),
     url(r'ioe/dps/(?P<exam_code>\w{1,40})/$',

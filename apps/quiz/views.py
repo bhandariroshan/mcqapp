@@ -1,7 +1,7 @@
 import json
 
 from django.shortcuts import render
-from django.http import HttpResponseRedirect, HttpResponse
+from django.http import HttpResponseRedirect, HttpResponse, Http404
 from django.views.generic import View
 from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import login_required
@@ -56,20 +56,24 @@ class SingleQuizView(View):
         user_profile_obj = UserProfile()
         user = user_profile_obj.get_user_by_username(request.user.username)
         parameters['user'] = user
-        question_quiz_obj.return_quiz_questions(exam_category)
-        exam_code = question_quiz_obj.exam_model['exam_code']
-        parameters['quiz_details'] = question_quiz_obj.exam_model
+        try:
+            question_quiz_obj.return_quiz_questions(exam_category)
+        except:
+            raise Http404
+        exam_model = question_quiz_obj.exam_model
+        exam_code = exam_model['exam_code']
 
         quiz_ans_obj = SaveQuiz()
         check_submitted = quiz_ans_obj.check_quiz_submitted(request, int(exam_code))
 
         if check_submitted:
             return HttpResponseRedirect('/quiz/myscore/')
-
+        question_list = question_quiz_obj.question_list
+        parameters['quiz_details'] = exam_model
         parameters['start_question_number'] = 0
-        parameters['questions'] = json.dumps(question_quiz_obj.question_list)
-        parameters['start_question'] = question_quiz_obj.question_list[0]
-        parameters['max_questions_number'] = len(question_quiz_obj.question_list)
+        parameters['questions'] = json.dumps(question_list)
+        parameters['start_question'] = question_list[0]
+        parameters['max_questions_number'] = len(question_list)
         parameters['exam_code'] = exam_code
         atte_ans = AttemptedAnswerDatabase()
         all_answers = atte_ans.find_all_atttempted_answer({
@@ -77,7 +81,7 @@ class SingleQuizView(View):
             'user_id': int(request.user.id),
         })
         if all_answers == []:
-            for i in range(len(question_quiz_obj.question_list)):
+            for i in range(len(question_list)):
                 all_answers.append('NA')
 
         parameters['all_answers'] = json.dumps(all_answers)
