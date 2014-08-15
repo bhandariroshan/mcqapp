@@ -203,7 +203,8 @@ function set_exam_finished_success(data){
 }
 
 function ajax_save_category(ioe_check, iom_check){
-	ajax_request('save_category', 'save_category_success', {'ioe_check':ioe_check,'iom_check':iom_check});	
+
+	ajax_request('save_category', 'save_category_success', {'ioe_check':ioe_check,'iom_check':iom_check, 'url': location.href});	
 }
 
 function save_category_success(data){

@@ -360,13 +360,18 @@ class AjaxHandle():
                 cat = 'MBBS-IOM'
                 url = '/iom/'
 
+
             user.update_upsert(
                 {'username': request.user.username},
                 {'student_category': cat,
                  'student_category_set': 1}
             )
-            if request.GET.get('next') is not None:
-                return HttpResponse(json.dumps({'status': 'ok', 'url': request.GET.get('next')}))
+
+            url_url = request.POST.get('url')
+            if url_url != None:
+                if '?next=' in url_url:
+                    url = url_url.split('?next=')[1]
+                    return HttpResponse(json.dumps({'status': 'ok', 'url': '/quiz/'}))
 
             return HttpResponse(json.dumps({'status': 'ok', 'url': url}))
 
