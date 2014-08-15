@@ -3,8 +3,8 @@ from django.conf.urls import patterns, url
 
 urlpatterns = patterns(
     '',
-    url(r'^$', 'apps.mainapp.views.landing'),
-    url(r'^/home/$', 'apps.mainapp.views.dashboard'),
+    
+    
     url(r'ioe/cps/(?P<exam_code>\w{1,40})/$',
         'apps.mainapp.views.attend_cps_exam'),
     url(r'ioe/dps/(?P<exam_code>\w{1,40})/$',

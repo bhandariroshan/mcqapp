@@ -33,6 +33,7 @@ class QuizView(View):
             parameters = {}
             user_profile_obj = UserProfile()
             user = user_profile_obj.get_user_by_username(request.user.username)
+
             if user['student_category_set'] == 0:
                 return HttpResponseRedirect('/')
             else:
@@ -43,6 +44,9 @@ class QuizView(View):
                 parameters['user'] = user
                 return render(request, self.template_name, parameters)
         else:
+            ref_id = request.GET.get('refid', '')
+            if ref_id != '':
+                request.session['ref_id'] = ref_id
             return render(request, self.template_name)
 
 

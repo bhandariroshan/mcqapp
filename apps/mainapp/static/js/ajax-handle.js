@@ -1,5 +1,4 @@
-function ajax_request(s_handler, c_handler, input_data)
-{
+function ajax_request(s_handler, c_handler, input_data){
    $.ajax({
     type: "POST",
     url: "/ajax-handler/" + s_handler,
@@ -9,6 +8,19 @@ function ajax_request(s_handler, c_handler, input_data)
     }
 });
 }
+
+function get_invite_ref_id(){
+	ajax_request('get_invite_ref_id', 'get_invite_ref_id_success');
+}
+
+function get_invite_ref_id_success(data){
+	data = jQuery.parseJSON(data);
+	if (data['status'] == 'ok'){
+		ref_id = data['ref_id'];		
+		window.open( 'https://www.facebook.com/sharer/sharer.php?s=100&p[url]='+encodeURIComponent('http://'+ document.domain + '/quiz/?refid=' + ref_id) +'&p[images][0]='+encodeURIComponent('https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xfa1/t1.0-9/10437325_673274482745023_7125778493044914564_n.png')+'&p[title]='+encodeURIComponent('Free MeroAnswer Daily Quiz')+'&p[summary]='+encodeURIComponent('Give Free Daily IOM Quiz on MeroAnswer')+'&u='+encodeURIComponent('http://' + document.domain + '/quiz/?refid=' + ref_id) +'&t='+encodeURIComponent('Free MeroAnswer Daily Quiz'), 'facebook-share-dialog', 'width=626,height=436,top='+((screen.height - 436) / 2)+',left='+((screen.width - 626)/2 )); 
+	}
+}
+
 function validate_coupon(exam_code, coupon_id){
 	ajax_request('validate_coupon', 'validate_coupon_success',{'exam_code':exam_code, 'coupon_code':coupon_id});
 }
