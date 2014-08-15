@@ -32,12 +32,11 @@ class AjaxHandle():
             ref_obj = Referral()
             user_id = request.user.id
             ref_id = ref_obj.get_referral_id(user_id)
-            return HttpResponse(json.dumps({'status':'ok', 'ref_id': ref_id}))
-        else:                
+            return HttpResponse(json.dumps({'status': 'ok', 'ref_id': ref_id}))
+        else:
             return HttpResponse(json.dumps(
-                    {'status': 'error', 'message': 'You are not authorized to perform this action.'}
-                ))
-
+                {'status': 'error', 'message': 'You are not authorized to perform this action.'}
+            ))
 
     def get_questions(self, request):
         if request.user.is_authenticated():
@@ -366,7 +365,11 @@ class AjaxHandle():
                 {'student_category': cat,
                  'student_category_set': 1}
             )
+            if request.GET.get('next') is not None:
+                return HttpResponse(json.dumps({'status': 'ok', 'url': request.GET.get('next')}))
+
             return HttpResponse(json.dumps({'status': 'ok', 'url': url}))
+
         else:
             return HttpResponse(
                 json.dumps(
