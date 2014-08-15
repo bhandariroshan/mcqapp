@@ -42,7 +42,6 @@ def sign_up_sign_in(request, android_user=False):
     if user is not None:
         return None
 
-
     valid_exams = []
     coupons = []
     subscription_type = []
@@ -50,7 +49,6 @@ def sign_up_sign_in(request, android_user=False):
     join_time = time.mktime(join_time.timetuple())
     student_category = 'IDP'
     student_category_set = 0
-    
 
     data = {
         'useruid': int(request.user.id),
@@ -76,18 +74,15 @@ def sign_up_sign_in(request, android_user=False):
         data['android_user'] = True
         data['registration_id'] = request.POST.get('registration_id', '')
     else:
-        data['web_user'] = True    
+        data['web_user'] = True
         data['registration_id'] = ''
 
-    # try:
-    ref_id = request.session['ref_id']
-    from apps.mainapp.classes.referral import Referral
-    ref_obj = Referral()
-    user_id = request.user.id
-    ref_id = ref_obj.update_invite_accept_list(ref_id, user_id)
-    # except:
-    #     pass
-    
+    ref_id = request.GET.get('refid')
+    if ref_id is not None:
+        from apps.mainapp.classes.referral import Referral
+        ref_obj = Referral()
+        user_id = request.user.id
+        ref_id = ref_obj.update_invite_accept_list(ref_id, user_id)
 
     mc = MailChimp()
     try:
@@ -166,7 +161,7 @@ def androidapk(request):
 def set_category(request):
     if request.user.is_authenticated():
         parameters = {}
-        
+
         sign_up_sign_in(request, android_user=False)
 
         user_profile_obj = UserProfile()
