@@ -3,6 +3,8 @@ Fabric==1.8.3
 MySQL-python==1.2.5
 argparse==1.2.1
 django-allauth==0.16.1
+django-debug-toolbar==1.2.1
+django-debug-toolbar-mongo==0.1.10
 docopt==0.4.0
 ecdsa==0.11
 facepy==1.0.3
