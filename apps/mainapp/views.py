@@ -77,18 +77,7 @@ def sign_up_sign_in(request, android_user=False):
         data['web_user'] = True    
         data['registration_id'] = ''
 
-    try:
-        ref_id = request.session['ref_id']
-        from apps.mainapp.classes.referral import Referral
-        ref_obj = Referral()
-        user_id = request.user.id
-        ref_id = ref_obj.update_invite_accept_list(ref_id, user_id)
-    except:
-        pass
     
-    
-
-
 
     mc = MailChimp()
     try:
