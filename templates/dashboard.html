@@ -71,6 +71,8 @@
                 
                 <div class="medium warning btn pretty button-margin" >
                   <a id="generateNewIOMExam" href="javascript:void(0)">Start New Exam</a>
+
+                  <a id="inviteYourFriend" href="javascript:void(0)">Invite</a>
                 </div>
               
               {% endif %}
@@ -427,6 +429,12 @@ $('#enterCouponforNewExamCodeBtn').on('click', function(){
   mixpanel.track_links("#enterSubsCoupon", "Clicked on enter a subscription coupon on dashboard", {"referrer": document.referrer});
   mixpanel.track_links("#giveCPSExamBtn", "Clicked on give CPS Exam btn on dashboard", {"referrer": document.referrer});
   mixpanel.track_links("#giveDPSExamBtn", "Clicked on give DPS Exam btn on dashboard", {"referrer": document.referrer});  
+
+  var ref_id;
+  $('#inviteYourFriend').on('click', function(){
+      get_invite_ref_id();
+  });
+
 </script>
 
 {% endblock %}
