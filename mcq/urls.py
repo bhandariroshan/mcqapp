@@ -55,3 +55,10 @@ urlpatterns = patterns(
     url(r'^paying_users/$', 'apps.exam_api.coupon_admin.paying_users'),
     # url(r'^mongonaut/', include('mongonaut.urls')),
 )
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns += patterns(
+        '',
+        url(r'^__debug__/', include(debug_toolbar.urls)),
+    )
