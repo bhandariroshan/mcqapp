@@ -18,17 +18,21 @@ class Referral():
         if ref_id is not None:
             return ref_id['uid']['id']
         else:
-            self.db_object.insert_one(self.table_name, {'useruid': int(user_id), 'invite_accept_ids':[]})
+            self.db_object.insert_one(
+                self.table_name,
+                {'useruid': int(user_id), 'invite_accept_ids': []}
+            )
             ref_id = self.db_object.get_one(
                 self.table_name, {'useruid': int(user_id)}
-                )
+            )
             return ref_id['uid']['id']
 
     def update_invite_accept_list(self, ref_id, user_id):
         accept_time = datetime.datetime.now()
         accept_time = time.mktime(accept_time.timetuple())
         self.db_object.update_upsert_push(
-            self.table_name, 
-            {'_id': ObjectId(ref_id)}, 
-            {'useruid': int(user_id), 'accept_time': accept_time}
+            self.table_name,
+            {'_id': ObjectId(ref_id)},
+            {'invite_accept_ids':
+                {'useruid': int(user_id), 'accept_time': accept_time}}
         )
