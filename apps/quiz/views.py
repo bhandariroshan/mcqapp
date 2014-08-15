@@ -47,7 +47,7 @@ class QuizView(View):
                 return render(request, self.template_name, parameters)
         else:
             ref_id = request.GET.get('refid', '')
-            if ref_id == '':
+            if ref_id != '':
                 parameters['ref_id'] = ref_id
             return render(request, self.template_name, parameters)
 
