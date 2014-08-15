@@ -26,9 +26,9 @@ class Referral():
 
     def update_invite_accept_list(self, ref_id, user_id):
         accept_time = datetime.datetime.now()
-        accept_time = time.mktime(attempt_time.timetuple())
-        self.db_object.update_upsert_push(self.table_name, {'_id': ObjectId(ref_id)}, 
-            {'useruid': int(user_id), 'accept_time': accept_time})        
-        }
-            
-
+        accept_time = time.mktime(accept_time.timetuple())
+        self.db_object.update_upsert_push(
+            self.table_name, 
+            {'_id': ObjectId(ref_id)}, 
+            {'useruid': int(user_id), 'accept_time': accept_time}
+        )

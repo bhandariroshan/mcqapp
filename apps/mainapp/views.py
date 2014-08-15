@@ -50,6 +50,8 @@ def sign_up_sign_in(request, android_user=False):
     join_time = time.mktime(join_time.timetuple())
     student_category = 'IDP'
     student_category_set = 0
+    
+
     data = {
         'useruid': int(request.user.id),
         'first_name': social_account.extra_data.get('first_name'),
@@ -77,6 +79,14 @@ def sign_up_sign_in(request, android_user=False):
         data['web_user'] = True    
         data['registration_id'] = ''
 
+    # try:
+    ref_id = request.session['ref_id']
+    from apps.mainapp.classes.referral import Referral
+    ref_obj = Referral()
+    user_id = request.user.id
+    ref_id = ref_obj.update_invite_accept_list(ref_id, user_id)
+    # except:
+    #     pass
     
 
     mc = MailChimp()
@@ -153,15 +163,12 @@ def androidapk(request):
     # return HttpResponseRedirect('http://bit.ly/meroanswer')
 
 
-@login_required
-def dashboard(request):
-    sign_up_sign_in(request, android_user=False)
-    return HttpResponseRedirect('/')
-
-
 def set_category(request):
     if request.user.is_authenticated():
         parameters = {}
+        
+        sign_up_sign_in(request, android_user=False)
+
         user_profile_obj = UserProfile()
         user = user_profile_obj.get_user_by_username(request.user.username)
 
@@ -180,12 +187,6 @@ def set_category(request):
         return render_to_response(
             'landing.html', context_instance=RequestContext(request)
         )
-
-
-def landing(request):
-    return render_to_response(
-        'landing.html', context_instance=RequestContext(request)
-    )
 
 
 @login_required
