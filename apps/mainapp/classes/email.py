@@ -44,9 +44,5 @@ class Email():
 email = Email()
 email.send_mail(
     'Test email', 'Just testing an email code',
-     ['santosh.ghimire33@gmail.com']
+    ['santosh.ghimire33@gmail.com']
 )
-# email.send_mail(
-    # to=['santosh.ghimire33@gmail.com'],
-     # subject='test subject' , text = 'test msg'
-# )

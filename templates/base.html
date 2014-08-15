@@ -1,10 +1,10 @@
+<!DOCTYPE html>
 {% load staticfiles %}  
 {% load socialaccount %}
 {% load url from future %}
 {% load i18n %}
 {% load account %}
 
-<!DOCTYPE html>
 <html class="js no-touch webp gumby-no-touch" lang="en" itemscope="" itemtype="http://schema.org/Product">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -246,7 +246,7 @@
   However, there is a blank style.css in the css directory should you prefer -->
 
   <link rel="stylesheet" href="{% static "css/gumby.min.css" %}">
-  <link href="{% static "css/chardinjs.css" %}" rel="stylesheet">
+  {# <link href="{% static "css/chardinjs.css" %}" rel="stylesheet"> #}
   <link rel="stylesheet" href="http://gumbyframework.com/css/prism.css?v=091613">
 
   <style type="text/css">
@@ -415,13 +415,15 @@
         <li><a href="/coupon/">Request coupon</a></li>
         <li><a href="/distributors/">Coupon Distributors</a></li>
         <li><a href="/subscription/">Subscription Models</a></li>
+        {% comment %}
         {% if 'dps' in request.path or 'cps' in request.path %}
           <li>
               <a href="#" data-toggle="chardinjs">Help</a>
           </li>
         {% endif %}
+        {% endcomment %}
         <li>
-          <a href="#"><span>{{user.name}} </span><i class="icon-down-open"></i></a>
+          <a href="#"><img src="{{profile_img_url}}" width="25px"><span style="vertical-align: super;"> {{user.name}} </span><i class="icon-down-open" style="vertical-align: super;"></i></a>
           <div class="dropdown" style="width:180px;{% if 'terms' in request.path or 'privacy' in request.path or 'results' in request.path or 'answers' in request.path %} margin-left: 0px;{% endif %}">
             <ul>
               <li><a href="/accounts/logout">logout</a></li>

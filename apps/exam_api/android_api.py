@@ -7,6 +7,7 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 
 from apps.mainapp.classes.Exams import Exam
+from apps.mainapp.classes.result import Result
 from apps.mainapp.classes.Coupon import Coupon
 from apps.mainapp.classes.Userprofile import UserProfile
 from apps.mainapp.classes.query_database import ExammodelApi, AttemptedAnswerDatabase, QuestionApi
@@ -246,7 +247,6 @@ def get_scores(request):
                 {'status': 'error', 'message': IMPROPER_REQUEST}
             )
             )
-        exam_handler = ExamHandler()
         exam_obj = ExammodelApi()
         exam_details = exam_obj.find_one_exammodel(
             {'exam_code': int(exam_code)}
@@ -276,11 +276,28 @@ def get_scores(request):
                  'attempt_time': int(attempt_time)
                  }})
 
-        score_dict = exam_handler.check_answers(exam_code, answer_list)
+        result_obj = Result()
+        user_result = result_obj.find_all_result(
+            {'exam_code': int(exam_code),
+             'useruid': request.user.id,
+             'ess_time': int(attempt_time)}
+        )
+        if len(user_result) > 0:
+            score_list = []
+            for results in user_result:
+                score_list.append(results['result'])
+        else:
+            exam_handler = ExamHandler()
+            exam_handler.save_exam_result(
+                request, exam_details, int(attempt_time)
+            )
+            score_list = exam_handler.user_exam_result
+
         return HttpResponse(json.dumps(
-            {'status': 'ok', 'result': score_dict}
+            {'status': 'ok', 'result': score_list}
         )
         )
+
     else:
         return HttpResponse(json.dumps(
             {'status': 'error', 'message': 'Not a valid request'}

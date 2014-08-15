@@ -1,4 +1,3 @@
-# Create your views here.
 import json
 import datetime
 import time
@@ -8,14 +7,14 @@ from django.template import RequestContext
 from django.http import HttpResponse
 
 from apps.random_questions.views import generate_random_ioe_questions, generate_random_iom_questions
-from apps.mainapp.classes.Coupon import Coupon
-from apps.mainapp.classes.Userprofile import UserProfile
-
 from apps.exam_api.views import ExamHandler
-from apps.mainapp.classes.Exams import Exam
-from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi,\
-    ExamStartSignal, HonorCodeAcceptSingal, AttemptedAnswerDatabase,\
+
+from .Coupon import Coupon
+from .Userprofile import UserProfile
+from .Exams import Exam
+from .query_database import ExammodelApi, ExamStartSignal, AttemptedAnswerDatabase,\
     CurrentQuestionNumber
+
 
 ACCESS_TOKEN = ''
 ACCESS_TOKEN_SECRET = ''
@@ -23,6 +22,7 @@ ACCESS_TOKEN_SECRET = ''
 
 class AjaxHandle():
     """doc string for AjaxHandle"""
+
     def __init__(self):
         pass
 
@@ -37,22 +37,24 @@ class AjaxHandle():
 
             if subscribed:
                 exam_handler_obj = ExamHandler()
-                questions = exam_handler_obj.get_questionset_from_database(
+                exam_handler_obj.get_questionset_from_database(
                     int(exam_code), False
                 )
-
+                questions = exam_handler_obj.sorted_question_list
                 for count, eachQuestion in enumerate(questions):
                     eachQuestion['question_number'] = count + 1
-                
-                sorted_questions = sorted(
-                    questions, key=lambda k: k['question_number']
-                )
-                return HttpResponse(json.dumps({'questions':sorted_questions, 'status':'ok'}))
-            else:
-                return HttpResponse(json.dumps({'status':'error', 'message':'You are not authorized to perform this action.'}))
-        else:
-            return HttpResponse(json.dumps({'status':'error', 'message':'You are not authorized to perform this action.'}))
 
+                return HttpResponse(json.dumps(
+                    {'questions': questions, 'status': 'ok'}
+                ))
+            else:
+                return HttpResponse(json.dumps(
+                    {'status': 'error', 'message': 'You are not authorized to perform this action.'}
+                ))
+        else:
+            return HttpResponse(json.dumps(
+                {'status': 'error', 'message': 'You are not authorized to perform this action.'}
+            ))
 
     def validate_coupon(self, request):
         if request.user.is_authenticated():
@@ -88,11 +90,7 @@ class AjaxHandle():
                         )
                     )
 
-            if coupon_obj.validate_coupon(
-                coupon_code,
-                up_exm['exam_category'],
-                up_exm['exam_family']
-            ) is True:
+            if coupon_obj.validate_coupon(coupon_code, up_exm['exam_category'], up_exm['exam_family']) is True:
                 #save the coupon code in user's coupon code array
                 user_profile_obj.change_subscription_plan(
                     request.user.username, coupon_code
@@ -185,8 +183,7 @@ class AjaxHandle():
             return HttpResponse(
                 json.dumps(
                     {'status': 'error',
-                     'message': 'You are not authorized to \
-                     perform this action.'}
+                     'message': 'Not a valid request'}
                 )
             )
 
@@ -220,8 +217,7 @@ class AjaxHandle():
             return HttpResponse(
                 json.dumps(
                     {'status': 'error',
-                     'message': 'You are not authorized to perform \
-                     this action.'}
+                     'message': 'Not a valid request'}
                 )
             )
 
@@ -295,45 +291,7 @@ class AjaxHandle():
             return HttpResponse(
                 json.dumps(
                     {'status': 'error',
-                     'message': 'Not Authorized for this action'}
-                )
-            )
-
-
-    def honor_code_accept(self, request):
-        if request.user.is_authenticated():
-            exam_code = request.POST.get('exam_code', '')
-            request.session[exam_code] = True
-
-            ess = ExamStartSignal()
-            start_time = datetime.datetime.now().timetuple()
-            start_time = time.mktime(start_time)
-
-            h_a_s = HonorCodeAcceptSingal()
-            h_a_s.update_honor_code_accept_Signal(
-                {'useruid': request.user.id,
-                 'exam_code': int(exam_code),
-                 'ess_time': int(start_time)},
-                {'accept': 1}
-            )
-
-            ess.insert_exam_start_signal({
-                'exam_code': int(exam_code),
-                'useruid': request.user.id,
-                'start': 1,
-                'start_time': int(start_time),
-                'end': 0
-            })
-            return HttpResponse(
-                json.dumps(
-                    {'status': 'ok', 'url': '/cps/' + exam_code + '/'}
-                )
-            )
-        else:
-            return HttpResponse(
-                json.dumps(
-                    {'status': 'error',
-                     'message': 'Not Authorized for this action'}
+                     'message': 'Not a valid request'}
                 )
             )
 
@@ -344,23 +302,6 @@ class AjaxHandle():
             ess = ExamStartSignal()
             end_time = datetime.datetime.now().timetuple()
             end_time = time.mktime(end_time)
-
-            validate = ess.check_exam_started({
-                'exam_code': int(exam_code),
-                'useruid': request.user.id,
-                'start': 1,
-                'end': 0
-            })
-
-            h_a_s = HonorCodeAcceptSingal()
-            try:
-                h_a_s.update_honor_code_accept_Signal({
-                    'useruid': request.user.id,
-                    'exam_code': int(exam_code),
-                    'ess_time': int(validate['start_time'])},
-                    {'accept': 0})
-            except:
-                pass
 
             ess.update_exam_start_signal({
                 'exam_code': int(exam_code),
@@ -389,24 +330,21 @@ class AjaxHandle():
             return HttpResponse(
                 json.dumps(
                     {'status': 'error',
-                     'message': 'Not Authorized for this action'}
+                     'message': 'Not a valid request'}
                 )
             )
 
     def save_category(self, request):
-        user = UserProfile()
         if request.user.is_authenticated():
-            # print request
+            user = UserProfile()
             ioe_check = request.POST.get('ioe_check')
             iom_check = request.POST.get('iom_check')
-            print request.POST
-            print ioe_check, iom_check
 
             if ioe_check == 'true':
                 cat = 'BE-IOE'
                 url = '/ioe/'
 
-            elif iom_check == 'true' :
+            elif iom_check == 'true':
                 cat = 'MBBS-IOM'
                 url = '/iom/'
 
@@ -415,13 +353,12 @@ class AjaxHandle():
                 {'student_category': cat,
                  'student_category_set': 1}
             )
-            return HttpResponse(json.dumps({'status': 'ok', 'url':url}))
+            return HttpResponse(json.dumps({'status': 'ok', 'url': url}))
         else:
             return HttpResponse(
                 json.dumps(
                     {'status': 'error',
-                     'message': 'You are not authorized to perform \
-                     this action.'}
+                     'message': 'Not a valid request'}
                 )
             )
 
@@ -517,7 +454,6 @@ class AjaxHandle():
                 ) / 60
 
                 parameters['all_answers'] = json.dumps(all_answers)
-                question_obj = QuestionApi()
 
                 current_pg_num = 1
                 next_page = 0
@@ -543,16 +479,14 @@ class AjaxHandle():
 
                 parameters['current_pg_num'] = current_pg_num
                 exam_handler_obj = ExamHandler()
-                questions = exam_handler_obj.get_paginated_question_set(
+                exam_handler_obj.get_paginated_question_set(
                     int(exam_code), current_pg_num
                 )
-
-                # print questions
+                questions = exam_handler_obj.sorted_question_list
                 sorted_questions = sorted(
                     questions, key=lambda k: k['question_number']
                 )
 
-                # parameters['questions'] = json.dumps(sorted_questions)
                 parameters['questions'] = sorted_questions
                 parameters['exam_details'] = exam_details
 
@@ -597,12 +531,8 @@ class AjaxHandle():
             parameters = {}
             exam_obj = ExammodelApi()
             user_profile_obj = UserProfile()
-            question_obj = QuestionApi()
             ess = ExamStartSignal()
             atte_ans = AttemptedAnswerDatabase()
-            # questions = question_obj.find_all_questions(
-                # {"exam_code": int(exam_code)}, fields={'answer.correct':0}
-            # )
             user = user_profile_obj.get_user_by_username(request.user.username)
             exam_details = exam_obj.find_one_exammodel(
                 {'exam_code': int(exam_code)}
@@ -710,90 +640,6 @@ class AjaxHandle():
                     )
                 )
 
-    def load_result(self, request):
-        self.set_exam_finished(request)
-        parameters = {}
-        res = {}
-        exam_code = request.POST.get('exam_code')
-        res['exam_code'] = int(exam_code)
-        exam_obj = ExammodelApi()
-        exam_details = exam_obj.find_one_exammodel(
-            {'exam_code': int(exam_code)}
-        )
-        res['exam_details'] = exam_details
-        ess = ExamStartSignal()
-        ess_check = ess.check_exam_started(
-            {'exam_code': int(exam_code),
-             'useruid': request.user.id}
-        )
-
-        total_questions = 65
-        ans = AttemptedAnswerDatabase()
-        try:
-            all_ans = ans.find_all_atttempted_answer({
-                'exam_code': int(exam_code),
-                'user_id': request.user.id,
-                'ess_time': ess_check['start_time']
-            },
-                fields={'q_no': 1, 'attempt_details': 1}
-            )
-        except:
-            all_ans = ''
-        answer_list = ''
-        anss = []
-        for eachAns in all_ans:
-            anss.append(eachAns['q_no'])
-        if exam_details['exam_category'] == 'BE-IOE':
-            loop_start = 1
-            loop_end = total_questions + 1
-        else:
-            loop_start = 0
-            loop_end = total_questions 
-
-        for i in range(loop_start, loop_end):
-            try:
-                if i in anss:
-                    answer_list += all_ans[anss.index(i)][
-                        'attempt_details'][0]['selected_ans']
-                else:
-                    answer_list += 'e'
-            except:
-                answer_list += 'e'
-
-        exam_handler = ExamHandler()
-        score_list = exam_handler.check_answers(exam_code, answer_list)
-        user_profile_obj = UserProfile()
-        user = user_profile_obj.get_user_by_username(request.user.username)
-        parameters['user'] = user
-        parameters['result'] = score_list
-        from apps.mainapp.classes.result import Result
-        result_obj = Result()
-        result_obj.save_result(
-            {
-                'useruid': request.user.id,
-                'exam_code': int(exam_code),
-                'ess_time': ess_check['start_time'],
-                'result': score_list
-            }
-        )
-        parameters['exam_completed'] = True
-        if request.user.is_authenticated():
-            current_time = time.mktime(datetime.datetime.now().timetuple())
-            if exam_details['exam_family'] == 'CPS' and current_time - \
-                    exam_details['exam_date'] < exam_details['exam_duration'] \
-                    * 60:
-                parameters['exam_completed'] = False
-
-        parameters['exam_code'] = exam_code
-        parameters['myrankcard'] = {'total': 200, 'rank': 1}
-        html = str(render_to_response(
-                   'ajax_results.html',
-                   parameters,
-                   context_instance=RequestContext(request)
-                   ))
-        html = html.replace('Content-Type: text/html; charset=utf-8', '')
-        return HttpResponse(json.dumps({'status': 'ok', 'html': html}))
-
     def get_unattempted_questions_number(self, request):
         exam_code = int(request.POST.get('exam_code'))
         ess = ExamStartSignal()
@@ -831,11 +677,10 @@ class AjaxHandle():
             )
         )
 
-
     def get_new_exam(self, request):
-        user_profile_obj = UserProfile()
-        ex_type = request.POST.get('type')
         if request.user.is_authenticated():
+            user_profile_obj = UserProfile()
+            ex_type = request.POST.get('type')
             if ex_type == 'be-ioe':
                 exam_code = generate_random_ioe_questions(request)
             else:
@@ -853,8 +698,7 @@ class AjaxHandle():
             return HttpResponse(
                 json.dumps(
                     {'status': 'error',
-                     'message': 'You are not authorized to \
-                     perform this action'}
+                     'message': 'Not a valid request'}
                 )
             )
 
@@ -882,7 +726,7 @@ class AjaxHandle():
                     code, request.user.username
                 )
                 return HttpResponse(
-                    json.dumps({'message': 'valid', 'status': 'ok', 'type':ex_type})
+                    json.dumps({'message': 'valid', 'status': 'ok', 'type': ex_type})
                 )
 
             elif 'MBBS-IOM' in coupon_code['subscription_type']:
@@ -893,7 +737,7 @@ class AjaxHandle():
                     code, request.user.username
                 )
                 return HttpResponse(
-                    json.dumps({'message': 'valid', 'status': 'ok', 'type':ex_type})
+                    json.dumps({'message': 'valid', 'status': 'ok', 'type': ex_type})
                 )
 
             elif 'DPS' in coupon_code['subscription_type']:
@@ -901,7 +745,7 @@ class AjaxHandle():
                     code, request.user.username
                 )
                 return HttpResponse(
-                    json.dumps({'message': 'valid', 'status': 'ok', 'type':ex_type})
+                    json.dumps({'message': 'valid', 'status': 'ok', 'type': ex_type})
                 )
 
             else:
@@ -910,12 +754,10 @@ class AjaxHandle():
                         {'message': 'Invalid Coupon Code.', 'status': 'error'}
                     )
                 )
-
         else:
             return HttpResponse(
                 json.dumps(
                     {'status': 'error',
-                     'message': 'You are not authorized to \
-                     perform this action'}
+                     'message': 'Not a valid request'}
                 )
             )

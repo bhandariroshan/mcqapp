@@ -10,8 +10,4 @@ def error(value, args):
     subject = args + ' Error in Meroanswer'
     msg = 'Meroanswer just encountered a ' + args + ' ' + 'error at ' + \
         value + '. Please fix this as soon as you can.'
-    # print to, subject, msg
-    # for each_receipent in to:
-        # pass
-    # email.send_mail(to=to, subject=subject, text=msg)
     return ''
