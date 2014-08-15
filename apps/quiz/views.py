@@ -8,6 +8,7 @@ from django.contrib.auth.decorators import login_required
 
 from apps.mainapp.classes.query_database import AttemptedAnswerDatabase
 from apps.mainapp.classes.Userprofile import UserProfile
+from apps.mainapp.views import sign_up_sign_in
 
 from .question_quiz import GenerateQuiz
 from .user_quiz_data import SaveQuiz
@@ -31,6 +32,8 @@ class QuizView(View):
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated():
             parameters = {}
+            if request.session.get('refid') is not None:
+                sign_up_sign_in(request)
             user_profile_obj = UserProfile()
             user = user_profile_obj.get_user_by_username(request.user.username)
 
