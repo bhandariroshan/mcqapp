@@ -226,6 +226,7 @@ class AjaxHandle():
             )
 
     def save_answer(self, request):
+        print request.user
         if request.user.is_authenticated():
             from apps.exam_api.views import save_user_answers
             ess = ExamStartSignal()
