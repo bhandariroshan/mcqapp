@@ -163,8 +163,8 @@ def set_category(request):
         parameters = {}
 
         sign_up_sign_in(request, android_user=False)
-        if request.GET.get('next') is not None:
-            return HttpResponseRedirect(request.GET.get('next'))
+        # if request.GET.get('next') is not None:
+            # return HttpResponseRedirect(request.GET.get('next'))
         user_profile_obj = UserProfile()
         user = user_profile_obj.get_user_by_username(request.user.username)
 
