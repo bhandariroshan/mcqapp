@@ -1,12 +1,13 @@
 {% extends 'exam_base.html' %}
-{% load staticfiles %} 
+{% load staticfiles %}
+{% load result_extra %}
 {% block exam_content %}
 
 <div id="ioe_exam_starter" style="text-align:center;">
   {% if render_before_exam %}
     <h5 class="h-text-align ui-widget-header ui-corner-all"><strong>{{exam_details.exam_name}}</strong><br><strong>Please check Back Later !!</strong></h5>
     <p></p><p></p>
-    <p style="margin-left:3%; margin-top:2%;">The exam is not open yet, it will open on <strong>{{exam_details.exam_date}}</strong> at <strong>{{exam_time}}</strong> For now you can try practice sets from dashboard. </p>
+    <p style="margin-left:3%; margin-top:2%;">The exam is not open yet, it will open on <strong>{{exam_details.exam_date|unix_to_date}}</strong> at <strong>{{exam_details.exam_date|unix_to_time}}</strong> For now you can try practice sets from dashboard. </p>
     </p>
     <div class="medium primary btn pretty button-margin" style="margin-left:40%;margin-top:5%">
       <a href="/">Practice other</a>
@@ -165,25 +166,19 @@
     {% endfor %}                  
         <div style=" height: 40px; margin-left: -2%;" class="twelve columns">
         
-        {% if not page_end %}
           <span>
             <div class="small primary btn pretty loadPrev" id="loadPrev">
               <a href="javascript:void(0)"  data-intro="Attempt previous question" data-position="top"><i class="icon-arrow-left"></i>Previous</a>
             </div>
           </span>
+          {% if not page_end %}
           <span style="float:right">
             <div class="small primary btn pretty loadNext" id="loadNext">
               <a href="javascript:void(0)" data-intro="Attempt this question later" data-position="top"><i class="icon-arrow-right" ></i>Next</a>
             </div>
           </span>
 
-          {% else %}              
-            <span>
-              <div class="small primary btn pretty oadPrev" id="loadPrev">
-                <a href="javascript:void(0)"  data-intro="Attempt previous question" data-position="top"><i class="icon-arrow-left"></i>Previous</a>
-              </div>
-            </span>
-
+          {% else %}
             <span style="float:right">
               <div class="small primary btn pretty" id="ansSubmit">
                 <a href="javascript:void(0)" data-intro="" data-position="top"><i class="icon-arrow-right"></i>Submit</a>
@@ -282,7 +277,7 @@ var question_id = '{{start_question.uid.id|safe}}';
 var all_answers = {{all_answers|safe}};
 var max_questions_number = {{max_questions_number}};
 var attempted = [];
-var exam_code = {{exam_code|safe}};
+var exam_code = {{exam_details.exam_code|safe}};
 
 
 var exam_duration = {{exam_details.exam_duration}};
@@ -302,7 +297,7 @@ var exam_duration = {{exam_details.exam_duration}};
 <script src="/static/js/ajax-handle.js"></script>
 <!-- <script src="/static/js/exam.js"></script> -->
 <script type="text/javascript">
-var exm_code = {{exam_code|safe}};
+var exm_code = {{exam_details.exam_code|safe}};
   function set_exam_finished(){
     ajax_set_exam_finished(exm_code, true);
   }

@@ -5,9 +5,6 @@ import time
 import mongoengine as mongo
 
 
-# Create your models here.
-
-
 class QuizAnswer(mongo.DynamicDocument):
     '''
     This is the new collection to save quiz answers of the user

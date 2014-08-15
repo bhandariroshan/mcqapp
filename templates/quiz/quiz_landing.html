@@ -34,7 +34,11 @@
 			            	<a href="/quiz/mbbs-iom/" id="" style="width: 150px;"> Start Quiz </a>
 			            {% endif %}
 			        {% else %}
-			        	<a href="/accounts/login/?next=/quiz/" id="" style="width: 150px;"> Start Quiz </a>
+                {% if ref_id != '' %}
+  			        	<a href="/accounts/login/?next=/quiz/?refid={{ref_id}}" id="" style="width: 150px;"> Start Quiz </a>
+                  {% else %}
+                  <a href="/accounts/login/?next=/quiz/" id="" style="width: 150px;"> Start Quiz </a>
+                {% endif %}
 			        {% endif %}
 
 		        </div>

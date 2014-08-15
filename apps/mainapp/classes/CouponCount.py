@@ -19,6 +19,3 @@ class CouponCount():
             'timestamp': int(now.strftime("%s"))
         }
         return self.db_object.update_upsert(self.table_name, {}, data)
-
-# a = CouponCount()
-# print a.update_coupon_count(1200)

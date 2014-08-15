@@ -168,15 +168,15 @@
   {% endif %}
 
   {% if 'quiz' in request.path %}
-      <title>Quiz {{exam_details.exam_category}} | MeroAnswer</title>
+      <title>Free MeroAnswer Daily Quiz | MeroAnswer</title>
       <!-- Facebook Metadata /-->
       <meta property="og:image" content="http://meroanswer.com/static/images/logos/meroanswerfb.png">
-      <meta property="og:description" content="">
-      <meta property="og:title" content="Quiz {{exam_details.exam_category}} | MeroAnswer">
+      <meta property="og:description" content="Attempt Daily QUIZ for free, track your rank and performance from leaderboard for free.">
+      <meta property="og:title" content="Free MeroAnswer Daily Quiz | MeroAnswer">
 
       <!-- Google+ Metadata /-->
-      <meta itemprop="name" content="Quiz {{exam_details.exam_category}} | MeroAnswer">
-      <meta itemprop="description" content="">
+      <meta itemprop="name" content="Free MeroAnswer Daily Quiz | MeroAnswer">
+      <meta itemprop="description" content="Attempt Daily QUIZ for free, track your rank and performance from leaderboard for free.">
       <meta itemprop="image" content="">
       <link rel="stylesheet" href="{% static "css/subscriptionplans.css" %}">
 
@@ -246,7 +246,7 @@
   However, there is a blank style.css in the css directory should you prefer -->
 
   <link rel="stylesheet" href="{% static "css/gumby.min.css" %}">
-  <link href="{% static "css/chardinjs.css" %}" rel="stylesheet">
+  {# <link href="{% static "css/chardinjs.css" %}" rel="stylesheet"> #}
   <link rel="stylesheet" href="http://gumbyframework.com/css/prism.css?v=091613">
 
   <style type="text/css">
@@ -415,11 +415,13 @@
         <li><a href="/coupon/">Request coupon</a></li>
         <li><a href="/distributors/">Coupon Distributors</a></li>
         <li><a href="/subscription/">Subscription Models</a></li>
+        {% comment %}
         {% if 'dps' in request.path or 'cps' in request.path %}
           <li>
               <a href="#" data-toggle="chardinjs">Help</a>
           </li>
         {% endif %}
+        {% endcomment %}
         <li>
           <a href="#"><img src="{{profile_img_url}}" width="25px"><span style="vertical-align: super;"> {{user.name}} </span><i class="icon-down-open" style="vertical-align: super;"></i></a>
           <div class="dropdown" style="width:180px;{% if 'terms' in request.path or 'privacy' in request.path or 'results' in request.path or 'answers' in request.path %} margin-left: 0px;{% endif %}">

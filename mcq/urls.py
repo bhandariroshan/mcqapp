@@ -8,11 +8,11 @@ admin.autodiscover()
 urlpatterns = patterns(
     '',
     url(r'^$', 'apps.mainapp.views.set_category', name="set_category"),
-    url(r'^ioe/$', 'apps.mainapp.views.ioe_home_page', name="ioe_home_page"),
+    url(r'^(?P<exam_type>ioe|iom)/$', 'apps.mainapp.views.user_dashboard', name="user_dashboard"),
     url(r'^latex-store$', 'apps.mainapp.views.add_html'),
     url(r'^latex-get-data/$', 'apps.mainapp.views.get_all_questions'),
     url(r'^latex$', 'apps.mainapp.views.latex_html'),
-    url(r'^home/$', 'apps.mainapp.views.dashboard'),
+    
     url(r'^generate-coupon/(?P<subscription_type>\w{1,15})/$',
         'apps.mainapp.views.generate_coupon'),
     url(r'^get-coupons/(?P<subscription_type>\w{1,15})/$',
@@ -34,9 +34,8 @@ urlpatterns = patterns(
     url(r'^coupon_admin/$', 'apps.exam_api.coupon_admin.coupon_search'),
     url(r'^subscribe_exam/$',
         'apps.exam_api.coupon_admin.subscribe_user_to_exam'),
-    url(r'^iom/$', 'apps.mainapp.views.iomdashboard'),
-    url(r'^iom/(?P<exam_code>\w{1,15})/$',
-        'apps.mainapp.views.attend_IOM_dps_exam'),
+    url(r'^iom/dps/(?P<exam_code>\w{1,15})/$',
+        'apps.mainapp.views.attend_dps_exam'),
     url(r'^favicon\.ico$',
         RedirectView.as_view(
             url=settings.STATIC_URL + 'images/logos/favicon.ico')
@@ -56,3 +55,10 @@ urlpatterns = patterns(
     url(r'^paying_users/$', 'apps.exam_api.coupon_admin.paying_users'),
     # url(r'^mongonaut/', include('mongonaut.urls')),
 )
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns += patterns(
+        '',
+        url(r'^__debug__/', include(debug_toolbar.urls)),
+    )

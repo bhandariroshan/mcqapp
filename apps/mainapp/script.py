@@ -78,8 +78,8 @@ db.result.aggregate([
 
  { "$group": {
                  "_id": "roshan",
-                 "count":{"$sum":1},
-                 "results:"{"$push":{}}
+                 "count": {"$sum":1},
+                 "results": {"$push":{}}
                  }
                  },
      

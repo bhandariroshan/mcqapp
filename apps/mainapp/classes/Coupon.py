@@ -31,9 +31,8 @@ class Coupon():
                 d. status (used/free)
         '''
         import random
-        # for i in range(0, 200):
         count = 0
-        while count<200:
+        while count < 200:
             number_system = 'zAyBxCwDvEuFt9GsH8r7qJp6KoLnM5mNOk4PjQih3Rg\
             SfTeU2dVcWbXa1YZz0'
             num = random.randint(999999999, pow(60, 6))
@@ -45,11 +44,9 @@ class Coupon():
             coupon = coupon + number_system[num]
             if coupon.find(' ') != -1:
                 coupon = coupon.replace(' ', '')
-            if len(coupon)<6:
+            if len(coupon) < 6:
                 continue
-            # print self.db_object.get_one(
-            #     self.table_name, {'code':str(coupon)}
-            # )
+
             if self.db_object.get_one(
                 self.table_name, {'code': str(coupon)}
             ) is None:
@@ -72,7 +69,6 @@ class Coupon():
         coupon = self.db_object.get_one(
             self.table_name, {'code': coupon_code, 'used.status': 0}
         )
-        # print exam_family, coupon, coupon_code, exam_category
         if coupon is not None and coupon['subscription_type'] == 'IDP':
             return True
         elif coupon is not None and coupon['subscription_type'] == \
@@ -89,8 +85,6 @@ class Coupon():
         coupon = self.db_object.get_one(
             self.table_name, {'code': coupon_code, 'used.status': 0}
         )
-        # print coupon
-        # print exam_family, coupon, coupon_code, exam_category
         if coupon is not None and coupon['subscription_type'] == 'IDP':
             return True
         elif coupon is not None and (

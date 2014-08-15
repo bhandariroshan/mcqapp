@@ -1,5 +1,5 @@
 # Create your views here.
-from django.http import HttpResponseRedirect, HttpResponse
+from django.http import HttpResponse
 import json
 from .user_quiz_data import SaveQuiz
 
@@ -13,15 +13,14 @@ class AjaxHandle():
         if request.user.is_authenticated():
             quiz_ans_obj = SaveQuiz()
             quiz_ans_obj.save_user_quiz(request)
-            return HttpResponse(json.dumps({'status':'success'}))
+            return HttpResponse(json.dumps({'status': 'success'}))
         else:
-            return HttpResponse(json.dumps({'status':'You are not authorized to perform this action.'}))
-
+            return HttpResponse(json.dumps({'status': 'You are not authorized to perform this action.'}))
 
     def set_quiz_finished(self, request):
         if request.user.is_authenticated():
             quiz_ans_obj = SaveQuiz()
             quiz_ans_obj.save_daily_quiz_score(request)
-            return HttpResponse(json.dumps({'status':'success'}))
+            return HttpResponse(json.dumps({'status': 'success'}))
         else:
-            return HttpResponse(json.dumps({'status':'You are not authorized to perform this action.'}))        
+            return HttpResponse(json.dumps({'status': 'You are not authorized to perform this action.'}))

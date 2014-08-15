@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
+{% load result_extra %}
 {% block head %}
   <style type="text/css">
     .picker select {
@@ -33,197 +34,138 @@
 
 <div class="row my-margin-top row-bg-color">   
 
-    <!--{% ifequal user.student_category_set 0 %}
-      <div class="twelve columns success alert" id="categorySelect">
-        <li class="field">
-          <p>You have not selected categories for exams you would like to attend. Please select one or more.</p>
-          <label class="checkbox {% ifequal user.student_category 'both' %} checked {% endifequal %}" for="iomCheck">
-            <input name="checkbox[]" id="iomCheck" value="1" type="checkbox" checked="checked">
-            <span></span> IOM Exams &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          </label>
-          <label class="checkbox {% ifequal user.student_category 'both' %} checked {% endifequal %} " for="ioeCheck">
-            <input name="checkbox[]" id="ioeCheck" value="2" type="checkbox">
-            <span></span> IOE Exams &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          </label>
-        <div class="medium primary btn pretty button-margin" >
-           <a href="#" {% ifequal user.student_category_set 0 %} onclick="save_category()" {% endifequal %}> Save </a>
-        </div>
-        </li>
-      </div> 
-    {% endifequal %}-->
-    <div class="twelve columns" style="margin-top: -4%;">
-      <div class="eight columns">      
-        <section class="twelve columns tabs" style="margin-top: 5%;">
-            <ul class="tab-nav">
-                <li class="active"><a href="javascript:void(0)" id="DPSExamsTab">Practice Exams</a></li> 
-                <li><a href="javascript:void(0)" id="CPSExamsTab">Competitive Exams</a></li>
-                <!-- <li><a href="#">Notices</a></li> -->
-                <!-- <li class="ttip" data-tooltip="Subscription required."><a href="#">Progress Card</a></li> -->
-            </ul>
+  <div class="twelve columns" style="margin-top: -4%;">
+    <div class="eight columns">      
+      <section class="twelve columns tabs" style="margin-top: 5%;">
+        <ul class="tab-nav">
+          <li class="active"><a href="javascript:void(0)" id="DPSExamsTab">Practice Exams</a></li> 
+          <li><a href="javascript:void(0)" id="CPSExamsTab">Competitive Exams</a></li>
+        </ul>
 
-            <div id="upcomingPracticeExams" class="tab-content active">
-              {% if '/iom/' not in request.path %}
-                <article class="valign row text-color-white ui-widget-content ui-corner-all my-margin" style="border: 1px solid red;">
-                    <div style="width:25%">
-                        <img src="/static/images/exam.jpg" width="145px" />
-                    </div>
-                    <div style="width:65%">
-                        <h4><a href="#" id=""><strong>Start New IOE Practice Exam</strong></a></h4>
-                        <p><strong>Date: </strong>When ever you like in a single sitting</p>
-                        <p><strong>Time: </strong>Anytime</p>
-                            <p><strong>Cost: </strong>Rs. 30 (<a href="/coupon/">coupon code</a> entry required)</p>
-                         <div class="medium warning btn pretty button-margin" >
-                              <a id="generateNewIOEExam" href="javascript:void(0)">Start New Exam</a>
-                          </div>
-                      </div>
-                </article>
+        <div id="upcomingPracticeExams" class="tab-content active">
+
+          <article class="valign row text-color-white ui-widget-content ui-corner-all my-margin" style="border: 1px solid red;">
+            <div style="width:25%">
+              <img src="/static/images/exam.jpg" width="145px" />
+            </div>
+            
+            <div style="width:65%">
+              
+              {% if exam_type == 'ioe' %}
+              
+                <h4><a href="#" id=""><strong>Start New IOE Practice Exam</strong></a></h4>
+                <p><strong>Date: </strong>When ever you like in a single sitting</p>
+                <p><strong>Time: </strong>Anytime</p>
+                <p><strong>Cost: </strong>Rs. 30 (<a href="/coupon/">coupon code</a> entry required)</p>
+                
+                <div class="medium warning btn pretty button-margin" >
+                  <a id="generateNewIOEExam" href="javascript:void(0)">Start New Exam</a>
+                </div>
+              
+              {% elif exam_type == 'iom' %}
+              
+                <h4><a href="#" id=""><strong>Start New IOM Practice Exam</strong></a></h4>
+                <p><strong>Date: </strong>When ever you like in a single sitting</p>
+                <p><strong>Time: </strong>Anytime</p>
+                <p><strong>Cost: </strong>Rs. 20 (<a href="/coupon/">coupon code</a> entry required)</p>
+                
+                <div class="medium warning btn pretty button-margin" >
+                  <a id="generateNewIOMExam" href="javascript:void(0)">Start New Exam</a>
+
+                  <a id="inviteYourFriend" href="javascript:void(0)">Invite</a>
+                </div>
+              
+              {% endif %}
+            
+            </div>
+
+          </article>              
+          
+          {% for eachExam in all_dps_exams %}
+        
+            <article class="valign row text-color-white ui-widget-content ui-corner-all my-margin subscribed">
+              
+              <i class="icon-check icon-color-subscribed myicon" style="margin-top: 12px;margin-left: 10px;"></i>
+              
+              <div style="width:25%">
+                <img src="/static/images/exam.jpg" width="145px" />
+              </div>
+
+              <div style="width:65%">
+              
+                <h4><a href="#" id="{{eachExam.exam_code}}/"><strong>{{eachExam.exam_name}} {{forloop.revcounter}}</strong></a></h4>
+                <p><strong>Date: </strong>When ever you like in a single sitting</p>
+                <p><strong>Time: </strong>Anytime</p>
+                
+                <div class="medium primary btn pretty button-margin" >
+                  <a id="giveDPSExamBtn" href="/{{exam_type}}/dps/{{eachExam.exam_code}}/">Take Exam</a>
+                </div>
+          
+              </div>
+            
+            </article>
+          
+          {% endfor %}
+        
+        </div> 
+        
+        <div id="upcomingExams" class="tab-content">
+          
+          {% for eachExam in all %}
+            
+            <article class="valign row text-color-white ui-widget-content ui-corner-all my-margin {% if eachExam.exam_subscribed %} subscribed {% else %} notsubscribed {% endif %}">
+              
+              {% if eachExam.exam_subscribed %}
+              
+                <i class="icon-check icon-color-subscribed myicon" style="margin-top: 12px;margin-left: 10px;"></i>
+              
               {% else %}
-                <article class="valign row text-color-white ui-widget-content ui-corner-all my-margin" style="border: 1px solid red;">
-                    <div style="width:25%">
-                        <img src="/static/images/exam.jpg" width="145px" />
-                    </div>
-                    <div style="width:65%">
-                        <h4><a href="#" id=""><strong>Start New IOM Practice Exam</strong></a></h4>
-                        <p><strong>Date: </strong>When ever you like in a single sitting</p>
-                        <p><strong>Time: </strong>Anytime</p>
-                            <p><strong>Cost: </strong>Rs. 20 (<a href="/coupon/">coupon code</a> entry required)</p>
-                         <div class="medium warning btn pretty button-margin" >
-                              <a id="generateNewIOMExam" href="javascript:void(0)">Start New Exam</a>
-                          </div>
-                      </div>
-                </article>              
+                
+                <i class="icon-lock icon-color-notsubscribed myicon" style="margin-top:12px;margin-left: 10px;"></i>
+              
               {% endif %}
 
-              {% for eachExam in upcoming_exams %}
-                {% ifequal eachExam.exam_family  'DPS' %}
+              <div style="width:25%">
+              
+                <img src="/static/images/exam.jpg" width="145px" />
+              
+              </div>
+              
+              <div style="width:65%">
+              
+                <h4><a onclick="attend_exam('{{eachExam.exam_details.exam_code}}')" href="#" id="{{eachExam.exam_details.exam_code}}/"><strong>{{eachExam.exam_name}} {{forloop.revcounter}}</strong></a></h4>
+                <p><strong>Date: </strong>{{eachExam.exam_details.exam_date|unix_to_day}}</p>
+                <p><strong>Time: </strong>{{eachExam.exam_details.exam_date|unix_to_time}}</p>
+                <p><strong>Feature: </strong>Exam set prepared by toppers from IOE</p>
+                <p><strong>Feature: </strong>Completely based on new online system at IOE, Pulchowk Campus. </p>
+
+                {% if not eachExam.exam_subscribed %}
                 
-               <article class="valign row text-color-white ui-widget-content ui-corner-all my-margin {% if eachExam.subscribed %} subscribed {% else %} notsubscribed {% endif %}">
-                  {% if eachExam.subscribed %}
-                      <i class="icon-check icon-color-subscribed myicon" style="margin-top: 12px;margin-left: 10px;"></i>
-                  {% else %}
-                      <i class="icon-lock icon-color-notsubscribed myicon" style="margin-top:12px;margin-left: 10px;"></i>
-                  {% endif %}
-                <!-- </div> -->
-                <div style="width:25%">
-                    <img src="/static/images/{{eachExam.image}}" width="145px" />
+                  <p><strong>Cost: </strong>Rs. 30 (<a href="/coupon/">coupon code</a> entry required)</p>
+                
+                {% endif %}
+
+                <div class="medium primary btn pretty button-margin" >
+                  
+                  <a id="giveCPSExamBtn" href="{% if eachExam.exam_subscribed %}/cps/{{eachExam.exam_details.exam_code}}/{% else %}#{% endif %}" {% if not eachExam.exam_subscribed %} onclick="attempt_exam('{{eachExam.exam_details.exam_code}}')" {% endif %}>Take Exam</a>
+                
                 </div>
 
-                <div style="width:65%">
-                    {% if eachExam.exam_family == 'DPS' %}
-                      <h4><a href="#" id="{{eachExam.code}}/"><strong>{{eachExam.name}}</strong></a></h4>
-                    {% endif %}
-                    <p><strong>Date: </strong>When ever you like in a single sitting</p>
-                    <p><strong>Time: </strong>Anytime</p>
-                    {% if not eachExam.subscribed %}
-                      {% if eachExam.exam_category == 'BE-IOE' %}
-                        <p><strong>Cost: </strong>Rs. 30 (<a href="/coupon/">coupon code</a> entry required)</p>
-                        {% else %}
-                          <p><strong>Cost: </strong>Rs. 20 (<a href="/coupon/">coupon code</a> entry required)</p>
-                      {% endif %}
-                    {% endif %}
-                     <div class="medium primary btn pretty button-margin" >
-                        {% if eachExam.exam_category == 'BE-IOE' %}
-                          <a id="giveDPSExamBtn" href="{% if eachExam.subscribed %}/dps/{{eachExam.code}}/{% else %}#{% endif %}" {% if not eachExam.subscribed %} onclick="attempt_exam('{{eachExam.code}}')" {% endif %}>Take Exam</a>
-                          {% else %}
-                            <a id="giveDPSExamBtn" href="{% if eachExam.subscribed %}/iom/{{eachExam.code}}/{% else %}#{% endif %}" {% if not eachExam.subscribed %} onclick="attempt_exam('{{eachExam.code}}')" {% endif %}>Take Exam</a>
-                        {% endif %}
-                      </div>
-                  </div>
-                </article>
-                
-                {% endifequal %}
-              {% endfor %}
-            </div> 
-            <div id="upcomingExams" class="tab-content">
-              {% for eachExam in upcoming_exams %}
-                {% ifequal eachExam.exam_family 'CPS' %}
-                  
-                    <article class="valign row text-color-white ui-widget-content ui-corner-all my-margin {% if eachExam.subscribed %} subscribed {% else %} notsubscribed {% endif %}">
-                    <!-- <div style="width:10%"> -->
-                    {% if eachExam.subscribed %}
-                      <i class="icon-check icon-color-subscribed myicon" style="margin-top: 12px;margin-left: 10px;"></i>
-                    {% else %}
-                      <i class="icon-lock icon-color-notsubscribed myicon" style="margin-top:12px;margin-left: 10px;"></i>
-                    {% endif %}
-                    <!-- </div> -->
-                  <div style="width:25%">
-                    <img src="/static/images/{{eachExam.image}}" width="145px" />
-                </div>
-                <div style="width:65%">
-                    <h4><a onclick="attend_exam('{{eachExam.code}}')" href="#" id="{{eachExam.code}}/"><strong>{{eachExam.name}}</strong></a></h4>
-                    <p><strong>Date: </strong>{{eachExam.exam_date}}</p>
-                    <p><strong>Time: </strong>{{eachExam.exam_time}}</p>
-                    <p><strong>Feature: </strong>Exam set prepared by toppers from IOE</p>
-                    <p><strong>Feature: </strong>Completely based on new online system at IOE, Pulchowk Campus. </p>
-                    {% if not eachExam.subscribed %}
-                    <p><strong>Cost: </strong>Rs. 30 (<a href="/coupon/">coupon code</a> entry required)</p>
-                    {% endif %}
-                     <div class="medium primary btn pretty button-margin" >
-                          <a id="giveCPSExamBtn" href="{% if eachExam.subscribed %}/cps/{{eachExam.code}}/{% else %}#{% endif %}" {% if not eachExam.subscribed %} onclick="attempt_exam('{{eachExam.code}}')" {% endif %}>Take Exam</a>
-                      </div>
-                  </div>
-                </article>
-                
-                {% endifequal %}
-              {% endfor %}
-              {% comment %}
-              {% if not 'iom' in request.path %}
-              <article class="valign row text-color-white ui-widget-content ui-corner-all my-margin subscribed ">
-                    <!-- <div style="width:10%"> -->
-                      <i class="icon-lock icon-color-notsubscribed myicon" style="margin-top:12px;margin-left: 10px;"></i>
-                    <!-- </div> -->
-                  <div style="width:25%">
-                    <img src="/static/images/exam.jpg" width="145px" />
-                </div>
-                <div style="width:65%">
-                    <h4><strong>IOE Competitive Exam</strong></h4>
-                    <p><strong>Date: </strong>Tuesday 8th July, 2014</p>
-                    <p><strong>Time: </strong>8:00 PM</p>
-                    <p><strong>Feature: </strong>Exam set prepared by toppers from IOE</p>
-                    <p><strong>Feature: </strong>Completely based on new online system at IOE, Pulchowk Campus. </p>
-                     <div class="medium primary btn pretty button-margin" >
-                          <a id="giveCPSExamBtn" href="#">Take Exam</a>
-                      </div>
-                  </div>
-                </article>
-                {% else %}
-                <h2 style="color: green;text-align: center;">Coming Soon !!</h2>
-                {% endif %}
-                {% endcomment %}
-            </div> 
-            {% comment %}
-            <div class="tab-content" id="notices">
-              {% for eachSchedule in upcoming_schedules %}
-               <article class="valign row text-color-white ui-widget-content ui-corner-all my-margin">
-                  <div>
-                    <img src="/static/images/{{eachSchedule.image}}" width="145" />
-                  </div>
-                  <div>
-                    <h4><a onclick="attend_exam('{{eachSchedule.code}}')" href="#" id="{{eachSchedule.code}}/"><strong>{{eachSchedule.name}}</strong></a></h4>
-                    <p><strong>Category:</strong>{{eachSchedule.schedule_category}}</p>
-                    <p><strong>Date:</strong>{{eachSchedule.schedule_date}}</p>
-                    <p><strong>Time:</strong>{{eachSchedule.schedule_time}}</p>
-                      <div class="medium primary btn pretty" >
-                          <a href="/attend-exam/{{eachSchedule.code}}">View Details</a>
-                      </div>
-                  </div>
-                </article>
-              {% endfor %}
-            </div>
-            {% endcomment %}
-            <!-- <div class="tab-content" id="notices">
-               <article class="valign row text-color-white">
-                  <div>
-                    <li class="danger alert">
-                      <p>You need to be subscribed to see the details. Please subscribe to one of our <a href="/subscription/"> <strong>models</strong> </a> first. </p> 
-                    </li>
-                  </div>
-                </article>
-            </div>            -->
-        </section>        
+              </div>
+            
+            </article>
+
+          {% endfor %}
+
+        </div> 
+
+      </section>        
     </div>
+  
     <div class="four columns" style="margin-top: 8%;">
+      
       <section class="twelve columns">
+        
         <div class="twelve columns">
         {% if not 'iom' in request.path %}
           <li class="warning alert">
@@ -231,161 +173,190 @@
             <p>Practice few questions daily for free. <a href="javascript:void(0)" onclick="$('#trigger_gumby_div').click()">More details</a></p>
             <div class="medium primary btn pretty" style="margin-left: 21%;margin-top: 3%;">
                 <a href="/quiz/be-ioe/" id="" style="width: 150px;"> Start Quiz </a>
-            </div>              
-          </li>
+              </div>              
+
+            </li>
+
           {% else %}
+
             <li class="warning alert">
               <h2 style="text-align: center; font-size: 40px;text-decoration:underline;" >  Free Daily Quiz  </h2>          
               <p>Practice few questions daily for free. <a href="javascript:void(0)" onclick="$('#trigger_gumby_div').click()">More details</a></p>
-            <div class="medium primary btn pretty" style="margin-left: 21%;margin-top: 3%; ">
+              
+              <div class="medium primary btn pretty" style="margin-left: 21%;margin-top: 3%; ">
                 <a href="/quiz/mbbs-iom/" id="" style="width: 150px;"> Start Quiz </a>
-            </div>              
-            </li>
-        </div>      
-        {% endif %}
-        {% comment %}
-        {% if not 'iom' in request.path %}
-          <li class="warning alert">
-            <h2 style="text-align: center; font-size: 40px; text-decoration:underline;">  Notice </h2>
-            <p><strong>IOE Competitive Exam</strong> is going to be held on <strong>Tuesday, 8th July, 2014 at 8:00 PM.</strong>
-             Get your <a href = "/coupon" target="_blank_"> coupons </a> and be ready to win exciting prizes !!
-            </p>
-            
-          </li>
-        {% endif %}
-        {% endcomment %}
-        {% if not subscribed %}
-          <div class="twelve columns">
-            <li class="success alert">
-              <p>Do you have a coupon code for subscription plan? </p> 
-              <div class="medium primary btn pretty" >
-                  <a href="#" id="enterSubsCoupon" style="width: 150px;" onclick="attempt_exam('subs')">Enter here</a>
               </div>              
+            
             </li>
-          </div>
-        {% endif %}
 
-          <div class="twelve columns ui-corner-all">
-              <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fmeroanswer&amp;width&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true&amp;appId=238848396304709" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:290px;" allowTransparency="true"></iframe>
-
-<a href="https://twitter.com/Meroanswer" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @Meroanswer</a>
-
-
-          </div>
-
-        <!--         {% if not student_category %}
-          <div class="twelve columns">
-            <li class="warning alert">
-              <p>Select one option to see filtered exams on your dashboard. </p> 
-                <li class="field">
-                  <label class="checkbox checked" for="check1">
-                    <input name="checkbox[]" id="check1" value="1" type="checkbox" checked="checked">IOE
-                  </label>
-                  <label class="checkbox" for="check2">
-                    <input name="checkbox[]" id="check2" value="2" type="checkbox">IOM
-                  </label>
-                </li>
-            </li>
-          </div>
-        {% endif %} -->
+          {% endif %}
         
+        </div>      
+        
+        {% if not subscribed %}
 
-        {% if has_result %}
-          <table class="rounded">
-            <thead>
-              <tr><th><p class="text-color-white">Rank card for recent exam</p></th><th></th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Total Score</td><td><li class="primary badge">{{rank_card.score}}</li></td></tr>
-              <tr><td>Percentage</td><td><li class="primary badge">{{rank_card.percentage}}%</li></td></tr>
-              <tr><td>Rank</td><td><li class="primary badge">{{rank_card.rank}}/{{rank_card.total_appearance}}</li></td></tr>
-            </tbody>
-          </table>
-          <table class="rounded">
-            <thead>
-              <tr><p class="text-color-white">Score card for recent exam</p></tr>
-              <tr>
-                <th>Subject</th>
-                <th>Marks</th>
-              </tr>
-            </thead>
-            <tbody>
-              {% for eachSubject in socre_card.marks %}
-                <tr><td>{{eachSubject.name}}</td><td><li class="primary badge">{{eachSubject.score}}</li></td></tr>
-              {% endfor %}                  
-            </tbody>
-          </table>
+          <div class="twelve columns">
+
+            <li class="success alert">
+            
+              <p>Do you have a coupon code for subscription plan? </p> 
+              
+              <div class="medium primary btn pretty" >
+                <a href="#" id="enterSubsCoupon" style="width: 150px;" onclick="attempt_exam('subs')">Enter here</a>
+              </div>
+
+            </li>
+
+          </div>
+
         {% endif %}
+
+        <div class="twelve columns ui-corner-all">
+
+          <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fmeroanswer&amp;width&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true&amp;appId=238848396304709" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:290px;" allowTransparency="true"></iframe>
+
+          <a href="https://twitter.com/Meroanswer" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @Meroanswer</a>
+
+        </div>
+
       </section>
+
     </div>
-</div> 
+
+  </div> 
+
 </div>
 
-<div id="validateCouponforNewExam" style="visibility:hidden;" class="pretty medium primary btn switch" gumby-trigger="#enterCouponforNewExam"></div>
+<div id="validateCouponforNewExam" style="visibility:hidden;" class="pretty medium primary btn switch" gumby-trigger="#enterCouponforNewExam">
+</div>
+
 <div class="modal" id="enterCouponforNewExam">
+  
   <div class="content">
+
     <a class="close switch" gumby-trigger="|#enterCouponforNewExam" id="closeEnterCoupon"><i class="icon-cancel" /></i></a>
+
     <div class="row">
+      
       <div id="dangerMessageNewExam" style="color: red;margin-left: 15%;"></div>
+      
       <div class="ten columns centered text-center" style="margin-top:6%;">
+        
         <p id="infoText">Coupon code are necessary to ensure smooth conducting of examination. Every time you take exam, you need to enter coupon code available at various <a href="/distributors/" style="color:red;"><strong>distributors</strong></a>. Please enter <strong>your</strong> coupon code</p>
-          <li class="prepend field">
-            <span class="adjoined">Coupon: </span>
-            <input id="enterCouponforNewExamCode" class="xwide text input" type="text" placeholder="Please enter the coupon code" />
-          </li>
-          <li class="prepend field">
-            <button class="medium primary btn" type="submit">
-              <a id="enterCouponforNewExamCodeBtn" href="#">Start Exam</a>
-            </button>
-          </li>
+
+        <li class="prepend field">
+          <span class="adjoined">Coupon: </span>
+
+          <input id="enterCouponforNewExamCode" class="xwide text input" type="text" placeholder="Please enter the coupon code" />
+
+        </li>
+
+        <li class="prepend field">
+
+          <button class="medium primary btn" type="submit">
+
+            <a id="enterCouponforNewExamCodeBtn" href="#">Start Exam</a>
+
+          </button>
+
+        </li>
+
       </div>
+
     </div>
+
   </div>
+
 </div>
 
-<div id="validateCPSCoupon" style="visibility:hidden;" class="pretty medium primary btn switch" gumby-trigger="#validateCPSCouponModal"></div>
+<div id="validateCPSCoupon" style="visibility:hidden;" class="pretty medium primary btn switch" gumby-trigger="#validateCPSCouponModal">
+</div>
+
 <div class="modal" id="validateCPSCouponModal">
+
   <div class="content">
+
     <a class="close switch" gumby-trigger="|#validateCPSCouponModal" id="closeEnterCoupon"><i class="icon-cancel" /></i></a>
+
     <div class="row">
-      <div id="dangerMessageCPSExam" style="color: red;margin-left: 15%;"></div>
-      <div class="ten columns centered text-center" style="margin-top:6%;">
-        <p id="infoText">Coupon code are necessary to ensure smooth conducting of examination. Every time you take exam, you need to enter coupon code available at various <a href="/distributors/" style="color:red;"><strong>distributors</strong></a>. Please enter <strong>your</strong> coupon code</p>
-          <li class="prepend field">
-            <span class="adjoined">Coupon: </span>
-            <input id="enterCPSCoupon" class="xwide text input" type="text" placeholder="Please enter the coupon code" />
-          </li>
-          <li class="prepend field">
-            <button class="medium primary btn" type="submit">
-              <a id="enterCPSCouponBtn" href="#">Start Exam</a>
-            </button>
-          </li>
+      
+      <div id="dangerMessageCPSExam" style="color: red;margin-left: 15%;">
       </div>
+      
+      <div class="ten columns centered text-center" style="margin-top:6%;">
+        
+        <p id="infoText">Coupon code are necessary to ensure smooth conducting of examination. Every time you take exam, you need to enter coupon code available at various <a href="/distributors/" style="color:red;"><strong>distributors</strong></a>. Please enter <strong>your</strong> coupon code</p>
+
+        <li class="prepend field">
+
+          <span class="adjoined">Coupon: </span>
+
+          <input id="enterCPSCoupon" class="xwide text input" type="text" placeholder="Please enter the coupon code" />
+
+        </li>
+
+        <li class="prepend field">
+
+          <button class="medium primary btn" type="submit">
+
+            <a id="enterCPSCouponBtn" href="#">Start Exam</a>
+
+          </button>
+
+        </li>
+
+      </div>
+
     </div>
+
   </div>
+
 </div>
 
-<div id="trigger_gumby_div" style="visibility:hidden;" class="pretty medium primary btn switch" gumby-trigger="#details_div"></div>
+<div id="trigger_gumby_div" style="visibility:hidden;" class="pretty medium primary btn switch" gumby-trigger="#details_div">
+</div>
+
 <div class="modal" id="details_div">
+
   <div class="content">
+
     <a class="close switch" gumby-trigger="|#details_div" id="closeDetailsDiv"><i class="icon-cancel" /></i></a>
+
     <div class="row">
+
       <div id="dangerMessage"></div>
+
       <div class="ten columns centered text-center" style="margin-top:6%;">
-        <p id="infoText">Daily Quizes are free. But, you can practice very limited questions in daily quizes. To get full access to thousands of questions, get a coupon or <a href="/subscription/" style="color:red;"><strong>subscribe</strong></a> to one of our model. Coupon codes are available at various <a href="/coupon/" style="color:red;"><strong>distributors</strong></a></p>
-          <li class="prepend field">
-            <button class="medium primary btn" type="submit">
-              <a href="#" onclick="$('#closeDetailsDiv').click()">Close</a>
-            </button>
-          </li>
+
+        <p id="infoText">Daily Quizes are free. But, you can practice very limited questions in daily quizes. To get full access to thousands of questions, get a coupon or <a href="/subscription/" style="color:red;"><strong>subscribe</strong></a> to one of our model. Coupon codes are available at various 
+          
+          <a href="/coupon/" style="color:red;"><strong>distributors</strong></a>
+        
+        </p>
+
+        <li class="prepend field">
+
+          <button class="medium primary btn" type="submit">
+
+            <a href="#" onclick="$('#closeDetailsDiv').click()">Close</a>
+
+          </button>
+
+        </li>
+
       </div>
+
     </div>
+
   </div>
+
 </div>
 
 {% endblock %}
+
 {% block javascript %}
 <script src="{% static "js/ajax-handle.js" %}"></script>
+
 <script type="text/javascript">
 var ex_code;
 var ex_type;
@@ -393,14 +364,9 @@ var ex_type;
   function attempt_exam(exam_code){
     ex_code=exam_code;
     $('#infoText').html('');
-    if (exam_code.toLowerCase() == 'sample'){
+    
       var html_str = 'Coupon codes are available at various <a href="/coupon/" style="color:red;"><strong>distributors</strong></a>.<h3 style="font-weight:bold"> Please enter code below</h3>'
       $('#infoText').html(html_str);
-    }
-    else{      
-      var html_str = 'Coupon codes are available at various <a href="/coupon/" style="color:red;"><strong>distributors</strong></a>.<h3 style="font-weight:bold"> Please enter code below</h3>'
-      $('#infoText').html(html_str);
-    }
     /*is_subscribed(exam_code);    */
     $('#trigger_gumby_div').click();
   }
@@ -428,7 +394,7 @@ $('#enterCouponforNewExamCode').keypress(function(e) {
 $('#generateNewIOEExam').on('click', function(){
   ex_type = 'be-ioe';
 
-    {% if 'BE-IOE' in subscription_type or 'IDP' in subscription_type %}
+    {% if all_subscribed or ioe_subscribed %}
       get_new_exam('be-ioe');
       {% else %}
         var html_str = 'Coupon codes are available at various <a href="/#/" style="color:red;"><strong>distributors</strong></a>. <h3 style="font-weight:bold"> Please enter code below</h3>';
@@ -439,7 +405,7 @@ $('#generateNewIOEExam').on('click', function(){
   
 $('#generateNewIOMExam').on('click', function(){
   ex_type = 'mbbs-iom';
-    {% if 'MBBS-IOM' in subscription_type or 'IDP' in subscription_type %}
+    {% if all_subscribed or iom_subscribed %}
       get_new_exam('mbbs-iom');
       {% else %}
         var html_str = 'Coupon codes are available at various <a href="/#/" style="color:red;"><strong>distributors</strong></a>. <h3 style="font-weight:bold"> Please enter code below</h3>';
@@ -463,5 +429,12 @@ $('#enterCouponforNewExamCodeBtn').on('click', function(){
   mixpanel.track_links("#enterSubsCoupon", "Clicked on enter a subscription coupon on dashboard", {"referrer": document.referrer});
   mixpanel.track_links("#giveCPSExamBtn", "Clicked on give CPS Exam btn on dashboard", {"referrer": document.referrer});
   mixpanel.track_links("#giveDPSExamBtn", "Clicked on give DPS Exam btn on dashboard", {"referrer": document.referrer});  
+
+  var ref_id;
+  $('#inviteYourFriend').on('click', function(){
+      get_invite_ref_id();
+  });
+
 </script>
+
 {% endblock %}
