@@ -1,1 +1,0 @@
-{ "indexes" : [ { "v" : 1, "key" : { "_id" : 1 }, "ns" : "mcq.exammodel", "name" : "_id_" }, { "v" : 1, "key" : { "useruid" : -1 }, "ns" : "mcq.exammodel", "name" : "useruid_-1" } ] }
