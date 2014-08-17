@@ -36,3 +36,7 @@ class Referral():
             {'invite_accept_ids':
                 {'useruid': int(user_id), 'accept_time': accept_time}}
         )
+
+    def check_referral_storage(self, useruid):
+        '''check if the referred object is already stored in invite_accept_ids'''
+        return self.db_object.get_one(self.table_name, {'invite_accept_ids.useruid': int(useruid)})

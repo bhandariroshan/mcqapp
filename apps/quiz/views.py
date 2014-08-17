@@ -34,10 +34,7 @@ class QuizView(View):
         if request.user.is_authenticated():
             user_profile_obj = UserProfile()
             user = user_profile_obj.get_user_by_username(request.user.username)
-            ref_id = request.GET.get('refid')
-            if ref_id is not None:
-                # sign_up_sign_in(request)
-                return HttpResponseRedirect('/?next=/quiz/?refid='+ ref_id)
+            
             if user['student_category_set'] == 0:
                 return HttpResponseRedirect('/')
             else:

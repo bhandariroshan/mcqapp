@@ -33,6 +33,7 @@ from .classes.query_database import QuestionApi, ExammodelApi,\
 from .decorators import user_authenticated_and_subscribed_required
 
 from apps.exam_api.views import ExamHandler
+from apps.mainapp.classes.referral import Referral
 
 
 def sign_up_sign_in(request, android_user=False):
@@ -76,13 +77,6 @@ def sign_up_sign_in(request, android_user=False):
     else:
         data['web_user'] = True
         data['registration_id'] = ''
-
-    ref_id = request.GET.get('refid')
-    if ref_id is not None:
-        from apps.mainapp.classes.referral import Referral
-        ref_obj = Referral()
-        user_id = request.user.id
-        ref_id = ref_obj.update_invite_accept_list(ref_id, user_id)
 
     mc = MailChimp()
     try:
@@ -159,11 +153,15 @@ def androidapk(request):
 
 
 def set_category(request):
+    parameters = {}
     if request.user.is_authenticated():
-        parameters = {}
-
         sign_up_sign_in(request, android_user=False)
-        # if request.GET.get('next') is not None:
+        ref_id = request.session.get('ref_id')
+        if ref_id is not None:
+            ref_obj = Referral()
+            user_id = request.user.id
+            if ref_obj.check_referral_storage(user_id) is None:
+                ref_id = ref_obj.update_invite_accept_list(ref_id, user_id)
             # return HttpResponseRedirect(request.GET.get('next'))
         user_profile_obj = UserProfile()
         user = user_profile_obj.get_user_by_username(request.user.username)
@@ -180,8 +178,17 @@ def set_category(request):
             context_instance=RequestContext(request)
         )
     else:
+        try:
+            del request.session['ref_id']
+        except:
+            pass
+        if request.GET.get('refid') is not None:
+            request.session['ref_id'] = request.GET.get('refid')
+            print 'id from session', request.session['ref_id']
+        # ref_id = request.GET.get('refid', '')
+        # parameters['ref_id'] = ref_id
         return render_to_response(
-            'landing.html', context_instance=RequestContext(request)
+            'landing.html', parameters, context_instance=RequestContext(request)
         )
 
 
@@ -192,7 +199,10 @@ def user_dashboard(request, exam_type):
     user_profile_obj = UserProfile()
     exam_model_api = ExammodelApi()
     user = user_profile_obj.get_user_by_username(request.user.username)
-
+    # get or set user referral id
+    ref_obj = Referral()
+    user_id = request.user.id
+    parameters['ref_id'] = ref_obj.get_referral_id(user_id)
     if user is None:
         raise Http404
 
