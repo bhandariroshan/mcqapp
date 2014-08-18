@@ -202,7 +202,10 @@ def user_dashboard(request, exam_type):
     # get or set user referral id
     ref_obj = Referral()
     user_id = request.user.id
-    parameters['ref_id'] = ref_obj.get_referral_id(user_id)
+    myref_obj = ref_obj.get_referral_id(user_id)
+    parameters['ref_id'] = myref_obj['uid']['id']
+    parameters['ref_count'] = len(myref_obj['invite_acceptuids'])
+
     if user is None:
         raise Http404
 

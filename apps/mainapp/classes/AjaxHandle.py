@@ -26,17 +26,17 @@ class AjaxHandle():
     def __init__(self):
         pass
 
-    def get_invite_ref_id(self, request):
-        if request.user.is_authenticated():
-            from apps.mainapp.classes.referral import Referral
-            ref_obj = Referral()
-            user_id = request.user.id
-            ref_id = ref_obj.get_referral_id(user_id)
-            return HttpResponse(json.dumps({'status': 'ok', 'ref_id': ref_id}))
-        else:
-            return HttpResponse(json.dumps(
-                {'status': 'error', 'message': 'You are not authorized to perform this action.'}
-            ))
+    # def get_invite_ref_id(self, request):
+    #     if request.user.is_authenticated():
+    #         from apps.mainapp.classes.referral import Referral
+    #         ref_obj = Referral()
+    #         user_id = request.user.id
+    #         ref_id = ref_obj.get_referral_id(user_id)
+    #         return HttpResponse(json.dumps({'status': 'ok', 'ref_id': ref_id}))
+    #     else:
+    #         return HttpResponse(json.dumps(
+    #             {'status': 'error', 'message': 'You are not authorized to perform this action.'}
+    #         ))
 
     def get_questions(self, request):
         if request.user.is_authenticated():
