@@ -157,12 +157,7 @@ def set_category(request):
     if request.user.is_authenticated():
         sign_up_sign_in(request, android_user=False)
         ref_id = request.session.get('ref_id')
-        if ref_id is not None:
-            ref_obj = Referral()
-            user_id = request.user.id
-            if ref_obj.check_referral_storage(user_id) is None:
-                ref_id = ref_obj.update_invite_accept_list(ref_id, user_id)
-            # return HttpResponseRedirect(request.GET.get('next'))
+
         user_profile_obj = UserProfile()
         user = user_profile_obj.get_user_by_username(request.user.username)
 
@@ -172,6 +167,12 @@ def set_category(request):
         elif 'BE-IOE' in user['student_category']:
             return HttpResponseRedirect('/ioe/')
 
+        # new user so add to referral
+        if ref_id is not None:
+            ref_obj = Referral()
+            user_id = request.user.id
+            if ref_obj.check_referral_storage(user_id) is None:
+                ref_id = ref_obj.update_invite_accept_list(ref_id, user_id)
         parameters['user'] = user
         return render_to_response(
             'setcategory.html', parameters,
