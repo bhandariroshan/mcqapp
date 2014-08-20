@@ -4,6 +4,10 @@
 <div class="row">
 <div class="centered twelve columns" style="margin-top:8%;">
     <h2 style="text-align: center;">Meroanswer Daily Quiz Leaderboard</h2>
+    <div style="float: right;">
+	    <div class="medium info btn" id="btn-week"><a href="{% url 'leaderboard' %}">This week</a></div>
+	    <div class="medium default btn" id="btn-all"><a href="{% url 'leaderboard' %}?filter=all">All time</a></div>
+    </div>
     <section class="tabs">
 		<ul class="tab-nav">
 		    	<li  id="ioeQuizLi"  > <a href="#">IOE Quiz</a></li>		    
@@ -16,18 +20,20 @@
 					<tr>
 						<th>Rank</th>
 						<th>User</th>
-						<th>Total quizzes attempted</th>
-						<th>Total Score</th>
+						<th>Quizzes attempted</th>
+						<th>Score</th>
 					</tr>
 				</thead>
 				<tbody>
 				{% for each_result in ioe_result %}
+				{% if each_result.total_score != 0 %}
 					<tr {% if each_result.user_id == request.user.id %} style="background-color: yellow;"{% endif %}>
 						<td>{{forloop.counter}}</td>	
 						<td><img src="{{each_result.profile_img}}">  {{each_result.name}}</td>	
 						<td>{{each_result.total_quiz}}</td>
 						<td><strong>{{each_result.total_score}}</strong></td>
 					</tr>
+					{% endif %}
 				{% endfor %}
 				</tbody>
 			</table>
@@ -39,18 +45,20 @@
 					<tr>
 						<th>Rank</th>
 						<th>User</th>
-						<th>Total quizzes attempted</th>
-						<th>Total Score</th>
+						<th>Quizzes attempted</th>
+						<th>Score</th>
 					</tr>
 				</thead>
 				<tbody>
 				{% for each in iom_result %}
+				{% if each.total_score != 0 %}
 					<tr {% if each.user_id == request.user.id %} style="background-color: yellow;"{% endif %}>
 						<td>{{forloop.counter}}</td>	
 						<td><img src="{{each.profile_img}}">  {{each.name}}</td>	
 						<td>{{each.total_quiz}}</td>
 						<td><strong>{{each.total_score}}</strong></td>
 					</tr>
+					{% endif %}
 				{% endfor %}
 				</tbody>
 			</table>
@@ -62,5 +70,22 @@
 
 {% endblock %}
 {% block javascript %}
-
+<script type="text/javascript">
+$(document).ready(function(){
+	if(location.href.indexOf('?filter=all') == -1){
+		console.log('week');
+		$("#btn-week").removeClass('default');
+		$("#btn-week").addClass('info');
+		$("#btn-all").removeClass('info');
+		$("#btn-all").addClass('default');
+	}
+	else{
+		console.log('all time');
+		$("#btn-all").removeClass('default');
+		$("#btn-all").addClass('info');
+		$("#btn-week").removeClass('info');
+		$("#btn-week").addClass('default');
+	}
+});
+</script>
 {% endblock %}
