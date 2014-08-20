@@ -8,15 +8,15 @@ from apps.mainapp.classes.SLCData import ResultRequest, ResultRequestSuccess
 
 
 def find_result(request): 
-    if request.method == "POST":
+    if request.method == "GET":
         cookie_jar = cookielib.CookieJar()
         opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cookie_jar))
         urllib2.install_opener(opener)
 
-        number = request.POST.get('number')
-        dob = request.POST.get('dob')
-        eyear = request.POST.get('eyear')
-        submit = request.POST.get('submit')
+        number = request.GET.get('number')
+        dob = request.GET.get('dob')
+        eyear = request.GET.get('eyear')
+        submit = request.GET.get('submit')
         device_id = request.POST.get('deviceId')
         uuid = request.POST.get('uuid')
         email = request.POST.get('email')
