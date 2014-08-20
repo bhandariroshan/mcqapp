@@ -1,6 +1,7 @@
 import random
 import datetime
 import time
+
 from bson.objectid import ObjectId
 
 from apps.mainapp.classes.query_database import QuestionApi, ExammodelApi
@@ -32,34 +33,25 @@ class GenerateQuiz():
         )['results']
         if exam_type == "ENGINEERING":
             exam_category = "BE-IOE"
-            last_quiz_number = exammodel_api.find_all_exammodel_descending(
-                {"exam_family": "QUIZ", "exam_category": "BE-IOE"},
-                fields={"quiz_number": 1},
-                sort_index="quiz_number",
-                limit=1
-            )
-            if len(last_quiz_number) > 0:
-                quiz_number = int(last_quiz_number[0]['quiz_number']) + 1
-            else:
-                quiz_number = 1
             exam_name = "Meroanswer IOE Daily Quiz"
             subjects.remove("english")
             marks = 2
 
         elif exam_type == "MEDICAL":
             exam_category = "MBBS-IOM"
-            last_quiz_number = exammodel_api.find_all_exammodel_descending(
-                {"exam_family": "QUIZ", "exam_category": "MBBS-IOM"},
-                fields={"quiz_number": 1},
-                sort_index="quiz_number",
-                limit=1
-            )
-            if len(last_quiz_number) > 0:
-                quiz_number = int(last_quiz_number[0]['quiz_number']) + 1
-            else:
-                quiz_number = 1
             exam_name = "Meroanswer IOM Daily Quiz"
             marks = 1
+
+        latest_exam_models = exammodel_api.find_all_exammodel_descending(
+            {"exam_family": "QUIZ", "exam_category": exam_category},
+            fields={"quiz_number": 1, "question_list": 1},
+            sort_index="quiz_number",
+            limit=2
+        )
+        if len(latest_exam_models) > 0:
+            quiz_number = int(latest_exam_models[0]['quiz_number']) + 1
+        else:
+            quiz_number = 1
 
         NUMBER_OF_QUESTIONS = len(subjects) * 2
         question_list = []
@@ -77,7 +69,18 @@ class GenerateQuiz():
             while random_num in random_list:
                 random_num = random.randrange(len(subject_questions))
             random_list.append(random_num)
-            question_list.append(ObjectId(subject_questions[random_num]['uid']['id']))
+            question_id = subject_questions[random_num]['uid']
+
+            while question_id in (
+                latest_exam_models[0]['question_list'] or latest_exam_models[1]['question_list']
+            ):
+                # generate unique random numbers to avoid repetition
+                while random_num in random_list:
+                    random_num = random.randrange(len(subject_questions))
+                random_list.append(random_num)
+                question_id = subject_questions[random_num]['uid']
+
+            question_list.append(ObjectId(question_id['id']))
 
         # insert the newly generated questions into exammodel collection
         # with exam code incremented by one
