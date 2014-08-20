@@ -5,22 +5,25 @@ import requests, urllib2, urllib, cookielib
 from Extract import extract
 from django.http import HttpResponseRedirect, HttpResponse
 from apps.mainapp.classes.SLCData import ResultRequest, ResultRequestSuccess
+from django.views.decorators.csrf import csrf_exempt
 
-
+@csrf_exempt
 def find_result(request): 
-    if request.method == "GET":
+    if request.method == "POST":
         cookie_jar = cookielib.CookieJar()
         opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cookie_jar))
         urllib2.install_opener(opener)
 
-        number = request.GET.get('number')
-        dob = request.GET.get('dob')
-        eyear = request.GET.get('eyear')
-        submit = request.GET.get('submit')
+        number = request.POST.get('number')
+        dob = request.POST.get('dob')
+        eyear = request.POST.get('eyear')
+        submit = request.POST.get('submit')
         device_id = request.POST.get('deviceId')
         uuid = request.POST.get('uuid')
         email = request.POST.get('email')
         phone = request.POST.get('phone')
+
+        print "ROSHAN"
 
 
         result_request = ResultRequest()
