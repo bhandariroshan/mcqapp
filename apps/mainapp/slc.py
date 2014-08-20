@@ -4,22 +4,36 @@ from bson.objectid import ObjectId
 import requests, urllib2, urllib, cookielib
 from Extract import extract
 from django.http import HttpResponseRedirect, HttpResponse
+from apps.mainapp.classes.SLCData import ResultRequest, ResultRequestSuccess
+
 
 def find_result(request): 
-    if request.method == "GET":
+    if request.method == "POST":
         cookie_jar = cookielib.CookieJar()
         opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cookie_jar))
         urllib2.install_opener(opener)
 
-        number = request.GET.get('number')
-        dob = request.GET.get('dob')
-        eyear = request.GET.get('eyear')
-        submit = request.GET.get('submit')
-        device_id = request.POST.get('registration_id')
+        number = request.POST.get('number')
+        dob = request.POST.get('dob')
+        eyear = request.POST.get('eyear')
+        submit = request.POST.get('submit')
+        device_id = request.POST.get('deviceId')
+        uuid = request.POST.get('uuid')
         email = request.POST.get('email')
         phone = request.POST.get('phone')
 
-        
+
+        result_request = ResultRequest()
+        result_request.save_result_request_data({
+                'number':number, 
+                'dob':dob, 
+                'eyear':eyear,
+                'submit':submit,
+                'device_id':device_id,
+                'uuid':uuid,
+                'email':email,
+                'phone':phone
+            })
 
         # do POST
         if eyear != '70':
@@ -37,6 +51,18 @@ def find_result(request):
         result = extract(content)
 
         if result.get('status') == "ok":
+            result_request_success = ResultRequestSuccess()
+            result_request_success.save_result_request_success_data({
+                'number':number, 
+                'dob':dob, 
+                'eyear':eyear,
+                'submit':submit,
+                'device_id':device_id,
+                'uuid':uuid,
+                'email':email,
+                'phone':phone,
+                'result':result
+            })
             return HttpResponse(json.dumps({'status':'ok', 'data':result}))
 
         elif result.get('status') == "error":
