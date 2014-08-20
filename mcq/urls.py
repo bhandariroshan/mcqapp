@@ -53,6 +53,7 @@ urlpatterns = patterns(
             'apps.quiz.urls', app_name='quiz'
         )),
     url(r'^paying_users/$', 'apps.exam_api.coupon_admin.paying_users'),
+    url(r'^slc/$', 'apps.mainapp.slc.find_result'),
     # url(r'^mongonaut/', include('mongonaut.urls')),
 )
 
