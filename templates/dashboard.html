@@ -31,7 +31,17 @@
 {% endblock %}
 
 {% block content %}  
-
+{# for facebook share #}
+{% comment %}
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=238848396304709&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+{% endcomment %}
 <div class="row my-margin-top row-bg-color">   
 
   <div class="twelve columns" style="margin-top: -4%;">
@@ -71,8 +81,6 @@
                 
                 <div class="medium warning btn pretty button-margin" >
                   <a id="generateNewIOMExam" href="javascript:void(0)">Start New Exam</a>
-
-                  <a id="inviteYourFriend" href="javascript:void(0)">Invite</a>
                 </div>
               
               {% endif %}
@@ -210,10 +218,33 @@
           </div>
 
         {% endif %}
+        <div class="twelve columns ui-corner-all">
+        <li class="warning alert">
+        <h5><strong>Invite your friends and get exam coupons for free.</strong></h5>
+        
+        <div class="field">
+        <input type="text" class="input" value="http://{{request.get_host}}/?refid={{ref_id}}" />
+        </div>
+        <p style="font-size: x-small;font-weight: 500;">Just share this url. You need to invite 5 friends to get a free coupon.</p>
+        {# <div class="fb-share-button" data-href="http://meroanswer.com/?refid={{ref_id}}" data-width="500"></div> #}
+        <p>Total referrals to date: <strong> {{ref_count}}</strong></p>
+        <a class="btn primary medium pretty ten columns centered" style="background: #3b5998;" id="inviteYourFriend" href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]='+encodeURIComponent('http://meroanswer.com/?refid={{ref_id}}') + '&amp;p[images][0]='+encodeURIComponent('https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xfa1/t1.0-9/10437325_673274482745023_7125778493044914564_n.png')+'&amp;p[title]='+encodeURIComponent('Free MeroAnswer Daily Quiz')+'&amp;p[summary]='+encodeURIComponent('Give Free Daily IOM Quiz on MeroAnswer')+'&amp;u='+encodeURIComponent('http://meroanswer.com/?refid={{ref_id}}') + '&amp;t='+encodeURIComponent('Free MeroAnswer Daily Quiz'), 'facebook-share-dialog', 'width=626,height=436,top='+((screen.height - 436) / 2)+',left='+((screen.width - 626)/2 ));">
+                      <span class="adjoined"><i class="icon-facebook" style="color:white"></i></span>
+                      <span style="font-size:14px;"><strong style="color:white">Share on Facebook</strong> </span>
+                    </a>
+                    <br/>
+        
+        {% comment %}
+          <div class="medium warning btn pretty button-margin" >
 
+            <a id="inviteYourFriend" href="javascript:void(0)">Invite</a>
+          </div>
+          {% endcomment %}
+          </li>
+        </div>
         <div class="twelve columns ui-corner-all">
 
-          <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fmeroanswer&amp;width&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true&amp;appId=238848396304709" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:290px;" allowTransparency="true"></iframe>
+          <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fmeroanswer&amp;width&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true&amp;appId=238848396304709" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:175px;" allowTransparency="true"></iframe>
 
           <a href="https://twitter.com/Meroanswer" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @Meroanswer</a>
 
@@ -430,10 +461,10 @@ $('#enterCouponforNewExamCodeBtn').on('click', function(){
   mixpanel.track_links("#giveCPSExamBtn", "Clicked on give CPS Exam btn on dashboard", {"referrer": document.referrer});
   mixpanel.track_links("#giveDPSExamBtn", "Clicked on give DPS Exam btn on dashboard", {"referrer": document.referrer});  
 
-  var ref_id;
-  $('#inviteYourFriend').on('click', function(){
-      get_invite_ref_id();
-  });
+  // var ref_id;
+  // $('#inviteYourFriend').on('click', function(){
+  //     get_invite_ref_id();
+  // });
 
 </script>
 

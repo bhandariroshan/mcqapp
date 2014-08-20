@@ -16,7 +16,8 @@ class Referral():
             self.table_name, {'useruid': int(user_id)}
         )
         if ref_id is not None:
-            return ref_id['uid']['id']
+            # return ref_id['uid']['id']
+            return ref_id
         else:
             self.db_object.insert_one(
                 self.table_name,
@@ -25,7 +26,8 @@ class Referral():
             ref_id = self.db_object.get_one(
                 self.table_name, {'useruid': int(user_id)}
             )
-            return ref_id['uid']['id']
+            # return ref_id['uid']['id']
+            return ref_id
 
     def update_invite_accept_list(self, ref_id, user_id):
         accept_time = datetime.datetime.now()
@@ -36,3 +38,7 @@ class Referral():
             {'invite_accept_ids':
                 {'useruid': int(user_id), 'accept_time': accept_time}}
         )
+
+    def check_referral_storage(self, useruid):
+        '''check if the referred object is already stored in invite_accept_ids'''
+        return self.db_object.get_one(self.table_name, {'invite_accept_ids.useruid': int(useruid)})
