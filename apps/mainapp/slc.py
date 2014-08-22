@@ -72,8 +72,8 @@ def find_result(request):
             total_marks_obtained = 0
 
             for eachScore in result['result']['scores']:
-                eachScore['subject'] = eachScore['subject'].capitalize()
-                total_full_marks +=100
+                eachScore['subject'] = eachScore['subject'].replace('COMP. ','').strip().capitalize()
+                total_full_marks += 100
                 total_theory_obtained = total_theory_obtained + int(eachScore['theory'])
                 try:
                     total_practical_obtained = total_practical_obtained + int(eachScore['practical'])
@@ -81,7 +81,8 @@ def find_result(request):
                     pass
                 total_marks_obtained = total_marks_obtained + int(eachScore['total_obtained'])
 
-            result['street'] = result['street'].capitalize()
+            result['result']['percentage'] = (total_marks_obtained/total_full_marks)*100
+            result['result']['street'] = result['result']['street'].capitalize()
             result['result']['total_theory_obtained'] = total_theory_obtained
             result['result']['total_practical_obtained'] = total_practical_obtained
             result['result']['total_full_marks'] = total_full_marks

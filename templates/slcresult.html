@@ -3,19 +3,19 @@
 <head>
 	<title>Mark Sheet</title>
 	<style type="text/css">
-		tr{
-			border:2px;
+		table, th, td {
+ 			  border: 1px solid black;
 		}
 	</style>
 </head>
-<body>
+<body style="background-color:papayawhip;">
 	<h2 style="text-align:center">SLC Mark sheet</h2>
 	<div style="width:100%; margin-left:1%;">
-		<div><strong>Name: {{result.name}}</strong></div>
-		<div><strong>Symbol: {{result.symbol}} </strong></div>
-		<div><strong>School: {{result.school}} </strong></div>
-		<div><strong>Address: {{result.district}} {{result.street}} </strong></div>
-		<div><strong>Year: {{result.year}} </strong></div>
+		<div><strong>Name: </strong>{{result.name}}</div>
+		<div><strong>Symbol: </strong>{{result.symbol}} </div>
+		<div><strong>School: </strong>{{result.school}} </strong></div>
+		<div><strong>Address: </strong>{{result.district}} {{result.street}} </div>
+		<div><strong>Year: </strong>{{result.year}} </div>
 	</div>
 	<br/>
 	<div style="width:100%;">
@@ -44,6 +44,22 @@
 				<td>{{result.total_practical_obtained}}</td>
 				<td>{{result.total_marks_obtained}}</td>
 				<td>{{result.total_full_marks}}</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><strong>Total</strong></td>
+				<td>{{result.total_theory_obtained}}</td>
+				<td>{{result.total_practical_obtained}}</td>
+				<td>{{result.total_marks_obtained}}</td>
+				<td>{{result.total_full_marks}}</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><strong>Percentage</strong></td>
+				<td>{{result.percentage|floatformat:"0"}}</td>
 			</tr>
 		</table>
 	</div>
