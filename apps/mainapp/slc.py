@@ -86,7 +86,7 @@ def find_result(request):
             result['result']['total_practical_obtained'] = total_practical_obtained
             result['result']['total_full_marks'] = total_full_marks
             result['result']['total_marks_obtained'] = total_marks_obtained
-            result['result']['percentage'] = float(total_marks_obtained/total_full_marks)*100
+            result['result']['percentage'] = float(total_marks_obtained)/total_full_marks*100
             result['result']['year'] = '20' + str(eyear)
 
             parameters = {'result':result['result']}
