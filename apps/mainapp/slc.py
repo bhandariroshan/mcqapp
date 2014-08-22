@@ -79,13 +79,14 @@ def find_result(request):
                     total_practical_obtained = total_practical_obtained + int(eachScore['practical'])
                 except:
                     pass
-                total_marks_obtained = total_marks_obtained + int(eachScore['total_obtained'])
-
-            result['result']['percentage'] = (total_marks_obtained/total_full_marks)*100
+            
+            total_marks_obtained = total_marks_obtained + total_theory_obtained + total_practical_obtained
             result['result']['street'] = result['result']['street'].capitalize()
             result['result']['total_theory_obtained'] = total_theory_obtained
             result['result']['total_practical_obtained'] = total_practical_obtained
             result['result']['total_full_marks'] = total_full_marks
+            result['result']['total_marks_obtained'] = total_marks_obtained
+            result['result']['percentage'] = (total_marks_obtained/total_full_marks)*100
             result['result']['year'] = '20' + str(eyear)
 
             parameters = {'result':result['result']}
