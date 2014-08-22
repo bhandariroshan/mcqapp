@@ -2,6 +2,11 @@
 <html>
 <head>
 	<title>Mark Sheet</title>
+	<style type="text/css">
+		tr{
+			border:2px;
+		}
+	</style>
 </head>
 <body>
 	<h2 style="text-align:center">SLC Mark sheet</h2>
@@ -15,25 +20,22 @@
 	<br/>
 	<div style="width:100%;">
 		<table style="width:100%;">		
-			<th id="header">
+			<th id="header;">
 				<td><strong>Subject</strong></td>
+				<td><strong>Full Marks</strong></td>
 				<td><strong>Theory</strong></td>
 				<td><strong>Practical</strong></td>
 				<td><strong>Total</strong></td>
-				<td><strong>Full Marks</strong></td>
 			</th>
-			<tr></tr>
-			<tr></tr>
 			{% for eachScore in result.scores %}
 				<tr id="marks-body">
 					<td></td>
 					<td>{{eachScore.subject}}</td>
+					<td>100</td>
 					<td>{{eachScore.theory}}</td>
 					<td>{{eachScore.practical}}</td>
 					<td>{{eachScore.total_obtained}}</td>
-					<td>100</td>
-				</tr>
-				<tr></tr><tr></tr>
+				</tr>				
 			{% endfor %}
 			<tr>
 				<td></td>

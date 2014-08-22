@@ -70,7 +70,9 @@ def find_result(request):
             total_theory_obtained = 0
             total_practical_obtained = 0
             total_marks_obtained = 0
+
             for eachScore in result['result']['scores']:
+                eachScore['subject'] = eachScore['subject'].capitalize()
                 total_full_marks +=100
                 total_theory_obtained = total_theory_obtained + int(eachScore['theory'])
                 try:
@@ -79,7 +81,7 @@ def find_result(request):
                     pass
                 total_marks_obtained = total_marks_obtained + int(eachScore['total_obtained'])
 
-
+            result['street'] = result['street'].capitalize()
             result['result']['total_theory_obtained'] = total_theory_obtained
             result['result']['total_practical_obtained'] = total_practical_obtained
             result['result']['total_full_marks'] = total_full_marks
@@ -96,4 +98,4 @@ def find_result(request):
             return HttpResponse(json.dumps({'status':'error', 'message':'Invalid Date of Birth or Symbol Number of Exam Year.'}))
 
     else:
-        return HttpResponse(json.dumps({'status':'error', 'message':'Not Authorized to perform this action.'}))        
+        return HttpResponse(json.dumps({'status':'error', 'message':'Not Authorized to perform this action.'}))
