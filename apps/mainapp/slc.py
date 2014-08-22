@@ -6,6 +6,7 @@ from Extract import extract
 from django.http import HttpResponseRedirect, HttpResponse
 from apps.mainapp.classes.SLCData import ResultRequest, ResultRequestSuccess
 from django.views.decorators.csrf import csrf_exempt
+from django.shortcuts import render_to_response
 
 @csrf_exempt
 def find_result(request): 
@@ -52,7 +53,6 @@ def find_result(request):
 
 
         result = extract(content)
-
         if result.get('status') == "ok":
             result_request_success = ResultRequestSuccess()
             result_request_success.save_result_request_success_data({
@@ -65,8 +65,29 @@ def find_result(request):
                 'email':email,
                 'phone':phone,
                 'result':result
-            })
-            return HttpResponse(json.dumps({'status':'ok', 'data':result}))
+            })  
+            total_full_marks = 0          
+            total_theory_obtained = 0
+            total_practical_obtained = 0
+            total_marks_obtained = 0
+            for eachScore in result['result']['scores']:
+                total_full_marks +=100
+                total_theory_obtained = total_theory_obtained + int(eachScore['theory'])
+                try:
+                    total_practical_obtained = total_practical_obtained + int(eachScore['practical'])
+                except:
+                    pass
+                total_marks_obtained = total_marks_obtained + int(eachScore['total_obtained'])
+
+
+            result['result']['total_theory_obtained'] = total_theory_obtained
+            result['result']['total_practical_obtained'] = total_practical_obtained
+            result['result']['total_full_marks'] = total_full_marks
+
+            parameters = {'result':result['result']}
+            my_result_html = str(render_to_response('slcresult.html',parameters))
+            my_result_html = my_result_html.replace('Content-Type: text/html; charset=utf-8', '')            
+            return HttpResponse(json.dumps({'status':'ok', 'data':result['result'], 'html':my_result_html}))
 
         elif result.get('status') == "error":
             return HttpResponse(json.dumps({'status':'error', 'message':'Unknown error occurred in the server. Please try again later.'}))
