@@ -83,6 +83,7 @@ def find_result(request):
             result['result']['total_theory_obtained'] = total_theory_obtained
             result['result']['total_practical_obtained'] = total_practical_obtained
             result['result']['total_full_marks'] = total_full_marks
+            result['result']['year'] = '20' + str(eyear)
 
             parameters = {'result':result['result']}
             my_result_html = str(render_to_response('slcresult.html',parameters))

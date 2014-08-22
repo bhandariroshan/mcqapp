@@ -10,7 +10,7 @@
 		<div><strong>Symbol: {{result.symbol}} </strong></div>
 		<div><strong>School: {{result.school}} </strong></div>
 		<div><strong>Address: {{result.district}} {{result.street}} </strong></div>
-		<!-- <div><strong>Year: 2071 </strong></div> -->
+		<div><strong>Year: {{result.year}} </strong></div>
 	</div>
 	<br/>
 	<div style="width:100%;">
@@ -20,6 +20,7 @@
 				<td><strong>Theory</strong></td>
 				<td><strong>Practical</strong></td>
 				<td><strong>Total</strong></td>
+				<td><strong>Full Marks</strong></td>
 			</th>
 			<tr></tr>
 			<tr></tr>
@@ -30,6 +31,7 @@
 					<td>{{eachScore.theory}}</td>
 					<td>{{eachScore.practical}}</td>
 					<td>{{eachScore.total_obtained}}</td>
+					<td>100</td>
 				</tr>
 				<tr></tr><tr></tr>
 			{% endfor %}
@@ -39,6 +41,7 @@
 				<td>{{result.total_theory_obtained}}</td>
 				<td>{{result.total_practical_obtained}}</td>
 				<td>{{result.total_marks_obtained}}</td>
+				<td>{{result.total_full_marks}}</td>
 			</tr>
 		</table>
 	</div>
