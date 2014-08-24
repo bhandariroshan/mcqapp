@@ -17,8 +17,10 @@ def get_html_ntc(symbol_no, date_of_birth):
     soup = BeautifulSoup(r.text)
     matches = soup.findAll('td', {'valign':'top'})
     html_parser = HTMLParser.HTMLParser()
-
+    
     subjects = html_parser.unescape(str(matches[0])).replace('<td valign="top">','').replace('</td>','').split('<br/><br/>')[0:8]
+
+    return {'subjects':subjects, 'matches':matches, 'response':soup}
     new_subjects = []
     for eachSubject in subjects:
         eachSubject = eachSubject.replace("\n",'').replace('\t','')
@@ -44,6 +46,7 @@ def get_html_ntc(symbol_no, date_of_birth):
         eachSubject = eachSubject.replace("\n",'').replace('\t','')
         total_marks.append(eachSubject)
     
+
     return_list = []
     for i in range(0,8):
         marks_dic = {}
@@ -59,3 +62,4 @@ def get_html_ntc(symbol_no, date_of_birth):
     # except:
     #     return {'status':"error", 'message':'no result'}
 
+print get_html_ntc(symbol_no='0295639', date_of_birth='2054-09-20')
