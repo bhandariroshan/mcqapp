@@ -40,7 +40,8 @@ def find_result(request):
             })
 
         # do POST
-        if eyear != '70':
+        print "Request received"
+        if int(eyear) < '70':
             base_url = 'http://verify.soce.gov.np/index.php'
             values = dict(number=str(number), dob=str(dob), eyear=str(eyear), submit='Search')
             data = urllib.urlencode(values)
@@ -51,7 +52,8 @@ def find_result(request):
             
         else:
             from slcntc import get_html_ntc
-            result = get_html_ntc(number, dob)
+            result = get_html_ntc(number, dob)            
+            print result
             
 
         if result.get('status') == "ok":
