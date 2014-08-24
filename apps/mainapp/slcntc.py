@@ -47,7 +47,7 @@ def get_html_ntc(symbol_no, date_of_birth):
     
 
     return_list = []
-    return {'subjects':new_subjects, 'practical':practical_marks, 'theory':theory_marks, 'total':total_marks}
+    return {'subjects':len(new_subjects), 'practical':len(practical_marks), 'theory':len(theory_marks), 'total':len(total_marks)}
     for i in range(0,len(new_subjects)):
         marks_dic = {}
         marks_dic['subject'] = new_subjects[i]        
