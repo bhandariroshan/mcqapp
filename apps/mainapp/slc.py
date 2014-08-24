@@ -42,17 +42,18 @@ def find_result(request):
         # do POST
         if eyear != '70':
             base_url = 'http://verify.soce.gov.np/index.php'
+            values = dict(number=str(number), dob=str(dob), eyear=str(eyear), submit='Search')
+            data = urllib.urlencode(values)
+            req = urllib2.Request(base_url, data)
+            rsp = urllib2.urlopen(req)
+            content = rsp.read()
+            result = extract(content)
+            
         else:
-            base_url = 'http://slc.ntc.net.np'
+            from slcntc import get_html_ntc
+            result = get_html_ntc(number, dob)
+            
 
-        values = dict(number=str(number), dob=str(dob), eyear=str(eyear), submit='Search')
-        data = urllib.urlencode(values)
-        req = urllib2.Request(base_url, data)
-        rsp = urllib2.urlopen(req)
-        content = rsp.read()
-
-
-        result = extract(content)
         if result.get('status') == "ok":
             result_request_success = ResultRequestSuccess()
             result_request_success.save_result_request_success_data({
