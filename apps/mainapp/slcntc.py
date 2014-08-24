@@ -20,7 +20,6 @@ def get_html_ntc(symbol_no, date_of_birth):
     
     subjects = html_parser.unescape(str(matches[0])).replace('<td valign="top">','').replace('</td>','').split('<br/><br/>')[0:8]
 
-    return {'subjects':str(subjects), 'matches':str(matches), 'response':soup}
     new_subjects = []
     for eachSubject in subjects:
         eachSubject = eachSubject.replace("\n",'').replace('\t','')
@@ -48,7 +47,8 @@ def get_html_ntc(symbol_no, date_of_birth):
     
 
     return_list = []
-    for i in range(0,8):
+    return {'subjects':new_subjects, 'practical':practical_marks, 'theory':theory_marks, 'total':total_marks}
+    for i in range(0,len(new_subjects)):
         marks_dic = {}
         marks_dic['subject'] = new_subjects[i]        
         marks_dic['theory'] =  theory_marks[i]
