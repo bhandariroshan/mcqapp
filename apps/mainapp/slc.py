@@ -20,12 +20,11 @@ def find_result(request):
         eyear = request.POST.get('eyear')
         submit = request.POST.get('submit')
         device_id = request.POST.get('deviceId')
-        uuid = request.POST.get('uuid')
-        email = request.POST.get('email')
-        phone = request.POST.get('phone')
-
-        print "ROSHAN"
-
+        email = request.POST.get('email')        
+        tmSerial = request.POST.get('tmserial')
+        phone =  request.POST.get('phone')
+        tmdevice  = request.POST.get('tmdevice')
+    
 
         result_request = ResultRequest()
         result_request.save_result_request_data({
@@ -34,8 +33,9 @@ def find_result(request):
                 'eyear':eyear,
                 'submit':submit,
                 'device_id':device_id,
-                'uuid':uuid,
                 'email':email,
+                'tmSerial':tmSerial,    
+                'tmdevice':tmdevice,
                 'phone':phone
             })
 
@@ -61,11 +61,14 @@ def find_result(request):
                 'eyear':eyear,
                 'submit':submit,
                 'device_id':device_id,
-                'uuid':uuid,
                 'email':email,
+                'tmSerial':tmSerial,
+                'tmdevice':tmdevice,
                 'phone':phone,
                 'result':result
             })  
+
+
             total_full_marks = 0          
             total_theory_obtained = 0
             total_practical_obtained = 0
