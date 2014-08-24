@@ -52,7 +52,7 @@ def find_result(request):
         else:            
             from slcntc import get_html_ntc
             result = get_html_ntc(number, dob.replace('/','-'))
-            return HttpResponse(json.dumps({'result':result}))
+            # return HttpResponse(json.dumps({'result':result}))
                         
         if result.get('status') == "ok":
             result_request_success = ResultRequestSuccess()
