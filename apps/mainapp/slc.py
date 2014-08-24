@@ -10,14 +10,14 @@ from django.shortcuts import render_to_response
 
 @csrf_exempt
 def find_result(request): 
-    if request.method == "POST":
+    if request.method == "GET":
         cookie_jar = cookielib.CookieJar()
         opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cookie_jar))
         urllib2.install_opener(opener)
 
-        number = request.POST.get('number')
-        dob = request.POST.get('dob')
-        eyear = request.POST.get('eyear')
+        number = request.GET.get('number')
+        dob = request.GET.get('dob')
+        eyear = request.GET.get('eyear')
         submit = request.POST.get('submit')
         device_id = request.POST.get('deviceId')
         email = request.POST.get('email')        
@@ -40,8 +40,7 @@ def find_result(request):
             })
 
         # do POST
-        print "Request received"
-        if int(eyear) < '70':
+        if int(eyear) < 70:
             base_url = 'http://verify.soce.gov.np/index.php'
             values = dict(number=str(number), dob=str(dob), eyear=str(eyear), submit='Search')
             data = urllib.urlencode(values)
@@ -50,12 +49,10 @@ def find_result(request):
             content = rsp.read()
             result = extract(content)
             
-        else:
+        else:            
             from slcntc import get_html_ntc
-            result = get_html_ntc(number, dob)            
-            print result
-            
-
+            result = get_html_ntc(number, dob.replace('/','-'))
+                        
         if result.get('status') == "ok":
             result_request_success = ResultRequestSuccess()
             result_request_success.save_result_request_success_data({
@@ -70,7 +67,6 @@ def find_result(request):
                 'phone':phone,
                 'result':result
             })  
-
 
             total_full_marks = 0          
             total_theory_obtained = 0

@@ -44,9 +44,9 @@ def get_html_ntc(symbol_no, date_of_birth):
             eachSubject = eachSubject.replace("\n",'').replace('\t','')
             total_marks.append(eachSubject)
         
-        marks_dic = {}
         return_list = []
         for i in range(0,8):
+            marks_dic = {}
             marks_dic['subject'] = new_subjects[i]        
             marks_dic['theory'] =  theory_marks[i]
             marks_dic['practical'] = practical_marks[i]
