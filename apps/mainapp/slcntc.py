@@ -18,32 +18,31 @@ def get_html_ntc(symbol_no, date_of_birth):
     matches = soup.findAll('td', {'valign':'top'})
     html_parser = HTMLParser.HTMLParser()
     
-
     subjects = html_parser.unescape(str(matches[0])).replace('<td valign="top">','').replace('</td>','').split('<br><br>')[0:8]
-    
+
     new_subjects = []
     for eachSubject in subjects:
-        eachSubject = eachSubject.replace("\n",'').replace('\t','').replace('<br>','').replace('<br/>','')
+        eachSubject = eachSubject.replace("\n",'').replace('\t','').replace('<br>','').replace('<br/>','').replace('</br>','')
         new_subjects.append(eachSubject)
 
     
     theory = html_parser.unescape(str(matches[1])).replace('<td valign="top"><div align="center">','').replace('</div></td>','').split('<br><br>')[0:8]
     theory_marks = []
     for eachSubject in theory:
-        eachSubject = eachSubject.replace("\n",'').replace('\t','').replace('<br>','').replace('<br/>','')
+        eachSubject = eachSubject.replace("\n",'').replace('\t','').replace('<br>','').replace('<br/>','').replace('</br>','')
         theory_marks.append(eachSubject)
 
     practical = html_parser.unescape(str(matches[2])).replace('<td valign="top"><div align="center">','').replace('</div></td>','').split('<br><br>')[0:8]
     practical_marks = []
     for eachSubject in practical:
-        eachSubject = eachSubject.replace("\n",'').replace('\t','').replace('<br>','').replace('<br/>','')
+        eachSubject = eachSubject.replace("\n",'').replace('\t','').replace('<br>','').replace('<br/>','').replace('</br>','')
         practical_marks.append(eachSubject)
 
     
     total = html_parser.unescape(str(matches[3])).replace('<td valign="top"> <div align="right">','').replace('</div></td>','').split('<br><br>')[0:8]
     total_marks = []
     for eachSubject in total:
-        eachSubject = eachSubject.replace("\n",'').replace('\t','').replace('<br>','').replace('<br/>','')
+        eachSubject = eachSubject.replace("\n",'').replace('\t','').replace('<br>','').replace('<br/>','').replace('</br>','')
         total_marks.append(eachSubject)
     
 
