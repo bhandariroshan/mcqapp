@@ -20,7 +20,7 @@ def get_html_ntc(symbol_no, date_of_birth):
     
     subjects = html_parser.unescape(str(matches[0])).replace('<td valign="top">','').replace('</td>','').split('<br/><br/>')[0:8]
 
-    return {'subjects':subjects, 'matches':matches, 'response':soup}
+    return {'subjects':str(subjects), 'matches':str(matches), 'response':soup}
     new_subjects = []
     for eachSubject in subjects:
         eachSubject = eachSubject.replace("\n",'').replace('\t','')
