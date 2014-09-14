@@ -12,7 +12,7 @@ urlpatterns = patterns(
     url(r'^latex-store$', 'apps.mainapp.views.add_html'),
     url(r'^latex-get-data/$', 'apps.mainapp.views.get_all_questions'),
     url(r'^latex$', 'apps.mainapp.views.latex_html'),
-    
+
     url(r'^generate-coupon/(?P<subscription_type>\w{1,15})/$',
         'apps.mainapp.views.generate_coupon'),
     url(r'^get-coupons/(?P<subscription_type>\w{1,15})/$',
@@ -26,6 +26,7 @@ urlpatterns = patterns(
     url(r'^accounts/', include('allauth.urls')),
     url(r'^', include('apps.mainapp.urls', app_name='mainapp')),
     url(r'^exam/', include('apps.exam_api.urls', app_name='exam_api')),
+    url(r'^question/', include('apps.question.urls', app_name='question')),
     url(r'^subscription/', 'apps.mainapp.views.subscription'),
     url(r'^distributors/', 'apps.mainapp.views.distributors'),
     url(r'^request/', 'apps.mainapp.views.request_coupon'),

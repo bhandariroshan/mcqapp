@@ -1,0 +1,39 @@
+{% load staticfiles %}
+{% load tags_extra %}
+
+<form action="." method="POST"> {% csrf_token %}
+    {% if form.errors %}
+        {% for error in form.errors %}
+            <div class="field danger">
+                <strong>{{ error|escape }}</strong>
+            </div>
+        {% endfor %}
+    {% endif %}
+    {% for field in form.visible_fields %}
+        <ul>
+            <li class="field">
+                {% if not field|is_checkbox %}
+                    <label class="inline" for="text1">{{field.label_tag}}</label>
+                    {% if field.field.required %}*{% endif %}
+                {% endif %}
+            </li>
+            <li class="field">
+                {% if field.field.required %}
+                    {{field | add_html_attr:'{"required":"required"}' }}
+                {% else %}
+                    
+                    {{field }}
+                {% endif %}
+                {% for error in field.errors %}
+                    <div class="field danger">
+                        <strong>{{ error|escape }}</strong>
+                    </div>
+                {% endfor %}
+            </li>
+        </ul>
+    {% endfor %}
+    {% for field in form.hidden_fields %}
+        {{field}}
+    {% endfor %}
+    <input class="xlarge btn default" type="submit" value="Submit" />
+</form>
