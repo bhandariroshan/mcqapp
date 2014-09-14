@@ -15,5 +15,5 @@ class SignupForm(forms.Form):
     # exam_type = forms.MultipleChoiceField(required=True,
     #     widget=forms.CheckboxSelectMultiple, choices=EXAM_CHOICES)
 
-    def signup(self, request, user):
-        print 'signup function called'
+    # def signup(self, request, user):
+    #     print 'signup function called'

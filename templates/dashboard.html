@@ -87,7 +87,31 @@
             
             </div>
 
-          </article>              
+          </article> 
+          <article class="valign row text-color-white ui-widget-content ui-corner-all my-margin" style="border: 1px solid red;">
+            <div style="width:25%">
+              <img src="/static/images/exam.jpg" width="145px" />
+            </div>
+            
+            <div style="width:65%">
+              
+              
+              {% if exam_type == 'iom' %}
+              
+                <h4><a href="#" id=""><strong>Start New MOE Practice Exam</strong></a></h4>
+                <p><strong>Date: </strong>When ever you like in a single sitting</p>
+                <p><strong>Time: </strong>Anytime</p>
+                <p><strong>Cost: </strong>Rs. 20 (<a href="/coupon/">coupon code</a> entry required)</p>
+                
+                <div class="medium warning btn pretty button-margin" >
+                  <a id="generateNewMOEExam" href="javascript:void(0)">Start New MOE Exam</a>
+                </div>
+              
+              {% endif %}
+            
+            </div>
+
+          </article>                          
           
           {% for eachExam in all_dps_exams %}
         
@@ -438,6 +462,16 @@ $('#generateNewIOMExam').on('click', function(){
   ex_type = 'mbbs-iom';
     {% if all_subscribed or iom_subscribed %}
       get_new_exam('mbbs-iom');
+      {% else %}
+        var html_str = 'Coupon codes are available at various <a href="/#/" style="color:red;"><strong>distributors</strong></a>. <h3 style="font-weight:bold"> Please enter code below</h3>';
+        $('#infoText').html(html_str); 
+        $('#validateCouponforNewExam').click();
+    {% endif %}
+  });
+$('#generateNewMOEExam').on('click', function(){
+  ex_type = 'mbbs-moe';
+    {% if all_subscribed or iom_subscribed %}
+      get_new_exam('mbbs-moe');
       {% else %}
         var html_str = 'Coupon codes are available at various <a href="/#/" style="color:red;"><strong>distributors</strong></a>. <h3 style="font-weight:bold"> Please enter code below</h3>';
         $('#infoText').html(html_str); 
