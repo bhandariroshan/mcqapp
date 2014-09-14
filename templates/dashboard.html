@@ -88,6 +88,7 @@
             </div>
 
           </article> 
+          {% if exam_type == 'iom' %}
           <article class="valign row text-color-white ui-widget-content ui-corner-all my-margin" style="border: 1px solid red;">
             <div style="width:25%">
               <img src="/static/images/exam.jpg" width="145px" />
@@ -96,7 +97,6 @@
             <div style="width:65%">
               
               
-              {% if exam_type == 'iom' %}
               
                 <h4><a href="#" id=""><strong>Start New MOE Practice Exam</strong></a></h4>
                 <p><strong>Date: </strong>When ever you like in a single sitting</p>
@@ -107,11 +107,11 @@
                   <a id="generateNewMOEExam" href="javascript:void(0)">Start New MOE Exam</a>
                 </div>
               
-              {% endif %}
             
             </div>
 
           </article>                          
+          {% endif %}
           
           {% for eachExam in all_dps_exams %}
         
@@ -130,7 +130,11 @@
                 <p><strong>Time: </strong>Anytime</p>
                 
                 <div class="medium primary btn pretty button-margin" >
+                  {% if eachExam.exam_category != "MBBS-MOE" %}
                   <a id="giveDPSExamBtn" href="/{{exam_type}}/dps/{{eachExam.exam_code}}/">Take Exam</a>
+                  {% else %}
+                  <a id="giveDPSExamBtn" href="/moe/dps/{{eachExam.exam_code}}/">Take Exam</a>
+                  {% endif %}
                 </div>
           
               </div>
@@ -143,7 +147,7 @@
         
         <div id="upcomingExams" class="tab-content">
           
-          {% for eachExam in all %}
+          {% for eachExam in all_cps_exams %}
             
             <article class="valign row text-color-white ui-widget-content ui-corner-all my-margin {% if eachExam.exam_subscribed %} subscribed {% else %} notsubscribed {% endif %}">
               
