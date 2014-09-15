@@ -7,7 +7,8 @@ from django.template import RequestContext
 from django.http import HttpResponse
 
 from apps.random_questions.views import generate_random_ioe_questions, generate_random_iom_questions
-from apps.exam_api.views import ExamHandler
+from apps.random_questions.views import generate_random_moe_questions
+from apps.exam_api.views import ExamHandler, save_user_answers
 
 from .Coupon import Coupon
 from .Userprofile import UserProfile
@@ -234,9 +235,7 @@ class AjaxHandle():
             )
 
     def save_answer(self, request):
-        print request.user
         if request.user.is_authenticated():
-            from apps.exam_api.views import save_user_answers
             ess = ExamStartSignal()
             exam_code = request.POST.get('exam_code', '')
             validate = ess.check_exam_started(
@@ -695,9 +694,10 @@ class AjaxHandle():
             ex_type = request.POST.get('type')
             if ex_type == 'be-ioe':
                 exam_code = generate_random_ioe_questions(request)
-            else:
+            elif ex_type == 'mbbs-iom':
                 exam_code = generate_random_iom_questions(request)
-
+            elif ex_type == 'mbbs-moe':
+                exam_code = generate_random_moe_questions(request)
             user_profile_obj.save_valid_exam(
                 request.user.username, int(exam_code)
             )

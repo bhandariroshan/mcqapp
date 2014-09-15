@@ -181,6 +181,31 @@
       <link rel="stylesheet" href="{% static "css/subscriptionplans.css" %}">
 
   {% endif %}
+  {% if 'dps' in request.path %}
+      <title>Practice Exam | MeroAnswer</title>
+      <!-- Facebook Metadata /-->
+      <meta property="og:image" content="http://meroanswer.com/static/images/logos/meroanswerfb.png">
+      <meta property="og:description" content="">
+      <meta property="og:title" content="Practice Exam | MeroAnswer">
+
+      <!-- Google+ Metadata /-->
+      <meta itemprop="name" content="Practice Exam | MeroAnswer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="">
+  {% endif %}
+
+  {% if 'cps' in request.path %}
+      <title>Competitive Exam | MeroAnswer</title>
+      <!-- Facebook Metadata /-->
+      <meta property="og:image" content="http://meroanswer.com/static/images/logos/meroanswerfb.png">
+      <meta property="og:description" content="">
+      <meta property="og:title" content="Competitive Exam | MeroAnswer">
+
+      <!-- Google+ Metadata /-->
+      <meta itemprop="name" content="Competitive Exam | MeroAnswer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="">
+  {% endif %}
 
   {% if 'ioe' in request.path %}
         <title>IOE | MeroAnswer</title>
@@ -208,31 +233,6 @@
         <meta itemprop="image" content="">
     {% endif %}
 
-  {% if 'dps' in request.path %}
-      <title>Practice Exam | MeroAnswer</title>
-      <!-- Facebook Metadata /-->
-      <meta property="og:image" content="http://meroanswer.com/static/images/logos/meroanswerfb.png">
-      <meta property="og:description" content="">
-      <meta property="og:title" content="Practice Exam | MeroAnswer">
-
-      <!-- Google+ Metadata /-->
-      <meta itemprop="name" content="Practice Exam | MeroAnswer">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="">
-  {% endif %}
-
-  {% if 'cps' in request.path %}
-      <title>Competitive Exam | MeroAnswer</title>
-      <!-- Facebook Metadata /-->
-      <meta property="og:image" content="http://meroanswer.com/static/images/logos/meroanswerfb.png">
-      <meta property="og:description" content="">
-      <meta property="og:title" content="Competitive Exam | MeroAnswer">
-
-      <!-- Google+ Metadata /-->
-      <meta itemprop="name" content="Competitive Exam | MeroAnswer">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="">
-  {% endif %}
 
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">

@@ -37,6 +37,8 @@ urlpatterns = patterns(
         'apps.exam_api.coupon_admin.subscribe_user_to_exam'),
     url(r'^iom/dps/(?P<exam_code>\w{1,15})/$',
         'apps.mainapp.views.attend_dps_exam'),
+    url(r'^moe/dps/(?P<exam_code>\w{1,15})/$',
+        'apps.mainapp.views.attend_dps_exam'),
     url(r'^favicon\.ico$',
         RedirectView.as_view(
             url=settings.STATIC_URL + 'images/logos/favicon.ico')
@@ -54,7 +56,7 @@ urlpatterns = patterns(
             'apps.quiz.urls', app_name='quiz'
         )),
     url(r'^paying_users/$', 'apps.exam_api.coupon_admin.paying_users'),
-    
+
     # url(r'^mongonaut/', include('mongonaut.urls')),
 )
 

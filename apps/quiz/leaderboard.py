@@ -55,14 +55,12 @@ class LeaderBoardView(View):
                     ).filter(
                         attempted_date__lte=end_week_timestamp
                     ).sum('quiz_score')
-                    print score
                     total_quiz = len(QuizResult.objects.filter(
                         user_id=each_user, quiz_type=each,
                         attempted_date__gte=start_week_timestamp
                     ).filter(
                         attempted_date__lte=end_week_timestamp
                     ))
-                    print total_quiz
                     data['total_score'] = int(score)
                     data['total_quiz'] = int(total_quiz)
                     if each == 'MBBS-IOM':

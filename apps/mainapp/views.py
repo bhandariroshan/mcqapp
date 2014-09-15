@@ -185,7 +185,6 @@ def set_category(request):
             pass
         if request.GET.get('refid') is not None:
             request.session['ref_id'] = request.GET.get('refid')
-            print 'id from session', request.session['ref_id']
         # ref_id = request.GET.get('refid', '')
         # parameters['ref_id'] = ref_id
         return render_to_response(
