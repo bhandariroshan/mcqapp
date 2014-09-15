@@ -1,41 +1,33 @@
 import json
 
-from bson.objectid import ObjectId
-from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import render_to_response
-from django.template import RequestContext
+from django.http import HttpResponse
+from django.views.generic import FormView
+from django.utils.decorators import method_decorator
+from django.contrib.auth.decorators import user_passes_test
 
 from apps.mainapp.classes.query_database import QuestionApi
 
 from .forms import QuestionForm
 
 
-def add_question(request):
-    parameters = RequestContext(request)
-    if request.method == "POST":
-        question_form = QuestionForm(request.POST)
-        parameters['question_form'] = question_form
-        if question_form.is_valid():
-            new_form = question_form.save()
-            print new_form
-            return HttpResponseRedirect('/')
-        else:
-            parameters['question_form'] = question_form
-            render_to_response('superuser/question_form.html', parameters)
-    else:
-        question_form = QuestionForm()
-        parameters['question_form'] = question_form
-        return render_to_response('superuser/question_form.html', parameters)
+class QuestionCreateView(FormView):
 
+    template_name = 'superuser/question_form.html'
+    form_class = QuestionForm
+    success_url = '/question/add/'
 
-def question_update_ui(request, question_id):
-    """ This view is used to update any question in the database
-    """
+    @method_decorator(user_passes_test(lambda u: u.is_superuser))
+    def dispatch(self, *args, **kwargs):
+        return super(QuestionCreateView, self).dispatch(*args, **kwargs)
 
-    question_api_object = QuestionApi()
-    selected_question = question_api_object.find_one_question(
-        {'_id': ObjectId(question_id)})
-    return HttpResponse(json.dumps(selected_question))
+    def form_valid(self, form):
+        # This method is called when valid form data has been POSTed.
+        # It should return an HttpResponse.
+        form.save()
+        return super(QuestionCreateView, self).form_valid(form)
+
+# class QuestionUpdateView(View):
+#     template_name
 
 
 def landing(request):

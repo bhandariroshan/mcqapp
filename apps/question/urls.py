@@ -1,5 +1,6 @@
 from django.conf.urls import patterns, url
 
+from .views import QuestionCreateView
 
 urlpatterns = patterns(
 
@@ -10,10 +11,10 @@ urlpatterns = patterns(
         name='question_landing'),
 
     url(r'^add/$',
-        'apps.question.views.add_question',
+        QuestionCreateView.as_view(),
         name='add_question'),
 
-    url(r'^(?P<question_id>[-\w]+)/$',
-        'apps.question.views.question_update_ui',
-        name='question_update_ui'),
+    # url(r'^(?P<question_id>[-\w]+)/$',
+    #     'apps.question.views.question_update_ui',
+    #     name='question_update_ui'),
 )
