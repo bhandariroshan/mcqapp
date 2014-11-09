@@ -11,6 +11,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  
   <link rel="shortcut icon" href="{% static "images/logos/favicon.ico" %}" type="image/x-icon">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   
   <meta property="fb:app_id" content="238848396304709" />
   <meta property="fb:admins" content="100001185973732" /> 
@@ -250,7 +251,33 @@
   <link rel="stylesheet" href="http://gumbyframework.com/css/prism.css?v=091613">
 
   <style type="text/css">
-  
+
+    .boxing{
+      box-sizing: border-box;
+      -webkit-box-shadow: 0 1px 2px 1px rgba(0,0,0,0.25);
+      box-shadow: 0 1px 2px 1px rgba(0,0,0,0.25);
+      background-color: #fff;
+      -webkit-border-radius: 1px;
+      border-radius: 1px;
+      margin-top: 15px;
+    }
+    
+    .fatick{
+        font-size: 18px;
+        color: green;
+        float: left;
+        padding-left: 10px;
+        padding-top: 4px;
+      }
+    
+    .facross{
+        font-size: 18px;
+        color: red;
+        float: left;
+        padding-left: 10px;
+        padding-top: 4px;
+    }
+    
   .tos-margin{
     margin-left: 14%;
     margin-right: 17%;
@@ -288,7 +315,7 @@
       padding: 150px 0;
     }
   .section-signup{
-    min-height: 600px;
+    min-height: 700px;
   }
 
   .over{
@@ -313,8 +340,8 @@
       width: 60%; 
     }
     .my-margin-top{
-      margin-top: 7%;
-      margin-bottom: 7%;
+      margin-top: 2%;
+      margin-bottom: 2%;
     }
     .my-width{
       width: 100%;
@@ -371,8 +398,21 @@
     }
     .tiles.two_up {
       margin-left: 0%;
-    }*/
+    }*/    
     {% endif %}
+    .navbar{      
+        max-height: 70px;
+    }
+    .modal {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -999999;
+      background: black;
+      background: rgba(0, 0, 0, 0.8);
+    }
   </style>
   <!-- <link rel="stylesheet" href="css/style.css"> -->
   <script src="{% static "js/modernizr-min.js" %}"></script>
@@ -381,9 +421,8 @@
 {% block head %}
 {% endblock %}
 </head>
-<body class="{% if request.user.is_authenticated %} bgimage {% endif %} over">
-<div id="fb-root"></div>  
-  <div class="navbar fixed" id="nav1" gumby-fixed="top" data-target="top" style="top: 0px;">
+<body class="{% if request.user.is_authenticated %} bgimage {% endif %} over">  
+  <div class="navbar {% if not request.user.is_authenticated %} fixed {% endif %} " id="nav1" {% if not request.user.is_authenticated %}  gumby-fixed="top" {%  endif %} data-target="top" style="top: 0px;">
     <a class="toggle" gumby-trigger="#nav1 > ul" href="#"><i class="icon-menu"></i></a>
     {% if request.user.is_authenticated %}<div class="row">{% endif %}
       <h2 class="columns logo" style="{% if not request.user.is_authenticated %} margin-left:10%; {% endif %}">
@@ -395,9 +434,10 @@
       {% if not request.user.is_authenticated %}
       <ul class="" style="float:right;clear:none; margin-right: 50px;">
         <!-- <li><a href="#whatisit">What is it?</a></li> -->
-        <li><a href="/" data-scroll-nav="1">How it works</a></li>
-        <li><a href="/" data-scroll-nav="2">Android app</a></li>
+        <!-- <li><a href="/" data-scroll-nav="1">How it works</a></li>
+        <li><a href="/" data-scroll-nav="2">Android app</a></li> -->
         <!-- <li><a href="#main-signup">Join</a></li> -->
+        <li><a href="#">contribute</a></li>
         <li>
           <!-- <div class="medium primary btn pretty" style="background: #3b5998;"> -->
           <a id="fbLoginNavbar" href="{% provider_login_url "facebook" method="oauth2" %}">
@@ -412,9 +452,9 @@
       <ul class="eight columns" style="float:right;clear:none;">
         <!-- <li><a href="#">Partners</a></li> -->
         <!-- <li><a href="/iom/">IOM</a></li> -->
-        <li><a href="/coupon/">Request coupon</a></li>
+        <!-- <li><a href="/coupon/">Request coupon</a></li> -->
         <li><a href="/distributors/">Coupon Distributors</a></li>
-        <li><a href="/subscription/">Subscription Models</a></li>
+        <li><a href="/subscription/">Premium Plan</a></li>
         {% comment %}
         {% if 'dps' in request.path or 'cps' in request.path %}
           <li>
@@ -424,7 +464,7 @@
         {% endcomment %}
         <li>
           <a href="#"><img src="{{profile_img_url}}" width="25px"><span style="vertical-align: super;"> {{user.name}} </span><i class="icon-down-open" style="vertical-align: super;"></i></a>
-          <div class="dropdown" style="width:180px;{% if 'terms' in request.path or 'privacy' in request.path or 'results' in request.path or 'answers' in request.path %} margin-left: 0px;{% endif %}">
+          <div class="dropdown" style="<!-- width:180px; -->{% if 'terms' in request.path or 'privacy' in request.path or 'results' in request.path or 'answers' in request.path %} margin-left: 0px;{% endif %}">
             <ul>
               <li><a href="/accounts/logout">logout</a></li>
             </ul>
@@ -437,7 +477,7 @@
 
 {% block content %}
 {% endblock %}
-<div id="trigger_gumby_div" style="visibility:hidden;" class="pretty medium primary btn switch" gumby-trigger="#modalentercouponcode"></div>
+<div id="trigger_gumby_div" style="visibility:hidden;" class="" gumby-trigger="#modalentercouponcode"></div>
 <div class="modal" id="modalentercouponcode">
   <div class="content">
     <a class="close switch" gumby-trigger="|#modalentercouponcode" id="closeEnterCoupon"><i class="icon-cancel" /></i></a>
@@ -466,11 +506,11 @@
   <footer role="contentinfo" class="site-footer">
     <div class="row">
         <p style="text-align:center;">
+          <a id="blog" href="http://blog.meroanswer.com">Blog</a>&nbsp;&nbsp;
           <a id="terms" href="/terms/">Terms of Service</a>&nbsp;&nbsp;
           <a id="privacy" href="/privacy/">Privacy policy</a>&nbsp;&nbsp;
-          <!-- <a id="partners" href="#">Partners</a>&nbsp;&nbsp; -->
           <a id="distributors" href="/distributors/">Coupon Distributors</a>&nbsp;&nbsp;
-          <a id="subscriptionModels" href="/subscription/">Subscription Models</a>&nbsp;&nbsp;
+          <a id="subscriptionModels" href="/subscription/">Subscription Plans</a>&nbsp;&nbsp;
         </p>
     </div>
     <div class="row">

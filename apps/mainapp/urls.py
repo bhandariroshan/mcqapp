@@ -17,5 +17,7 @@ urlpatterns = patterns(
     url(r'coupons/$', 'apps.mainapp.views.couponspage_redirect'),
     url(r'^ajax-handler/(?P<func_name>\w{1,40})$',
         'apps.mainapp.home.ajax_request', name='ajax_handle'),
+    
+
     # url(r'^demo/$', 'apps.mainapp.views.demo', name='demo'),
 )

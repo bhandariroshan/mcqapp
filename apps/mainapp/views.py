@@ -36,6 +36,41 @@ from apps.exam_api.views import ExamHandler
 from apps.mainapp.classes.referral import Referral
 
 
+def new_dashboard(request):
+    parameters = {}
+    if request.user.is_authenticated():
+        # exam_dict = {'ioe': 'BE-IOE', 'iom': 'MBBS-IOM'}
+        user_profile_obj = UserProfile()
+        # exam_model_api = ExammodelApi()
+        user = user_profile_obj.get_user_by_username(request.user.username)
+        # get or set user referral id
+        # ref_obj = Referral()
+        # user_id = request.user.id
+        # myref_obj = ref_obj.get_referral_id(user_id)
+        # parameters['ref_id'] = myref_obj['uid']['id']
+        # parameters['ref_count'] = len(myref_obj['invite_acceptuids'])
+
+        if user is None:
+            raise Http404
+
+        parameters['user'] = user
+        return render_to_response(
+                'newdashboard.html', parameters, context_instance=RequestContext(request)
+            )
+    else:        
+        try:
+            del request.session['ref_id']
+        except:
+            pass
+        if request.GET.get('refid') is not None:
+            request.session['ref_id'] = request.GET.get('refid')
+        # ref_id = request.GET.get('refid', '')
+        # parameters['ref_id'] = ref_id
+        return render_to_response(
+            'landing.html', parameters, context_instance=RequestContext(request)
+        )
+
+
 def sign_up_sign_in(request, android_user=False):
     social_account = SocialAccount.objects.get(user__id=request.user.id)
     user_profile_object = UserProfile()
@@ -585,17 +620,102 @@ def attend_dps_exam(request, exam_code):
         #     context_instance=RequestContext(request)
         # )
 
-
+@csrf_exempt
 def subscription(request):
     parameters = {}
     user_profile_obj = UserProfile()
+    if request.method == 'POST':
+        formtype = request.POST.get('formtype')
+        if formtype == None:
+            email = request.POST.get('email')
+            name = request.POST.get('name')
+            phone = request.POST.get('phone')
+            parameters ['name_error'],  parameters['phone_error'], parameters['email_error'] = False, False, False
+
+            if email == '':
+                parameters['email_error'] = True
+                parameters['email_error_message'] = 'Please enter a valid email.'
+            if len(phone) < 6:
+                parameters['phone_error'] = True
+                parameters['phone_error_message'] = 'Please enter a valid phone.'
+
+            if len(name) < 3:
+                parameters['name_error'] = True
+                parameters['name_error_message'] = 'Please enter a valid name.'
+
+            if parameters['name_error'] or parameters['email_error'] or parameters['phone_error']:
+                parameters['success'] = False
+            else:
+                parameters['success'] = True
+
+            subject = 'New premium coupon request in MeroAnswer. '
+            message_body = ''
+            message_body = '\
+            <table cellpadding="2" cellspacing="0">\
+                <tr style="background-color:#6C7F40;">\
+                    <td style="width:30%; color: #fff;">Name</td>\
+                    <td style="width:50%; color: #fff;">Email</td>\
+                    <td style="width:20%; color: #fff;">Phone</td>\
+                </tr>'
+            
+            message_body = message_body + '<tr>'
+            message_body = message_body + '<td style="width:30%; font-size: 11px; color: #444;">' + str(name) + '\
+            </td><td style="width:50%; font-size: 11px; color: #444;">' + str(email) + '</td>'
+            message_body = message_body + '<td style="width:20%; font-size: 11px; color: #444;">'+ str(phone) + '</a></td>'
+            message_body = message_body + '</tr>'
+
+            from apps.mainapp.classes.CouponRequestEmail import CouponEmail
+            email_obj = CouponEmail()
+            message_body = message_body + '</table>'
+            if request.user.is_authenticated():
+                details = {'name':name, 'phone':phone, 'email':email, 'username':request.user.username}
+            else:
+                details = {'name':name, 'phone':phone, 'email':email}
+            email_obj.send_mail(
+                subject, 
+                [
+                    {'name':'main', 'content':message_body},
+                    {'name':'inbox','content':''''''}
+                ], 
+                [{'email':'brishi98@gmail.com'}, {'email':'info@phunka.com'}], details)
+        else:
+            coupon_obj = Coupon()
+            coupon_code = request.POST.get('coupon', '')
+            user_profile_obj = UserProfile()
+            user = user_profile_obj.get_user_by_username(request.user.username)
+
+            if coupon_obj.has_susbcription_plan_in_coupon(coupon_code):
+                coupon_obj.change_used_status_of_coupon(
+                    coupon_code, request.user.username
+                )
+                user_profile_obj.change_subscription_plan(
+                    request.user.username, coupon_code
+                )
+                user_profile_obj.save_coupon(
+                    request.user.username, coupon_code
+                )
+                coupon_obj.change_used_status_of_coupon(
+                    coupon_code, request.user.username
+                )
+                parameters['coupon_message'] = 'Congratulations, you have sussessfully subscribed.'
+                parameters['coupon_message_true'] = True
+            else:
+                pass
+                
+
     user = user_profile_obj.get_user_by_username(request.user.username)
     parameters['user'] = user
+    if 'BE-IOE' in user['subscription_type'] or 'MBBS-IOM' in user['subscription_type']:
+        parameters['is_user_subscribed'] = True
+    else:
+        parameters['is_user_subscribed'] = False
+
     return render_to_response(
-        'subscription.html',
-        parameters,
-        context_instance=RequestContext(request)
-    )
+            'subscription.html', 
+            parameters, 
+            context_instance=RequestContext(request)
+        )
+
 
 
 def tos(request):
@@ -715,6 +835,9 @@ def get_coupons(request, subscription_type):
 @login_required
 def results(request, exam_code):
     parameters = {}
+    user_profile_obj = UserProfile()
+    user = user_profile_obj.get_user_by_username(request.user.username)
+    parameters['user'] = user
     exam_obj = ExammodelApi()
     exam_details = exam_obj.find_one_exammodel({'exam_code': int(exam_code)})
 

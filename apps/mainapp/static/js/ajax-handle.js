@@ -80,6 +80,11 @@ function get_new_exam_success(data){
 			window.location = '/moe/dps/' + data['exam_code']
 		}
 	}
+	else{
+		var html_str = data['message'] + 'You need to be a premium user to access full features. <a href="/subscription/" style="color:red"> Learn more about premium plans and fill the form for subscription</a>. <br/>' ;
+        $('#infoText').html(html_str); 
+        $('#validateCouponforNewExam').click();
+	}
 }
 
 function get_questions(exm_code){

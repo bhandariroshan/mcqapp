@@ -1,0 +1,463 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load result_extra %}
+{% block head %}
+  <style type="text/css">
+    .picker select {
+      width: 0%;
+    }
+    .my-margin{
+      margin-bottom: 10px;
+    }
+    .button-margin{
+      margin-bottom: 10px;
+    }
+    .subscribed{
+      border: 2px solid #63C22D;
+    }
+    .notsubscribed{
+     border: 1px solid #134450; 
+    }
+    .icon-color-subscribed{
+      color: green;
+    }
+   .icon-color-notsubscribed{
+      color: #134450;
+    }
+    .myicon{
+      font-size: 20px;
+    }
+    .columns {
+       margin-left: 0%; 
+    }
+    .subjectcard{
+      box-shadow: 0 1px 2px 0 #555;
+      border-top: 1px solid rgba(0,0,0,0.1);
+      margin-bottom: 0;
+      width: 343px;
+      height: 251px;
+      overflow: hidden;
+      background-color: #fff;
+      margin-right:1%;
+      margin-bottom: 2%;
+      text-align: center;
+    }
+
+  </style>
+{% endblock %}
+
+{% block content %}  
+
+<div class="row  row-bg-color boxing">   
+
+  <div class="twelve columns">
+    <div class="twelve columns">  
+
+      <section class="six columns tabs" style="margin-top: 4%;">
+        <ul class="tab-nav">
+          <li class="active"><a href="javascript:void(0)" id="DPSExamsTab">Practice Exams</a></li> 
+          <!-- <li><a href="javascript:void(0)" id="CPSExamsTab">Free Daily Quiz</a></li> -->
+        </ul>
+
+        <div id="upcomingPracticeExams" class="tab-content active">
+
+          <article class="valign twelve columns text-color-white ui-widget-content ui-corner-all my-margin" style="border: 1px solid red;">
+            <div style="width:25%">
+              <img src="/static/images/medicine.jpg" width="100px" style="padding-top: 4px;padding-left: 4px;" />
+            </div>
+            
+            <div style="width:65%">
+                <h5><a href="#" id=""><strong>IOM Practice Exam</strong></a></h5>
+                <p><strong>Time: </strong>Anytime</p>
+                <!-- <p><strong>Cost: </strong>Rs. 20 (<a href="/coupon/">coupon code</a> entry required)</p> -->
+                
+                <div class="small primary btn pretty button-margin" >
+                  <a id="generateNewIOMExam" href="javascript:void(0)">Start New Exam</a>
+                </div>
+            </div>
+          </article> 
+
+          <article class="valign twelve columns text-color-white ui-widget-content ui-corner-all my-margin" style="border: 1px solid red;">
+            <div style="width:25%">
+              <img src="/static/images/engg.jpg" width="100px" style="padding-top: 4px;padding-left: 4px;" />
+            </div>
+            
+            <div style="width:65%">
+                <h5><a href="#" id=""><strong>IOE Practice Exam</strong></a></h5>
+                <p><strong>Time: </strong>Anytime</p>
+                <!-- <p><strong>Cost: </strong>Rs. 20 (<a href="/coupon/">coupon code</a> entry required)</p> -->
+                
+                <div class="small primary btn pretty button-margin" >
+                  <a id="generateNewIOEExam" href="javascript:void(0)">Start New Exam</a>
+                </div>
+            </div>
+          </article> 
+        </div> 
+        
+      </section> 
+
+      <section class="six columns tabs" style="margin-top: 4%;">
+        <ul class="tab-nav">
+          <li class="active"><a href="javascript:void(0)" id="dailyQuizTab">Free Daily Quiz</a></li> 
+          <!-- <li><a href="javascript:void(0)" id="CPSExamsTab">Free Daily Quiz</a></li> -->
+        </ul>
+
+        <div id="freeDailyQuiz" class="tab-content active">
+
+          <article class="valign twelve columns text-color-white ui-widget-content ui-corner-all my-margin" style="border: 1px solid red;">
+            <div style="width:25%">
+              <img src="/static/images/medicine.jpg" width="100px" style="padding-top: 4px;padding-left: 4px;" />
+            </div>
+            
+            <div style="width:65%">
+                <h5><a href="#" id=""><strong>IOM Daily Quiz</strong></a></h5>                
+                <p><strong>Type: </strong>Free</p>
+                <!-- <p><strong>Cost: </strong>Rs. 20 (<a href="/coupon/">coupon code</a> entry required)</p> -->
+                
+                <div class="small primary btn pretty button-margin" >
+                  <a  href="/quiz/mbbs-iom/">Start Quiz</a>
+                </div>
+            </div>
+          </article> 
+
+          <article class="valign twelve columns text-color-white ui-widget-content ui-corner-all my-margin" style="border: 1px solid red;">
+            <div style="width:25%">
+              <img src="/static/images/engg.jpg" width="100px" style="padding-top: 4px;padding-left: 4px;" />
+            </div>
+            
+            <div style="width:65%">
+                <h5><a href="#" id=""><strong>IOE Daily Quiz</strong></a></h5>
+                <p><strong>Type: </strong>Free</p>
+                <!-- <p><strong>Cost: </strong>Rs. 20 (<a href="/coupon/">coupon code</a> entry required)</p> -->                
+                <div class="small primary btn pretty button-margin" >
+                  <a href="/quiz/be-ioe/">Start Quiz</a>
+                </div>
+            </div>
+          </article> 
+        </div> 
+        
+      </section>
+
+      <section class="twelve columns tabs" style="margin-top: 0%;">
+          <ul class="tab-nav">
+            <li class="active"><a href="javascript:void(0)" id="subjectPractice">Subject Test</a></li> 
+          </ul>
+          
+          <div id="subjectPractice" class="tab-content active" >
+            <article class="valign four columns subjectcard my-margin" style="">
+                <div style="width:100%">
+                <a href="/test/physics" id="">
+                  <img src="/static/images/physics.jpg" width="100%"  style="padding-left: 5px; padding-right: 5px; padding-top: 5px; height: 200px;" />
+                  <h4><strong>Physics</strong></h4>
+                </a>
+                </div>
+            </article> 
+
+            <article class="valign four columns subjectcard my-margin" style="">
+                <div style="width:100%">
+                <a href="/test/chemistry" id="">
+                  <img src="/static/images/chemistry.png" width="100%"  style="padding-left: 5px;padding-top: 5px; padding-right: 5px; height: 200px;" />
+                  <h4><strong>Chemistry</strong></h4>
+                </a>
+                </div>
+
+            </article> 
+
+            <article class="valign four columns subjectcard my-margin" style="">
+                <div style="width:100%">
+                <a href="/test/zoology" id="">
+                  <img src="/static/images/zoology.jpg" width="100%"  style="padding-left: 5px;padding-top: 5px; padding-right: 5px; height: 200px;" />
+                  <h4><strong>Zoology</strong></h4>                
+                </a>
+                </div>
+            </article> 
+
+            <article class="valign four columns subjectcard my-margin" style="">              
+                <div style="width:100%">
+                <a href="/test/botany" id="">
+                  <img src="/static/images/botany.jpg" width="100%"  style="padding-left: 5px;padding-top: 5px; padding-right: 5px; height: 200px;" />
+                  <h4><strong>Botany</strong></h4>                
+                </a>
+                </div>
+            </article> 
+
+            <article class="valign four columns subjectcard my-margin" style="">
+                <div style="width:100%">
+                <a href="/test/mathematics" id="">
+                  <img src="/static/images/mathematics.jpg" width="100%"  style="padding-left: 5px; padding-top: 5px; padding-right: 5px; height: 200px;" />
+                  <h4><strong>Mathematics</strong></h4>                
+                </a>
+                </div>
+            </article> 
+
+            <article class="valign four columns subjectcard my-margin" style="">
+                <div style="width:100%">
+                <a href="drawing" id="">
+                  <img src="/static/images/drawing.png" width="100%"  style="padding-left: 5px;padding-top: 5px;padding-right: 5px; height: 200px;" />
+                  <h4><strong>Drawing</strong></h4>                
+                </a>
+                </div>
+              </div>
+            </article> 
+
+
+
+            <article class="valign four columns subjectcard my-margin" style="">
+                <div style="width:100%">
+                  <a href="/test/english/" id="">
+                  <img src="/static/images/english.jpg" width="100%"  style="padding-left: 5px;padding-top: 5px; padding-right: 5px; height: 200px;" />
+                  <h4><strong>English</strong></h4>                
+                  </a>
+                </div>
+
+            </article> 
+
+          </div>          
+        </section> 
+
+
+    </div>
+  
+    <!-- <div class="four columns" style="margin-top: 8%;">
+      
+    </div> -->
+
+  </div> 
+
+</div>
+
+<div id="validateCouponforNewExam" style="visibility:hidden;" class="pretty medium primary btn switch" gumby-trigger="#enterCouponforNewExam">
+</div>
+
+<div class="modal" id="enterCouponforNewExam">
+  
+  <div class="content">
+
+    <a class="close switch" gumby-trigger="|#enterCouponforNewExam" id="closeEnterCoupon"><i class="icon-cancel" /></i></a>
+
+    <div class="row">
+      
+      <div id="dangerMessageNewExam" style="color: red;margin-left: 15%;"></div>
+      
+      <div class="ten columns centered text-center" style="margin-top:6%;">
+        
+        <!--         <p id="infoText">Coupon code are necessary to ensure smooth conducting of examination. Every time you take exam, you need to enter coupon code available at various <a href="/distributors/" style="color:red;"><strong>distributors</strong></a>. Please enter <strong>your</strong> coupon code</p> -->
+          <p id="infoText" style="padding-top: 8%;"></p>
+          <!--         <li class="prepend field">
+          <span class="adjoined">Coupon: </span>
+
+          <input id="enterCouponforNewExamCode" class="xwide text input" type="text" placeholder="Please enter the coupon code" />
+
+        </li> -->
+
+        <!-- <li class="prepend field">
+
+          <button class="medium primary btn" type="submit">
+
+            <a id="enterCouponforNewExamCodeBtn" href="#">Start Exam</a>
+
+          </button>
+
+        </li> -->
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div id="validateCPSCoupon" style="visibility:hidden;" class="pretty medium primary btn switch" gumby-trigger="#validateCPSCouponModal">
+</div>
+
+<div class="modal" id="validateCPSCouponModal">
+
+  <div class="content">
+
+    <a class="close switch" gumby-trigger="|#validateCPSCouponModal" id="closeEnterCoupon"><i class="icon-cancel" /></i></a>
+
+    <div class="row">
+      
+      <div id="dangerMessageCPSExam" style="color: red;margin-left: 15%;">
+      </div>
+      
+      <div class="ten columns centered text-center" style="margin-top:6%;">
+        
+        <p id="infoText">Coupon code are necessary to ensure smooth conducting of examination. Every time you take exam, you need to enter coupon code available at various <a href="/distributors/" style="color:red;"><strong>distributors</strong></a>. Please enter <strong>your</strong> coupon code</p>
+
+        <li class="prepend field">
+
+          <span class="adjoined">Coupon: </span>
+
+          <input id="enterCPSCoupon" class="xwide text input" type="text" placeholder="Please enter the coupon code" />
+
+        </li>
+
+        <li class="prepend field">
+
+          <button class="medium primary btn" type="submit">
+
+            <a id="enterCPSCouponBtn" href="#">Start Exam</a>
+
+          </button>
+
+        </li>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div id="trigger_gumby_div" style="visibility:hidden;" class="pretty medium primary btn switch" gumby-trigger="#details_div">
+</div>
+
+<div class="modal" id="details_div">
+
+  <div class="content">
+
+    <a class="close switch" gumby-trigger="|#details_div" id="closeDetailsDiv"><i class="icon-cancel" /></i></a>
+
+    <div class="row">
+
+      <div id="dangerMessage"></div>
+
+      <div class="ten columns centered text-center" style="margin-top:6%;">
+
+        <p id="infoText">Daily Quizes are free. But, you can practice very limited questions in daily quizes. To get full access to thousands of questions, get a coupon or <a href="/subscription/" style="color:red;"><strong>subscribe</strong></a> to one of our model. Coupon codes are available at various 
+          
+          <a href="/coupon/" style="color:red;"><strong>distributors</strong></a>
+        
+        </p>
+
+        <li class="prepend field">
+
+          <button class="medium primary btn" type="submit">
+
+            <a href="#" onclick="$('#closeDetailsDiv').click()">Close</a>
+
+          </button>
+
+        </li>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+{% endblock %}
+
+{% block javascript %}
+<script src="{% static "js/ajax-handle.js" %}"></script>
+
+<script type="text/javascript">
+var ex_code;
+var ex_type;
+
+  function attempt_exam(exam_code){
+    ex_code=exam_code;
+    $('#infoText').html('');
+    
+      var html_str = 'Coupon codes are available at various <a href="/coupon/" style="color:red;"><strong>distributors</strong></a>.<h3 style="font-weight:bold"> Please enter code below</h3>'
+      $('#infoText').html(html_str);
+    /*is_subscribed(exam_code);    */
+    $('#trigger_gumby_div').click();
+  }
+
+  function validate_coupon_code() {
+    coupon_id = $('#couponID').val();
+    /*alert(ex_code);*/
+    validate_coupon(ex_code, coupon_id);
+    return false;
+  }
+
+  function save_category(){
+    ioeCheck = $('#ioeCheck').prop('checked');
+    iomCheck = $('#ioeCheck').prop('checked');
+    ajax_save_category(ioeCheck, iomCheck);
+  }
+
+$('#enterCouponforNewExamCode').keypress(function(e) {
+    if(e.which == 13) {
+    var code = $('#enterCouponforNewExamCode').val();
+    chek_valid_dps_code(code);
+    }
+});
+
+$('#generateNewIOEExam').on('click', function(){
+  ex_type = 'be-ioe';
+  get_new_exam('be-ioe');
+
+
+    {% comment %}
+      {% if all_subscribed or ioe_subscribed %}
+        get_new_exam('be-ioe');
+        {% else %}
+          var html_str = 'Coupon codes are available at various <a href="/#/" style="color:red;"><strong>distributors</strong></a>. <h3 style="font-weight:bold"> Please enter code below</h3>';
+          $('#infoText').html(html_str);
+          $('#validateCouponforNewExam').click();
+      {% endif %}
+    {% endcomment %}
+
+
+  });
+  
+$('#generateNewIOMExam').on('click', function(){
+  ex_type = 'mbbs-iom';
+  get_new_exam('mbbs-iom');
+
+
+      {% comment %}
+        {% if all_subscribed or iom_subscribed %}
+          get_new_exam('mbbs-iom');
+          {% else %}
+            var html_str = 'Coupon codes are available at various <a href="/#/" style="color:red;"><strong>distributors</strong></a>. <h3 style="font-weight:bold"> Please enter code below</h3>';
+            $('#infoText').html(html_str); 
+            $('#validateCouponforNewExam').click();
+        {% endif %}
+      {% endcomment %}
+
+
+  });
+
+$('#generateNewMOEExam').on('click', function(){
+  ex_type = 'mbbs-moe';
+    {% if all_subscribed or iom_subscribed %}
+      get_new_exam('mbbs-moe');
+      {% else %}
+        var html_str = 'Coupon codes are available at various <a href="/#/" style="color:red;"><strong>distributors</strong></a>. <h3 style="font-weight:bold"> Please enter code below</h3>';
+        $('#infoText').html(html_str); 
+        $('#validateCouponforNewExam').click();
+    {% endif %}
+  });
+
+$('#enterCouponforNewExamCodeBtn').on('click', function(){
+    var code = $('#enterCouponforNewExamCode').val();
+    chek_valid_dps_code(code, ex_type);
+});
+
+</script>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<script type="text/javascript">
+  mixpanel.track_links("#DPSExamsTab", "Viewed DPS Exams on dashboard", {"referrer": document.referrer});
+  mixpanel.track_links("#CPSExamsTab", "Viewed CPS Exams on dashboard", {"referrer": document.referrer});
+  mixpanel.track_links("#enterSubsCoupon", "Clicked on enter a subscription coupon on dashboard", {"referrer": document.referrer});
+  mixpanel.track_links("#giveCPSExamBtn", "Clicked on give CPS Exam btn on dashboard", {"referrer": document.referrer});
+  mixpanel.track_links("#giveDPSExamBtn", "Clicked on give DPS Exam btn on dashboard", {"referrer": document.referrer});  
+
+  // var ref_id;
+  // $('#inviteYourFriend').on('click', function(){
+  //     get_invite_ref_id();
+  // });
+
+</script>
+
+{% endblock %}

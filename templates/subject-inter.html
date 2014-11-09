@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load result_extra %}
+{% block head %}
+  <style type="text/css">
+    .picker select {
+      width: 0%;
+    }
+    .my-margin{
+      margin-bottom: 10px;
+    }
+    
+    .button-margin{
+      margin-bottom: 10px;
+    }
+    .subscribed{
+      border: 2px solid #63C22D;
+    }
+    .notsubscribed{
+     border: 1px solid #134450; 
+    }
+    .icon-color-subscribed{
+      color: green;
+    }
+   .icon-color-notsubscribed{
+      color: #134450;
+    }
+    .myicon{
+      font-size: 20px;
+    }
+    .columns {
+       margin-left: 0%; 
+    }
+    .page-content{
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 20px;
+        border: 1px solid #dedede;
+        background: #FFF;
+        -moz-box-shadow: 0 0 5px #dedede;
+        -webkit-box-shadow: 0 0 5px #dedede;
+        box-shadow: 0 0 5px #dedede;
+        margin-right: 2%;
+    }
+
+
+    .breadcrumbs{
+        /*margin-bottom: 70px;*/
+        line-height: 50px;
+        color: #FFF;        
+        background-color: #9CCB69;
+        /*margin-top: 4%;*/
+    }
+
+    .row{
+          width: 100%;
+          max-width: 1125px;
+          min-width: 320px;
+          margin: 0 auto;
+          padding-left: 20px;
+          padding-right: 20px;
+          margin-bottom: 4%;
+    }
+    .boxedtitle{
+          -webkit-box-shadow: none;
+          box-shadow: none;
+          background: transparent;
+          position: relative;
+          margin-bottom: 10px !important;
+          margin: -20px -2px 20px;          
+    }
+    .body{
+      background-color: #f3f3f3;
+    }
+    .text-justify{
+      text-align: justify;      
+    }
+    .page-content p{
+            font-size: 14px;
+            font-weight: normal;
+    }
+    .btn-width{
+      min-width:300px;
+      margin-bottom: 2%;
+    }
+    .btn.large {
+          font-size: 26px;
+          font-size: 1.125rem;
+    }
+  </style>
+{% endblock %}
+
+{% block content %}  
+<div class="breadcrumbs">          
+      <div class="row">
+          <div class="eleven columns">
+              <h3><strong>{{subject_name}}</strong></h3>
+          </div>
+          <div class="one column">
+              <div id="timer" data-seconds="900"></div>
+          </div>
+      </div><!-- End row -->
+</div>
+
+<div class="row my-margin-top row-bg-color">   
+  <div class="twelve columns" >
+    <div class="four columns page-content">      
+        <a href="/test/history/{{subject_name|lower}}/" class="btn warning large pretty btn-width">Test history</a>      
+        <a href="/test/start/{{subject_name|lower}}/" class="btn warning large pretty btn-width">Start new test</a>      
+        <a href="javascript:void(0)" class="btn warning large pretty btn-width">Chapter Test(coming soon)</a> 
+    </div>
+    <div class="eight columns">
+      <div class="page-content expertOpinion">
+          {% if error %}
+            <li class="warning alert">
+            {{error_message_generate_subject_exam}} You need to be a premium user to access full features. <a href="/subscription/" style="color:red"> Learn more about premium plans and fill the form for subscription</a>.  You can also view exam history by clicking the Test history button.<br/> 
+            </li><br/>
+          {% endif %}
+        <div class="boxedtitle page-title"><h3 style="color: brown;"><strong>Instructions for test</strong></h3><hr/></div>
+        <p class="text-justify">
+              General users will have ability to attempt sbuject test single times. However you can view the history of the test. 
+        </p>
+        <p class="text-justify">
+          Premium users can attend any number of tests. To get Premium membership, please fill the form and we will call you how to get the membership. 
+        </p>
+        <p class="text-justify">
+              Subject test comprises of 15 question in each set. You will need to attend the test in 15 minutes. You will have ability to see the history from the test history button. Premium users can generate any number of test.
+        </p>
+        <p class="text-justify">
+              Each subject consists of hundreds of questions you can attempt. We are working hard to bring chapter-wise practice sets, developing proper solutions and explanations to each problems.
+        </p>
+
+        <p class="text-justify">
+              After you start a new test, there will be answer sheet on the right corner, you can click on each question number to revise your answer.
+        </p>
+    </div>
+      
+    </div>
+  </div> 
+
+</div>
+
+{% endblock %}
+
+{% block javascript %}
+{% endblock %}

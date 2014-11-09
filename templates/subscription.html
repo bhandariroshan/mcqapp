@@ -1,133 +1,213 @@
 {% extends 'base.html' %}
 {% load staticfiles %} 
+{% block head %}
+  <style type="text/css">
+    .picker select {
+      width: 0%;
+    }
+    .my-margin{
+      margin-bottom: 10px;
+    }
+    .button-margin{
+      margin-bottom: 10px;
+    }
+    .subscribed{
+      border: 2px solid #63C22D;
+    }
+    .notsubscribed{
+     border: 1px solid #134450; 
+    }
+    .icon-color-subscribed{
+      color: green;
+    }
+   .icon-color-notsubscribed{
+      color: #134450;
+    }
+    .myicon{
+      font-size: 20px;
+    }
+    .columns {
+       margin-left: 0%; 
+    }
+    .contactform{
+      box-shadow: 0 1px 2px 0 #555;
+      border-top: 1px solid rgba(0,0,0,0.1);
+      margin-bottom: 0;
+      min-width: 343px;
+      overflow: hidden;
+      background-color: #fff;
+      margin-right:1%;
+      margin-bottom: 3%;
+      text-align: center;
+    }
+  </style>
+{% endblock %}
+
 {% block content %}
 <div class="twelve columm page-homepage reboot">
-<section id="section-premium" class="feature premium">
+
+
+{% if request.user.is_authenticated and not is_user_subscribed %}
+<section id="section-form-fill" class="feature premium" style="margin-top:0%; margin-bottom: 2%;">
+    <div class="row">   
+      <form class="" name="myform" role="form" method="POST" action=".">     
+        <div class="twelve columns centered"> 
+            <li class="alert warning pretty" style="height: 100px; border: 1px solid rgba(50, 114, 174, 1); background: #75B9DA !important;">
+                <input class="input" type="hidden" name="formtype" value="coupon" />
+                <div class="field"><h4><strong style="color: white;"> Have a coupon? &nbsp;&nbsp;&nbsp; <input class="input" type="text" id="coupon_code" style="width: 30%;" class="form-control" placeholder="Enter code here" name="coupon" required="required"/>  &nbsp;&nbsp;&nbsp; <button type="submit" class="btn warning medium pretty" style="min-width:200px;"> Subscribe </button></strong></h4><br><br>
+                </div>
+            </li>       
+        </div>
+      </form>
+    </div>
+</section>
+{% endif %}
+
+{% if coupon_message_true %}
+  <section id="section-form-fill" class="feature premium" style="margin-top:0%; margin-bottom: 2%;">
+    <div class="row">   
+        <div class="twelve columns centered"> 
+            <li class="alert warning pretty" style="height: 100px; border: 1px solid rgba(50, 114, 174, 1); background: #75B9DA !important;">
+                <div class="field">
+                  {{coupon_message}}
+                </div>
+            </li>       
+        </div>
+    </div>
+</section>
+{% endif %}
+<section id="section-premium" class="feature premium" style="{% if request.user.is_authenticated and not is_user_subscribed%} margin-top:-5%; {% else %} margin-top:-2%; {% endif %}">
         <div class="premium-container">
           <div class="premium-options-holder">
-          {% comment %}
+
             <div class="premium-option premium">
-              <h1>Competitive Exam</h1><p style="font-size: 13px;">held every week at a fixed time</p>
+              <h1> Engineering / Medical Preparation </h1><p style="font-size: 13px;"><strong></strong></p>
               <p class="premium-tag">
               </p>
-              <p class="premium-price"><strong>Rs. 30/exam for IOE and Rs. 20/exam for IOM</strong><br>(coupon code entry every time)</p>
-              <p></p>
-              <!-- <aside>
-                <img src="//d2c87l0yth4zbw.cloudfront.net/i/home/devices-free-new-en.png" class="device-img">
-              </aside> -->
-
-              <ul class="premium-details-list">
-                <li class="active zebra">Attend exam</li>
-                <li class="active">Score card and Rank Card</li>
-                <li class="active zebra">Prizes, gift hampers and awards</li>
-                <li class="active">Answers and solutions</li>
-                <li class="active zebra">Participate in discussion related to question</li>
-                <li class="active">-</li>
-              </ul>
-
-              <a id="js-button-get-free" href="/"
-              class="button">
-                Subscribe
-              </a>
-            </div>
-          {% endcomment %}
-            <div class="premium-option premium">
-              <h1>All session </h1><p style="font-size: 13px;"><strong>one full package (IOE/IOM session)</strong></p>
-              <p class="premium-tag">
-              </p>
-              <p class="premium-price"><strong>Rs. 300 for all exams </strong><br>(One time coupon code entry)<br><br></p>
+              <p class="premium-price"><strong>Rs. 500 <br> (Subscription for Six Months) <br> (Free home delivery of coupon) </strong><br></p>
               
               <!-- <aside>
                 <img src="//d2c87l0yth4zbw.cloudfront.net/i/home/devices-free-new-en.png" class="device-img">
               </aside> -->
 
               <ul class="premium-details-list">
-                <li class="active zebra">Attend exam</li>
-                <li class="active">Score card and Rank Card</li>
-                <li class="active zebra">Prizes, gift hampers and awards</li>
-                <li class="active">Answers and solutions</li>
-                <li class="active zebra">Participate in discussion related to question</li>
-                <li class="active">Progress card</li>
+                <li class="active zebra"><i class="fa fa-check fatick"></i>Attend IOM/IOE and other medical/engineering entrance Practice exams</li>
+                <li class="active"><i class="fa fa-check fatick"></i>Performace Analytics and history</li>
+                <li class="active zebra"><i class="fa fa-check fatick"></i>Prizes, gift hampers and awards</li>
+                <li class="active"><i class="fa fa-check fatick"></i>Answers and solutions</li>
+                <li class="active zebra"><i class="fa fa-check fatick"></i>Participate in discussion related to question</li>
+                <li class="active"><i class="fa fa-check fatick"></i>Attend different subject test</li>
+                <li class="active zebra"><i class="fa fa-check fatick"></i>Attend Free Daily Quiz</li>
+                <li class="active"><i class="fa fa-check fatick"></i>Access to daily and weekly leaderboard</li>
               </ul>
 
-              <a id="js-button-get-free" href="#" '{% if request.user.is_authenticated %} onclick="attempt_exam('subs')" {% endif %}' class="button">
-                {% if 'BE-IOE' in user.subscription_type or 'MBBS-IOM' in user.subscription_type %} Your Current Plan {% else %}Subscribe{% endif %}
-              </a>
+              <!-- <a id="js-button-get-free" href="#" '{% if request.user.is_authenticated %} onclick="attempt_exam('subs')" {% endif %}' class="button">
+                {% if 'BE-IOE' in user.subscription_type  %} Your Current Plan {% else %}Subscribe{% endif %}
+              </a> -->
             </div>
-
-
-            <!--<div class="premium-option premium">
-              <h1>Inter subscription </h1> <p style="font-size: 13px;">access to both IOM and IOE exams</p>
+            
+            <!-- <div class="premium-option premium">
+              <h1> Medical Preparation </h1><p style="font-size: 13px;"><strong></strong></p>
               <p class="premium-tag">
               </p>
-              <p class="premium-price"><strong>Rs. 400 for all exams</strong><br>(One time coupon code entry)</p>              
+              <p class="premium-price"><strong>Rs. 500 <br> (Valid for Six Months)  </strong><br></p>
+
+
               <ul class="premium-details-list">
-                <li class="active zebra">Attend exam</li>
-                <li class="active">Score card and Rank Card</li>
-                <li class="active zebra">Prizes, gift hampers and awards</li>
-                <li class="active">Answers and solutions</li>
-                <li class="active zebra">Participate in discussion related to question</li>
-                <li class="active">Progress card</li>
+                <li class="active zebra"><i class="fa fa-check fatick"></i>Attend IOM and other medical entrance Practice exams</li>
+                <li class="active"><i class="fa fa-check fatick"></i>Performace Analytics and history</li>
+                <li class="active zebra"><i class="fa fa-check fatick"></i>Prizes, gift hampers and awards</li>
+                <li class="active"><i class="fa fa-check fatick"></i>Answers and solutions</li>
+                <li class="active zebra"><i class="fa fa-check fatick"></i>Participate in discussion related to question</li>
+                <li class="active"><i class="fa fa-check fatick"></i>Attend different subject test</li>
+                <li class="active zebra"><i class="fa fa-check fatick"></i>Attend Free Daily Quiz</li>
+                <li class="active"><i class="fa fa-check fatick"></i>Access to daily and weekly leaderboard</li>
               </ul>
-              <a id="js-button-get-free" href="#" '{% if request.user.is_authenticated and 'IDP' not in user.subscription_type %} onclick="attempt_exam('subs')" {% endif %}' class="button">
-                {% if 'IDP' in user.subscription_type %} Your Current Plan {% else %}Subscribe{% endif %}
-              </a>
-            </div>-->
+            </div> -->
 
             <div class="premium-option premium">
-              <h1>Practice Exam </h1><p style="font-size: 13px;">Can be taken any time</p>
+              <h1> Free Account <br/><br/></h1><p style="font-size: 13px;"><strong></strong></p>
               <p class="premium-tag">
               </p>
-                <p class="premium-price"><strong> Rs. 20/exam for IOM <br>Rs. 30/exam for IOE </strong><br>(coupon code entry every time)</p>
+              <p class="premium-price"><strong>Rs. 0 <br> (Just sign up required) <br></strong><br></p>
+              
               <!-- <aside>
                 <img src="//d2c87l0yth4zbw.cloudfront.net/i/home/devices-free-new-en.png" class="device-img">
               </aside> -->
 
               <ul class="premium-details-list">
-                <li class="active zebra">Attend exam</li>
-                <li class="active">Score card every time</li>                
-                <li class="active zebra">-</li> 
-                <li class="active">Answers and solutions</li>
-                <li class="active zebra">Participate in discussion related to question</li>
-                <li class="active">-</li>
+                <li class="active zebra"> <i class="fa fa-check fatick"></i>Attend IOM, IOE and other entrance Practice exams <strong style="color:red">(only once)</strong></li>
+                <li class="active"><i class="fa fa-times facross"></i>Performace Analytics and history</li>
+                <li class="active zebra"><i class="fa fa-times facross"></i>Prizes, gift hampers and awards</li>
+                <li class="active"><i class="fa fa-times facross"></i>Answers and solutions</li>
+                <li class="active zebra"><i class="fa fa-times facross"></i>Participate in discussion related to question</li>
+                <li class="active"><i class="fa fa-check fatick"></i>Attend different subject test<strong style="color:red">(only once)</strong></li>
+                <li class="active zebra"><i class="fa fa-check fatick"></i>Attend Free Daily Quiz</li>
+                <li class="active"><i class="fa fa-check fatick"></i>Access to daily and weekly leaderboard</li>
               </ul>
 
-              <a id="js-button-get-free" href="/coupon/"
-              class="button">
-                Subscribe
-              </a>
+              <!-- <a id="js-button-get-free" href="#" '{% if request.user.is_authenticated %} onclick="attempt_exam('subs')" {% endif %}' class="button">
+                {% if 'BE-IOE' in user.subscription_type or 'MBBS-IOM' in user.subscription_type %} Your Current Plan {% else %}Subscribe{% endif %}
+              </a> -->
             </div>
-                        
+
+
           </div>
 
         </div>
-      </section>
+</section>
 
-</div>      
+<section id="section-form-fill" class="feature premium" style="margin-top:-4%; margin-bottom: 2%;">
+    <div class="row"> 
+      <h4><strong> Leave your contacts for Premium Membership and we will contact you. </strong></h4><hr/><br>
+      {% if success %}
+            <li class="warning alert"> Your request has been successfully sent to the admin. We will contact you soon.</li>
+      {% endif %}
+      <div class="six columns contactform">
+        <ul class="premium-details-list">
+          <li class="active"><strong>Satisfied <i class="fa fa-question" style="font-size: 20px;color: red; padding-left: 10px;padding-top: 4px;"></i></strong></li>
+          <li class="active zebra"><strong>Drop your contact<i class="fa fa-arrow-right" style="font-size: 18px;color: green; float: right; padding-left: 10px;padding-top: 4px;"></i></strong></li>
+          <li class="active"><strong> We will home deliver our coupons for free. </strong></li>
+          <li class="active zebra">  <i class="fa fa-smile-o" style="font-size: 20px;color: green; padding-left: 10px;padding-top: 4px;"></i><i class="fa fa-smile-o" style="font-size: 20px;color: green; padding-left: 10px;padding-top: 4px;"></i><i class="fa fa-smile-o" style="font-size: 20px;color: green; padding-left: 10px;padding-top: 4px;"></i> </li>
+        </ul>
+      </div>
+      <div class="six columns contactform">
+        <form class="" name="myform" role="form" method="POST" action=".">            
+            <div class="field">
+              <input class="input" type="text" id="display_name_txt" class="form-control" placeholder="Your Name" name="name" required="required">
+              {% if name_error %}
+                <p style="color:red">{{name_error_message}}</p>
+              {% endif %}
+            </div>
+
+            
+            <div class="field">
+              <input class="input" type="text" id="email_txt" class="form-control" placeholder="Email" name="email" required="required">
+              {% if email_error %}
+                <p style="color:red">{{email_error_message}}</p>
+              {% endif %}
+            </div>
+
+            <div class="field">
+              <input class="input" type="text" id="phone" class="form-control" placeholder="Phone Number" name="phone" required="required">
+              {% if phone_error %}
+                <p style="color:red">{{phone_error_message}}</p>
+              {% endif %}
+            </div>
+            
+            <div class="field">
+                <button type="submit" class="btn warning medium pretty" style="min-width: 120px;">Submit</button>
+            </div>
+            
+        </form>
+      </div>
+      <hr/><br>
+    </div>
+</section>
+</div>    
+
 {% endblock %}
 
 {% block javascript %}
 <script src="{% static "js/ajax-handle.js" %}"></script>
-<script type="text/javascript">
-var ex_code;
-  function attempt_exam(exam_code){
-    ex_code=exam_code;
-    $('#infoText').html('');
-    if (exam_code.toLowerCase() == 'sample'){
-      var html_str = 'Every time you take exam, you need to enter <a href="/coupon-codes/" style="color:red;"><strong>coupon codes</strong></a> are available at various <a href="/#/" style="color:red;"><strong>distributors</strong></a>. Please enter your coupon code'
-      $('#infoText').html(html_str);
-    }
-    else{      
-      var html_str = 'Coupon code are necessary to ensure the regular operation of exam. Coupon codes are available at various <a href="/#/" style="color:red;"><strong>distributors</strong></a>. Please enter code your below'
-      $('#infoText').html(html_str);
-    }
-    /*is_subscribed(exam_code);    */
-    $('#trigger_gumby_div').click();
-  }
-
-  function validate_coupon_code() {
-    coupon_id = $('#couponID').val();
-    validate_coupon(ex_code, coupon_id);
-  }
-</script>
 {% endblock %}

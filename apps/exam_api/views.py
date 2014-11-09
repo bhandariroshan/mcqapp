@@ -28,6 +28,7 @@ class ExamHandler():
             question_id_list = [
                 ObjectId(i['id']) for i in exam_model['question_list']
             ]
+            
             question_api = QuestionApi()
             if html:
                 question_list = question_api.find_all_questions(

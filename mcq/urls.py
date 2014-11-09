@@ -7,12 +7,13 @@ admin.autodiscover()
 
 urlpatterns = patterns(
     '',
-    url(r'^$', 'apps.mainapp.views.set_category', name="set_category"),
+    # url(r'^$', 'apps.mainapp.views.set_category', name="set_category"),
+    url(r'^$', 'apps.mainapp.views.new_dashboard', name="new_dashboard"),
     url(r'^(?P<exam_type>ioe|iom)/$', 'apps.mainapp.views.user_dashboard', name="user_dashboard"),
     url(r'^latex-store$', 'apps.mainapp.views.add_html'),
     url(r'^latex-get-data/$', 'apps.mainapp.views.get_all_questions'),
     url(r'^latex$', 'apps.mainapp.views.latex_html'),
-
+    url(r'^dashboard$', 'apps.mainapp.views.new_dashboard'),
     url(r'^generate-coupon/(?P<subscription_type>\w{1,15})/$',
         'apps.mainapp.views.generate_coupon'),
     url(r'^get-coupons/(?P<subscription_type>\w{1,15})/$',
@@ -26,6 +27,7 @@ urlpatterns = patterns(
     url(r'^accounts/', include('allauth.urls')),
     url(r'^', include('apps.mainapp.urls', app_name='mainapp')),
     url(r'^exam/', include('apps.exam_api.urls', app_name='exam_api')),
+    url(r'^', include('apps.testapp.urls', app_name='testapp')),
     url(r'^subscription/', 'apps.mainapp.views.subscription'),
     url(r'^distributors/', 'apps.mainapp.views.distributors'),
     url(r'^request/', 'apps.mainapp.views.request_coupon'),

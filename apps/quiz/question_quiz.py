@@ -31,6 +31,8 @@ class GenerateQuiz():
             "subject",
             {"exam_type": exam_type}
         )['results']
+
+
         if exam_type == "ENGINEERING":
             exam_category = "BE-IOE"
             exam_name = "Meroanswer IOE Daily Quiz"
@@ -42,7 +44,13 @@ class GenerateQuiz():
             exam_name = "Meroanswer IOM Daily Quiz"
             marks = 1
 
-        latest_exam_models = exammodel_api.find_all_exammodel_descending(
+        elif exam_type == 'BSCAG':
+            exam_category = "BSC-AG"
+            exam_name = "Meroanswer Agriculture and Veterinary Daily Quiz"
+            marks = 1         
+            subjects = ['Physics', 'Chemistry', 'Zoology', 'Botany', 'Mathematics', 'English']   
+
+        latest_exam_models = exammodel_api.find_all_exammodel_descending(            
             {"exam_family": "QUIZ", "exam_category": exam_category},
             fields={"quiz_number": 1, "question_list": 1},
             sort_index="quiz_number",
@@ -54,6 +62,9 @@ class GenerateQuiz():
             quiz_number = 1
 
         NUMBER_OF_QUESTIONS = len(subjects) * 2
+        if exam_type == 'BSCAG':
+            NUMBER_OF_QUESTIONS = len(subjects) * 1
+
         question_list = []
         random_list = []
         for i in range(NUMBER_OF_QUESTIONS):

@@ -19,8 +19,10 @@ def user_authenticated_and_subscribed_required(view_func):
         try:
             exam_code = int(kwargs['exam_code'])
         except:
+            print "Exception"
             return HttpResponseRedirect("/")
         if exam_code not in user['valid_exam']:
+            print "not Valid"
             return HttpResponseRedirect("/")
 
         return view_func(request, *args, **kwargs)
