@@ -325,9 +325,9 @@ class UserProfile():
                         return {'status':'ok', 'exam_code':eachExamCode}
 
                 subject_test_exam_code = generate_random_subject_test(str(subject_name))
-                self.save_valid_exam(username, int(eachExamCode))    
+                self.save_valid_exam(username, int(subject_test_exam_code))    
                 self.save_valid_subject_exam(
-                    username, eachExamCode, subject_name
+                    username, subject_test_exam_code, subject_name
                 )                
                 return {'status':'ok', 'exam_code':subject_test_exam_code}
 
@@ -342,8 +342,8 @@ class UserProfile():
                     return {'status':'ok', 'exam_code':eachExamCode}  
                                           
             subject_test_exam_code = generate_random_subject_test(str(subject_name))
-            self.save_valid_exam(username, int(eachExamCode))    
+            self.save_valid_exam(username, int(subject_test_exam_code))    
             self.save_valid_subject_exam(
-                username, eachExamCode, subject_name
+                username, subject_test_exam_code, subject_name
             )                
             return {'status':'ok', 'exam_code':subject_test_exam_code}
