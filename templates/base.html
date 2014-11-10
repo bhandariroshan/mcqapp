@@ -251,7 +251,15 @@
   <link rel="stylesheet" href="http://gumbyframework.com/css/prism.css?v=091613">
 
   <style type="text/css">
-
+    .navbar li .dropdown ul>li a {
+      display: block;
+      padding: 0 20px;
+      color: #134450;
+      border-bottom: 1px solid #ccc;
+      text-shadow: none;
+      height: 40px;
+      line-height: 40px;
+    }
     .boxing{
       box-sizing: border-box;
       -webkit-box-shadow: 0 1px 2px 1px rgba(0,0,0,0.25);
@@ -437,7 +445,7 @@
         <!-- <li><a href="/" data-scroll-nav="1">How it works</a></li>
         <li><a href="/" data-scroll-nav="2">Android app</a></li> -->
         <!-- <li><a href="#main-signup">Join</a></li> -->
-        <li><a href="#">contribute</a></li>
+        <li><a href="#">For Teachers</a></li>
         <li>
           <!-- <div class="medium primary btn pretty" style="background: #3b5998;"> -->
           <a id="fbLoginNavbar" href="{% provider_login_url "facebook" method="oauth2" %}">
@@ -466,6 +474,8 @@
           <a href="#"><img src="{{profile_img_url}}" width="25px"><span style="vertical-align: super;"> {{user.name}} </span><i class="icon-down-open" style="vertical-align: super;"></i></a>
           <div class="dropdown" style="<!-- width:180px; -->{% if 'terms' in request.path or 'privacy' in request.path or 'results' in request.path or 'answers' in request.path %} margin-left: 0px;{% endif %}">
             <ul>
+              <li><a href="/history">History</a></li>
+              <li><a href="/settings/">Settings</a></li>              
               <li><a href="/accounts/logout">logout</a></li>
             </ul>
           </div>

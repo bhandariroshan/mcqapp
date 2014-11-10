@@ -19,7 +19,6 @@ def subject_wise_test_ui(request, subject_name):
         raise Http404
 
     parameters['user'] = user
-
     parameters['subject_name'] = subject_name.capitalize()
     return render_to_response(
             'subject-inter.html', parameters, context_instance=RequestContext(request)

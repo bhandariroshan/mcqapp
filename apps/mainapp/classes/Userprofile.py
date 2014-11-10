@@ -2,6 +2,7 @@ from MongoConnection import MongoConnection
 from apps.mainapp.classes.query_database import ExammodelApi
 from apps.random_questions.views import generate_random_ioe_questions, generate_random_iom_questions
 from apps.mainapp.classes.Coupon import Coupon
+from apps.mainapp.classes.result import Result
 import time, datetime
 
 class UserProfile():
@@ -242,7 +243,51 @@ class UserProfile():
             else:
                 return {'status':'error', 'message':'Premium users can attend only one exam related to other category.'}
 
-        
+    def get_exams_history_for_user(self, username):
+        user = self.db_object.get_one(self.table_name, {'username': username})        
+        try:
+            valid_subject_exam = list(user['valid_subject_exam'])
+        except:
+            valid_subject_exam = []
+
+        valid_subject_exam_codes = []
+        valid_subject_exam_history_details = []
+
+        exam_model_api_obj = ExammodelApi()
+        result_obj = Result()
+        for eachValidExam in valid_subject_exam:
+            one_exam_detail = exam_model_api_obj.find_one_exammodel(
+                condition={'exam_code':int(eachValidExam['exam_code'])}, 
+                fields={'question_list':0}
+            )
+            user_result = result_obj.find_all_result(
+                {'exam_code': int(eachValidExam['exam_code']),
+                'useruid': user['useruid']}            
+            )
+            if len(user_result) != 0:
+                exam_result = user_result[len(user_result)-1]
+                valid_subject_exam_history_details.append({'exam_details':one_exam_detail, 
+                    'result':exam_result['result']}
+                )
+            valid_subject_exam_codes.append(int(eachValidExam['exam_code']))
+
+        all_exams_attempted = user['valid_exam']
+        valid_practice_exam_history_details = []
+        for eachExamCode in all_exams_attempted:
+            if eachExamCode not in valid_subject_exam_codes:
+                one_exam_detail = exam_model_api_obj.find_one_exammodel(
+                    condition={'exam_code':int(eachExamCode)}, 
+                    fields={'question_list':0}
+                )
+                user_result = result_obj.find_all_result(
+                    {'exam_code': int(eachExamCode),
+                    'useruid': user['useruid']}            
+                )
+                if len(user_result) != 0:
+                    exam_result = user_result[len(user_result)-1]
+                    valid_practice_exam_history_details.append({'exam_details':one_exam_detail, 'result':exam_result['result']})
+        return {'practice_exams':valid_practice_exam_history_details, 'subject_exams':valid_subject_exam_history_details}
+
 
     def check_generate_and_save_valid_subject_exam(self, username, subject_name):
         '''

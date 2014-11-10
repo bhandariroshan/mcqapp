@@ -1019,3 +1019,31 @@ def couponpage(request):
 
 def couponspage_redirect(request):
     return HttpResponseRedirect('/coupon/')
+
+
+def subject_history(request, subject_name):
+    parameters = {}
+    user_profile_obj = UserProfile()
+    user = user_profile_obj.get_user_by_username(request.user.username)
+
+    parameters['user'] = user
+    return render_to_response(
+        'history.html',
+        parameters,
+        context_instance=RequestContext(request)
+    )    
+
+def history(request):
+    parameters = {}
+    user_profile_obj = UserProfile()
+    
+    user = user_profile_obj.get_user_by_username(request.user.username)
+    exam_history = user_profile_obj.get_exams_history_for_user(request.user.username)
+    parameters['exam_history'] = exam_history
+
+    parameters['user'] = user
+    return render_to_response(
+        'history.html',
+        parameters,
+        context_instance=RequestContext(request)
+    )    
