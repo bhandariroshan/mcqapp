@@ -486,6 +486,7 @@
         <!-- <li><a href="/iom/">IOM</a></li> -->
         <!-- <li><a href="/coupon/">Request coupon</a></li> -->
         <li><a href="/distributors/">Find coupons</a></li>
+        <li><a href="/quiz/winners/">leaderboard</a></li>
         <li><a href="/subscription/">Premium Plan</a></li>
         {% comment %}
         {% if 'dps' in request.path or 'cps' in request.path %}
@@ -511,6 +512,7 @@
 
 {% block content %}
 {% endblock %}
+
 <div id="trigger_gumby_div" style="visibility:hidden;" class="" gumby-trigger="#modalentercouponcode"></div>
 <div class="modal" id="modalentercouponcode">
   <div class="content">
