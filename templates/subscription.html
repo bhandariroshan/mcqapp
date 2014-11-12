@@ -76,7 +76,8 @@
     </div>
 </section>
 {% endif %}
-<section id="section-premium" class="feature premium" style="{% if request.user.is_authenticated and not is_user_subscribed%} margin-top:-5%; {% else %} margin-top:-2%; {% endif %}">
+
+<section id="section-premium" class="feature premium" style="{% if request.user.is_authenticated and not is_user_subscribed%} margin-top:-5%; {% else %} margin-top:-0%; {% endif %}">
         <div class="premium-container">
           <div class="premium-options-holder">
 

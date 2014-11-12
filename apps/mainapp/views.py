@@ -705,11 +705,12 @@ def subscription(request):
 
     user = user_profile_obj.get_user_by_username(request.user.username)
     parameters['user'] = user
-    if 'BE-IOE' in user['subscription_type'] or 'MBBS-IOM' in user['subscription_type']:
-        parameters['is_user_subscribed'] = True
-    else:
-        parameters['is_user_subscribed'] = False
-
+    parameters['is_user_subscribed'] = False
+    if user !=None:
+        if 'BE-IOE' in user['subscription_type'] or 'MBBS-IOM' in user['subscription_type']:
+            parameters['is_user_subscribed'] = True
+        
+        
     return render_to_response(
             'subscription.html', 
             parameters, 
@@ -904,10 +905,15 @@ def show_result(request, exam_code, subject_name):
     exam_details = exam_obj.find_one_exammodel(
         {'exam_code': int(exam_code)}
     )
+
+    parameters = {}
+    user_profile_obj = UserProfile()
+    user = user_profile_obj.get_user_by_username(request.user.username)
+    parameters['user'] = user
+    
     if exam_details is None:
         raise Http404
 
-    parameters = {}
     current_time = time.mktime(datetime.datetime.now().timetuple())
     if exam_details['exam_family'] == 'CPS' and current_time - exam_details['exam_date'] < exam_details['exam_duration'] * 60:
         return HttpResponseRedirect('/')
