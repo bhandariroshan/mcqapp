@@ -64,7 +64,7 @@
   {% endif %}
 
   {% if 'distributors' in request.path %}
-      <title>Coupon Distributors | MeroAnswer</title>
+      <title>Find Coupons | MeroAnswer</title>
       <!-- Facebook Metadata /-->
       <meta property="og:image" content="http://meroanswer.com/static/images/logos/meroanswerfb.png">
       <meta property="og:description" content="">
@@ -421,6 +421,17 @@
       background: black;
       background: rgba(0, 0, 0, 0.8);
     }
+    .contactform{
+      box-shadow: 0 1px 2px 0 #555;
+      border-top: 1px solid rgba(0,0,0,0.1);
+      margin-bottom: 0;
+      min-width: 343px;
+      overflow: hidden;
+      background-color: #fff;
+      margin-right:1%;
+      margin-bottom: 3%;
+      text-align: center;
+    }
   </style>
   <!-- <link rel="stylesheet" href="css/style.css"> -->
   <script src="{% static "js/modernizr-min.js" %}"></script>
@@ -461,7 +472,7 @@
         <!-- <li><a href="#">Partners</a></li> -->
         <!-- <li><a href="/iom/">IOM</a></li> -->
         <!-- <li><a href="/coupon/">Request coupon</a></li> -->
-        <li><a href="/distributors/">Coupon Distributors</a></li>
+        <li><a href="/distributors/">Find coupons</a></li>
         <li><a href="/subscription/">Premium Plan</a></li>
         {% comment %}
         {% if 'dps' in request.path or 'cps' in request.path %}
@@ -519,7 +530,7 @@
           <a id="blog" href="http://blog.meroanswer.com">Blog</a>&nbsp;&nbsp;
           <a id="terms" href="/terms/">Terms of Service</a>&nbsp;&nbsp;
           <a id="privacy" href="/privacy/">Privacy policy</a>&nbsp;&nbsp;
-          <a id="distributors" href="/distributors/">Coupon Distributors</a>&nbsp;&nbsp;
+          <a id="distributors" href="/distributors/">Find coupons</a>&nbsp;&nbsp;
           <a id="subscriptionModels" href="/subscription/">Subscription Plans</a>&nbsp;&nbsp;
         </p>
     </div>

@@ -34,11 +34,13 @@ from .decorators import user_authenticated_and_subscribed_required
 
 from apps.exam_api.views import ExamHandler
 from apps.mainapp.classes.referral import Referral
+from apps.mainapp.classes.CouponRequestEmail import CouponEmail
 
 
 def new_dashboard(request):
     parameters = {}
-    if request.user.is_authenticated():
+    if request.user.is_authenticated():        
+        sign_up_sign_in(request, android_user=False)
         # exam_dict = {'ioe': 'BE-IOE', 'iom': 'MBBS-IOM'}
         user_profile_obj = UserProfile()
         # exam_model_api = ExammodelApi()
@@ -648,36 +650,9 @@ def subscription(request):
             else:
                 parameters['success'] = True
 
-            subject = 'New premium coupon request in MeroAnswer. '
-            message_body = ''
-            message_body = '\
-            <table cellpadding="2" cellspacing="0">\
-                <tr style="background-color:#6C7F40;">\
-                    <td style="width:30%; color: #fff;">Name</td>\
-                    <td style="width:50%; color: #fff;">Email</td>\
-                    <td style="width:20%; color: #fff;">Phone</td>\
-                </tr>'
-            
-            message_body = message_body + '<tr>'
-            message_body = message_body + '<td style="width:30%; font-size: 11px; color: #444;">' + str(name) + '\
-            </td><td style="width:50%; font-size: 11px; color: #444;">' + str(email) + '</td>'
-            message_body = message_body + '<td style="width:20%; font-size: 11px; color: #444;">'+ str(phone) + '</a></td>'
-            message_body = message_body + '</tr>'
-
-            from apps.mainapp.classes.CouponRequestEmail import CouponEmail
             email_obj = CouponEmail()
-            message_body = message_body + '</table>'
-            if request.user.is_authenticated():
-                details = {'name':name, 'phone':phone, 'email':email, 'username':request.user.username}
-            else:
-                details = {'name':name, 'phone':phone, 'email':email}
-            email_obj.send_mail(
-                subject, 
-                [
-                    {'name':'main', 'content':message_body},
-                    {'name':'inbox','content':''''''}
-                ], 
-                [{'email':'brishi98@gmail.com'}, {'email':'info@phunka.com'}], details)
+            email_obj.send_coupon_requested_email(request, name, phone, email)
+
         else:
             coupon_obj = Coupon()
             coupon_code = request.POST.get('coupon', '')
@@ -754,12 +729,36 @@ def privacy(request):
         context_instance=RequestContext(request)
     )
 
-
+@csrf_exempt
 def distributors(request):
     parameters = {}
     user_profile_obj = UserProfile()
     user = user_profile_obj.get_user_by_username(request.user.username)
     parameters['user'] = user
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        name = request.POST.get('name')
+        phone = request.POST.get('phone')
+        parameters ['name_error'],  parameters['phone_error'], parameters['email_error'] = False, False, False
+
+        if email == '':
+            parameters['email_error'] = True
+            parameters['email_error_message'] = 'Please enter a valid email.'
+        if len(phone) < 6:
+            parameters['phone_error'] = True
+            parameters['phone_error_message'] = 'Please enter a valid phone.'
+
+        if len(name) < 3:
+            parameters['name_error'] = True
+            parameters['name_error_message'] = 'Please enter a valid name.'
+
+        if parameters['name_error'] or parameters['email_error'] or parameters['phone_error']:
+            parameters['success'] = False
+        else:
+            parameters['success'] = True
+
+        email_obj = CouponEmail()
+        email_obj.send_coupon_requested_email(request, name, phone, email)
     return render_to_response(
         'distributors.html',
         parameters,
