@@ -20,6 +20,7 @@ class QuizResultAdminView(View):
         all_results = QuizResult.objects.all().order_by('-attempted_date', '-quiz_score')
         final_result = []
         for each_result in all_results:
+
             index = -1
             each_result['attempted_date'] = datetime.fromtimestamp(
                 int(each_result['attempted_date'])
@@ -28,8 +29,11 @@ class QuizResultAdminView(View):
                 if each['date'] == each_result['attempted_date']:
                     index = count
             myuser = user_profile_obj.get_user_by_userid(int(each_result['user_id']))
-            copy_result = {i: each_result[i] for i in each_result}
+            if myuser == None:
+                continue
+            copy_result = {i: each_result[i] for i in each_result}            
             copy_result['name'] = myuser['first_name'] + ' ' + myuser['last_name']
+
             copy_result['username'] = myuser['username']
             copy_result['facebook_link'] = "http://facebook.com/" + myuser['id']
             copy_result['email'] = myuser['email']
