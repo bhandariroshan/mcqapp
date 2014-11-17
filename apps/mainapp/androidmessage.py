@@ -10,4 +10,3 @@ payload = {'data':{"ma_message":"Did you get message santosh?","ma_title":"Test 
 
 headers = {'Authorization': 'key=AIzaSyAS9BHLJ6mQ9h8RIbMg2VGY7qeO1zB0Vt4','content-type': 'application/json'}
 r = requests.post(url, data=json.dumps(payload), headers=headers)
-print r.text

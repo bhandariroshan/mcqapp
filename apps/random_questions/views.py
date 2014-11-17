@@ -39,7 +39,6 @@ def generate_random_ioe_questions(request):
                 )
             )
 
-    # print final_question_set
     exammodel_api = ExammodelApi()
     last_exam_code = exammodel_api.find_all_exammodel_descending(
         {},
@@ -122,7 +121,6 @@ def generate_random_iom_questions(request):
                         random.randrange(len(question_sets))][i]['uid']['id']
                 )
             )
-    # print final_question_set
     exammodel_api = ExammodelApi()
     last_exam_code = exammodel_api.find_all_exammodel_descending(
         {},
@@ -147,6 +145,60 @@ def generate_random_iom_questions(request):
         "exam_family": 'DPS',
         "question_list": final_question_set
     }
-    # print final_question_set
+    exammodel_api.insert_new_model(new_exam_model)
+    return new_exam_code
+
+
+def generate_random_moe_questions(request):
+    '''
+    The function generates generates a random question set for moe exam by
+    randomly picking question from each subject
+    '''
+    exammodel_api = ExammodelApi()
+    question_api = QuestionApi()
+    subjects = {'physics': 30,
+                'chemistry': 30,
+                'botany': 20,
+                'zoology': 20}
+    question_list = []
+    for key, value in subjects.iteritems():
+        subject_questions = question_api.find_all_questions(
+            {"subject": key,
+             "exam_type": 'MEDICAL',
+             "marks": 1},
+            fields={"_id": 1}
+        )
+        random_list = []
+        for i in range(value):
+            random_num = random.randrange(len(subject_questions))
+
+            # generate unique random numbers to avoid repetition
+            while random_num in random_list:
+                random_num = random.randrange(len(subject_questions))
+            random_list.append(random_num)
+            question_id = subject_questions[random_num]['uid']
+            question_list.append(ObjectId(question_id['id']))
+    last_exam_code = exammodel_api.find_all_exammodel_descending(
+        {},
+        fields={"exam_code": 1},
+        sort_index="exam_code",
+        limit=1
+    )
+    if len(last_exam_code) > 0:
+        new_exam_code = int(last_exam_code[0]['exam_code']) + 1
+    else:
+        new_exam_code = 1001
+    new_exam_model = {
+        "exam_name": "MOE Practice set",
+        "exam_date": time.mktime(
+            datetime.datetime.now().timetuple()
+        ),
+        "image": "exam.jpg",
+        "exam_code": new_exam_code,
+        "exam_category": "MBBS-MOE",
+        "exam_duration": 120,
+        "exam_family": 'DPS',
+        "question_list": question_list
+    }
     exammodel_api.insert_new_model(new_exam_model)
     return new_exam_code

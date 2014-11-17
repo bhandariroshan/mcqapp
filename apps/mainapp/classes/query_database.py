@@ -4,7 +4,9 @@ along with multiple databases. For this project it consists of single
 database called mcq having collection named question
 to save the questions in the database
 '''
-from .MongoConnection import MongoConnection
+from MongoConnection import MongoConnection
+from bson.objectid import ObjectId
+import random
 
 
 class QuestionApi():
@@ -23,6 +25,17 @@ class QuestionApi():
     def find_all_questions(self, condition1, fields=None, sort_index='question_number'):
         return self.db_object.get_all(self.table_name, conditions=condition1, fields=fields,
                                       sort_index=sort_index)
+
+    def get_random_question_set(self, subject, limit=15):
+        question_id_list = []
+        count = self.db_object.get_count(table_name=self.table_name, conditions={'subject':str(subject)})            
+        for i in range(0, limit):
+            random_num = random.randrange(count -1)
+            rand_question = self.db_object.get_random_document(table_name=self.table_name, 
+                conditions = {'subject':subject}, random_number = random_num)        
+            question_id_list.append(ObjectId(rand_question['uid']['id']))
+        return question_id_list
+
 
     def update_question(self, where, what):
         return self.db_object.update(self.table_name, where, what)
@@ -51,6 +64,18 @@ class QuestionApi():
     def get_single_question(self, query={}):
         return self.db_object.get_one(self.table_name, query)
 
+    def search_question(self, query_text="", html=0):
+        return self.db_object.full_text_search(
+            self.table_name, 
+            query_text,{
+                'question.html':html,
+                'answer.a.html':html,
+                'answer.b.html':html,
+                'answer.c.html':html,
+                'answer.d.html':html,
+                }
+            )
+
 
 class ExammodelApi():
 
@@ -69,6 +94,14 @@ class ExammodelApi():
                            sort_index='_id', limit=200):
         return self.db_object.get_all(self.table_name, condition1,
                                       fields, sort_index, limit)
+
+    def find_all_exam_codes(self, condition, fields=None, sort_index="_id", limit=200):
+        exam_models = self.db_object.get_all(self.table_name, condition, fields, sort_index, limit)
+        exam_codes = []
+        for eachExamModel in exam_models:
+            exam_codes.append(eachExamModel['exam_code'])
+        return exam_codes
+        
 
     def find_all_exammodel_descending(self, condition1, fields=None,
                                       sort_index='_id', limit=200):
@@ -175,3 +208,7 @@ class CurrentQuestionNumber():
 
     def update_current_question_number(self, where, what):
         return self.db_object.update_upsert(self.table_name, where, what)
+
+# qapi = QuestionApi()        
+# res = qapi.search_question("Equivalent Weight of Metal")
+# print res

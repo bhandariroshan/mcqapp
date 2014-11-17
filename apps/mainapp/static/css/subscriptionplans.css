@@ -12,20 +12,20 @@ z-index: 2;
 }
 .page-homepage section {
 /*background-color: #fff;*/
-margin-top: 5%;
+margin-top: 0%;
 }
 section, summary {
 display: block;
 }
 .page-homepage .feature.premium .premium-container {
 position: relative;
-padding-bottom: 70px;
+padding-bottom: 0px;
 /*background-color: #e0e2e3;*/
 background-position: center bottom;
 background-repeat: no-repeat;
 }
 .page-homepage .premium-options-holder {
-padding: 70px 0;
+padding: 80px 0;;
 text-align: center;
 vertical-align: top;
 width: 100%;
@@ -53,7 +53,7 @@ display: inline-block;
 /*margin: 30px 15px 0;*/
 /*padding: 20px 0;*/
 position: relative;
-width: 300px;
+width: 360px;
 vertical-align: top;
 }
 

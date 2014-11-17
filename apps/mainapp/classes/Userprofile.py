@@ -1,8 +1,9 @@
 from MongoConnection import MongoConnection
-
 from apps.mainapp.classes.query_database import ExammodelApi
+from apps.random_questions.views import generate_random_ioe_questions, generate_random_iom_questions
 from apps.mainapp.classes.Coupon import Coupon
-
+from apps.mainapp.classes.result import Result
+import time, datetime
 
 class UserProfile():
     def __init__(self):
@@ -88,10 +89,13 @@ class UserProfile():
         if coupon['subscription_type'] not in subscription_type and \
                 coupon['subscription_type'] not in ['DPS', 'CPS']:
             subscription_type.append(coupon['subscription_type'])
+
+        current_time = time.mktime(datetime.datetime.now().timetuple())
+        
         return self.db_object.update_upsert(
             self.table_name,
             {'username': user_name},
-            {'subscription_type': subscription_type}
+            {'subscription_type': subscription_type, 'subscribed_date':current_time}
         )
 
     def check_subscribed(self, user_name, exam_code):
@@ -136,7 +140,210 @@ class UserProfile():
             {'valid_exam': valid_exam}
         )
 
+    def save_valid_subject_exam(self, username, subject_exam_code, subject_name):
+        user = self.db_object.get_one(self.table_name, {'username': username})
+        
+        try:
+            valid_subject_exam = list(user['valid_subject_exam'])
+        except:
+            valid_subject_exam = []
+
+        valid_subject_exam_codes = []
+
+        for eachValidExam in valid_subject_exam:
+            valid_subject_exam_codes.append(eachValidExam['exam_code'])
+
+        request_time = datetime.datetime.now()
+        gen_time = time.mktime(request_time.timetuple())
+        if subject_exam_code not in valid_subject_exam_codes:
+            valid_subject_exam.append({'exam_category':str(subject_name).lower() +'-test','exam_code':int(subject_exam_code), 'added_time':gen_time})
+
+
+        return self.db_object.update_upsert(
+            self.table_name,
+            {'username': username},
+            {'valid_subject_exam': valid_subject_exam}
+        )
+
+    def save_valid_practice_exam(self, username, practice_exam_code, ex_type):
+        user = self.db_object.get_one(self.table_name, {'username': username})
+        
+        try:
+            valid_practice_exam = list(user['valid_practice_exam'])
+        except:
+            valid_practice_exam = []
+
+        valid_practice_exam_codes = []
+
+        for eachValidExam in valid_practice_exam:
+            valid_practice_exam_codes.append(eachValidExam['exam_code'])
+
+        request_time = datetime.datetime.now()
+        gen_time = time.mktime(request_time.timetuple())
+        if practice_exam_code not in valid_practice_exam_codes:
+            valid_practice_exam.append({'exam_category':ex_type, 'exam_code':int(practice_exam_code), 'exam_family':'DPS', 'added_time':gen_time})
+
+        return self.db_object.update_upsert(
+            self.table_name,
+            {'username': username},
+            {'valid_practice_exam': valid_practice_exam}
+        )
+        
+
     def get_user_by_coupon(self, coupon_code):
         return self.db_object.get_one(
             self.table_name, {'coupons': coupon_code}
         )
+
+    def check_generate_and_save_valid_exam(self, ex_type, username, request):
+        user = self.get_user_by_username(username)
+        exam_model_api_obj = ExammodelApi()
+        exam_codes = exam_model_api_obj.find_all_exam_codes(condition={'exam_category':ex_type.upper()})
+        subscription_type = self.get_subscription_plan(username)
+
+        if 'IDP' not in subscription_type and 'BE-IOE' not in subscription_type and 'MBBS-IOM' not in subscription_type:
+            ''' This section is for general  user. '''
+            try:
+                valid_practice_exam = list(user['valid_practice_exam'])
+            except:
+                valid_practice_exam = []
+            if len(valid_practice_exam) > 0:
+                return {'status':'error', 'message':'General user can attempt only one exam for free. However you can attempt free quizes and other subject test. '}
+            else:
+                for eachExamCode in exam_codes:
+                    if eachExamCode not in user['valid_exam']:
+                        self.save_valid_exam(username, int(eachExamCode))    
+                        self.save_valid_practice_exam(username, eachExamCode, ex_type)
+                        return {'status':'ok', 'exam_code':eachExamCode}
+
+                if ex_type == 'be-ioe':
+                    exam_code = generate_random_ioe_questions(request)
+                elif ex_type == 'mbbs-iom':
+                    exam_code = generate_random_iom_questions(request)
+                self.save_valid_exam(username, int(exam_code))
+                self.save_valid_practice_exam(username, exam_code, ex_type)
+                return {'status':'ok', 'exam_code':exam_code}
+
+        elif 'IDP' in subscription_type or 'BE-IOE' in subscription_type or 'MBBS-IOM' in subscription_type:            
+            ''' This section is for premium  user. '''
+            if ex_type.upper() in subscription_type:
+                for eachExamCode in exam_codes:
+                        if eachExamCode not in user['valid_exam']:
+                            self.save_valid_exam(username, int(eachExamCode))    
+                            self.save_valid_practice_exam(username, eachExamCode, ex_type)
+                            return {'status':'ok', 'exam_code':eachExamCode}
+                        
+                if ex_type == 'be-ioe':
+                    exam_code = generate_random_ioe_questions(request)
+                elif ex_type == 'mbbs-iom':
+                    exam_code = generate_random_iom_questions(request)
+                self.save_valid_exam(username, int(exam_code))
+                self.save_valid_practice_exam(username, exam_code, ex_type)
+                return {'status':'ok', 'exam_code':exam_code}
+            else:
+                return {'status':'error', 'message':'Premium users can attend only one exam related to other category.'}
+
+    def get_exams_history_for_user(self, username):
+        user = self.db_object.get_one(self.table_name, {'username': username})        
+        try:
+            valid_subject_exam = list(user['valid_subject_exam'])
+        except:
+            valid_subject_exam = []
+
+        valid_subject_exam_codes = []
+        valid_subject_exam_history_details = []
+
+        exam_model_api_obj = ExammodelApi()
+        result_obj = Result()
+        for eachValidExam in valid_subject_exam:
+            one_exam_detail = exam_model_api_obj.find_one_exammodel(
+                condition={'exam_code':int(eachValidExam['exam_code'])}, 
+                fields={'question_list':0}
+            )
+            user_result = result_obj.find_all_result(
+                {'exam_code': int(eachValidExam['exam_code']),
+                'useruid': user['useruid']}            
+            )
+            if len(user_result) != 0:
+                exam_result = user_result[len(user_result)-1]
+                valid_subject_exam_history_details.append({'exam_details':one_exam_detail, 
+                    'result':exam_result['result']}
+                )
+            valid_subject_exam_codes.append(int(eachValidExam['exam_code']))
+
+        all_exams_attempted = user['valid_exam']
+        valid_practice_exam_history_details = []
+        for eachExamCode in all_exams_attempted:
+            if eachExamCode not in valid_subject_exam_codes:
+                one_exam_detail = exam_model_api_obj.find_one_exammodel(
+                    condition={'exam_code':int(eachExamCode)}, 
+                    fields={'question_list':0}
+                )
+                user_result = result_obj.find_all_result(
+                    {'exam_code': int(eachExamCode),
+                    'useruid': user['useruid']}            
+                )
+                if len(user_result) != 0:
+                    exam_result = user_result[len(user_result)-1]
+                    valid_practice_exam_history_details.append({'exam_details':one_exam_detail, 'result':exam_result['result']})
+        return {'practice_exams':valid_practice_exam_history_details, 'subject_exams':valid_subject_exam_history_details}
+
+
+    def check_generate_and_save_valid_subject_exam(self, username, subject_name):
+        '''
+            This method checks:
+                a. If the user is general user then he/she has already given subject exam or not.
+                    If he has given then doesn't generate new exam else generates new exam.
+                b. If the user is premium user then generate new subject exam. 
+        '''
+        from apps.testapp.views import generate_random_subject_test
+        user = self.db_object.get_one(self.table_name, {'username': username})        
+        subscription_type = self.get_subscription_plan(username)
+        
+        exam_model_api_obj = ExammodelApi()
+
+        if 'IDP' not in subscription_type and 'BE-IOE' not in subscription_type and 'MBBS-IOM' not in subscription_type:
+            try:
+                valid_subject_exam = list(user['valid_subject_exam'])
+            except:
+                valid_subject_exam = []
+
+            subject_list = []
+            for eachValidExam in valid_subject_exam:
+                subject_list.append(eachValidExam['exam_category'])
+
+            if len(valid_subject_exam) > 0 and (str(subject_name.lower()) + '-test' in subject_list) :
+                return {'status':'error', 'message':'General user can attempt only one exam for free. However you can attempt free quizes and other subject test. '}
+            else:
+                exam_codes = exam_model_api_obj.find_all_exam_codes(condition={'exam_category':subject_name.lower()+'-test'})
+                for eachExamCode in exam_codes:
+                    if eachExamCode not in user['valid_exam']:
+                        self.save_valid_exam(username, int(eachExamCode))    
+                        self.save_valid_subject_exam(
+                            username, eachExamCode, subject_name
+                        )
+                        return {'status':'ok', 'exam_code':eachExamCode}
+
+                subject_test_exam_code = generate_random_subject_test(str(subject_name))
+                self.save_valid_exam(username, int(subject_test_exam_code))    
+                self.save_valid_subject_exam(
+                    username, subject_test_exam_code, subject_name
+                )                
+                return {'status':'ok', 'exam_code':subject_test_exam_code}
+
+        elif 'IDP' in subscription_type or 'BE-IOE' in subscription_type or 'MBBS-IOM' in subscription_type:
+            exam_codes = exam_model_api_obj.find_all_exam_codes(condition={'exam_category':subject_name.lower()+'-test'})
+            for eachExamCode in exam_codes:
+                if eachExamCode not in user['valid_exam']:
+                    self.save_valid_exam(username, int(eachExamCode))    
+                    self.save_valid_subject_exam(
+                        username, eachExamCode, subject_name
+                    )
+                    return {'status':'ok', 'exam_code':eachExamCode}  
+                                          
+            subject_test_exam_code = generate_random_subject_test(str(subject_name))
+            self.save_valid_exam(username, int(subject_test_exam_code))    
+            self.save_valid_subject_exam(
+                username, subject_test_exam_code, subject_name
+            )                
+            return {'status':'ok', 'exam_code':subject_test_exam_code}

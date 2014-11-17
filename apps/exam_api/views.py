@@ -28,6 +28,7 @@ class ExamHandler():
             question_id_list = [
                 ObjectId(i['id']) for i in exam_model['question_list']
             ]
+            
             question_api = QuestionApi()
             if html:
                 question_list = question_api.find_all_questions(
@@ -132,7 +133,7 @@ class ExamHandler():
 
         # negative marking for 1 marks pulchowk exam.
         negative_marking = False
-        if exam_model['exam_category'] == "BE-IOE" and sorted_questions[0]['marks'] == 1:
+        if exam_model['exam_category'] in ["BE-IOE", "MBBS-MOE"] and sorted_questions[0]['marks'] == 1:
             negative_marking = True
 
         subjects = set([i['subject'].lower() for i in sorted_questions])

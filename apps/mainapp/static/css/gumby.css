@@ -8206,6 +8206,7 @@ table.rounded > tbody:first-child tr:first-child td {
 .noise {
   position: relative;
   z-index: 1;
+  background-image: url('/static/images/stupa.jpg');
 }
 .noise:before {
   content: "";
@@ -9403,6 +9404,7 @@ table.rounded > tbody:first-child tr:first-child td {
 *****************************************************/
 .section-signup {
   background-color: #134450;
+  
 }
 .section-signup h1, .section-signup h2, .section-signup h3, .section-signup h4, .section-signup h5, .section-signup h6, .section-signup p {
   color: #fff;

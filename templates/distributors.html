@@ -1,35 +1,88 @@
 {% extends 'base.html' %}
 {% block head %}
 <style type="text/css">
+    .distributors{
+      box-shadow: 0 1px 2px 0 #555;
+      border-top: 1px solid rgba(0,0,0,0.1);
+      margin-bottom: 0;
+      min-width: 343px;
+      overflow: hidden;
+      background-color: #fff;
+      margin-right:1%;
+      margin-bottom: 3%;
+      text-align: center;
+      margin-left:0%;      
+    }
+    .textcenter{
+        text-align:center
+      }
 </style>
 {% endblock %}
 
 {% block content %}  
-<div class="wrapper " id="simple" style="margin-top:6%;margin-bottom:2%">
-</div>
 
-<div class="wrapper" id="showcase">
-		<section class="row">
-		<article><h3>Currently we have following distributors</h3></article>
-		<div class="row" style="margin-top: 3%; margin-bottom: 3%;">
-			<article class="three columns">
+<div class="wrapper" id="showcase" style="margin-bottom:2%; margin-top:2%;">
+		<section class="row boxing">
+			<article><h3 class="textcenter"><strong>Currently we have following distributors</strong></h3><h4 style="text-align:center">Please contact them to buy our coupons. </h4></article><hr/>
+			<div class="row" style="margin-top: 3%; margin-bottom: 3%;">
+			<article class="six columns distributors">
                 <p style="color:red;text-size:20px;"><strong>Progress Bookshop</strong></p>
                 <p style="text-size:15px;"><strong>Outside PEA Building</strong></p>
                 <p style="text-size:15px;">Thapathali, Kathmandu</p>
             </article>
-            <article class="three columns">             
+            <article class="six columns distributors">             
                 <p style="color:red;text-size:15px;"><strong>Nirvana Book Store</strong></p>
                 <p style="text-size:15px;"><strong>Outside Name Building</strong></p>
                 <p style="text-size:15px;">Putalisadak, Kathmandu</p>
             </article>
-            <article class="three columns">             
+            <article class="six columns distributors">             
                 <p style="color:red;text-size:15px;"><strong>Samikshya Book Store</strong></p>
                 <p style="text-size:15px;"><strong>Outside Vibrant Building</strong></p>
                 <p style="text-size:15px;">Putalisadak, Kathmandu</p>
             </article>
-		</div>
+
 	</section>
-	<section class="row">
+  <section id="section-form-fill" class=" row boxing" style="margin-top:0%; margin-bottom: 2%;">
+    <div class="row"> 
+      <h4 class="textcenter"><strong> or Contact us for coupons and premium membership </strong></h4><hr/><br>
+      {% if success %}
+            <li class="warning alert"> Your request has been successfully sent to the admin. We will contact you soon.</li>
+      {% endif %}
+      <div class="six columns contactform centered">
+        <form class="" name="myform" role="form" method="POST" action=".">            
+            <div class="field">
+              <input class="input" type="text" id="display_name_txt" class="form-control" placeholder="Your Name" name="name" required="required">
+              {% if name_error %}
+                <p style="color:red">{{name_error_message}}</p>
+              {% endif %}
+            </div>
+
+            
+            <div class="field">
+              <input class="input" type="text" id="email_txt" class="form-control" placeholder="Email" name="email" required="required">
+              {% if email_error %}
+                <p style="color:red">{{email_error_message}}</p>
+              {% endif %}
+            </div>
+
+            <div class="field">
+              <input class="input" type="text" id="phone" class="form-control" placeholder="Phone Number" name="phone" required="required">
+              {% if phone_error %}
+                <p style="color:red">{{phone_error_message}}</p>
+              {% endif %}
+            </div>
+            
+            <div class="field">
+                <button type="submit" class="btn warning medium pretty" style="min-width: 120px;">Submit</button>
+            </div>
+            
+        </form>
+      </div>
+      <br>
+    </div>
+</section>
+	</div>
+<!-- 	<section class="row">
 		<article><h3>Interested to sell our coupons?</h3></article>
 	</section>
 	<section class="row" id="showcase_shodown">			
@@ -39,7 +92,7 @@
 				<iframe src="https://docs.google.com/forms/d/1W2YgxZIXEXGDm4njJ7nU8uqhmX6ihTkpQbDWrQVsq34/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 			</article>
 		</div>
-	</section>
+	</section> -->
 </div>
 {% endblock %}
 {% block javascript %}

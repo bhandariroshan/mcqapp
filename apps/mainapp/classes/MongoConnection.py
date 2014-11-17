@@ -14,6 +14,14 @@ class MongoConnection():
     def ensure_index(self, table_name, index=None):
         self.db[table_name].ensure_index([(index, pymongo.GEOSPHERE)])
 
+    def get_random_document(self, table_name, random_number, conditions={}, fields=None):
+        single_doc = self.db[table_name].find(conditions, fields).limit(1).skip(random_number).next()
+        json_doc = json.dumps(single_doc, default=json_util.default)
+        json_doc = json_doc.replace("$oid", "id")
+        json_doc = json_doc.replace("_id", "uid")
+        return json.loads(json_doc)
+        
+
     def create_table(self, table_name, index=None):
         pass
         # self.db[table_name].create_index([(index, pymongo.DESCENDING)])
@@ -137,3 +145,23 @@ class MongoConnection():
     def get_count(self, table_name, conditions={},
                   fields={}, sort_index='_id'):
         return self.db[table_name].find(conditions, fields).count()
+
+    def full_text_search(self, table_name, query_text, fields, limit=10,):
+        ret_results = []
+        result = self.db.command("text", table_name, 
+                search="\"" + query_text +"\"",
+                project=fields, 
+                limit=limit)
+
+        for res in result['results']:
+            ret_results.append(res)
+        
+        result = self.db.command("text", table_name, 
+                search=query_text,
+                project=fields, 
+                limit=limit)
+
+        for res in result['results']:
+            ret_results.append(res)
+
+        return ret_results

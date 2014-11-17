@@ -73,9 +73,17 @@ function get_new_exam_success(data){
 		if (data['type']=='be-ioe'){
 			window.location = '/ioe/dps/' + data['exam_code']			
 		}
-		else{
+		else if (data['type']=='mbbs-iom'){
 			window.location = '/iom/dps/' + data['exam_code']
 		}
+		else if (data['type']=='mbbs-moe'){
+			window.location = '/moe/dps/' + data['exam_code']
+		}
+	}
+	else{
+		var html_str = data['message'] + 'You need to be a premium user to access full features. <a href="/subscription/" style="color:red"> Learn more about premium plans and fill the form for subscription</a>. <br/>' ;
+        $('#infoText').html(html_str); 
+        $('#validateCouponforNewExam').click();
 	}
 }
 

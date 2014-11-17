@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mark Sheet</title>
+	<style type="text/css">
+		table, th, td {
+ 			  border: 1px solid black;
+		}
+	</style>
+</head>
+<body style="background-color:papayawhip;">
+	<h2 style="text-align:center">SLC Mark sheet</h2>
+	<div style="width:100%; margin-left:1%;">
+		<div><strong>Name: </strong>{{result.name}}</div>
+		<div><strong>Symbol: </strong>{{result.symbol}} </div>
+		<div><strong>School: </strong>{{result.school}} </strong></div>
+		<div><strong>Address: </strong>{{result.district}} {{result.street}} </div>
+		<div><strong>Year: </strong>{{result.year}} </div>
+	</div>
+	<br/>
+	<div style="width:100%;">
+		<table style="width:100%;">		
+			<th id="header;">
+				<td><strong>Subject</strong></td>
+				<td><strong>Full Marks</strong></td>
+				<td><strong>Theory</strong></td>
+				<td><strong>Practical</strong></td>
+				<td><strong>Total</strong></td>
+			</th>
+			{% for eachScore in result.scores %}
+				<tr id="marks-body">
+					<td></td>
+					<td>{{eachScore.subject}}</td>
+					<td>100</td>
+					<td>{{eachScore.theory}}</td>
+					<td>{{eachScore.practical}}</td>
+					<td>{{eachScore.total_obtained}}</td>
+				</tr>				
+			{% endfor %}
+			<tr>
+				<td></td>
+				<td><strong>Total</strong></td>
+				<td>{{result.total_full_marks}}</td>
+				<td>{{result.total_theory_obtained}}</td>
+				<td>{{result.total_practical_obtained}}</td>
+				<td>{{result.total_marks_obtained}}</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><strong>Percentage</strong></td>
+				<td>{{result.percentage|floatformat:"2"}}</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
