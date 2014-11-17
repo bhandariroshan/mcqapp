@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div style="margin:50px">
+	<table>
+		<th>S.N.</th>
+		<th>Username</th>
+		<th>Name</th>
+		<th>Gender</th>
+		<th>Email</th>
+		<th>FB URL</th>
+		<th>Practice Count</th>
+		<th>Subject Tests Count</th>
+		
+		
+	{% for each in latest_users %}
+	<tr>
+		<td>{{forloop.counter}}</td>
+		<td>{{each.username}}</td>
+		<td>{{each.first_name}} {{each.last_name}}</td>
+		<td>{{each.gender}}</td>
+		<td>{{each.email}}</td>
+		<td><a href="{{each.fb_url}}" target="_blank" > Facebook Link</a></td>
+		<td>{{each.practice_exams_count}}</td>
+		<td>{{each.subject_exams_count}}</td>
+	</tr>
+	{% endfor %}
+
+	</table>
+</div>
+{% endblock content %}

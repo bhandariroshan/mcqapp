@@ -59,7 +59,8 @@ urlpatterns = patterns(
     url(r'^paying_users/$', 'apps.exam_api.coupon_admin.paying_users'),
     url(r'^history/$', 'apps.mainapp.views.history'),
     url(r'^history/(?P<subject_name>\w{1,30})/$', 'apps.mainapp.views.subject_history'),
-
+    url(r'^superuser/$', 'apps.mainapp.superuser.dashboard'),
+    url(r'^exam_count/$', 'apps.mainapp.superuser.exam_count'),
 
     # url(r'^mongonaut/', include('mongonaut.urls')),
 )
