@@ -15,6 +15,10 @@
   width: 200px;
   margin-top: 10%;
 }
+.myhome{
+  max-width: 2000px;
+}
+
 
 </style>
 {% endblock %}
@@ -27,30 +31,31 @@
       <!-- START: Animation Wrapper -->
       
         <!-- START: Section Header -->
-      <h3 style="text-align:center; padding-top:10%;"> <strong> Enhance your competitive skills. </strong></h3><br><br>
-      <div class="row twelve columns">
-        <div class="nine columns" style="padding-top:0%; padding-left: 10%;"> 
-            
-            <p class="">
-
-                <i class="fa fa-check-square-o"></i>&nbsp;&nbsp;Exams based on syllabus of entrance examinations<br>
-                <i class="fa fa-check-square-o"></i>&nbsp;&nbsp;Subject wise test(Physics, Chemistry, Biology,<br> Mathematics, English, Drawing) <br>                
-                <i class="fa fa-check-square-o"></i>&nbsp;&nbsp;Over 5000 mcq with answers<br>
-                <i class="fa fa-check-square-o"></i>&nbsp;&nbsp;Free daily quiz<br>
-                <i class="fa fa-check-square-o"></i>&nbsp;&nbsp;Leader board for performance tracking<br>
-                <i class="fa fa-check-square-o"></i>&nbsp;&nbsp;Available in Android
-            </p>              
+      <h3 style="text-align: center;font-family: Oxygen;padding-top: 5%;padding-left: 5%;padding-bottom: 5px;text-shadow: 1px 1px 1px;">  Enhance your competitive skills. </h3><h5 style="text-align: center;font-size: 23px;padding-left: 5%;font-family: Oxygen;margin-top: 0px;/* color: red; */color: #E7D62C;">Platform for medical and engineering entrance preparation</h5>
+      <div class="row myhome twelve columns">
+        <div class="four columns" style="padding-top:0%; padding-left: 10%;"> 
+                         
         </div>
-        <div class="three columns" style="padding-top:2%; margin-left: 0%;"> 
+        <div class="five columns" style="margin-left: 0%;margin-top: 3%;"> 
             <!-- <h4> <strong> Sign up / Login using Facebook </strong></h4><br><br> -->
                 <p class="" style="padding-left: 12%;">
+                  <p class="">
 
-                    <a class="btn primary large pretty " style="background: #3b5998; min-width:300px;" id="fbLogin" href="{% provider_login_url "facebook" method="oauth2" %}">
-                      <span class="adjoined"><i class="icon-facebook" style="color:white"></i></span>
-                      <span style="font-size:14px;"><strong style="color:white"> Sign up / Login using Facebook </strong> </span>
-                    </a>
+                      <i class="fa fa-check-square-o"></i>&nbsp;&nbsp;Exams based on syllabus of entrance examinations<br>
+                      <i class="fa fa-check-square-o"></i>&nbsp;&nbsp;Subject wise test(Physics, Chemistry, Biology,Mathematics, English, Drawing) <br> 
+                      <i class="fa fa-check-square-o"></i>&nbsp;&nbsp;Over 10,000 mcq with answers<br>
+                      <i class="fa fa-check-square-o"></i>&nbsp;&nbsp;Free daily quiz<br>
+                      <!-- <i class="fa fa-check-square-o"></i>&nbsp;&nbsp;Leader board for performance tracking<br> -->
+                      <!-- <i class="fa fa-check-square-o"></i>&nbsp;&nbsp;Available in Android -->
+                  </p> 
+
+                   <a class="btn primary large pretty " style="background: #3b5998; min-width:300px;margin-top: 10%;margin-left: 5%;" id="fbLogin" href="{% provider_login_url "facebook" method="oauth2" %}">
+                        <span class="adjoined"><i class="icon-facebook" style="color:white"></i></span>
+                        <span style="font-size:14px;"><strong style="color:white"> Sign up / Login using Facebook </strong> </span>
+                      </a>
                 </p>
         </div>
+        <div></div>
       </div>
       <!-- /END: Animation Wrapper  -->
     </section>

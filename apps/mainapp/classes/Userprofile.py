@@ -23,8 +23,8 @@ class UserProfile():
             }
         )
 
-    def get_all_users(self, limit=200):
-        return self.db_object.get_all(self.table_name, limit=limit)
+    def get_all_users(self, conditions={}, limit=200):
+        return self.db_object.get_all(self.table_name, conditions={}, limit=limit)
 
     def save_user(self, user={}):
         self.db_object.insert_one(self.table_name, user)
