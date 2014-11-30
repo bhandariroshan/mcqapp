@@ -2,7 +2,7 @@ from django.views.generic import View
 from django.shortcuts import render
 from .models import QuizResult
 from apps.mainapp.classes.Userprofile import UserProfile
-import datetime
+import datetime,time
 
 
 class LeaderBoardView(View):
@@ -29,8 +29,10 @@ class LeaderBoardView(View):
         date = datetime.date.today()
         start_week = date - datetime.timedelta(date.weekday())
         end_week = start_week + datetime.timedelta(7)
-        start_week_timestamp = int(start_week.strftime("%s"))
-        end_week_timestamp = int(end_week.strftime("%s"))
+        # print type(start_week)
+        # print start_week.strftime("%s")
+        start_week_timestamp = int(time.mktime(start_week.timetuple()))
+        end_week_timestamp = int(time.mktime(end_week.timetuple()))
 
         user_prof = UserProfile()
         all_users = QuizResult.objects.distinct('user_id')
