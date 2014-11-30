@@ -46,11 +46,14 @@ class LeaderBoardView(View):
                 quiz_types = QuizResult.objects.filter(
                     user_id=each_user).distinct('quiz_type')
                 for each in quiz_types:
-                    data = {
-                        'user_id': quiz_user.get('useruid'),
-                        'name': quiz_user.get('name'),
-                        'profile_img': "http://graph.facebook.com/" + quiz_user.get('id') + "/picture"
-                    }
+                    try:
+                        data = {
+                            'user_id': quiz_user.get('useruid'),
+                            'name': quiz_user.get('name'),
+                            'profile_img': "http://graph.facebook.com/" + quiz_user.get('id') + "/picture"
+                        }
+                    except:
+                        continue
                     score = QuizResult.objects.filter(
                         user_id=each_user, quiz_type=each,
                         attempted_date__gte=start_week_timestamp
