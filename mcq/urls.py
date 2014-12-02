@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, include, url
 from django.views.generic import TemplateView, RedirectView
 from django.conf import settings
-
+from apps.mainapp.analytics import AnalyticsView
 from django.contrib import admin
 admin.autodiscover()
 
@@ -61,7 +61,11 @@ urlpatterns = patterns(
     url(r'^history/(?P<subject_name>\w{1,30})/$', 'apps.mainapp.views.subject_history'),
     url(r'^superuser/$', 'apps.mainapp.superuser.dashboard'),
     url(r'^exam_count/$', 'apps.mainapp.superuser.exam_count'),
-
+    url(
+        r'^analytics/$',
+        view=AnalyticsView.as_view(),
+        name='analytics'
+    ),
     # url(r'^mongonaut/', include('mongonaut.urls')),
 )
 

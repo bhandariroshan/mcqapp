@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+<h2 style="text-align: center;">Meroanswer Exam Analytics</h2>
+<div class="row">
+    <div class="three columns" style="margin-top: 3%;">
+
+	<div class="medium default btn" style="width:200px;"><a href="#">Quiz</a></div></br></br>
+	<div class="medium info btn" style="width:200px;"><a href="#">Subject Tests</a></div></br></br>
+	<div class="medium default btn" style="width:200px;"><a href="#">IOM Tests</a></div></br></br>
+	<div class="medium default btn" style="width:200px;"><a href="#">IOE Tests</a></div></br></br>
+
+    </div>
+    <div class="nine columns" style="margin-top: 3%;">
+      <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+    </div>
+  </div>
+
+{% endblock %}
+{% block javascript %}
+<script type="text/javascript">
+x_axis = "{{x_axis}}".split("#");
+IOE_score = "{{IOE_score}}".split("#");
+console.log(x_axis);
+$(function () {
+    $('#container').highcharts({
+        title: {
+            text: 'Monthly Average Temperature',
+            x: -20 //center
+        },
+        subtitle: {
+            text: 'Source: WorldClimate.com',
+            x: -20
+        },
+        xAxis: {
+            // categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+            //     'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            categories: x_axis
+        },
+        yAxis: {
+            title: {
+                text: 'Scores'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: '°C'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: 'Tokyo',
+            data: IOE_score
+        }, {
+            name: 'New York',
+            data: [2,4,6,7,4,3,5,3]
+        }, {
+            name: 'Berlin',
+            data: [5,7,5,5,4,6,8,4]
+        }, {
+            name: 'London',
+            data: [2,2,4,1,4,5,3,2]
+        }]
+    });
+});
+</script>
+{% endblock %}

@@ -3,6 +3,8 @@ from django.shortcuts import render
 from .models import QuizResult
 from apps.mainapp.classes.Userprofile import UserProfile
 import datetime,time
+from django.template import RequestContext
+from django.shortcuts import render_to_response
 
 
 class LeaderBoardView(View):
@@ -23,7 +25,7 @@ class LeaderBoardView(View):
             parameters['ioe_result'], parameters['iom_result'] = self.user_quiz_result()
         else:
             parameters['ioe_result'], parameters['iom_result'] = self.week_quiz_result()
-        return render(request, self.template_name, parameters)
+        return render_to_response(self.template_name, parameters, context_instance=RequestContext(request))
 
     def week_quiz_result(self):
         date = datetime.date.today()
@@ -66,7 +68,9 @@ class LeaderBoardView(View):
                     ).filter(
                         attempted_date__lte=end_week_timestamp
                     ))
-                    data['total_score'] = format(score/float(total_quiz), '.2f')
+                    if total_quiz == 0:
+                        continue
+                    data['total_score'] = int(score)
                     data['total_quiz'] = int(total_quiz)
                     if each == 'MBBS-IOM':
                         final_iom_result.append(data)
@@ -104,7 +108,9 @@ class LeaderBoardView(View):
                         user_id=each_user, quiz_type=each).sum('quiz_score')
                     total_quiz = len(QuizResult.objects.filter(
                         user_id=each_user, quiz_type=each))
-                    data['total_score'] = format(score/float(total_quiz), '.2f')
+                    if total_quiz == 0:
+                        continue
+                    data['total_score'] = int(score)
                     data['total_quiz'] = int(total_quiz)
                     if each == 'MBBS-IOM':
                         final_iom_result.append(data)
