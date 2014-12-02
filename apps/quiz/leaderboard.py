@@ -95,6 +95,8 @@ class LeaderBoardView(View):
                 continue
             else:
                 quiz_user = user_prof.get_user_by_userid(int(each_user))
+                if quiz_user == None:
+                    continue
                 quiz_types = QuizResult.objects.filter(
                     user_id=each_user).distinct('quiz_type')
                 for each in quiz_types:
