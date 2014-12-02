@@ -19,13 +19,13 @@ class LeaderBoardView(View):
     template_name = 'quiz/leaderboard.html'
 
     def get(self, request, *args, **kwargs):
-        parameters = {}
+        parameters = RequestContext(request)
         filter_type = request.GET.get('filter', 'week')
         if filter_type == 'all':
             parameters['ioe_result'], parameters['iom_result'] = self.user_quiz_result()
         else:
             parameters['ioe_result'], parameters['iom_result'] = self.week_quiz_result()
-        return render_to_response(self.template_name, parameters, context_instance=RequestContext(request))
+        return render_to_response(self.template_name, parameters)
 
     def week_quiz_result(self):
         date = datetime.date.today()
