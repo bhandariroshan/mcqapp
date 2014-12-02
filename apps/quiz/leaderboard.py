@@ -61,7 +61,7 @@ class LeaderBoardView(View):
                     ).filter(
                         attempted_date__lte=end_week_timestamp
                     ))
-                    data['total_score'] = int(score)
+                    data['total_score'] = format(score/float(total_quiz), '.2f')
                     data['total_quiz'] = int(total_quiz)
                     if each == 'MBBS-IOM':
                         final_iom_result.append(data)
@@ -99,7 +99,7 @@ class LeaderBoardView(View):
                         user_id=each_user, quiz_type=each).sum('quiz_score')
                     total_quiz = len(QuizResult.objects.filter(
                         user_id=each_user, quiz_type=each))
-                    data['total_score'] = int(score)
+                    data['total_score'] = format(score/float(total_quiz), '.2f')
                     data['total_quiz'] = int(total_quiz)
                     if each == 'MBBS-IOM':
                         final_iom_result.append(data)
