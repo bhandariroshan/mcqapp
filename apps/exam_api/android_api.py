@@ -66,7 +66,7 @@ def get_question_set(request, exam_code):
         if exam_code is 0 then new IOE set is generated randomly and
         the newly generated exam_code is used to access questions.
         '''
-        if exam_code == 0:
+        if exam_code == 1:
             if "BE-IOE" in user['subscription_type']:
                 subscription = True
             if not subscription and not coupon_obj.validate_coupon(coupon_code, 'BE-IOE', 'DPS'):
@@ -86,7 +86,7 @@ def get_question_set(request, exam_code):
         if exam_code is 1 then new IOM set is generated randomly and
         the newly generated exam_code is used to access questions.
         '''
-        if exam_code == 1:
+        if exam_code == 0:
             if "MBBS-IOM" in user['subscription_type']:
                 subscription = True
             if not subscription and not coupon_obj.validate_coupon(coupon_code, 'MBBS-IOM', 'DPS'):
@@ -192,9 +192,9 @@ def get_upcoming_exams(request):
         subscribed_iom = 0
         if "BE-IOE" in usr['subscription_type']:
             subscribed_ioe = 1
-        elif "MBBS-IOM" in usr['subscription_type']:
+        if "MBBS-IOM" in usr['subscription_type']:
             subscribed_iom = 1
-        elif "IDP" in usr['subscription_type']:
+        if "IDP" in usr['subscription_type']:
             subscribed_ioe = subscribed_iom = 1
         user_exams = usr['valid_exam']
         upcoming_exams = []
