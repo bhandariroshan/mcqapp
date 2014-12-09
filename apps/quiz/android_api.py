@@ -4,12 +4,13 @@ from bson.objectid import ObjectId
 from django.http import HttpResponse
 
 from apps.mainapp.classes.query_database import ExammodelApi, QuestionApi
-
+from django.views.decorators.csrf import csrf_exempt
 from .question_quiz import GenerateQuiz
 from .models import QuizResult, QuizAnswer
 from .user_quiz_data import SaveQuiz
 
 
+@csrf_exempt
 def get_quiz_question(request, exam_category):
     """
     This function returns the list of quiz questions for the
@@ -45,7 +46,7 @@ def get_quiz_question(request, exam_category):
 
     return HttpResponse(json.dumps(response))
 
-
+@csrf_exempt
 def save_quiz_score(request, exam_model, answer_list):
     """
     This function receives the exam_code of the quiz and sa
@@ -77,7 +78,7 @@ def save_quiz_score(request, exam_model, answer_list):
 
     return daily_score
 
-
+@csrf_exempt
 def user_quiz_score(request):
     """
     This function receives the exam_code of the quiz and sa
