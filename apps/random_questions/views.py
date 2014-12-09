@@ -14,14 +14,14 @@ def generate_random_ioe_questions(request):
     question from all exam sets
     '''
     question_api = QuestionApi()
-    distinct_dict = question_api.find_distinct_value('exam_code', {'marks': 2})
+    distinct_dict = question_api.find_distinct_value('exam_code', {'marks': 1})
     question_sets = []
     for each_code in distinct_dict['results']:
         questions = question_api.find_all_questions(
-            {"exam_code": each_code, 'marks': 2},
+            {"exam_code": each_code, 'marks': 1},
             fields={'question_number': 1, 'subject': 1}
         )
-        if len(questions) == 55:
+        if len(questions) == 65:
             question_sets.append(questions)
     final_question_set = []
     if len(question_sets) == 0:
