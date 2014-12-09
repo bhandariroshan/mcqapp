@@ -45,12 +45,23 @@ def new_dashboard(request):
         user_profile_obj = UserProfile()
         # exam_model_api = ExammodelApi()
         user = user_profile_obj.get_user_by_username(request.user.username)
-        # get or set user referral id
-        # ref_obj = Referral()
-        # user_id = request.user.id
-        # myref_obj = ref_obj.get_referral_id(user_id)
-        # parameters['ref_id'] = myref_obj['uid']['id']
-        # parameters['ref_count'] = len(myref_obj['invite_acceptuids'])
+        exam_model_api = ExammodelApi()
+
+        # exam_dict = {'ioe': 'BE-IOE', 'iom': 'MBBS-IOM'}
+
+        parameters['all_subscribed'] = False
+        parameters['ioe_subscribed'] = False
+        parameters['iom_subscribed'] = False
+
+        if "IDP" in user['subscription_type']:
+            parameters['all_subscribed'] = True
+
+        if 'BE-IOE' in user['subscription_type']:
+            parameters['ioe' + '_subscribed'] = True
+
+        if 'MBBS-IOM' in user['subscription_type']:
+            parameters['iom_subscribed'] = True
+
 
         if user is None:
             raise Http404
@@ -236,6 +247,7 @@ def user_dashboard(request, exam_type):
     user_profile_obj = UserProfile()
     exam_model_api = ExammodelApi()
     user = user_profile_obj.get_user_by_username(request.user.username)
+
     # get or set user referral id
     ref_obj = Referral()
     user_id = request.user.id
