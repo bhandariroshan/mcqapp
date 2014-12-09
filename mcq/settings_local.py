@@ -18,6 +18,8 @@ LOGIN_REDIRECT_URL = "/"
 ACCOUNT_LOGOUT_ON_GET = True
 ACCOUNT_USERNAME_BLACKLIST =[]
 ACCOUNT_USERNAME_REQUIRED =False
+APPEND_SLASH = False
+SERVER_EMAIL= 'info@meroanswer.com'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
