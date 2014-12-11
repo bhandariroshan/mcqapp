@@ -226,7 +226,7 @@ class UserProfile():
 
         elif 'IDP' in subscription_type or 'BE-IOE' in subscription_type or 'MBBS-IOM' in subscription_type:            
             ''' This section is for premium  user. '''
-            if ex_type.upper() in subscription_type:
+            if ex_type.upper() in subscription_type or 'IDP' in subscription_type:
                 for eachExamCode in exam_codes:
                         if eachExamCode not in user['valid_exam']:
                             self.save_valid_exam(username, int(eachExamCode))    
@@ -241,6 +241,7 @@ class UserProfile():
                 self.save_valid_practice_exam(username, exam_code, ex_type)
                 return {'status':'ok', 'exam_code':exam_code}
             else:
+                print "else"
                 return {'status':'error', 'message':'Premium users can attend only one exam related to other category.'}
 
     def get_exams_history_for_user(self, username):

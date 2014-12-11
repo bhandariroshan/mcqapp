@@ -57,12 +57,12 @@ def new_dashboard(request):
             parameters['all_subscribed'] = True
 
         if 'BE-IOE' in user['subscription_type']:
-            parameters['ioe' + '_subscribed'] = True
+            parameters['ioe_subscribed'] = True
 
         if 'MBBS-IOM' in user['subscription_type']:
             parameters['iom_subscribed'] = True
 
-
+        print parameters['all_subscribed']
         if user is None:
             raise Http404
 
