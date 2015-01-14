@@ -49,6 +49,8 @@
                   <option value="5">5</option>                  
                 </select>
             </label>
+            <br><br>
+            <textarea rows="4" cols="40" id="Hint_{{eachQuestion.uid.id}}"></textarea> 
 
             <button onclick="save_question_details('{{eachQuestion.uid.id}}')">Save</button>
             <br><br><br>
@@ -107,7 +109,8 @@
       var chapter = $('#Chapter_'+uid).val();
       var topic = $('#Topic_'+uid).val();
       var difficulty = $('#Difficulty_'+uid).val();
-      update_question(uid, subject, unit, chapter, topic, difficulty);
+      var hint = $('#Hint_' + uid).val();
+      update_question(uid, subject, unit, chapter, topic, difficulty, hint);
     }
 
 </script>    

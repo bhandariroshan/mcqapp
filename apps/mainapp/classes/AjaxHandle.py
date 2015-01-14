@@ -98,9 +98,13 @@ class AjaxHandle():
             chapter = request.POST.get('chapter','')
             topic = request.POST.get('topic','')
             difficulty = request.POST.get('difficulty','')
-
+            hint = request.POST.get('hint','')
             ques_obj.update_question({'_id':uid}, 
-                {'flag_chapter_set':1,'subject':subject, 'unit':unit, 'chapter':chapter, 'topic':topic, 'difficulty':difficulty})
+                {
+                'flag_chapter_set':1,'subject':subject, 
+                'unit':unit, 'chapter':chapter, 'topic':topic, 
+                'difficulty':difficulty, 'hint':hint
+                })
             return HttpResponse(json.dumps({'status':'ok', 'uid':request.POST.get('uid','')}))
         else:
             return HttpResponse({'status':'error', 'message':'Not authorized'})        

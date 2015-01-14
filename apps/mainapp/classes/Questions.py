@@ -10,27 +10,27 @@ class Question():
 
     def get_questions(self, username):
         if username == 'roshan':
-            questions = self.db_object.get_all_vals(table_name=self.table_name,             
+            questions = self.db_object.get_all(table_name=self.table_name, limit = 25,            
                 conditions={'flag_chapter_set':{'$exists':False}, '$or':[{'subject':'botany'}, {'subject':'zoology'}]})
 
         if username == 'sujit':
-            questions = self.db_object.get_all_vals(self.table_name,             
+            questions = self.db_object.get_all(self.table_name,  limit = 25,           
                 conditions={'flag_chapter_set':{'$exists':False}, 'subject':'physics'})
 
         if username == 'sudip':
-            questions = self.db_object.get_all(self.table_name,             
+            questions = self.db_object.get_all(self.table_name, limit = 25,            
                 conditions={'flag_chapter_set':{'$exists':False}, 'subject':'chemistry'})
 
         if username == 'raj':
-            questions = self.db_object.get_all(self.table_name,             
+            questions = self.db_object.get_all(self.table_name,  limit = 25,           
                 conditions={'flag_chapter_set':{'$exists':False}, 'subject':'english'})
 
         if username == 'sijan':
-            questions = self.db_object.get_all(self.table_name,             
+            questions = self.db_object.get_all(self.table_name,  limit = 25,           
                 conditions={'flag_chapter_set':{'$exists':False}, 'subject':'aptitude'})
 
         if username == 'santosh':
-            questions = self.db_object.get_all(self.table_name,             
+            questions = self.db_object.get_all(self.table_name, limit = 25,            
                 conditions={'flag_chapter_set':{'$exists':False}, 'subject':'mathematics'})
 
         return questions

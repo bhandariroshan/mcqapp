@@ -21,9 +21,9 @@ function ajax_request(s_handler, c_handler, input_data){
 // 	}
 // }
 
-function update_question(uid, subject, unit, chapter, topic, difficulty){
+function update_question(uid, subject, unit, chapter, topic, difficulty, hint){
 	ajax_request('update_question', 'update_question_success',
-		{'uid':uid, 'subject':subject, 'unit':unit, 'chapter':chapter, 'topic':topic, 'difficulty':difficulty});
+		{'uid':uid, 'subject':subject, 'unit':unit, 'chapter':chapter, 'topic':topic, 'difficulty':difficulty, 'hint':hint});
 }
 
 
