@@ -39,6 +39,96 @@ class AjaxHandle():
     #             {'status': 'error', 'message': 'You are not authorized to perform this action.'}
     #         ))
 
+    def get_units(self, request):
+        if request.user.is_authenticated():
+            from apps.mainapp.classes.Questions import TopicApi
+            topic_obj = TopicApi()
+            
+            subject = request.POST.get('subject','')
+            uid = request.POST.get('uid','')
+
+            units_unfiltered = topic_obj.get_topic({'subject':subject})
+            units_list = []
+            for eachUnits in units_unfiltered:
+                if eachUnits['subject'] == subject:
+                    if eachUnits['unit'] not in units_list and eachUnits['unit']!="":
+                        units_list.append(eachUnits['unit'])
+            return HttpResponse(json.dumps({
+                        'status':'ok',
+                        'subject':subject,
+                        'units':units_list, 
+                        'uid':uid
+                    }))
+        else:
+            return HttpResponse({'status':'error', 'message':'Not authorized'})
+
+    def get_chapters(self, request):
+        if request.user.is_authenticated():
+            from apps.mainapp.classes.Questions import TopicApi
+            topic_obj = TopicApi()
+            subject = request.POST.get('subject','')
+            unit = request.POST.get('unit','')
+            uid = request.POST.get('uid','')
+            chapters_unfiltered = topic_obj.get_topic({'subject':subject, 'unit':unit})
+
+            chapters_list = []
+            for eachChapter in chapters_unfiltered:
+                if eachChapter['subject'] == subject:
+                    if eachChapter['chapter'] not in chapters_list and len(eachChapter['chapter']) != 0:
+                        chapters_list.append(eachChapter['chapter'])
+            return HttpResponse(json.dumps({
+                        'status':'ok',
+                        'subject':subject,
+                        'unit':unit,
+                        'chapters':chapters_list,
+                        'uid':uid
+                    }))
+        else:
+            return HttpResponse({'status':'error', 'message':'Not authorized'})
+
+    def update_question(self, request):
+        if request.user.is_authenticated():
+            from apps.mainapp.classes.Questions import Question
+            ques_obj = Question()
+
+            from bson.objectid import ObjectId
+            uid = ObjectId(str(request.POST.get('uid','')))
+            subject = request.POST.get('subject','')
+            unit = request.POST.get('unit','')
+            chapter = request.POST.get('chapter','')
+            topic = request.POST.get('topic','')
+            difficulty = request.POST.get('difficulty','')
+
+            ques_obj.update_question({'_id':uid}, 
+                {'flag_chapter_set':1,'subject':subject, 'unit':unit, 'chapter':chapter, 'topic':topic, 'difficulty':difficulty})
+            return HttpResponse(json.dumps({'status':'ok', 'uid':request.POST.get('uid','')}))
+        else:
+            return HttpResponse({'status':'error', 'message':'Not authorized'})        
+    def get_topics(self, request):
+        if request.user.is_authenticated():
+            from apps.mainapp.classes.Questions import TopicApi
+            topic_obj = TopicApi()
+            subject = request.POST.get('subject','')
+            unit = request.POST.get('unit','')
+            chapter = request.POST.get('chapter','')
+            uid = request.POST.get('uid','')
+            topics_unfiltered = topic_obj.get_topic({'subject':subject, 'unit':unit, 'chapter':chapter})
+            topics_list = []
+            for eachTopic in topics_unfiltered:
+                if eachTopic['subject'] == subject and eachTopic['chapter'] == chapter and eachTopic['unit']==unit:
+                    if eachTopic['topic'] not in topics_list and eachTopic['topic']!="":
+                        topics_list.append(eachTopic['topic'])
+            return HttpResponse(json.dumps({
+                        'status':'ok',
+                        'subject':subject,
+                        'unit':unit,
+                        'chapter':chapter,
+                        'topics':topics_list,
+                        'uid':uid
+                    }))
+        else:
+            return HttpResponse({'status':'error', 'message':'Not authorized'})                
+        
     def get_questions(self, request):
         if request.user.is_authenticated():
             user_profile_obj = UserProfile()

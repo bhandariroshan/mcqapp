@@ -1064,3 +1064,21 @@ def history(request):
         parameters,
         context_instance=RequestContext(request)
     )    
+def add_chapters(request):
+    parameters = {}
+    user_profile_obj = UserProfile()    
+    user = user_profile_obj.get_user_by_username(request.user.username)
+
+    from apps.mainapp.classes.Questions import Question
+    questions_obj = Question()
+    parameters['questions'] = questions_obj.get_questions()
+
+    # for subject in ['physics', 'chemistry', 'mathematics', 'english', 'zoology', 'botany']:
+
+        
+    parameters['user'] = user
+    return render_to_response(
+        'chapters.html',
+        parameters,
+        context_instance=RequestContext(request)
+    )    

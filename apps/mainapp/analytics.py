@@ -2,7 +2,7 @@ from django.views.generic import View
 from django.shortcuts import render
 import datetime,time
 from apps.mainapp.classes.Userprofile import UserProfile
-from apps.quiz.user_leaderboard import LeaderBoard
+# from apps.quiz.user_leaderboard import LeaderBoard
 import datetime
 
 class AnalyticsView(View):

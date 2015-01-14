@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, include, url
 from django.views.generic import TemplateView, RedirectView
 from django.conf import settings
-from apps.mainapp.analytics import AnalyticsView
+# from apps.mainapp.analytics import AnalyticsView
 from django.contrib import admin
 admin.autodiscover()
 
@@ -52,20 +52,21 @@ urlpatterns = patterns(
         include(
             'apps.random_questions.urls', app_name='random_questions'
         )),
-    url(r'^quiz/',
-        include(
-            'apps.quiz.urls', app_name='quiz'
-        )),
+    # url(r'^quiz/',
+    #     include(
+    #         'apps.quiz.urls', app_name='quiz'
+    #     )),
     url(r'^paying_users/$', 'apps.exam_api.coupon_admin.paying_users'),
     url(r'^history/$', 'apps.mainapp.views.history'),
     url(r'^history/(?P<subject_name>\w{1,30})/$', 'apps.mainapp.views.subject_history'),
     url(r'^superuser/$', 'apps.mainapp.superuser.dashboard'),
     url(r'^exam_count/$', 'apps.mainapp.superuser.exam_count'),
-    url(
-        r'^analytics/$',
-        view=AnalyticsView.as_view(),
-        name='analytics'
-    ),
+    url(r'^add-chapters/$', 'apps.mainapp.views.add_chapters'),
+    # url(
+    #     r'^analytics/$',
+    #     view=AnalyticsView.as_view(),
+    #     name='analytics'
+    # ),
     # url(r'^mongonaut/', include('mongonaut.urls')),
 )
 

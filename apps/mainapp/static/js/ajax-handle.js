@@ -21,9 +21,74 @@ function ajax_request(s_handler, c_handler, input_data){
 // 	}
 // }
 
+function update_question(uid, subject, unit, chapter, topic, difficulty){
+	ajax_request('update_question', 'update_question_success',
+		{'uid':uid, 'subject':subject, 'unit':unit, 'chapter':chapter, 'topic':topic, 'difficulty':difficulty});
+}
+
+
+function update_question_success(data){
+	data = jQuery.parseJSON(data);
+	if (data['status'] == 'ok'){
+		$('#div_' + data['uid']).hide();
+	}
+}
+
+function get_units (subject, uid) {
+	ajax_request('get_units', 'get_units_success',{'subject':subject, 'uid':uid});
+}
+
+function get_units_success (data) {
+	data = jQuery.parseJSON(data);
+	if(data['status'] == 'ok'){
+		units = data['units'];
+		var uid = data['uid'];
+		var html = '<option></option>';
+		for (var i =0; i < units.length; i++){
+			html += '<option value="' + units[i] + '">' + units[i] + '</options>';
+		}
+		$('#Unit_' + uid).html(html);
+	}
+}
+
+function get_chapters (subject, unit, uid){
+	ajax_request('get_chapters', 'get_chapters_success',{'subject':subject, 'unit':unit, 'uid':uid});
+}
+
+function get_chapters_success(data){
+	data = jQuery.parseJSON(data);
+	if(data['status'] == 'ok'){
+		chapters = data['chapters'];
+		var uid = data['uid'];
+		var html = '<option></option>';
+		for (var i =0; i < chapters.length; i++){
+			html += '<option value="' + chapters[i] + '">' + chapters[i] + '</options>';
+		}
+		$('#Chapter_' + uid).html(html);
+	}
+}
+
+function get_topics (subject, unit, chapter, uid){
+	ajax_request('get_topics', 'get_topics_success',{'subject':subject,'unit':unit,'chapter':chapter, 'uid':uid});
+}
+
+function get_topics_success(data){
+	data = jQuery.parseJSON(data);
+	if (data['status'] == 'ok'){
+			topics = data['topics'];
+			var uid = data['uid'];
+			var html = '<option></option>';
+			for (var i =0; i < topics.length; i++){
+				html += '<option value="' + topics[i] + '">' + topics[i] + '</options>';
+			}
+			$('#Topic_' + uid).html(html);
+		}
+}
+
 function validate_coupon(exam_code, coupon_id){
 	ajax_request('validate_coupon', 'validate_coupon_success',{'exam_code':exam_code, 'coupon_code':coupon_id});
 }
+
 function get_next_page(exam_code,current, next){
 	ajax_request('get_next_page_of_questions', 'get_next_page_success', {'exam_code':exam_code, 'current':current, 'next':next});
 }
@@ -201,6 +266,7 @@ function ajax_set_exam_finished(exam_code, redirect){
 		ajax_request('set_exam_finished', 'set_exam_finished_success', {'exam_code':exam_code, 'redirect':0});		
 	}
 }
+
 function set_exam_finished_success(data){
 	data= jQuery.parseJSON(data);
 	dat = data;	

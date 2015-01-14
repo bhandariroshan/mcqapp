@@ -1,0 +1,4379 @@
+[{
+    id: "54b3ddff550bbf18920dd271",
+    title: "Mechanics",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: "none-10-1",
+    hierarchy_level: 1,
+    parent_topic: null
+}, {
+    id: "54b3de01550bbf18920dd272",
+    title: "Unit and Dimension",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3ddff550bbf18920dd271"
+}, {
+    id: "54b3de01550bbf18920dd273",
+    title: "Need for measurements",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de01550bbf18920dd272"
+}, {
+    id: "54b3de01550bbf18920dd274",
+    title: "System of units",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de01550bbf18920dd272"
+}, {
+    id: "54b3de01550bbf18920dd275",
+    title: "S.I. unit",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de01550bbf18920dd272"
+}, {
+    id: "54b3de01550bbf18920dd276",
+    title: "Precision and significant figures",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de01550bbf18920dd272"
+}, {
+    id: "54b3de01550bbf18920dd277",
+    title: "Dimensions Main uses of dimensional equations",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de01550bbf18920dd272"
+}, {
+    id: "54b3de01550bbf18920dd278",
+    title: "Motion in one Dimension",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3ddff550bbf18920dd271"
+}, {
+    id: "54b3de01550bbf18920dd279",
+    title: "Uniform and non-uniform motion",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de01550bbf18920dd278"
+}, {
+    id: "54b3de01550bbf18920dd27a",
+    title: "Average velocity and acceleration, Instantaneous velocity and acceleration",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de01550bbf18920dd278"
+}, {
+    id: "54b3de01550bbf18920dd27b",
+    title: "Equation of motion (graphical treatment)",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de01550bbf18920dd278"
+}, {
+    id: "54b3de01550bbf18920dd27c",
+    title: "Motion of a freely falling body",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de01550bbf18920dd278"
+}, {
+    id: "54b3de01550bbf18920dd27d",
+    title: "Relative velocity",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de01550bbf18920dd278"
+}, {
+    id: "54b3de01550bbf18920dd27e",
+    title: "Motion in Plane and Projectile Motion",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3ddff550bbf18920dd271"
+}, {
+    id: "54b3de01550bbf18920dd27f",
+    title: "Motion in Plane and Projectile Motion",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de01550bbf18920dd27e"
+}, {
+    id: "54b3de01550bbf18920dd280",
+    title: "Newton's law of Motion, Force, Center of Mass and Conservation of Momentum",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3ddff550bbf18920dd271"
+}, {
+    id: "54b3de01550bbf18920dd281",
+    title: "Motion-NewtonÃ¢â‚¬â„¢s laws of motion: Inertia, force, linear momentum, impulse",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de01550bbf18920dd280"
+}, {
+    id: "54b3de02550bbf18920dd282",
+    title: "Conservation of linear momentum",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de01550bbf18920dd280"
+}, {
+    id: "54b3de02550bbf18920dd283",
+    title: "Free- body diagrams",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de01550bbf18920dd280"
+}, {
+    id: "54b3de02550bbf18920dd284",
+    title: "Application of NewtonÃ¢â‚¬â„¢s laws: Particle in equilibrium, dynamics of particle",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de01550bbf18920dd280"
+}, {
+    id: "54b3de02550bbf18920dd285",
+    title: "Vector Analysis",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3ddff550bbf18920dd271"
+}, {
+    id: "54b3de02550bbf18920dd286",
+    title: "Graphical presentation of vectors",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd285"
+}, {
+    id: "54b3de02550bbf18920dd287",
+    title: "Addition and subtraction of vectors Parallelogram, triangle and polygon laws of vectors",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd285"
+}, {
+    id: "54b3de02550bbf18920dd288",
+    title: "Resolution of vectors",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd285"
+}, {
+    id: "54b3de02550bbf18920dd289",
+    title: "Unit vectors",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd285"
+}, {
+    id: "54b3de02550bbf18920dd28a",
+    title: "Scalar and vector products",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd285"
+}, {
+    id: "54b3de02550bbf18920dd28b",
+    title: "Friction",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3ddff550bbf18920dd271"
+}, {
+    id: "54b3de02550bbf18920dd28c",
+    title: "Solid friction: Laws of solid friction and their verifications",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd28b"
+}, {
+    id: "54b3de02550bbf18920dd28d",
+    title: "Work, Energy, Power and Collision",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3ddff550bbf18920dd271"
+}, {
+    id: "54b3de02550bbf18920dd28e",
+    title: "Work done by a constant force and a variable force",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd28d"
+}, {
+    id: "54b3de02550bbf18920dd28f",
+    title: "Power",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd28d"
+}, {
+    id: "54b3de02550bbf18920dd290",
+    title: "Energy: Kinetic energy",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd28d"
+}, {
+    id: "54b3de02550bbf18920dd291",
+    title: "Work- energy theorem",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd28d"
+}, {
+    id: "54b3de02550bbf18920dd292",
+    title: "Potential energy",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd28d"
+}, {
+    id: "54b3de02550bbf18920dd293",
+    title: "Conservation of energy",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd28d"
+}, {
+    id: "54b3de02550bbf18920dd294",
+    title: "Conservative and non-conservative forces",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd28d"
+}, {
+    id: "54b3de02550bbf18920dd295",
+    title: "Elastic and inelastic collisions",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd28d"
+}, {
+    id: "54b3de02550bbf18920dd296",
+    title: "Circular Motion",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3ddff550bbf18920dd271"
+}, {
+    id: "54b3de02550bbf18920dd297",
+    title: "Angular displacement, velocity and acceleration",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd296"
+}, {
+    id: "54b3de02550bbf18920dd298",
+    title: "Relation between angular and linear velocity and acceleration",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd296"
+}, {
+    id: "54b3de02550bbf18920dd299",
+    title: "Centripetal acceleration",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd296"
+}, {
+    id: "54b3de02550bbf18920dd29a",
+    title: "Centripetal force",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd296"
+}, {
+    id: "54b3de02550bbf18920dd29b",
+    title: "Conical pendulum",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd296"
+}, {
+    id: "54b3de02550bbf18920dd29c",
+    title: "Motion in a vertical circle",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd296"
+}, {
+    id: "54b3de02550bbf18920dd29d",
+    title: "Motion of cars and cyclist round a banked track",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd296"
+}, {
+    id: "54b3de02550bbf18920dd29e",
+    title: "Rotational Kinematics and Rotational Dynamics",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3ddff550bbf18920dd271"
+}, {
+    id: "54b3de02550bbf18920dd29f",
+    title: "Moment of forces",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd29e"
+}, {
+    id: "54b3de02550bbf18920dd2a0",
+    title: "Torque",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd29e"
+}, {
+    id: "54b3de02550bbf18920dd2a1",
+    title: "Torque due to a couple",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd29e"
+}, {
+    id: "54b3de02550bbf18920dd2a2",
+    title: "Center of mass",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd29e"
+}, {
+    id: "54b3de02550bbf18920dd2a3",
+    title: "Center of gravity, Conditions of equilibrium",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd29e"
+}, {
+    id: "54b3de02550bbf18920dd2a4",
+    title: "Rotation of rigid bodies",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd29e"
+}, {
+    id: "54b3de02550bbf18920dd2a5",
+    title: "Equation of angular motion",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd29e"
+}, {
+    id: "54b3de02550bbf18920dd2a6",
+    title: "Relation between linear and angular kinematics",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd29e"
+}, {
+    id: "54b3de02550bbf18920dd2a7",
+    title: "Kinetic energy of rotation of rigid body",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd29e"
+}, {
+    id: "54b3de02550bbf18920dd2a8",
+    title: "Moment of inertia",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd29e"
+}, {
+    id: "54b3de02550bbf18920dd2a9",
+    title: "Radius of gyration",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd29e"
+}, {
+    id: "54b3de02550bbf18920dd2aa",
+    title: "Moment of inertia of a uniform rod",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd29e"
+}, {
+    id: "54b3de02550bbf18920dd2ab",
+    title: "Torque and angular acceleration for a rigid body",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd29e"
+}, {
+    id: "54b3de02550bbf18920dd2ac",
+    title: "Work and power in rotational motion, Angular momentum, conservation of angular momentum",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd29e"
+}, {
+    id: "54b3de02550bbf18920dd2ad",
+    title: "Gravitation, Motion of Satellite and Planet",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3ddff550bbf18920dd271"
+}, {
+    id: "54b3de02550bbf18920dd2ae",
+    title: "NewtonÃ¢â‚¬â„¢s law of gravitation",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd2ad"
+}, {
+    id: "54b3de02550bbf18920dd2af",
+    title: "Acceleration due to gravity, g",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd2ad"
+}, {
+    id: "54b3de02550bbf18920dd2b0",
+    title: "Mass and weight",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd2ad"
+}, {
+    id: "54b3de02550bbf18920dd2b1",
+    title: "Gravitational field strength",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd2ad"
+}, {
+    id: "54b3de02550bbf18920dd2b2",
+    title: "Variation in value of Ã¢â‚¬ËœgÃ¢â‚¬â„¢ due to altitude, depth and rotation of the earth",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd2ad"
+}, {
+    id: "54b3de02550bbf18920dd2b3",
+    title: "Weightlessness",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd2ad"
+}, {
+    id: "54b3de02550bbf18920dd2b4",
+    title: "Motion of a satellite: Orbital velocity and time period of the satellite, geostationary satellite, potential and kinetic energy of the satellite",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd2ad"
+}, {
+    id: "54b3de02550bbf18920dd2b5",
+    title: "Gravitational potential",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd2ad"
+}, {
+    id: "54b3de02550bbf18920dd2b6",
+    title: "Gravitational potential energy",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd2ad"
+}, {
+    id: "54b3de02550bbf18920dd2b7",
+    title: "Escape velocity",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd2ad"
+}, {
+    id: "54b3de02550bbf18920dd2b8",
+    title: "Black holes",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd2ad"
+}, {
+    id: "54b3de02550bbf18920dd2b9",
+    title: "Simple Harmonic Motion",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3ddff550bbf18920dd271"
+}, {
+    id: "54b3de02550bbf18920dd2ba",
+    title: "Oscillatory motion",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd2b9"
+}, {
+    id: "54b3de02550bbf18920dd2bb",
+    title: "Circle of reference",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd2b9"
+}, {
+    id: "54b3de02550bbf18920dd2bc",
+    title: "Equation of simple harmonic motion (SHM)",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd2b9"
+}, {
+    id: "54b3de02550bbf18920dd2bd",
+    title: "Energy in SHM",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd2b9"
+}, {
+    id: "54b3de02550bbf18920dd2be",
+    title: "Application of SHM: Motion of a body suspended from coiled spring, angular SHM, simple pendulum",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd2b9"
+}, {
+    id: "54b3de02550bbf18920dd2bf",
+    title: "Damped oscillation",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd2b9"
+}, {
+    id: "54b3de02550bbf18920dd2c0",
+    title: "Forced oscillation and resonance",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de02550bbf18920dd2b9"
+}, {
+    id: "54b3de03550bbf18920dd2c1",
+    title: "Elasticity",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3ddff550bbf18920dd271"
+}, {
+    id: "54b3de03550bbf18920dd2c2",
+    title: "HookeÃ¢â‚¬â„¢s law: Force constant, verification of HookeÃ¢â‚¬â„¢s law",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de03550bbf18920dd2c1"
+}, {
+    id: "54b3de03550bbf18920dd2c3",
+    title: "Stress",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de03550bbf18920dd2c1"
+}, {
+    id: "54b3de03550bbf18920dd2c4",
+    title: "Strain",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de03550bbf18920dd2c1"
+}, {
+    id: "54b3de03550bbf18920dd2c5",
+    title: "Elasticity and plasticity",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de03550bbf18920dd2c1"
+}, {
+    id: "54b3de03550bbf18920dd2c6",
+    title: "Elastic modulus: Young modulus and its determination, bulk modulus, shear modulus, PoissonÃ¢â‚¬â„¢s ratio",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de03550bbf18920dd2c1"
+}, {
+    id: "54b3de03550bbf18920dd2c7",
+    title: "Elastic potential energy",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de03550bbf18920dd2c1"
+}, {
+    id: "54b3de03550bbf18920dd2c8",
+    title: "Surface Tension",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3ddff550bbf18920dd271"
+}, {
+    id: "54b3de03550bbf18920dd2c9",
+    title: "Molecular theory of surface tension",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de03550bbf18920dd2c8"
+}, {
+    id: "54b3de03550bbf18920dd2ca",
+    title: "Surface energy",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de03550bbf18920dd2c8"
+}, {
+    id: "54b3de03550bbf18920dd2cb",
+    title: "Angle of contact and capillarity",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de03550bbf18920dd2c8"
+}, {
+    id: "54b3de03550bbf18920dd2cc",
+    title: "Measurement of coefficient of surface tension by capillary tube method",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de03550bbf18920dd2c8"
+}, {
+    id: "54b3de03550bbf18920dd2cd",
+    title: "Fluid Dynamics and Viscosity",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3ddff550bbf18920dd271"
+}, {
+    id: "54b3de03550bbf18920dd2ce",
+    title: "Fluid statics: Density",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de03550bbf18920dd2cd"
+}, {
+    id: "54b3de03550bbf18920dd2cf",
+    title: "Pressure in a fluid",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de03550bbf18920dd2cd"
+}, {
+    id: "54b3de03550bbf18920dd2d0",
+    title: "Archimedes principle",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de03550bbf18920dd2cd"
+}, {
+    id: "54b3de03550bbf18920dd2d1",
+    title: "Buoyancy",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de03550bbf18920dd2cd"
+}, {
+    id: "54b3de03550bbf18920dd2d2",
+    title: "NewtonÃ¢â‚¬â„¢s formula for viscosity in a liquid",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de03550bbf18920dd2cd"
+}, {
+    id: "54b3de03550bbf18920dd2d3",
+    title: "Coefficient of viscosity",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de03550bbf18920dd2cd"
+}, {
+    id: "54b3de03550bbf18920dd2d4",
+    title: "Laminar and turbulent flow",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de03550bbf18920dd2cd"
+}, {
+    id: "54b3de03550bbf18920dd2d5",
+    title: "PoiseuilleÃ¢â‚¬â„¢s law(method of dimensions)",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de03550bbf18920dd2cd"
+}, {
+    id: "54b3de03550bbf18920dd2d6",
+    title: "Stokes law and its applications",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de03550bbf18920dd2cd"
+}, {
+    id: "54b3de03550bbf18920dd2d7",
+    title: "Measurement of viscosity of viscous liquid",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de03550bbf18920dd2cd"
+}, {
+    id: "54b3de03550bbf18920dd2d8",
+    title: "Equation of continuity, BernoulliÃ¢â‚¬â„¢s equation and its applications.",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de03550bbf18920dd2cd"
+}, {
+    id: "54b3de03550bbf18920dd2d9",
+    title: "Hydrostatics",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3ddff550bbf18920dd271"
+}, {
+    id: "54b3de03550bbf18920dd2da",
+    title: "Molecular theory of surface tension",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de03550bbf18920dd2d9"
+}, {
+    id: "54b3de03550bbf18920dd2db",
+    title: "Surface energy",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de03550bbf18920dd2d9"
+}, {
+    id: "54b3de03550bbf18920dd2dc",
+    title: "Angle of contact and capillarity",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de03550bbf18920dd2d9"
+}, {
+    id: "54b3de03550bbf18920dd2dd",
+    title: "Measurement of coefficient of surface tension by capillary tube method",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de03550bbf18920dd2d9"
+}, {
+    id: "54b3de03550bbf18920dd2de",
+    title: "Heat",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: "none-10-1",
+    hierarchy_level: 1,
+    parent_topic: null
+}, {
+    id: "54b3de06550bbf18920dd2df",
+    title: "Thermometry",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3de03550bbf18920dd2de"
+}, {
+    id: "54b3de06550bbf18920dd2e0",
+    title: "Concept of temperature: Thermal equilibrium",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2df"
+}, {
+    id: "54b3de06550bbf18920dd2e1",
+    title: "Thermal Expansion",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3de03550bbf18920dd2de"
+}, {
+    id: "54b3de06550bbf18920dd2e2",
+    title: "Linear expansion, cubical expansion and their relation",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2e1"
+}, {
+    id: "54b3de06550bbf18920dd2e3",
+    title: "Measurement of linear expansivity",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2e1"
+}, {
+    id: "54b3de06550bbf18920dd2e4",
+    title: "Liquid Expansion: Absolute and apparent expansion of liquid, Measurement of absolute expansivity by Dulong and Petit method",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2e1"
+}, {
+    id: "54b3de06550bbf18920dd2e5",
+    title: "Calorimetry, Change of State and Hygrometry",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3de03550bbf18920dd2de"
+}, {
+    id: "54b3de06550bbf18920dd2e6",
+    title: "Heat capacity and specific heat capacity",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2e5"
+}, {
+    id: "54b3de06550bbf18920dd2e7",
+    title: "NewtonÃ¢â‚¬â„¢s law of cooling",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2e5"
+}, {
+    id: "54b3de06550bbf18920dd2e8",
+    title: "Measurement of specific heat capacity of solids by the method of mixture and of liquids by the method of cooling",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2e5"
+}, {
+    id: "54b3de06550bbf18920dd2e9",
+    title: "Change of phases: Latent heat",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2e5"
+}, {
+    id: "54b3de06550bbf18920dd2ea",
+    title: "Specific latent heat of fusion and vaporization and their measurements by the method of mixture",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2e5"
+}, {
+    id: "54b3de06550bbf18920dd2eb",
+    title: "Kinetic Theory of gases and Gas laws",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3de03550bbf18920dd2de"
+}, {
+    id: "54b3de06550bbf18920dd2ec",
+    title: "Equation of state: Ideal gas equation",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2eb"
+}, {
+    id: "54b3de06550bbf18920dd2ed",
+    title: "PV- Diagram",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2eb"
+}, {
+    id: "54b3de06550bbf18920dd2ee",
+    title: "molecular properties of matter",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2eb"
+}, {
+    id: "54b3de06550bbf18920dd2ef",
+    title: "Kinetic Ã¢â‚¬â€œ molecular model of an ideal gas: Derivation of pressure exerted by gas, average translational kinetic energy of a gas molecule, Boltzman constant, root mean square speed",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2eb"
+}, {
+    id: "54b3de06550bbf18920dd2f0",
+    title: "Heat capacities: Heat capacities of gases and solids",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2eb"
+}, {
+    id: "54b3de06550bbf18920dd2f1",
+    title: "Hygrometry Ã¢â‚¬â€œ Saturated and unsaturated vapor pressure",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2eb"
+}, {
+    id: "54b3de06550bbf18920dd2f2",
+    title: "Behavior of saturated vapor",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2eb"
+}, {
+    id: "54b3de06550bbf18920dd2f3",
+    title: "Boiling point",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2eb"
+}, {
+    id: "54b3de06550bbf18920dd2f4",
+    title: "Triple point and critical point",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2eb"
+}, {
+    id: "54b3de06550bbf18920dd2f5",
+    title: "Dew point",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2eb"
+}, {
+    id: "54b3de06550bbf18920dd2f6",
+    title: "Absolute humidity",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2eb"
+}, {
+    id: "54b3de06550bbf18920dd2f7",
+    title: "Relative humidity and its determination.",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2eb"
+}, {
+    id: "54b3de06550bbf18920dd2f8",
+    title: "Thermodynamics Specific Heat of gases and Thermodynamic Process",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3de03550bbf18920dd2de"
+}, {
+    id: "54b3de06550bbf18920dd2f9",
+    title: "First law of thermodynamics- Thermodynamic systems",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2f8"
+}, {
+    id: "54b3de06550bbf18920dd2fa",
+    title: "Work done during volume change",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2f8"
+}, {
+    id: "54b3de06550bbf18920dd2fb",
+    title: "Heat and work",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2f8"
+}, {
+    id: "54b3de06550bbf18920dd2fc",
+    title: "Internal energy and First law of thermodynamics",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2f8"
+}, {
+    id: "54b3de06550bbf18920dd2fd",
+    title: "Thermodynamic processes: Adiabatic, isochoric, isothermal, isobaric processes",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2f8"
+}, {
+    id: "54b3de06550bbf18920dd2fe",
+    title: "Heat capacities of an ideal gas at constant pressure and volume and relation between them",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2f8"
+}, {
+    id: "54b3de06550bbf18920dd2ff",
+    title: "Isothermal and Adiabatic processes for an ideal gas",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2f8"
+}, {
+    id: "54b3de06550bbf18920dd300",
+    title: "",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2f8"
+}, {
+    id: "54b3de06550bbf18920dd301",
+    title: "Second law of thermodynamics- Direction of thermodynamic processes",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2f8"
+}, {
+    id: "54b3de06550bbf18920dd302",
+    title: "Second law of thermodynamics",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2f8"
+}, {
+    id: "54b3de06550bbf18920dd303",
+    title: "Heat engines",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2f8"
+}, {
+    id: "54b3de07550bbf18920dd304",
+    title: "Internal combustion engines: Otto cycle,diesel cycle",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2f8"
+}, {
+    id: "54b3de07550bbf18920dd305",
+    title: "Carnot cycle",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2f8"
+}, {
+    id: "54b3de07550bbf18920dd306",
+    title: "Kelvin temperature scale",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2f8"
+}, {
+    id: "54b3de07550bbf18920dd307",
+    title: "Refrigerator",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2f8"
+}, {
+    id: "54b3de07550bbf18920dd308",
+    title: "Entropy and disorder",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de06550bbf18920dd2f8"
+}, {
+    id: "54b3de07550bbf18920dd309",
+    title: "Heat Transfer",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3de03550bbf18920dd2de"
+}, {
+    id: "54b3de07550bbf18920dd30a",
+    title: "Transfer of heat-Conduction",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de07550bbf18920dd309"
+}, {
+    id: "54b3de07550bbf18920dd30b",
+    title: "Thermal conductivity and its determination by Searle method",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de07550bbf18920dd309"
+}, {
+    id: "54b3de07550bbf18920dd30c",
+    title: "Convection: convective coefficient",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de07550bbf18920dd309"
+}, {
+    id: "54b3de07550bbf18920dd30d",
+    title: "Radiation: Ideal radiator",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de07550bbf18920dd309"
+}, {
+    id: "54b3de07550bbf18920dd30e",
+    title: "Black- body radiation",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de07550bbf18920dd309"
+}, {
+    id: "54b3de07550bbf18920dd30f",
+    title: "Stefan Ã¢â‚¬â€œ Boltzmann law",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de07550bbf18920dd309"
+}, {
+    id: "54b3de07550bbf18920dd310",
+    title: "Sound",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: "none-10-1",
+    hierarchy_level: 1,
+    parent_topic: null
+}, {
+    id: "54b3de09550bbf18920dd311",
+    title: "Wave and its characteristics",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3de07550bbf18920dd310"
+}, {
+    id: "54b3de09550bbf18920dd312",
+    title: "Wave motion",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de09550bbf18920dd311"
+}, {
+    id: "54b3de09550bbf18920dd313",
+    title: "Longitudinal and transverse waves",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de09550bbf18920dd311"
+}, {
+    id: "54b3de09550bbf18920dd314",
+    title: "Progressive and stationary waves",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de09550bbf18920dd311"
+}, {
+    id: "54b3de09550bbf18920dd315",
+    title: "Mathematical description of a wave",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de09550bbf18920dd311"
+}, {
+    id: "54b3de09550bbf18920dd316",
+    title: "Reflection, Refraction, and Superposition of Waves",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3de07550bbf18920dd310"
+}, {
+    id: "54b3de09550bbf18920dd317",
+    title: "Speed of wave motion",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de09550bbf18920dd316"
+}, {
+    id: "54b3de09550bbf18920dd318",
+    title: "Velocity of sound in solid and liquid",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de09550bbf18920dd316"
+}, {
+    id: "54b3de09550bbf18920dd319",
+    title: "Velocity of sound in gas",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de09550bbf18920dd316"
+}, {
+    id: "54b3de09550bbf18920dd31a",
+    title: "LaplaceÃ¢â‚¬â„¢s correction",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de09550bbf18920dd316"
+}, {
+    id: "54b3de09550bbf18920dd31b",
+    title: "Effect of temperature, pressure and humidity on velocity of sound",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de09550bbf18920dd316"
+}, {
+    id: "54b3de09550bbf18920dd31c",
+    title: "Vibration of Strings, Rods, and air columns in Pipes",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3de07550bbf18920dd310"
+}, {
+    id: "54b3de09550bbf18920dd31d",
+    title: "Stationary waves in closed and open pipes",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de09550bbf18920dd31c"
+}, {
+    id: "54b3de09550bbf18920dd31e",
+    title: "Harmonics and overtones in closed and open organ pipes",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de09550bbf18920dd31c"
+}, {
+    id: "54b3de09550bbf18920dd31f",
+    title: "End correction in pipes",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de09550bbf18920dd31c"
+}, {
+    id: "54b3de09550bbf18920dd320",
+    title: "Resonance tube experiment",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de09550bbf18920dd31c"
+}, {
+    id: "54b3de09550bbf18920dd321",
+    title: "Velocity of transverse waves along a stretched string",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de09550bbf18920dd31c"
+}, {
+    id: "54b3de0a550bbf18920dd322",
+    title: "Vibration of string and overtones",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de09550bbf18920dd31c"
+}, {
+    id: "54b3de0a550bbf18920dd323",
+    title: "Laws of vibration of fixed string,",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de09550bbf18920dd31c"
+}, {
+    id: "54b3de0a550bbf18920dd324",
+    title: "Musical Sound and Doppler effect",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3de07550bbf18920dd310"
+}, {
+    id: "54b3de0a550bbf18920dd325",
+    title: "Sound waves: Pressure amplitude",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0a550bbf18920dd324"
+}, {
+    id: "54b3de0a550bbf18920dd326",
+    title: "Characteristics of sound: Intensity, loudness, quality and pitch",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0a550bbf18920dd324"
+}, {
+    id: "54b3de0a550bbf18920dd327",
+    title: "Beats",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0a550bbf18920dd324"
+}, {
+    id: "54b3de0a550bbf18920dd328",
+    title: "DopplerÃ¢â‚¬â„¢s effect",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0a550bbf18920dd324"
+}, {
+    id: "54b3de0a550bbf18920dd329",
+    title: "Infrasonic and ultrasonic waves",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0a550bbf18920dd324"
+}, {
+    id: "54b3de0a550bbf18920dd32a",
+    title: "Noise pollution: Sources, health hazard and control",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0a550bbf18920dd324"
+}, {
+    id: "54b3de0a550bbf18920dd32b",
+    title: "Optics",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: "none-10-1",
+    hierarchy_level: 1,
+    parent_topic: null
+}, {
+    id: "54b3de0c550bbf18920dd32c",
+    title: "Reflection at Plane and curved mirror",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3de0a550bbf18920dd32b"
+}, {
+    id: "54b3de0c550bbf18920dd32d",
+    title: "Convex and concave mirrors",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0c550bbf18920dd32c"
+}, {
+    id: "54b3de0c550bbf18920dd32e",
+    title: "Image in spherical mirrors",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0c550bbf18920dd32c"
+}, {
+    id: "54b3de0c550bbf18920dd32f",
+    title: "Mirrors formula",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0c550bbf18920dd32c"
+}, {
+    id: "54b3de0c550bbf18920dd330",
+    title: "Real and virtual images",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0c550bbf18920dd32c"
+}, {
+    id: "54b3de0d550bbf18920dd331",
+    title: "Refraction at Plane surfaces and Total internal Reflection",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3de0a550bbf18920dd32b"
+}, {
+    id: "54b3de0d550bbf18920dd332",
+    title: "Laws of refraction",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd331"
+}, {
+    id: "54b3de0d550bbf18920dd333",
+    title: "Refractive index",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd331"
+}, {
+    id: "54b3de0d550bbf18920dd334",
+    title: "Relation between refractive indices",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd331"
+}, {
+    id: "54b3de0d550bbf18920dd335",
+    title: "Lateral shift",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd331"
+}, {
+    id: "54b3de0d550bbf18920dd336",
+    title: "Total internal reflection and its applications",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd331"
+}, {
+    id: "54b3de0d550bbf18920dd337",
+    title: "critical angle",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd331"
+}, {
+    id: "54b3de0d550bbf18920dd338",
+    title: "optical fiber",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd331"
+}, {
+    id: "54b3de0d550bbf18920dd339",
+    title: "Refraction through Prism and Dispersion",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3de0a550bbf18920dd32b"
+}, {
+    id: "54b3de0d550bbf18920dd33a",
+    title: "Minimum deviation",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd339"
+}, {
+    id: "54b3de0d550bbf18920dd33b",
+    title: "Relation between angle of prism, minimum deviation and refractive index",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd339"
+}, {
+    id: "54b3de0d550bbf18920dd33c",
+    title: "Deviation in small angle prism",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd339"
+}, {
+    id: "54b3de0d550bbf18920dd33d",
+    title: "Refraction through Lens",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3de0a550bbf18920dd32b"
+}, {
+    id: "54b3de0d550bbf18920dd33e",
+    title: "Spherical lenses",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd33d"
+}, {
+    id: "54b3de0d550bbf18920dd33f",
+    title: "Thin lens formula",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd33d"
+}, {
+    id: "54b3de0d550bbf18920dd340",
+    title: "Lens makerÃ¢â‚¬â„¢s formula",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd33d"
+}, {
+    id: "54b3de0d550bbf18920dd341",
+    title: "Power of a lens",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd33d"
+}, {
+    id: "54b3de0d550bbf18920dd342",
+    title: "Combination of thin lenses in contact",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd33d"
+}, {
+    id: "54b3de0d550bbf18920dd343",
+    title: "Chromatic Aberration in Lens, Optical Instrument and Human Eye",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3de0a550bbf18920dd32b"
+}, {
+    id: "54b3de0d550bbf18920dd344",
+    title: "Chromatic aberration",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd343"
+}, {
+    id: "54b3de0d550bbf18920dd345",
+    title: "Spherical aberration",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd343"
+}, {
+    id: "54b3de0d550bbf18920dd346",
+    title: "Scattering of light Ã¢â‚¬â€œ blue color of the sky",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd343"
+}, {
+    id: "54b3de0d550bbf18920dd347",
+    title: "Human eye",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd343"
+}, {
+    id: "54b3de0d550bbf18920dd348",
+    title: "Defects of vision and their correction",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd343"
+}, {
+    id: "54b3de0d550bbf18920dd349",
+    title: "Visual Angle",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd343"
+}, {
+    id: "54b3de0d550bbf18920dd34a",
+    title: "Angular magnification",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd343"
+}, {
+    id: "54b3de0d550bbf18920dd34b",
+    title: "Magnifier",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd343"
+}, {
+    id: "54b3de0d550bbf18920dd34c",
+    title: "Camera",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd343"
+}, {
+    id: "54b3de0d550bbf18920dd34d",
+    title: "Compound microscope, Astronomical Telescope (reflection and refraction type)",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd343"
+}, {
+    id: "54b3de0d550bbf18920dd34e",
+    title: "Photometry and Velocity of Light",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3de0a550bbf18920dd32b"
+}, {
+    id: "54b3de0d550bbf18920dd34f",
+    title: "Velocity of light: FoucaultÃ¢â‚¬â„¢s method",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd34e"
+}, {
+    id: "54b3de0d550bbf18920dd350",
+    title: "MichelsonÃ¢â‚¬â„¢s method",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd34e"
+}, {
+    id: "54b3de0d550bbf18920dd351",
+    title: "Nature of Light, Interference, Diffraction and Polarization",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3de0a550bbf18920dd32b"
+}, {
+    id: "54b3de0d550bbf18920dd352",
+    title: "Nature and sources of light",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd351"
+}, {
+    id: "54b3de0d550bbf18920dd353",
+    title: "Electromagnetic spectrum",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd351"
+}, {
+    id: "54b3de0d550bbf18920dd354",
+    title: "HuygenÃ¢â‚¬â„¢s principle",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd351"
+}, {
+    id: "54b3de0d550bbf18920dd355",
+    title: "Reflection and refraction according to wave theory",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd351"
+}, {
+    id: "54b3de0d550bbf18920dd356",
+    title: "Interference: Phenomenon of Interference",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd351"
+}, {
+    id: "54b3de0d550bbf18920dd357",
+    title: "Coherent sources",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd351"
+}, {
+    id: "54b3de0d550bbf18920dd358",
+    title: "YoungÃ¢â‚¬â„¢s two slit experiment",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd351"
+}, {
+    id: "54b3de0d550bbf18920dd359",
+    title: "NewtonÃ¢â‚¬â„¢s ring",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd351"
+}, {
+    id: "54b3de0d550bbf18920dd35a",
+    title: "Diffraction: Diffraction from a single slit",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd351"
+}, {
+    id: "54b3de0d550bbf18920dd35b",
+    title: "Diffraction pattern of image",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd351"
+}, {
+    id: "54b3de0d550bbf18920dd35c",
+    title: "Diffraction grating",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd351"
+}, {
+    id: "54b3de0d550bbf18920dd35d",
+    title: "Resolving power of optical instruments",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd351"
+}, {
+    id: "54b3de0d550bbf18920dd35e",
+    title: "Phenomenon of polarization",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd351"
+}, {
+    id: "54b3de0d550bbf18920dd35f",
+    title: "BrewsterÃ¢â‚¬â„¢s law",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd351"
+}, {
+    id: "54b3de0d550bbf18920dd360",
+    title: "transverse nature of light",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd351"
+}, {
+    id: "54b3de0d550bbf18920dd361",
+    title: "Polaroid",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de0d550bbf18920dd351"
+}, {
+    id: "54b3de0d550bbf18920dd362",
+    title: "Electrostatics",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: "none-10-1",
+    hierarchy_level: 1,
+    parent_topic: null
+}, {
+    id: "54b3de10550bbf18920dd363",
+    title: "Electric Field and Potential",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3de0d550bbf18920dd362"
+}, {
+    id: "54b3de10550bbf18920dd364",
+    title: "Electric charge: Electric charges",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de10550bbf18920dd363"
+}, {
+    id: "54b3de10550bbf18920dd365",
+    title: "Conductors and insulators",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de10550bbf18920dd363"
+}, {
+    id: "54b3de10550bbf18920dd366",
+    title: "Charging by induction, CoulombÃ¢â‚¬â„¢s law - Force between two point charges, Force between multiple electric charges",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de10550bbf18920dd363"
+}, {
+    id: "54b3de10550bbf18920dd367",
+    title: "Electric fields",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de10550bbf18920dd363"
+}, {
+    id: "54b3de10550bbf18920dd368",
+    title: "Calculation of electric field due to point charges",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de10550bbf18920dd363"
+}, {
+    id: "54b3de10550bbf18920dd369",
+    title: "Field lines",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de10550bbf18920dd363"
+}, {
+    id: "54b3de10550bbf18920dd36a",
+    title: "Gauss law: Electric flux",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de10550bbf18920dd363"
+}, {
+    id: "54b3de10550bbf18920dd36b",
+    title: "Gauss law and its application: Field of a charged sphere, line charge, plane sheet of charge",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de10550bbf18920dd363"
+}, {
+    id: "54b3de11550bbf18920dd36c",
+    title: "Potential and potential difference",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de10550bbf18920dd363"
+}, {
+    id: "54b3de11550bbf18920dd36d",
+    title: "Potential due to a point charge",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de10550bbf18920dd363"
+}, {
+    id: "54b3de11550bbf18920dd36e",
+    title: "Equipotential lines and surfaces",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de10550bbf18920dd363"
+}, {
+    id: "54b3de11550bbf18920dd36f",
+    title: "Potential gradient",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de10550bbf18920dd363"
+}, {
+    id: "54b3de11550bbf18920dd370",
+    title: "Potential energy",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de10550bbf18920dd363"
+}, {
+    id: "54b3de11550bbf18920dd371",
+    title: "Electron Volt",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de10550bbf18920dd363"
+}, {
+    id: "54b3de11550bbf18920dd372",
+    title: "Capacitance",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3de0d550bbf18920dd362"
+}, {
+    id: "54b3de11550bbf18920dd373",
+    title: "Capacitance and capacitor",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de11550bbf18920dd372"
+}, {
+    id: "54b3de11550bbf18920dd374",
+    title: "Charging and discharging a capacitor through a resistor, Parallel plate capacitor",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de11550bbf18920dd372"
+}, {
+    id: "54b3de11550bbf18920dd375",
+    title: "Combination of capacitors",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de11550bbf18920dd372"
+}, {
+    id: "54b3de11550bbf18920dd376",
+    title: "Energy of a charged capacitor",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de11550bbf18920dd372"
+}, {
+    id: "54b3de11550bbf18920dd377",
+    title: "Effect of a dielectric",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de11550bbf18920dd372"
+}, {
+    id: "54b3de11550bbf18920dd378",
+    title: "Molecular theory of induced charges",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de11550bbf18920dd372"
+}, {
+    id: "54b3de11550bbf18920dd379",
+    title: "Polarization and displacement.",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de11550bbf18920dd372"
+}, {
+    id: "54b3de11550bbf18920dd37a",
+    title: "Electricity and Magnetism",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: "none-10-1",
+    hierarchy_level: 1,
+    parent_topic: null
+}, {
+    id: "54b3de14550bbf18920dd37b",
+    title: "Ohm's Law, Kirchoff's Law and DC current",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3de11550bbf18920dd37a"
+}, {
+    id: "54b3de14550bbf18920dd37c",
+    title: "Electric current",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de14550bbf18920dd37b"
+}, {
+    id: "54b3de14550bbf18920dd37d",
+    title: "Drift velocity and its relation with current",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de14550bbf18920dd37b"
+}, {
+    id: "54b3de14550bbf18920dd37e",
+    title: "OhmÃ¢â‚¬â„¢s law",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de14550bbf18920dd37b"
+}, {
+    id: "54b3de14550bbf18920dd37f",
+    title: "Electrical Resistance",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de14550bbf18920dd37b"
+}, {
+    id: "54b3de14550bbf18920dd380",
+    title: "Resistivity",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de14550bbf18920dd37b"
+}, {
+    id: "54b3de14550bbf18920dd381",
+    title: "Current- voltage relations",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de14550bbf18920dd37b"
+}, {
+    id: "54b3de14550bbf18920dd382",
+    title: "Ohmic and non Ohmic resistance",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de14550bbf18920dd37b"
+}, {
+    id: "54b3de14550bbf18920dd383",
+    title: "Resistances in series and parallel, Potential Divider, Conversion of galvnometer into voltmeter and ammeter, Ohmmeter",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de14550bbf18920dd37b"
+}, {
+    id: "54b3de14550bbf18920dd384",
+    title: "Electromotive force: Emf of a source, internal resistance",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de14550bbf18920dd37b"
+}, {
+    id: "54b3de14550bbf18920dd385",
+    title: "Work and power in electrical circuits",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de14550bbf18920dd37b"
+}, {
+    id: "54b3de14550bbf18920dd386",
+    title: "JouleÃ¢â‚¬â„¢s law and its verification",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de14550bbf18920dd37b"
+}, {
+    id: "54b3de14550bbf18920dd387",
+    title: "Electrical circuits- Kirchhoffs laws",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de14550bbf18920dd37b"
+}, {
+    id: "54b3de14550bbf18920dd388",
+    title: "Wheatstone bridge circuit",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de14550bbf18920dd37b"
+}, {
+    id: "54b3de14550bbf18920dd389",
+    title: "P.O.Box, meter bridge",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de14550bbf18920dd37b"
+}, {
+    id: "54b3de14550bbf18920dd38a",
+    title: "Potentiometer: Comparison of e.m.f., measurement of internal resistances of a cell.",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de14550bbf18920dd37b"
+}, {
+    id: "54b3de14550bbf18920dd38b",
+    title: "Thermal and Chemical Effect of Current",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3de11550bbf18920dd37a"
+}, {
+    id: "54b3de14550bbf18920dd38c",
+    title: "Seebeck effect",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de14550bbf18920dd38b"
+}, {
+    id: "54b3de14550bbf18920dd38d",
+    title: "Thermocouples, Peltier effect: Variation of thermoelectric emf with temperature",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de14550bbf18920dd38b"
+}, {
+    id: "54b3de14550bbf18920dd38e",
+    title: "Thermopile",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de14550bbf18920dd38b"
+}, {
+    id: "54b3de14550bbf18920dd38f",
+    title: "Thomson effect",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de14550bbf18920dd38b"
+}, {
+    id: "54b3de14550bbf18920dd390",
+    title: "FaradayÃ¢â‚¬â„¢s laws of electrolysis",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de14550bbf18920dd38b"
+}, {
+    id: "54b3de14550bbf18920dd391",
+    title: "FaradayÃ¢â‚¬â„¢s constant, Verification of Faraday laws of electrolysis",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de14550bbf18920dd38b"
+}, {
+    id: "54b3de14550bbf18920dd392",
+    title: "Magnetic Effect of Current",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3de11550bbf18920dd37a"
+}, {
+    id: "54b3de14550bbf18920dd393",
+    title: "Magnetic field lines and magnetic flux",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de14550bbf18920dd392"
+}, {
+    id: "54b3de15550bbf18920dd394",
+    title: "OerstedÃ¢â‚¬â„¢s experiment",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de14550bbf18920dd392"
+}, {
+    id: "54b3de15550bbf18920dd395",
+    title: "Force on moving charge",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de14550bbf18920dd392"
+}, {
+    id: "54b3de15550bbf18920dd396",
+    title: "Force on a conductor",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de14550bbf18920dd392"
+}, {
+    id: "54b3de15550bbf18920dd397",
+    title: "Force and Torque on rectangular coil,",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de14550bbf18920dd392"
+}, {
+    id: "54b3de15550bbf18920dd398",
+    title: "Moving coil galvanometer",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de14550bbf18920dd392"
+}, {
+    id: "54b3de15550bbf18920dd399",
+    title: "Hall effect",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de14550bbf18920dd392"
+}, {
+    id: "54b3de15550bbf18920dd39a",
+    title: "Magnetic field of a moving charge",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de14550bbf18920dd392"
+}, {
+    id: "54b3de15550bbf18920dd39b",
+    title: "Biot and Savart law and its application to a circular coil",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de14550bbf18920dd392"
+}, {
+    id: "54b3de15550bbf18920dd39c",
+    title: "Biot and Savart law and its application to a long straight conductor",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de14550bbf18920dd392"
+}, {
+    id: "54b3de15550bbf18920dd39d",
+    title: "Biot and Savart law and its application to a long solenoid",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de14550bbf18920dd392"
+}, {
+    id: "54b3de15550bbf18920dd39e",
+    title: "AmpereÃ¢â‚¬â„¢s law and its applications to a long straight conductor",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de14550bbf18920dd392"
+}, {
+    id: "54b3de15550bbf18920dd39f",
+    title: "AmpereÃ¢â‚¬â„¢s law and its applications to a straight solenoid",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de14550bbf18920dd392"
+}, {
+    id: "54b3de15550bbf18920dd3a0",
+    title: "AmpereÃ¢â‚¬â„¢s law and its applications to a toroidal solenoid",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de14550bbf18920dd392"
+}, {
+    id: "54b3de15550bbf18920dd3a1",
+    title: "Force between two parallel conductors carrying current- definition of ampere",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de14550bbf18920dd392"
+}, {
+    id: "54b3de15550bbf18920dd3a2",
+    title: "Moving Coil Meters and Magnetism",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3de11550bbf18920dd37a"
+}, {
+    id: "54b3de15550bbf18920dd3a3",
+    title: "Elements of earth magnetism and their variation",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de15550bbf18920dd3a2"
+}, {
+    id: "54b3de15550bbf18920dd3a4",
+    title: "Dip and Dip circle",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de15550bbf18920dd3a2"
+}, {
+    id: "54b3de15550bbf18920dd3a5",
+    title: "Flux density in magnetic material",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de15550bbf18920dd3a2"
+}, {
+    id: "54b3de15550bbf18920dd3a6",
+    title: "Relative permeability",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de15550bbf18920dd3a2"
+}, {
+    id: "54b3de15550bbf18920dd3a7",
+    title: "Susceptibility",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de15550bbf18920dd3a2"
+}, {
+    id: "54b3de15550bbf18920dd3a8",
+    title: "Hysteresis",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de15550bbf18920dd3a2"
+}, {
+    id: "54b3de15550bbf18920dd3a9",
+    title: "Dia,-para- and ferro-magnetic materials",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de15550bbf18920dd3a2"
+}, {
+    id: "54b3de15550bbf18920dd3aa",
+    title: "Electromagnetic Induction",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3de11550bbf18920dd37a"
+}, {
+    id: "54b3de15550bbf18920dd3ab",
+    title: "FaradayÃ¢â‚¬â„¢s laws",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de15550bbf18920dd3aa"
+}, {
+    id: "54b3de15550bbf18920dd3ac",
+    title: "Induced electric fields, LenzÃ¢â‚¬â„¢s law, Motional electromotive force",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de15550bbf18920dd3aa"
+}, {
+    id: "54b3de15550bbf18920dd3ad",
+    title: "A.C. generators",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de15550bbf18920dd3aa"
+}, {
+    id: "54b3de15550bbf18920dd3ae",
+    title: "Eddy currents",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de15550bbf18920dd3aa"
+}, {
+    id: "54b3de15550bbf18920dd3af",
+    title: "Self inductance and mutual inductance",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de15550bbf18920dd3aa"
+}, {
+    id: "54b3de15550bbf18920dd3b0",
+    title: "Energy stored in an inductor",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de15550bbf18920dd3aa"
+}, {
+    id: "54b3de15550bbf18920dd3b1",
+    title: "Transformer.",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de15550bbf18920dd3aa"
+}, {
+    id: "54b3de15550bbf18920dd3b2",
+    title: "Alternating Current",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3de11550bbf18920dd37a"
+}, {
+    id: "54b3de15550bbf18920dd3b3",
+    title: "Peak and rms value of AC current and voltage",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de15550bbf18920dd3b2"
+}, {
+    id: "54b3de15550bbf18920dd3b4",
+    title: "AC through a resistor, a capacitor and an inductor",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de15550bbf18920dd3b2"
+}, {
+    id: "54b3de15550bbf18920dd3b5",
+    title: "Phasor diagram, Series circuits containing combination of resistance, capacitance and inductance",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de15550bbf18920dd3b2"
+}, {
+    id: "54b3de15550bbf18920dd3b6",
+    title: "Series Resonance, Quality factor",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de15550bbf18920dd3b2"
+}, {
+    id: "54b3de15550bbf18920dd3b7",
+    title: "Power in AC circuits: Power factor",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de15550bbf18920dd3b2"
+}, {
+    id: "54b3de15550bbf18920dd3b8",
+    title: "Choke coil",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de15550bbf18920dd3b2"
+}, {
+    id: "54b3de15550bbf18920dd3b9",
+    title: "Electromagnetic Waves",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3de11550bbf18920dd37a"
+}, {
+    id: "54b3de15550bbf18920dd3ba",
+    title: "Modern Physics",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: "none-10-1",
+    hierarchy_level: 1,
+    parent_topic: null
+}, {
+    id: "54b3de19550bbf18920dd3bb",
+    title: "Cathode Rays and Positive Rays",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3de15550bbf18920dd3ba"
+}, {
+    id: "54b3de19550bbf18920dd3bc",
+    title: "MilikanÃ¢â‚¬â„¢s oil drop experiment",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de19550bbf18920dd3bb"
+}, {
+    id: "54b3de19550bbf18920dd3bd",
+    title: "Gaseous discharge at various pressure",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de19550bbf18920dd3bb"
+}, {
+    id: "54b3de19550bbf18920dd3be",
+    title: "Cathode rays",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de19550bbf18920dd3bb"
+}, {
+    id: "54b3de19550bbf18920dd3bf",
+    title: "Motion of electron beam in electric and magnetic fields",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de19550bbf18920dd3bb"
+}, {
+    id: "54b3de19550bbf18920dd3c0",
+    title: "ThomsonÃ¢â‚¬â„¢s experiment to determine specific charge of electron",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de19550bbf18920dd3bb"
+}, {
+    id: "54b3de19550bbf18920dd3c1",
+    title: "Photoelectric Effect",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3de15550bbf18920dd3ba"
+}, {
+    id: "54b3de19550bbf18920dd3c2",
+    title: "Photons: Quantum nature of radiation",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de19550bbf18920dd3c1"
+}, {
+    id: "54b3de19550bbf18920dd3c3",
+    title: "EinsteinÃ¢â‚¬â„¢s photoelectric equation",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de19550bbf18920dd3c1"
+}, {
+    id: "54b3de19550bbf18920dd3c4",
+    title: "Stopping potential",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de19550bbf18920dd3c1"
+}, {
+    id: "54b3de19550bbf18920dd3c5",
+    title: "Measurement of PlanckÃ¢â‚¬â„¢s constant",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de19550bbf18920dd3c1"
+}, {
+    id: "54b3de19550bbf18920dd3c6",
+    title: "MilikanÃ¢â‚¬â„¢s experiment.",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de19550bbf18920dd3c1"
+}, {
+    id: "54b3de19550bbf18920dd3c7",
+    title: "Atomic Structure and Spectrum",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3de15550bbf18920dd3ba"
+}, {
+    id: "54b3de19550bbf18920dd3c8",
+    title: "BohrÃ¢â‚¬â„¢s theory of hydrogen atom",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de19550bbf18920dd3c7"
+}, {
+    id: "54b3de19550bbf18920dd3c9",
+    title: "Spectral series",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de19550bbf18920dd3c7"
+}, {
+    id: "54b3de19550bbf18920dd3ca",
+    title: "Excitation and ionization potentials",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de19550bbf18920dd3c7"
+}, {
+    id: "54b3de19550bbf18920dd3cb",
+    title: "Energy level, Emission and absorption spectra, de Broglie theory",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de19550bbf18920dd3c7"
+}, {
+    id: "54b3de19550bbf18920dd3cc",
+    title: "Duality",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de19550bbf18920dd3c7"
+}, {
+    id: "54b3de19550bbf18920dd3cd",
+    title: "Uncertainty principle",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de19550bbf18920dd3c7"
+}, {
+    id: "54b3de19550bbf18920dd3ce",
+    title: "Lasers: He- Ne laser",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de19550bbf18920dd3c7"
+}, {
+    id: "54b3de19550bbf18920dd3cf",
+    title: "Nature and production, properties and uses",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de19550bbf18920dd3c7"
+}, {
+    id: "54b3de19550bbf18920dd3d0",
+    title: "X-Rays",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3de15550bbf18920dd3ba"
+}, {
+    id: "54b3de19550bbf18920dd3d1",
+    title: "Nature and production",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de19550bbf18920dd3d0"
+}, {
+    id: "54b3de19550bbf18920dd3d2",
+    title: "Uses",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de19550bbf18920dd3d0"
+}, {
+    id: "54b3de1a550bbf18920dd3d3",
+    title: "X-rays diffraction",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de19550bbf18920dd3d0"
+}, {
+    id: "54b3de1a550bbf18920dd3d4",
+    title: "BraggÃ¢â‚¬â„¢s law",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de19550bbf18920dd3d0"
+}, {
+    id: "54b3de1a550bbf18920dd3d5",
+    title: "Radioactivity",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3de15550bbf18920dd3ba"
+}, {
+    id: "54b3de1a550bbf18920dd3d6",
+    title: "Alpha-particles",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3d5"
+}, {
+    id: "54b3de1a550bbf18920dd3d7",
+    title: "Beta-particles",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3d5"
+}, {
+    id: "54b3de1a550bbf18920dd3d8",
+    title: "Gamma rays",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3d5"
+}, {
+    id: "54b3de1a550bbf18920dd3d9",
+    title: "Laws of radioactive disintegration",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3d5"
+}, {
+    id: "54b3de1a550bbf18920dd3da",
+    title: "Half-life and decay constant",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3d5"
+}, {
+    id: "54b3de1a550bbf18920dd3db",
+    title: "Geiger-Muller tube",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3d5"
+}, {
+    id: "54b3de1a550bbf18920dd3dc",
+    title: "Radio carbon dating",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3d5"
+}, {
+    id: "54b3de1a550bbf18920dd3dd",
+    title: "Medical use of nuclear radiation",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3d5"
+}, {
+    id: "54b3de1a550bbf18920dd3de",
+    title: "Health hazards and safety precautions",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3d5"
+}, {
+    id: "54b3de1a550bbf18920dd3df",
+    title: "Nucleus and Nuclear Energy",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3de15550bbf18920dd3ba"
+}, {
+    id: "54b3de1a550bbf18920dd3e0",
+    title: "Sources of energy",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3df"
+}, {
+    id: "54b3de1a550bbf18920dd3e1",
+    title: "Conservation and degradation of energy",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3df"
+}, {
+    id: "54b3de1a550bbf18920dd3e2",
+    title: "Transformation of energy, Nuclear energy: Energy released from fission and fusion",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3df"
+}, {
+    id: "54b3de1a550bbf18920dd3e3",
+    title: "Thermal and Hydroelectric power",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3df"
+}, {
+    id: "54b3de1a550bbf18920dd3e4",
+    title: "Wind energy",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3df"
+}, {
+    id: "54b3de1a550bbf18920dd3e5",
+    title: "Biofuels",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3df"
+}, {
+    id: "54b3de1a550bbf18920dd3e6",
+    title: "Solar Energy: Solar constant, solar devices",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3df"
+}, {
+    id: "54b3de1a550bbf18920dd3e7",
+    title: "Global energy consumption pattern and demands",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3df"
+}, {
+    id: "54b3de1a550bbf18920dd3e8",
+    title: "Energy use in Nepal",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3df"
+}, {
+    id: "54b3de1a550bbf18920dd3e9",
+    title: "Fuels and pollution: Global Warming",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3df"
+}, {
+    id: "54b3de1a550bbf18920dd3ea",
+    title: "Acid rain",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3df"
+}, {
+    id: "54b3de1a550bbf18920dd3eb",
+    title: "Vacuum Tubes, Solids and Semiconductor Devices",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3de15550bbf18920dd3ba"
+}, {
+    id: "54b3de1a550bbf18920dd3ec",
+    title: "Structure of solids",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3eb"
+}, {
+    id: "54b3de1a550bbf18920dd3ed",
+    title: "Energy bands in solids (qualitative ideas only)",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3eb"
+}, {
+    id: "54b3de1a550bbf18920dd3ee",
+    title: "Difference between metals, insulators, and semi conductors using band theory",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3eb"
+}, {
+    id: "54b3de1a550bbf18920dd3ef",
+    title: "Intrinsic and extrinsic semi-conductors",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3eb"
+}, {
+    id: "54b3de1a550bbf18920dd3f0",
+    title: "P-N junction",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3eb"
+}, {
+    id: "54b3de1a550bbf18920dd3f1",
+    title: "Semiconductor diode: Characteristics in forward and reverse bias",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3eb"
+}, {
+    id: "54b3de1a550bbf18920dd3f2",
+    title: "Full wave rectification",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3eb"
+}, {
+    id: "54b3de1a550bbf18920dd3f3",
+    title: "Filter circuit",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3eb"
+}, {
+    id: "54b3de1a550bbf18920dd3f4",
+    title: "Zener diode",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3eb"
+}, {
+    id: "54b3de1a550bbf18920dd3f5",
+    title: "Transistor: Common emitter characteristics",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3eb"
+}, {
+    id: "54b3de1a550bbf18920dd3f6",
+    title: "Logic gates: OR, AND, NOT, NAND and NOR",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3eb"
+}, {
+    id: "54b3de1a550bbf18920dd3f7",
+    title: "Particles and Universe",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3de15550bbf18920dd3ba"
+}, {
+    id: "54b3de1a550bbf18920dd3f8",
+    title: "particles and antiparticles, Quarks and Leptons, baryons, mesons",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3f7"
+}, {
+    id: "54b3de1a550bbf18920dd3f9",
+    title: "Hubble law",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3f7"
+}, {
+    id: "54b3de1a550bbf18920dd3fa",
+    title: "Big bang",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3f7"
+}, {
+    id: "54b3de1a550bbf18920dd3fb",
+    title: "Critical density",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3f7"
+}, {
+    id: "54b3de1a550bbf18920dd3fc",
+    title: "Dark matter",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3f7"
+}, {
+    id: "54b3de1a550bbf18920dd3fd",
+    title: "Relativity",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 2,
+    parent_topic: "54b3de15550bbf18920dd3ba"
+}, {
+    id: "54b3de1a550bbf18920dd3fe",
+    title: "Relativity",
+    subject: {
+        title: "Physics",
+        image_link: "/media/physics.jpg",
+        slug: "physics"
+    },
+    slug: null,
+    hierarchy_level: 3,
+    parent_topic: "54b3de1a550bbf18920dd3fd"
+}]

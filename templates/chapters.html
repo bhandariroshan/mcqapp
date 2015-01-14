@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+    {% for eachQuestion in questions %}
+      <div id="div_{{eachQuestion.uid.id}}">
+        <p>{{ forloop.counter }}. {{eachQuestion.question.text}}</p>
+            <p>Marks: {{eachQuestion.marks}}</p>        
+            <label>Subject
+                <select class="select-subject" id="Subject_{{eachQuestion.uid.id}}" onchange="subject_change('{{eachQuestion.uid.id}}')"> 
+                  <option>Select Chapter</option>
+                  <option value="physics">physics</option>
+                  <option value="chemistry">chemistry</option>
+                  <option value="zoology">zoology</option>
+                  <option value="botany">botany</option>
+                  <option value="mathematics">mathematics</option>
+                  <option value="english">english</option>
+                  <option value="engineering aptitude">engineering aptitude</option>
+                </select>
+            </label>
+
+            <label>Unit
+                <select class="select-unit" id="Unit_{{eachQuestion.uid.id}}">
+                </select>
+            </label>
+
+            <label>Chapter
+                <select class="select-chapter" id="Chapter_{{eachQuestion.uid.id}}">
+                </select>
+            </label>
+
+            <label>Topic
+                <select id="Topic_{{eachQuestion.uid.id}}">
+                </select>
+            </label>
+
+            <label>Difficulty
+                <select id="Difficulty_{{eachQuestion.uid.id}}"> 
+                  <option></option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>                  
+                </select>
+            </label>
+
+            <button onclick="save_question_details('{{eachQuestion.uid.id}}')">Save</button>
+            <br><br><br>
+      </div>
+    {% endfor %}
+{% endblock %}
+
+{% block javascript %}
+<script type="text/x-mathjax-config">
+  //MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+
+ <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="/static/js/ajax-handle.js"></script>
+<script type="text/javascript">
+    var subjects = '';
+    var chapters = [];
+    var topics = [];
+    
+    function subject_change(uid){       
+       var subject = $('#Subject_'+uid).val();
+       get_units(subject, uid);
+    }
+
+    $('.select-unit').on('change', function(e){
+      id = e.target.id;
+      var uid = id.replace('Unit_', '');
+      var subject = $('#Subject_'+uid).val();
+      var unit = $('#Unit_'+uid).val();
+      get_chapters(subject, unit, uid);
+    });
+    
+    $('.select-chapter').on('change', function(e){
+      id = e.target.id;
+      var uid = id.replace('Chapter_', '');
+      var subject = $('#Subject_'+uid).val();
+      var chapter = $('#Chapter_'+uid).val();
+      var unit = $('#Unit_'+uid).val();
+      get_topics(subject, unit, chapter, uid);
+    });
+
+    
+    function save_question_details(uid){
+      var subject = $('#Subject_'+uid).val();
+      var unit = $('#Unit_'+uid).val();
+      var chapter = $('#Chapter_'+uid).val();
+      var topic = $('#Topic_'+uid).val();
+      var difficulty = $('#Difficulty_'+uid).val();
+      update_question(uid, subject, unit, chapter, topic, difficulty);
+    }
+
+</script>    
+{% endblock %}
+
+
