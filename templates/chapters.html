@@ -5,9 +5,15 @@
       <div id="div_{{eachQuestion.uid.id}}">
         <p>{{ forloop.counter }}. {{eachQuestion.question.text}}</p>
             <p>Marks: {{eachQuestion.marks}}</p>        
+            <div>
+                <p>A. {{eachQuestion.answer.a.text}}</p>
+                <p>B. {{eachQuestion.answer.b.text}}</p>
+                <p>C. {{eachQuestion.answer.c.text}}</p>
+                <p>D. {{eachQuestion.answer.d.text}}</p>
+            </div>
             <label>Subject
                 <select class="select-subject" id="Subject_{{eachQuestion.uid.id}}" onchange="subject_change('{{eachQuestion.uid.id}}')"> 
-                  <option>Select Chapter</option>
+                  <option>Select Subject</option>
                   <option value="physics">physics</option>
                   <option value="chemistry">chemistry</option>
                   <option value="zoology">zoology</option>

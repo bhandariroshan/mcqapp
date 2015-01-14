@@ -8,9 +8,31 @@ class Question():
         self.table_name = 'question'
         self.db_object.create_table(self.table_name, '_id')
 
-    def get_questions(self):
-        questions = self.db_object.get_all(self.table_name, 
-            conditions={'flag_chapter_set':{'$exists':False}, 'subject':'physics'}, limit=30)
+    def get_questions(self, username):
+        if username == 'roshan':
+            questions = self.db_object.get_all_vals(table_name=self.table_name,             
+                conditions={'flag_chapter_set':{'$exists':False}, '$or':[{'subject':'botany'}, {'subject':'zoology'}]})
+
+        if username == 'sujit':
+            questions = self.db_object.get_all_vals(self.table_name,             
+                conditions={'flag_chapter_set':{'$exists':False}, 'subject':'physics'})
+
+        if username == 'sudip':
+            questions = self.db_object.get_all(self.table_name,             
+                conditions={'flag_chapter_set':{'$exists':False}, 'subject':'chemistry'})
+
+        if username == 'raj':
+            questions = self.db_object.get_all(self.table_name,             
+                conditions={'flag_chapter_set':{'$exists':False}, 'subject':'english'})
+
+        if username == 'sijan':
+            questions = self.db_object.get_all(self.table_name,             
+                conditions={'flag_chapter_set':{'$exists':False}, 'subject':'aptitude'})
+
+        if username == 'santosh':
+            questions = self.db_object.get_all(self.table_name,             
+                conditions={'flag_chapter_set':{'$exists':False}, 'subject':'mathematics'})
+
         return questions
 
     def update_question(self, conditions={}, value={}):        

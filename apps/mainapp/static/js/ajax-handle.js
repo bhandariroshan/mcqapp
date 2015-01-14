@@ -43,7 +43,7 @@ function get_units_success (data) {
 	if(data['status'] == 'ok'){
 		units = data['units'];
 		var uid = data['uid'];
-		var html = '<option></option>';
+		var html = '<option>Select Unit</option>';
 		for (var i =0; i < units.length; i++){
 			html += '<option value="' + units[i] + '">' + units[i] + '</options>';
 		}
@@ -60,7 +60,7 @@ function get_chapters_success(data){
 	if(data['status'] == 'ok'){
 		chapters = data['chapters'];
 		var uid = data['uid'];
-		var html = '<option></option>';
+		var html = '<option>Select Chapter</option>';
 		for (var i =0; i < chapters.length; i++){
 			html += '<option value="' + chapters[i] + '">' + chapters[i] + '</options>';
 		}
@@ -77,7 +77,7 @@ function get_topics_success(data){
 	if (data['status'] == 'ok'){
 			topics = data['topics'];
 			var uid = data['uid'];
-			var html = '<option></option>';
+			var html = '<option>Select Topic</option>';
 			for (var i =0; i < topics.length; i++){
 				html += '<option value="' + topics[i] + '">' + topics[i] + '</options>';
 			}
