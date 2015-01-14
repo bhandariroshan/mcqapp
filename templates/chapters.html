@@ -4,7 +4,7 @@
     {% for eachQuestion in questions %}
       <div id="div_{{eachQuestion.uid.id}}">
         <p>{{ forloop.counter }}. {{eachQuestion.question.text}}</p>
-            <p>Marks: {{eachQuestion.marks}}</p>        
+            <p>Marks: {{eachQuestion.marks}} Correct: {{eachQuestion.answer.correct}}</p>        
             <div>
                 <p>A. {{eachQuestion.answer.a.text}}</p>
                 <p>B. {{eachQuestion.answer.b.text}}</p>
