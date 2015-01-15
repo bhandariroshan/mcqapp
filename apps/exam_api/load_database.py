@@ -144,74 +144,75 @@ def load_modelquestion_in_database(request):
     #     question_api = QuestionApi()
     #     question_api.insert_new_question(json_obj)
     # for subject in ['physics', 'chemistry', 'mathematics', 'english', 'zoology', 'botany']:
-    #     import csv 
-    #     with open(settings.APP_ROOT + '/apps/mainapp/subjects/' + subject + '.csv', 'rb') as csvfile:
-    #         spamreader = csv.reader(csvfile, delimiter=',')
-    #         for row in spamreader:
-    #             topics = row[2].split('|')
-    #             for eachTopic in topics:
-    #                 topic_questions = {}
-    #                 topic_questions['subject'] = subject
-    #                 topic_questions['unit'] = row[0]
-    #                 topic_questions['chapter'] = row[1]
-    #                 topic_questions['topic'] = eachTopic
-    #                 from apps.mainapp.classes.Questions import TopicApi
-    #                 topic_api = TopicApi()
-    #                 topic_api.save_topics(topic_questions, topic_questions)
-    # spamreader = csv.reader(csvfile, delimiter=',')
+    for subject in ['zoology', 'botany']:
+        import csv 
+        with open(settings.APP_ROOT + '/apps/mainapp/subjects/' + subject + '.csv', 'rb') as csvfile:
+            spamreader = csv.reader(csvfile, delimiter=',')
+            for row in spamreader:
+                topics = row[2].split('|')
+                for eachTopic in topics:
+                    topic_questions = {}
+                    topic_questions['subject'] = subject
+                    topic_questions['unit'] = row[0]
+                    topic_questions['chapter'] = row[1]
+                    topic_questions['topic'] = eachTopic
+                    from apps.mainapp.classes.Questions import TopicApi
+                    topic_api = TopicApi()
+                    topic_api.save_topics(topic_questions, topic_questions)
+    spamreader = csv.reader(csvfile, delimiter=',')
 
-    import csv 
-    with open(settings.APP_ROOT + '/apps/exam_api/' + 'biology' + '.csv', 'rb') as csvfile:
-        spamreader = csv.reader(csvfile, delimiter=',')
-        questions = []
-        for row in spamreader:
-            if row[5] == 'Option':
-                continue
-            eachQuestion = {}
-            eachQuestion['answer'] = {
-                    'a':{
-                            'text':row[1],
-                            'image':'',                            
-                    },
-                    'b':{
-                            'text':row[2],
-                            'image':'',                            
-                    },
-                    'c':{
-                            'text':row[3],
-                            'image':'',                            
-                    },
-                    'd':{
-                            'text':row[4],
-                            'image':'',                            
-                    },
-                    'correct': row[5]
-                }
+    # import csv 
+    # with open(settings.APP_ROOT + '/apps/exam_api/' + 'biology' + '.csv', 'rb') as csvfile:
+    #     spamreader = csv.reader(csvfile, delimiter=',')
+    #     questions = []
+    #     for row in spamreader:
+    #         if row[5] == 'Option':
+    #             continue
+    #         eachQuestion = {}
+    #         eachQuestion['answer'] = {
+    #                 'a':{
+    #                         'text':row[1],
+    #                         'image':'',                            
+    #                 },
+    #                 'b':{
+    #                         'text':row[2],
+    #                         'image':'',                            
+    #                 },
+    #                 'c':{
+    #                         'text':row[3],
+    #                         'image':'',                            
+    #                 },
+    #                 'd':{
+    #                         'text':row[4],
+    #                         'image':'',                            
+    #                 },
+    #                 'correct': row[5]
+    #             }
                         
-            eachQuestion['exam_type'] = 'MEDICAL'
-            eachQuestion['difficulty'] = 1
-            eachQuestion['marks'] = 1
-            eachQuestion['subject'] = str(row[6]).lower()
-            eachQuestion['topic'] = row[7]
-            eachQuestion['exam_code'] = 222
-            eachQuestion['question'] = {
-                    'text':row[0],
-                    'image':row[0]
-            }
-            questions.append(eachQuestion)
+    #         eachQuestion['exam_type'] = 'MEDICAL'
+    #         eachQuestion['difficulty'] = 1
+    #         eachQuestion['marks'] = 1
+    #         eachQuestion['subject'] = str(row[6]).lower()
+    #         eachQuestion['topic'] = row[7]
+    #         eachQuestion['exam_code'] = 222
+    #         eachQuestion['question'] = {
+    #                 'text':row[0],
+    #                 'image':row[0]
+    #         }
+    #         questions.append(eachQuestion)
             
-        saved = []
-        while(len(saved) != len(questions)):
-            from random import randint
-            rand_number  = randint(0,len(questions))
-            if rand_number not in saved:
-                question_api = QuestionApi()
-                try:
-                    question_api.insert_new_question(questions[rand_number])
-                    saved.append(rand_number)
-                    print len(saved), rand_number
-                except:
-                    continue
+    #     saved = []
+    #     while(len(saved) != len(questions)):
+    #         from random import randint
+    #         rand_number  = randint(0,len(questions))
+    #         if rand_number not in saved:
+    #             question_api = QuestionApi()
+    #             try:
+    #                 question_api.insert_new_question(questions[rand_number])
+    #                 saved.append(rand_number)
+    #                 print len(saved), rand_number
+    #             except:
+    #                 continue
             
     # for var in range(1, 8):
     #     f = open(settings.APP_ROOT + '/apps/exam_api/iom-new/set-' +
