@@ -143,7 +143,7 @@ def load_modelquestion_in_database(request):
     #         x['subject'] = x['subject'].lower()
     #     question_api = QuestionApi()
     #     question_api.insert_new_question(json_obj)
-    # for subject in ['physics', 'chemistry', 'mathematics', 'english', 'zoology', 'botany']:    
+    for subject in ['physics', 'chemistry', 'mathematics', 'english', 'zoology', 'botany']:    
         import csv 
         with open(settings.APP_ROOT + '/apps/mainapp/subjects/' + subject + '.csv', 'rb') as csvfile:
             spamreader = csv.reader(csvfile, delimiter=',')
