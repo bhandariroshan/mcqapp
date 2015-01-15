@@ -159,7 +159,7 @@ def load_modelquestion_in_database(request):
                     from apps.mainapp.classes.Questions import TopicApi
                     topic_api = TopicApi()
                     topic_api.save_topics(topic_questions, topic_questions)
-    spamreader = csv.reader(csvfile, delimiter=',')
+    # spamreader = csv.reader(csvfile, delimiter=',')
 
     # import csv 
     # with open(settings.APP_ROOT + '/apps/exam_api/' + 'biology' + '.csv', 'rb') as csvfile:
