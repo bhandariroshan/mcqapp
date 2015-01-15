@@ -2,7 +2,7 @@
 {% load staticfiles %}
 {% block content %}
     {% for eachQuestion in questions %}
-      <div id="div_{{eachQuestion.uid.id}}">
+      <div id="div_{{eachQuestion.uid.id}}" style="margin-left: 2%;">
         <p>{{ forloop.counter }}. {{eachQuestion.question.text}}</p>
             <p>Marks: {{eachQuestion.marks}} Correct: {{eachQuestion.answer.correct}}</p>        
             <div>
