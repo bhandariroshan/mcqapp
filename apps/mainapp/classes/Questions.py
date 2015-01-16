@@ -12,7 +12,7 @@ class Question():
         if subject == None:
             if username == 'roshan':
                 questions = self.db_object.get_all(table_name=self.table_name, limit = 25,            
-                    conditions={'$or':[{'flag_chapter_set':{'$exists':False}}, {'difficulty':""}]},
+                    conditions={'$or':[{'flag_chapter_set':{'$exists':False}}, {'difficulty':""}],
                     '$or':[{'subject':'zoology'}]})
 
             if username == 'sujit':
