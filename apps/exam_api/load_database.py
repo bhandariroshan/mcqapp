@@ -148,16 +148,17 @@ def load_modelquestion_in_database(request):
         import csv 
         with open(settings.APP_ROOT + '/apps/mainapp/subjects/' + subject + '.csv', 'rb') as csvfile:
             spamreader = csv.reader(csvfile, delimiter=',')
-            for row in spamreader:
+            for row in spamreader:                
                 topics = row[2].split('|')
                 for eachTopic in topics:
                     topic_questions = {}
-                    topic_questions['subject'] = subject
+                    topic_questions['subject'] = subject.replace('-', ' ')
                     topic_questions['unit'] = row[0]
                     topic_questions['chapter'] = row[1]
                     topic_questions['topic'] = eachTopic
                     from apps.mainapp.classes.Questions import TopicApi
                     topic_api = TopicApi()
+                    print topic_questions
                     topic_api.save_topics(topic_questions, topic_questions)
     # spamreader = csv.reader(csvfile, delimiter=',')
 
