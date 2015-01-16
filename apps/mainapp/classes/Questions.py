@@ -26,7 +26,7 @@ class Question():
                 questions = self.db_object.get_all(self.table_name,  limit = 25,           
                     conditions={'flag_chapter_set':{'$exists':False}, 'subject':'english'})
 
-            if username == 'sijan':
+            if username == 'raj' or username == 'sijan':
                 questions = self.db_object.get_all(self.table_name,  limit = 25,           
                     conditions={'flag_chapter_set':{'$exists':False}, 'subject':'aptitude'})
 
