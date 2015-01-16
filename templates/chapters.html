@@ -3,13 +3,18 @@
 {% block content %}
     {% for eachQuestion in questions %}
       <div id="div_{{eachQuestion.uid.id}}" style="margin-left: 2%;">
-        <p>{{ forloop.counter }}. {{eachQuestion.question.text}}</p>
-            <p>Marks: {{eachQuestion.marks}} Correct: {{eachQuestion.answer.correct}}</p>        
+        <p>  {{ forloop.counter }}. {{eachQuestion.question.text}} {{eachQuestion.uid.id}}</p>
+        <p> <textarea  style="margin: 0px; width: 650px; height: 36px;" id="Quest_{{eachQuestion.uid.id}}">{{eachQuestion.question.text}}</textarea></p>
+            <p>Marks: {{eachQuestion.marks}} Correct: <input id="Correct_{{eachQuestion.uid.id}}" value="{{eachQuestion.answer.correct}}"/></p>        
             <div>
-                <p>A. {{eachQuestion.answer.a.text}}</p>
-                <p>B. {{eachQuestion.answer.b.text}}</p>
-                <p>C. {{eachQuestion.answer.c.text}}</p>
-                <p>D. {{eachQuestion.answer.d.text}}</p>
+                <p>A. {{eachQuestion.answer.a.text}}  <br>
+                <textarea style="margin: 0px; width: 650px; height: 36px;" id="OptA_{{eachQuestion.uid.id}}">{{eachQuestion.answer.a.text}}</textarea></p>
+                <p>B.{{eachQuestion.answer.b.text}}  <br>
+                <textarea style="margin: 0px; width: 650px; height: 36px;" id="OptB_{{eachQuestion.uid.id}}">{{eachQuestion.answer.b.text}}</textarea></p>
+                <p>C. {{eachQuestion.answer.c.text}} <br>
+                <textarea style="margin: 0px; width: 650px; height: 36px;" id="OptC_{{eachQuestion.uid.id}}">{{eachQuestion.answer.c.text}}</textarea></p>
+                <p>D.{{eachQuestion.answer.d.text}}  <br>
+                <textarea style="margin: 0px; width: 650px; height: 36px;" id="OptD_{{eachQuestion.uid.id}}">{{eachQuestion.answer.d.text}}</textarea></p>
             </div>
             <label>Subject
                 <select class="select-subject" id="Subject_{{eachQuestion.uid.id}}" onchange="subject_change('{{eachQuestion.uid.id}}')"> 
@@ -49,11 +54,11 @@
                   <option value="5">5</option>                  
                 </select>
             </label>
+          
             <br><br>
-            <textarea rows="4" cols="40" id="Hint_{{eachQuestion.uid.id}}"></textarea> 
-
+            Hint: <textarea rows="4" cols="40" style="margin: 0px; width: 650px; height: 36px;" id="Hint_{{eachQuestion.uid.id}}"></textarea> 
             <button onclick="save_question_details('{{eachQuestion.uid.id}}')">Save</button>
-            <br><br><br>
+            <br><br><hr>
       </div>
     {% endfor %}
 {% endblock %}
@@ -104,13 +109,22 @@
 
     
     function save_question_details(uid){
+
       var subject = $('#Subject_'+uid).val();
       var unit = $('#Unit_'+uid).val();
       var chapter = $('#Chapter_'+uid).val();
       var topic = $('#Topic_'+uid).val();
       var difficulty = $('#Difficulty_'+uid).val();
       var hint = $('#Hint_' + uid).val();
-      update_question(uid, subject, unit, chapter, topic, difficulty, hint);
+
+      var correct = $('#Correct_' + uid).val();
+      var question = $('#Quest_' + uid).val();
+      var opt_a = $('#OptA_' + uid).val();
+      var opt_b = $('#OptB_' + uid).val();
+      var opt_c = $('#OptC_' + uid).val();
+      var opt_d = $('#OptD_' + uid).val();
+      update_question(uid, subject, unit, chapter, topic, difficulty, hint, 
+        correct, question, opt_a, opt_b, opt_c, opt_d);
     }
 
 </script>    
