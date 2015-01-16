@@ -1066,13 +1066,14 @@ def history(request):
     ) 
        
 def add_chapters(request):
+
     parameters = {}
     user_profile_obj = UserProfile()    
     user = user_profile_obj.get_user_by_username(request.user.username)
-
+    subject_name = request.GET.get('subject')
     from apps.mainapp.classes.Questions import Question
     questions_obj = Question()
-    parameters['questions'] = questions_obj.get_questions(request.user.username)
+    parameters['questions'] = questions_obj.get_questions(request.user.username, subject_name)
 
     # for subject in ['physics', 'chemistry', 'mathematics', 'english', 'zoology', 'botany']:
 
