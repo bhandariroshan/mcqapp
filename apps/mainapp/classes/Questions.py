@@ -12,42 +12,42 @@ class Question():
         if subject == None:
             if username == 'roshan':
                 questions = self.db_object.get_all(table_name=self.table_name, limit = 25,            
-                    conditions={'$or':[{'flag_chapter_set':{'$exists':False}}, {'difficulty':{'$nin':["1", "2", "3", "4","5"]}}],
+                    conditions={'$or':[{'flag_chapter_set':{'$exists':False}}],
                     '$or':[{'subject':'zoology'}]})
 
             if username == 'sujit':
                 questions = self.db_object.get_all(self.table_name,  limit = 25,           
-                    conditions={'$or':[{'flag_chapter_set':{'$exists':False}}, {'difficulty':{'$nin':["1", "2", "3", "4","5"]}}],
+                    conditions={'$or':[{'flag_chapter_set':{'$exists':False}}],
                     'subject':'physics'})
 
             if username == 'sudip':
                 questions = self.db_object.get_all(self.table_name, limit = 25,            
-                    conditions={'$or':[{'flag_chapter_set':{'$exists':False}}, {'difficulty':{'$nin':["1", "2", "3", "4","5"]}}],
+                    conditions={'$or':[{'flag_chapter_set':{'$exists':False}}],
                     'subject':'chemistry'})
 
             if username == 'raj':
                 questions = self.db_object.get_all(self.table_name,  limit = 25,           
-                    conditions={'$or':[{'flag_chapter_set':{'$exists':False}}, {'difficulty':{'$nin':["1", "2", "3", "4","5"]}}],
+                    conditions={'$or':[{'flag_chapter_set':{'$exists':False}}],
                     'subject':'english'})
 
             if username == 'raj' or username == 'sijan':
                 questions = self.db_object.get_all(self.table_name,  limit = 25,           
-                    conditions={'$or':[{'flag_chapter_set':{'$exists':False}}, {'difficulty':{'$nin':["1", "2", "3", "4","5"]}}],
+                    conditions={'$or':[{'flag_chapter_set':{'$exists':False}}],
                     'subject':'aptitude'})
 
             if username == 'santosh':
                 questions = self.db_object.get_all(self.table_name, limit = 25,            
-                    conditions={'$or':[{'flag_chapter_set':{'$exists':False}}, {'difficulty':{'$nin':["1", "2", "3", "4","5"]}}],
+                    conditions={'$or':[{'flag_chapter_set':{'$exists':False}}],
                     'subject':'mathematics'})
 
             if username == "mounteverest":
                 questions = self.db_object.get_all(table_name=self.table_name, limit = 25,            
-                    conditions={'$or':[{'flag_chapter_set':{'$exists':False}}, {'difficulty':{'$nin':["1", "2", "3", "4","5"]}}],
+                    conditions={'$or':[{'flag_chapter_set':{'$exists':False}}],
                     '$or':[{'subject':'botany'}]})
 
         else:
             questions = self.db_object.get_all(table_name=self.table_name, limit = 25,            
-                conditions={'$or':[{'flag_chapter_set':{'$exists':False}}, {'difficulty':{'$nin':["1", "2", "3", "4","5"]}}],
+                conditions={'$or':[{'flag_chapter_set':{'$exists':False}}],
                 '$or':[{'subject':subject}]})
 
         return questions
