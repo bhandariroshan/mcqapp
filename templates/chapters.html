@@ -7,14 +7,10 @@
         <p> <textarea  style="margin: 0px; width: 650px; height: 36px;" id="Quest_{{eachQuestion.uid.id}}">{{eachQuestion.question.text}}</textarea></p>
             <p>Marks: {{eachQuestion.marks}} Correct: <input id="Correct_{{eachQuestion.uid.id}}" value="{{eachQuestion.answer.correct}}"/></p>        
             <div>
-                <p>A. {{eachQuestion.answer.a.text}}  <br>
-                <textarea style="margin: 0px; width: 650px; height: 36px;" id="OptA_{{eachQuestion.uid.id}}">{{eachQuestion.answer.a.text}}</textarea></p>
-                <p>B. {{eachQuestion.answer.b.text}}  <br>
-                <textarea style="margin: 0px; width: 650px; height: 36px;" id="OptB_{{eachQuestion.uid.id}}">{{eachQuestion.answer.b.text}}</textarea></p>
-                <p>C. {{eachQuestion.answer.c.text}} <br>
-                <textarea style="margin: 0px; width: 650px; height: 36px;" id="OptC_{{eachQuestion.uid.id}}">{{eachQuestion.answer.c.text}}</textarea></p>
-                <p>D. {{eachQuestion.answer.d.text}}  <br>
-                <textarea style="margin: 0px; width: 650px; height: 36px;" id="OptD_{{eachQuestion.uid.id}}">{{eachQuestion.answer.d.text}}</textarea></p>
+                <p>A. {{eachQuestion.answer.a.text}}     <textarea style="margin: 0px; width: 650px; height: 36px;" id="OptA_{{eachQuestion.uid.id}}">{{eachQuestion.answer.a.text}}</textarea></p>
+                <p>B. {{eachQuestion.answer.b.text}}     <textarea style="margin: 0px; width: 650px; height: 36px;" id="OptB_{{eachQuestion.uid.id}}">{{eachQuestion.answer.b.text}}</textarea></p>
+                <p>C. {{eachQuestion.answer.c.text}}    <textarea style="margin: 0px; width: 650px; height: 36px;" id="OptC_{{eachQuestion.uid.id}}">{{eachQuestion.answer.c.text}}</textarea></p>
+                <p>D. {{eachQuestion.answer.d.text}}     <textarea style="margin: 0px; width: 650px; height: 36px;" id="OptD_{{eachQuestion.uid.id}}">{{eachQuestion.answer.d.text}}</textarea></p>
             </div>
             <label>Subject
                 <select class="select-subject" id="Subject_{{eachQuestion.uid.id}}" onchange="subject_change('{{eachQuestion.uid.id}}')"> 
