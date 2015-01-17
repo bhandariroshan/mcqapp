@@ -13,7 +13,7 @@ class Question():
             if username == 'roshan':
                 questions = self.db_object.get_all(table_name=self.table_name, limit = 25,            
                     conditions={'$or':[{'flag_chapter_set':{'$exists':False}}],
-                    '$or':[{'subject':'zoology'}]})
+                        'subject':'zoology'})
 
             if username == 'sujit':
                 questions = self.db_object.get_all(self.table_name,  limit = 25,           
@@ -43,12 +43,12 @@ class Question():
             if username == "mounteverest":
                 questions = self.db_object.get_all(table_name=self.table_name, limit = 25,            
                     conditions={'$or':[{'flag_chapter_set':{'$exists':False}}],
-                    '$or':[{'subject':'botany'}]})
+                    'subject':'botany'})
 
         else:
             questions = self.db_object.get_all(table_name=self.table_name, limit = 25,            
-                conditions={'$or':[{'flag_chapter_set':{'$exists':False}}],
-                '$or':[{'subject':subject}]})
+                conditions={'$or':[{'flag_chapter_set':{'$exists':False}},{'difficulty':{'$nin':["1", "2", "3", "4","5"]}}],
+                'subject':subject})
 
         return questions
 
