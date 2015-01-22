@@ -99,33 +99,70 @@ class AjaxHandle():
             topic = request.POST.get('topic','')
             difficulty = request.POST.get('difficulty','')
             hint = request.POST.get('hint','')
+            passage_group = request.POST.get('passage_group','')
+            is_passage_head = request.POST.get('is_passage_head','')
 
             correct = request.POST.get('correct','')
-            question = request.POST.get('question','')            
+            question = request.POST.get('question','')
             opt_a = request.POST.get('opt_a','')
             opt_b = request.POST.get('opt_b','')
             opt_c = request.POST.get('opt_c','')
             opt_d = request.POST.get('opt_d','')
+            # print correct, opt_a, opt_b, opt_c, opt_d, question
 
-            ques_obj.update_question({'_id':uid}, {
-                    'flag_chapter_set':1,
-                    'subject':subject, 
-                    'unit':unit, 
-                    'chapter':chapter, 
-                    'topic':topic, 
-                    'difficulty':difficulty, 
-                    'hint':hint,
-                    'question.text':question, 
-                    'answer.a.text':opt_a, 
-                    'answer.b.text':opt_b, 
-                    'answer.c.text':opt_c, 
-                    'answer.d.text':opt_d,
-                    'answer.correct':correct
-                })
-            
+            if is_passage_head == 0:
+                is_passage_head = False
+            else:
+                is_passage_head = True
+
+            dirty_flag = False
+            if subject == "Select Subject" or unit == "Select Unit" \
+                or chapter == "Select chapter" or topic == "Select Topic":
+                dirty_flag = True
+
+            if subject == 'english':
+                dirty_flag = False
+                if passage_group !='':
+                    update_data = {
+                        'is_passage':True, 
+                        'is_passage_head':is_passage_head,
+                        'passage_group':passage_group
+                    }
+                else:
+                    update_data = {
+                        'is_passage':False, 
+                        'is_passage_head':is_passage_head,
+                        'passage_group':passage_group
+                    }
+            else:
+                update_data = {
+                        'flag_chapter_set':1,
+                        'subject':subject, 
+                        'unit':unit, 
+                        'chapter':chapter, 
+                        'topic':topic, 
+                        'difficulty':difficulty, 
+                        'hint':hint,
+                        'question.text':question, 
+                        'answer.a.text':opt_a, 
+                        'answer.b.text':opt_b, 
+                        'answer.c.text':opt_c, 
+                        'answer.d.text':opt_d,
+                        'answer.correct':correct
+                    }
+                
+                for key, value in update_data.iteritems():
+                    if value == "" and key != "hint":
+                        dirty_flag = True
+
+            if dirty_flag:
+                return HttpResponse(json.dumps({'status':'error', 'message':'Question update error!'}))
+
+            ques_obj.update_question({'_id':uid}, update_data)
             return HttpResponse(json.dumps({'status':'ok', 'uid':request.POST.get('uid','')}))
         else:
-            return HttpResponse({'status':'error', 'message':'Not authorized'})        
+            return HttpResponse(json.dumps({'status':'error', 'message':'Not authorized'}))        
+
     def get_topics(self, request):
         if request.user.is_authenticated():
             from apps.mainapp.classes.Questions import TopicApi

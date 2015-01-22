@@ -68,6 +68,15 @@
                   <option value="12">12</option>
                 </select>
               </label>
+
+               <label>Is Passage Head
+                <select id="IsPassageHead_{{eachQuestion.uid.id}}"> 
+                  <option></option>
+                  <option value="0">False</option>
+                  <option value="1">True</option>
+                </select>
+              </label>
+
             {% endif %}
 
           
@@ -144,9 +153,11 @@
       var passage_group = '';
       passage_group = $('#Passage_' + uid).val();
 
+      var is_passage_head  = '';
+      is_passage_head = $('#IsPassageHead_' + uid).val();
 
       update_question(uid, subject, unit, chapter, topic, difficulty, hint, 
-        correct, question, opt_a, opt_b, opt_c, opt_d, passage_group);
+        correct, question, opt_a, opt_b, opt_c, opt_d, passage_group, is_passage_head);
     }
 
 </script>    

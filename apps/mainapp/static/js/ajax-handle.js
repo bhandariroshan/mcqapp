@@ -21,7 +21,7 @@ function ajax_request(s_handler, c_handler, input_data){
 // 	}
 // }
 
-function update_question(uid, subject, unit, chapter, topic, difficulty, hint, correct, question, opt_a, opt_b, opt_c, opt_d, passage_group){
+function update_question(uid, subject, unit, chapter, topic, difficulty, hint, correct, question, opt_a, opt_b, opt_c, opt_d, passage_group, is_passage_head){
 	ajax_request(
 		'update_question', 'update_question_success',{
 			'uid':uid, 
@@ -37,7 +37,8 @@ function update_question(uid, subject, unit, chapter, topic, difficulty, hint, c
         	'opt_b':opt_b, 
         	'opt_c':opt_c, 
         	'opt_d':opt_d, 
-        	'passage_group':passage_group
+        	'passage_group':passage_group, 
+        	'is_passage_head':is_passage_head
 		});
 }
 
