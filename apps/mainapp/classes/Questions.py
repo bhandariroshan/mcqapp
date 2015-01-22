@@ -10,10 +10,10 @@ class Question():
 
     def get_questions(self, username, subject):
         if subject == None:
-            if username == 'roshan':
+            if username == 'raj':
                 questions = self.db_object.get_all(table_name=self.table_name, limit = 25,            
                     conditions={'$or':[{'flag_chapter_set':{'$exists':False}},{'difficulty':{'$nin':["1", "2", "3", "4","5"]}}],
-                        'subject':'zoology'})
+                        'subject':'physics'})
 
             if username == 'sujit':
                 questions = self.db_object.get_all(self.table_name,  limit = 25,           
@@ -25,7 +25,7 @@ class Question():
                     conditions={'$or':[{'flag_chapter_set':{'$exists':False}},{'difficulty':{'$nin':["1", "2", "3", "4","5"]}}],
                     'subject':'chemistry'})
 
-            if username == 'raj':
+            if username == 'roshan':
                 questions = self.db_object.get_all(self.table_name,  limit = 25,           
                     conditions={'$or':[{'flag_chapter_set':{'$exists':False}},{'difficulty':{'$nin':["1", "2", "3", "4","5"]}}],
                     'subject':'english'})
@@ -46,9 +46,13 @@ class Question():
                     'subject':'botany'})
 
         else:
-            questions = self.db_object.get_all(table_name=self.table_name, limit = 25,            
-                conditions={'$or':[{'flag_chapter_set':{'$exists':False}},{'difficulty':{'$nin':["1", "2", "3", "4","5"]}}],
-                'subject':subject})
+            if subject != 'english':
+                questions = self.db_object.get_all(table_name=self.table_name, limit = 25,            
+                    conditions={'$or':[{'flag_chapter_set':{'$exists':False}},{'difficulty':{'$nin':["1", "2", "3", "4","5"]}}],
+                    'subject':subject})
+            else:
+                questions = self.db_object.get_all(table_name=self.table_name, limit = 300,            
+                    conditions={'subject':subject})
 
         return questions
 

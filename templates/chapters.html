@@ -50,6 +50,26 @@
                   <option value="5">5</option>                  
                 </select>
             </label>
+            {% if is_english %}
+              <label>Passage Group
+                <select id="Passage_{{eachQuestion.uid.id}}"> 
+                  <option></option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>                  
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
+              </label>
+            {% endif %}
+
           
             <br><br>
             Hint: <textarea rows="4" cols="40" style="margin: 0px; width: 650px; height: 36px;" id="Hint_{{eachQuestion.uid.id}}"></textarea> 
@@ -100,6 +120,7 @@
       var subject = $('#Subject_'+uid).val();
       var chapter = $('#Chapter_'+uid).val();
       var unit = $('#Unit_'+uid).val();
+
       get_topics(subject, unit, chapter, uid);
     });
 
@@ -119,8 +140,13 @@
       var opt_b = $('#OptB_' + uid).val();
       var opt_c = $('#OptC_' + uid).val();
       var opt_d = $('#OptD_' + uid).val();
+
+      var passage_group = '';
+      passage_group = $('#Passage_' + uid).val();
+
+
       update_question(uid, subject, unit, chapter, topic, difficulty, hint, 
-        correct, question, opt_a, opt_b, opt_c, opt_d);
+        correct, question, opt_a, opt_b, opt_c, opt_d, passage_group);
     }
 
 </script>    

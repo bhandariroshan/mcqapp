@@ -1077,6 +1077,10 @@ def add_chapters(request):
 
     # for subject in ['physics', 'chemistry', 'mathematics', 'english', 'zoology', 'botany']:
 
+    if subject_name == 'english':
+        parameters ['is_english'] = True
+    else:
+        parameters ['is_english'] = False
         
     parameters['user'] = user
     return render_to_response(

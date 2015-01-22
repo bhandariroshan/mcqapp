@@ -99,6 +99,7 @@ class AjaxHandle():
             topic = request.POST.get('topic','')
             difficulty = request.POST.get('difficulty','')
             hint = request.POST.get('hint','')
+            passage_group = request.POST.get('passage_group','')
 
             correct = request.POST.get('correct','')
             question = request.POST.get('question','')            
@@ -106,22 +107,34 @@ class AjaxHandle():
             opt_b = request.POST.get('opt_b','')
             opt_c = request.POST.get('opt_c','')
             opt_d = request.POST.get('opt_d','')
-            print correct, opt_a, opt_b, opt_c, opt_d, question
-            ques_obj.update_question({'_id':uid}, {
-                    'flag_chapter_set':1,
-                    'subject':subject, 
-                    'unit':unit, 
-                    'chapter':chapter, 
-                    'topic':topic, 
-                    'difficulty':difficulty, 
-                    'hint':hint,
-                    'question.text':question, 
-                    'answer.a.text':opt_a, 
-                    'answer.b.text':opt_b, 
-                    'answer.c.text':opt_c, 
-                    'answer.d.text':opt_d,
-                    'answer.correct':correct
-                })
+
+            if subject == 'english':
+                if passage_group !='':
+                    ques_obj.update_question({'_id':uid}, {
+                        'is_passage':True, 
+                        'passage_group':passage_group
+                    })  
+                else:
+                    ques_obj.update_question({'_id':uid}, {
+                        'is_passage':False, 
+                        'passage_group':passage_group
+                    })
+            else:
+                ques_obj.update_question({'_id':uid}, {
+                        'flag_chapter_set':1,
+                        'subject':subject, 
+                        'unit':unit, 
+                        'chapter':chapter, 
+                        'topic':topic, 
+                        'difficulty':difficulty, 
+                        'hint':hint,
+                        'question.text':question, 
+                        'answer.a.text':opt_a, 
+                        'answer.b.text':opt_b, 
+                        'answer.c.text':opt_c, 
+                        'answer.d.text':opt_d,
+                        'answer.correct':correct
+                    })
             return HttpResponse(json.dumps({'status':'ok', 'uid':request.POST.get('uid','')}))
         else:
             return HttpResponse({'status':'error', 'message':'Not authorized'})        
