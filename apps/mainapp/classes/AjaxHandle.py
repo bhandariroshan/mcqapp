@@ -110,10 +110,14 @@ class AjaxHandle():
             opt_d = request.POST.get('opt_d','')
             # print correct, opt_a, opt_b, opt_c, opt_d, question
 
-            if is_passage_head == 0:
+            if is_passage_head == '0':
                 is_passage_head = False
-            else:
+
+            elif is_passage_head == '1':
                 is_passage_head = True
+
+            else:
+                is_passage_head = False
 
             dirty_flag = False
             if subject == "Select Subject" or unit == "Select Unit" \
@@ -131,9 +135,9 @@ class AjaxHandle():
                 else:
                     update_data = {
                         'is_passage':False, 
-                        'is_passage_head':is_passage_head,
-                        'passage_group':passage_group
+                        'is_passage_head':is_passage_head
                     }
+                print update_data
             else:
                 update_data = {
                         'flag_chapter_set':1,
