@@ -47,6 +47,9 @@ function update_question_success(data){
 	if (data['status'] == 'ok'){
 		$('#div_' + data['uid']).hide();
 	}
+	else{
+		alert("Error: " + data['message']);
+	}
 }
 
 function get_units (subject, uid) {
