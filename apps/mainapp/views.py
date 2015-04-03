@@ -454,7 +454,7 @@ def attend_cps_exam(request, exam_code):
     )
 
 
-@user_authenticated_and_subscribed_required
+# @user_authenticated_and_subscribed_required
 def attend_dps_exam(request, exam_code):
     user_profile_obj = UserProfile()
     user_det = user_profile_obj.get_user_by_username(request.user.username)
